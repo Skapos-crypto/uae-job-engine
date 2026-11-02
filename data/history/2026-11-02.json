@@ -1,31 +1,5 @@
 [
  {
-  "key": "cb8a5114decfe726",
-  "title": "Graduate Trainee – Internal Shariah Control (UAEN)",
-  "employer": "Emirates NBD",
-  "sector": "banking",
-  "city": "Dubai",
-  "location": "Dubai, United Arab Emirates",
-  "family": "graduate",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/65801",
-  "source": "oracle:Emirates NBD",
-  "source_type": "employer",
-  "seen_on": [
-   "oracle:Emirates NBD"
-  ],
-  "posted": "2026-10-27",
-  "age_days": 6,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 6.1,
-  "snippet": "Emirates NBD is a market leader across the MENAT (Middle East, North Africa and Türkiye) region with a presence in 13 countries, serving over 9 million customers. Emirates NBD is the leading financial services brand in the UAE with a Brand value of approximately USD 4 billion. We"
- },
- {
   "key": "a5a1634c4989c326",
   "title": "AI Graduate Programme",
   "employer": "e&",
@@ -131,6 +105,32 @@
   "snippet": ""
  },
  {
+  "key": "714ecc18daa20573",
+  "title": "2027 Program Manager Intern",
+  "employer": "Amazon Middle East and North Africa FZ-LLC",
+  "sector": "big tech",
+  "city": "Dubai",
+  "location": "Dubai, ARE",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://www.amazon.jobs/en/jobs/10557554/2027-program-manager-intern",
+  "source": "amazon",
+  "source_type": "employer",
+  "seen_on": [
+   "amazon"
+  ],
+  "posted": "2026-09-23",
+  "age_days": 40,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.6,
+  "snippet": "At Amazon, we are working to be the most customer-centric company on earth. To get there, we need exceptionally talented, bright, and driven people. Amazon is continually evolving and is a place where - Currently enrolled in or will receive a Bachelor's or Master's Degree with a "
+ },
+ {
   "key": "3ad3be3222219a73",
   "title": "Bidayati – Internship Programme",
   "employer": "e&",
@@ -180,7 +180,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Role: Design & Research Operations Associate Location: Abu Dhabi Role Purpose: The Design & Research Ops Associate supports the smooth running of the design and research function, ensuring teams have the tools, systems, and processes they need to do their best work. This is an e"
+  "snippet": ""
  },
  {
   "key": "4d0e18e16df88b2f",
@@ -206,7 +206,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Start Your Career Journey with Emirates NBD Ready to turn your university knowledge into real-world experience? The Emirates NBD Internship Programme offers undergraduates the opportunity to explore the professional world, develop valuable skills and experience what it is like t"
+  "snippet": ""
  },
  {
   "key": "3e2b13dc65bbbd88",
@@ -232,7 +232,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "057c6f78a23334ec",
@@ -244,7 +244,7 @@
   "family": "graduate",
   "cv": "Data_Analyst",
   "seniority": "junior",
-  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/fabCareers/job/189",
+  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/189",
   "source": "oracle:First Abu Dhabi Bank",
   "source_type": "employer",
   "seen_on": [
@@ -393,82 +393,56 @@
   "snippet": "Bayut & dubizzle - The Arab World's only Homegrown Unicorn Business is now inviting applications for internships of 6 months duration in our Business Intelligence department. World-class mentors, fast paced & high performing work environment, our open culture and the opportunity "
  },
  {
-  "key": "40f315f792c0a135",
-  "title": "Tableau Account Executive - Middle East",
-  "employer": "Salesforce",
-  "sector": "big tech",
-  "city": "Dubai",
-  "location": "United Arab Emirates - Dubai",
-  "family": "bi",
-  "cv": "Data_Analyst",
-  "seniority": "unspecified",
-  "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Tableau-Account-Executive---Middle-East_JR362555",
-  "source": "workday:Salesforce",
-  "source_type": "employer",
-  "seen_on": [
-   "workday:Salesforce"
-  ],
-  "posted": "2026-10-28",
-  "age_days": 5,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 5.1,
-  "snippet": " To get the best candidate experience, please consider applying for a maximum of 3 roles within 12 months to ensure you are not duplicating efforts. Job Category Sales Job Details About Salesforce Salesforce is the #1 AI CRM, where humans with agents drive customer success togeth"
- },
- {
-  "key": "4d289f33f13b3fa1",
-  "title": "Animator Intern",
-  "employer": "bybit",
-  "sector": "tech",
-  "city": "Abu Dhabi",
-  "location": "Abu Dhabi, UAE; APAC - Remote; Remote Non-EU",
-  "family": "graduate",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/4974752101",
-  "source": "greenhouse:bybit",
-  "source_type": "ats",
-  "seen_on": [
-   "greenhouse:bybit"
-  ],
-  "posted": "2026-09-11",
-  "age_days": 52,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 5.0,
-  "snippet": "About Us Established in 2018, Bybit is one of the world’s leading cryptocurrency exchanges and digital financial platforms, serving over 80 million users across more than 200 countries and regions. Powered by world-class technology and a user-first mindset, Bybit delivers a seaml"
- },
- {
-  "key": "67ae935c01309047",
-  "title": "Junior Business Development Representative (Graduate/Early Careers)",
-  "employer": "Checkout.com",
+  "key": "d63c4c51a5565164",
+  "title": "Commercial Operations Intern",
+  "employer": "Tamara",
   "sector": "fintech",
   "city": "Dubai",
-  "location": "Dubai; Dubai Dubai United Arab Emirates",
+  "location": "Dubai, United Arab Emirates; Dubai, United Arab Emirates",
   "family": "graduate",
   "cv": "Data_Analyst",
   "seniority": "junior",
-  "url": "https://jobs.ashbyhq.com/checkout.com/24128247-9ed5-4679-95d5-7e51b85aecb9",
-  "source": "ashby:checkout.com",
+  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/5004015101",
+  "source": "greenhouse:tamara",
   "source_type": "ats",
   "seen_on": [
-   "ashby:checkout.com"
+   "greenhouse:tamara"
   ],
-  "posted": "2026-10-13",
-  "age_days": 20,
-  "min_years": 1,
+  "posted": "2026-10-18",
+  "age_days": 15,
+  "min_years": null,
   "flags": [],
   "first_seen": "2026-11-02",
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.0,
-  "snippet": "Company Description\n\nWe’re  http://checkout.comCheckout.com http://Checkout.com. You might not know our name, but companies like eBay, Spotify, Klarna, Uber, and Sony do, because we’re behind many of the digital experiences you use every day. \n\n\nWe are where the world checks out,"
+  "snippet": "About us Tamara is a leading fintech platform in Saudi Arabia and the GCC region with a mission to help people own their dreams built on being simple, trusted, and everywhere our customers need us. Today, more than 25 million customers and over 130,000 partner merchants depend on"
+ },
+ {
+  "key": "2b903220044edf82",
+  "title": "Tamara Internship Program",
+  "employer": "Tamara",
+  "sector": "fintech",
+  "city": "Dubai",
+  "location": "Riyadh Saudi Arabia, Dubai United Arab Emirates; Riyadh, Saudi Arabia; Dubai, United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4996993101",
+  "source": "greenhouse:tamara",
+  "source_type": "ats",
+  "seen_on": [
+   "greenhouse:tamara"
+  ],
+  "posted": "2026-10-04",
+  "age_days": 29,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.0,
+  "snippet": "Cohorts: January & June (Yearly) | Function: Multiple, apply once and tell us where you want to build About us: Tamara is Saudi Arabia's first FinTech unicorn, on a mission to help people own their dreams by building the most customer-centric financial super app in the world. The"
  },
  {
   "key": "91d124d59d373fcc",
@@ -484,7 +458,6 @@
   "source": "workday:Mastercard",
   "source_type": "employer",
   "seen_on": [
-   "jobspy:linkedin",
    "workday:Mastercard"
   ],
   "posted": "2026-10-09",
@@ -495,7 +468,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.8,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "59154a1a1f4c9d55",
@@ -511,8 +484,7 @@
   "source": "ashby:cohere",
   "source_type": "ats",
   "seen_on": [
-   "ashby:cohere",
-   "jobspy:linkedin"
+   "ashby:cohere"
   ],
   "posted": "2026-05-01",
   "age_days": 185,
@@ -548,33 +520,111 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.6,
-  "snippet": " Role : Associate Technical Support Engineer ( UAE National ) Location : Abu Dhabi Role Purpose: To provide first-level technical and functional support for Business Platform applications, ensuring system stability, timely issue resolution, and continuous service availability whi"
+  "snippet": ""
  },
  {
-  "key": "28d794243995c5ce",
-  "title": "GPU/AI  Global Sales - Customer Acquisition",
-  "employer": "Oracle",
-  "sector": "big tech",
-  "city": "UAE",
-  "location": "United Arab Emirates",
-  "family": "ai_ml",
-  "cv": "AI_Engineer",
+  "key": "73628dc5802a0b05",
+  "title": "Biostatistician-Clinical Trials Unit Section",
+  "employer": "SSMC",
+  "sector": "healthcare",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, United Arab Emirates",
+  "family": "data_science",
+  "cv": "Data_Scientist",
   "seniority": "unspecified",
-  "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/335645",
-  "source": "oracle:Oracle",
+  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2951",
+  "source": "oracle:SSMC",
   "source_type": "employer",
   "seen_on": [
-   "oracle:Oracle"
+   "oracle:SSMC"
   ],
-  "posted": "2026-07-17",
-  "age_days": 108,
-  "min_years": 1,
+  "posted": "2026-04-16",
+  "age_days": 200,
+  "min_years": null,
   "flags": [],
   "first_seen": "2026-11-02",
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.6,
-  "snippet": "Regional Leader for AI Infrastructure and Strategic Pursuits. This is an EMEA-based role requiring international travel. The selected candidate will play an integral role in leading Oracle’s most strategic pursuits across EMEA, spanning AI Infrastructure and Cloud. Oracle is expe"
+  "snippet": ""
+ },
+ {
+  "key": "2847cd8fccecb847",
+  "title": "Data Center Engineering Operations - 2027 Internship , DCEO",
+  "employer": "AWS EMEA SARL (Abu Dhabi Branch) - O49",
+  "sector": "big tech",
+  "city": "Dubai",
+  "location": "Dubai, ARE",
+  "family": "it",
+  "cv": "IT",
+  "seniority": "junior",
+  "url": "https://www.amazon.jobs/en/jobs/10574531/data-center-engineering-operations-2027-internship-dceo",
+  "source": "amazon",
+  "source_type": "employer",
+  "seen_on": [
+   "amazon"
+  ],
+  "posted": "2026-10-09",
+  "age_days": 24,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 4.6,
+  "snippet": "Want to be part of the team that keeps the world's largest cloud running? As an Engineering Operations Technician Intern at Amazon Web Services (AWS), you will get hands-on experience with the critical - In pursuit of a Bachelor's degree in a relevant field such as Mechanical Eng"
+ },
+ {
+  "key": "fdeef424b8c0938f",
+  "title": "Data Center Infra Engineer  - 2027 Internship",
+  "employer": "Amazon Data Services Emirates LLC",
+  "sector": "big tech",
+  "city": "Dubai",
+  "location": "Dubai, ARE",
+  "family": "it",
+  "cv": "IT",
+  "seniority": "junior",
+  "url": "https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship",
+  "source": "amazon",
+  "source_type": "employer",
+  "seen_on": [
+   "amazon"
+  ],
+  "posted": "2026-10-13",
+  "age_days": 20,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 4.6,
+  "snippet": "Ever wanted to help design and support the data centers that power the world's largest cloud? As a DC Infra Engineer Intern at Amazon Web Services (AWS), you will work alongside an experienced, cross-disciplinary - In the last year of a Bachelor's or Master's degree in Electrical"
+ },
+ {
+  "key": "0e61ce48d6b8da70",
+  "title": "Data Center Technician - 2027 Internship",
+  "employer": "AWS EMEA SARL (Abu Dhabi Branch) - O49",
+  "sector": "big tech",
+  "city": "Dubai",
+  "location": "Dubai, ARE",
+  "family": "it",
+  "cv": "IT",
+  "seniority": "junior",
+  "url": "https://www.amazon.jobs/en/jobs/10574530/data-center-technician-2027-internship",
+  "source": "amazon",
+  "source_type": "employer",
+  "seen_on": [
+   "amazon"
+  ],
+  "posted": "2026-10-09",
+  "age_days": 24,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 4.6,
+  "snippet": "At Amazon Web Services (AWS), we are working to be the most customer-centric company on earth. To get there, we need exceptionally talented, bright, and driven people. Are you ready to embrace the challenge? - In pursuit of a Bachelor's degree in a relevant technical field such a"
  },
  {
   "key": "2eba3dcb9fd0fb9a",
@@ -600,33 +650,33 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.6,
-  "snippet": " Role: HR Data Analyst Location: Abu Dhabi Role purpose: Provide support in managing MIS reporting to improve HR process workflow, information management. Support overall workforce planning strategy. Key accountabilities of the role: MIS & Workforce Planning / HRMS / Finance: Man"
+  "snippet": ""
  },
  {
-  "key": "fe9fecad8dd3eaf3",
-  "title": "Product Specialist, Oncology",
-  "employer": "AstraZeneca",
-  "sector": "pharma",
+  "key": "ec02c377625bd4fd",
+  "title": "Trans Topology Data Analyst, Supply Chain Transportation Planning, Supply Chain",
+  "employer": "Q-Express Documents Transport",
+  "sector": "big tech",
   "city": "Dubai",
-  "location": "UAE - Dubai",
-  "family": "product",
+  "location": "Dubai, ARE",
+  "family": "data_analyst",
   "cv": "Data_Analyst",
   "seniority": "unspecified",
-  "url": "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/UAE---Dubai/Product-Specialist--Oncology_R-260332",
-  "source": "workday:AstraZeneca",
+  "url": "https://www.amazon.jobs/en/jobs/10568628/trans-topology-data-analyst-supply-chain-transportation-planning-supply-chain",
+  "source": "amazon",
   "source_type": "employer",
   "seen_on": [
-   "workday:AstraZeneca"
+   "amazon"
   ],
-  "posted": "2026-11-02",
-  "age_days": 0,
-  "min_years": 2,
+  "posted": "2026-10-07",
+  "age_days": 26,
+  "min_years": null,
   "flags": [],
   "first_seen": "2026-11-02",
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.6,
-  "snippet": " Product Specialist, Oncology Job Description Is responsible for generating demand for LC.GI franchise with key accounts, proactively identifying business opportunities, and recommending solutions to drive and develop business. Develop strategic partnership with the Multi-Discipl"
+  "snippet": "If you are a supply chain professional with a passion to innovate and contribute in a fast paced growing environment, you might be a good fit to join Amazon.com Supply chain team. This role involves big - Bachelor's degree - Experience with Microsoft Office products and applicati"
  },
  {
   "key": "0193719ae63d8067",
@@ -1099,32 +1149,6 @@
   "snippet": "Employment Type: Full-time & Permanent. Job Location: Dubai, UAE (We provide visa sponsorship & relocation assistance). Salary: USD 65,000 per annum + performance based bonus - 0% tax environment. Employee Share Scheme : Opportunity to join Cobblestone Employee Share Scheme. Annu"
  },
  {
-  "key": "7fff1f1bb0b04404",
-  "title": "Junior Sales Analyst - Inside Sales",
-  "employer": "dubizzle Group",
-  "sector": "proptech",
-  "city": "Dubai",
-  "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
-  "family": "analyst",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://apply.workable.com/j/20EBAAE453",
-  "source": "workable:bayutdubizzle",
-  "source_type": "ats",
-  "seen_on": [
-   "workable:bayutdubizzle"
-  ],
-  "posted": "2026-10-14",
-  "age_days": 19,
-  "min_years": 2,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 4.2,
-  "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
- },
- {
   "key": "7dc7e7fa8dce08db",
   "title": "Embedded Software Engineer II",
   "employer": "EDGE",
@@ -1356,7 +1380,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.1,
-  "snippet": " The Product Owner – Remittances will lead the design, development, and lifecycle management of digital remittance solutions across UAE and Egypt . This role is accountable for driving seamless cross-border and domestic remittance experiences through digital channels, APIs, partn"
+  "snippet": ""
  },
  {
   "key": "51677a2b80ad7dfb",
@@ -1567,32 +1591,6 @@
   "snippet": ""
  },
  {
-  "key": "303932adfa91ed2d",
-  "title": "Engineer - NOC & Permits (AUH)",
-  "employer": "du",
-  "sector": "telecom",
-  "city": "Dubai",
-  "location": "Dubai, United Arab Emirates",
-  "family": "it",
-  "cv": "IT",
-  "seniority": "unspecified",
-  "url": "https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/12679",
-  "source": "oracle:du",
-  "source_type": "employer",
-  "seen_on": [
-   "oracle:du"
-  ],
-  "posted": "2026-10-29",
-  "age_days": 4,
-  "min_years": 2,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 3.9,
-  "snippet": "The purpose of this position is to review, process, and issue Objection and No Objection Certificates to Contractors/Consultants to avert damages to du’s existing infrastructure network. To communicate du’s technical specifications to Consultants/Contractors of upcoming Road Proj"
- },
- {
   "key": "808783b57a3720a8",
   "title": "Technician - IT Service Desk",
   "employer": "du",
@@ -1801,56 +1799,58 @@
   "snippet": ""
  },
  {
-  "key": "0309be0a422791a1",
-  "title": "Applied Behavioural Analyst",
-  "employer": "PureHealth",
-  "sector": "healthcare",
-  "city": "UAE",
-  "location": "United Arab Emirates",
-  "family": "analyst",
-  "cv": "Data_Analyst",
+  "key": "913f794e82f3367a",
+  "title": "Data Engineer",
+  "employer": "G42",
+  "sector": "AI",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates; Abu Dhabi, Abu Dhabi, United Arab Emirates",
+  "family": "data_eng",
+  "cv": "Data_Engineer",
   "seniority": "unspecified",
-  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_6007/job/5762",
-  "source": "oracle:PureHealth",
+  "url": "https://careers.g42.ai/global/en/job/3302",
+  "source": "phenom:G42",
   "source_type": "employer",
   "seen_on": [
-   "oracle:PureHealth"
+   "phenom:G42"
   ],
-  "posted": "2026-10-16",
-  "age_days": 17,
-  "min_years": 2,
-  "flags": [],
+  "posted": "2026-09-04",
+  "age_days": 59,
+  "min_years": 3,
+  "flags": [
+   "stretch_3y"
+  ],
   "first_seen": "2026-11-02",
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 3.6,
-  "snippet": "The Behavioral Technician will provide clinical skills instruction and behavior reduction protocols based upon the principles of Applied Behavior Analysis to children with Autism and related developmental disabilities in the home, community, and school settings. Provide direct cl"
+  "snippet": "We are seeking a Data Engineer to develop scalable data pipelines and intelligent AI solutions using Azure Agent Foundry, OpenAI, and Databricks. You will design and maintain enterprise-grade AI systems, collaborating with cross-functional teams. Ideal candidates have strong data"
  },
  {
-  "key": "d0e7337e8aeb3f9d",
-  "title": "Cost Analyst - Business Finance",
-  "employer": "ADIB",
-  "sector": "banking",
-  "city": "UAE",
-  "location": "United Arab Emirates",
-  "family": "analyst",
-  "cv": "Data_Analyst",
+  "key": "4670c5b18bb93fe6",
+  "title": "Forward Deployed Engineer, Infrastructure Specialist (Middle East)",
+  "employer": "cohere",
+  "sector": "tech",
+  "city": "Dubai",
+  "location": "Middle East; Dubai; United Arab Emirates; Saudi Arabia; Riyadh;   ",
+  "family": "software",
+  "cv": "Backend_Engineer",
   "seniority": "unspecified",
-  "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2953",
-  "source": "oracle:ADIB",
-  "source_type": "employer",
+  "url": "https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af",
+  "source": "ashby:cohere",
+  "source_type": "ats",
   "seen_on": [
-   "oracle:ADIB"
+   "ashby:cohere"
   ],
-  "posted": "2025-04-02",
-  "age_days": 579,
+  "posted": "2026-09-10",
+  "age_days": 53,
   "min_years": null,
   "flags": [],
   "first_seen": "2026-11-02",
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 3.6,
-  "snippet": " Role : XX Location : XX Role Purpose: XXX Key Accountabilities of the role XX Specialist Skills / Technical Knowledge Required for this role: XX"
+  "snippet": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI "
  },
  {
   "key": "5f413693819fa133",
@@ -1966,7 +1966,7 @@
   "family": "it",
   "cv": "IT",
   "seniority": "unspecified",
-  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12389",
+  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389",
   "source": "oracle:NMC Healthcare",
   "source_type": "employer",
   "seen_on": [
@@ -1981,32 +1981,6 @@
   "is_new": true,
   "score": 3.4,
   "snippet": "The purpose of the IT Support Engineer role is to provide effective technical support and maintenance for end-user computing devices, peripheral equipment, and business applications. The role ensures smooth day-to-day IT operations by troubleshooting hardware, software, and netwo"
- },
- {
-  "key": "caa292767c5a8ce3",
-  "title": "Workplace Operations Analyst",
-  "employer": "palantir",
-  "sector": "tech",
-  "city": "Abu Dhabi",
-  "location": "Abu Dhabi, United Arab Emirates; Abu Dhabi, United Arab Emirates",
-  "family": "business",
-  "cv": "Data_Analyst",
-  "seniority": "unspecified",
-  "url": "https://jobs.lever.co/palantir/e6be4159-c8d1-481d-ad15-13274861b795",
-  "source": "lever:palantir",
-  "source_type": "ats",
-  "seen_on": [
-   "lever:palantir"
-  ],
-  "posted": "2026-07-29",
-  "age_days": 96,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 3.3,
-  "snippet": "A World-Changing Company\n \nPalantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the people who need it, our platforms empower our partners to develop lifesaving drugs, forecast supply chain disruptions, locate missin"
  },
  {
   "key": "5289ecb7b1e24398",
@@ -2150,34 +2124,6 @@
   "snippet": "THE ROLE:\n\nZiina is looking for a Platform Engineer (Developer Enabelment) to join our team. This is a foundational role with the opportunity to define how internal tooling, developer experience, and backend quality are built at Ziina from the ground up. You'll have direct impact"
  },
  {
-  "key": "15a2b62fde944b50",
-  "title": "Principle Fiat Product Specialist",
-  "employer": "bybit",
-  "sector": "tech",
-  "city": "Abu Dhabi",
-  "location": "Abu Dhabi, UAE; Kuala Lumpur, Malaysia; Abu Dhabi; Malaysia",
-  "family": "product",
-  "cv": "Data_Analyst",
-  "seniority": "unspecified",
-  "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/4992474101",
-  "source": "greenhouse:bybit",
-  "source_type": "ats",
-  "seen_on": [
-   "greenhouse:bybit"
-  ],
-  "posted": "2026-09-30",
-  "age_days": 33,
-  "min_years": 3,
-  "flags": [
-   "stretch_3y"
-  ],
-  "first_seen": "2026-11-02",
-  "last_seen": "2026-11-02",
-  "is_new": true,
-  "score": 2.5,
-  "snippet": "About Us Established in 2018, Bybit is one of the world’s leading cryptocurrency exchanges and digital financial platforms, serving over 80 million users across more than 200 countries and regions. Powered by world-class technology and a user-first mindset, Bybit delivers a seaml"
- },
- {
   "key": "8199e6b8fab8faea",
   "title": "Associate Product Specialist, Launch Program 2027 – Dubai, UAE (UAE National Preferred)",
   "employer": "Mastercard",
@@ -2203,7 +2149,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "c0e7107041d6ee27",
@@ -2231,7 +2177,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "921bb930b4c06eb5",
@@ -2259,7 +2205,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "6183522336b9efb3",
@@ -2343,7 +2289,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "596ee539c3fdfc96",
