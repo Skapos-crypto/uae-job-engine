@@ -1,0 +1,2402 @@
+[
+ {
+  "title": "Enterprise Document Verification Agent",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Engineer RAN & Wireless",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Auditor",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Engineer Energy Optimization",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Commercial Procurement Manager (UAE National).",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Engineer Service Delivery Network",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Engineer IGW & Fixed Services Monitoring",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Engineer Mobile Txm",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director Project and Design",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director Forensic Audit ( UAE National )",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Legal Counsel ( UAE National )",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager Corporate Governance",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Engineer Fixed Access Support",
+  "employer": "du",
+  "source": "oracle:du",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Manager - Credit MIS and Analytics (UAE National)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "senior"
+ },
+ {
+  "title": "Manager  - Operations Integration",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of Assets and Liabilities Proposition - Business Banking",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager Non-Resident Banking (Contract Role)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer (For Future Openings)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager Business Planning & Analysis - Retail Products",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Manager - Customer Due Diligence",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager - Assets  (UAE Nationals)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Wealth Advisor (For Future Openings)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Private Banking Services (UAE Nationals)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Manager - Valuation Controller",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "ENBD Emirati Technology Senior Talent Community",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director Priority Banking",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Delivery Lead - Digital Products Wealth",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of Sustainable Finance - Wholesale Banking",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Manager - Credit Risk (UAE National)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Personal Banking Advisor (For Future Openings)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Care Advisor (UAE Nationals Only)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Future Opportunities for UAE Nationals - Employee Relations Specialist",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Manager – Trade Sales",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Russian Speaking  - Relationship Manager and Senior Relationship Manager | Priority Banking(For Future Openings)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Teller  (UAE Nationals Only)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager and Senior Relationship Manager | Business Banking(For Future Openings)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Processor - Escrow Services",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer (UAE Nationals)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Future Career Opportunities - High School (UAE Nationals)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Future Career Opportunities - Experienced (UAE Nationals)",
+  "employer": "Emirates NBD",
+  "source": "oracle:Emirates NBD",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Family Group and Diversified Conglomerates - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Operational Risk and Control",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, KYC & Onboarding - Government (Emiratised Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Specialist, HR External Relations (Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP, Screening Optimization & Analytics",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "senior"
+ },
+ {
+  "title": "Assistant Relationship Manager - BB MBBF",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Client Service Engineering - Entity Onboarding & Activation",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Bancassurance OPS  (Emiratised Role) Dubai - Part-time",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, Customer Insights & Performance  ( Dubai - Emiratised Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "senior"
+ },
+ {
+  "title": "Manager, Business Finance - WBG (Emiratized)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist, Settlement Services",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Receptionist (Emiratized Role - Part Time)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP, HR Onboarding (Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP, HR Business Partner (Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP, Customer Services - Emiratized",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Executive Director, Corporate Banking - Dubai & NE - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Lead, Open API & Open Banking",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, Business Regulatory Development",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Payment Investigation (Emiratised Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Credit - Digitization & AI Portfolio Management",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "VP, Business Performance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Principal Lead, Enterprise Compliance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Lead, Contact Center Tech (Voice, Video & Chat) - Emiratised Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP, Control & Governance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Graduate Resourcing (Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "senior"
+ },
+ {
+  "title": "Director, Corporate Banking Abu Dhabi",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist, UAEN Development",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Financial Reporting",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "senior"
+ },
+ {
+  "title": "AVP, Islamic Coverage - Investment & Corporate Banking (Emiratized)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Banker - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist, Compliance - Governance & Risk Assessment (Emiratized)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "VP, Head of Marketing & Communication (Asset Management)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Executive Director - Energy Options Trader",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Metal Trader",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP & Head of Audit, Financial Crime Compliance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Assistant Relationship Manager – POS / Merchant Acquiring",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Executive Director, Wholesale banking(Infrastructure Contractors)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP & Lead, Credit Control",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP, Trade Support - Dealer Assist & Data Readiness",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "senior"
+ },
+ {
+  "title": "AVP, Product Management & Structuring (Asset Management)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Analyst, Governance, Risk & Compliance Tech (Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager, Credit Control - Dubai & NE",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP, Compliance Systems Monitoring and Validation - Fircosoft",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP, Complaints Management (Al Ain-Emiratized Role)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP & Audit Manager, Operations & Support Functions (Emiratization)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP, Compliance Advisory (Emiratized)",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Executive Director, Financial & Investment Research",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Virtual Relationship Manager - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Executive Director, Global Markets - Sales",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager, Business Banking - Liabilities",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Healthcare",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP & Lead, CAD International",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Director, Ratings Advisory",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Digital Onboarding & Commercialization Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Digital Onboarding & Commercialization Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Call Center Executive - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Call Center Executive - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Associate Director, Advisory & Equity Capital Markets",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Executive Director, Structured Products & Clients Solutions",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Service Representative - Emiratized Role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Legal Counsel, GCF",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Associate Director, Project & Sustainable Finance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist, Credit - Mortgages",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Director, Government & Public Sector",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Government & Public Sector - UAE",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Executive Director, GM Sales - Government & Public Sector",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP, Credit - Structured Finance",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Ethraa Program 2025-2026",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Loan Portfolio Management",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "SVP & Head of Credit, Corporate Core - Dubai - Emiratized role",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "VP, Credit - Digitization & AI Portfolio Management",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "VP, Credit Management",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP & Lead, Credit Management, Industrial & Manufacturing",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP & Lead, Credit Management, TMT",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "AVP & Lead, Credit Management",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Director, Sovereign Wealth Funds & Financial Sponsors - UAE",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Al Ain Talent Pool",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Bedaya Program 2025-2026",
+  "employer": "First Abu Dhabi Bank",
+  "source": "oracle:First Abu Dhabi Bank",
+  "reason": "no-family"
+ },
+ {
+  "title": "Sr. Engineer/Red Team",
+  "employer": "e&",
+  "source": "oracle:e&",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager/Revenue Assurance",
+  "employer": "e&",
+  "source": "oracle:e&",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director/Product Marketing-Roaming & Premium Numbers",
+  "employer": "e&",
+  "source": "oracle:e&",
+  "reason": "no-family"
+ },
+ {
+  "title": "etisalat- NAFIS Programme",
+  "employer": "e&",
+  "source": "oracle:e&",
+  "reason": "no-family"
+ },
+ {
+  "title": "Join our Talent Pipeline",
+  "employer": "e&",
+  "source": "oracle:e&",
+  "reason": "no-family"
+ },
+ {
+  "title": "Service Ambassador - Al Ain",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Port Captain",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Superintendent - Marine",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Procurement COE",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Contracts",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Harbour Master",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Specialist - HSE",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager - Buyer Development",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager - Community Engagement, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Specialist - Community Engagement, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager - Client Enablement, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Specialist - Client Enablement, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Specialist - Growth, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Specialist - Commercial & BD, AD Food Hub",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family"
+ },
+ {
+  "title": "Specialist - Learning & Development",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Registered Nurse - CICU",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Child Clinical Psychologist",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Dietitian",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Consultant Physician Child & Adolescent Psychiatry",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Clinical Psychologist",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Staff Nurse -Cath lab",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Staff Nurse",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Speech Language Therapist / Pathologist",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Sonographer",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Charge Nurse",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Physiotherapist",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Radiographer",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "General Pharmacist (UAE National)",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Clinical Social Worker",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Inpatient Pharmacist (UAE National)",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Patient Care Assistant",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Director –Services (UPP KA)",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Integrated Technologies Architect - Healthcare",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Support Engineer -Nursing Integration/Phys Doc/Clinical AI Agent",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "senior"
+ },
+ {
+  "title": "Principal Data Center Facilities Development Manager",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "senior"
+ },
+ {
+  "title": "Program Manager 4",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "no-family"
+ },
+ {
+  "title": "Supplier Sourcing Program Manage (Sr Network Planner, Oracle, OCI)",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "no-family"
+ },
+ {
+  "title": "GPU/ AI & OCI Senior Regional Sales Customer Acceleration Manager",
+  "employer": "Oracle",
+  "source": "oracle:Oracle",
+  "reason": "senior"
+ },
+ {
+  "title": "Kitchen / Laundry Technician|General Engineering (AJBR)",
+  "employer": "Emaar",
+  "source": "oracle:Emaar",
+  "reason": "no-family"
+ },
+ {
+  "title": "Role in General Recreation (VAJ)",
+  "employer": "Emaar",
+  "source": "oracle:Emaar",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Engineer - Assets Reliability & Systems - Mechanical",
+  "employer": "Dubai Airports",
+  "source": "oracle:Dubai Airports",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "UAE National Fire Service Programme",
+  "employer": "Dubai Airports",
+  "source": "oracle:Dubai Airports",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Compliance Monitoring Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Relationship Manager- Priority Banking",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager - CFIB",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Director, DCM Syndicate",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Support Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Service Manager - Cash & Liquidity Platforms",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Operations and Service Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Universal Banker",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Operations and Service Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Operations and Service Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Operations and Service Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Officer - Branches",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer - Floater",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "On Going Due Diligence - Maker - Temporary (Outsource)HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Relationship Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Bancatakaful Partnerships Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Unit Head - Program & Project Management Governance",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Payroll Associate - CRO",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager- Priority Direct",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of IS Risk Management",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Facilities Management & Administration Specialist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "IPO Senior Specialist -Temporary(Abu Dhabi)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Payment Processor",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior UX Researcher",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Office Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Wealth Adoption Specialist (Temporary 4 Months - Outsource)HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of HR Strategy & Planning",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer Buffer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Receptionist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Teller",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Universal Banker",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Office Manager - AI",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "senior"
+ },
+ {
+  "title": "Relationship Officer - ADIB@Work (Outsource)HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Branch Sales Executive - East Coast Area (Outsource Role)HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Home Finance Advisor (Outsource) HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Support Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Account Opening Officer - WBG and IBG customer onboarding",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Deputy Head of Financial Crime Compliance & MLRO",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Customer Care Specialist - ( UAE Nationals )",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Conduct Risk Associate",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Care Specialist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Home Finance Advisor(Outsource) HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Home Finance Advisor (Outsource)HV",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Operational Risk Associate",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Manager - Capital Markets & Trading Solutions",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Teller",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Procurement Operations Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Sales Governance & Control Senior Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "On Going Due Diligence - Checker - Temporary (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, Governance & Control – Wealth Management",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Investment Advisor - Private Banking",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Portfolio Analytics Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "senior"
+ },
+ {
+  "title": "Associate Relationship Manager - Wealth Coverage",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Receptionist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "US Broker",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Fintech Architect",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head - Quality Assurance",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of Institutional Sales",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Data Privacy Senior Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "senior"
+ },
+ {
+  "title": "Assistant Internal Shari’a Auditor",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior IT Procurement Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Credit Analyst",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Investment Advisor - Wealth & Priority Coverage Advisory",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Technical Assurance Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Universal Banker",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "On Going Due Diligence - Maker - Temporary (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Relationship Manager-BBD-1 (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Channel Performance & Evaluation Specialist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of HR Operations",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Counsel",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head of Technology Risk, Compliance and Quality Assurance",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Relationship Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Islamic Finance Executive Personal Finance, Abu Dhabi (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Officer - ADIB@Work (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Credit Analyst",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Associate Support Engineer - Treasury & Risk",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Escrow Services Senior Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Branch Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Branch Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Facilities Management (FM) Manager",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Security Operations Coordinator",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager - ADIB  Securities",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Wellbeing Associate Specialist",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Teller",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Customer Relationship Officer",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Manager - Wealth Coverage - UAE & International",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Branch Sales Executive - Sharjah and NE Region (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Branch Sales Executive - Al Ain Region (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Branch Sales Executive - Dubai Region (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Branch Sales Executive - AUH East & Al Dhafra Region (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Branch Sales Executive - East Coast Area (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Branch Sales Executive - AUH Central Region (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Team Leader RB-Branch (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Al Mutarid liferstyle Branch - Branch Sales Executive (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Personal Finance - Islamic Finance Executive - Dubai & NE (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Islamic Finance Executive-Cards Sales (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Islamic Finance Executive-Auto Finance (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Home Finance Advisor (Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Home Finance Advisor(Outsource)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Property Valuation Consultant (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager - RB-Business Liabilities & Cash Management (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Rehab and Retention Specialist (Outsource Role)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Teller",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "BBD - Relationship Manager (Outsourced)",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "no-family"
+ },
+ {
+  "title": "Call Center Agent",
+  "employer": "ADIB",
+  "source": "oracle:ADIB",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Executive Clinical Director, Pharmacy - Cleveland Clinic Abu Dhabi",
+  "employer": "Cleveland Clinic Abu Dhabi",
+  "source": "workday:Cleveland Clinic Abu Dhabi",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Managing Counsel, Regulatory EEMEA",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Creative Strategist, Advisors Creative Desk",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, Customer Solutions Centre",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Managing Consultant, Services Business Development, Mastercard Direct Services (MCDS) Segment",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Core Payments VAS Commercialization & Planning",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Copywriter",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Copywriter",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Director, Corporate Origination and Business Development (Remote Working)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Payment Operations.OPS - Inward Remittances Centre.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate Director - Private Banking Front Office",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Tech Delivery Manager - Corporate Digital Channel.Tech - Digital - GTB -Titan.MIT",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Manager, Treasury & Capital Market Operations",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Assistant Manager - Unified Communications.Injaz - TECH - TOPS - Network & Security Operations.MIT",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager - Contact Centre.CXC - RBG - Direct Banking Center.Client Experience & Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Product Support (UAE National).CIBG - Islamic Banking.Corporate & Investment Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Forex Specialist - Private Banking Product",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager, Treasury Operations.Injaz - Derivative operations.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Associate Director - Origination.CIBG - Investment Banking.Corporate & Investment Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Manager - Group Consolidation - Central Account (UAE National Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE National Only) Senior Personal Banking Advisor.CXC - RBG - DBC RAK Call Center.41.Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE National only) Senior Personal Banking Advisor.CXC - RBG - DBC RAK Call Center.41.Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE National Only) Senior Personal Banking Advisor.CXC - RBG - DBC RAK Call Center.41.Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE National Only) Senior Personal Banking Advisor.CXC - RBG - DBC RAK Call Center.41.Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Relationship Manager - Emirati Deposits Gold.Injaz - RBG - Emirati Deposits Team.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "SVP - Finance Technology.injaz - TECH - Finance",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager - Business Banking",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Director, Non-Linear and Structured Credit Trading",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE Nationals Only) Manager - Premium Call Centre .CXC - RBG - DBC RAK Call Center.Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Manager Cash Mngt Sales, Treasury Advisory.GTB-Cash Sales, Acct Mgmt & Impl-CIBG.Corporate & Investment Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager Compliance - AML.Injaz-Compliance-AML Unit.41.Compliance Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Manager, Corporate Credit",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Director - Private Banking Front Office",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Lead Procurement (UAE National )",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Trade Operations.FTC- Lodgement.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Head Real Estate, Property & Finance",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Cash Management Sales Manager",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Officer, Payment Operations.OPS - Inward Remittances Centre.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Product Manager, Cards (UAEN Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Client Services Manager - Private Banking CSM",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Digital Sales & Solutions (UAE National Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE Nationals only) Assistant Manager-RBG Premises & Network Planning.RBG-Chief of Staff Office-Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Associate, Credit administration, Documentation.Injaz - CRM-Corporate Credit -Documentation.Risk Management",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Officer, Employee Experience - UAE",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE Nationals Only) Senior Personal Banking Advisor-CXC - RBG - DBC RAK Call Center -Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Vice President -Technology Transformation Office.TECH - Transformation Office.MIT",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Legal Counsel - Islamic Finance",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Director of Origination & Business Development (Middle Markets AD location) - CIBG",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Manager - Asset Management and Controls.Injaz - Investment Operations.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE Nationals Only) Team Leader , DBC.CXC - RBG - DBC- RAK Call Center- Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Relationship Manager- Real Estate Unit",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "VP - Risk & Regulatory Systems, Retail Technology.TECH- Customer Engagement & Lifecycle.MIT",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Digital Release Governance - Assistant Manager.RBG Central Squad.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Development Officer, Insurance.Injaz - RBG - Insurance Sales.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Development Officer.Injaz - DBC - PL Retention.Retail Banking group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Global Tech Lead, Front-end.Injaz - RBG - Digital Squad - Loans.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Associate – Agency Services.Injaz - CIBG - Investment Banking.Corporate & Investment Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAE Nationals only. Customer Services Officer.RBG - Emirati Governance.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Mortgage Advisor.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Mortgage Advisor.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Mortgage Advisor.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Payment Operations.OPS - Inward Remittances Centre.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Vice President- Credit Management (UAE National Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Assistan Manager - FX/MM Settlements.Injaz - FX/ MM Settlements.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAE Nationals Only- Senior Officer - Real Estate.Injaz - Administration Unit. Corporate Affairs",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager, Services & Manufacturing (UAE National Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Officer.Injaz - RBG - CC_Balance Builder.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager- Financial Institutions",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Credit Operations.Retail Ops - Lending Ops - UnSecured Loans.Operations Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "UAE Nationals Only- Relationship Officer, Acquisition.RBG - Emirati Acquisition (Retail Banking Group)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Officer, Treasury  Operations (Emiritization)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE Nationals Only) -Portfolio & Performance Manager (RBG) -MG Client Coverage - DIC-Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Compliance Manager - Sanctions Unit (UAE National)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Cluster Lead.Injaz-TECH-Digital Shared Services, UAE.MIT",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAE Nationals Only- Government Relations Officer-Injaz - General Services Unit- Corporate Affairs",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Manager - Corporate Tax & International Taxation",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE Nationals Only) - Supervisor, Branch Automation- RBG OFF SITE ATM",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Officer, Payment Operations.Cent Ops - PDCS Centralized.",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Legal Counsel (RBG)- Emirati Talent Only",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Business Development Officer - SME - Sales",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Associate Business Development- RBG-SBL/MBF Team",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Legal Counsel - Wholesale Banking (UAE National ONLY)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "(UAE Nationals Only) Counter Services Specialist- Dubai Mall Branch- Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Team Leader.Bancassurance - Mashreq Gold.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE Nationals Only) Customer Service Manager-CXC - CSU- Client Experience and Conduct Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Vice-President Compliance, FCRA and Projects",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Assistant Manager – Regulatory Reporting.Central Account (UAE National Only)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "senior"
+ },
+ {
+  "title": "Business Development Officer, Insurance.Injaz - RBG - Insurance Sales.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Vice President – AML Investigations & RRU",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Senior Manager, Financial MIS & Shared Services.Injaz - Corporate Affairs - MIS & Projects.Corporate Affairs",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "senior"
+ },
+ {
+  "title": "UAE Nationals Only- Senior Customer Service Officer. Client Experience & Conduct - Customer Service- Client Experience & Conduct Group-RAK",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAEN Only - Vice President, Centralized Payments",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Assistant Relationship Manager - Mortgage.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Team Leader.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "AVP- Security Incident Management (UAE National)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Compliance Officer (Emiratisation)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Manager - Talent Acquisition Emiratisation - UAE National Only",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Manager, Trade&Working Capital.RBG - TWC Partially Secured.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAE Nationals Only- Digital Customer Engagement -Manager- Injaz-Payments & Remittances- Central- Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Digital Product Expert.Injaz - RBG -Remittances Squad.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "(UAE Nationals Only) Client Services Manager- Business Banking - Customer Service & Quality",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Project Finance Manager",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "UAE Nationals Only- Senior Credit Analyst- CM - CRM-Credit Initiation & Compliance-Credit Management",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "UAE Nationals Only-RAK Branch- Personal Banking Advisor- RBG-Direct Banking Center -Client Experience & Conduct Group (CXCG)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Development officer - PL Sales.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Area Sales Manager.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "excluded-title"
+ },
+ {
+  "title": "Team Leader.Injaz - RBG - CC_Balance Builder.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Team Leader.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Mortgage Advisor.Injaz - RBG - Mortgages.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Banker- Loan DST",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Officer, Acquisition.Injaz - RBG - Emirati Deposits Team.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Officer.Injaz - RBG - CC_Balance Builder.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Officer.Injaz - RBG - CC_Balance Builder.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Relationship Officer.Injaz - RBG - CC_Balance Builder.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager, Deposits & employee banking.Injaz - RBG - Emirati Deposits Team - Abu Dhabi.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Counter Services Specialist.RBU -  Muraqabat branch.41.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Relationship Manager - Emirati Deposits Gold.Injaz - RBG - Emirati Deposits Team.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Business Development officer - PL Sales.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Investment Advisor.Injaz - RBG - MG Investment Advisor.Retail Banking Group",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family"
+ },
+ {
+  "title": "Senior Platform Trust and Safety Engineer",
+  "employer": "Salesforce",
+  "source": "workday:Salesforce",
+  "reason": "excluded-title"
+ }
+]
