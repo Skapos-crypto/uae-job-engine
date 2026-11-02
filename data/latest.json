@@ -1,7 +1,7 @@
 {
  "generated": {
-  "utc": "2026-11-02T19:17:25+00:00",
-  "dubai": "2026-11-02 23:17",
+  "utc": "2026-11-02T19:30:43+00:00",
+  "dubai": "2026-11-02 23:30",
   "full_run": false
  },
  "summary": {
@@ -35,11 +35,11 @@
    "attrax": 2,
    "phenom": 1
   },
-  "http_calls": 204,
+  "http_calls": 193,
   "rejected": {
    "no-family": 1347,
-   "excluded-title": 810,
    "senior": 99,
+   "excluded-title": 810,
    "graduate-other-discipline": 10,
    "title-elsewhere": 3,
    "nationals-only": 19,
@@ -71,7 +71,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 6.1,
-   "snippet": "Dubai Holding Corporate Intern Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Intern Experience Level Entry Level / Junior / Fresh Graduates Date Monday, November 2, 2026 Entity DH Corporate Descript"
+   "snippet": "Dubai Holding Corporate Intern Dubai Holding Corporate"
   },
   {
    "key": "8b819a53a5f053b1",
@@ -254,7 +254,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 5.6,
-   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Leaders of Tomorrow Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Corporat"
+   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate"
   },
   {
    "key": "4d0e18e16df88b2f",
@@ -776,7 +776,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 4.6,
-   "snippet": "Dubai Holding Entertainment Career fair Career Fair article__content__view\"> Location United Arab Emirates Business Unit Career Fair Department Career fair Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Entertainment Description Dubai Holding Ente"
+   "snippet": "Dubai Holding Entertainment Career fair Career Fair"
   },
   {
    "key": "0a120b2d725bd88d",
@@ -802,7 +802,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 4.6,
-   "snippet": "Dubai Holding Entertainment Career fair Career Fair article__content__view\"> Location United Arab Emirates Business Unit Career Fair Department Career fair Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Entertainment Description Dubai Holding Ente"
+   "snippet": "Dubai Holding Entertainment Career fair Career Fair"
   },
   {
    "key": "2eba3dcb9fd0fb9a",

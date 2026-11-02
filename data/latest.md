@@ -1,6 +1,6 @@
 # UAE junior roles: 96 open, 96 new today
 
-Updated 02 Nov 2026 23:17 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
+Updated 02 Nov 2026 23:30 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
 
 | # | New | Role | Employer | City | Lane | Posted | Source | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -105,7 +105,7 @@ Updated 02 Nov 2026 23:17 Dubai time. Sorted new first, then by fit. Lanes: data
 
 | Source | Status | Jobs fetched |
 |---|---|---|
-| _details | ok | 11 |
+| _details | ok | 0 |
 | amazon | ok | 63 |
 | ashby:checkout.com | ok | 170 |
 | ashby:cohere | ok | 119 |
