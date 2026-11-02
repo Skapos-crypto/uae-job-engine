@@ -1,29 +1,30 @@
 {
  "generated": {
-  "utc": "2026-11-02T15:22:13+00:00",
-  "dubai": "2026-11-02 19:22",
+  "utc": "2026-11-02T19:17:25+00:00",
+  "dubai": "2026-11-02 23:17",
   "full_run": false
  },
  "summary": {
-  "total": 91,
-  "new_today": 91,
-  "carried_over": 51,
-  "raw_postings": 6909,
+  "total": 96,
+  "new_today": 96,
+  "carried_over": 50,
+  "raw_postings": 7593,
   "by_family": {
+   "graduate": 11,
    "ai_ml": 13,
    "data_science": 7,
-   "graduate": 9,
    "business": 9,
-   "data_analyst": 11,
+   "data_analyst": 13,
    "data_eng": 3,
    "analyst": 5,
-   "software": 15,
+   "software": 16,
    "it": 8,
    "bi": 2,
    "product": 9
   },
   "by_source": {
-   "jobspy": 51,
+   "avature": 4,
+   "jobspy": 50,
    "amazon": 5,
    "oracle": 9,
    "workday": 6,
@@ -31,20 +32,47 @@
    "greenhouse": 4,
    "workable": 3,
    "ashby": 7,
+   "attrax": 2,
    "phenom": 1
   },
-  "http_calls": 125,
+  "http_calls": 204,
   "rejected": {
-   "excluded-title": 683,
-   "no-family": 1081,
-   "senior": 82,
-   "graduate-other-discipline": 6,
+   "no-family": 1347,
+   "excluded-title": 810,
+   "senior": 99,
+   "graduate-other-discipline": 10,
    "title-elsewhere": 3,
-   "nationals-only": 14,
-   "4+ years": 13
+   "nationals-only": 19,
+   "4+ years": 15
   }
  },
  "jobs": [
+  {
+   "key": "9a5cad0777589700",
+   "title": "Dubai Holding Internship Programme 2027",
+   "employer": "Dubai Holding",
+   "sector": "diversified",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Internship-2027/3592",
+   "source": "avature:Dubai Holding",
+   "source_type": "employer",
+   "seen_on": [
+    "avature:Dubai Holding"
+   ],
+   "posted": "2026-11-02",
+   "age_days": 0,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 6.1,
+   "snippet": "Dubai Holding Corporate Intern Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Intern Experience Level Entry Level / Junior / Fresh Graduates Date Monday, November 2, 2026 Entity DH Corporate Descript"
+  },
   {
    "key": "8b819a53a5f053b1",
    "title": "Artificial Intelligence Intern",
@@ -201,6 +229,32 @@
    "is_new": true,
    "score": 5.6,
    "snippet": ""
+  },
+  {
+   "key": "ff08003df4c761fa",
+   "title": "Dubai Holding Leaders of Tomorrow Graduate Programme 2027",
+   "employer": "Dubai Holding",
+   "sector": "diversified",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Leaders-of-Tomorrow-2027/3308",
+   "source": "avature:Dubai Holding",
+   "source_type": "employer",
+   "seen_on": [
+    "avature:Dubai Holding"
+   ],
+   "posted": "2026-10-23",
+   "age_days": 10,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 5.6,
+   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Leaders of Tomorrow Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Corporat"
   },
   {
    "key": "4d0e18e16df88b2f",
@@ -697,6 +751,58 @@
    "is_new": true,
    "score": 4.6,
    "snippet": "At Amazon Web Services (AWS), we are working to be the most customer-centric company on earth. To get there, we need exceptionally talented, bright, and driven people. Are you ready to embrace the challenge? - In pursuit of a Bachelor's degree in a relevant technical field such a"
+  },
+  {
+   "key": "c597f485a13bb8eb",
+   "title": "Dubai Holding Entertainment: Finance, Revenue & Analytics Talent Pool",
+   "employer": "Dubai Holding",
+   "sector": "diversified",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Finance-Revenue-Analytics-Talent-Pool/3341",
+   "source": "avature:Dubai Holding",
+   "source_type": "employer",
+   "seen_on": [
+    "avature:Dubai Holding"
+   ],
+   "posted": "2026-10-23",
+   "age_days": 10,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 4.6,
+   "snippet": "Dubai Holding Entertainment Career fair Career Fair article__content__view\"> Location United Arab Emirates Business Unit Career Fair Department Career fair Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Entertainment Description Dubai Holding Ente"
+  },
+  {
+   "key": "0a120b2d725bd88d",
+   "title": "Dubai Holding Entertainment: Technology & Data Talent Pool",
+   "employer": "Dubai Holding",
+   "sector": "diversified",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Technology-Data-Talent-Pool/3339",
+   "source": "avature:Dubai Holding",
+   "source_type": "employer",
+   "seen_on": [
+    "avature:Dubai Holding"
+   ],
+   "posted": "2026-10-23",
+   "age_days": 10,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 4.6,
+   "snippet": "Dubai Holding Entertainment Career fair Career Fair article__content__view\"> Location United Arab Emirates Business Unit Career Fair Department Career fair Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Entertainment Description Dubai Holding Ente"
   },
   {
    "key": "2eba3dcb9fd0fb9a",
@@ -1249,6 +1355,32 @@
    "snippet": "Employment Type: Full-time & Permanent. Job Location: Dubai, UAE (We provide visa sponsorship & relocation assistance). Salary: USD 65,000 per annum + performance based bonus - 0% tax environment. Employee Share Scheme : Opportunity to join Cobblestone Employee Share Scheme. Annu"
   },
   {
+   "key": "fe29c5732c8c47e9",
+   "title": "Software Engineer II -Backend",
+   "employer": "talabat",
+   "sector": "tech",
+   "city": "Dubai",
+   "location": "Dubai, UAE",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://careers.deliveryhero.com/job/software-engineer-ii-backend-in-dubai-uae-jid-4869",
+   "source": "attrax:talabat",
+   "source_type": "employer",
+   "seen_on": [
+    "attrax:talabat"
+   ],
+   "posted": null,
+   "age_days": null,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 4.2,
+   "snippet": ""
+  },
+  {
    "key": "7dc7e7fa8dce08db",
    "title": "Embedded Software Engineer II",
    "employer": "EDGE",
@@ -1691,6 +1823,32 @@
    "snippet": ""
   },
   {
+   "key": "15c3639ce13817c5",
+   "title": "Business Analyst - instashop",
+   "employer": "talabat",
+   "sector": "tech",
+   "city": "Dubai",
+   "location": "Dubai, UAE",
+   "family": "business",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://careers.deliveryhero.com/job/business-analyst-instashop-in-dubai-uae-jid-10675",
+   "source": "attrax:talabat",
+   "source_type": "employer",
+   "seen_on": [
+    "attrax:talabat"
+   ],
+   "posted": null,
+   "age_days": null,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "is_new": true,
+   "score": 3.9,
+   "snippet": ""
+  },
+  {
    "key": "808783b57a3720a8",
    "title": "Technician - IT Service Desk",
    "employer": "du",
@@ -1786,32 +1944,6 @@
    ],
    "posted": "2026-10-31",
    "age_days": 2,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "is_new": true,
-   "score": 3.8,
-   "snippet": ""
-  },
-  {
-   "key": "15c3639ce13817c5",
-   "title": "Business Analyst - instashop",
-   "employer": "talabat",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, Dubai, United Arab Emirates",
-   "family": "business",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4467853803",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-10-30",
-   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
