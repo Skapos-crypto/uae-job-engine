@@ -1,0 +1,151 @@
+# Employer job systems and job boards polled directly.
+# verified: true  = the endpoint was seen working in a public source before it was added.
+# verified: false = a probe. After each run, data/health.json shows whether it answered;
+#                   prune entries that keep failing.
+
+# Oracle Recruiting Cloud: the public JSON behind each employer's career site.
+# sites: [] means "list the employer's career sites first and use the external ones".
+oracle:
+  - {name: ADIB, sector: banking, host: hciq.fa.em2.oraclecloud.com, sites: [CX_1, CX], verified: true}
+  - {name: Emirates NBD, sector: banking, host: fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1], verified: true}
+  - {name: First Abu Dhabi Bank, sector: banking, host: ehjd.fa.em2.oraclecloud.com, sites: [fabCareers], verified: true}
+  - {name: Mashreq, sector: banking, host: hcld.fa.em2.oraclecloud.com, sites: [CX_1], verified: true}
+  - {name: du, sector: telecom, host: fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1001], verified: true}
+  - {name: "e&", sector: telecom, host: iaayey.fa.ocs.oraclecloud26.com, sites: [], verified: false}
+  - {name: Emaar, sector: real estate, host: emhm.fa.em2.oraclecloud.com, sites: [], verified: false}
+  - {name: DP World, sector: ports and logistics, host: ehpv.fa.em2.oraclecloud.com, sites: [], verified: false}
+  - {name: Dubai Airports, sector: aviation, host: hcrg.fa.em2.oraclecloud.com, sites: [], verified: false}
+  - {name: AD Ports Group, sector: ports and logistics, host: fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com, sites: [], verified: false}
+  - {name: NMC Healthcare, sector: healthcare, host: eiby.fa.em2.oraclecloud.com, sites: [], verified: false}
+  - {name: PureHealth, sector: healthcare, host: fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_6007], verified: true}
+  - {name: Oracle, sector: big tech, host: eeho.fa.us2.oraclecloud.com, sites: [jobsearch], location_id: "300000000106641", verified: true}
+
+# Workday: POST /wday/cxs/{tenant}/{site}/jobs, filtered to UAE locations via the site's own facets.
+workday:
+  - {name: Mastercard, sector: payments, tenant: mastercard, wd: wd1, site: CorporateCareers, verified: true}
+  - {name: Rolls-Royce, sector: industry, tenant: rollsroyce, wd: wd3, site: Intern_Graduate, verified: true}
+  - {name: KBR, sector: engineering services, tenant: kbr, wd: wd5, site: KBR_Careers, verified: true}
+  - {name: Cleveland Clinic Abu Dhabi, sector: healthcare, tenant: ccf, wd: wd1, site: ClevelandClinicCareers, verified: true}
+  - {name: Salesforce, sector: big tech, tenant: salesforce, wd: wd12, site: External_Career_Site, verified: false}
+  - {name: Dell, sector: big tech, tenant: dell, wd: wd1, site: External, verified: false}
+  - {name: HP, sector: big tech, tenant: hp, wd: wd5, site: ExternalCareerSite, verified: false}
+  - {name: Baker Hughes, sector: energy, tenant: bakerhughes, wd: wd5, site: BakerHughes, verified: false}
+  - {name: Shell, sector: energy, tenant: shell, wd: wd3, site: ShellCareers, verified: false}
+  - {name: GSK, sector: pharma, tenant: gsk, wd: wd5, site: GSKCareers, verified: false}
+  - {name: AstraZeneca, sector: pharma, tenant: astrazeneca, wd: wd3, site: Careers, verified: false}
+  - {name: Novartis, sector: pharma, tenant: novartis, wd: wd3, site: Novartis_Careers, verified: false}
+  - {name: Pfizer, sector: pharma, tenant: pfizer, wd: wd1, site: PfizerCareers, verified: false}
+  - {name: Philips, sector: healthcare tech, tenant: philips, wd: wd3, site: jobs-and-careers, verified: false}
+  - {name: Coca-Cola, sector: consumer goods, tenant: coke, wd: wd1, site: coca-cola-careers, verified: false}
+  - {name: PwC, sector: consulting, tenant: pwc, wd: wd3, site: Global_Experienced_Careers, verified: false}
+  - {name: Thomson Reuters, sector: media and data, tenant: thomsonreuters, wd: wd5, site: External_Career_Site, verified: false}
+
+# Startup applicant tracking boards with public JSON (Greenhouse, Lever, Ashby, Workable).
+boards:
+  - {ats: greenhouse, token: careem, name: Careem, sector: tech}
+  - {ats: greenhouse, token: tamara, name: Tamara, sector: fintech, region: eu}
+  - {ats: greenhouse, token: cobblestoneenergy, name: Cobblestone Energy, sector: trading}
+  - {ats: greenhouse, token: cobblestoneenergy1, name: Cobblestone Energy, sector: trading}
+  - {ats: greenhouse, token: cobblestoneenergy4, name: Cobblestone Energy, sector: trading}
+  - {ats: greenhouse, token: dmgevents, name: dmg events, sector: events}
+  - {ats: greenhouse, token: infotrust, name: InfoTrust, sector: analytics}
+  - {ats: lever, token: aldar, name: Aldar Properties, sector: real estate}
+  - {ats: lever, token: kitopi, name: Kitopi, sector: tech}
+  - {ats: lever, token: Yassir, name: Yassir, sector: tech}
+  - {ats: lever, token: weride, name: WeRide, sector: autonomous vehicles}
+  - {ats: lever, token: binance, name: Binance, sector: crypto}
+  - {ats: ashby, token: ziina, name: Ziina, sector: fintech}
+  - {ats: ashby, token: checkout.com, name: Checkout.com, sector: fintech}
+  - {ats: ashby, token: qlub, name: qlub, sector: fintech}
+  - {ats: ashby, token: mexdigital, name: MultiBank Group, sector: fintech}
+  - {ats: workable, token: bayutdubizzle, name: dubizzle Group, sector: proptech}
+
+# Amazon's own job search, filtered to the UAE.
+amazon: true
+
+# Company slugs tried on all four startup boards every few days. Boards that answer and list
+# UAE jobs are then fetched daily (data/discovered.json). Wrong guesses just return 404.
+probe:
+  # UAE and MENA tech, fintech and scale-ups
+  - tabby
+  - noon
+  - deriv
+  - huspy
+  - sarwa
+  - bayzat
+  - wio
+  - wiobank
+  - zywa
+  - tarabut
+  - leantech
+  - lean
+  - rain
+  - nymcard
+  - swvl
+  - instashop
+  - yango
+  - pemo
+  - mamo
+  - sylndr
+  - baraka
+  - stake
+  - prypco
+  - smartcrowd
+  - xpanceo
+  - presight
+  - core42
+  - g42
+  - bayanat
+  - propertyfinder
+  - dubizzle
+  - souqalmal
+  - yallacompare
+  - eyewa
+  - ounass
+  - namshi
+  - mumzworld
+  - quiqup
+  - trukker
+  - anghami
+  - starzplay
+  - yalla
+  - talabat
+  - deliveryhero
+  - cafu
+  - shory
+  - bitoasis
+  - fuze
+  - tappayments
+  - telr
+  - payby
+  - magnati
+  - emiratesdraw
+  - pureharvest
+  - unifonic
+  - foodics
+  - lucidya
+  - fresha
+  # global companies with Dubai or Abu Dhabi offices
+  - palantir
+  - openai
+  - scaleai
+  - databricks
+  - datadog
+  - mongodb
+  - stripe
+  - airbnb
+  - okx
+  - bybit
+  - kraken
+  - cryptocom
+  - ripple
+  - chainalysis
+  - circle
+  - consensys
+  - deel
+  - wise
+  - cohere
+  - mistral
+  - perplexity
+  - elevenlabs
+  - bolt

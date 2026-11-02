@@ -1,0 +1,422 @@
+#!/usr/bin/env python3
+"""Collect UAE job postings from employer job systems and job sites, keep the junior
+data / analytics / software / AI / IT roles, dedupe them, and write data/latest.*.
+
+FULL_RUN=1 (default): everything, including JobSpy sites and the weekly board probe.
+FULL_RUN=0: employer job systems and known boards only (the midday refresh).
+"""
+import json
+import os
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timedelta, timezone
+
+import yaml
+
+from engine import sources
+from engine.http import Http
+from engine.util import (DUBAI, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of, is_uae,
+                         job_key, min_years, nationals, score, seniority, today_dubai)
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(ROOT, "data")
+AGGREGATOR_TYPES = {"indeed", "linkedin", "google", "bayt"}
+STALE_DAYS = 21          # aggregator postings older than this are dropped
+CARRY_DAYS = 3           # keep jobs from sources that did not run this time for this long
+FORGET_DAYS = 60         # forget dedupe history after this long
+MAX_DETAILS = 160        # cap on full-description fetches per run
+PROBE_EVERY_DAYS = 6
+
+
+def log(msg):
+    print(msg, flush=True)
+
+
+def load_json(name, default):
+    path = os.path.join(DATA, name)
+    if not os.path.exists(path):
+        return default
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def save_json(name, obj):
+    os.makedirs(os.path.dirname(os.path.join(DATA, name)), exist_ok=True)
+    with open(os.path.join(DATA, name), "w", encoding="utf-8") as fh:
+        json.dump(obj, fh, ensure_ascii=False, indent=1, default=str)
+
+
+def load_yaml(name):
+    with open(os.path.join(ROOT, "config", name), encoding="utf-8") as fh:
+        return yaml.safe_load(fh)
+
+
+# ---------------------------------------------------------------- collection
+
+def run_tasks(tasks, health, workers=8):
+    """tasks: list of (source_id, callable). Returns list of raw jobs."""
+    raw = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = {ex.submit(fn): (sid, time.time()) for sid, fn in tasks}
+        for fut in as_completed(futs):
+            sid, started = futs[fut]
+            entry = {"ok": False, "fetched": 0, "ms": int((time.time() - started) * 1000)}
+            try:
+                jobs, meta = fut.result()
+                raw.extend(jobs)
+                entry.update(ok=True, fetched=len(jobs), meta=meta)
+                log("ok    %-38s %4d jobs" % (sid, len(jobs)))
+            except sources.NotFound as e:
+                entry.update(error=str(e), not_found=True)
+                log("404   %-38s %s" % (sid, e))
+            except Exception as e:
+                entry.update(error="%s: %s" % (type(e).__name__, str(e)[:240]))
+                log("FAIL  %-38s %s" % (sid, entry["error"]))
+            health[sid] = entry
+    return raw
+
+
+def probe_boards(http, slugs, known, health):
+    """Try each slug on each startup ATS. Returns list of boards that answered."""
+    tasks, hits = [], []
+    for slug in slugs:
+        for ats in sources.BOARD_FETCHERS:
+            if (ats, slug) in known:
+                continue
+            board = {"token": slug, "ats": ats}
+            tasks.append((ats, board))
+
+    def attempt(ats, board):
+        try:
+            jobs, meta = sources.BOARD_FETCHERS[ats](http, board)
+            return ats, board, jobs, None
+        except Exception as e:
+            return ats, board, [], e
+
+    found_jobs = []
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        for ats, board, jobs, err in ex.map(lambda t: attempt(*t), tasks):
+            if err is None:
+                uae = sum(1 for j in jobs if is_uae(j["location"]))
+                hits.append({"ats": ats, "token": board["token"], "jobs": len(jobs), "uae_jobs": uae})
+                found_jobs.extend(jobs)
+                health["%s:%s" % (ats, board["token"])] = {"ok": True, "fetched": len(jobs), "probe": True}
+    log("probe: %d candidates tried, %d boards answered" % (len(tasks), len(hits)))
+    return hits, found_jobs
+
+
+def collect(http, cfg, search, full, health):
+    tasks = []
+    for emp in cfg.get("oracle") or []:
+        tasks.append(("oracle:%s" % emp["name"], lambda emp=emp: sources.oracle(http, emp)))
+    for emp in cfg.get("workday") or []:
+        tasks.append(("workday:%s" % emp["name"], lambda emp=emp: sources.workday(http, emp)))
+
+    discovered = load_json("discovered.json", {"checked": None, "boards": []})
+    checked = discovered.get("checked")
+    probe_due = bool(full and cfg.get("probe") and (
+        not checked or (today_dubai() - datetime.strptime(checked, "%Y-%m-%d").date()).days >= PROBE_EVERY_DAYS))
+    boards = list(cfg.get("boards") or [])
+    known = {(b["ats"], b["token"]) for b in boards}
+    if not probe_due:
+        # between probes, fetch only discovered boards that actually had UAE jobs
+        for b in discovered.get("boards", []):
+            if b.get("uae_jobs", 0) > 0 and (b["ats"], b["token"]) not in known:
+                boards.append({"ats": b["ats"], "token": b["token"]})
+    for b in boards:
+        fetch = sources.BOARD_FETCHERS[b["ats"]]
+        tasks.append(("%s:%s" % (b["ats"], b["token"]), lambda b=b, fetch=fetch: fetch(http, b)))
+    if cfg.get("amazon"):
+        tasks.append(("amazon", lambda: sources.amazon(http)))
+
+    raw = run_tasks(tasks, health)
+
+    if probe_due:
+        # re-probe every candidate slug on every startup ATS; the result replaces the old list
+        hits, jobs = probe_boards(http, cfg["probe"], known, health)
+        raw.extend(jobs)
+        save_json("discovered.json", {"checked": str(today_dubai()), "boards": hits})
+
+    if full:
+        for site, queries in (search.get("jobspy") or {}).items():
+            started = time.time()
+            try:
+                jobs, meta = sources.jobspy_site(site, queries, log)
+                raw.extend(jobs)
+                health["jobspy:%s" % site] = {"ok": meta["queries_ok"] > 0, "fetched": len(jobs),
+                                              "meta": meta, "ms": int((time.time() - started) * 1000)}
+                log("jobspy %-8s %4d jobs (%d/%d queries ok)" % (site, len(jobs), meta["queries_ok"],
+                                                                  meta["queries"]))
+            except Exception as e:
+                health["jobspy:%s" % site] = {"ok": False, "fetched": 0, "error": str(e)[:240]}
+                log("FAIL  jobspy:%s %s" % (site, e))
+    return raw
+
+
+# ---------------------------------------------------------------- filtering
+
+def prefilter(job):
+    """Cheap checks on title and location. Returns (family, cv, seniority) or (None, reason, None)."""
+    if not job.get("title"):
+        return None, "no-title", None
+    if not is_uae(job.get("location")):
+        return None, "not-uae", None
+    family, cv = classify(job["title"])
+    if family is None:
+        return None, cv, None
+    level = seniority(job["title"])
+    if level == "senior":
+        return None, "senior", None
+    return family, cv, level
+
+
+def fetch_details(http, jobs, cache, health):
+    """Fill in full descriptions for employer jobs whose list entry has only a summary.
+    Jobs already checked on an earlier run are answered from the cache instead."""
+    need = [j for j in jobs if j.get("_detail") and j["key"] not in cache]
+    need = need[:MAX_DETAILS]
+
+    def one(j):
+        kind = j["_detail"][0]
+        try:
+            if kind == "oracle":
+                return j, sources.oracle_detail(http, *j["_detail"][1:]), None
+            if kind == "workday":
+                return j, sources.workday_detail(http, *j["_detail"][1:]), None
+        except Exception as e:
+            return j, "", e
+        return j, "", None
+
+    failures = 0
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        for j, text, err in ex.map(one, need):
+            if err is not None:
+                failures += 1
+            else:
+                j["_fresh_detail"] = True
+                if text:
+                    j["desc"] = (j.get("desc") or "") + " " + text
+    health["_details"] = {"ok": failures == 0, "fetched": len(need) - failures, "failed": failures,
+                          "skipped_cached": sum(1 for j in jobs if j.get("_detail") and j["key"] in cache)}
+    log("details: %d fetched, %d failed" % (len(need) - failures, failures))
+
+
+def final_checks(job, today, cache):
+    """Description-level checks. Returns a rejection reason, or None and fills in flags."""
+    key = job["key"]
+    desc = job.get("desc") or ""
+    complete = job.get("_fresh_detail") or not job.get("_detail")
+    if complete or key not in cache:
+        facts = {"nat": nationals(job["title"], desc), "yrs": min_years(desc),
+                 "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc))}
+        if complete:
+            cache[key] = dict(facts, d=str(today))
+    else:
+        facts = cache[key]
+        cache[key]["d"] = str(today)
+    nat, yrs = facts.get("nat"), facts.get("yrs")
+    if nationals(job["title"], "") == "only":
+        nat = "only"
+    if nat == "only":
+        return "nationals-only"
+    if yrs is not None and yrs >= 4:
+        return "4+ years"
+    if facts.get("ns"):
+        return "no-sponsorship"
+    posted = job.get("posted")
+    age = (today - posted).days if posted else None
+    if job["source_type"] in AGGREGATOR_TYPES and age is not None and age > STALE_DAYS:
+        return "stale"
+    flags = []
+    if nat == "preferred":
+        flags.append("nationals_preferred")
+    if yrs == 3:
+        flags.append("stretch_3y")
+    if facts.get("ov"):
+        flags.append("own_visa_preferred")
+    job.update(flags=flags, age_days=age, min_years=yrs, nat=nat)
+    return None
+
+
+# ---------------------------------------------------------------- output
+
+def to_record(j):
+    return {
+        "key": j["key"], "title": j["title"], "employer": j["employer"], "sector": j.get("sector") or "",
+        "city": city_of(j["location"]), "location": j["location"][:160], "family": j["family"],
+        "cv": j["cv"], "seniority": j["seniority"], "url": j["url"], "source": j["source"],
+        "source_type": j["source_type"], "seen_on": sorted(j.get("seen_on", [j["source"]])),
+        "posted": str(j["posted"]) if j.get("posted") else None, "age_days": j.get("age_days"),
+        "min_years": j.get("min_years"), "flags": j.get("flags", []), "first_seen": j["first_seen"],
+        "last_seen": j["last_seen"], "is_new": j["is_new"], "score": j["score"],
+        "snippet": (j.get("desc") or "")[:280],
+    }
+
+
+FAMILY_LABEL = {
+    "data_analyst": "Data analyst", "bi": "BI / reporting", "data_science": "Data science",
+    "ai_ml": "AI / ML", "data_eng": "Data engineering", "product": "Product", "business": "Business analysis",
+    "software": "Software / backend", "it": "IT", "analyst": "Analyst (other)", "graduate": "Graduate / intern",
+}
+
+
+def md_escape(text):
+    return (text or "").replace("|", "/").replace("\n", " ").strip()
+
+
+def write_markdown(records, summary, health_rows):
+    now = datetime.now(DUBAI).strftime("%d %b %Y %H:%M")
+    lines = [
+        "# UAE junior roles: %d open, %d new today" % (summary["total"], summary["new_today"]),
+        "",
+        "Updated %s Dubai time. Sorted new first, then by fit. "
+        "Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, "
+        "software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and "
+        "frontend/mobile roles are filtered out." % now,
+        "",
+        "| # | New | Role | Employer | City | Lane | Posted | Source | Notes |",
+        "|---|---|---|---|---|---|---|---|---|",
+    ]
+    for i, r in enumerate(records, 1):
+        notes = []
+        if "nationals_preferred" in r["flags"]:
+            notes.append("UAE nationals preferred")
+        if "stretch_3y" in r["flags"]:
+            notes.append("asks 3 yrs")
+        if "own_visa_preferred" in r["flags"]:
+            notes.append("prefers own visa")
+        lines.append("| %d | %s | [%s](%s) | %s | %s | %s | %s | %s | %s |" % (
+            i, "🆕" if r["is_new"] else "", md_escape(r["title"]), r["url"], md_escape(r["employer"]),
+            r["city"], FAMILY_LABEL.get(r["family"], r["family"]), r["posted"] or "",
+            r["source"].split(":")[0], "; ".join(notes)))
+    lines += ["", "## Sources this run", "", "| Source | Status | Jobs fetched |", "|---|---|---|"]
+    for sid, h in health_rows:
+        status = "ok" if h.get("ok") else ("not found" if h.get("not_found") else "failed")
+        lines.append("| %s | %s | %s |" % (sid, status, h.get("fetched", 0)))
+    with open(os.path.join(DATA, "latest.md"), "w", encoding="utf-8") as fh:
+        fh.write("\n".join(lines) + "\n")
+
+
+# ---------------------------------------------------------------- main
+
+def main():
+    full = os.environ.get("FULL_RUN", "1") == "1"
+    cfg = load_yaml("employers.yaml")
+    search = load_yaml("search.yaml")
+    today = today_dubai()
+    http = Http(min_interval=1.0)
+    health = {}
+    t0 = time.time()
+
+    raw = collect(http, cfg, search, full, health)
+    log("collected %d raw postings in %.0fs" % (len(raw), time.time() - t0))
+
+    seen = load_json("seen.json", {})
+    cache = load_json("detail_cache.json", {})
+    rejected = []
+    candidates = []
+    for j in raw:
+        family, cv_or_reason, level = prefilter(j)
+        if family is None:
+            if cv_or_reason != "not-uae":
+                rejected.append({"title": j.get("title"), "employer": j.get("employer"),
+                                 "source": j.get("source"), "reason": cv_or_reason})
+            continue
+        j.update(family=family, cv=cv_or_reason, seniority=level,
+                 key=job_key(j["employer"], j["title"], j["location"]))
+        candidates.append(j)
+
+    fetch_details(http, candidates, cache, health)
+
+    accepted = []
+    for j in candidates:
+        reason = final_checks(j, today, cache)
+        if reason:
+            rejected.append({"title": j["title"], "employer": j["employer"], "source": j["source"],
+                             "reason": reason})
+            continue
+        accepted.append(j)
+
+    # dedupe across sources: keep the employer's own link when we have it
+    merged = {}
+    for j in accepted:
+        k = j["key"]
+        if k not in merged:
+            j["seen_on"] = {j["source"]}
+            merged[k] = j
+            continue
+        m = merged[k]
+        m["seen_on"].add(j["source"])
+        if SOURCE_RANK.get(j["source_type"], 9) < SOURCE_RANK.get(m["source_type"], 9):
+            for field in ("url", "source", "source_type", "sector", "employer"):
+                if j.get(field):
+                    m[field] = j[field]
+        if j.get("posted") and (not m.get("posted") or j["posted"] < m["posted"]):
+            m["posted"] = j["posted"]
+
+    # stamp first/last seen, score
+    today_s = str(today)
+    for k, j in merged.items():
+        prev = seen.get(k, {})
+        j["first_seen"] = prev.get("first_seen", today_s)
+        j["last_seen"] = today_s
+        j["is_new"] = j["first_seen"] == today_s
+        j["score"] = score(j)
+        seen[k] = {"first_seen": j["first_seen"], "last_seen": today_s, "title": j["title"],
+                   "employer": j["employer"]}
+
+    records = [to_record(j) for j in merged.values()]
+
+    # carry over jobs whose source did not run successfully this time
+    previous = load_json("latest.json", {}).get("jobs", [])
+    have = {r["key"] for r in records}
+    carried = 0
+    for r in previous:
+        if r["key"] in have:
+            continue
+        src_ok = any(h.get("ok") for sid, h in health.items() if sid == r["source"])
+        recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= CARRY_DAYS
+        if not src_ok and recent:
+            r["is_new"] = False
+            records.append(r)
+            carried += 1
+
+    records.sort(key=lambda r: (not r["is_new"], -r["score"], r["title"]))
+
+    cutoff = today - timedelta(days=FORGET_DAYS)
+    seen = {k: v for k, v in seen.items()
+            if datetime.strptime(v["last_seen"], "%Y-%m-%d").date() >= cutoff}
+    cache = {k: v for k, v in cache.items()
+             if datetime.strptime(v.get("d", today_s), "%Y-%m-%d").date() >= cutoff}
+
+    by_family, by_source = {}, {}
+    for r in records:
+        by_family[r["family"]] = by_family.get(r["family"], 0) + 1
+        by_source[r["source"].split(":")[0]] = by_source.get(r["source"].split(":")[0], 0) + 1
+    summary = {
+        "total": len(records), "new_today": sum(1 for r in records if r["is_new"]),
+        "carried_over": carried, "raw_postings": len(raw), "by_family": by_family,
+        "by_source": by_source, "http_calls": http.calls,
+        "rejected": {},
+    }
+    for x in rejected:
+        summary["rejected"][x["reason"]] = summary["rejected"].get(x["reason"], 0) + 1
+
+    generated = {"utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                 "dubai": datetime.now(DUBAI).strftime("%Y-%m-%d %H:%M"), "full_run": full}
+    save_json("latest.json", {"generated": generated, "summary": summary, "jobs": records})
+    save_json("seen.json", seen)
+    save_json("detail_cache.json", cache)
+    save_json("health.json", {"generated": generated, "sources": health})
+    save_json("rejected_sample.json", rejected[:400])
+    save_json(os.path.join("history", "%s.json" % today_s), [r for r in records if r["is_new"]])
+    health_rows = sorted(health.items(), key=lambda kv: (kv[1].get("ok", False), kv[0]))
+    write_markdown(records, summary, [(k, v) for k, v in health_rows if not v.get("probe")])
+    log("done: %d jobs (%d new), %d carried, %d HTTP calls, %.0fs" % (
+        summary["total"], summary["new_today"], carried, http.calls, time.time() - t0))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
