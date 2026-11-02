@@ -251,6 +251,18 @@ def main():
         health = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
         assert health["_details"]["fetched"] == 0, health["_details"]
 
+        # facts cached under older description patterns are stale: those details are fetched again
+        cache_path = os.path.join(run.DATA, "detail_cache.json")
+        with open(cache_path) as fh:
+            cache = json.load(fh)
+        for facts in cache.values():
+            facts["v"] = "old"
+        with open(cache_path, "w") as fh:
+            json.dump(cache, fh)
+        run.main()
+        health = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
+        assert health["_details"]["fetched"] == 8, health["_details"]  # every candidate with a detail page
+
         # midday run: JobSpy is skipped and one board fails; their jobs are carried and stay new today
         FAILING.add("careem")
         os.environ["FULL_RUN"] = "0"

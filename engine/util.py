@@ -303,6 +303,8 @@ NAT_DESC_RE = re.compile(
     r"\(\s*(uae nationals?|uaen|emiratis?)( only)?\s*\)|are you an? (\w+ ){0,3}(uae national|emirati)\b|"
     r"must be an? (uae national|emirati)\b|(uae|emirati) nationality (is )?(required|mandatory|a must)|"
     r"for (uae nationals?|uaen|emiratis?|emirati nationals) (applicants|candidates)|"
+    r"(aimed at|designed for|dedicated to) (preparing |developing |empowering )?(young |talented )?"
+    r"(uae nationals|emiratis)|family book|khulasat al[- ]qaid|"
     r"(develop|empower|nurtur)\w* (young |talented |ambitious )?(uae nationals?|emirati) "
     r"(talent|graduates|youth|students)|خلاصة القيد",
     re.I,
@@ -348,6 +350,11 @@ NO_SPONSOR_RE = re.compile(
 )
 # Softer: the employer would rather not sponsor. Kept, but ranked lower.
 OWN_VISA_RE = re.compile(r"own (residence |work )?visa|on (your )?own visa|valid uae (residence|residency) visa", re.I)
+
+# Facts cached from full descriptions are tagged with this; when any of these patterns changes,
+# cached facts are stale and those descriptions are fetched again.
+FACTS_VERSION = hashlib.sha1("\n".join(rx.pattern for rx in (
+    NAT_PREF_RE, NAT_TITLE_RE, NAT_DESC_RE, YEARS_RE, NO_SPONSOR_RE, OWN_VISA_RE)).encode("utf-8")).hexdigest()[:8]
 
 
 # ---------------------------------------------------------------- dedupe keys

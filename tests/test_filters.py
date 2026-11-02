@@ -126,6 +126,9 @@ def main():
                      "National talent into the next generation of tech leaders.") == "only"
     assert nationals("Senior Specialist - New Business Enablement",
                      "Senior Specialist - New Business Enablement (For UAEN applicants) Embark on a journey") == "only"
+    assert nationals("Management Trainee Program 2025-2026", "a structured development initiative aimed at "
+                     "preparing UAE Nationals for critical middle management roles") == "only"
+    assert nationals("Management Trainee Program", "Requirements: UAE National with a Family Book") == "only"
     assert nationals("Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)",
                      "") == "preferred"
     assert nationals("Data Analyst", "We welcome UAE nationals and expatriates alike.") is None
@@ -141,7 +144,7 @@ def main():
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 25))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 27))
 
 
 if __name__ == "__main__":

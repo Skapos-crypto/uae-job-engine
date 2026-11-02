@@ -16,8 +16,8 @@ import yaml
 
 from engine import sources
 from engine.http import Http
-from engine.util import (DUBAI, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of, elsewhere,
-                         is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
+from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of,
+                         elsewhere, is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -219,10 +219,16 @@ def prefilter(job):
     return family, cv, level
 
 
+def cached_facts(cache, key):
+    """Facts from an earlier full description, if they were worked out with today's patterns."""
+    facts = cache.get(key)
+    return facts if facts and facts.get("v") == FACTS_VERSION else None
+
+
 def fetch_details(http, jobs, cache, health):
     """Fill in full descriptions for employer jobs whose list entry has only a summary.
     Jobs already checked on an earlier run are answered from the cache instead."""
-    need = [j for j in jobs if j.get("_detail") and j["key"] not in cache]
+    need = [j for j in jobs if j.get("_detail") and not cached_facts(cache, j["key"])]
     need = need[:MAX_DETAILS]
 
     def one(j):
@@ -250,7 +256,7 @@ def fetch_details(http, jobs, cache, health):
                 if text:
                     j["desc"] = (j.get("desc") or "") + " " + text
     health["_details"] = {"ok": failures == 0, "fetched": len(need) - failures, "failed": failures,
-                          "skipped_cached": sum(1 for j in jobs if j.get("_detail") and j["key"] in cache)}
+                          "skipped_cached": sum(1 for j in jobs if j.get("_detail") and cached_facts(cache, j["key"]))}
     log("details: %d fetched, %d failed" % (len(need) - failures, failures))
 
 
@@ -259,14 +265,14 @@ def final_checks(job, today, cache):
     key = job["key"]
     desc = job.get("desc") or ""
     complete = job.get("_fresh_detail") or not job.get("_detail")
-    if complete or key not in cache:
+    facts = None if complete else cached_facts(cache, key)
+    if facts is None:
         facts = {"nat": nationals(job["title"], desc), "yrs": min_years(desc),
                  "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc))}
         if complete:
-            cache[key] = dict(facts, d=str(today))
+            cache[key] = dict(facts, d=str(today), v=FACTS_VERSION)
     else:
-        facts = cache[key]
-        cache[key]["d"] = str(today)
+        facts["d"] = str(today)
     nat, yrs = facts.get("nat"), facts.get("yrs")
     if nationals(job["title"], "") == "only":
         nat = "only"
