@@ -69,8 +69,44 @@ TT_RSS = ('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:tt="ht
           '</tt:location></tt:locations></item></channel></rss>')
 
 
+AV_LIST = ('<p>2 results</p><div class="results">' + "".join(
+    '<article class="article article--result %d" id="article--%d"><h3><a class="link" '
+    'href="https://example-avature.net/en_US/portal/JobDetail/%s/%d" data-au="x"> %s </a></h3>'
+    '<span class="paragraph paragraph--inline"> · </span><span class="paragraph paragraph--inline"> Holding Co '
+    '</span><span class="paragraph paragraph--inline"> Technology </span><span class="paragraph paragraph--inline">'
+    ' 09-Oct-2026 </span></article>' % (n, n, slug, n, title)
+    for n, slug, title in ((11, "Graduate-Data-Analyst", "Graduate Data Analyst"),
+                           (12, "Junior-BI-Developer", "Junior BI Developer"))) + "</div>")
+AV_DETAIL = ('<div class="article__content__view"><div class="article__content__view__field ">'
+             '<div class="article__content__view__field__label" > Location </div>'
+             '<div class="article__content__view__field__value"> %s </div></div>'
+             '<div class="article__content__view__field__value"><p>Fresh graduates welcome.</p></div></div>')
+ATTRAX_PAGE = "".join(
+    '<div class="attrax-vacancy-tile sector-x" data-jobid="%s"><a class="attrax-vacancy-tile__title '
+    'attrax-button" href="/job/%s-jid-%s">%s</a><div class="attrax-vacancy-tile__location-freetext">'
+    '<p class="attrax-vacancy-tile__item-label"> Location </p><p class="attrax-vacancy-tile__item-value"> %s </p>'
+    '</div><div><p class="attrax-vacancy-tile__item-label"> Description </p>'
+    '<p class="attrax-vacancy-tile__item-value"> Entry level role </p></div></div>' % (jid, slug, jid, title, loc)
+    for jid, slug, title, loc in (("501", "junior-analyst", "Junior Analyst, Logistics Performance", "Dubai, UAE"),
+                                  ("502", "category-manager", "Category Manager", "Muscat, Oman")))
+DERIV_JOBS = [
+    {"id": "d1", "title": "Junior Python Engineer", "status": "open", "location": "Dubai, United Arab Emirates",
+     "locations": [{"location": "Dubai, United Arab Emirates"}], "description": "## About\n0-2 years of experience",
+     "requirements": None, "created_at": None},
+    {"id": "d2", "title": "Applied AI Engineer", "status": "open", "location": "Cyberjaya, Malaysia",
+     "locations": [{"location": "Cyberjaya, Malaysia"}], "description": "", "requirements": None}]
+
+
 def fake_request(self, method, url, retries=2, **kw):
     self.calls += 1
+    if "example-avature.net" in url:
+        if "/SearchJobs/" in url:
+            return FakeResp(None, text=AV_LIST if "jobOffset=0" in url else "<p>2 results</p>")
+        return FakeResp(None, text=AV_DETAIL % ("United Kingdom" if url.endswith("/12") else "United Arab Emirates"))
+    if "example-attrax.com" in url:
+        return FakeResp(None, text=ATTRAX_PAGE)  # every page repeats the same tiles: paging must stop
+    if "join.deriv.careers/api/job-openings" in url:
+        return FakeResp(DERIV_JOBS)
     if "example-phenom.com" in url:
         if "/search-results" in url:
             ddo = {"eagerLoadRefineSearch": {"status": 200, "totalHits": 2, "data": {"jobs": PHENOM_JOBS}}}
@@ -188,6 +224,10 @@ def main():
             "phenom": [{"name": "PhenomCo", "base": "https://careers.example-phenom.com/global/en"}],
             "successfactors": [{"name": "SFCo", "base": "https://careers.example-sf.com"}],
             "jibe": [{"name": "JibeCo", "base": "https://careers.example-jibe.com", "crawl_delay": 5}],
+            "avature": [{"name": "AvCo", "base": "https://example-avature.net/en_US/portal",
+                         "assume_location": "United Arab Emirates"}],
+            "attrax": [{"name": "AtCo", "base": "https://careers.example-attrax.com/co-jobs"}],
+            "deriv": True,
             "boards": [{"ats": "greenhouse", "token": "careem", "name": "Careem"},
                        {"ats": "lever", "token": "aldar", "name": "Aldar"},
                        {"ats": "ashby", "token": "ziina", "name": "Ziina"},
@@ -214,8 +254,16 @@ def main():
                        "Graduate Programme - Data & Technology", "Junior Python Developer", "Data Analyst",
                        "Business Intelligence Engineer", "Junior Data Engineer", "Junior Data Analyst",
                        "Junior BI Analyst", "AI Engineer - Graduate", "IT Support Specialist", "Data Scientist II",
-                       "Junior Analytics Engineer"}
+                       "Junior Analytics Engineer", "Graduate Data Analyst", "Junior Analyst, Logistics Performance",
+                       "Junior Python Engineer"}
         assert set(titles) == expect_kept, set(titles) ^ expect_kept
+        # Avature: the job page gave the location; the candidate whose page says United Kingdom is out
+        assert titles["Graduate Data Analyst"]["location"] == "United Arab Emirates"
+        assert titles["Graduate Data Analyst"]["posted"] == "2026-10-09"
+        assert latest["summary"]["rejected"].get("not-uae") == 1
+        assert titles["Junior Analyst, Logistics Performance"]["url"] == \
+            "https://careers.example-attrax.com/job/junior-analyst-jid-501"
+        assert titles["Junior Python Engineer"]["url"] == "https://join.deriv.careers/jobs/d1"
         # new collectors: links, dates and locations come through
         assert titles["Junior BI Analyst"]["url"] == "https://careers.example-phenom.com/global/en/job/77"
         assert titles["AI Engineer - Graduate"]["url"] == "https://careers.example-sf.com/job/Dubai-AI-Engineer/123/"
@@ -240,6 +288,7 @@ def main():
         # a blocked JobSpy site is recorded as blocked, not as an ok run with no jobs
         assert not health["jobspy:linkedin"]["ok"] and health["jobspy:linkedin"]["blocked"] == 1
         assert health["jobspy:bayt"]["ok"] and health["jobspy:bayt"]["fetched"] == 1
+        assert health["attrax:AtCo"]["meta"]["pages"] == 2, health["attrax:AtCo"]  # page 2 had nothing new
         sample = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
         assert {"senior", "nationals-only", "4+ years"} <= {x["reason"] for x in sample}
 
@@ -261,7 +310,7 @@ def main():
             json.dump(cache, fh)
         run.main()
         health = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
-        assert health["_details"]["fetched"] == 8, health["_details"]  # every candidate with a detail page
+        assert health["_details"]["fetched"] == 10, health["_details"]  # every candidate with a detail page
 
         # midday run: JobSpy is skipped and one board fails; their jobs are carried and stay new today
         FAILING.add("careem")

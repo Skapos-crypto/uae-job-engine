@@ -252,7 +252,7 @@ def phenom_detail(http, base, jid):
 
 # ---------------------------------------------------------------- SAP SuccessFactors career sites
 
-SF_MAX_PAGES = 12
+SF_MAX_PAGES = 30
 SF_ROW_RE = re.compile(r'<tr class="data-row[^"]*"[^>]*>(.*?)</tr>', re.S)
 SF_LINK_RE = re.compile(r'<a\s([^>]*class="jobTitle-link"[^>]*)>(.*?)</a>', re.S)
 SF_LOCATION_RE = re.compile(r'<span class="jobLocation">\s*([^<]*?)\s*</span>')
@@ -307,6 +307,110 @@ def successfactors_detail(http, url):
         return ""
     block = text[i:].split('<div class="clear', 1)[0]  # the description ends where the page footer starts
     return strip_html(re.sub(r"<(style|script)[^>]*>.*?</\1>", " ", block, flags=re.S))
+
+
+# ---------------------------------------------------------------- Avature career portals
+
+AV_MAX_PAGES = 60
+AV_ARTICLE_RE = re.compile(r'<article class="article article--result[^"]*"[^>]*>(.*?)</article>', re.S)
+AV_LINK_RE = re.compile(r'<a class="link" href="([^"]+)"[^>]*>(.*?)</a>', re.S)
+AV_SPAN_RE = re.compile(r'<span class="paragraph paragraph--inline">(.*?)</span>', re.S)
+AV_TOTAL_RE = re.compile(r"(\d+)\s+results")
+AV_FIELD_RE = re.compile(r'field__label"\s*>\s*(.*?)\s*</div>\s*<div class="article__content__view__field__value">'
+                         r'\s*(.*?)\s*</div>', re.S)
+
+
+def avature(http, emp):
+    """Avature career portals: the HTML search lists 6 jobs a page, without locations (its RSS feed
+    is capped at 20 items). assume_location stands in until a candidate's job page is fetched
+    (avature_detail), which has the real location."""
+    base = emp["base"].rstrip("/")
+    jobs, seen, offset, total = [], set(), 0, 0
+    for _ in range(AV_MAX_PAGES):
+        text = _page(http.get("%s/SearchJobs/?jobRecordsPerPage=6&jobOffset=%d" % (base, offset)),
+                     "avature %s" % emp["name"])
+        m = AV_TOTAL_RE.search(text)
+        total = int(m.group(1)) if m else total
+        articles = AV_ARTICLE_RE.findall(text)
+        new = 0
+        for article in articles:
+            link = AV_LINK_RE.search(article)
+            url = html.unescape(link.group(1)) if link else ""
+            if not url or url in seen:
+                continue
+            seen.add(url)
+            new += 1
+            spans = [s for s in (strip_html(x) for x in AV_SPAN_RE.findall(article)) if s and s != "·"]
+            jobs.append({
+                "source": "avature:%s" % emp["name"],
+                "source_type": "employer",
+                "employer": emp["name"],
+                "sector": emp.get("sector", ""),
+                "title": strip_html(link.group(2)),
+                "location": emp["assume_location"],
+                "posted": parse_date(spans[-1]) if spans else None,  # "09-Oct-2026"
+                "url": url,
+                "desc": " ".join(spans[:-1]),
+                "_detail": ("avature", url),
+            })
+        offset += len(articles)
+        if not articles or not new or offset >= total:
+            break
+    return jobs, {"total": total}
+
+
+def avature_detail(http, url):
+    """(description, location) from an Avature job page."""
+    text = _page(http.get(url), "avature detail")
+    location = next((strip_html(value) for label, value in AV_FIELD_RE.findall(text)
+                     if strip_html(label).lower() == "location"), "")
+    i = text.find("article__content__view")
+    body = re.sub(r"<(style|script)[^>]*>.*?</\1>", " ", text[i:i + 30000], flags=re.S) if i >= 0 else ""
+    return strip_html(body), location
+
+
+# ---------------------------------------------------------------- Attrax career sites (Delivery Hero)
+
+ATTRAX_MAX_PAGES = 20
+ATTRAX_TILE_RE = re.compile(r'<div class="attrax-vacancy-tile [^"]*" data-jobid="(\d+)">(.*?)'
+                            r'(?=<div class="attrax-vacancy-tile |$)', re.S)
+ATTRAX_TITLE_RE = re.compile(r'class="attrax-vacancy-tile__title[^"]*"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S)
+ATTRAX_ITEM_RE = re.compile(r'attrax-vacancy-tile__item-label">\s*(.*?)\s*</p>\s*'
+                            r'<p class="[^"]*attrax-vacancy-tile__item-value">\s*(.*?)\s*</p>', re.S)
+
+
+def attrax(http, emp):
+    """Attrax career sites: HTML tiles with title, location and a short description, about 20 a
+    page; paging stops at the first page without a new job."""
+    base = emp["base"]
+    root = "{0.scheme}://{0.netloc}".format(urlparse(base))
+    jobs, seen = [], set()
+    for page in range(1, ATTRAX_MAX_PAGES + 1):
+        text = _page(http.get("%s?page=%d" % (base, page)), "attrax %s" % emp["name"])
+        new = 0
+        for jid, tile in ATTRAX_TILE_RE.findall(text):
+            title = ATTRAX_TITLE_RE.search(tile)
+            if jid in seen or not title:
+                continue
+            seen.add(jid)
+            new += 1
+            items = {}
+            for label, value in ATTRAX_ITEM_RE.findall(tile):
+                items.setdefault(strip_html(label).lower(), strip_html(value))
+            jobs.append({
+                "source": "attrax:%s" % emp["name"],
+                "source_type": "employer",
+                "employer": emp["name"],
+                "sector": emp.get("sector", ""),
+                "title": strip_html(title.group(2)),
+                "location": items.get("location", ""),
+                "posted": None,
+                "url": urljoin(root, html.unescape(title.group(1))),
+                "desc": items.get("description", ""),
+            })
+        if not new:
+            break
+    return jobs, {"pages": page}
 
 
 # ---------------------------------------------------------------- Jibe (iCIMS career sites)
@@ -486,6 +590,27 @@ def amazon(http):
             })
         if len(page) < 100:
             break
+    return jobs, {}
+
+
+# ---------------------------------------------------------------- Deriv
+
+def deriv(http):
+    """Deriv's own career site serves every open role as JSON."""
+    data = _json(http.get("https://join.deriv.careers/api/job-openings"), "deriv")
+    jobs = []
+    for j in data if isinstance(data, list) else []:
+        if clean(j.get("status")) not in ("", "open"):
+            continue
+        locs = [clean(j.get("location"))] + [clean(l.get("location")) for l in (j.get("locations") or [])]
+        jobs.append({
+            "source": "deriv", "source_type": "employer", "employer": "Deriv", "sector": "fintech",
+            "title": clean(j.get("title")),
+            "location": "; ".join(dict.fromkeys(l for l in locs if l)),
+            "posted": parse_date(j.get("created_at")),
+            "url": "https://join.deriv.careers/jobs/%s" % clean(j.get("id")),
+            "desc": " ".join(clean(j.get(k)) for k in ("description", "requirements")),
+        })
     return jobs, {}
 
 

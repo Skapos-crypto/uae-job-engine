@@ -1,5 +1,7 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
-from engine.util import classify, elsewhere, is_uae, min_years, nationals, norm_company, seniority
+from datetime import date
+
+from engine.util import classify, elsewhere, is_uae, min_years, nationals, norm_company, parse_date, seniority
 
 KEEP = [
     ("Backend Engineer", "software"),
@@ -136,6 +138,9 @@ def main():
     assert elsewhere("IAM Business Analyst (SailPoint) - Riyadh, KSA") and elsewhere("Data Analyst - Doha")
     assert not elsewhere("Sales Analyst eCommerce - UAE & Oman") and not elsewhere("Data Analyst")
     assert not elsewhere("Junior Research Scientist (Computer Science) – Lab of Dr. Riyadh A.")  # a first name
+    # date shapes from the newer job systems (Avature list, RSS feeds)
+    assert parse_date("09-Oct-2026") == date(2026, 10, 9)
+    assert parse_date("Mon, 02 Nov 2026 12:05:49 +0400") == date(2026, 11, 2)
     # one employer, two spellings: dedupe on the same key
     assert norm_company("Masdar (Abu Dhabi Future Energy Company)") == norm_company("Masdar") == "masdar"
     assert norm_company("Halian | Managed Services, Recruitment") == "halian"
@@ -144,7 +149,7 @@ def main():
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 27))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 29))
 
 
 if __name__ == "__main__":

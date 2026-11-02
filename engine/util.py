@@ -35,7 +35,7 @@ def strip_html(text):
 
 # ---------------------------------------------------------------- dates
 
-MONTH_FORMATS = ("%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y")
+MONTH_FORMATS = ("%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y", "%d-%b-%Y")
 
 
 def parse_date(value):

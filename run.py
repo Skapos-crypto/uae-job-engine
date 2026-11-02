@@ -125,7 +125,7 @@ def collect(http, cfg, search, full, health):
         tasks.append(("oracle:%s" % emp["name"], lambda emp=emp: sources.oracle(http, emp)))
     for emp in cfg.get("workday") or []:
         tasks.append(("workday:%s" % emp["name"], lambda emp=emp: sources.workday(http, emp)))
-    for kind in ("phenom", "successfactors", "jibe"):
+    for kind in ("phenom", "successfactors", "jibe", "avature", "attrax"):
         for emp in cfg.get(kind) or []:
             fetch = getattr(sources, kind)
             tasks.append(("%s:%s" % (kind, emp["name"]), lambda emp=emp, fetch=fetch: fetch(http, emp)))
@@ -146,6 +146,8 @@ def collect(http, cfg, search, full, health):
         tasks.append(("%s:%s" % (b["ats"], b["token"]), lambda b=b, fetch=fetch: fetch(http, b)))
     if cfg.get("amazon"):
         tasks.append(("amazon", lambda: sources.amazon(http)))
+    if cfg.get("deriv"):
+        tasks.append(("deriv", lambda: sources.deriv(http)))
 
     # JobSpy's sites share no host with the employer systems, so it runs alongside them
     with ThreadPoolExecutor(max_workers=1) as background:
@@ -242,17 +244,22 @@ def fetch_details(http, jobs, cache, health):
                 return j, sources.phenom_detail(http, *j["_detail"][1:]), None
             if kind == "successfactors":
                 return j, sources.successfactors_detail(http, *j["_detail"][1:]), None
+            if kind == "avature":
+                return j, sources.avature_detail(http, *j["_detail"][1:]), None
         except Exception as e:
             return j, "", e
         return j, "", None
 
     failures = 0
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for j, text, err in ex.map(one, need):
+        for j, found, err in ex.map(one, need):
             if err is not None:
                 failures += 1
             else:
                 j["_fresh_detail"] = True
+                text, where = found if isinstance(found, tuple) else (found, "")
+                if where:  # the job page states the location the list left out
+                    j["location"] = j["_detail_location"] = where
                 if text:
                     j["desc"] = (j.get("desc") or "") + " " + text
     health["_details"] = {"ok": failures == 0, "fetched": len(need) - failures, "failed": failures,
@@ -269,10 +276,16 @@ def final_checks(job, today, cache):
     if facts is None:
         facts = {"nat": nationals(job["title"], desc), "yrs": min_years(desc),
                  "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc))}
+        if job.get("_detail_location"):
+            facts["loc"] = job["_detail_location"]
         if complete:
             cache[key] = dict(facts, d=str(today), v=FACTS_VERSION)
     else:
         facts["d"] = str(today)
+    if facts.get("loc"):
+        job["location"] = facts["loc"]
+    if not is_uae(job["location"]):  # only a job page can say so; the list passed the UAE check
+        return "not-uae"
     nat, yrs = facts.get("nat"), facts.get("yrs")
     if nationals(job["title"], "") == "only":
         nat = "only"

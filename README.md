@@ -4,10 +4,10 @@ A small data pipeline that collects junior data, analytics, AI, software and IT 
 
 It reads the public JSON, RSS or HTML listings behind employer career sites, the job systems that search engines barely index:
 
-- **Oracle Recruiting Cloud**: ADIB, Emirates NBD, Emirates Islamic, FAB, Mashreq, du, e&, Emaar, DP World, Dubai Airports, AD Ports, NMC, PureHealth, SEHA, SSMC, KPMG Lower Gulf, Dell, Oracle
+- **Oracle Recruiting Cloud**: ADIB, Emirates NBD, Emirates Islamic, FAB, Mashreq, du, e&, Emaar, DP World, Dubai Airports, AD Ports, NMC, PureHealth, SEHA, SSMC, Aster, KPMG Lower Gulf, Dell, Oracle
 - **Workday**: Mastercard, Salesforce, HP, Shell, Baker Hughes, KBR, GSK, AstraZeneca, Novartis, Pfizer, Philips, Thomson Reuters and other multinationals with UAE offices
-- **Phenom** (ADCB, G42), **SAP SuccessFactors** (EY, PwC Middle East) and **Jibe** (M42) career sites
-- **Greenhouse, Lever, Ashby, Workable, Pinpoint, Teamtailor**: UAE startups and scale-ups (Careem, Tamara, Tabby, Chalhoub and more), plus a periodic probe that discovers new boards
+- **Phenom** (ADCB, G42, Majid Al Futtaim), **SAP SuccessFactors** (EY, PwC Middle East, Al-Futtaim), **Jibe** (M42), **Avature** (Dubai Holding) and **Attrax** (talabat) career sites, and Deriv's own job feed
+- **Greenhouse, Lever, Ashby, Workable, Pinpoint, Teamtailor**: UAE startups and scale-ups (Careem, Tamara, Tabby, Chalhoub, Property Finder and more), plus a periodic probe that discovers new boards
 - **Amazon** job search (UAE only)
 - **JobSpy** (once a day, low volume, no login): LinkedIn, Indeed and Bayt. Google is off: it returned no data on every query in November 2026.
 

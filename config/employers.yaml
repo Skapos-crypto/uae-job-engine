@@ -40,30 +40,44 @@ oracle:
 phenom:
   - {name: ADCB, sector: banking, base: "https://adcbcareers.com/gb/en", verified: true}
   - {name: G42, sector: AI, base: "https://careers.g42.ai/global/en", verified: true}
+  - {name: Majid Al Futtaim, sector: retail, base: "https://careers.majidalfuttaim.com/global/en", verified: true}
 
 # SAP SuccessFactors career sites: the HTML search page (their /services/ RSS is robots-disallowed).
 successfactors:
   - {name: EY, sector: consulting, base: "https://careers.ey.com/ey", verified: true}
   - {name: PwC Middle East, sector: consulting, base: "https://careers.pwc.com", verified: true}
+  # alfuttaim.com/en/careers "Explore Open Roles" links here
+  - {name: Al-Futtaim, sector: retail and automotive, base: "https://www.afuturewithus.com", verified: true}
 
 # Jibe (iCIMS) career sites: GET {base}/api/jobs. crawl_delay is the site's robots.txt value.
 jibe:
   - {name: M42, sector: healthcare, base: "https://careers.m42.ae", crawl_delay: 5, verified: true}
 
+# Avature career portals: the HTML search (no locations in it). assume_location stands in until a
+# candidate's job page gives the real one; candidates outside the UAE are then dropped.
+avature:
+  # dubaiholding.com/en/our-people "Explore careers" links here; robots.txt allows /*/newcareersmarketplace
+  - {name: Dubai Holding, sector: diversified, base: "https://dhcareers.avature.net/en_US/newcareersmarketplace",
+     assume_location: "United Arab Emirates", verified: true}
+
+# Attrax career sites (HTML tiles). careers.talabat.com redirects to Delivery Hero's site.
+attrax:
+  - {name: talabat, sector: tech, base: "https://careers.deliveryhero.com/talabat-jobs", verified: true}
+
+# Deriv's own career site: join.deriv.careers/api/job-openings (the JSON its job page loads).
+deriv: true
+
 # Checked in November 2026 and not collected:
 #   Masdar, Etihad      SmartRecruiters: api.smartrecruiters.com robots.txt disallows all crawlers
 #   flydubai            iCIMS: careers-flydubai.icims.com robots.txt is Disallow: /
-#   Dubai Islamic Bank  Talentera (Bayt): the job list is loaded by script, no feed found
+#   Dubai Islamic Bank  Talentera (Bayt): 3 vacancies, loaded through a call that needs a session token
 #   RAKBANK             careers.rakbank.ae serves a TLS certificate for another name
 #   Deloitte ME         Avature: lists talent pipelines, not individual jobs
-#   talabat             Delivery Hero's own site (Attrax HTML); no collector yet
-#   Dubai Holding       Avature (dhcareers.avature.net): 6 jobs a page and no locations in the list,
-#                       RSS capped at 20 items; no collector yet
-#   TAQA                own site (jobs.taqa.com/vacancies/); no collector yet
-#   Wio, Mubadala       careers pages list no jobs and link to no job system
+#   DEWA                vacancies only behind candidate registration and login
+#   TAQA                own site (jobs.taqa.com/vacancies/) listed a single vacancy
+#   Wio, Mubadala, Landmark  careers pages list no jobs and link to no job system
 #   ADQ                 no careers page on adq.ae
 #   noon                noon.com careers page links only to LinkedIn
-#   DEWA, Majid Al Futtaim, Al-Futtaim, Landmark, Deriv: job system not identified yet
 #   (JobSpy still picks up their LinkedIn, Indeed and Bayt postings)
 
 # Workday: POST /wday/cxs/{tenant}/{site}/jobs, filtered to UAE locations via the site's own facets.
