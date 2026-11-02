@@ -1,6 +1,10 @@
-# JobSpy queries, run once a day (the 05:13 Dubai full run), one query at a time with pauses.
-# About 28 queries a day in total. These sites' terms forbid automated access; volume is kept
-# low and no account or login is ever used. Remove a site's list to switch it off.
+# JobSpy queries, run once a day (the 05:13 Dubai full run), one query at a time per site with
+# pauses; the sites run side by side. 28 queries a day in total. These sites' terms forbid automated
+# access; volume is kept low and no account or login is ever used. Remove a site's list to switch it
+# off. A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
+#
+# Google is off: on 2026-11-02 every Google query returned "no job data returned", both on GitHub
+# Actions and from a home connection. Its six queries moved to Indeed and Bayt.
 jobspy:
   indeed:
     - data analyst
@@ -11,6 +15,9 @@ jobspy:
     - software engineer
     - python developer
     - machine learning engineer
+    - ai engineer
+    - graduate
+    - it support
   linkedin:
     - data analyst
     - data scientist
@@ -20,13 +27,6 @@ jobspy:
     - machine learning engineer
     - graduate
     - product owner
-  google:
-    - data analyst
-    - data scientist
-    - business analyst
-    - software engineer
-    - graduate trainee
-    - machine learning engineer
   bayt:
     - data analyst
     - data scientist
@@ -34,3 +34,6 @@ jobspy:
     - software engineer
     - python developer
     - machine learning
+    - business intelligence
+    - fresh graduate
+    - ai engineer

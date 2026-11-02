@@ -4,6 +4,7 @@ import html
 import math
 import re
 from datetime import date, datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 DUBAI = timezone(timedelta(hours=4))
 
@@ -64,6 +65,10 @@ def parse_date(value):
             return datetime.strptime(s, fmt).date()
         except ValueError:
             pass
+    try:
+        return parsedate_to_datetime(s).date()  # RSS: "Mon, 02 Nov 2026 12:05:49 +0400"
+    except (TypeError, ValueError, IndexError):
+        pass
     return relative_posted(s)
 
 
@@ -127,7 +132,7 @@ FAMILIES = [
      r"data engineer|analytics engineer|\betl\b|big data|data platform|data pipeline|data warehouse|"
      r"databricks|\bspark\b|data integration|dataops|data ops"),
     ("bi", "Data_Analyst",
-     r"business intelligence|\bbi\b|power ?bi|tableau|qlik|reporting|\bmis\b|dashboard|insights?\b|"
+     r"business intelligence|\bbi\b|\bbie\b|power ?bi|tableau|qlik|reporting|\bmis\b|dashboard|insights?\b|"
      r"visuali[sz]ation"),
     ("data_analyst", "Data_Analyst",
      r"data analy|analytics|data quality|data governance|data management|data specialist|data officer|"
@@ -149,16 +154,18 @@ FAMILIES = [
      r"application developer|automation engineer|\brpa\b|solutions? engineer|"
      r"implementation (engineer|consultant|specialist)|technical consultant|erp (developer|consultant)|odoo|"
      r"salesforce (developer|admin)|crm (developer|consultant)|systems? engineer|database (developer|admin)|"
-     r"\bdba\b|sql developer|developer advocate"),
+     r"\bdba\b|sql developer|developer advocate|forward[- ]deployed|\bqa (engineer|analyst|automation)|"
+     r"test (engineer|automation)|software tester|quality assurance (engineer|analyst)"),
     ("it", "IT",
      r"\bit (support|analyst|specialist|engineer|officer|technician|administrator|coordinator|executive|"
      r"associate|trainee|intern|operations)|information technology|service desk|help ?desk|desktop support|"
+     r"support engineer|"
      r"technical support|application support|systems? analyst|systems? administrator|"
      r"network (engineer|administrator|support)|\bnoc\b|data cent(er|re)|infrastructure (engineer|analyst|support)|"
      r"end user (support|computing)"),
     ("analyst", "Data_Analyst", r"\banalyst\b"),
     ("graduate", "Data_Analyst",
-     r"graduate|trainee|internship|\bintern\b|fresh(er)? grad|entry[- ]level|early careers?|rotational|"
+     r"graduate|trainee|internship|\bintern\b|fresh(er)? grad|entry[- ]level|early (careers?|talent)|rotational|"
      r"summer analyst|campus|apprentice"),
 ]
 FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
@@ -166,27 +173,64 @@ FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
 # Titles never relevant, whatever family they would otherwise match.
 EXCLUDE_RE = re.compile(
     r"front[- ]?end|\bui\b|\bux\b|ui/ux|\bios\b|android|flutter|react native|mobile (app|developer|engineer)|"
-    r"graphic|designer|teacher|lecturer|professor|faculty|tutor|\bnurse|physician|doctor|surgeon|pharmacist|"
-    r"driver|cashier|sales (executive|manager|associate|representative|consultant|engineer)|telesales|"
+    r"graphic|designer|animat|illustrat|video (editor|maker|producer)|videograph|photograph|copywrit|"
+    r"content (writer|creator)|teacher|lecturer|professor|faculty|tutor|"
+    r"\bnurse|physician|doctor|surgeon|pharmacist|therapist|psycholog|behaviou?ral analyst|dietitian|dentist|"
+    r"oncology|immunology|cardiology|vaccine|respiratory|ophthalm|dermatolog|neuroscience|rare disease|"
+    r"driver|cashier|\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|"
+    r"inside sales|telesales|account (executive|manager|director|representative)|business development|"
+    r"\b[bs]dr\b|(customer|merchant|client) acquisition|"
     r"call cent|receptionist|data entry|security guard|cyber|soc analyst|security analyst|threat|"
-    r"penetration|information security|"
-    r"infosec|\bgrc\b|\baml\b|\bkyc\b|compliance|credit(?!.*(model|data|analytic))|financial analyst|fp&a|"
-    r"accountant|accounting|audit|\btax\b|treasury|equity|investment analyst|actuar|legal|paralegal|"
+    r"penetration|information security|infosec|\bgrc\b|\biam\b|identity (and|&) access|legal|paralegal|"
+    r"people operations|talent acquisition|recruit(er|ment|ing)|payroll|workplace (operations|experience)|"
+    r"facilit(y|ies)|\bpermits?\b|embedded|firmware|fpga|"
     r"surveyor|inspector|\bhse\b|safety|mechanical|civil engineer|electrical engineer|chemical engineer|"
     r"petroleum|drilling|reservoir|geolog|quantity|estimator|merchandis|buyer\b|store manager|"
     r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista",
     re.I,
 )
 
-# Graduate and intern roles in disciplines outside his lanes.
+# Finance, risk and control titles: dropped unless the title also names a technical role
+# ("Associate Support Engineer - Treasury & Risk", "AML Data Analyst" stay).
+DOMAIN_EXCLUDE_RE = re.compile(
+    r"\baml\b|\bkyc\b|compliance|credit|financial (analyst|reporting|planning|controller|control|crime)|"
+    r"financial (&|and) |fp&a|accountant|accounting|audit|\btax\b|treasury|equity|investment analyst|actuar|"
+    r"\bcost (analyst|accountant|control)|business finance|shari'?a|shari’a",
+    re.I,
+)
+TECH_CORE_RE = re.compile(
+    r"data (analy|scien|engineer)|analytics|business intelligence|\bbi\b|power ?bi|machine learning|\bai\b|"
+    r"software|developer|support engineer|systems? (analyst|engineer)|automation|\brpa\b|application support|"
+    r"technical support|\bit (support|analyst|engineer)|\bmodel",
+    re.I,
+)
+
+# Graduate and intern roles in disciplines outside the target lanes.
 GRAD_EXCLUDE_RE = re.compile(
     r"mechanical|civil|electrical|chemical|petroleum|structural|architect|nurs|medical|pharm|clinical|"
     r"legal|\blaw\b|finance|accounting|audit|\btax\b|sales|hospitality|chef|culinary|cabin|pilot|aircraft|"
     r"technician|\bhse\b|safety|marketing(?!.*analy)|\bhr\b(?!.*(data|analy))|human resources|procurement|"
     r"retail|store|fashion|design|interior|quantity|survey|geolog|reservoir|drilling|welding|construction|"
-    r"site engineer|planning engineer|medic",
+    r"site engineer|planning engineer|medic|shari|fulfil+ment|warehouse|\bfc\b|area manager|"
+    r"people (and|&) (organi[sz]ation|culture)",
     re.I,
 )
+
+# A place outside the UAE named in the title ("IAM Business Analyst - Riyadh, KSA") when the
+# listing's location field says Dubai: aggregators often attach the poster's office instead.
+# Cities count only in location position, since some are also first names ("Lab of Dr. Riyadh A.").
+ELSEWHERE_RE = re.compile(
+    r"\b(ksa|saudi|qatar|bahrain|kuwait|oman|egypt|lebanon|morocco|pakistan|india)\b|"
+    r"\b(riyadh|jeddah|dammam|khobar|doha|manama|muscat|cairo|amman|jordan|beirut|karachi|lahore|"
+    r"bengaluru|bangalore|hyderabad|mumbai|london|singapore)\b(?=\s*([-–,)/&|]|$))",
+    re.I,
+)
+
+
+def elsewhere(title):
+    """True when the title names a place outside the UAE and no place inside it."""
+    t = clean(title)
+    return bool(ELSEWHERE_RE.search(t)) and not UAE_RE.search(t)
 
 CV_HINTS = [
     (re.compile(r"software|developer|backend|python|devops|cloud|platform", re.I), "Backend_Engineer"),
@@ -202,7 +246,7 @@ def classify(title):
     t = clean(title)
     if not t:
         return None, "no-title"
-    if EXCLUDE_RE.search(t):
+    if EXCLUDE_RE.search(t) or (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)):
         return None, "excluded-title"
     for family, cv, rx in FAMILIES:
         if rx.search(t):
@@ -218,8 +262,9 @@ def classify(title):
 
 
 SENIOR_HARD_RE = re.compile(
-    r"\b(director|head|vp|vice president|chief|principal|partner|avp|svp|evp|architect|distinguished|"
-    r"executive director|general manager|staff (engineer|scientist|software|data|analyst|developer)|"
+    r"\b(director|head|vp|vice president|chief|principal|principle|partner|avp|svp|evp|architect|distinguished|"
+    r"executive director|general manager|deputy|ceo|cto|cio|cfo|coo|cdo|ciso|"
+    r"staff (engineer|scientist|software|data|analyst|developer)|"
     r"associate (manager|director|principal|partner|vice president))\b",
     re.I,
 )
@@ -247,15 +292,19 @@ NAT_PREF_RE = re.compile(
     re.I,
 )
 NAT_TITLE_RE = re.compile(
-    r"uae nationals?|\bemirati|emiratisation|emiratization|nationals? only|tawteen|\bnafis\b|kawader|"
-    r"إمارات|مواطن",
+    r"uae nationals?|\buaen\b|\bemirati|emiratisation|emiratization|emiriti[sz]ation|nationals? only|tawteen|"
+    r"\bnafis\b|kawader|\bwatani\b|maseeraty|إمارات|مواطن",
     re.I,
 )
 NAT_DESC_RE = re.compile(
     r"nationals? only|only (for )?(uae )?nationals|uae nationals? only|open (only )?to uae nationals|"
     r"exclusively for (uae )?nationals|emirati (candidates|nationals) only|emiratis only|"
     r"(role|position|opportunity|program+e?) is (only )?(open )?(to|for) uae nationals|"
-    r"خلاصة القيد",
+    r"\(\s*(uae nationals?|uaen|emiratis?)( only)?\s*\)|are you an? (\w+ ){0,3}(uae national|emirati)\b|"
+    r"must be an? (uae national|emirati)\b|(uae|emirati) nationality (is )?(required|mandatory|a must)|"
+    r"for (uae nationals?|uaen|emiratis?|emirati nationals) (applicants|candidates)|"
+    r"(develop|empower|nurtur)\w* (young |talented |ambitious )?(uae nationals?|emirati) "
+    r"(talent|graduates|youth|students)|خلاصة القيد",
     re.I,
 )
 
@@ -325,7 +374,8 @@ COMPANY_ALIASES = {
 
 def norm_company(name):
     c = html.unescape(clean(name)).lower()
-    c = c.replace("|", " ").replace("&amp;", "&")
+    # "Masdar (Abu Dhabi Future Energy Company)", "Halian | Managed Services, Recruitment"
+    c = re.sub(r"\([^)]*\)", " ", c.split(" | ")[0]).replace("&amp;", "&")
     c = re.sub(r"[^\w\s&]", " ", c)
     c = COMPANY_SUFFIX_RE.sub(" ", c)
     c = WS_RE.sub(" ", c).strip()

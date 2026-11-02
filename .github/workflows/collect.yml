@@ -30,9 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -42,7 +42,9 @@ jobs:
 
       - name: Collect
         env:
-          FULL_RUN: ${{ github.event.schedule == '43 8 * * *' && '0' || (github.event.inputs.full || '1') }}
+          # JobSpy runs once a day (05:13). Pushes and the midday run collect the job systems only,
+          # so a code push never adds a second day's worth of LinkedIn, Indeed and Bayt queries.
+          FULL_RUN: ${{ (github.event_name == 'push' || github.event.schedule == '43 8 * * *') && '0' || (github.event.inputs.full || '1') }}
         run: python run.py
 
       - name: Commit results

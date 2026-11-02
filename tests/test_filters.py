@@ -1,5 +1,5 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
-from engine.util import classify, is_uae, min_years, nationals, seniority
+from engine.util import classify, elsewhere, is_uae, min_years, nationals, norm_company, seniority
 
 KEEP = [
     ("Backend Engineer", "software"),
@@ -25,6 +25,19 @@ KEEP = [
     ("Operations Analyst", "business"),
     ("Analyst, Corporate Strategy", "analyst"),
     ("AI Specialist", "ai_ml"),
+    # first live runs, November 2026
+    ("Associate Support Engineer - Treasury & Risk", "it"),  # treasury no longer hides a tech role
+    ("AML Data Analyst", "data_analyst"),
+    ("Credit Risk Modelling Analyst", "analyst"),
+    ("Forward Deployed Engineer - UAE", "software"),
+    ("BIE Engineer", "bi"),  # Amazon's Business Intelligence Engineer
+    ("Sales Analyst eCommerce - UAE & Oman", "analyst"),
+    ("Biostatistician-Clinical Trials Unit Section", "data_science"),
+    ("Data Center Technician - 2027 Internship", "it"),
+    ("Trans Topology Data Analyst, Supply Chain Transportation Planning", "data_analyst"),
+    ("QA Engineer", "software"),
+    ("Junior Test Automation Engineer", "software"),
+    ("Early Talent Programme 2027", "graduate"),
 ]
 
 DROP = [
@@ -46,6 +59,33 @@ DROP = [
     "Inspector - Mechanical",
     "Associate Director, Data Strategy",
     "Graduate Trainee - Finance",
+    # first live runs, November 2026
+    "Graduate Trainee – Internal Shariah Control (UAEN)",
+    "Tableau Account Executive - Middle East",
+    "GPU/AI  Global Sales - Customer Acquisition",
+    "Junior Sales Analyst - Inside Sales",
+    "Junior Business Development Representative (Graduate/Early Careers)",
+    "Merchant Acquisition Intern",
+    "Animator Intern",
+    "Product Specialist, Oncology",
+    "Principle Fiat Product Specialist",
+    "Deputy CTO (AI Agents, TypeScript, Kafka, Kubernetes)",
+    "Engineer - NOC & Permits (AUH)",
+    "Applied Behavioural Analyst",
+    "Applied Behavioral Analyst (Sakina)",
+    "Cost Analyst - Business Finance",
+    "Financial Reporting specialist",
+    "Freelance F&B Financial & Performance ANALYST",
+    "People Operations Associate",
+    "Workplace Operations Analyst",
+    "2027 Facilities Coordinator Intern",
+    "2027 Operations Intern, FC Operations",
+    "Graduate Area Manager",
+    "Embedded Software Engineer II",
+    "IAM Business Analyst (SailPoint)",
+    "Intern-People and Organization",
+    "Watani Business Enablement Solutions Graduate Programme",  # PwC's UAE-nationals programme
+    "Marketing Associate - Maseeraty Graduate Program, UAE",
 ]
 
 
@@ -75,10 +115,33 @@ def main():
     assert is_uae("Dubai, Dubai, AE") and is_uae("Abu Dhabi, United Arab Emirates")
     assert not is_uae("Riyadh, Saudi Arabia")
 
+    # nationals-only roles that the first live runs let through
+    assert nationals("Graduate Trainee (UAEN)", "") == "only"
+    assert nationals("Officer, Treasury Operations (Emiritization)", "") == "only"
+    assert nationals("Associate Technical Support Engineer",
+                     "Role : Associate Technical Support Engineer ( UAE National ) Location : Abu Dhabi") == "only"
+    assert nationals("Management Trainee Program 2025-2026",
+                     "Are you an ambitious UAE National with a minimum GPA of 3.7?") == "only"
+    assert nationals("AI Graduate Programme", "This programme is central to our mission: developing UAE "
+                     "National talent into the next generation of tech leaders.") == "only"
+    assert nationals("Senior Specialist - New Business Enablement",
+                     "Senior Specialist - New Business Enablement (For UAEN applicants) Embark on a journey") == "only"
+    assert nationals("Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)",
+                     "") == "preferred"
+    assert nationals("Data Analyst", "We welcome UAE nationals and expatriates alike.") is None
+    # titles naming another country although the listing says Dubai
+    assert elsewhere("IAM Business Analyst (SailPoint) - Riyadh, KSA") and elsewhere("Data Analyst - Doha")
+    assert not elsewhere("Sales Analyst eCommerce - UAE & Oman") and not elsewhere("Data Analyst")
+    assert not elsewhere("Junior Research Scientist (Computer Science) – Lab of Dr. Riyadh A.")  # a first name
+    # one employer, two spellings: dedupe on the same key
+    assert norm_company("Masdar (Abu Dhabi Future Energy Company)") == norm_company("Masdar") == "masdar"
+    assert norm_company("Halian | Managed Services, Recruitment") == "halian"
+    assert norm_company("Bayut | dubizzle") == "dubizzle"
+
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 9))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 25))
 
 
 if __name__ == "__main__":

@@ -1,56 +1,96 @@
 # Employer job systems and job boards polled directly.
-# verified: true  = the endpoint was seen working in a public source before it was added.
+# verified: true  = the employer's own careers page was checked to link to this tenant and site,
+#                   and the endpoint was seen answering with that employer's jobs.
 # verified: false = a probe. After each run, data/health.json shows whether it answered;
 #                   prune entries that keep failing.
 
 # Oracle Recruiting Cloud: the public JSON behind each employer's career site.
-# sites: [] means "list the employer's career sites first and use the external ones".
+# sites must be set: an unknown or inactive siteNumber silently returns another site's jobs.
+# Find them with GET https://{host}/hcmRestApi/resources/latest/recruitingCESites?onlyData=true
+# (StatusCode ORA_ACTIVE) and check against the link on the employer's careers page.
 oracle:
-  - {name: ADIB, sector: banking, host: hciq.fa.em2.oraclecloud.com, sites: [CX_1, CX], verified: true}
+  - {name: ADIB, sector: banking, host: hciq.fa.em2.oraclecloud.com, sites: [CX_1], verified: true}
   - {name: Emirates NBD, sector: banking, host: fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1], verified: true}
-  - {name: First Abu Dhabi Bank, sector: banking, host: ehjd.fa.em2.oraclecloud.com, sites: [fabCareers], verified: true}
+  - {name: First Abu Dhabi Bank, sector: banking, host: ehjd.fa.em2.oraclecloud.com, sites: [CX_2001], verified: true}
   - {name: Mashreq, sector: banking, host: hcld.fa.em2.oraclecloud.com, sites: [CX_1], verified: true}
   - {name: du, sector: telecom, host: fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1001], verified: true}
-  - {name: "e&", sector: telecom, host: iaayey.fa.ocs.oraclecloud26.com, sites: [], verified: false}
-  - {name: Emaar, sector: real estate, host: emhm.fa.em2.oraclecloud.com, sites: [], verified: false}
-  - {name: DP World, sector: ports and logistics, host: ehpv.fa.em2.oraclecloud.com, sites: [], verified: false}
-  - {name: Dubai Airports, sector: aviation, host: hcrg.fa.em2.oraclecloud.com, sites: [], verified: false}
-  - {name: AD Ports Group, sector: ports and logistics, host: fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com, sites: [], verified: false}
-  - {name: NMC Healthcare, sector: healthcare, host: eiby.fa.em2.oraclecloud.com, sites: [], verified: false}
-  - {name: PureHealth, sector: healthcare, host: fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_6007], verified: true}
-  - {name: Oracle, sector: big tech, host: eeho.fa.us2.oraclecloud.com, sites: [jobsearch], location_id: "300000000106641", verified: true}
+  - {name: "e&", sector: telecom, host: iaayey.fa.ocs.oraclecloud26.com, sites: [CX_1], verified: true}
+  - {name: Emaar, sector: real estate, host: emhm.fa.em2.oraclecloud.com, sites: [CX_1001], verified: true}
+  # CX_1 is the main site (global), CX_7001 the internship site
+  - {name: DP World, sector: ports and logistics, host: ehpv.fa.em2.oraclecloud.com, sites: [CX_1, CX_7001], verified: true}
+  - {name: Dubai Airports, sector: aviation, host: hcrg.fa.em2.oraclecloud.com, sites: [CX_1], verified: true}
+  - {name: AD Ports Group, sector: ports and logistics, host: fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1], verified: true}
+  # CX_1001 on this host is the UAE-nationals-only site
+  - {name: NMC Healthcare, sector: healthcare, host: eiby.fa.em2.oraclecloud.com, sites: [CX_1], verified: true}
+  # PureHealth group: one site per entity; the empty PHG sites are left out
+  - {name: PureHealth, sector: healthcare, host: fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_6007, CX_8001], verified: true}
+  - {name: SEHA, sector: healthcare, host: fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1], verified: true}
+  - {name: SSMC, sector: healthcare, host: fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_1001], verified: true}
+  - {name: Oracle, sector: big tech, host: eeho.fa.us2.oraclecloud.com, sites: [CX_45001], location_id: "300000000106641", verified: true}
+  # jobs.dell.com moved from Workday to Oracle; location_id is ignored on this pod, so all ~460 jobs are paged
+  - {name: Dell, sector: big tech, host: enterpriseplatform.dell.com, sites: [CX_1001], verified: true}
+  # same host as Emirates NBD; emiratesislamic.ae/en/about-us/careers links to CX_2
+  - {name: Emirates Islamic, sector: banking, host: fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_2], verified: true}
+  - {name: KPMG Lower Gulf, sector: consulting, host: elzw.fa.em8.oraclecloud.com, sites: [CX_1001], verified: true}
+
+# Phenom career sites: each search-results page carries its jobs as JSON (phApp.ddo).
+# robots.txt disallows apply, chatbot and tracking paths, not search or job pages.
+phenom:
+  - {name: ADCB, sector: banking, base: "https://adcbcareers.com/gb/en", verified: true}
+  - {name: G42, sector: AI, base: "https://careers.g42.ai/global/en", verified: true}
+
+# SAP SuccessFactors career sites: the HTML search page (their /services/ RSS is robots-disallowed).
+successfactors:
+  - {name: EY, sector: consulting, base: "https://careers.ey.com/ey", verified: true}
+  - {name: PwC Middle East, sector: consulting, base: "https://careers.pwc.com", verified: true}
+
+# Jibe (iCIMS) career sites: GET {base}/api/jobs. crawl_delay is the site's robots.txt value.
+jibe:
+  - {name: M42, sector: healthcare, base: "https://careers.m42.ae", crawl_delay: 5, verified: true}
+
+# Checked in November 2026 and not collected:
+#   Masdar, Etihad      SmartRecruiters: api.smartrecruiters.com robots.txt disallows all crawlers
+#   flydubai            iCIMS: careers-flydubai.icims.com robots.txt is Disallow: /
+#   Dubai Islamic Bank  Talentera (Bayt): the job list is loaded by script, no feed found
+#   RAKBANK             careers.rakbank.ae serves a TLS certificate for another name
+#   Deloitte ME         Avature: lists talent pipelines, not individual jobs
+#   talabat             Delivery Hero's own site (Attrax HTML); no collector yet
+#   Wio, TAQA, DEWA, Mubadala, ADQ, Dubai Holding, Aster, Majid Al Futtaim, Al-Futtaim, Landmark,
+#   noon, Deriv, Property Finder: job system not identified from the careers page yet
+#   (JobSpy still picks up their LinkedIn, Indeed and Bayt postings)
 
 # Workday: POST /wday/cxs/{tenant}/{site}/jobs, filtered to UAE locations via the site's own facets.
+# PwC was removed: PwC Middle East lists its UAE roles on SuccessFactors (careers.pwc.com), not this tenant.
 workday:
   - {name: Mastercard, sector: payments, tenant: mastercard, wd: wd1, site: CorporateCareers, verified: true}
   - {name: Rolls-Royce, sector: industry, tenant: rollsroyce, wd: wd3, site: Intern_Graduate, verified: true}
   - {name: KBR, sector: engineering services, tenant: kbr, wd: wd5, site: KBR_Careers, verified: true}
   - {name: Cleveland Clinic Abu Dhabi, sector: healthcare, tenant: ccf, wd: wd1, site: ClevelandClinicCareers, verified: true}
-  - {name: Salesforce, sector: big tech, tenant: salesforce, wd: wd12, site: External_Career_Site, verified: false}
-  - {name: Dell, sector: big tech, tenant: dell, wd: wd1, site: External, verified: false}
-  - {name: HP, sector: big tech, tenant: hp, wd: wd5, site: ExternalCareerSite, verified: false}
-  - {name: Baker Hughes, sector: energy, tenant: bakerhughes, wd: wd5, site: BakerHughes, verified: false}
-  - {name: Shell, sector: energy, tenant: shell, wd: wd3, site: ShellCareers, verified: false}
-  - {name: GSK, sector: pharma, tenant: gsk, wd: wd5, site: GSKCareers, verified: false}
-  - {name: AstraZeneca, sector: pharma, tenant: astrazeneca, wd: wd3, site: Careers, verified: false}
-  - {name: Novartis, sector: pharma, tenant: novartis, wd: wd3, site: Novartis_Careers, verified: false}
-  - {name: Pfizer, sector: pharma, tenant: pfizer, wd: wd1, site: PfizerCareers, verified: false}
-  - {name: Philips, sector: healthcare tech, tenant: philips, wd: wd3, site: jobs-and-careers, verified: false}
-  - {name: Coca-Cola, sector: consumer goods, tenant: coke, wd: wd1, site: coca-cola-careers, verified: false}
-  - {name: PwC, sector: consulting, tenant: pwc, wd: wd3, site: Global_Experienced_Careers, verified: false}
-  - {name: Thomson Reuters, sector: media and data, tenant: thomsonreuters, wd: wd5, site: External_Career_Site, verified: false}
+  - {name: Salesforce, sector: big tech, tenant: salesforce, wd: wd12, site: External_Career_Site, verified: true}
+  - {name: HP, sector: big tech, tenant: hp, wd: wd5, site: ExternalCareerSite, verified: true}
+  - {name: Baker Hughes, sector: energy, tenant: bakerhughes, wd: wd5, site: BakerHughes, verified: true}
+  - {name: Shell, sector: energy, tenant: shell, wd: wd3, site: ShellCareers, verified: true}
+  - {name: GSK, sector: pharma, tenant: gsk, wd: wd5, site: GSKCareers, verified: true}
+  - {name: AstraZeneca, sector: pharma, tenant: astrazeneca, wd: wd3, site: Careers, verified: true}
+  - {name: Novartis, sector: pharma, tenant: novartis, wd: wd3, site: Novartis_Careers, verified: true}
+  - {name: Pfizer, sector: pharma, tenant: pfizer, wd: wd1, site: PfizerCareers, verified: true}
+  - {name: Philips, sector: healthcare tech, tenant: philips, wd: wd3, site: jobs-and-careers, verified: true}
+  - {name: Coca-Cola, sector: consumer goods, tenant: coke, wd: wd1, site: coca-cola-careers, verified: true}
+  - {name: Thomson Reuters, sector: media and data, tenant: thomsonreuters, wd: wd5, site: External_Career_Site, verified: true}
 
-# Startup applicant tracking boards with public JSON (Greenhouse, Lever, Ashby, Workable).
+# Startup applicant tracking boards with public JSON or RSS (Greenhouse, Lever, Ashby, Workable,
+# Pinpoint, Teamtailor). A Teamtailor token is the career site's host or its teamtailor.com subdomain.
 boards:
+  - {ats: pinpoint, token: tabby, name: Tabby, sector: fintech}
+  - {ats: teamtailor, token: careers.chalhoubgroup.com, name: Chalhoub Group, sector: retail}
   - {ats: greenhouse, token: careem, name: Careem, sector: tech}
-  - {ats: greenhouse, token: tamara, name: Tamara, sector: fintech, region: eu}
+  - {ats: greenhouse, token: tamara, name: Tamara, sector: fintech}
   - {ats: greenhouse, token: cobblestoneenergy, name: Cobblestone Energy, sector: trading}
   - {ats: greenhouse, token: cobblestoneenergy1, name: Cobblestone Energy, sector: trading}
   - {ats: greenhouse, token: cobblestoneenergy4, name: Cobblestone Energy, sector: trading}
   - {ats: greenhouse, token: dmgevents, name: dmg events, sector: events}
   - {ats: greenhouse, token: infotrust, name: InfoTrust, sector: analytics}
   - {ats: lever, token: aldar, name: Aldar Properties, sector: real estate}
-  - {ats: lever, token: kitopi, name: Kitopi, sector: tech}
   - {ats: lever, token: Yassir, name: Yassir, sector: tech}
   - {ats: lever, token: weride, name: WeRide, sector: autonomous vehicles}
   - {ats: lever, token: binance, name: Binance, sector: crypto}
@@ -63,7 +103,7 @@ boards:
 # Amazon's own job search, filtered to the UAE.
 amazon: true
 
-# Company slugs tried on all four startup boards every few days. Boards that answer and list
+# Company slugs tried on every startup board system every few days. Boards that answer and list
 # UAE jobs are then fetched daily (data/discovered.json). Wrong guesses just return 404.
 probe:
   # UAE and MENA tech, fintech and scale-ups

@@ -16,8 +16,8 @@ import yaml
 
 from engine import sources
 from engine.http import Http
-from engine.util import (DUBAI, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of, is_uae,
-                         job_key, min_years, nationals, score, seniority, today_dubai)
+from engine.util import (DUBAI, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of, elsewhere,
+                         is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -27,6 +27,8 @@ CARRY_DAYS = 3           # keep jobs from sources that did not run this time for
 FORGET_DAYS = 60         # forget dedupe history after this long
 MAX_DETAILS = 160        # cap on full-description fetches per run
 PROBE_EVERY_DAYS = 6
+WORKERS = 32             # threads only wait their turn: the Http client allows one request per host at a time
+REJECTED_PER_REASON = 60
 
 
 def log(msg):
@@ -54,24 +56,35 @@ def load_yaml(name):
 
 # ---------------------------------------------------------------- collection
 
-def run_tasks(tasks, health, workers=8):
+def timed(fn):
+    """Run fn and return (fn(), ms), with the time taken attached to any exception as .ms."""
+    started = time.time()
+    try:
+        return fn(), int((time.time() - started) * 1000)
+    except Exception as e:
+        e.ms = int((time.time() - started) * 1000)
+        raise
+
+
+def run_tasks(tasks, health, workers=WORKERS):
     """tasks: list of (source_id, callable). Returns list of raw jobs."""
     raw = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(fn): (sid, time.time()) for sid, fn in tasks}
+        futs = {ex.submit(timed, fn): sid for sid, fn in tasks}
         for fut in as_completed(futs):
-            sid, started = futs[fut]
-            entry = {"ok": False, "fetched": 0, "ms": int((time.time() - started) * 1000)}
+            sid = futs[fut]
+            entry = {"ok": False, "fetched": 0}
             try:
-                jobs, meta = fut.result()
+                (jobs, meta), ms = fut.result()
+                entry["ms"] = ms
                 raw.extend(jobs)
                 entry.update(ok=True, fetched=len(jobs), meta=meta)
                 log("ok    %-38s %4d jobs" % (sid, len(jobs)))
             except sources.NotFound as e:
-                entry.update(error=str(e), not_found=True)
+                entry.update(error=str(e), not_found=True, ms=getattr(e, "ms", None))
                 log("404   %-38s %s" % (sid, e))
             except Exception as e:
-                entry.update(error="%s: %s" % (type(e).__name__, str(e)[:240]))
+                entry.update(error="%s: %s" % (type(e).__name__, str(e)[:240]), ms=getattr(e, "ms", None))
                 log("FAIL  %-38s %s" % (sid, entry["error"]))
             health[sid] = entry
     return raw
@@ -95,9 +108,9 @@ def probe_boards(http, slugs, known, health):
             return ats, board, [], e
 
     found_jobs = []
-    with ThreadPoolExecutor(max_workers=8) as ex:
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
         for ats, board, jobs, err in ex.map(lambda t: attempt(*t), tasks):
-            if err is None:
+            if err is None and jobs:  # empty boards are often dormant accounts
                 uae = sum(1 for j in jobs if is_uae(j["location"]))
                 hits.append({"ats": ats, "token": board["token"], "jobs": len(jobs), "uae_jobs": uae})
                 found_jobs.extend(jobs)
@@ -112,6 +125,10 @@ def collect(http, cfg, search, full, health):
         tasks.append(("oracle:%s" % emp["name"], lambda emp=emp: sources.oracle(http, emp)))
     for emp in cfg.get("workday") or []:
         tasks.append(("workday:%s" % emp["name"], lambda emp=emp: sources.workday(http, emp)))
+    for kind in ("phenom", "successfactors", "jibe"):
+        for emp in cfg.get(kind) or []:
+            fetch = getattr(sources, kind)
+            tasks.append(("%s:%s" % (kind, emp["name"]), lambda emp=emp, fetch=fetch: fetch(http, emp)))
 
     discovered = load_json("discovered.json", {"checked": None, "boards": []})
     checked = discovered.get("checked")
@@ -130,27 +147,56 @@ def collect(http, cfg, search, full, health):
     if cfg.get("amazon"):
         tasks.append(("amazon", lambda: sources.amazon(http)))
 
-    raw = run_tasks(tasks, health)
+    # JobSpy's sites share no host with the employer systems, so it runs alongside them
+    with ThreadPoolExecutor(max_workers=1) as background:
+        jobspy = background.submit(run_jobspy, search.get("jobspy") or {}, health) if full else None
+        raw = run_tasks(tasks, health)
+        if probe_due:
+            # re-probe every candidate slug on every startup ATS; the result replaces the old list
+            hits, jobs = probe_boards(http, cfg["probe"], known, health)
+            raw.extend(jobs)
+            save_json("discovered.json", {"checked": str(today_dubai()), "boards": hits})
+        if jobspy:
+            raw.extend(jobspy.result())
+    return raw
 
-    if probe_due:
-        # re-probe every candidate slug on every startup ATS; the result replaces the old list
-        hits, jobs = probe_boards(http, cfg["probe"], known, health)
-        raw.extend(jobs)
-        save_json("discovered.json", {"checked": str(today_dubai()), "boards": hits})
 
-    if full:
-        for site, queries in (search.get("jobspy") or {}).items():
-            started = time.time()
-            try:
-                jobs, meta = sources.jobspy_site(site, queries, log)
-                raw.extend(jobs)
-                health["jobspy:%s" % site] = {"ok": meta["queries_ok"] > 0, "fetched": len(jobs),
-                                              "meta": meta, "ms": int((time.time() - started) * 1000)}
-                log("jobspy %-8s %4d jobs (%d/%d queries ok)" % (site, len(jobs), meta["queries_ok"],
-                                                                  meta["queries"]))
-            except Exception as e:
-                health["jobspy:%s" % site] = {"ok": False, "fetched": 0, "error": str(e)[:240]}
-                log("FAIL  jobspy:%s %s" % (site, e))
+def run_jobspy(sites, health):
+    """Each site is its own host, so the sites run side by side; within a site the queries
+    stay one at a time with pauses (sources.jobspy_site)."""
+    if not sites:
+        return []
+    try:
+        import jobspy  # noqa: F401  imported once here so a broken install fails cleanly, not per thread
+    except Exception as e:
+        for site in sites:
+            health["jobspy:%s" % site] = {"ok": False, "fetched": 0, "error": "import: %s" % str(e)[:200]}
+        log("FAIL  jobspy import: %s" % e)
+        return []
+
+    def one(site, queries):
+        started = time.time()
+        try:
+            jobs, meta = sources.jobspy_site(site, queries, log)
+            entry = {"ok": meta["queries_ok"] > 0, "fetched": len(jobs), "meta": meta}
+            if meta["blocked"]:
+                entry["blocked"] = meta["blocked"]
+        except Exception as e:
+            jobs, entry = [], {"ok": False, "fetched": 0, "error": str(e)[:240]}
+        entry["ms"] = int((time.time() - started) * 1000)
+        return site, jobs, entry
+
+    raw = []
+    with ThreadPoolExecutor(max_workers=len(sites)) as ex:
+        for site, jobs, entry in ex.map(lambda kv: one(*kv), sites.items()):
+            raw.extend(jobs)
+            health["jobspy:%s" % site] = entry
+            if "error" in entry:
+                log("FAIL  jobspy:%s %s" % (site, entry["error"]))
+            else:
+                m = entry["meta"]
+                log("jobspy %-8s %4d jobs (%d/%d queries ok, %d blocked)" % (
+                    site, len(jobs), m["queries_ok"], m["queries"], m["blocked"]))
     return raw
 
 
@@ -162,6 +208,8 @@ def prefilter(job):
         return None, "no-title", None
     if not is_uae(job.get("location")):
         return None, "not-uae", None
+    if elsewhere(job["title"]):
+        return None, "title-elsewhere", None
     family, cv = classify(job["title"])
     if family is None:
         return None, cv, None
@@ -184,12 +232,16 @@ def fetch_details(http, jobs, cache, health):
                 return j, sources.oracle_detail(http, *j["_detail"][1:]), None
             if kind == "workday":
                 return j, sources.workday_detail(http, *j["_detail"][1:]), None
+            if kind == "phenom":
+                return j, sources.phenom_detail(http, *j["_detail"][1:]), None
+            if kind == "successfactors":
+                return j, sources.successfactors_detail(http, *j["_detail"][1:]), None
         except Exception as e:
             return j, "", e
         return j, "", None
 
     failures = 0
-    with ThreadPoolExecutor(max_workers=8) as ex:
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
         for j, text, err in ex.map(one, need):
             if err is not None:
                 failures += 1
@@ -240,6 +292,22 @@ def final_checks(job, today, cache):
 
 
 # ---------------------------------------------------------------- output
+
+def sample_rejected(rejected, per_reason=REJECTED_PER_REASON):
+    """Up to per_reason rows for each reason, taken in turn from each source, so rare reasons
+    and small sources are not crowded out by the first big employer."""
+    groups = {}
+    for x in rejected:
+        groups.setdefault(x["reason"], {}).setdefault(x["source"], []).append(x)
+    out = []
+    for reason in sorted(groups):
+        queues, picked = list(groups[reason].values()), []
+        while queues and len(picked) < per_reason:
+            picked += [q.pop(0) for q in queues][:per_reason - len(picked)]
+            queues = [q for q in queues if q]
+        out += picked
+    return out
+
 
 def to_record(j):
     return {
@@ -293,6 +361,8 @@ def write_markdown(records, summary, health_rows):
     lines += ["", "## Sources this run", "", "| Source | Status | Jobs fetched |", "|---|---|---|"]
     for sid, h in health_rows:
         status = "ok" if h.get("ok") else ("not found" if h.get("not_found") else "failed")
+        if h.get("blocked"):
+            status += ", %d of %d queries blocked" % (h["blocked"], h["meta"]["queries"])
         lines.append("| %s | %s | %s |" % (sid, status, h.get("fetched", 0)))
     with open(os.path.join(DATA, "latest.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
@@ -321,7 +391,7 @@ def main():
         if family is None:
             if cv_or_reason != "not-uae":
                 rejected.append({"title": j.get("title"), "employer": j.get("employer"),
-                                 "source": j.get("source"), "reason": cv_or_reason})
+                                 "source": j.get("source"), "reason": cv_or_reason, "url": j.get("url")})
             continue
         j.update(family=family, cv=cv_or_reason, seniority=level,
                  key=job_key(j["employer"], j["title"], j["location"]))
@@ -334,7 +404,7 @@ def main():
         reason = final_checks(j, today, cache)
         if reason:
             rejected.append({"title": j["title"], "employer": j["employer"], "source": j["source"],
-                             "reason": reason})
+                             "reason": reason, "url": j.get("url")})
             continue
         accepted.append(j)
 
@@ -378,7 +448,8 @@ def main():
         src_ok = any(h.get("ok") for sid, h in health.items() if sid == r["source"])
         recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= CARRY_DAYS
         if not src_ok and recent:
-            r["is_new"] = False
+            # the midday run skips JobSpy, so its morning finds are carried; they stay new all day
+            r["is_new"] = r["first_seen"] == today_s
             records.append(r)
             carried += 1
 
@@ -409,7 +480,7 @@ def main():
     save_json("seen.json", seen)
     save_json("detail_cache.json", cache)
     save_json("health.json", {"generated": generated, "sources": health})
-    save_json("rejected_sample.json", rejected[:400])
+    save_json("rejected_sample.json", sample_rejected(rejected))
     save_json(os.path.join("history", "%s.json" % today_s), [r for r in records if r["is_new"]])
     health_rows = sorted(health.items(), key=lambda kv: (kv[1].get("ok", False), kv[0]))
     write_markdown(records, summary, [(k, v) for k, v in health_rows if not v.get("probe")])

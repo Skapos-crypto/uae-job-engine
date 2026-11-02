@@ -18,6 +18,7 @@ class Http:
         self.timeout = timeout
         self._locks = {}
         self._last = {}
+        self._gaps = {}
         self._guard = threading.Lock()
         self._local = threading.local()
         self.calls = 0
@@ -36,16 +37,21 @@ class Http:
                 self._locks[host] = threading.Lock()
             return self._locks[host]
 
+    def set_gap(self, host, seconds):
+        """Wait longer than min_interval between requests to one host (its robots.txt crawl-delay)."""
+        self._gaps[host] = max(seconds, self.min_interval)
+
     def request(self, method, url, retries=2, **kw):
         host = urlparse(url).netloc
         kw.setdefault("timeout", self.timeout)
         lock = self._host_lock(host)
+        need = self._gaps.get(host, self.min_interval)
         attempt = 0
         while True:
             with lock:
                 gap = time.time() - self._last.get(host, 0)
-                if gap < self.min_interval:
-                    time.sleep(self.min_interval - gap)
+                if gap < need:
+                    time.sleep(need - gap)
                 try:
                     resp = self._session().request(method, url, **kw)
                 finally:
