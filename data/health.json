@@ -1,14 +1,27 @@
 {
  "generated": {
-  "utc": "2026-11-02T15:08:07+00:00",
-  "dubai": "2026-11-02 19:08",
+  "utc": "2026-11-02T15:12:45+00:00",
+  "dubai": "2026-11-02 19:12",
   "full_run": false
  },
  "sources": {
+  "oracle:Oracle": {
+   "ok": true,
+   "fetched": 6,
+   "ms": 922,
+   "meta": {
+    "sites": [
+     "CX_45001"
+    ],
+    "totals": {
+     "CX_45001": 6
+    }
+   }
+  },
   "oracle:Emaar": {
    "ok": true,
    "fetched": 2,
-   "ms": 743,
+   "ms": 997,
    "meta": {
     "sites": [
      "CX_1001"
@@ -21,7 +34,7 @@
   "oracle:Dubai Airports": {
    "ok": true,
    "fetched": 2,
-   "ms": 892,
+   "ms": 996,
    "meta": {
     "sites": [
      "CX_1"
@@ -31,23 +44,19 @@
     }
    }
   },
-  "oracle:AD Ports Group": {
+  "workday:HP": {
    "ok": true,
-   "fetched": 14,
-   "ms": 973,
+   "fetched": 0,
+   "ms": 1056,
    "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 14
-    }
+    "facets": {},
+    "all_jobs": 896
    }
   },
   "oracle:du": {
    "ok": true,
    "fetched": 15,
-   "ms": 999,
+   "ms": 1145,
    "meta": {
     "sites": [
      "CX_1001"
@@ -57,41 +66,23 @@
     }
    }
   },
-  "workday:Rolls-Royce": {
+  "oracle:AD Ports Group": {
    "ok": true,
-   "fetched": 0,
-   "ms": 1288,
-   "meta": {
-    "facets": {},
-    "all_jobs": 88
-   }
-  },
-  "oracle:Oracle": {
-   "ok": true,
-   "fetched": 6,
-   "ms": 1374,
+   "fetched": 14,
+   "ms": 1186,
    "meta": {
     "sites": [
-     "CX_45001"
+     "CX_1"
     ],
     "totals": {
-     "CX_45001": 6
+     "CX_1": 14
     }
-   }
-  },
-  "workday:HP": {
-   "ok": true,
-   "fetched": 0,
-   "ms": 1452,
-   "meta": {
-    "facets": {},
-    "all_jobs": 896
    }
   },
   "oracle:Emirates NBD": {
    "ok": true,
    "fetched": 32,
-   "ms": 1569,
+   "ms": 1230,
    "meta": {
     "sites": [
      "CX_1"
@@ -101,23 +92,44 @@
     }
    }
   },
-  "oracle:First Abu Dhabi Bank": {
+  "workday:Rolls-Royce": {
    "ok": true,
-   "fetched": 84,
-   "ms": 1603,
+   "fetched": 0,
+   "ms": 1370,
    "meta": {
-    "sites": [
-     "CX_2001"
-    ],
-    "totals": {
-     "CX_2001": 84
-    }
+    "facets": {},
+    "all_jobs": 88
+   }
+  },
+  "teamtailor:careers.chalhoubgroup.com": {
+   "ok": true,
+   "fetched": 100,
+   "ms": 161,
+   "meta": {
+    "board_total": 100
+   }
+  },
+  "workday:Coca-Cola": {
+   "ok": true,
+   "fetched": 0,
+   "ms": 1544,
+   "meta": {
+    "facets": {},
+    "all_jobs": 206
+   }
+  },
+  "greenhouse:careem": {
+   "ok": true,
+   "fetched": 11,
+   "ms": 129,
+   "meta": {
+    "board_total": 11
    }
   },
   "oracle:NMC Healthcare": {
    "ok": true,
    "fetched": 93,
-   "ms": 1670,
+   "ms": 1877,
    "meta": {
     "sites": [
      "CX_1"
@@ -127,48 +139,10 @@
     }
    }
   },
-  "oracle:e&": {
-   "ok": true,
-   "fetched": 7,
-   "ms": 1705,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 7
-    }
-   }
-  },
-  "teamtailor:careers.chalhoubgroup.com": {
-   "ok": true,
-   "fetched": 100,
-   "ms": 232,
-   "meta": {
-    "board_total": 100
-   }
-  },
-  "greenhouse:careem": {
-   "ok": true,
-   "fetched": 11,
-   "ms": 200,
-   "meta": {
-    "board_total": 11
-   }
-  },
-  "workday:Coca-Cola": {
-   "ok": true,
-   "fetched": 0,
-   "ms": 1983,
-   "meta": {
-    "facets": {},
-    "all_jobs": 206
-   }
-  },
   "oracle:KPMG Lower Gulf": {
    "ok": true,
    "fetched": 77,
-   "ms": 2103,
+   "ms": 2087,
    "meta": {
     "sites": [
      "CX_1001"
@@ -178,24 +152,36 @@
     }
    }
   },
-  "workday:AstraZeneca": {
+  "oracle:e&": {
    "ok": true,
-   "fetched": 1,
-   "ms": 2240,
+   "fetched": 7,
+   "ms": 2103,
    "meta": {
-    "facets": {
-     "locations": [
-      "b914f96b1779102cc969fac3b73daaf6"
-     ]
-    },
-    "all_jobs": 1181,
-    "uae_total": 1
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 7
+    }
+   }
+  },
+  "oracle:First Abu Dhabi Bank": {
+   "ok": true,
+   "fetched": 84,
+   "ms": 2313,
+   "meta": {
+    "sites": [
+     "CX_2001"
+    ],
+    "totals": {
+     "CX_2001": 84
+    }
    }
   },
   "workday:Salesforce": {
    "ok": true,
    "fetched": 12,
-   "ms": 2262,
+   "ms": 2400,
    "meta": {
     "facets": {
      "locations": [
@@ -206,40 +192,69 @@
     "uae_total": 12
    }
   },
-  "workday:Cleveland Clinic Abu Dhabi": {
+  "workday:AstraZeneca": {
    "ok": true,
    "fetched": 1,
-   "ms": 2476,
+   "ms": 2429,
    "meta": {
     "facets": {
      "locations": [
-      "935e98bc3a7110d415943593ef65ab29"
+      "b914f96b1779102cc969fac3b73daaf6"
      ]
     },
-    "all_jobs": 2369,
+    "all_jobs": 1180,
     "uae_total": 1
    }
   },
   "pinpoint:tabby": {
    "ok": true,
    "fetched": 30,
-   "ms": 1045,
+   "ms": 1234,
    "meta": {
     "board_total": 30
+   }
+  },
+  "greenhouse:tamara": {
+   "ok": true,
+   "fetched": 44,
+   "ms": 1187,
+   "meta": {
+    "board_total": 44
+   }
+  },
+  "oracle:Emirates Islamic": {
+   "ok": true,
+   "fetched": 12,
+   "ms": 2818,
+   "meta": {
+    "sites": [
+     "CX_2"
+    ],
+    "totals": {
+     "CX_2": 12
+    }
    }
   },
   "jibe:M42": {
    "ok": true,
    "fetched": 95,
-   "ms": 1259,
+   "ms": 1675,
    "meta": {
     "total": 95
+   }
+  },
+  "ashby:ziina": {
+   "ok": true,
+   "fetched": 13,
+   "ms": 89,
+   "meta": {
+    "board_total": 13
    }
   },
   "workday:Shell": {
    "ok": true,
    "fetched": 1,
-   "ms": 2737,
+   "ms": 2936,
    "meta": {
     "facets": {
      "locationCountry": [
@@ -250,53 +265,10 @@
     "uae_total": 1
    }
   },
-  "ashby:ziina": {
-   "ok": true,
-   "fetched": 13,
-   "ms": 114,
-   "meta": {
-    "board_total": 13
-   }
-  },
-  "greenhouse:tamara": {
-   "ok": true,
-   "fetched": 44,
-   "ms": 1253,
-   "meta": {
-    "board_total": 44
-   }
-  },
-  "oracle:ADIB": {
-   "ok": true,
-   "fetched": 118,
-   "ms": 3203,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 118
-    }
-   }
-  },
-  "workday:Mastercard": {
-   "ok": true,
-   "fetched": 13,
-   "ms": 3305,
-   "meta": {
-    "facets": {
-     "locations": [
-      "8ba43df27339415699e0bda0b3bdff8d"
-     ]
-    },
-    "all_jobs": 1009,
-    "uae_total": 13
-   }
-  },
   "workday:Pfizer": {
    "ok": true,
    "fetched": 4,
-   "ms": 3312,
+   "ms": 3231,
    "meta": {
     "facets": {
      "locations": [
@@ -310,7 +282,7 @@
   "workday:Baker Hughes": {
    "ok": true,
    "fetched": 17,
-   "ms": 3386,
+   "ms": 3394,
    "meta": {
     "facets": {
      "locationHierarchy": [
@@ -322,45 +294,31 @@
     "uae_total": 17
    }
   },
+  "oracle:ADIB": {
+   "ok": true,
+   "fetched": 118,
+   "ms": 3479,
+   "meta": {
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 118
+    }
+   }
+  },
   "workable:bayutdubizzle": {
    "ok": true,
    "fetched": 44,
-   "ms": 230,
+   "ms": 262,
    "meta": {
     "board_total": 44
-   }
-  },
-  "workday:Novartis": {
-   "ok": true,
-   "fetched": 1,
-   "ms": 3420,
-   "meta": {
-    "facets": {
-     "locationCountry": [
-      "7b4fa1f369bd4604ba3692682fcbe345"
-     ]
-    },
-    "all_jobs": 854,
-    "uae_total": 1
-   }
-  },
-  "oracle:Emirates Islamic": {
-   "ok": true,
-   "fetched": 12,
-   "ms": 3426,
-   "meta": {
-    "sites": [
-     "CX_2"
-    ],
-    "totals": {
-     "CX_2": 12
-    }
    }
   },
   "workday:GSK": {
    "ok": true,
    "fetched": 4,
-   "ms": 3522,
+   "ms": 3670,
    "meta": {
     "facets": {
      "locations": [
@@ -371,80 +329,108 @@
     "uae_total": 4
    }
   },
+  "workday:Novartis": {
+   "ok": true,
+   "fetched": 1,
+   "ms": 3706,
+   "meta": {
+    "facets": {
+     "locationCountry": [
+      "7b4fa1f369bd4604ba3692682fcbe345"
+     ]
+    },
+    "all_jobs": 854,
+    "uae_total": 1
+   }
+  },
+  "workday:Mastercard": {
+   "ok": true,
+   "fetched": 13,
+   "ms": 3726,
+   "meta": {
+    "facets": {
+     "locations": [
+      "8ba43df27339415699e0bda0b3bdff8d"
+     ]
+    },
+    "all_jobs": 1009,
+    "uae_total": 13
+   }
+  },
   "greenhouse:cobblestoneenergy": {
    "ok": true,
    "fetched": 2,
-   "ms": 2348,
+   "ms": 2129,
    "meta": {
     "board_total": 2
-   }
-  },
-  "lever:aldar": {
-   "ok": true,
-   "fetched": 50,
-   "ms": 1855,
-   "meta": {
-    "board_total": 50
    }
   },
   "ashby:checkout.com": {
    "ok": true,
    "fetched": 169,
-   "ms": 1421,
+   "ms": 1192,
    "meta": {
     "board_total": 169
+   }
+  },
+  "lever:aldar": {
+   "ok": true,
+   "fetched": 50,
+   "ms": 2005,
+   "meta": {
+    "board_total": 50
    }
   },
   "successfactors:EY": {
    "ok": true,
    "fetched": 16,
-   "ms": 3226,
+   "ms": 3490,
    "meta": {
     "total": 1102
+   }
+  },
+  "workable:foodics": {
+   "ok": true,
+   "fetched": 29,
+   "ms": 1271,
+   "meta": {
+    "board_total": 29
+   }
+  },
+  "greenhouse:cobblestoneenergy1": {
+   "ok": true,
+   "fetched": 3,
+   "ms": 3007,
+   "meta": {
+    "board_total": 3
    }
   },
   "workday:Thomson Reuters": {
    "ok": true,
    "fetched": 3,
-   "ms": 3605,
+   "ms": 4013,
    "meta": {
     "facets": {
      "Location_Country": [
       "7b4fa1f369bd4604ba3692682fcbe345"
      ]
     },
-    "all_jobs": 434,
+    "all_jobs": 435,
     "uae_total": 3
-   }
-  },
-  "workable:foodics": {
-   "ok": true,
-   "fetched": 29,
-   "ms": 1259,
-   "meta": {
-    "board_total": 29
    }
   },
   "successfactors:PwC Middle East": {
    "ok": true,
    "fetched": 14,
-   "ms": 3628,
+   "ms": 3813,
    "meta": {
     "total": 24
-   }
-  },
-  "greenhouse:cobblestoneenergy1": {
-   "ok": true,
-   "fetched": 3,
-   "ms": 3386,
-   "meta": {
-    "board_total": 3
    }
   },
   "ashby:qlub": {
    "ok": true,
    "fetched": 24,
-   "ms": 2473,
+   "ms": 2159,
    "meta": {
     "board_total": 24
    }
@@ -452,45 +438,45 @@
   "amazon": {
    "ok": true,
    "fetched": 64,
-   "ms": 728,
+   "ms": 520,
    "meta": {}
+  },
+  "lever:Yassir": {
+   "ok": true,
+   "fetched": 116,
+   "ms": 3369,
+   "meta": {
+    "board_total": 116
+   }
   },
   "greenhouse:cobblestoneenergy4": {
    "ok": true,
    "fetched": 2,
-   "ms": 4443,
+   "ms": 3863,
    "meta": {
     "board_total": 2
-   }
-  },
-  "ashby:mexdigital": {
-   "ok": true,
-   "fetched": 14,
-   "ms": 3402,
-   "meta": {
-    "board_total": 14
    }
   },
   "phenom:ADCB": {
    "ok": true,
    "fetched": 37,
-   "ms": 5648,
+   "ms": 5128,
    "meta": {
     "total": 37
    }
   },
-  "lever:Yassir": {
+  "ashby:mexdigital": {
    "ok": true,
-   "fetched": 116,
-   "ms": 4325,
+   "fetched": 14,
+   "ms": 3178,
    "meta": {
-    "board_total": 116
+    "board_total": 14
    }
   },
   "workday:Philips": {
    "ok": true,
    "fetched": 1,
-   "ms": 6698,
+   "ms": 6591,
    "meta": {
     "facets": {
      "locations": [
@@ -504,7 +490,7 @@
   "greenhouse:dmgevents": {
    "ok": true,
    "fetched": 23,
-   "ms": 5386,
+   "ms": 4949,
    "meta": {
     "board_total": 23
    }
@@ -512,7 +498,7 @@
   "ashby:leantech": {
    "ok": true,
    "fetched": 7,
-   "ms": 4102,
+   "ms": 3839,
    "meta": {
     "board_total": 7
    }
@@ -520,7 +506,7 @@
   "oracle:PureHealth": {
    "ok": true,
    "fetched": 27,
-   "ms": 7598,
+   "ms": 7581,
    "meta": {
     "sites": [
      "CX_6007",
@@ -535,7 +521,7 @@
   "oracle:Mashreq": {
    "ok": true,
    "fetched": 325,
-   "ms": 8455,
+   "ms": 7799,
    "meta": {
     "sites": [
      "CX_1"
@@ -548,7 +534,7 @@
   "greenhouse:infotrust": {
    "ok": true,
    "fetched": 0,
-   "ms": 6353,
+   "ms": 5805,
    "meta": {
     "board_total": 0
    }
@@ -556,31 +542,23 @@
   "ashby:openai": {
    "ok": true,
    "fetched": 811,
-   "ms": 5524,
+   "ms": 5036,
    "meta": {
     "board_total": 811
    }
   },
-  "lever:weride": {
+  "greenhouse:scaleai": {
    "ok": true,
-   "fetched": 13,
-   "ms": 6534,
+   "fetched": 170,
+   "ms": 5608,
    "meta": {
-    "board_total": 13
-   }
-  },
-  "phenom:G42": {
-   "ok": true,
-   "fetched": 55,
-   "ms": 8251,
-   "meta": {
-    "total": 55
+    "board_total": 170
    }
   },
   "oracle:SEHA": {
    "ok": true,
    "fetched": 113,
-   "ms": 9311,
+   "ms": 9477,
    "meta": {
     "sites": [
      "CX_1"
@@ -590,34 +568,26 @@
     }
    }
   },
-  "greenhouse:scaleai": {
-   "ok": true,
-   "fetched": 170,
-   "ms": 6253,
-   "meta": {
-    "board_total": 170
-   }
-  },
   "ashby:cohere": {
    "ok": true,
    "fetched": 120,
-   "ms": 5820,
+   "ms": 5014,
    "meta": {
     "board_total": 120
    }
   },
-  "lever:binance": {
+  "phenom:G42": {
    "ok": true,
-   "fetched": 5,
-   "ms": 7897,
+   "fetched": 55,
+   "ms": 8931,
    "meta": {
-    "board_total": 5
+    "total": 55
    }
   },
   "greenhouse:datadog": {
    "ok": true,
    "fetched": 401,
-   "ms": 7582,
+   "ms": 6922,
    "meta": {
     "board_total": 401
    }
@@ -625,7 +595,7 @@
   "ashby:elevenlabs": {
    "ok": true,
    "fetched": 144,
-   "ms": 6848,
+   "ms": 5987,
    "meta": {
     "board_total": 144
    }
@@ -633,7 +603,7 @@
   "oracle:Dell": {
    "ok": true,
    "fetched": 464,
-   "ms": 11252,
+   "ms": 11471,
    "meta": {
     "sites": [
      "CX_1001"
@@ -643,10 +613,18 @@
     }
    }
   },
+  "greenhouse:mongodb": {
+   "ok": true,
+   "fetched": 363,
+   "ms": 8006,
+   "meta": {
+    "board_total": 363
+   }
+  },
   "oracle:SSMC": {
    "ok": true,
    "fetched": 196,
-   "ms": 11611,
+   "ms": 11857,
    "meta": {
     "sites": [
      "CX_1001"
@@ -656,34 +634,40 @@
     }
    }
   },
-  "greenhouse:mongodb": {
+  "workday:Cleveland Clinic Abu Dhabi": {
    "ok": true,
-   "fetched": 363,
-   "ms": 8725,
+   "fetched": 1,
+   "ms": 12069,
    "meta": {
-    "board_total": 363
-   }
-  },
-  "lever:palantir": {
-   "ok": true,
-   "fetched": 302,
-   "ms": 8953,
-   "meta": {
-    "board_total": 302
+    "facets": {
+     "locations": [
+      "935e98bc3a7110d415943593ef65ab29"
+     ]
+    },
+    "all_jobs": 2369,
+    "uae_total": 1
    }
   },
   "greenhouse:okx": {
    "ok": true,
    "fetched": 381,
-   "ms": 9505,
+   "ms": 9169,
    "meta": {
     "board_total": 381
+   }
+  },
+  "greenhouse:bybit": {
+   "ok": true,
+   "fetched": 153,
+   "ms": 9661,
+   "meta": {
+    "board_total": 153
    }
   },
   "workday:KBR": {
    "ok": true,
    "fetched": 150,
-   "ms": 14333,
+   "ms": 14467,
    "meta": {
     "facets": {
      "locations": [
@@ -696,18 +680,10 @@
     "uae_total": 150
    }
   },
-  "greenhouse:bybit": {
-   "ok": true,
-   "fetched": 153,
-   "ms": 10511,
-   "meta": {
-    "board_total": 153
-   }
-  },
   "greenhouse:ripple": {
    "ok": true,
    "fetched": 110,
-   "ms": 11667,
+   "ms": 10602,
    "meta": {
     "board_total": 110
    }
@@ -715,7 +691,7 @@
   "oracle:DP World": {
    "ok": true,
    "fetched": 506,
-   "ms": 19144,
+   "ms": 19953,
    "meta": {
     "sites": [
      "CX_1",
@@ -727,11 +703,35 @@
     }
    }
   },
+  "lever:weride": {
+   "ok": true,
+   "fetched": 13,
+   "ms": 17927,
+   "meta": {
+    "board_total": 13
+   }
+  },
+  "lever:binance": {
+   "ok": true,
+   "fetched": 5,
+   "ms": 18778,
+   "meta": {
+    "board_total": 5
+   }
+  },
+  "lever:palantir": {
+   "ok": true,
+   "fetched": 302,
+   "ms": 19527,
+   "meta": {
+    "board_total": 302
+   }
+  },
   "_details": {
    "ok": true,
-   "fetched": 10,
+   "fetched": 33,
    "failed": 0,
-   "skipped_cached": 23
+   "skipped_cached": 0
   }
  }
 }

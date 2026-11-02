@@ -1,75 +1,49 @@
 {
  "generated": {
-  "utc": "2026-11-02T15:08:07+00:00",
-  "dubai": "2026-11-02 19:08",
+  "utc": "2026-11-02T15:12:45+00:00",
+  "dubai": "2026-11-02 19:12",
   "full_run": false
  },
  "summary": {
-  "total": 88,
-  "new_today": 88,
+  "total": 85,
+  "new_today": 85,
   "carried_over": 51,
   "raw_postings": 6236,
   "by_family": {
-   "ai_ml": 12,
+   "ai_ml": 11,
    "data_science": 7,
-   "graduate": 8,
+   "graduate": 7,
    "business": 9,
    "data_analyst": 9,
    "data_eng": 3,
    "analyst": 5,
    "software": 15,
-   "it": 9,
+   "it": 8,
    "bi": 2,
    "product": 9
   },
   "by_source": {
-   "oracle": 11,
    "jobspy": 51,
    "amazon": 5,
+   "oracle": 8,
    "workday": 6,
    "greenhouse": 4,
    "workable": 3,
    "ashby": 7,
    "phenom": 1
   },
-  "http_calls": 126,
+  "http_calls": 149,
   "rejected": {
-   "no-family": 931,
-   "excluded-title": 603,
    "senior": 74,
+   "excluded-title": 603,
+   "no-family": 931,
    "graduate-other-discipline": 6,
    "title-elsewhere": 3,
-   "nationals-only": 11,
+   "nationals-only": 14,
    "4+ years": 12
   }
  },
  "jobs": [
-  {
-   "key": "a5a1634c4989c326",
-   "title": "AI Graduate Programme",
-   "employer": "e&",
-   "sector": "telecom",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "junior",
-   "url": "https://iaayey.fa.ocs.oraclecloud26.com/hcmUI/CandidateExperience/en/sites/CX_1/job/11404",
-   "source": "oracle:e&",
-   "source_type": "employer",
-   "seen_on": [
-    "oracle:e&"
-   ],
-   "posted": "2026-06-19",
-   "age_days": 136,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "is_new": true,
-   "score": 5.8,
-   "snippet": "This programme is central to our mission: developing UAE National talent into the next generation of tech leaders. Through it, you'll explore emerging technologies, Artificial Intelligence, leadership fundamentals, and gain practical, hands-on experience across e& offices in the "
-  },
   {
    "key": "8b819a53a5f053b1",
    "title": "Artificial Intelligence Intern",
@@ -225,7 +199,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 5.6,
-   "snippet": ""
+   "snippet": " Role: Design & Research Operations Associate Location: Abu Dhabi Role Purpose: The Design & Research Ops Associate supports the smooth running of the design and research function, ensuring teams have the tools, systems, and processes they need to do their best work. This is an e"
   },
   {
    "key": "4d0e18e16df88b2f",
@@ -251,7 +225,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 5.6,
-   "snippet": ""
+   "snippet": " Start Your Career Journey with Emirates NBD Ready to turn your university knowledge into real-world experience? The Emirates NBD Internship Programme offers undergraduates the opportunity to explore the professional world, develop valuable skills and experience what it is like t"
   },
   {
    "key": "3e2b13dc65bbbd88",
@@ -277,33 +251,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 5.6,
-   "snippet": ""
-  },
-  {
-   "key": "057c6f78a23334ec",
-   "title": "Management Trainee Program 2025-2026",
-   "employer": "First Abu Dhabi Bank",
-   "sector": "banking",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/189",
-   "source": "oracle:First Abu Dhabi Bank",
-   "source_type": "employer",
-   "seen_on": [
-    "oracle:First Abu Dhabi Bank"
-   ],
-   "posted": "2026-06-25",
-   "age_days": 130,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "is_new": true,
-   "score": 5.6,
-   "snippet": "Are you an ambitious UAE National with a minimum GPA of 3.7, who graduated between 2023 and 2026, looking to fast-track your career into leadership roles? The Management Trainee Program (MTP) is designed for top-tier graduates who aspire to become future leaders in the banking se"
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "995480fa5d57b18f",
@@ -513,7 +461,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 4.8,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "59154a1a1f4c9d55",
@@ -540,32 +488,6 @@
    "is_new": true,
    "score": 4.8,
    "snippet": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI "
-  },
-  {
-   "key": "1eab0cba0e49d361",
-   "title": "Associate Technical Support Engineer",
-   "employer": "ADIB",
-   "sector": "banking",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "junior",
-   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4456",
-   "source": "oracle:ADIB",
-   "source_type": "employer",
-   "seen_on": [
-    "oracle:ADIB"
-   ],
-   "posted": "2026-07-27",
-   "age_days": 98,
-   "min_years": 0,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "is_new": true,
-   "score": 4.6,
-   "snippet": ""
   },
   {
    "key": "73628dc5802a0b05",
@@ -695,7 +617,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 4.6,
-   "snippet": ""
+   "snippet": " Role: HR Data Analyst Location: Abu Dhabi Role purpose: Provide support in managing MIS reporting to improve HR process workflow, information management. Support overall workforce planning strategy. Key accountabilities of the role: MIS & Workforce Planning / HRMS / Finance: Man"
   },
   {
    "key": "ec02c377625bd4fd",
@@ -1425,7 +1347,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 4.1,
-   "snippet": ""
+   "snippet": " The Product Owner – Remittances will lead the design, development, and lifecycle management of digital remittance solutions across UAE and Egypt . This role is accountable for driving seamless cross-border and domestic remittance experiences through digital channels, APIs, partn"
   },
   {
    "key": "51677a2b80ad7dfb",
@@ -2194,7 +2116,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 2.3,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "c0e7107041d6ee27",
@@ -2222,7 +2144,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 2.3,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "921bb930b4c06eb5",
@@ -2250,7 +2172,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 2.3,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "6183522336b9efb3",
@@ -2334,7 +2256,7 @@
    "last_seen": "2026-11-02",
    "is_new": true,
    "score": 2.3,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "596ee539c3fdfc96",
