@@ -32,6 +32,8 @@ oracle:
   # same host as Emirates NBD; emiratesislamic.ae/en/about-us/careers links to CX_2
   - {name: Emirates Islamic, sector: banking, host: fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com, sites: [CX_2], verified: true}
   - {name: KPMG Lower Gulf, sector: consulting, host: elzw.fa.em8.oraclecloud.com, sites: [CX_1001], verified: true}
+  # asterdmhealthcare.com/about-us/careers links to CX, the host's only (active) site
+  - {name: Aster DM Healthcare, sector: healthcare, host: hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com, sites: [CX], verified: true}
 
 # Phenom career sites: each search-results page carries its jobs as JSON (phApp.ddo).
 # robots.txt disallows apply, chatbot and tracking paths, not search or job pages.
@@ -55,8 +57,13 @@ jibe:
 #   RAKBANK             careers.rakbank.ae serves a TLS certificate for another name
 #   Deloitte ME         Avature: lists talent pipelines, not individual jobs
 #   talabat             Delivery Hero's own site (Attrax HTML); no collector yet
-#   Wio, TAQA, DEWA, Mubadala, ADQ, Dubai Holding, Aster, Majid Al Futtaim, Al-Futtaim, Landmark,
-#   noon, Deriv, Property Finder: job system not identified from the careers page yet
+#   Dubai Holding       Avature (dhcareers.avature.net): 6 jobs a page and no locations in the list,
+#                       RSS capped at 20 items; no collector yet
+#   TAQA                own site (jobs.taqa.com/vacancies/); no collector yet
+#   Wio, Mubadala       careers pages list no jobs and link to no job system
+#   ADQ                 no careers page on adq.ae
+#   noon                noon.com careers page links only to LinkedIn
+#   DEWA, Majid Al Futtaim, Al-Futtaim, Landmark, Deriv: job system not identified yet
 #   (JobSpy still picks up their LinkedIn, Indeed and Bayt postings)
 
 # Workday: POST /wday/cxs/{tenant}/{site}/jobs, filtered to UAE locations via the site's own facets.
@@ -83,6 +90,7 @@ workday:
 boards:
   - {ats: pinpoint, token: tabby, name: Tabby, sector: fintech}
   - {ats: teamtailor, token: careers.chalhoubgroup.com, name: Chalhoub Group, sector: retail}
+  - {ats: teamtailor, token: propertyfinder, name: Property Finder, sector: proptech}
   - {ats: greenhouse, token: careem, name: Careem, sector: tech}
   - {ats: greenhouse, token: tamara, name: Tamara, sector: fintech}
   - {ats: greenhouse, token: cobblestoneenergy, name: Cobblestone Energy, sector: trading}
