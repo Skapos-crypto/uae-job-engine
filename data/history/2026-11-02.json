@@ -154,7 +154,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Role: Design & Research Operations Associate Location: Abu Dhabi Role Purpose: The Design & Research Ops Associate supports the smooth running of the design and research function, ensuring teams have the tools, systems, and processes they need to do their best work. This is an e"
+  "snippet": ""
  },
  {
   "key": "4d0e18e16df88b2f",
@@ -180,7 +180,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Start Your Career Journey with Emirates NBD Ready to turn your university knowledge into real-world experience? The Emirates NBD Internship Programme offers undergraduates the opportunity to explore the professional world, develop valuable skills and experience what it is like t"
+  "snippet": ""
  },
  {
   "key": "3e2b13dc65bbbd88",
@@ -206,7 +206,33 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 5.6,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
+ },
+ {
+  "key": "08b87c82f6bd25e5",
+  "title": "Trainee Optometrist. Operations. Grand Optics Ajman City Centre",
+  "employer": "Aster DM Healthcare",
+  "sector": "healthcare",
+  "city": "Ajman",
+  "location": "Ajman, United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/30865",
+  "source": "oracle:Aster DM Healthcare",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:Aster DM Healthcare"
+  ],
+  "posted": "2025-10-13",
+  "age_days": 385,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.6,
+  "snippet": ""
  },
  {
   "key": "995480fa5d57b18f",
@@ -233,6 +259,58 @@
   "is_new": true,
   "score": 5.5,
   "snippet": "Currently looking for an enthusiastic and technically inclined **Operations Support Intern** to join our team in Abu Dhabi.\n\nThis is an excellent opportunity for a recent graduate or aspiring technical professional to gain practical, hands-on experience supporting technology depl"
+ },
+ {
+  "key": "bd49c8842b0ec5a7",
+  "title": "Associate AI Product Builder",
+  "employer": "Property Finder",
+  "sector": "proptech",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "ai_ml",
+  "cv": "AI_Engineer",
+  "seniority": "junior",
+  "url": "https://propertyfinder.teamtailor.com/jobs/8448188-associate-ai-product-builder",
+  "source": "teamtailor:propertyfinder",
+  "source_type": "ats",
+  "seen_on": [
+   "teamtailor:propertyfinder"
+  ],
+  "posted": "2026-09-24",
+  "age_days": 39,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.2,
+  "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+ },
+ {
+  "key": "28b640835851e35a",
+  "title": "Associate, Product Analytics",
+  "employer": "Property Finder",
+  "sector": "proptech",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "data_analyst",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://propertyfinder.teamtailor.com/jobs/7308904-associate-product-analytics",
+  "source": "teamtailor:propertyfinder",
+  "source_type": "ats",
+  "seen_on": [
+   "teamtailor:propertyfinder"
+  ],
+  "posted": "2026-03-01",
+  "age_days": 246,
+  "min_years": 2,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.2,
+  "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
  },
  {
   "key": "a6a2c406bd616ff8",
@@ -367,6 +445,32 @@
   "snippet": "About us Tamara is a leading fintech platform in Saudi Arabia and the GCC region with a mission to help people own their dreams built on being simple, trusted, and everywhere our customers need us. Today, more than 25 million customers and over 130,000 partner merchants depend on"
  },
  {
+  "key": "62294ba506da4001",
+  "title": "Engineering Graduate Trainee",
+  "employer": "Property Finder",
+  "sector": "proptech",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee",
+  "source": "teamtailor:propertyfinder",
+  "source_type": "ats",
+  "seen_on": [
+   "teamtailor:propertyfinder"
+  ],
+  "posted": "2026-09-29",
+  "age_days": 34,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 5.0,
+  "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+ },
+ {
   "key": "2b903220044edf82",
   "title": "Tamara Internship Program",
   "employer": "Tamara",
@@ -416,7 +520,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.8,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "59154a1a1f4c9d55",
@@ -572,7 +676,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.6,
-  "snippet": " Role: HR Data Analyst Location: Abu Dhabi Role purpose: Provide support in managing MIS reporting to improve HR process workflow, information management. Support overall workforce planning strategy. Key accountabilities of the role: MIS & Workforce Planning / HRMS / Finance: Man"
+  "snippet": ""
  },
  {
   "key": "ec02c377625bd4fd",
@@ -1043,6 +1147,34 @@
   "snippet": "Roles & Responsibilities\n\n* Manage demand forecasting, Material Requirements Planning (MRP), and supply planning activities.\n* Optimize inventory levels and ensure timely material availability across operations.\n* Drive procurement planning initiatives and monitor supplier perfor"
  },
  {
+  "key": "d5680f876fab7c20",
+  "title": "Associate, Commercial Analytics",
+  "employer": "Property Finder",
+  "sector": "proptech",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "data_analyst",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://propertyfinder.teamtailor.com/jobs/8228236-associate-commercial-analytics",
+  "source": "teamtailor:propertyfinder",
+  "source_type": "ats",
+  "seen_on": [
+   "teamtailor:propertyfinder"
+  ],
+  "posted": "2026-08-17",
+  "age_days": 77,
+  "min_years": 3,
+  "flags": [
+   "stretch_3y"
+  ],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 4.2,
+  "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+ },
+ {
   "key": "7983bd09a81160c3",
   "title": "Commercial Graduate Scheme, Junior Market Analyst- Dubai, UAE",
   "employer": "Cobblestone Energy",
@@ -1302,7 +1434,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 4.1,
-  "snippet": " The Product Owner – Remittances will lead the design, development, and lifecycle management of digital remittance solutions across UAE and Egypt . This role is accountable for driving seamless cross-border and domestic remittance experiences through digital channels, APIs, partn"
+  "snippet": ""
  },
  {
   "key": "51677a2b80ad7dfb",
@@ -1933,6 +2065,34 @@
   "snippet": "Roles & Responsibilities\n\n* Software Develop and maintain backend services using Python, Django and REST APIs. Build or support Flutter applications based on approved Figma designs.\n* Design and optimise PostgreSQL databases, queries and application performance.\n* Implement authe"
  },
  {
+  "key": "d037441363ceff32",
+  "title": "AI Strategist",
+  "employer": "Property Finder",
+  "sector": "proptech",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "ai_ml",
+  "cv": "AI_Engineer",
+  "seniority": "unspecified",
+  "url": "https://propertyfinder.teamtailor.com/jobs/8572362-ai-strategist",
+  "source": "teamtailor:propertyfinder",
+  "source_type": "ats",
+  "seen_on": [
+   "teamtailor:propertyfinder"
+  ],
+  "posted": "2026-10-20",
+  "age_days": 13,
+  "min_years": 3,
+  "flags": [
+   "stretch_3y"
+  ],
+  "first_seen": "2026-11-02",
+  "last_seen": "2026-11-02",
+  "is_new": true,
+  "score": 3.0,
+  "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+ },
+ {
   "key": "e0178e8250c267c7",
   "title": "Ecommerce Product Owner",
   "employer": "KAYALI",
@@ -2071,7 +2231,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "c0e7107041d6ee27",
@@ -2099,7 +2259,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "921bb930b4c06eb5",
@@ -2127,7 +2287,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "6183522336b9efb3",
@@ -2211,7 +2371,7 @@
   "last_seen": "2026-11-02",
   "is_new": true,
   "score": 2.3,
-  "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  "snippet": ""
  },
  {
   "key": "596ee539c3fdfc96",
