@@ -176,6 +176,8 @@ Found a great junior role that got filtered out, or a senior one that slipped th
 
 New employers, new job systems and better filters are all welcome. Please keep the good-manners rules above.
 
-## 📜 Disclaimer
+## 📜 License and disclaimer
+
+The code is [MIT licensed](LICENSE): use it, fork it, change it, share it.
 
 Not affiliated with any employer or job site listed here. Job data belongs to the employers who posted it; this tool only links back to their own pages. Listings change constantly, so always check the original posting before applying.
