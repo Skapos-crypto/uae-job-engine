@@ -1,14 +1,14 @@
 {
  "generated": {
-  "utc": "2026-11-03T07:56:17+00:00",
-  "dubai": "2026-11-03 11:56",
-  "full_run": true
+  "utc": "2026-11-03T16:30:47+00:00",
+  "dubai": "2026-11-03 20:30",
+  "full_run": false
  },
  "summary": {
-  "total": 104,
-  "new_today": 35,
-  "carried_over": 0,
-  "raw_postings": 8069,
+  "total": 106,
+  "new_today": 37,
+  "carried_over": 58,
+  "raw_postings": 7635,
   "by_family": {
    "data_eng": 8,
    "graduate": 12,
@@ -16,7 +16,7 @@
    "ai_ml": 15,
    "bi": 3,
    "data_analyst": 14,
-   "software": 16,
+   "software": 18,
    "product": 11,
    "analyst": 5,
    "it": 11,
@@ -24,6 +24,7 @@
   },
   "by_source": {
    "jobspy": 58,
+   "attrax": 4,
    "avature": 4,
    "amazon": 5,
    "oracle": 9,
@@ -32,18 +33,17 @@
    "greenhouse": 4,
    "workable": 3,
    "ashby": 7,
-   "attrax": 2,
    "phenom": 1
   },
-  "http_calls": 192,
+  "http_calls": 193,
   "rejected": {
-   "no-family": 1505,
-   "senior": 200,
-   "excluded-title": 920,
-   "graduate-other-discipline": 13,
-   "title-elsewhere": 5,
-   "nationals-only": 31,
-   "4+ years": 20
+   "excluded-title": 816,
+   "no-family": 1374,
+   "senior": 100,
+   "graduate-other-discipline": 10,
+   "title-elsewhere": 3,
+   "nationals-only": 19,
+   "4+ years": 15
   }
  },
  "jobs": [
@@ -487,6 +487,58 @@
    "last_seen": "2026-11-03",
    "is_new": true,
    "score": 4.5,
+   "snippet": ""
+  },
+  {
+   "key": "2090f786982a3bb9",
+   "title": "Software Engineer l - Backend",
+   "employer": "talabat",
+   "sector": "tech",
+   "city": "Dubai",
+   "location": "Dubai, UAE",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://careers.deliveryhero.com/job/software-engineer-l-backend-in-dubai-uae-jid-11677",
+   "source": "attrax:talabat",
+   "source_type": "employer",
+   "seen_on": [
+    "attrax:talabat"
+   ],
+   "posted": null,
+   "age_days": null,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "is_new": true,
+   "score": 4.2,
+   "snippet": ""
+  },
+  {
+   "key": "a5eb1919d431b871",
+   "title": "Software Engineer ll - Backend",
+   "employer": "talabat",
+   "sector": "tech",
+   "city": "Dubai",
+   "location": "Dubai, UAE",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://careers.deliveryhero.com/job/software-engineer-ll-backend-in-dubai-uae-jid-11675",
+   "source": "attrax:talabat",
+   "source_type": "employer",
+   "seen_on": [
+    "attrax:talabat"
+   ],
+   "posted": null,
+   "age_days": null,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-03",
+   "last_seen": "2026-11-03",
+   "is_new": true,
+   "score": 4.2,
    "snippet": ""
   },
   {
@@ -1190,8 +1242,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-08",
-   "age_days": 26,
+   "posted": "2026-10-07",
+   "age_days": 27,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1476,11 +1528,10 @@
    "source": "workday:Mastercard",
    "source_type": "employer",
    "seen_on": [
-    "jobspy:linkedin",
     "workday:Mastercard"
    ],
-   "posted": "2026-10-10",
-   "age_days": 24,
+   "posted": "2026-10-09",
+   "age_days": 25,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2054,10 +2105,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-02",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -2669,8 +2719,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 28,
+   "posted": "2026-10-05",
+   "age_days": 29,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2697,8 +2747,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 28,
+   "posted": "2026-10-05",
+   "age_days": 29,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2725,8 +2775,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-07",
-   "age_days": 27,
+   "posted": "2026-10-06",
+   "age_days": 28,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2781,8 +2831,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 28,
+   "posted": "2026-10-05",
+   "age_days": 29,
    "min_years": null,
    "flags": [
     "nationals_preferred"
