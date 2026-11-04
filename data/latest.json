@@ -1,18 +1,18 @@
 {
  "generated": {
-  "utc": "2026-11-04T07:30:52+00:00",
-  "dubai": "2026-11-04 11:30",
-  "full_run": true
+  "utc": "2026-11-04T16:34:08+00:00",
+  "dubai": "2026-11-04 20:34",
+  "full_run": false
  },
  "summary": {
-  "total": 118,
+  "total": 117,
   "new_today": 32,
-  "carried_over": 0,
-  "raw_postings": 8161,
+  "carried_over": 73,
+  "raw_postings": 7714,
   "by_family": {
    "data_science": 8,
    "ai_ml": 17,
-   "data_analyst": 14,
+   "data_analyst": 13,
    "graduate": 14,
    "bi": 4,
    "data_eng": 9,
@@ -25,7 +25,7 @@
   "by_source": {
    "jobspy": 73,
    "avature": 4,
-   "amazon": 5,
+   "amazon": 4,
    "oracle": 8,
    "workday": 6,
    "teamtailor": 5,
@@ -35,15 +35,15 @@
    "ashby": 6,
    "phenom": 1
   },
-  "http_calls": 192,
+  "http_calls": 196,
   "rejected": {
-   "no-family": 1541,
-   "senior": 189,
-   "excluded-title": 931,
-   "graduate-other-discipline": 15,
-   "title-elsewhere": 6,
-   "nationals-only": 37,
-   "4+ years": 30
+   "no-family": 1404,
+   "excluded-title": 832,
+   "senior": 99,
+   "graduate-other-discipline": 10,
+   "title-elsewhere": 3,
+   "nationals-only": 20,
+   "4+ years": 15
   }
  },
  "jobs": [
@@ -1079,8 +1079,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-08",
-   "age_days": 27,
+   "posted": "2026-10-07",
+   "age_days": 28,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1393,8 +1393,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-10",
-   "age_days": 25,
+   "posted": "2026-10-09",
+   "age_days": 26,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1584,32 +1584,6 @@
    "is_new": false,
    "score": 3.6,
    "snippet": ""
-  },
-  {
-   "key": "ec02c377625bd4fd",
-   "title": "Trans Topology Data Analyst, Supply Chain Transportation Planning, Supply Chain",
-   "employer": "Q-Express Documents Transport",
-   "sector": "big tech",
-   "city": "Dubai",
-   "location": "Dubai, ARE",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://www.amazon.jobs/en/jobs/10568628/trans-topology-data-analyst-supply-chain-transportation-planning-supply-chain",
-   "source": "amazon",
-   "source_type": "employer",
-   "seen_on": [
-    "amazon"
-   ],
-   "posted": "2026-10-07",
-   "age_days": 28,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-04",
-   "is_new": false,
-   "score": 3.6,
-   "snippet": "If you are a supply chain professional with a passion to innovate and contribute in a fast paced growing environment, you might be a good fit to join Amazon.com Supply chain team. This role involves big - Bachelor's degree - Experience with Microsoft Office products and applicati"
   },
   {
    "key": "869e63c05f3c0db5",
@@ -2150,10 +2124,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-02",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -2203,10 +2176,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-03",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -3029,8 +3001,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 29,
+   "posted": "2026-10-05",
+   "age_days": 30,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -3057,8 +3029,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 29,
+   "posted": "2026-10-05",
+   "age_days": 30,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -3085,8 +3057,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-07",
-   "age_days": 28,
+   "posted": "2026-10-06",
+   "age_days": 29,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -3141,8 +3113,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-06",
-   "age_days": 29,
+   "posted": "2026-10-05",
+   "age_days": 30,
    "min_years": null,
    "flags": [
     "nationals_preferred"
