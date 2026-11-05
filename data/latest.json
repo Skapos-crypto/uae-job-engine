@@ -1,19 +1,19 @@
 {
  "generated": {
-  "utc": "2026-11-05T07:56:24+00:00",
-  "dubai": "2026-11-05 11:56",
-  "full_run": true
+  "utc": "2026-11-05T16:47:52+00:00",
+  "dubai": "2026-11-05 20:47",
+  "full_run": false
  },
  "summary": {
-  "total": 126,
-  "new_today": 39,
-  "carried_over": 0,
-  "raw_postings": 8282,
+  "total": 125,
+  "new_today": 40,
+  "carried_over": 83,
+  "raw_postings": 7789,
   "by_family": {
    "ai_ml": 25,
    "data_analyst": 15,
-   "graduate": 14,
-   "business": 9,
+   "graduate": 12,
+   "business": 10,
    "data_eng": 6,
    "software": 18,
    "product": 13,
@@ -25,25 +25,25 @@
   "by_source": {
    "jobspy": 83,
    "ashby": 7,
+   "greenhouse": 4,
    "avature": 4,
    "amazon": 4,
-   "oracle": 6,
+   "oracle": 5,
    "workday": 6,
    "teamtailor": 5,
-   "greenhouse": 4,
    "workable": 2,
    "attrax": 4,
    "phenom": 1
   },
   "http_calls": 197,
   "rejected": {
-   "senior": 177,
-   "excluded-title": 956,
-   "no-family": 1585,
-   "graduate-other-discipline": 11,
+   "senior": 99,
+   "excluded-title": 846,
+   "no-family": 1429,
+   "graduate-other-discipline": 10,
    "title-elsewhere": 3,
-   "nationals-only": 45,
-   "4+ years": 34
+   "nationals-only": 21,
+   "4+ years": 14
   }
  },
  "jobs": [
@@ -514,6 +514,32 @@
    "is_new": true,
    "score": 4.5,
    "snippet": ""
+  },
+  {
+   "key": "5ffe6d6125de3c06",
+   "title": "Senior Operations Associate - Shops",
+   "employer": "Careem",
+   "sector": "tech",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates; Dubai, United Arab Emirates",
+   "family": "business",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://boards.greenhouse.io/careem/jobs/8640594002?gh_jid=8640594002",
+   "source": "greenhouse:careem",
+   "source_type": "ats",
+   "seen_on": [
+    "greenhouse:careem"
+   ],
+   "posted": "2026-07-22",
+   "age_days": 106,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-05",
+   "last_seen": "2026-11-05",
+   "is_new": true,
+   "score": 4.5,
+   "snippet": "Careem is building the Everything App for the greater Middle East — making it easy to move around, order food and groceries, manage payments, and more. Our purpose is simple: to simplify and improve people’s lives and build an awesome organisation that inspires. Since 2012, Caree"
   },
   {
    "key": "e294616a735ff934",
@@ -1287,32 +1313,6 @@
    "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate"
   },
   {
-   "key": "4d0e18e16df88b2f",
-   "title": "EmiratesNBD University Internship Program",
-   "employer": "Emirates NBD",
-   "sector": "banking",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/65289",
-   "source": "oracle:Emirates NBD",
-   "source_type": "employer",
-   "seen_on": [
-    "oracle:Emirates NBD"
-   ],
-   "posted": "2026-10-06",
-   "age_days": 30,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-05",
-   "is_new": false,
-   "score": 4.6,
-   "snippet": ""
-  },
-  {
    "key": "3e2b13dc65bbbd88",
    "title": "Intern, Technical Program Management",
    "employer": "Mastercard",
@@ -1328,8 +1328,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-08",
-   "age_days": 28,
+   "posted": "2026-10-07",
+   "age_days": 29,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1549,32 +1549,6 @@
    "snippet": ""
   },
   {
-   "key": "d63c4c51a5565164",
-   "title": "Commercial Operations Intern",
-   "employer": "Tamara",
-   "sector": "fintech",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates; Dubai, United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/5004015101",
-   "source": "greenhouse:tamara",
-   "source_type": "ats",
-   "seen_on": [
-    "greenhouse:tamara"
-   ],
-   "posted": "2026-10-18",
-   "age_days": 18,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-05",
-   "is_new": false,
-   "score": 4.0,
-   "snippet": "About us Tamara is a leading fintech platform in Saudi Arabia and the GCC region with a mission to help people own their dreams built on being simple, trusted, and everywhere our customers need us. Today, more than 25 million customers and over 130,000 partner merchants depend on"
-  },
-  {
    "key": "62294ba506da4001",
    "title": "Engineering Graduate Trainee",
    "employer": "Property Finder",
@@ -1642,8 +1616,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-10",
-   "age_days": 26,
+   "posted": "2026-10-09",
+   "age_days": 27,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2373,10 +2347,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-02",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -2426,10 +2399,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-03",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -3333,8 +3305,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-07",
-   "age_days": 29,
+   "posted": "2026-10-06",
+   "age_days": 30,
    "min_years": null,
    "flags": [
     "nationals_preferred"
