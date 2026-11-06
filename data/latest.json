@@ -1,22 +1,22 @@
 {
  "generated": {
-  "utc": "2026-11-06T07:56:29+00:00",
-  "dubai": "2026-11-06 11:56",
-  "full_run": true
+  "utc": "2026-11-06T16:15:18+00:00",
+  "dubai": "2026-11-06 20:15",
+  "full_run": false
  },
  "summary": {
-  "total": 119,
-  "new_today": 31,
-  "carried_over": 3,
-  "raw_postings": 8261,
+  "total": 121,
+  "new_today": 32,
+  "carried_over": 81,
+  "raw_postings": 7801,
   "by_family": {
    "ai_ml": 30,
+   "data_analyst": 14,
    "bi": 1,
    "data_eng": 6,
    "data_science": 6,
-   "data_analyst": 13,
    "software": 21,
-   "product": 7,
+   "product": 8,
    "business": 10,
    "analyst": 7,
    "it": 7,
@@ -24,26 +24,26 @@
   },
   "by_source": {
    "jobspy": 81,
+   "teamtailor": 6,
    "avature": 4,
    "amazon": 4,
    "oracle": 5,
-   "workday": 2,
+   "workday": 3,
    "ashby": 7,
-   "teamtailor": 5,
    "greenhouse": 4,
    "workable": 2,
    "attrax": 4,
    "phenom": 1
   },
-  "http_calls": 195,
+  "http_calls": 197,
   "rejected": {
-   "no-family": 1594,
-   "senior": 153,
-   "excluded-title": 932,
-   "graduate-other-discipline": 14,
-   "title-elsewhere": 4,
-   "nationals-only": 60,
-   "4+ years": 36
+   "no-family": 1438,
+   "excluded-title": 854,
+   "senior": 100,
+   "graduate-other-discipline": 10,
+   "title-elsewhere": 3,
+   "nationals-only": 22,
+   "4+ years": 12
   }
  },
  "jobs": [
@@ -150,6 +150,32 @@
    "is_new": true,
    "score": 4.5,
    "snippet": ""
+  },
+  {
+   "key": "2b469ada123913d5",
+   "title": "Analyst - Data & Analytics",
+   "employer": "Chalhoub Group",
+   "sector": "retail",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics",
+   "source": "teamtailor:careers.chalhoubgroup.com",
+   "source_type": "ats",
+   "seen_on": [
+    "teamtailor:careers.chalhoubgroup.com"
+   ],
+   "posted": "2026-11-06",
+   "age_days": 0,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-06",
+   "last_seen": "2026-11-06",
+   "is_new": true,
+   "score": 4.5,
+   "snippet": "INSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been shaping luxury experiences in the Middle East. As a leading hybrid luxury retailer, the Group brings together over 16,000 talented professionals and partners with more than 400 international brands acr"
   },
   {
    "key": "ed9829d21ea895f9",
@@ -1158,8 +1184,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-08",
-   "age_days": 29,
+   "posted": "2026-10-07",
+   "age_days": 30,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1498,8 +1524,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-10",
-   "age_days": 27,
+   "posted": "2026-10-09",
+   "age_days": 28,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2254,10 +2280,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-03",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -2281,10 +2306,9 @@
    "source": "attrax:talabat",
    "source_type": "employer",
    "seen_on": [
-    "attrax:talabat",
-    "jobspy:linkedin"
+    "attrax:talabat"
    ],
-   "posted": "2026-11-03",
+   "posted": null,
    "age_days": null,
    "min_years": null,
    "flags": [],
@@ -3112,6 +3136,34 @@
    "is_new": false,
    "score": 2.0,
    "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+  },
+  {
+   "key": "51bfdf419eca0927",
+   "title": "Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)",
+   "employer": "Mastercard",
+   "sector": "payments",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "product",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Product-Management-Intern--Summer-2027---Dubai--UAE--UAE-Nationals-Preferred-_R-287599-1",
+   "source": "workday:Mastercard",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:Mastercard"
+   ],
+   "posted": "2026-11-06",
+   "age_days": 0,
+   "min_years": null,
+   "flags": [
+    "nationals_preferred"
+   ],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-06",
+   "is_new": false,
+   "score": 1.8,
+   "snippet": ""
   },
   {
    "key": "fe83f20b8dbc47a8",
