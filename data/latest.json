@@ -1,14 +1,14 @@
 {
  "generated": {
-  "utc": "2026-11-07T07:08:26+00:00",
-  "dubai": "2026-11-07 11:08",
-  "full_run": true
+  "utc": "2026-11-07T15:06:33+00:00",
+  "dubai": "2026-11-07 19:06",
+  "full_run": false
  },
  "summary": {
   "total": 127,
   "new_today": 38,
-  "carried_over": 3,
-  "raw_postings": 8096,
+  "carried_over": 87,
+  "raw_postings": 7765,
   "by_family": {
    "data_analyst": 19,
    "graduate": 11,
@@ -35,15 +35,15 @@
    "attrax": 4,
    "phenom": 1
   },
-  "http_calls": 197,
+  "http_calls": 195,
   "rejected": {
-   "no-family": 1471,
-   "excluded-title": 910,
-   "senior": 164,
-   "graduate-other-discipline": 11,
+   "no-family": 1421,
+   "senior": 99,
+   "excluded-title": 848,
+   "graduate-other-discipline": 10,
    "title-elsewhere": 3,
-   "nationals-only": 46,
-   "4+ years": 23
+   "nationals-only": 22,
+   "4+ years": 11
   }
  },
  "jobs": [
@@ -1244,12 +1244,12 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-07",
+   "posted": "2026-10-08",
    "age_days": 30,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-07",
    "is_new": false,
    "score": 4.6,
    "snippet": ""
@@ -1559,11 +1559,11 @@
     "workday:Mastercard"
    ],
    "posted": "2026-10-09",
-   "age_days": 28,
+   "age_days": 29,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-07",
    "is_new": false,
    "score": 3.8,
    "snippet": ""
@@ -1868,8 +1868,6 @@
    "source": "teamtailor:careers.chalhoubgroup.com",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:indeed",
-    "jobspy:linkedin",
     "teamtailor:careers.chalhoubgroup.com"
    ],
    "posted": "2026-11-06",
@@ -3320,13 +3318,13 @@
     "workday:Mastercard"
    ],
    "posted": "2026-11-06",
-   "age_days": 0,
+   "age_days": 1,
    "min_years": null,
    "flags": [
     "nationals_preferred"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-06",
+   "last_seen": "2026-11-07",
    "is_new": false,
    "score": 1.8,
    "snippet": ""

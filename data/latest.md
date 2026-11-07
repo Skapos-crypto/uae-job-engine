@@ -1,6 +1,6 @@
 # UAE junior roles: 127 open, 38 new today
 
-Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
+Updated 07 Nov 2026 19:06 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
 
 | # | New | Role | Employer | City | Lane | Posted | Source | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -49,7 +49,7 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 | 43 |  | [2027 Program Manager Intern](https://www.amazon.jobs/en/jobs/10557554/2027-program-manager-intern) | Amazon Middle East and North Africa FZ-LLC | Dubai | Graduate / intern | 2026-09-23 | amazon |  |
 | 44 |  | [Bidayati – Internship Programme](https://iaayey.fa.ocs.oraclecloud26.com/hcmUI/CandidateExperience/en/sites/CX_1/job/11405) | e& | UAE | Graduate / intern | 2026-06-19 | oracle |  |
 | 45 |  | [Dubai Holding Leaders of Tomorrow Graduate Programme 2027](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Leaders-of-Tomorrow-2027/3308) | Dubai Holding | UAE | Graduate / intern | 2026-10-23 | avature |  |
-| 46 |  | [Intern, Technical Program Management](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Intern--Technical-Program-Management_R-284922-2) | Mastercard | Dubai | Graduate / intern | 2026-10-07 | workday |  |
+| 46 |  | [Intern, Technical Program Management](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Intern--Technical-Program-Management_R-284922-2) | Mastercard | Dubai | Graduate / intern | 2026-10-08 | workday |  |
 | 47 |  | [Trainee Optometrist. Operations. Grand Optics Ajman City Centre](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/30865) | Aster DM Healthcare | Ajman | Graduate / intern | 2025-10-13 | oracle |  |
 | 48 |  | [Funding Officer (Fresh Graduates Welcome)](https://www.linkedin.com/jobs/view/4487716957) | TradeQuo Global | Dubai | Graduate / intern | 2026-11-05 | jobspy |  |
 | 49 |  | [Product Intern, SoftPOS](https://jobs.ashbyhq.com/qlub/98659f5c-811f-42ec-b878-2a8171213aef) | qlub | Dubai | Graduate / intern | 2026-11-05 | ashby |  |
@@ -136,20 +136,6 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 
 | Source | Status | Jobs fetched |
 |---|---|---|
-| workday:AstraZeneca | failed | 0 |
-| workday:Baker Hughes | failed | 0 |
-| workday:Cleveland Clinic Abu Dhabi | failed | 0 |
-| workday:Coca-Cola | failed | 0 |
-| workday:GSK | failed | 0 |
-| workday:HP | failed | 0 |
-| workday:KBR | failed | 0 |
-| workday:Mastercard | failed | 0 |
-| workday:Novartis | failed | 0 |
-| workday:Pfizer | failed | 0 |
-| workday:Philips | failed | 0 |
-| workday:Rolls-Royce | failed | 0 |
-| workday:Shell | failed | 0 |
-| workday:Thomson Reuters | failed | 0 |
 | _details | ok | 0 |
 | amazon | ok | 62 |
 | ashby:checkout.com | ok | 173 |
@@ -157,11 +143,11 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 | ashby:elevenlabs | ok | 139 |
 | ashby:leantech | ok | 8 |
 | ashby:mexdigital | ok | 14 |
-| ashby:openai | ok | 820 |
+| ashby:openai | ok | 819 |
 | ashby:qlub | ok | 28 |
 | ashby:ziina | ok | 13 |
-| attrax:talabat | ok | 152 |
-| avature:Dubai Holding | ok | 136 |
+| attrax:talabat | ok | 153 |
+| avature:Dubai Holding | ok | 135 |
 | deriv | ok | 42 |
 | greenhouse:bybit | ok | 151 |
 | greenhouse:careem | ok | 14 |
@@ -177,9 +163,6 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 | greenhouse:scaleai | ok | 168 |
 | greenhouse:tamara | ok | 40 |
 | jibe:M42 | ok | 96 |
-| jobspy:bayt | ok, 8 of 9 queries blocked | 9 |
-| jobspy:indeed | ok | 294 |
-| jobspy:linkedin | ok | 200 |
 | lever:Yassir | ok | 122 |
 | lever:aldar | ok | 49 |
 | lever:binance | ok | 4 |
@@ -187,8 +170,8 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 | lever:weride | ok | 11 |
 | oracle:AD Ports Group | ok | 23 |
 | oracle:ADIB | ok | 146 |
-| oracle:Aster DM Healthcare | ok | 633 |
-| oracle:DP World | ok | 502 |
+| oracle:Aster DM Healthcare | ok | 632 |
+| oracle:DP World | ok | 501 |
 | oracle:Dell | ok | 488 |
 | oracle:Dubai Airports | ok | 4 |
 | oracle:Emaar | ok | 2 |
@@ -215,4 +198,18 @@ Updated 07 Nov 2026 11:08 Dubai time. Sorted new first, then by fit. Lanes: data
 | teamtailor:propertyfinder | ok | 39 |
 | workable:bayutdubizzle | ok | 39 |
 | workable:foodics | ok | 30 |
+| workday:AstraZeneca | ok | 2 |
+| workday:Baker Hughes | ok | 5 |
+| workday:Cleveland Clinic Abu Dhabi | ok | 1 |
+| workday:Coca-Cola | ok | 1 |
+| workday:GSK | ok | 4 |
+| workday:HP | ok | 0 |
+| workday:KBR | ok | 145 |
+| workday:Mastercard | ok | 11 |
+| workday:Novartis | ok | 1 |
+| workday:Pfizer | ok | 0 |
+| workday:Philips | ok | 1 |
+| workday:Rolls-Royce | ok | 1 |
 | workday:Salesforce | ok | 12 |
+| workday:Shell | ok | 0 |
+| workday:Thomson Reuters | ok | 3 |
