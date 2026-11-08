@@ -1,425 +1,167 @@
 {
- "checked": "2026-11-02",
+ "checked": "2026-11-08",
  "boards": [
-  {
-   "ats": "workable",
-   "token": "tabby",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "noon",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "deriv",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "huspy",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "bayzat",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "wio",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
   {
    "ats": "ashby",
    "token": "leantech",
-   "jobs": 7,
-   "uae_jobs": 2
-  },
-  {
-   "ats": "workable",
-   "token": "leantech",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "lean",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 8,
+   "uae_jobs": 3
   },
   {
    "ats": "ashby",
    "token": "rain",
-   "jobs": 36,
+   "jobs": 42,
    "uae_jobs": 0
   },
   {
-   "ats": "workable",
-   "token": "swvl",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "instashop",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "mamo",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "baraka",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "stake",
-   "jobs": 0,
+   "ats": "teamtailor",
+   "token": "pemo",
+   "jobs": 1,
    "uae_jobs": 0
   },
   {
    "ats": "workable",
    "token": "smartcrowd",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 1,
+   "uae_jobs": 1
   },
   {
-   "ats": "workable",
-   "token": "g42",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "propertyfinder",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
+   "ats": "teamtailor",
    "token": "dubizzle",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 6,
+   "uae_jobs": 2
   },
   {
-   "ats": "workable",
-   "token": "yallacompare",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "namshi",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
+   "ats": "teamtailor",
    "token": "mumzworld",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 13,
+   "uae_jobs": 3
   },
   {
-   "ats": "workable",
-   "token": "quiqup",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "trukker",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "anghami",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "starzplay",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "talabat",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "deliveryhero",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "cafu",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "bitoasis",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "payby",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "unifonic",
-   "jobs": 0,
-   "uae_jobs": 0
+   "ats": "teamtailor",
+   "token": "tappayments",
+   "jobs": 20,
+   "uae_jobs": 1
   },
   {
    "ats": "workable",
    "token": "foodics",
-   "jobs": 29,
+   "jobs": 30,
    "uae_jobs": 3
   },
   {
    "ats": "workable",
    "token": "lucidya",
-   "jobs": 46,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "fresha",
-   "jobs": 0,
+   "jobs": 47,
    "uae_jobs": 0
   },
   {
    "ats": "lever",
    "token": "palantir",
-   "jobs": 301,
+   "jobs": 305,
    "uae_jobs": 1
   },
   {
    "ats": "ashby",
    "token": "openai",
-   "jobs": 811,
-   "uae_jobs": 3
-  },
-  {
-   "ats": "workable",
-   "token": "openai",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 818,
+   "uae_jobs": 4
   },
   {
    "ats": "greenhouse",
    "token": "scaleai",
-   "jobs": 170,
+   "jobs": 168,
    "uae_jobs": 2
   },
   {
    "ats": "greenhouse",
    "token": "databricks",
-   "jobs": 909,
-   "uae_jobs": 0
+   "jobs": 922,
+   "uae_jobs": 1
   },
   {
    "ats": "greenhouse",
    "token": "datadog",
-   "jobs": 400,
+   "jobs": 401,
    "uae_jobs": 1
-  },
-  {
-   "ats": "workable",
-   "token": "datadog",
-   "jobs": 0,
-   "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "mongodb",
-   "jobs": 364,
+   "jobs": 374,
    "uae_jobs": 1
-  },
-  {
-   "ats": "workable",
-   "token": "mongodb",
-   "jobs": 0,
-   "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "stripe",
-   "jobs": 749,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "stripe",
-   "jobs": 0,
+   "jobs": 766,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "airbnb",
-   "jobs": 202,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "airbnb",
-   "jobs": 0,
+   "jobs": 205,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "okx",
-   "jobs": 381,
-   "uae_jobs": 5
+   "jobs": 378,
+   "uae_jobs": 3
   },
   {
    "ats": "greenhouse",
    "token": "bybit",
-   "jobs": 153,
-   "uae_jobs": 52
-  },
-  {
-   "ats": "lever",
-   "token": "kraken",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "kraken",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 151,
+   "uae_jobs": 55
   },
   {
    "ats": "greenhouse",
    "token": "ripple",
-   "jobs": 111,
+   "jobs": 115,
    "uae_jobs": 2
   },
   {
-   "ats": "workable",
-   "token": "ripple",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
    "ats": "ashby",
    "token": "circle",
-   "jobs": 8,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "circle",
-   "jobs": 0,
+   "jobs": 9,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "consensys",
-   "jobs": 13,
+   "jobs": 12,
    "uae_jobs": 0
   },
   {
    "ats": "ashby",
    "token": "consensys",
-   "jobs": 8,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "ashby",
-   "token": "deel",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "deel",
-   "jobs": 0,
+   "jobs": 6,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "wise",
-   "jobs": 20,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "wise",
-   "jobs": 0,
+   "jobs": 18,
    "uae_jobs": 0
   },
   {
    "ats": "ashby",
    "token": "cohere",
-   "jobs": 120,
-   "uae_jobs": 7
-  },
-  {
-   "ats": "workable",
-   "token": "cohere",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "lever",
-   "token": "mistral",
-   "jobs": 0,
-   "uae_jobs": 0
+   "jobs": 124,
+   "uae_jobs": 6
   },
   {
    "ats": "ashby",
    "token": "perplexity",
-   "jobs": 138,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "perplexity",
-   "jobs": 0,
+   "jobs": 137,
    "uae_jobs": 0
   },
   {
    "ats": "ashby",
    "token": "elevenlabs",
-   "jobs": 144,
+   "jobs": 137,
    "uae_jobs": 5
-  },
-  {
-   "ats": "ashby",
-   "token": "bolt",
-   "jobs": 0,
-   "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "bolt",
-   "jobs": 0,
-   "uae_jobs": 0
   }
  ]
 }
