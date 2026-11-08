@@ -1,6 +1,6 @@
-# UAE junior roles: 107 open, 16 new today
+# UAE junior roles: 105 open, 16 new today
 
-Updated 08 Nov 2026 11:21 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
+Updated 08 Nov 2026 19:34 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
 
 | # | New | Role | Employer | City | Lane | Posted | Source | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -32,127 +32,134 @@ Updated 08 Nov 2026 11:21 Dubai time. Sorted new first, then by fit. Lanes: data
 | 26 |  | [Associate AI Product Builder](https://propertyfinder.teamtailor.com/jobs/8448188-associate-ai-product-builder) | Property Finder | Dubai | AI / ML | 2026-09-24 | teamtailor |  |
 | 27 |  | [Associate, Product Analytics](https://propertyfinder.teamtailor.com/jobs/7308904-associate-product-analytics) | Property Finder | Dubai | Data analyst | 2026-03-01 | teamtailor |  |
 | 28 |  | [Commercial Graduate Scheme, Junior Data Scientist - Dubai, UAE](https://job-boards.greenhouse.io/cobblestoneenergy/jobs/7772325003) | Cobblestone Energy | Dubai | Data science | 2026-06-12 | greenhouse |  |
-| 29 |  | [Data Analyst - Intern](https://apply.workable.com/j/7FDAFEBBEE) | dubizzle Group | Dubai | Data analyst | 2026-10-21 | workable |  |
-| 30 |  | [Machine Learning - Intern](https://apply.workable.com/j/222E77A4D9) | dubizzle Group | Dubai | AI / ML | 2026-10-21 | workable |  |
-| 31 |  | [Business Analyst Intern](https://www.bayt.com/en/uae/jobs/business-analyst-intern-75397650/) | Chandler Macleod | Abu Dhabi | Business analysis | 2026-11-07 | jobspy |  |
-| 32 |  | [Engineering Graduate Trainee](https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee) | Property Finder | Dubai | Graduate / intern | 2026-09-29 | teamtailor |  |
-| 33 |  | [Tamara Internship Program](https://job-boards.eu.greenhouse.io/tamara/jobs/4996993101) | Tamara | Dubai | Graduate / intern | 2026-10-04 | greenhouse |  |
-| 34 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-10-10 | workday |  |
-| 35 |  | [Associate Sales Analyst](https://ae.indeed.com/viewjob?jk=6d74cec3788dd7b6) | Medtronic | Dubai | Analyst (other) | 2026-11-06 | jobspy |  |
-| 36 |  | [Biostatistician-Clinical Trials Unit Section](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2951) | SSMC | Abu Dhabi | Data science | 2026-04-16 | oracle |  |
-| 37 |  | [Data Center Engineering Operations - 2027 Internship , DCEO](https://www.amazon.jobs/en/jobs/10574531/data-center-engineering-operations-2027-internship-dceo) | AWS EMEA SARL (Abu Dhabi Branch) - O49 | Dubai | IT | 2026-10-09 | amazon |  |
-| 38 |  | [Data Center Infra Engineer  - 2027 Internship](https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship) | Amazon Data Services Emirates LLC | Dubai | IT | 2026-10-13 | amazon |  |
-| 39 |  | [Data Center Technician - 2027 Internship](https://www.amazon.jobs/en/jobs/10574530/data-center-technician-2027-internship) | AWS EMEA SARL (Abu Dhabi Branch) - O49 | Dubai | IT | 2026-10-09 | amazon |  |
-| 40 |  | [Dubai Holding Entertainment: Finance, Revenue & Analytics Talent Pool](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Finance-Revenue-Analytics-Talent-Pool/3341) | Dubai Holding | UAE | Data analyst | 2026-10-23 | avature |  |
-| 41 |  | [Dubai Holding Entertainment: Technology & Data Talent Pool](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Technology-Data-Talent-Pool/3339) | Dubai Holding | UAE | Data analyst | 2026-10-23 | avature |  |
-| 42 |  | [HR Data Analyst](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4783) | ADIB | UAE | Data analyst | 2026-10-22 | oracle |  |
-| 43 |  | [AI Automation Engineer (m/f/d)](https://www.linkedin.com/jobs/view/4486972564) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
-| 44 |  | [AI Engineer (Remote)](https://www.linkedin.com/jobs/view/4487645029) | Joblet-AI | UAE | AI / ML | 2026-11-08 | jobspy |  |
-| 45 |  | [AI Engineer - Investment Management](https://www.linkedin.com/jobs/view/4485818777) | Durlston Partners | Abu Dhabi | AI / ML | 2026-11-05 | jobspy |  |
-| 46 |  | [AI Engineer – Agentic AI Systems](https://www.linkedin.com/jobs/view/4477064048) | Careernet | Ajman | AI / ML | 2026-11-05 | jobspy |  |
-| 47 |  | [Agentic AI Engineer - Forward Deployed](https://www.linkedin.com/jobs/view/4480014238) | HRsource | Dubai | AI / ML | 2026-11-06 | jobspy |  |
-| 48 |  | [Analyst - Data & Analytics](https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics) | Chalhoub Group | Dubai | Data analyst | 2026-11-06 | teamtailor |  |
-| 49 |  | [Applied AI/ML Scientist](https://www.linkedin.com/jobs/view/4488116088) | Cerebras | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
-| 50 |  | [Artificial Intelligence Engineer](https://www.linkedin.com/jobs/view/4488092965) | Aspire Manpower Services | Dubai | AI / ML | 2026-11-06 | jobspy |  |
-| 51 |  | [Backend AI Developer (Smart Home & Agentic Systems)](https://www.linkedin.com/jobs/view/4488712026) | The Greater Change | Dubai | AI / ML | 2026-11-07 | jobspy |  |
-| 52 |  | [Customer Engineer: Data](https://www.linkedin.com/jobs/view/4486998334) | ADG | Dubai | Data analyst | 2026-11-06 | jobspy |  |
-| 53 |  | [Data Engineer (m/f/d)](https://www.linkedin.com/jobs/view/4486951810) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Abu Dhabi | Data engineering | 2026-11-06 | jobspy |  |
-| 54 |  | [Data Engineer - Investment Management](https://www.linkedin.com/jobs/view/4485834069) | Durlston Partners | Abu Dhabi | Data engineering | 2026-11-05 | jobspy |  |
-| 55 |  | [Data Modeller](https://www.linkedin.com/jobs/view/4486958974) | TAT IT Technolgies | Abu Dhabi | Data analyst | 2026-11-06 | jobspy |  |
-| 56 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4488153133) | Network International | UAE | Data science | 2026-11-06 | jobspy |  |
-| 57 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4486248082) | Salt | Dubai | Data science | 2026-11-06 | jobspy |  |
-| 58 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4488112528) | Huxley | Dubai | Data science | 2026-11-06 | jobspy |  |
-| 59 |  | [Data and Marketing Technician](https://ae.indeed.com/viewjob?jk=ec9f78b31b5203d0) | Monarch Solicitors | Dubai | Data analyst | 2026-11-05 | jobspy |  |
-| 60 |  | [Databricks Data Analyst – AI/BI & FinOps](https://www.linkedin.com/jobs/view/4486232071) | Etihad | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
-| 61 |  | [Financial AI Researcher (Remote)](https://www.linkedin.com/jobs/view/4487634217) | Joblet-AI | UAE | AI / ML | 2026-11-08 | jobspy |  |
-| 62 |  | [Machine Learning Engineer](https://www.linkedin.com/jobs/view/4483020014) | Salt | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
-| 63 |  | [Regional Brand Protection Analyst - Data Labeling & Enforcement (Arabic Speaker)](https://ae.indeed.com/viewjob?jk=5c8e7bd176d8b3ca) | Corsearch | Dubai | Data analyst | 2026-11-05 | jobspy |  |
-| 64 |  | [Senior Operations Associate - Shops](https://boards.greenhouse.io/careem/jobs/8640594002?gh_jid=8640594002) | Careem | Dubai | Business analysis | 2026-07-22 | greenhouse |  |
-| 65 |  | [Staff AI Engineer](https://www.linkedin.com/jobs/view/4486748276) | Jobgether | UAE | AI / ML | 2026-11-05 | jobspy |  |
-| 66 |  | [Associate, Commercial Analytics](https://propertyfinder.teamtailor.com/jobs/8228236-associate-commercial-analytics) | Property Finder | Dubai | Data analyst | 2026-08-17 | teamtailor | asks 3 yrs |
-| 67 |  | [Commercial Graduate Scheme, Junior Market Analyst- Dubai, UAE](https://job-boards.greenhouse.io/cobblestoneenergy/jobs/7772326003) | Cobblestone Energy | Dubai | Analyst (other) | 2026-06-12 | greenhouse |  |
-| 68 |  | [Software Engineer II -Backend](https://careers.deliveryhero.com/job/software-engineer-ii-backend-in-dubai-uae-jid-4869) | talabat | Dubai | Software / backend |  | attrax |  |
-| 69 |  | [Software Engineer l - Backend](https://careers.deliveryhero.com/job/software-engineer-l-backend-in-dubai-uae-jid-11677) | talabat | Dubai | Software / backend |  | attrax |  |
-| 70 |  | [Software Engineer ll - Backend](https://careers.deliveryhero.com/job/software-engineer-ll-backend-in-dubai-uae-jid-11675) | talabat | Dubai | Software / backend |  | attrax |  |
-| 71 |  | [API Developer](https://www.linkedin.com/jobs/view/4452350341) | Vertiv | UAE | Software / backend | 2026-11-05 | jobspy |  |
-| 72 |  | [Backend Engineer - Python, Trading Systems](https://www.bayt.com/en/uae/jobs/backend-engineer-python-trading-systems-5505169/) | Michael Page | Abu Dhabi | Software / backend | 2026-11-05 | jobspy |  |
-| 73 |  | [Electron Software Engineer (Remote)](https://www.linkedin.com/jobs/view/4487640157) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
-| 74 |  | [Forward Deployed Engineer (Remote)](https://www.linkedin.com/jobs/view/4487646003) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
-| 75 |  | [Full Stack Engineer](https://www.linkedin.com/jobs/view/4486612659) | LNKD | Dubai | Software / backend | 2026-11-07 | jobspy |  |
-| 76 |  | [Full Stack Engineer](https://www.linkedin.com/jobs/view/4486236713) | Closer Consulting | Dubai | Software / backend | 2026-11-06 | jobspy |  |
-| 77 |  | [Fullstack Software Engineer (Remote)](https://www.linkedin.com/jobs/view/4487629389) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
-| 78 |  | [Liferay Full Stack Developer](https://ae.indeed.com/viewjob?jk=03a92ee1c0ed34b1) | DICETEK LLC | Dubai | Software / backend | 2026-11-05 | jobspy |  |
-| 79 |  | [Odoo & Email Marketing Specialist](https://www.bayt.com/en/uae/jobs/odoo-email-marketing-specialist-5505675/) | Wajna General Trading CO LLC | Dubai | Software / backend | 2026-11-06 | jobspy |  |
-| 80 |  | [PHP Full-Stack Developer](https://www.linkedin.com/jobs/view/4488402238) | Al Ain University | Al Ain | Software / backend | 2026-11-06 | jobspy |  |
-| 81 |  | [Software Engineer](https://www.linkedin.com/jobs/view/4487761310) | One75mb HRM Pvt Ltd. | Dubai | Software / backend | 2026-11-05 | jobspy |  |
-| 82 |  | [AI Data Engineer](https://jobs.ashbyhq.com/mexdigital/a618632d-9967-4346-b7be-a2e3ae5c5be9) | MultiBank Group | Dubai | AI / ML | 2026-03-25 | ashby |  |
-| 83 |  | [AI Engineer – Generative AI and Automation](https://jobs.ashbyhq.com/mexdigital/4c1abf17-cb71-470b-ae71-3a934c4e0cc7) | MultiBank Group | Dubai | AI / ML | 2026-06-02 | ashby |  |
-| 84 |  | [Forward Deployed Engineer, Agentic Platform](https://jobs.ashbyhq.com/cohere/75c0032c-7200-48bf-9d6d-355880dd93d9) | cohere | Dubai | AI / ML | 2026-03-04 | ashby |  |
-| 85 |  | [Kearney Foresight Senior Business Analyst / Associate](https://ae.indeed.com/viewjob?jk=3c270496f2eeb889) | Kearney | Dubai | Business analysis | 2026-11-06 | jobspy | asks 3 yrs |
-| 86 |  | [Product Owner](https://www.linkedin.com/jobs/view/4487749982) | Binghatti | Dubai | Product | 2026-11-05 | jobspy |  |
-| 87 |  | [Product Owner ( Wealth Management, Brokerage & Custody)](https://www.linkedin.com/jobs/view/4486209328) | Abu Dhabi Commercial Bank | Abu Dhabi | Product | 2026-11-06 | jobspy |  |
-| 88 |  | [Product Owner - Web Apps](https://www.linkedin.com/jobs/view/4485063290) | Etihad | Abu Dhabi | Product | 2026-11-05 | jobspy |  |
-| 89 |  | [Product Owner — Origination Platform (Lending & Financing) / Fintech, Dubai / On-site](https://www.linkedin.com/jobs/view/4486252287) | Comfi.ai | Dubai | Product | 2026-11-06 | jobspy |  |
-| 90 |  | [Technical Product Owner - dnata Cargo](https://www.linkedin.com/jobs/view/4485817650) | Emirates | Dubai | Product | 2026-11-05 | jobspy |  |
-| 91 |  | [Business Analyst - instashop](https://careers.deliveryhero.com/job/business-analyst-instashop-in-dubai-uae-jid-10675) | talabat | Dubai | Business analysis |  | attrax |  |
-| 92 |  | [CRM Business Analyst (12-Month Fixed-Term Contract)](https://www.linkedin.com/jobs/view/4488401124) | Cognita Schools | UAE | Business analysis | 2026-11-06 | jobspy |  |
-| 93 |  | [Data Engineer](https://careers.g42.ai/global/en/job/3302) | G42 | Abu Dhabi | Data engineering | 2026-09-04 | phenom | asks 3 yrs |
-| 94 |  | [Forward Deployed Engineer, Infrastructure Specialist (Middle East)](https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af) | cohere | Dubai | Software / backend | 2026-09-10 | ashby |  |
-| 95 |  | [Instructor - AI & Big Data](https://ae.indeed.com/viewjob?jk=ddaae9ba86c6caaa) | University of Wollongong in Dubai | Dubai | AI / ML | 2026-11-06 | jobspy | asks 3 yrs |
-| 96 |  | [Middle Distillates Analyst (Gasoil, Jet and ULSD) (5AD7423)](https://www.linkedin.com/jobs/view/4488021705) | Referment | Dubai | Analyst (other) | 2026-11-05 | jobspy |  |
-| 97 |  | [PAUT Data Analyst / Data Reviewer](https://ae.indeed.com/viewjob?jk=19ab9a2871159863) | Jetnova Technology Company LLC-FZ | Abu Dhabi | Data analyst | 2026-11-06 | jobspy | asks 3 yrs |
-| 98 |  | [IT Support Engineer](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389) | NMC Healthcare | Abu Dhabi | IT | 2026-09-11 | oracle |  |
-| 99 |  | [IT Support & Passive Network Technician](https://ae.indeed.com/viewjob?jk=7c6fa312e617abda) | rapidsolutions | Sharjah | IT | 2026-11-05 | jobspy |  |
-| 100 |  | [IT Support Engineer](https://ae.indeed.com/viewjob?jk=e9dc0e4b70b88dcc) | Al Haktur IT Solutions | Dubai | IT | 2026-11-06 | jobspy |  |
-| 101 |  | [L1 Technical Support Engineer](https://ae.indeed.com/viewjob?jk=e30201e07cd72265) | Brad Contech Solutions | Dubai | IT | 2026-11-07 | jobspy |  |
-| 102 |  | [Full-Stack Software Developer & Implementation Specialist](https://ae.indeed.com/viewjob?jk=8cd50f8c02de29f4) | Logistics Contracting | Dubai | Software / backend | 2026-11-06 | jobspy | asks 3 yrs |
-| 103 |  | [Staff DevOps Engineer](https://ae.indeed.com/viewjob?jk=e28602211f3b5e60) | OrbitronAI | Dubai | Software / backend | 2026-11-06 | jobspy | asks 3 yrs |
-| 104 |  | [AI Strategist](https://propertyfinder.teamtailor.com/jobs/8572362-ai-strategist) | Property Finder | Dubai | AI / ML | 2026-10-20 | teamtailor | asks 3 yrs |
-| 105 |  | [Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Product-Management-Intern--Summer-2027---Dubai--UAE--UAE-Nationals-Preferred-_R-287599-1) | Mastercard | Dubai | Product | 2026-11-07 | workday | UAE nationals preferred |
-| 106 |  | [Backend Engineer, Payments Platform](https://jobs.ashbyhq.com/ziina/b52d240f-2ccb-4aea-800b-623e9ca8ae09) | Ziina | Dubai | Software / backend | 2026-08-12 | ashby | asks 3 yrs |
-| 107 |  | [Platform Engineer (Developer Enablement)](https://jobs.ashbyhq.com/ziina/b72caf1d-e9a0-483f-9fb9-4d1cd7f28ecb) | Ziina | Dubai | Software / backend | 2026-04-21 | ashby | asks 3 yrs |
+| 29 |  | [Business Analyst Intern](https://www.bayt.com/en/uae/jobs/business-analyst-intern-75397650/) | Chandler Macleod | Abu Dhabi | Business analysis | 2026-11-07 | jobspy |  |
+| 30 |  | [Engineering Graduate Trainee](https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee) | Property Finder | Dubai | Graduate / intern | 2026-09-29 | teamtailor |  |
+| 31 |  | [Tamara Internship Program](https://job-boards.eu.greenhouse.io/tamara/jobs/4996993101) | Tamara | Dubai | Graduate / intern | 2026-10-04 | greenhouse |  |
+| 32 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-10-09 | workday |  |
+| 33 |  | [Associate Sales Analyst](https://ae.indeed.com/viewjob?jk=6d74cec3788dd7b6) | Medtronic | Dubai | Analyst (other) | 2026-11-06 | jobspy |  |
+| 34 |  | [Biostatistician-Clinical Trials Unit Section](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2951) | SSMC | Abu Dhabi | Data science | 2026-04-16 | oracle |  |
+| 35 |  | [Data Center Engineering Operations - 2027 Internship , DCEO](https://www.amazon.jobs/en/jobs/10574531/data-center-engineering-operations-2027-internship-dceo) | AWS EMEA SARL (Abu Dhabi Branch) - O49 | Dubai | IT | 2026-10-09 | amazon |  |
+| 36 |  | [Data Center Infra Engineer  - 2027 Internship](https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship) | Amazon Data Services Emirates LLC | Dubai | IT | 2026-10-13 | amazon |  |
+| 37 |  | [Data Center Technician - 2027 Internship](https://www.amazon.jobs/en/jobs/10574530/data-center-technician-2027-internship) | AWS EMEA SARL (Abu Dhabi Branch) - O49 | Dubai | IT | 2026-10-09 | amazon |  |
+| 38 |  | [Dubai Holding Entertainment: Finance, Revenue & Analytics Talent Pool](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Finance-Revenue-Analytics-Talent-Pool/3341) | Dubai Holding | UAE | Data analyst | 2026-10-23 | avature |  |
+| 39 |  | [Dubai Holding Entertainment: Technology & Data Talent Pool](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Technology-Data-Talent-Pool/3339) | Dubai Holding | UAE | Data analyst | 2026-10-23 | avature |  |
+| 40 |  | [HR Data Analyst](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4783) | ADIB | UAE | Data analyst | 2026-10-22 | oracle |  |
+| 41 |  | [AI Automation Engineer (m/f/d)](https://www.linkedin.com/jobs/view/4486972564) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
+| 42 |  | [AI Engineer (Remote)](https://www.linkedin.com/jobs/view/4487645029) | Joblet-AI | UAE | AI / ML | 2026-11-08 | jobspy |  |
+| 43 |  | [AI Engineer - Investment Management](https://www.linkedin.com/jobs/view/4485818777) | Durlston Partners | Abu Dhabi | AI / ML | 2026-11-05 | jobspy |  |
+| 44 |  | [AI Engineer – Agentic AI Systems](https://www.linkedin.com/jobs/view/4477064048) | Careernet | Ajman | AI / ML | 2026-11-05 | jobspy |  |
+| 45 |  | [Agentic AI Engineer - Forward Deployed](https://www.linkedin.com/jobs/view/4480014238) | HRsource | Dubai | AI / ML | 2026-11-06 | jobspy |  |
+| 46 |  | [Analyst - Data & Analytics](https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics) | Chalhoub Group | Dubai | Data analyst | 2026-11-06 | teamtailor |  |
+| 47 |  | [Applied AI/ML Scientist](https://www.linkedin.com/jobs/view/4488116088) | Cerebras | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
+| 48 |  | [Artificial Intelligence Engineer](https://www.linkedin.com/jobs/view/4488092965) | Aspire Manpower Services | Dubai | AI / ML | 2026-11-06 | jobspy |  |
+| 49 |  | [Backend AI Developer (Smart Home & Agentic Systems)](https://www.linkedin.com/jobs/view/4488712026) | The Greater Change | Dubai | AI / ML | 2026-11-07 | jobspy |  |
+| 50 |  | [Customer Engineer: Data](https://www.linkedin.com/jobs/view/4486998334) | ADG | Dubai | Data analyst | 2026-11-06 | jobspy |  |
+| 51 |  | [Data Engineer (m/f/d)](https://www.linkedin.com/jobs/view/4486951810) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Abu Dhabi | Data engineering | 2026-11-06 | jobspy |  |
+| 52 |  | [Data Engineer - Investment Management](https://www.linkedin.com/jobs/view/4485834069) | Durlston Partners | Abu Dhabi | Data engineering | 2026-11-05 | jobspy |  |
+| 53 |  | [Data Modeller](https://www.linkedin.com/jobs/view/4486958974) | TAT IT Technolgies | Abu Dhabi | Data analyst | 2026-11-06 | jobspy |  |
+| 54 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4488153133) | Network International | UAE | Data science | 2026-11-06 | jobspy |  |
+| 55 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4486248082) | Salt | Dubai | Data science | 2026-11-06 | jobspy |  |
+| 56 |  | [Data Scientist](https://www.linkedin.com/jobs/view/4488112528) | Huxley | Dubai | Data science | 2026-11-06 | jobspy |  |
+| 57 |  | [Data and Marketing Technician](https://ae.indeed.com/viewjob?jk=ec9f78b31b5203d0) | Monarch Solicitors | Dubai | Data analyst | 2026-11-05 | jobspy |  |
+| 58 |  | [Databricks Data Analyst – AI/BI & FinOps](https://www.linkedin.com/jobs/view/4486232071) | Etihad | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
+| 59 |  | [Financial AI Researcher (Remote)](https://www.linkedin.com/jobs/view/4487634217) | Joblet-AI | UAE | AI / ML | 2026-11-08 | jobspy |  |
+| 60 |  | [Machine Learning Engineer](https://www.linkedin.com/jobs/view/4483020014) | Salt | Abu Dhabi | AI / ML | 2026-11-06 | jobspy |  |
+| 61 |  | [Regional Brand Protection Analyst - Data Labeling & Enforcement (Arabic Speaker)](https://ae.indeed.com/viewjob?jk=5c8e7bd176d8b3ca) | Corsearch | Dubai | Data analyst | 2026-11-05 | jobspy |  |
+| 62 |  | [Senior Operations Associate - Shops](https://boards.greenhouse.io/careem/jobs/8640594002?gh_jid=8640594002) | Careem | Dubai | Business analysis | 2026-07-22 | greenhouse |  |
+| 63 |  | [Staff AI Engineer](https://www.linkedin.com/jobs/view/4486748276) | Jobgether | UAE | AI / ML | 2026-11-05 | jobspy |  |
+| 64 |  | [Associate, Commercial Analytics](https://propertyfinder.teamtailor.com/jobs/8228236-associate-commercial-analytics) | Property Finder | Dubai | Data analyst | 2026-08-17 | teamtailor | asks 3 yrs |
+| 65 |  | [Commercial Graduate Scheme, Junior Market Analyst- Dubai, UAE](https://job-boards.greenhouse.io/cobblestoneenergy/jobs/7772326003) | Cobblestone Energy | Dubai | Analyst (other) | 2026-06-12 | greenhouse |  |
+| 66 |  | [Software Engineer II -Backend](https://careers.deliveryhero.com/job/software-engineer-ii-backend-in-dubai-uae-jid-4869) | talabat | Dubai | Software / backend |  | attrax |  |
+| 67 |  | [Software Engineer l - Backend](https://careers.deliveryhero.com/job/software-engineer-l-backend-in-dubai-uae-jid-11677) | talabat | Dubai | Software / backend |  | attrax |  |
+| 68 |  | [Software Engineer ll - Backend](https://careers.deliveryhero.com/job/software-engineer-ll-backend-in-dubai-uae-jid-11675) | talabat | Dubai | Software / backend |  | attrax |  |
+| 69 |  | [API Developer](https://www.linkedin.com/jobs/view/4452350341) | Vertiv | UAE | Software / backend | 2026-11-05 | jobspy |  |
+| 70 |  | [Backend Engineer - Python, Trading Systems](https://www.bayt.com/en/uae/jobs/backend-engineer-python-trading-systems-5505169/) | Michael Page | Abu Dhabi | Software / backend | 2026-11-05 | jobspy |  |
+| 71 |  | [Electron Software Engineer (Remote)](https://www.linkedin.com/jobs/view/4487640157) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
+| 72 |  | [Forward Deployed Engineer (Remote)](https://www.linkedin.com/jobs/view/4487646003) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
+| 73 |  | [Full Stack Engineer](https://www.linkedin.com/jobs/view/4486612659) | LNKD | Dubai | Software / backend | 2026-11-07 | jobspy |  |
+| 74 |  | [Full Stack Engineer](https://www.linkedin.com/jobs/view/4486236713) | Closer Consulting | Dubai | Software / backend | 2026-11-06 | jobspy |  |
+| 75 |  | [Fullstack Software Engineer (Remote)](https://www.linkedin.com/jobs/view/4487629389) | Joblet-AI | UAE | Software / backend | 2026-11-08 | jobspy |  |
+| 76 |  | [Liferay Full Stack Developer](https://ae.indeed.com/viewjob?jk=03a92ee1c0ed34b1) | DICETEK LLC | Dubai | Software / backend | 2026-11-05 | jobspy |  |
+| 77 |  | [Odoo & Email Marketing Specialist](https://www.bayt.com/en/uae/jobs/odoo-email-marketing-specialist-5505675/) | Wajna General Trading CO LLC | Dubai | Software / backend | 2026-11-06 | jobspy |  |
+| 78 |  | [PHP Full-Stack Developer](https://www.linkedin.com/jobs/view/4488402238) | Al Ain University | Al Ain | Software / backend | 2026-11-06 | jobspy |  |
+| 79 |  | [Software Engineer](https://www.linkedin.com/jobs/view/4487761310) | One75mb HRM Pvt Ltd. | Dubai | Software / backend | 2026-11-05 | jobspy |  |
+| 80 |  | [AI Data Engineer](https://jobs.ashbyhq.com/mexdigital/a618632d-9967-4346-b7be-a2e3ae5c5be9) | MultiBank Group | Dubai | AI / ML | 2026-03-25 | ashby |  |
+| 81 |  | [AI Engineer – Generative AI and Automation](https://jobs.ashbyhq.com/mexdigital/4c1abf17-cb71-470b-ae71-3a934c4e0cc7) | MultiBank Group | Dubai | AI / ML | 2026-06-02 | ashby |  |
+| 82 |  | [Forward Deployed Engineer, Agentic Platform](https://jobs.ashbyhq.com/cohere/75c0032c-7200-48bf-9d6d-355880dd93d9) | cohere | Dubai | AI / ML | 2026-03-04 | ashby |  |
+| 83 |  | [Kearney Foresight Senior Business Analyst / Associate](https://ae.indeed.com/viewjob?jk=3c270496f2eeb889) | Kearney | Dubai | Business analysis | 2026-11-06 | jobspy | asks 3 yrs |
+| 84 |  | [Product Owner](https://www.linkedin.com/jobs/view/4487749982) | Binghatti | Dubai | Product | 2026-11-05 | jobspy |  |
+| 85 |  | [Product Owner ( Wealth Management, Brokerage & Custody)](https://www.linkedin.com/jobs/view/4486209328) | Abu Dhabi Commercial Bank | Abu Dhabi | Product | 2026-11-06 | jobspy |  |
+| 86 |  | [Product Owner - Web Apps](https://www.linkedin.com/jobs/view/4485063290) | Etihad | Abu Dhabi | Product | 2026-11-05 | jobspy |  |
+| 87 |  | [Product Owner — Origination Platform (Lending & Financing) / Fintech, Dubai / On-site](https://www.linkedin.com/jobs/view/4486252287) | Comfi.ai | Dubai | Product | 2026-11-06 | jobspy |  |
+| 88 |  | [Technical Product Owner - dnata Cargo](https://www.linkedin.com/jobs/view/4485817650) | Emirates | Dubai | Product | 2026-11-05 | jobspy |  |
+| 89 |  | [Business Analyst - instashop](https://careers.deliveryhero.com/job/business-analyst-instashop-in-dubai-uae-jid-10675) | talabat | Dubai | Business analysis |  | attrax |  |
+| 90 |  | [CRM Business Analyst (12-Month Fixed-Term Contract)](https://www.linkedin.com/jobs/view/4488401124) | Cognita Schools | UAE | Business analysis | 2026-11-06 | jobspy |  |
+| 91 |  | [Data Engineer](https://careers.g42.ai/global/en/job/3302) | G42 | Abu Dhabi | Data engineering | 2026-09-04 | phenom | asks 3 yrs |
+| 92 |  | [Forward Deployed Engineer, Infrastructure Specialist (Middle East)](https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af) | cohere | Dubai | Software / backend | 2026-09-10 | ashby |  |
+| 93 |  | [Instructor - AI & Big Data](https://ae.indeed.com/viewjob?jk=ddaae9ba86c6caaa) | University of Wollongong in Dubai | Dubai | AI / ML | 2026-11-06 | jobspy | asks 3 yrs |
+| 94 |  | [Middle Distillates Analyst (Gasoil, Jet and ULSD) (5AD7423)](https://www.linkedin.com/jobs/view/4488021705) | Referment | Dubai | Analyst (other) | 2026-11-05 | jobspy |  |
+| 95 |  | [PAUT Data Analyst / Data Reviewer](https://ae.indeed.com/viewjob?jk=19ab9a2871159863) | Jetnova Technology Company LLC-FZ | Abu Dhabi | Data analyst | 2026-11-06 | jobspy | asks 3 yrs |
+| 96 |  | [IT Support Engineer](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389) | NMC Healthcare | Abu Dhabi | IT | 2026-09-11 | oracle |  |
+| 97 |  | [IT Support & Passive Network Technician](https://ae.indeed.com/viewjob?jk=7c6fa312e617abda) | rapidsolutions | Sharjah | IT | 2026-11-05 | jobspy |  |
+| 98 |  | [IT Support Engineer](https://ae.indeed.com/viewjob?jk=e9dc0e4b70b88dcc) | Al Haktur IT Solutions | Dubai | IT | 2026-11-06 | jobspy |  |
+| 99 |  | [L1 Technical Support Engineer](https://ae.indeed.com/viewjob?jk=e30201e07cd72265) | Brad Contech Solutions | Dubai | IT | 2026-11-07 | jobspy |  |
+| 100 |  | [Full-Stack Software Developer & Implementation Specialist](https://ae.indeed.com/viewjob?jk=8cd50f8c02de29f4) | Logistics Contracting | Dubai | Software / backend | 2026-11-06 | jobspy | asks 3 yrs |
+| 101 |  | [Staff DevOps Engineer](https://ae.indeed.com/viewjob?jk=e28602211f3b5e60) | OrbitronAI | Dubai | Software / backend | 2026-11-06 | jobspy | asks 3 yrs |
+| 102 |  | [AI Strategist](https://propertyfinder.teamtailor.com/jobs/8572362-ai-strategist) | Property Finder | Dubai | AI / ML | 2026-10-20 | teamtailor | asks 3 yrs |
+| 103 |  | [Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Product-Management-Intern--Summer-2027---Dubai--UAE--UAE-Nationals-Preferred-_R-287599-1) | Mastercard | Dubai | Product | 2026-11-06 | workday | UAE nationals preferred |
+| 104 |  | [Backend Engineer, Payments Platform](https://jobs.ashbyhq.com/ziina/b52d240f-2ccb-4aea-800b-623e9ca8ae09) | Ziina | Dubai | Software / backend | 2026-08-12 | ashby | asks 3 yrs |
+| 105 |  | [Platform Engineer (Developer Enablement)](https://jobs.ashbyhq.com/ziina/b72caf1d-e9a0-483f-9fb9-4d1cd7f28ecb) | Ziina | Dubai | Software / backend | 2026-04-21 | ashby | asks 3 yrs |
 
 ## Sources this run
 
 | Source | Status | Jobs fetched |
 |---|---|---|
 | _details | ok | 0 |
-| amazon | ok | 62 |
+| amazon | ok | 59 |
 | ashby:checkout.com | ok | 173 |
+| ashby:cohere | ok | 124 |
+| ashby:elevenlabs | ok | 137 |
+| ashby:leantech | ok | 8 |
 | ashby:mexdigital | ok | 14 |
+| ashby:openai | ok | 816 |
 | ashby:qlub | ok | 28 |
 | ashby:ziina | ok | 13 |
 | attrax:talabat | ok | 153 |
 | avature:Dubai Holding | ok | 135 |
 | deriv | ok | 42 |
-| greenhouse:careem | ok | 14 |
+| greenhouse:bybit | ok | 151 |
+| greenhouse:careem | ok | 15 |
 | greenhouse:cobblestoneenergy | ok | 2 |
 | greenhouse:cobblestoneenergy1 | ok | 3 |
 | greenhouse:cobblestoneenergy4 | ok | 2 |
+| greenhouse:databricks | ok | 922 |
+| greenhouse:datadog | ok | 401 |
 | greenhouse:dmgevents | ok | 24 |
 | greenhouse:infotrust | ok | 0 |
+| greenhouse:mongodb | ok | 374 |
+| greenhouse:okx | ok | 378 |
+| greenhouse:ripple | ok | 115 |
+| greenhouse:scaleai | ok | 168 |
 | greenhouse:tamara | ok | 40 |
 | jibe:M42 | ok | 96 |
-| jobspy:bayt | ok, 6 of 9 queries blocked | 22 |
-| jobspy:indeed | ok | 271 |
-| jobspy:linkedin | ok, 6 of 8 queries blocked | 130 |
 | lever:Yassir | ok | 119 |
 | lever:aldar | ok | 49 |
 | lever:binance | ok | 4 |
+| lever:palantir | ok | 305 |
 | lever:weride | ok | 11 |
 | oracle:AD Ports Group | ok | 23 |
 | oracle:ADIB | ok | 145 |
-| oracle:Aster DM Healthcare | ok | 632 |
-| oracle:DP World | ok | 498 |
-| oracle:Dell | ok | 489 |
+| oracle:Aster DM Healthcare | ok | 624 |
+| oracle:DP World | ok | 500 |
+| oracle:Dell | ok | 491 |
 | oracle:Dubai Airports | ok | 4 |
 | oracle:Emaar | ok | 2 |
 | oracle:Emirates Islamic | ok | 20 |
 | oracle:Emirates NBD | ok | 37 |
 | oracle:First Abu Dhabi Bank | ok | 86 |
 | oracle:KPMG Lower Gulf | ok | 76 |
-| oracle:Mashreq | ok | 331 |
-| oracle:NMC Healthcare | ok | 127 |
+| oracle:Mashreq | ok | 332 |
+| oracle:NMC Healthcare | ok | 128 |
 | oracle:Oracle | ok | 5 |
 | oracle:PureHealth | ok | 26 |
 | oracle:SEHA | ok | 128 |
@@ -161,14 +168,19 @@ Updated 08 Nov 2026 11:21 Dubai time. Sorted new first, then by fit. Lanes: data
 | oracle:e& | ok | 8 |
 | phenom:ADCB | ok | 40 |
 | phenom:G42 | ok | 58 |
-| phenom:Majid Al Futtaim | ok | 255 |
+| phenom:Majid Al Futtaim | ok | 256 |
 | pinpoint:tabby | ok | 32 |
 | successfactors:Al-Futtaim | ok | 114 |
 | successfactors:EY | ok | 16 |
 | successfactors:PwC Middle East | ok | 17 |
 | teamtailor:careers.chalhoubgroup.com | ok | 100 |
+| teamtailor:dubizzle | ok | 6 |
+| teamtailor:mumzworld | ok | 13 |
 | teamtailor:propertyfinder | ok | 39 |
-| workable:bayutdubizzle | ok | 39 |
+| teamtailor:tappayments | ok | 20 |
+| workable:bayutdubizzle | ok | 27 |
+| workable:foodics | ok | 31 |
+| workable:smartcrowd | ok | 1 |
 | workday:AstraZeneca | ok | 2 |
 | workday:Baker Hughes | ok | 5 |
 | workday:Cleveland Clinic Abu Dhabi | ok | 1 |

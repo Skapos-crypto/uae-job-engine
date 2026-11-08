@@ -1,20 +1,20 @@
 {
  "generated": {
-  "utc": "2026-11-08T07:21:18+00:00",
-  "dubai": "2026-11-08 11:21",
-  "full_run": true
+  "utc": "2026-11-08T15:34:44+00:00",
+  "dubai": "2026-11-08 19:34",
+  "full_run": false
  },
  "summary": {
-  "total": 107,
+  "total": 105,
   "new_today": 16,
-  "carried_over": 0,
-  "raw_postings": 10366,
+  "carried_over": 67,
+  "raw_postings": 8684,
   "by_family": {
    "business": 7,
    "analyst": 5,
-   "ai_ml": 21,
+   "ai_ml": 20,
    "data_eng": 4,
-   "data_analyst": 14,
+   "data_analyst": 13,
    "software": 23,
    "it": 12,
    "graduate": 10,
@@ -29,20 +29,19 @@
    "oracle": 5,
    "ashby": 7,
    "greenhouse": 4,
-   "workable": 2,
    "workday": 2,
    "attrax": 4,
    "phenom": 1
   },
-  "http_calls": 664,
+  "http_calls": 197,
   "rejected": {
-   "no-family": 1556,
-   "senior": 149,
-   "excluded-title": 950,
-   "graduate-other-discipline": 15,
-   "title-elsewhere": 4,
-   "nationals-only": 36,
-   "4+ years": 23
+   "no-family": 1417,
+   "excluded-title": 847,
+   "senior": 97,
+   "graduate-other-discipline": 10,
+   "title-elsewhere": 3,
+   "nationals-only": 22,
+   "4+ years": 11
   }
  },
  "jobs": [
@@ -780,58 +779,6 @@
    "snippet": "Employment Type: Full-time & Permanent. Job Location: Dubai, UAE (We provide visa sponsorship & relocation assistance). Salary: USD 65,000 per annum + performance based bonus - 0% tax environment. Employee Share Scheme : Opportunity to join Cobblestone Employee Share Scheme. Annu"
   },
   {
-   "key": "00978d5ae4272674",
-   "title": "Data Analyst - Intern",
-   "employer": "dubizzle Group",
-   "sector": "proptech",
-   "city": "Dubai",
-   "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://apply.workable.com/j/7FDAFEBBEE",
-   "source": "workable:bayutdubizzle",
-   "source_type": "ats",
-   "seen_on": [
-    "workable:bayutdubizzle"
-   ],
-   "posted": "2026-10-21",
-   "age_days": 18,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-08",
-   "is_new": false,
-   "score": 4.2,
-   "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
-  },
-  {
-   "key": "977d704cf089e794",
-   "title": "Machine Learning - Intern",
-   "employer": "dubizzle Group",
-   "sector": "proptech",
-   "city": "Dubai",
-   "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "junior",
-   "url": "https://apply.workable.com/j/222E77A4D9",
-   "source": "workable:bayutdubizzle",
-   "source_type": "ats",
-   "seen_on": [
-    "workable:bayutdubizzle"
-   ],
-   "posted": "2026-10-21",
-   "age_days": 18,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-08",
-   "is_new": false,
-   "score": 4.2,
-   "snippet": "Bayut & dubizzle - The Arab World's only Homegrown Unicorn Business is now inviting applications for internships of 6 months duration in our Business Intelligence department. World-class mentors, fast paced & high performing work environment, our open culture and the opportunity "
-  },
-  {
    "key": "518e79f02f9dd588",
    "title": "Business Analyst Intern",
    "employer": "Chandler Macleod",
@@ -925,8 +872,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-10-10",
-   "age_days": 29,
+   "posted": "2026-10-09",
+   "age_days": 30,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1287,7 +1234,6 @@
    "source": "teamtailor:careers.chalhoubgroup.com",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:indeed",
     "teamtailor:careers.chalhoubgroup.com"
    ],
    "posted": "2026-11-06",
@@ -2791,8 +2737,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-07",
-   "age_days": 1,
+   "posted": "2026-11-06",
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "nationals_preferred"
