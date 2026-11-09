@@ -28,13 +28,6 @@
   "url": "https://jobs.ashbyhq.com/mexdigital/1652467c-4ac2-4d10-a70c-b995503e0bfe"
  },
  {
-  "title": "Applied Scientist",
-  "employer": "G42",
-  "source": "phenom:G42",
-  "reason": "4+ years",
-  "url": "https://careers.g42.ai/global/en/job/592"
- },
- {
   "title": "Forward Deployed Engineer - UAE",
   "employer": "openai",
   "source": "ashby:openai",
@@ -42,11 +35,25 @@
   "url": "https://jobs.ashbyhq.com/openai/e9d435e1-1b9e-4715-84ce-75f372e5559c"
  },
  {
+  "title": "Applied Scientist",
+  "employer": "G42",
+  "source": "phenom:G42",
+  "reason": "4+ years",
+  "url": "https://careers.g42.ai/global/en/job/592"
+ },
+ {
   "title": "Data Privacy Officer",
   "employer": "Majid Al Futtaim",
   "source": "phenom:Majid Al Futtaim",
   "reason": "4+ years",
   "url": "https://careers.majidalfuttaim.com/global/en/job/21532"
+ },
+ {
+  "title": "Business Analyst",
+  "employer": "QualityKiosk",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=d313d33e17fd6212"
  },
  {
   "title": "Product Specialist - Home Finance",
@@ -63,6 +70,13 @@
   "url": "https://careers.g42.ai/global/en/job/3464"
  },
  {
+  "title": "AI Security Engineer",
+  "employer": "DICETEK LLC",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=b32ef3c893f2092d"
+ },
+ {
   "title": "Data & Technical Support Officer (Outsource)",
   "employer": "ADIB",
   "source": "oracle:ADIB",
@@ -77,11 +91,60 @@
   "url": "https://careers.g42.ai/global/en/job/594"
  },
  {
+  "title": "Business Analyst",
+  "employer": "QualityKiosk",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=d313d33e17fd6212"
+ },
+ {
+  "title": "AI Security Engineer",
+  "employer": "DICETEK LLC",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=b32ef3c893f2092d"
+ },
+ {
+  "title": "AI Security Engineer",
+  "employer": "DICETEK LLC",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=b32ef3c893f2092d"
+ },
+ {
+  "title": "Staff Solutions Engineer",
+  "employer": "SentinelOne",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=df68abe6913f8154"
+ },
+ {
+  "title": "AI Security Engineer",
+  "employer": "DICETEK LLC",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=b32ef3c893f2092d"
+ },
+ {
+  "title": "Staff Solutions Engineer",
+  "employer": "SentinelOne",
+  "source": "jobspy:indeed",
+  "reason": "4+ years",
+  "url": "https://ae.indeed.com/viewjob?jk=df68abe6913f8154"
+ },
+ {
   "title": "Assistant Auditor",
   "employer": "du",
   "source": "oracle:du",
   "reason": "excluded-title",
   "url": "https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/12574"
+ },
+ {
+  "title": "Senior Manager - Airport Fire & Life Safety",
+  "employer": "Dubai Airports",
+  "source": "oracle:Dubai Airports",
+  "reason": "excluded-title",
+  "url": "https://hcrg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26000467"
  },
  {
   "title": "Principal Data Center Facilities Development Manager",
@@ -91,18 +154,18 @@
   "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/345984"
  },
  {
-  "title": "Specialist - HSE",
-  "employer": "AD Ports Group",
-  "source": "oracle:AD Ports Group",
-  "reason": "excluded-title",
-  "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12442"
- },
- {
   "title": "Director - Flow Sales",
   "employer": "Emirates NBD",
   "source": "oracle:Emirates NBD",
   "reason": "excluded-title",
   "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/66071"
+ },
+ {
+  "title": "Specialist - HSE",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "excluded-title",
+  "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12442"
  },
  {
   "title": "External Audit Manager",
@@ -119,13 +182,6 @@
   "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2818"
  },
  {
-  "title": "Senior Manager - Airport Fire & Life Safety",
-  "employer": "Dubai Airports",
-  "source": "oracle:Dubai Airports",
-  "reason": "excluded-title",
-  "url": "https://hcrg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26000467"
- },
- {
   "title": "Senior Account Executive Data Foundation -",
   "employer": "Salesforce",
   "source": "workday:Salesforce",
@@ -133,18 +189,11 @@
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Senior-Account-Executive-Data-Foundation--_JR366736"
  },
  {
-  "title": "Registered Nurse - LTC (Talent Pipeline)",
+  "title": "Registered Nurse (Emirati Talent)",
   "employer": "M42",
   "source": "jibe:M42",
   "reason": "excluded-title",
-  "url": "https://careers.m42.ae/jobs/6596"
- },
- {
-  "title": "Legal Specialist - Government Affairs UAE National",
-  "employer": "Baker Hughes",
-  "source": "workday:Baker Hughes",
-  "reason": "excluded-title",
-  "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/AE-ABU-DHABI-AL-GHAITH-YARD-MUSSAFAH-INDUSTRIAL-16th-STREET/Legal-Specialist---Government-Affairs_R170807-1"
+  "url": "https://careers.m42.ae/jobs/7443"
  },
  {
   "title": "Account Manager I",
@@ -154,11 +203,11 @@
   "url": "https://boards.greenhouse.io/careem/jobs/8873949002?gh_jid=8873949002"
  },
  {
-  "title": "Senior Managing Consultant, Services Business Development, Mastercard Direct Services (MCDS) Segment",
-  "employer": "Mastercard",
-  "source": "workday:Mastercard",
+  "title": "Legal Specialist - Government Affairs UAE National",
+  "employer": "Baker Hughes",
+  "source": "workday:Baker Hughes",
   "reason": "excluded-title",
-  "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Senior-Managing-Consultant--Services-Business-Development--Mastercard-Direct-Services--MCDS--Segment_R-293454"
+  "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/AE-ABU-DHABI-AL-GHAITH-YARD-MUSSAFAH-INDUSTRIAL-16th-STREET/Legal-Specialist---Government-Affairs_R170807-1"
  },
  {
   "title": "Business Development Manager",
@@ -166,6 +215,13 @@
   "source": "oracle:Emirates Islamic",
   "reason": "excluded-title",
   "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/65729"
+ },
+ {
+  "title": "Senior Managing Consultant, Services Business Development, Mastercard Direct Services (MCDS) Segment",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
+  "reason": "excluded-title",
+  "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Senior-Managing-Consultant--Services-Business-Development--Mastercard-Direct-Services--MCDS--Segment_R-293454"
  },
  {
   "title": "Medical Science Liaison, Oncology",
@@ -182,13 +238,6 @@
   "url": "https://propertyfinder.teamtailor.com/jobs/8382205-learning-experience-instructional-designer"
  },
  {
-  "title": "Intern, Sales - Dubai, UAE",
-  "employer": "Rolls-Royce",
-  "source": "workday:Rolls-Royce",
-  "reason": "excluded-title",
-  "url": "https://rollsroyce.wd3.myworkdayjobs.com/en-US/Intern_Graduate/job/Jebel-Ali/Rolls-Royce--Intern--Sales---Dubai--UAE_JR6160847"
- },
- {
   "title": "Site Merchandising Apprenticeship - Emiratisation",
   "employer": "Chalhoub Group",
   "source": "teamtailor:careers.chalhoubgroup.com",
@@ -196,18 +245,11 @@
   "url": "https://careers.chalhoubgroup.com/jobs/8681269-site-merchandising-apprenticeship-emiratisation"
  },
  {
-  "title": "Senior Content Designer",
-  "employer": "Ziina",
-  "source": "ashby:ziina",
+  "title": "Intern, Sales - Dubai, UAE",
+  "employer": "Rolls-Royce",
+  "source": "workday:Rolls-Royce",
   "reason": "excluded-title",
-  "url": "https://jobs.ashbyhq.com/ziina/7933e2d0-b018-4d3d-bcb8-7dc715a9245b"
- },
- {
-  "title": "Assistant Vice President – Financial Planning & Analysis",
-  "employer": "Aldar Properties",
-  "source": "lever:aldar",
-  "reason": "excluded-title",
-  "url": "https://jobs.lever.co/aldar/f5340ed5-e29b-4597-8ae9-3046ad82b2f2"
+  "url": "https://rollsroyce.wd3.myworkdayjobs.com/en-US/Intern_Graduate/job/Jebel-Ali/Rolls-Royce--Intern--Sales---Dubai--UAE_JR6160847"
  },
  {
   "title": "Customer Success Manager - AI & Legal Solutions",
@@ -217,11 +259,11 @@
   "url": "https://thomsonreuters.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates-Dubai-Dubai/Customer-Success-Manager---AI---Legal-Solutions_JREQ203416"
  },
  {
-  "title": "Accountant",
-  "employer": "Tamara",
-  "source": "greenhouse:tamara",
+  "title": "Senior Content Designer",
+  "employer": "Ziina",
+  "source": "ashby:ziina",
   "reason": "excluded-title",
-  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4969403101"
+  "url": "https://jobs.ashbyhq.com/ziina/7933e2d0-b018-4d3d-bcb8-7dc715a9245b"
  },
  {
   "title": "RB-AUH Central Region-Branch Sales Executive (Outsource Role) HV",
@@ -231,6 +273,13 @@
   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4884"
  },
  {
+  "title": "Assistant Vice President – Financial Planning & Analysis",
+  "employer": "Aldar Properties",
+  "source": "lever:aldar",
+  "reason": "excluded-title",
+  "url": "https://jobs.lever.co/aldar/f5340ed5-e29b-4597-8ae9-3046ad82b2f2"
+ },
+ {
   "title": "Account Manager - Partner Success & Sales (Field Sales)",
   "employer": "dubizzle Group",
   "source": "workable:bayutdubizzle",
@@ -238,11 +287,25 @@
   "url": "https://apply.workable.com/j/A71E665D9F"
  },
  {
-  "title": "Indirect Tax - Consultant - UAE",
+  "title": "Accountant",
+  "employer": "Tamara",
+  "source": "greenhouse:tamara",
+  "reason": "excluded-title",
+  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4969403101"
+ },
+ {
+  "title": "Specialist - Dermatology",
+  "employer": "NMC Healthcare",
+  "source": "oracle:NMC Healthcare",
+  "reason": "excluded-title",
+  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12511"
+ },
+ {
+  "title": "Tax Technology and Transformation - Senior - GCC",
   "employer": "EY",
   "source": "successfactors:EY",
   "reason": "excluded-title",
-  "url": "https://careers.ey.com/ey/job/Abu-Dhabi-Indirect-Tax-Consultant-UAE-136/1380859933/"
+  "url": "https://careers.ey.com/ey/job/Dubai-Tax-Technology-and-Transformation-Senior-GCC-9267/1410716333/"
  },
  {
   "title": "Head of Sales",
@@ -273,25 +336,11 @@
   "url": "https://careers.mumzworld.com/jobs/8566331-category-manager-baby-gear-nursery"
  },
  {
-  "title": "People Operations Executive",
-  "employer": "SmartCrowd",
-  "source": "workable:smartcrowd",
-  "reason": "excluded-title",
-  "url": "https://apply.workable.com/j/6AA6EEC634"
- },
- {
   "title": "Key Account Manager",
   "employer": "qlub",
   "source": "ashby:qlub",
   "reason": "excluded-title",
   "url": "https://jobs.ashbyhq.com/qlub/e02b429e-9ed2-4820-ab27-6153da7b0fee"
- },
- {
-  "title": "Area Sales Team Leader (UAE National Only)",
-  "employer": "ADCB",
-  "source": "phenom:ADCB",
-  "reason": "excluded-title",
-  "url": "https://adcbcareers.com/gb/en/job/4873"
  },
  {
   "title": "Sales Executive",
@@ -301,6 +350,13 @@
   "url": "https://apply.workable.com/j/6444E2FE06"
  },
  {
+  "title": "Analyst - IT Governance, Risk and Compliance",
+  "employer": "ADCB",
+  "source": "phenom:ADCB",
+  "reason": "excluded-title",
+  "url": "https://adcbcareers.com/gb/en/job/4629"
+ },
+ {
   "title": "Account Manager | FX",
   "employer": "MultiBank Group",
   "source": "ashby:mexdigital",
@@ -308,11 +364,11 @@
   "url": "https://jobs.ashbyhq.com/mexdigital/dfe9a232-f0dd-4f94-acfc-3d67867a50f8"
  },
  {
-  "title": "Registered Nurse - CICU",
-  "employer": "PureHealth",
-  "source": "oracle:PureHealth",
+  "title": "MENAT/SSA Startup Sales Leader, EMEA SUP",
+  "employer": "Amazon Web Services EMEA Dubai FZ Branch",
+  "source": "amazon",
   "reason": "excluded-title",
-  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_6007/job/4694"
+  "url": "https://www.amazon.jobs/en/jobs/10598740/menat-ssa-startup-sales-leader-emea-sup"
  },
  {
   "title": "Senior SOC Analyst",
@@ -322,11 +378,11 @@
   "url": "https://join.deriv.careers/jobs/6efa99e1-048b-57ef-a15f-870238bdcaa6"
  },
  {
-  "title": "MENAT/SSA Startup Sales Leader, EMEA SUP",
-  "employer": "Amazon Web Services EMEA Dubai FZ Branch",
-  "source": "amazon",
+  "title": "Registered Nurse - CICU",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
   "reason": "excluded-title",
-  "url": "https://www.amazon.jobs/en/jobs/10598740/menat-ssa-startup-sales-leader-emea-sup"
+  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_6007/job/4694"
  },
  {
   "title": "Talent Acquisition Manager",
@@ -343,18 +399,11 @@
   "url": "https://job-boards.greenhouse.io/dmgevents/jobs/8354805"
  },
  {
-  "title": "(UAE Nationals only) Senior Collections Officer-Retail Home loan collection - Emirati segment.Credit Management",
-  "employer": "Mashreq",
-  "source": "oracle:Mashreq",
+  "title": "Account Director, Enterprise",
+  "employer": "openai",
+  "source": "ashby:openai",
   "reason": "excluded-title",
-  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6669"
- },
- {
-  "title": "Lead Analyst - Sector Domain (OT Cybersecurity)",
-  "employer": "G42",
-  "source": "phenom:G42",
-  "reason": "excluded-title",
-  "url": "https://careers.g42.ai/global/en/job/1676"
+  "url": "https://jobs.ashbyhq.com/openai/927e7c35-316f-43eb-bcf4-637c525c0d58"
  },
  {
   "title": "Specialist Ophthalmology",
@@ -364,18 +413,18 @@
   "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5989"
  },
  {
-  "title": "Account Director, Enterprise",
-  "employer": "openai",
-  "source": "ashby:openai",
+  "title": "Senior Engineer - OT Cybersecurity",
+  "employer": "G42",
+  "source": "phenom:G42",
   "reason": "excluded-title",
-  "url": "https://jobs.ashbyhq.com/openai/927e7c35-316f-43eb-bcf4-637c525c0d58"
+  "url": "https://careers.g42.ai/global/en/job/3211"
  },
  {
-  "title": "Workplace Operations Analyst",
-  "employer": "palantir",
-  "source": "lever:palantir",
+  "title": "(UAE Nationals only) Senior Collections Officer-Retail Home loan collection - Emirati segment.Credit Management",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
   "reason": "excluded-title",
-  "url": "https://jobs.lever.co/palantir/e6be4159-c8d1-481d-ad15-13274861b795"
+  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6669"
  },
  {
   "title": "Business Development Representative",
@@ -399,13 +448,6 @@
   "url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/300212"
  },
  {
-  "title": "Consultant Physician-Cardiology",
-  "employer": "SSMC",
-  "source": "oracle:SSMC",
-  "reason": "excluded-title",
-  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3198"
- },
- {
   "title": "Sales Development - Turkey",
   "employer": "elevenlabs",
   "source": "ashby:elevenlabs",
@@ -413,11 +455,25 @@
   "url": "https://jobs.ashbyhq.com/ElevenLabs/84a75f68-c964-4ad7-994d-a44506e333b2"
  },
  {
+  "title": "Consultant Physician-Cardiology",
+  "employer": "SSMC",
+  "source": "oracle:SSMC",
+  "reason": "excluded-title",
+  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3198"
+ },
+ {
   "title": "Enterprise Account Executive, Middle-East and Africa",
   "employer": "databricks",
   "source": "greenhouse:databricks",
   "reason": "excluded-title",
   "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8452487002"
+ },
+ {
+  "title": "Commissioning Superintendents Mechanical (Rotating)",
+  "employer": "KBR",
+  "source": "workday:KBR",
+  "reason": "excluded-title",
+  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/Commissioning-Superintendents-Mechanical--Rotating-_R2131395"
  },
  {
   "title": "Head of Financial Planning & Analysis | Al-Futtaim Automotive | Finance",
@@ -441,13 +497,6 @@
   "url": "https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36643"
  },
  {
-  "title": "quantity surveyor",
-  "employer": "KBR",
-  "source": "workday:KBR",
-  "reason": "excluded-title",
-  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/quantity-surveyor_R2131604"
- },
- {
   "title": "Mid-Market Account Executive",
   "employer": "datadog",
   "source": "greenhouse:datadog",
@@ -462,6 +511,13 @@
   "url": "https://job-boards.greenhouse.io/okx/jobs/7736833003"
  },
  {
+  "title": "Animator Intern",
+  "employer": "bybit",
+  "source": "greenhouse:bybit",
+  "reason": "excluded-title",
+  "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/4974752101"
+ },
+ {
   "title": "INSPECTOR - SAFETY",
   "employer": "DP World",
   "source": "oracle:DP World",
@@ -469,11 +525,11 @@
   "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27288"
  },
  {
-  "title": "Animator Intern",
-  "employer": "bybit",
-  "source": "greenhouse:bybit",
+  "title": "Workplace Operations Analyst",
+  "employer": "palantir",
+  "source": "lever:palantir",
   "reason": "excluded-title",
-  "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/4974752101"
+  "url": "https://jobs.lever.co/palantir/e6be4159-c8d1-481d-ad15-13274861b795"
  },
  {
   "title": "Senior Business Development Manager",
@@ -483,18 +539,18 @@
   "url": "https://ripple.com/careers/all-jobs/job/8172752?gh_jid=8172752"
  },
  {
-  "title": "Specialist - Dermatology",
-  "employer": "NMC Healthcare",
-  "source": "oracle:NMC Healthcare",
-  "reason": "excluded-title",
-  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12511"
- },
- {
   "title": "Buyer",
   "employer": "Majid Al Futtaim",
   "source": "phenom:Majid Al Futtaim",
   "reason": "excluded-title",
   "url": "https://careers.majidalfuttaim.com/global/en/job/20823"
+ },
+ {
+  "title": "Senior Quantity Surveyor (Dubai Holding Real Estate)",
+  "employer": "Dubai Holding",
+  "source": "avature:Dubai Holding",
+  "reason": "excluded-title",
+  "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Senior-Quantity-Surveyor-Contracts/3204"
  },
  {
   "title": "Intern-People and Organization",
@@ -532,11 +588,11 @@
   "url": "https://www.amazon.jobs/en/jobs/10586108/graduate-area-manager"
  },
  {
-  "title": "Sinyar Graduate Program | Duty Manager | Retail",
+  "title": "Sinyar Graduate Program | Logistics Executive | Retail",
   "employer": "Al-Futtaim",
   "source": "successfactors:Al-Futtaim",
   "reason": "graduate-other-discipline",
-  "url": "https://www.afuturewithus.com/job/Sharjah-Sinyar-Graduate-Program-Duty-Manager-Retail/1451007933/"
+  "url": "https://www.afuturewithus.com/job/Dubai-Sinyar-Graduate-Program-Logistics-Executive-Retail/1451007833/"
  },
  {
   "title": "Emirati Talent - Graduate, Marketing",
@@ -546,6 +602,20 @@
   "url": "https://careers.majidalfuttaim.com/global/en/job/22374"
  },
  {
+  "title": "Pre Graduate Architect Engineer (UAE National)",
+  "employer": "Egis Group",
+  "source": "jobspy:indeed",
+  "reason": "graduate-other-discipline",
+  "url": "https://ae.indeed.com/viewjob?jk=653ee7a2dee500a2"
+ },
+ {
+  "title": "Pre Graduate Architect Engineer (UAE National)",
+  "employer": "U+A",
+  "source": "jobspy:linkedin",
+  "reason": "graduate-other-discipline",
+  "url": "https://www.linkedin.com/jobs/view/4486857208"
+ },
+ {
   "title": "2027 Operations Intern, FC Operations",
   "employer": "Amazon Middle East and North Africa FZ-LLC",
   "source": "amazon",
@@ -553,11 +623,18 @@
   "url": "https://www.amazon.jobs/en/jobs/10557562/2027-operations-intern-fc-operations"
  },
  {
-  "title": "Sinyar Graduate Program | Logistics Executive | Retail",
+  "title": "Sinyar Graduate Program | Duty Manager | Retail",
   "employer": "Al-Futtaim",
   "source": "successfactors:Al-Futtaim",
   "reason": "graduate-other-discipline",
-  "url": "https://www.afuturewithus.com/job/Dubai-Sinyar-Graduate-Program-Logistics-Executive-Retail/1451007833/"
+  "url": "https://www.afuturewithus.com/job/Sharjah-Sinyar-Graduate-Program-Duty-Manager-Retail/1451007933/"
+ },
+ {
+  "title": "Pre Graduate Architect Engineer (UAE National)",
+  "employer": "Egis Group",
+  "source": "jobspy:indeed",
+  "reason": "graduate-other-discipline",
+  "url": "https://ae.indeed.com/viewjob?jk=653ee7a2dee500a2"
  },
  {
   "title": "Sinyar Graduate Program | Digital Content Specialist | Retail",
@@ -565,6 +642,20 @@
   "source": "successfactors:Al-Futtaim",
   "reason": "graduate-other-discipline",
   "url": "https://www.afuturewithus.com/job/Dubai-Sinyar-Graduate-Program-Digital-Content-Specialist-Retail/1423938533/"
+ },
+ {
+  "title": "Pre Graduate Architect Engineer (UAE National)",
+  "employer": "Egis Group",
+  "source": "jobspy:indeed",
+  "reason": "graduate-other-discipline",
+  "url": "https://ae.indeed.com/viewjob?jk=653ee7a2dee500a2"
+ },
+ {
+  "title": "Graduate Assistant Design Manager (UAEN)",
+  "employer": "Buro Happold",
+  "source": "jobspy:indeed",
+  "reason": "graduate-other-discipline",
+  "url": "https://ae.indeed.com/viewjob?jk=5a80131f398e63c5"
  },
  {
   "title": "Digital Product Specialist (UAE Nationals)",
@@ -609,18 +700,18 @@
   "url": "https://careers.chalhoubgroup.com/jobs/8676304-spark-apprenticeship-your-university-work-placement-starts-here"
  },
  {
-  "title": "Associate Data Scientist - Builders Program - (Emirati National)",
-  "employer": "Tamara",
-  "source": "greenhouse:tamara",
-  "reason": "nationals-only",
-  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4849506101"
- },
- {
   "title": "Client Services Analyst",
   "employer": "ADIB",
   "source": "oracle:ADIB",
   "reason": "nationals-only",
   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4850"
+ },
+ {
+  "title": "Associate Data Scientist - Builders Program - (Emirati National)",
+  "employer": "Tamara",
+  "source": "greenhouse:tamara",
+  "reason": "nationals-only",
+  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4849506101"
  },
  {
   "title": "Business Analytics Graduate – Image Guided Therapy (Emiratization)",
@@ -644,11 +735,11 @@
   "url": "https://www.amazon.jobs/en/jobs/10535748/bie-engineer-uae-national"
  },
  {
-  "title": "Product Analyst (UAEN) | Corporate Services | GTPD",
+  "title": "UAE National | MIS Executive | Al-Futtaim Automotive | FAMCO | Dubai",
   "employer": "Al-Futtaim",
   "source": "successfactors:Al-Futtaim",
   "reason": "nationals-only",
-  "url": "https://www.afuturewithus.com/job/Dubai-Product-Analyst-%28UAEN%29-Corporate-Services-GTPD/1448949533/"
+  "url": "https://www.afuturewithus.com/job/Dubai-UAE-National-MIS-Executive-Al-Futtaim-Automotive-FAMCO%C2%A0-Dubai/1450297733/"
  },
  {
   "title": "Fresh Graduate Program",
@@ -656,6 +747,20 @@
   "source": "phenom:Majid Al Futtaim",
   "reason": "nationals-only",
   "url": "https://careers.majidalfuttaim.com/global/en/job/P-100062"
+ },
+ {
+  "title": "Graduate Analyst - Advisory",
+  "employer": "Buro Happold",
+  "source": "jobspy:indeed",
+  "reason": "nationals-only",
+  "url": "https://ae.indeed.com/viewjob?jk=c9f724addc9c6d5f"
+ },
+ {
+  "title": "Finance & Strategy Associate - UAE National",
+  "employer": "Deliveroo",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4479164908"
  },
  {
   "title": "Trainee – Associate (UAE National)",
@@ -672,6 +777,13 @@
   "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/189"
  },
  {
+  "title": "Buying Trainee - Emiratisation",
+  "employer": "Chalhoub Group",
+  "source": "teamtailor:careers.chalhoubgroup.com",
+  "reason": "nationals-only",
+  "url": "https://careers.chalhoubgroup.com/jobs/8454765-buying-trainee-emiratisation"
+ },
+ {
   "title": "Associate Support Engineer - Treasury & Risk",
   "employer": "ADIB",
   "source": "oracle:ADIB",
@@ -686,11 +798,11 @@
   "url": "https://careers.pwc.com/job/Dubai-Watani-Business-Enablement-Solutions-Graduate-Programme-Duba/1443272233/"
  },
  {
-  "title": "UAE National | MIS Executive | Al-Futtaim Automotive | FAMCO | Dubai",
+  "title": "Product Analyst (UAEN) | Corporate Services | GTPD",
   "employer": "Al-Futtaim",
   "source": "successfactors:Al-Futtaim",
   "reason": "nationals-only",
-  "url": "https://www.afuturewithus.com/job/Dubai-UAE-National-MIS-Executive-Al-Futtaim-Automotive-FAMCO%C2%A0-Dubai/1450297733/"
+  "url": "https://www.afuturewithus.com/job/Dubai-Product-Analyst-%28UAEN%29-Corporate-Services-GTPD/1448949533/"
  },
  {
   "title": "Data Scientist/Analyst - Data Modelling & BI | Emirati Talent",
@@ -698,6 +810,20 @@
   "source": "phenom:Majid Al Futtaim",
   "reason": "nationals-only",
   "url": "https://careers.majidalfuttaim.com/global/en/job/22734"
+ },
+ {
+  "title": "Graduate Analyst - Advisory",
+  "employer": "Buro Happold",
+  "source": "jobspy:indeed",
+  "reason": "nationals-only",
+  "url": "https://ae.indeed.com/viewjob?jk=c9f724addc9c6d5f"
+ },
+ {
+  "title": "Sales Operations Analyst - UAE National",
+  "employer": "Deliveroo",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4479174479"
  },
  {
   "title": "Software Engineer- Graduate Trainee   ( UAE Nationals)",
@@ -714,11 +840,67 @@
   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4456"
  },
  {
+  "title": "UAE National Finance Analyst | Al-Futtaim Automotive | FAMCO",
+  "employer": "Al-Futtaim",
+  "source": "successfactors:Al-Futtaim",
+  "reason": "nationals-only",
+  "url": "https://www.afuturewithus.com/job/Dubai-UAE-National-Finance-Analyst-Al-Futtaim-Automotive-FAMCO/1455455033/"
+ },
+ {
   "title": "Emirati Talent - Senior Associate, Data Analyst",
   "employer": "Majid Al Futtaim",
   "source": "phenom:Majid Al Futtaim",
   "reason": "nationals-only",
   "url": "https://careers.majidalfuttaim.com/global/en/job/22104"
+ },
+ {
+  "title": "Graduate Analyst - Advisory",
+  "employer": "Buro Happold",
+  "source": "jobspy:indeed",
+  "reason": "nationals-only",
+  "url": "https://ae.indeed.com/viewjob?jk=c9f724addc9c6d5f"
+ },
+ {
+  "title": "Digital Analyst - UAE National",
+  "employer": "Siemens Energy",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4439835820"
+ },
+ {
+  "title": "Digital Analyst - UAE National",
+  "employer": "Siemens Energy",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4439835820"
+ },
+ {
+  "title": "Junior Product Manager - Emirati Future Leaders ( Immediate Joiners)",
+  "employer": "ALDAR",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4487622943"
+ },
+ {
+  "title": "Digital Analyst - UAE National",
+  "employer": "Siemens Energy",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4439835820"
+ },
+ {
+  "title": "Digital Analyst - UAE National",
+  "employer": "Siemens Energy",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4439835820"
+ },
+ {
+  "title": "Junior Product Manager - Emirati Future Leaders ( Immediate Joiners)",
+  "employer": "ALDAR",
+  "source": "jobspy:linkedin",
+  "reason": "nationals-only",
+  "url": "https://www.linkedin.com/jobs/view/4487622943"
  },
  {
   "title": "Kitchen / Laundry Technician|General Engineering (AJBR)",
@@ -735,6 +917,13 @@
   "url": "https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/12648"
  },
  {
+  "title": "Finance Business Partner",
+  "employer": "Dubai Airports",
+  "source": "oracle:Dubai Airports",
+  "reason": "no-family",
+  "url": "https://hcrg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26000468"
+ },
+ {
   "title": "Senior Technical Architect - Healthcare",
   "employer": "Oracle",
   "source": "oracle:Oracle",
@@ -742,18 +931,18 @@
   "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/348579"
  },
  {
-  "title": "Senior Specialist - Commercial & BD, AD Food Hub",
-  "employer": "AD Ports Group",
-  "source": "oracle:AD Ports Group",
-  "reason": "no-family",
-  "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12388"
- },
- {
-  "title": "Manager - Fraud Investigations (UAE National)",
+  "title": "Associate Director - Group Strategy",
   "employer": "Emirates NBD",
   "source": "oracle:Emirates NBD",
   "reason": "no-family",
-  "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/65280"
+  "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/66076"
+ },
+ {
+  "title": "Specialist - Project",
+  "employer": "AD Ports Group",
+  "source": "oracle:AD Ports Group",
+  "reason": "no-family",
+  "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12369"
  },
  {
   "title": "Manager-Department of Professional Practice",
@@ -770,13 +959,6 @@
   "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/3138"
  },
  {
-  "title": "Sr. Engineer Mobile Customer Support and Special Events (Emiratized Role)",
-  "employer": "e&",
-  "source": "oracle:e&",
-  "reason": "no-family",
-  "url": "https://iaayey.fa.ocs.oraclecloud26.com/hcmUI/CandidateExperience/en/sites/CX_1/job/11383"
- },
- {
   "title": "Executive Clinical Director, Pharmacy - Cleveland Clinic Abu Dhabi",
   "employer": "Cleveland Clinic Abu Dhabi",
   "source": "workday:Cleveland Clinic Abu Dhabi",
@@ -784,11 +966,11 @@
   "url": "https://ccf.wd1.myworkdayjobs.com/en-US/ClevelandClinicCareers/job/Cleveland-Clinic-Abu-Dhabi/Executive-Clinical-Director--Pharmacy---Cleveland-Clinic-Abu-Dhabi_334548-1"
  },
  {
-  "title": "Senior Team Leader –  Airfield Civil Works",
-  "employer": "Dubai Airports",
-  "source": "oracle:Dubai Airports",
+  "title": "Manager/Devices as a Service (DaaS) Product",
+  "employer": "e&",
+  "source": "oracle:e&",
   "reason": "no-family",
-  "url": "https://hcrg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26000465"
+  "url": "https://iaayey.fa.ocs.oraclecloud26.com/hcmUI/CandidateExperience/en/sites/CX_1/job/11244"
  },
  {
   "title": "Customer Risk Manager",
@@ -798,25 +980,18 @@
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Customer-Risk-Manager_JR362854"
  },
  {
-  "title": "Healthcare Aide-Women's OPD",
-  "employer": "M42",
-  "source": "jibe:M42",
-  "reason": "no-family",
-  "url": "https://careers.m42.ae/jobs/7050"
- },
- {
-  "title": "Global Field Service Engineer - Electrical (UAE National)",
-  "employer": "Baker Hughes",
-  "source": "workday:Baker Hughes",
-  "reason": "no-family",
-  "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/AE-ABU-DHABI-AL-GHAITH-HOLDING-TOWER-AIRPORT-ROAD/Global-Field-Service-Engineer---Electrical--UAE-National-_R162683-1"
- },
- {
   "title": "Established Portfolio Business Manager, Gulf",
   "employer": "AstraZeneca",
   "source": "workday:AstraZeneca",
   "reason": "no-family",
   "url": "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/UAE---Dubai/Established-Portfolio-Business-Manager--Gulf_R-263621"
+ },
+ {
+  "title": "Radiographer (Emirati Talent)",
+  "employer": "M42",
+  "source": "jibe:M42",
+  "reason": "no-family",
+  "url": "https://careers.m42.ae/jobs/7446"
  },
  {
   "title": "Quality Specialist",
@@ -826,11 +1001,11 @@
   "url": "https://boards.greenhouse.io/careem/jobs/8916073002?gh_jid=8916073002"
  },
  {
-  "title": "Director, East Arabia Division Lead – Security Solutions",
-  "employer": "Mastercard",
-  "source": "workday:Mastercard",
+  "title": "Global Field Service Engineer - Electrical (UAE National)",
+  "employer": "Baker Hughes",
+  "source": "workday:Baker Hughes",
   "reason": "no-family",
-  "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Director--East-Arabia-Division-Lead---Security-Solutions_R-294321"
+  "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/AE-ABU-DHABI-AL-GHAITH-HOLDING-TOWER-AIRPORT-ROAD/Global-Field-Service-Engineer---Electrical--UAE-National-_R162683-1"
  },
  {
   "title": "Relationship Manager -  Business Banking -Liabilities",
@@ -840,11 +1015,11 @@
   "url": "https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/66090"
  },
  {
-  "title": "Senior Product Manager, P2P & Local Transfers",
-  "employer": "Tabby",
-  "source": "pinpoint:tabby",
+  "title": "Director, East Arabia Division Lead – Security Solutions",
+  "employer": "Mastercard",
+  "source": "workday:Mastercard",
   "reason": "no-family",
-  "url": "https://tabby.pinpointhq.com/en/jobs/603472"
+  "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Director--East-Arabia-Division-Lead---Security-Solutions_R-294321"
  },
  {
   "title": "Junior Procurement Coordinator (UAE National)",
@@ -854,11 +1029,18 @@
   "url": "https://gsk.wd5.myworkdayjobs.com/en-US/GSKCareers/job/UAE---Dubai/Junior-Procurement-Coordinator--UAE-National-_448169"
  },
  {
+  "title": "Senior Product Manager, P2P & Local Transfers",
+  "employer": "Tabby",
+  "source": "pinpoint:tabby",
+  "reason": "no-family",
+  "url": "https://tabby.pinpointhq.com/en/jobs/603472"
+ },
+ {
   "title": "Enterprise Customer Success Partner",
   "employer": "Property Finder",
   "source": "teamtailor:propertyfinder",
   "reason": "no-family",
-  "url": "https://propertyfinder.teamtailor.com/jobs/8531821-enterprise-customer-success-partner"
+  "url": "https://propertyfinder.teamtailor.com/jobs/8686391-enterprise-customer-success-partner"
  },
  {
   "title": "Part Time Fashion Consultant, The Deal - Al Wahda Mall (Emiratisation)",
@@ -868,25 +1050,11 @@
   "url": "https://careers.chalhoubgroup.com/jobs/8678686-part-time-fashion-consultant-the-deal-al-wahda-mall-emiratisation"
  },
  {
-  "title": "Head of Marketing",
-  "employer": "Ziina",
-  "source": "ashby:ziina",
-  "reason": "no-family",
-  "url": "https://jobs.ashbyhq.com/ziina/0a424b07-85a9-42ea-9daf-58b9de905398"
- },
- {
   "title": "Director, Technical Operations - Middle East Region",
   "employer": "Coca-Cola",
   "source": "workday:Coca-Cola",
   "reason": "no-family",
   "url": "https://coke.wd1.myworkdayjobs.com/en-US/coca-cola-careers/job/UAE---Dubai/Director--Technical-Operations---Middle-East-Region_R-147503"
- },
- {
-  "title": "Assistant Vice President - Events",
-  "employer": "Aldar Properties",
-  "source": "lever:aldar",
-  "reason": "no-family",
-  "url": "https://jobs.lever.co/aldar/a58b2c90-9445-4b95-8ba3-1acac4d8a1d8"
  },
  {
   "title": "Senior Regulatory Associate",
@@ -896,18 +1064,25 @@
   "url": "https://thomsonreuters.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates-Dubai-Dubai/Senior-Regulatory-Associate_JREQ203876"
  },
  {
-  "title": "Merchant Success Lead",
-  "employer": "Tamara",
-  "source": "greenhouse:tamara",
+  "title": "Head of Marketing",
+  "employer": "Ziina",
+  "source": "ashby:ziina",
   "reason": "no-family",
-  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4998982101"
+  "url": "https://jobs.ashbyhq.com/ziina/0a424b07-85a9-42ea-9daf-58b9de905398"
  },
  {
-  "title": "Vendor Registration Specialist",
+  "title": "Procurement Operations Manager",
   "employer": "ADIB",
   "source": "oracle:ADIB",
   "reason": "no-family",
-  "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4858"
+  "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4881"
+ },
+ {
+  "title": "Assistant Vice President - Events",
+  "employer": "Aldar Properties",
+  "source": "lever:aldar",
+  "reason": "no-family",
+  "url": "https://jobs.lever.co/aldar/a58b2c90-9445-4b95-8ba3-1acac4d8a1d8"
  },
  {
   "title": "Dealer Relationship Executive (Auction)",
@@ -917,11 +1092,25 @@
   "url": "https://apply.workable.com/j/BDD7A7FC61"
  },
  {
-  "title": "Valuations & Modeling Manager (Power & Utilities Sector) - EY Parthenon - UAE",
+  "title": "Merchant Success Lead",
+  "employer": "Tamara",
+  "source": "greenhouse:tamara",
+  "reason": "no-family",
+  "url": "https://job-boards.eu.greenhouse.io/tamara/jobs/4998982101"
+ },
+ {
+  "title": "OSH Officer",
+  "employer": "NMC Healthcare",
+  "source": "oracle:NMC Healthcare",
+  "reason": "no-family",
+  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12788"
+ },
+ {
+  "title": "Mergers & Acquisitions Executive - EY Parthenon, Dubai (National)",
   "employer": "EY",
   "source": "successfactors:EY",
   "reason": "no-family",
-  "url": "https://careers.ey.com/ey/job/Dubai-Valuations-&-Modeling-Manager-%28Power-&-Utilities-Sector%29-EY-Parthenon-UAE-9267/1453834233/"
+  "url": "https://careers.ey.com/ey/job/Dubai-Mergers-&-Acquisitions-Executive-EY-Parthenon%2C-Dubai-%28National%29-9267/1421525033/"
  },
  {
   "title": "Senior Manager, Regional Marketing - MENA",
@@ -959,18 +1148,18 @@
   "url": "https://jobs.ashbyhq.com/qlub/79e529fc-6955-44a6-bf75-faf95e7a9ed9"
  },
  {
-  "title": "Relationship Banking Officer",
-  "employer": "ADCB",
-  "source": "phenom:ADCB",
-  "reason": "no-family",
-  "url": "https://adcbcareers.com/gb/en/job/4864"
- },
- {
   "title": "Open Application",
   "employer": "Cobblestone Energy",
   "source": "greenhouse:cobblestoneenergy1",
   "reason": "no-family",
   "url": "https://job-boards.greenhouse.io/cobblestoneenergy1/jobs/5059260003"
+ },
+ {
+  "title": "Senior Relationship Banking Officer",
+  "employer": "ADCB",
+  "source": "phenom:ADCB",
+  "reason": "no-family",
+  "url": "https://adcbcareers.com/gb/en/job/4877"
  },
  {
   "title": "Social Media Executive",
@@ -980,11 +1169,11 @@
   "url": "https://jobs.ashbyhq.com/mexdigital/8400e65b-8f61-48f9-9ae0-c45d86ee6051"
  },
  {
-  "title": "Specialist - Learning & Development",
-  "employer": "PureHealth",
-  "source": "oracle:PureHealth",
+  "title": "Senior Sales Ops Manager - Scale, AWS Strategy & Operations",
+  "employer": "AWS EMEA SARL (Abu Dhabi Branch)",
+  "source": "amazon",
   "reason": "no-family",
-  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_6007/job/5857"
+  "url": "https://www.amazon.jobs/en/jobs/10596522/senior-sales-ops-manager-scale-aws-strategy-operations"
  },
  {
   "title": "Senior Banking Administrative Executive",
@@ -994,11 +1183,11 @@
   "url": "https://join.deriv.careers/jobs/1c7035d9-d26a-469b-b840-52b2e0cfb9a0"
  },
  {
-  "title": "Senior Sales Ops Manager - Scale, AWS Strategy & Operations",
-  "employer": "AWS EMEA SARL (Abu Dhabi Branch)",
-  "source": "amazon",
+  "title": "Specialist - Learning & Development",
+  "employer": "PureHealth",
+  "source": "oracle:PureHealth",
   "reason": "no-family",
-  "url": "https://www.amazon.jobs/en/jobs/10596522/senior-sales-ops-manager-scale-aws-strategy-operations"
+  "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_6007/job/5857"
  },
  {
   "title": "Principal Product Manager, LeanX",
@@ -1015,25 +1204,11 @@
   "url": "https://job-boards.greenhouse.io/dmgevents/jobs/7870415"
  },
  {
-  "title": "Law Enforcement Specialist – UAE",
-  "employer": "Binance",
-  "source": "lever:binance",
+  "title": "Technical Success - EMEA",
+  "employer": "openai",
+  "source": "ashby:openai",
   "reason": "no-family",
-  "url": "https://jobs.lever.co/binance/bf012429-3399-482d-80ad-0fb398575510"
- },
- {
-  "title": "Relationship Manager - Business Banking - Rolex Tower - BB.",
-  "employer": "Mashreq",
-  "source": "oracle:Mashreq",
-  "reason": "no-family",
-  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6109"
- },
- {
-  "title": "Senior SOC Engineer- SIEM (UAEN)",
-  "employer": "G42",
-  "source": "phenom:G42",
-  "reason": "no-family",
-  "url": "https://careers.g42.ai/global/en/job/3418"
+  "url": "https://jobs.ashbyhq.com/openai/b3c1b5a9-a8fe-49df-849b-d4a06a47562c"
  },
  {
   "title": "Building Information Modelling Coordinator (STMC)",
@@ -1043,11 +1218,18 @@
   "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6045"
  },
  {
-  "title": "Technical Success - EMEA",
-  "employer": "openai",
-  "source": "ashby:openai",
+  "title": "Senior Specialist - Production Engineer",
+  "employer": "G42",
+  "source": "phenom:G42",
   "reason": "no-family",
-  "url": "https://jobs.ashbyhq.com/openai/b3c1b5a9-a8fe-49df-849b-d4a06a47562c"
+  "url": "https://careers.g42.ai/global/en/job/3402"
+ },
+ {
+  "title": "Client Services Manager- Private Banking CSM (UAEN ONLY)",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "no-family",
+  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7178"
  },
  {
   "title": "Government Affairs Lead - Middle East (UAE or Saudi Arabia based)",
@@ -1057,6 +1239,13 @@
   "url": "https://jobs.ashbyhq.com/cohere/2dc8b505-128a-4bc8-b8c1-7084e7d26530"
  },
  {
+  "title": "Revenue Partnerships - Middle East",
+  "employer": "elevenlabs",
+  "source": "ashby:elevenlabs",
+  "reason": "no-family",
+  "url": "https://jobs.ashbyhq.com/ElevenLabs/5bdcbdda-3643-453d-9af5-0ea53da97d8d"
+ },
+ {
   "title": "Clinical Social Worker-Social Worker",
   "employer": "SSMC",
   "source": "oracle:SSMC",
@@ -1064,11 +1253,11 @@
   "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/5937"
  },
  {
-  "title": "Revenue Partnerships - Middle East",
-  "employer": "elevenlabs",
-  "source": "ashby:elevenlabs",
+  "title": "Associate Engineer, Instrument & Controls",
+  "employer": "KBR",
+  "source": "workday:KBR",
   "reason": "no-family",
-  "url": "https://jobs.ashbyhq.com/ElevenLabs/5bdcbdda-3643-453d-9af5-0ea53da97d8d"
+  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/Associate-Engineer--Instrument---Controls_R2131516"
  },
  {
   "title": "Buying Executive | Al- Futtaim Automotive | Automall",
@@ -1092,13 +1281,6 @@
   "url": "https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/35454"
  },
  {
-  "title": "Lead Procurement Engineer (with Logistics Experience)",
-  "employer": "KBR",
-  "source": "workday:KBR",
-  "reason": "no-family",
-  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/Lead-Procurement-Engineer--with-Logistics-Experience-_R2131603"
- },
- {
   "title": "Senior Risk Manager",
   "employer": "okx",
   "source": "greenhouse:okx",
@@ -1106,11 +1288,11 @@
   "url": "https://job-boards.greenhouse.io/okx/jobs/7994137003"
  },
  {
-  "title": "ESG MANAGER",
-  "employer": "DP World",
-  "source": "oracle:DP World",
+  "title": "Law Enforcement Specialist – UAE",
+  "employer": "Binance",
+  "source": "lever:binance",
   "reason": "no-family",
-  "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27717"
+  "url": "https://jobs.lever.co/binance/bf012429-3399-482d-80ad-0fb398575510"
  },
  {
   "title": "Asset/Wallet Operations",
@@ -1120,6 +1302,13 @@
   "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/5029213101"
  },
  {
+  "title": "MANAGER - INSPECTION",
+  "employer": "DP World",
+  "source": "oracle:DP World",
+  "reason": "no-family",
+  "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27707"
+ },
+ {
   "title": "Program Manager",
   "employer": "ripple",
   "source": "greenhouse:ripple",
@@ -1127,18 +1316,25 @@
   "url": "https://ripple.com/careers/all-jobs/job/8224772?gh_jid=8224772"
  },
  {
-  "title": "Coordinator - Maternity & Childcare Services",
-  "employer": "NMC Healthcare",
-  "source": "oracle:NMC Healthcare",
-  "reason": "no-family",
-  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12425"
- },
- {
   "title": "Manager - Enterprise Risk Management | Emirati Talent",
   "employer": "Majid Al Futtaim",
   "source": "phenom:Majid Al Futtaim",
   "reason": "no-family",
   "url": "https://careers.majidalfuttaim.com/global/en/job/21514"
+ },
+ {
+  "title": "",
+  "employer": "KBR",
+  "source": "workday:KBR",
+  "reason": "no-title",
+  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Associate-Engineer--Piping_R2131517"
+ },
+ {
+  "title": "",
+  "employer": "KBR",
+  "source": "workday:KBR",
+  "reason": "no-title",
+  "url": "https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Specialist--HSE-ENGINEER_R2131637"
  },
  {
   "title": "Senior Support Engineer -Nursing Integration/Phys Doc/Clinical AI Agent",
@@ -1169,18 +1365,18 @@
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Lead-Forward-Deployed-Engineer_JR348990"
  },
  {
-  "title": "Senior Finance Analyst",
-  "employer": "M42",
-  "source": "jibe:M42",
-  "reason": "senior",
-  "url": "https://careers.m42.ae/jobs/6749"
- },
- {
   "title": "Head of AI & Digital Excellence",
   "employer": "AstraZeneca",
   "source": "workday:AstraZeneca",
   "reason": "senior",
   "url": "https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/UAE---Dubai/Head-of-AI---Digital-Excellence_R-263279"
+ },
+ {
+  "title": "Senior Finance Analyst",
+  "employer": "M42",
+  "source": "jibe:M42",
+  "reason": "senior",
+  "url": "https://careers.m42.ae/jobs/6749"
  },
  {
   "title": "Assistant Manager - Retail Analytics",
@@ -1218,13 +1414,6 @@
   "url": "https://jobs.ashbyhq.com/ziina/e1f0f84a-2867-45a6-967d-44462c66ce59"
  },
  {
-  "title": "Assistant Vice President – Data Science",
-  "employer": "Aldar Properties",
-  "source": "lever:aldar",
-  "reason": "senior",
-  "url": "https://jobs.lever.co/aldar/e7fa1118-4ce8-42eb-ba57-387f387d90fb"
- },
- {
   "title": "Office Manager - AI",
   "employer": "ADIB",
   "source": "oracle:ADIB",
@@ -1232,11 +1421,25 @@
   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4805"
  },
  {
+  "title": "Assistant Vice President – Data Science",
+  "employer": "Aldar Properties",
+  "source": "lever:aldar",
+  "reason": "senior",
+  "url": "https://jobs.lever.co/aldar/e7fa1118-4ce8-42eb-ba57-387f387d90fb"
+ },
+ {
   "title": "Senior Software Engineer (Backend)",
   "employer": "dubizzle Group",
   "source": "workable:bayutdubizzle",
   "reason": "senior",
   "url": "https://apply.workable.com/j/15DFD7BB8E"
+ },
+ {
+  "title": "Oracle Technical Consultant - Lead",
+  "employer": "NMC Healthcare",
+  "source": "oracle:NMC Healthcare",
+  "reason": "senior",
+  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10270"
  },
  {
   "title": "Senior Analyst, Customer Due Dilligence",
@@ -1267,18 +1470,18 @@
   "url": "https://jobs.ashbyhq.com/mexdigital/17a892e6-b53a-4186-b6e8-c0855f3ab418"
  },
  {
-  "title": "Senior Trading Analyst",
-  "employer": "Deriv",
-  "source": "deriv",
-  "reason": "senior",
-  "url": "https://join.deriv.careers/jobs/9eb201db-5a92-4d16-82ad-a2deda2db728"
- },
- {
   "title": "Data Center Project Manager - UAE National Only, Critical Projects Implementation (CPI)",
   "employer": "Amazon Data Services Emirates LLC - Dubai Branch",
   "source": "amazon",
   "reason": "senior",
   "url": "https://www.amazon.jobs/en/jobs/10399428/data-center-project-manager-uae-national-only-critical-projects-implementation-cpi"
+ },
+ {
+  "title": "Senior Trading Analyst",
+  "employer": "Deriv",
+  "source": "deriv",
+  "reason": "senior",
+  "url": "https://join.deriv.careers/jobs/9eb201db-5a92-4d16-82ad-a2deda2db728"
  },
  {
   "title": "Senior Software Engineer",
@@ -1288,25 +1491,25 @@
   "url": "https://jobs.ashbyhq.com/LeanTech/3e9d10c4-fd9c-4cc3-9fee-bfe6c15c76f0"
  },
  {
-  "title": "AVP - Regulatory Reporting",
-  "employer": "Mashreq",
-  "source": "oracle:Mashreq",
-  "reason": "senior",
-  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7147"
- },
- {
-  "title": "Senior Applied Scientist",
-  "employer": "G42",
-  "source": "phenom:G42",
-  "reason": "senior",
-  "url": "https://careers.g42.ai/global/en/job/3422"
- },
- {
   "title": "Business Operations Manager - Radiology (Al Dhafra)",
   "employer": "SEHA",
   "source": "oracle:SEHA",
   "reason": "senior",
   "url": "https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5189"
+ },
+ {
+  "title": "Senior Analyst - SOC Monitoring (UAEN)",
+  "employer": "G42",
+  "source": "phenom:G42",
+  "reason": "senior",
+  "url": "https://careers.g42.ai/global/en/job/3420"
+ },
+ {
+  "title": "AVP - Regulatory Reporting",
+  "employer": "Mashreq",
+  "source": "oracle:Mashreq",
+  "reason": "senior",
+  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7147"
  },
  {
   "title": "Product Manager of AI Applications, Global Public Sector",
@@ -1358,13 +1561,6 @@
   "url": "https://job-boards.eu.greenhouse.io/bybit/jobs/4996982101"
  },
  {
-  "title": "Oracle Technical Consultant - Lead",
-  "employer": "NMC Healthcare",
-  "source": "oracle:NMC Healthcare",
-  "reason": "senior",
-  "url": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10270"
- },
- {
   "title": "Senior Manager - Data Privacy",
   "employer": "Majid Al Futtaim",
   "source": "phenom:Majid Al Futtaim",
@@ -1379,11 +1575,32 @@
   "url": "https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/UAEN-Associate-Director-Analyst-Orb-Entertainment/1385"
  },
  {
-  "title": "VP, Credit - Digitization & AI Portfolio Management",
+  "title": "AI Lead - Global Engineering & Business Transformation",
+  "employer": "aesg",
+  "source": "jobspy:indeed",
+  "reason": "senior",
+  "url": "https://ae.indeed.com/viewjob?jk=495b46471d5fbbcd"
+ },
+ {
+  "title": "Assistant Manager - Credit MIS and Analytics (UAE National)",
+  "employer": "Emirates NBD",
+  "source": "jobspy:linkedin",
+  "reason": "senior",
+  "url": "https://www.linkedin.com/jobs/view/4469445086"
+ },
+ {
+  "title": "Senior Backend / Workflow Engineer (m/f/d)",
+  "employer": "Halian",
+  "source": "jobspy:bayt",
+  "reason": "senior",
+  "url": "https://www.bayt.com/en/uae/jobs/senior-backend-workflow-engineer-m-f-d-75397862/"
+ },
+ {
+  "title": "VP, Graduate Resourcing (Emiratized Role)",
   "employer": "First Abu Dhabi Bank",
   "source": "oracle:First Abu Dhabi Bank",
   "reason": "senior",
-  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2764"
+  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/3146"
  },
  {
   "title": "Data 360 - Lead/ Principal Forward Deployed Engineer",
@@ -1414,18 +1631,18 @@
   "url": "https://jobs.ashbyhq.com/ziina/0e2861ef-b501-4591-88bd-f418a63620d8"
  },
  {
-  "title": "Vice President – Business Intelligence and Analytics",
-  "employer": "Aldar Properties",
-  "source": "lever:aldar",
-  "reason": "senior",
-  "url": "https://jobs.lever.co/aldar/620ed136-aa49-401b-8939-3941a4b45b42"
- },
- {
   "title": "Portfolio Analytics Manager",
   "employer": "ADIB",
   "source": "oracle:ADIB",
   "reason": "senior",
   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4761"
+ },
+ {
+  "title": "Vice President – Business Intelligence and Analytics",
+  "employer": "Aldar Properties",
+  "source": "lever:aldar",
+  "reason": "senior",
+  "url": "https://jobs.lever.co/aldar/620ed136-aa49-401b-8939-3941a4b45b42"
  },
  {
   "title": "Data Engineering Lead",
@@ -1456,18 +1673,18 @@
   "url": "https://join.deriv.careers/jobs/c2779d14-4aa0-505f-9ab6-5ad6494e2275"
  },
  {
+  "title": "Senior Specialist - Platform Reliability and Application Support",
+  "employer": "G42",
+  "source": "phenom:G42",
+  "reason": "senior",
+  "url": "https://careers.g42.ai/global/en/job/3447"
+ },
+ {
   "title": "Assistant Manager – Regulatory Reporting.Central Account (UAE National Only)",
   "employer": "Mashreq",
   "source": "oracle:Mashreq",
   "reason": "senior",
   "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2757"
- },
- {
-  "title": "Senior Applied Scientist",
-  "employer": "G42",
-  "source": "phenom:G42",
-  "reason": "senior",
-  "url": "https://careers.g42.ai/global/en/job/620"
  },
  {
   "title": "Principal Consultant - AI Infrastructure Services",
@@ -1505,11 +1722,25 @@
   "url": "https://careers.majidalfuttaim.com/global/en/job/22008"
  },
  {
-  "title": "VP, Graduate Resourcing (Emiratized Role)",
+  "title": "HR Analyst & CEO Office Manager",
+  "employer": "Coach Transformation Academy",
+  "source": "jobspy:indeed",
+  "reason": "senior",
+  "url": "https://ae.indeed.com/viewjob?jk=d0f254fc9f14632a"
+ },
+ {
+  "title": "Senior Applied Scientist",
+  "employer": "Inception42",
+  "source": "jobspy:linkedin",
+  "reason": "senior",
+  "url": "https://www.linkedin.com/jobs/view/4469676974"
+ },
+ {
+  "title": "AVP, Trade Support - Dealer Assist & Data Readiness",
   "employer": "First Abu Dhabi Bank",
   "source": "oracle:First Abu Dhabi Bank",
   "reason": "senior",
-  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/3146"
+  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2424"
  },
  {
   "title": "Principal Solution Engineer - Marketing Cloud - Middle East",
@@ -1524,41 +1755,6 @@
   "source": "ashby:ziina",
   "reason": "senior",
   "url": "https://jobs.ashbyhq.com/ziina/688eb0ce-a666-4828-98b3-cd2239535744"
- },
- {
-  "title": "Vice President – Data Platforms",
-  "employer": "Aldar Properties",
-  "source": "lever:aldar",
-  "reason": "senior",
-  "url": "https://jobs.lever.co/aldar/f6eae687-e6f1-4f5d-a375-e4baec174616"
- },
- {
-  "title": "Data Privacy Senior Manager",
-  "employer": "ADIB",
-  "source": "oracle:ADIB",
-  "reason": "senior",
-  "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4744"
- },
- {
-  "title": "Senior Product Owner",
-  "employer": "ADCB",
-  "source": "phenom:ADCB",
-  "reason": "senior",
-  "url": "https://adcbcareers.com/gb/en/job/4939"
- },
- {
-  "title": "Senior Machine Learning Engineer",
-  "employer": "MultiBank Group",
-  "source": "ashby:mexdigital",
-  "reason": "senior",
-  "url": "https://jobs.ashbyhq.com/mexdigital/9a4a91ec-88fd-49b1-b788-cee37ec1a354"
- },
- {
-  "title": "Senior Manager, Financial MIS & Shared Services.Injaz - Corporate Affairs - MIS & Projects.Corporate Affairs",
-  "employer": "Mashreq",
-  "source": "oracle:Mashreq",
-  "reason": "senior",
-  "url": "https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6651"
  },
  {
   "title": "Sales Director - Construction Saudi Cluster",
