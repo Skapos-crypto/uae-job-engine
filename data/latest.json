@@ -1,49 +1,49 @@
 {
  "generated": {
-  "utc": "2026-11-09T07:58:05+00:00",
-  "dubai": "2026-11-09 11:58",
-  "full_run": true
+  "utc": "2026-11-09T19:06:35+00:00",
+  "dubai": "2026-11-09 23:06",
+  "full_run": false
  },
  "summary": {
-  "total": 108,
-  "new_today": 26,
-  "carried_over": 0,
-  "raw_postings": 9086,
+  "total": 110,
+  "new_today": 29,
+  "carried_over": 67,
+  "raw_postings": 8689,
   "by_family": {
-   "graduate": 12,
+   "graduate": 13,
    "software": 21,
-   "business": 8,
+   "ai_ml": 17,
+   "business": 7,
    "analyst": 11,
-   "ai_ml": 16,
    "data_eng": 3,
    "data_analyst": 13,
    "data_science": 5,
-   "it": 13,
+   "it": 14,
    "product": 5,
    "bi": 1
   },
   "by_source": {
    "jobspy": 67,
+   "oracle": 6,
+   "ashby": 8,
+   "jibe": 1,
    "avature": 4,
    "workday": 5,
    "amazon": 4,
-   "oracle": 5,
-   "ashby": 7,
    "teamtailor": 7,
    "greenhouse": 4,
-   "attrax": 4,
+   "attrax": 3,
    "phenom": 1
   },
-  "http_calls": 198,
+  "http_calls": 200,
   "rejected": {
-   "no-family": 1575,
-   "excluded-title": 929,
-   "senior": 142,
-   "graduate-other-discipline": 15,
+   "no-family": 1412,
+   "excluded-title": 852,
+   "senior": 102,
+   "graduate-other-discipline": 10,
    "title-elsewhere": 3,
-   "no-title": 2,
-   "nationals-only": 35,
-   "4+ years": 19
+   "nationals-only": 22,
+   "4+ years": 11
   }
  },
  "jobs": [
@@ -124,6 +124,32 @@
    "is_new": true,
    "score": 5.3,
    "snippet": ""
+  },
+  {
+   "key": "90e54983842a32a6",
+   "title": "Specialist, AI Agent",
+   "employer": "First Abu Dhabi Bank",
+   "sector": "banking",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853",
+   "source": "oracle:First Abu Dhabi Bank",
+   "source_type": "employer",
+   "seen_on": [
+    "oracle:First Abu Dhabi Bank"
+   ],
+   "posted": "2026-11-09",
+   "age_days": 0,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "is_new": true,
+   "score": 5.1,
+   "snippet": " Department: AI Hub Innovation JOB SUMMARY / INTRODUCTION: The AI Agent Specialist serves as the dedicated enablement partner for senior executives, helping them maximize value from AI-powered personal assistants and agentic technologies. Acting as a trusted advisor and first poi"
   },
   {
    "key": "131987e4e0236e7a",
@@ -359,6 +385,60 @@
    "is_new": true,
    "score": 4.1,
    "snippet": ""
+  },
+  {
+   "key": "adcc75f2bd061f77",
+   "title": "Onboarding Intern, Beauty & Wellness",
+   "employer": "qlub",
+   "sector": "fintech",
+   "city": "Dubai",
+   "location": "Dubai, UAE; Dubai  United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc",
+   "source": "ashby:qlub",
+   "source_type": "ats",
+   "seen_on": [
+    "ashby:qlub"
+   ],
+   "posted": "2026-11-09",
+   "age_days": 0,
+   "min_years": null,
+   "flags": [
+    "own_visa_preferred"
+   ],
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "is_new": true,
+   "score": 4.0,
+   "snippet": "Why qlub\n\nThe end of a great meal shouldn't be the slow part. Waiting for the check, finding someone to take payment, splitting a bill by hand. qlub removes that friction. Guests scan a QR code and pay in seconds. No app, no download, no waiting.\n\nFrom Pay-at-Table and Digital Me"
+  },
+  {
+   "key": "a464bc23b04c720f",
+   "title": "Officer, Lab Technical Support",
+   "employer": "M42",
+   "sector": "healthcare",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://careers.m42.ae/jobs/5628",
+   "source": "jibe:M42",
+   "source_type": "employer",
+   "seen_on": [
+    "jibe:M42"
+   ],
+   "posted": "2026-11-04",
+   "age_days": 5,
+   "min_years": 1,
+   "flags": [],
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "is_new": true,
+   "score": 3.9,
+   "snippet": "Overview M42 delivers comprehensive healthcare services across the full continuum of care; from primary care to advanced specialty treatments. Leveraging cutting-edge health technologies and precision medicine, we ensure the highest standards of effectiveness, efficiency, and pat"
   },
   {
    "key": "c3d85d9c13fe858f",
@@ -1554,8 +1634,6 @@
    "source": "teamtailor:careers.chalhoubgroup.com",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:indeed",
-    "jobspy:linkedin",
     "teamtailor:careers.chalhoubgroup.com"
    ],
    "posted": "2026-11-06",
@@ -2407,32 +2485,6 @@
    "snippet": ""
   },
   {
-   "key": "15c3639ce13817c5",
-   "title": "Business Analyst - instashop",
-   "employer": "talabat",
-   "sector": "tech",
-   "city": "Dubai",
-   "location": "Dubai, UAE",
-   "family": "business",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://careers.deliveryhero.com/job/business-analyst-instashop-in-dubai-uae-jid-10675",
-   "source": "attrax:talabat",
-   "source_type": "employer",
-   "seen_on": [
-    "attrax:talabat"
-   ],
-   "posted": null,
-   "age_days": null,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-09",
-   "is_new": false,
-   "score": 2.9,
-   "snippet": ""
-  },
-  {
    "key": "16fa8b5854191b7b",
    "title": "CRM Business Analyst (12-Month Fixed-Term Contract)",
    "employer": "Cognita Schools",
@@ -2798,8 +2850,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-07",
-   "age_days": 2,
+   "posted": "2026-11-06",
+   "age_days": 3,
    "min_years": null,
    "flags": [
     "nationals_preferred"

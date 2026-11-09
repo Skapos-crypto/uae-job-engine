@@ -78,6 +78,32 @@
   "snippet": ""
  },
  {
+  "key": "90e54983842a32a6",
+  "title": "Specialist, AI Agent",
+  "employer": "First Abu Dhabi Bank",
+  "sector": "banking",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, United Arab Emirates",
+  "family": "ai_ml",
+  "cv": "AI_Engineer",
+  "seniority": "unspecified",
+  "url": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853",
+  "source": "oracle:First Abu Dhabi Bank",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:First Abu Dhabi Bank"
+  ],
+  "posted": "2026-11-09",
+  "age_days": 0,
+  "min_years": 2,
+  "flags": [],
+  "first_seen": "2026-11-09",
+  "last_seen": "2026-11-09",
+  "is_new": true,
+  "score": 5.1,
+  "snippet": " Department: AI Hub Innovation JOB SUMMARY / INTRODUCTION: The AI Agent Specialist serves as the dedicated enablement partner for senior executives, helping them maximize value from AI-powered personal assistants and agentic technologies. Acting as a trusted advisor and first poi"
+ },
+ {
   "key": "131987e4e0236e7a",
   "title": "Business Operations Associate",
   "employer": "Jobgether",
@@ -311,6 +337,60 @@
   "is_new": true,
   "score": 4.1,
   "snippet": ""
+ },
+ {
+  "key": "adcc75f2bd061f77",
+  "title": "Onboarding Intern, Beauty & Wellness",
+  "employer": "qlub",
+  "sector": "fintech",
+  "city": "Dubai",
+  "location": "Dubai, UAE; Dubai  United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc",
+  "source": "ashby:qlub",
+  "source_type": "ats",
+  "seen_on": [
+   "ashby:qlub"
+  ],
+  "posted": "2026-11-09",
+  "age_days": 0,
+  "min_years": null,
+  "flags": [
+   "own_visa_preferred"
+  ],
+  "first_seen": "2026-11-09",
+  "last_seen": "2026-11-09",
+  "is_new": true,
+  "score": 4.0,
+  "snippet": "Why qlub\n\nThe end of a great meal shouldn't be the slow part. Waiting for the check, finding someone to take payment, splitting a bill by hand. qlub removes that friction. Guests scan a QR code and pay in seconds. No app, no download, no waiting.\n\nFrom Pay-at-Table and Digital Me"
+ },
+ {
+  "key": "a464bc23b04c720f",
+  "title": "Officer, Lab Technical Support",
+  "employer": "M42",
+  "sector": "healthcare",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, United Arab Emirates",
+  "family": "it",
+  "cv": "IT",
+  "seniority": "unspecified",
+  "url": "https://careers.m42.ae/jobs/5628",
+  "source": "jibe:M42",
+  "source_type": "employer",
+  "seen_on": [
+   "jibe:M42"
+  ],
+  "posted": "2026-11-04",
+  "age_days": 5,
+  "min_years": 1,
+  "flags": [],
+  "first_seen": "2026-11-09",
+  "last_seen": "2026-11-09",
+  "is_new": true,
+  "score": 3.9,
+  "snippet": "Overview M42 delivers comprehensive healthcare services across the full continuum of care; from primary care to advanced specialty treatments. Leveraging cutting-edge health technologies and precision medicine, we ensure the highest standards of effectiveness, efficiency, and pat"
  },
  {
   "key": "c3d85d9c13fe858f",
