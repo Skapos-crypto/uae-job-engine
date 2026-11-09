@@ -403,5 +403,21 @@
   "fails": 0,
   "last_ok": "2026-11-10",
   "ran": "2026-11-10"
+ },
+ "jobspy:indeed": {
+  "fails": 0,
+  "last_ok": "2026-11-10",
+  "ran": "2026-11-10"
+ },
+ "jobspy:linkedin": {
+  "fails": 0,
+  "last_ok": "2026-11-10",
+  "ran": "2026-11-10"
+ },
+ "jobspy:bayt": {
+  "fails": 1,
+  "last_ok": null,
+  "ran": "2026-11-10",
+  "error": "blocked"
  }
 }
