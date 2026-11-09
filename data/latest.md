@@ -1,11 +1,10 @@
 # UAE junior roles: 97 open, 18 new today
 
-Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
+Updated 10 Nov 2026 01:00 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
 
 ## Status
 
-- **Sources:** 83 of 84 answered
-- **Blocked:** jobspy:bayt, 2 of 9 queries blocked, 7 skipped; jobspy:linkedin, 1 of 8 queries blocked
+- **Sources:** 81 of 81 answered (career systems only; LinkedIn, Indeed and Bayt run once a day)
 - **New roles in the last 7 days:** 198 from LinkedIn, Indeed and Bayt; 7 from employer sites and boards
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
@@ -82,7 +81,7 @@ Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data
 | 70 |  | [AI Data Engineer](https://jobs.ashbyhq.com/mexdigital/a618632d-9967-4346-b7be-a2e3ae5c5be9) | MultiBank Group | Dubai | AI / ML | 2026-03-25 | ashby |  |
 | 71 |  | [AI Engineer – Generative AI and Automation](https://jobs.ashbyhq.com/mexdigital/4c1abf17-cb71-470b-ae71-3a934c4e0cc7) | MultiBank Group | Dubai | AI / ML | 2026-06-02 | ashby |  |
 | 72 |  | [Forward Deployed Engineer, Agentic Platform](https://jobs.ashbyhq.com/cohere/75c0032c-7200-48bf-9d6d-355880dd93d9) | cohere | Dubai | AI / ML | 2026-03-04 | ashby |  |
-| 73 |  | [Onboarding Intern, Beauty & Wellness](https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc) | qlub | Dubai | Graduate / intern | 2026-11-09 | ashby + indeed | prefers own visa |
+| 73 |  | [Onboarding Intern, Beauty & Wellness](https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc) | qlub | Dubai | Graduate / intern | 2026-11-09 | ashby | prefers own visa |
 | 74 |  | [Officer, Lab Technical Support](https://careers.m42.ae/jobs/5628) | M42 | Abu Dhabi | IT | 2026-11-04 | jibe |  |
 | 75 |  | [CRM Business Analyst (12-Month Fixed-Term Contract)](https://www.linkedin.com/jobs/view/4489102090) | Cognita Schools | UAE | Business analysis | 2026-11-09 | linkedin |  |
 | 76 |  | [ServiceNow Business Analyst – IT Modules](https://www.linkedin.com/jobs/view/4488757971) | DXC Technology | Abu Dhabi | Business analysis | 2026-11-08 | linkedin |  |
@@ -112,7 +111,6 @@ Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data
 
 | Source | Status | Jobs fetched |
 |---|---|---|
-| jobspy:bayt | failed, 2 of 9 queries blocked, 7 skipped | 0 |
 | _details | ok | 0 |
 | amazon | ok | 60 |
 | ashby:checkout.com | ok | 175 |
@@ -120,7 +118,7 @@ Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data
 | ashby:elevenlabs | ok | 134 |
 | ashby:leantech | ok | 9 |
 | ashby:mexdigital | ok | 14 |
-| ashby:openai | ok | 812 |
+| ashby:openai | ok | 811 |
 | ashby:qlub | ok | 30 |
 | ashby:ziina | ok | 13 |
 | attrax:talabat | ok | 150 |
@@ -141,8 +139,6 @@ Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data
 | greenhouse:scaleai | ok | 170 |
 | greenhouse:tamara | ok | 38 |
 | jibe:M42 | ok | 98 |
-| jobspy:indeed | ok | 222 |
-| jobspy:linkedin | ok, 1 of 8 queries blocked | 185 |
 | lever:Yassir | ok | 119 |
 | lever:aldar | ok | 49 |
 | lever:binance | ok | 4 |
@@ -152,16 +148,16 @@ Updated 10 Nov 2026 00:33 Dubai time. Sorted new first, then by fit. Lanes: data
 | oracle:ADIB | ok | 147 |
 | oracle:Aster DM Healthcare | ok | 628 |
 | oracle:DP World | ok | 507 |
-| oracle:Dell | ok | 472 |
+| oracle:Dell | ok | 471 |
 | oracle:Dubai Airports | ok | 5 |
 | oracle:Emaar | ok | 1 |
 | oracle:Emirates Islamic | ok | 21 |
-| oracle:Emirates NBD | ok | 37 |
+| oracle:Emirates NBD | ok | 35 |
 | oracle:First Abu Dhabi Bank | ok | 83 |
 | oracle:KPMG Lower Gulf | ok | 76 |
 | oracle:Mashreq | ok | 349 |
 | oracle:NMC Healthcare | ok | 131 |
-| oracle:Oracle | ok | 4 |
+| oracle:Oracle | ok | 5 |
 | oracle:PureHealth | ok | 26 |
 | oracle:SEHA | ok | 128 |
 | oracle:SSMC | ok | 199 |

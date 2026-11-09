@@ -1,14 +1,14 @@
 {
  "generated": {
-  "utc": "2026-11-09T20:33:13+00:00",
-  "dubai": "2026-11-10 00:33",
-  "full_run": true
+  "utc": "2026-11-09T21:00:53+00:00",
+  "dubai": "2026-11-10 01:00",
+  "full_run": false
  },
  "summary": {
   "total": 97,
   "new_today": 18,
-  "carried_over": 1,
-  "raw_postings": 9078,
+  "carried_over": 54,
+  "raw_postings": 8668,
   "by_family": {
    "graduate": 12,
    "ai_ml": 21,
@@ -35,24 +35,22 @@
    "jibe": 1,
    "phenom": 1
   },
-  "http_calls": 198,
+  "http_calls": 199,
+  "verdicts_shared": 0,
   "rejected": {
-   "no-family": 1565,
-   "excluded-title": 934,
-   "senior": 140,
-   "graduate-other-discipline": 11,
+   "no-family": 1395,
+   "excluded-title": 850,
+   "senior": 101,
+   "graduate-other-discipline": 10,
    "title-elsewhere": 3,
-   "nationals-only": 31,
-   "4+ years": 20
+   "nationals-only": 22,
+   "4+ years": 10
   },
   "status": {
-   "sources": 84,
-   "ok": 83,
+   "sources": 81,
+   "ok": 81,
    "failing": {},
-   "blocked": {
-    "jobspy:linkedin": "1 of 8 queries blocked",
-    "jobspy:bayt": "2 of 9 queries blocked, 7 skipped"
-   },
+   "blocked": {},
    "failing_in_a_row": {},
    "new_last_7_days": {
     "jobspy": 198,
@@ -1958,8 +1956,7 @@
    "source": "ashby:qlub",
    "source_type": "ats",
    "seen_on": [
-    "ashby:qlub",
-    "jobspy:indeed"
+    "ashby:qlub"
    ],
    "posted": "2026-11-09",
    "age_days": 1,
