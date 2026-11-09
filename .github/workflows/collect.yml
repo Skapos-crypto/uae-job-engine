@@ -1,13 +1,15 @@
 name: collect-jobs
 
 on:
+  # GitHub starts scheduled runs late (6 to 8 hours late in November 2026). These times put both
+  # runs before a 14:39 Dubai digest whether they start on time or 8 hours late.
   schedule:
-    - cron: "13 1 * * *"   # 05:13 Dubai: full run (job systems, JobSpy sites, board probe)
-    - cron: "43 8 * * *"   # 12:43 Dubai: job systems only, fresh before the 14:39 digest
+    - cron: "13 20 * * *"  # 00:13 Dubai: full run (job systems, JobSpy sites, board probe)
+    - cron: "43 1 * * *"   # 05:43 Dubai: job systems only
   workflow_dispatch:
     inputs:
       full:
-        description: "1 = full run including LinkedIn, Indeed, Google and Bayt; 0 = job systems only"
+        description: "1 = full run including LinkedIn, Indeed and Bayt; 0 = job systems only"
         default: "1"
   push:
     branches: [main]
@@ -42,9 +44,9 @@ jobs:
 
       - name: Collect
         env:
-          # JobSpy runs once a day (05:13). Pushes and the midday run collect the job systems only,
-          # so a code push never adds a second day's worth of LinkedIn, Indeed and Bayt queries.
-          FULL_RUN: ${{ (github.event_name == 'push' || github.event.schedule == '43 8 * * *') && '0' || (github.event.inputs.full || '1') }}
+          # JobSpy runs once a day (the 00:13 run). Pushes and the 05:43 run collect the job systems
+          # only, so a code push never adds a second day's worth of LinkedIn, Indeed and Bayt queries.
+          FULL_RUN: ${{ (github.event_name == 'push' || github.event.schedule == '43 1 * * *') && '0' || (github.event.inputs.full || '1') }}
         run: python run.py
 
       - name: Commit results

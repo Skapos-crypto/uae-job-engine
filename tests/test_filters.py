@@ -1,7 +1,8 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
 from datetime import date
 
-from engine.util import classify, elsewhere, is_uae, min_years, nationals, norm_company, parse_date, seniority
+from engine.util import (classify, elsewhere, is_uae, job_key, min_years, nationals, norm_company, parse_date,
+                         seniority)
 
 KEEP = [
     ("Backend Engineer", "software"),
@@ -141,6 +142,33 @@ def main():
     # date shapes from the newer job systems (Avature list, RSS feeds)
     assert parse_date("09-Oct-2026") == date(2026, 10, 9)
     assert parse_date("Mon, 02 Nov 2026 12:05:49 +0400") == date(2026, 11, 2)
+    # one job, one key: real pairs that showed up twice in early November 2026
+    same_job = [
+        (("Etihad", "Data Analyst – Databricks AI/BI & FinOps"),
+         ("Etihad Airways", "Databricks Data Analyst – AI/BI & FinOps")),
+        (("Amazon", "Trans Topology Data Analyst"), ("Amazon.com", "Trans Topology Data Analyst")),
+        (("ADIB", "HR Data Analyst"), ("ADIB - Abu Dhabi Islamic Bank", "HR Data Analyst")),
+        (("Buro Happold", "Graduate Analyst - Advisory"),
+         ("Buro Happold Engineer India Private Limited", "Graduate Analyst - Advisory")),
+        (("Aventus", "Metadata & Data Catalog Consultant (Informatica)"),
+         ("Aventus Global Talent", "Metadata & Data Catalog Consultant (Informatica)")),
+        (("Cognita Schools", "Business Analyst, CRM (12-Month Fixed-Term Contract)"),
+         ("COGNITA SCHOOLS", "CRM Business Analyst (12-Month Fixed-Term Contract)")),
+        (("Referment", "Middle Distillates Analyst (Gasoil, Jet and ULSD) (5AD7)"),
+         ("Referment", "Middle Distillates Analyst (Gasoil, Jet and ULSD) (8E87)")),
+        (("Halian | Managed Services", "Data Scientist (m/f/d)"), ("Halian", "Data Scientist")),
+    ]
+    for a, b in same_job:
+        assert job_key(*a) == job_key(*b), (a, b)
+    different_jobs = [
+        (("Emirates", "Data Analyst"), ("Emirates NBD", "Data Analyst")),
+        (("Amazon", "Data Analyst"), ("Amazon Web Services", "Data Analyst")),
+        (("Acme", "Software Engineer I"), ("Acme", "Software Engineer II")),
+        (("New York University Abu Dhabi", "Junior Research Scientist in the Center for Interdisciplinary Data Science"),
+         ("New York University Abu Dhabi", "Research Engineer in the Center for Interdisciplinary Data Science")),
+    ]
+    for a, b in different_jobs:
+        assert job_key(*a) != job_key(*b), (a, b)
     # one employer, two spellings: dedupe on the same key
     assert norm_company("Masdar (Abu Dhabi Future Energy Company)") == norm_company("Masdar") == "masdar"
     assert norm_company("Halian | Managed Services, Recruitment") == "halian"
@@ -149,7 +177,7 @@ def main():
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 29))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 41))
 
 
 if __name__ == "__main__":

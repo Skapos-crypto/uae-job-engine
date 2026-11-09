@@ -631,15 +631,23 @@ class _LogCapture(logging.Handler):
         self.messages.append(record.getMessage())
 
 
+STOP_AFTER_BLOCKS = 2  # blocked queries in a row before a site is left alone for the rest of the run
+
+
 def jobspy_site(site, queries, log):
-    """Runs one site's queries one at a time with pauses. Returns (jobs, meta)."""
+    """Runs one site's queries one at a time with pauses. Returns (jobs, meta). After
+    STOP_AFTER_BLOCKS blocked queries in a row the site's other queries are skipped this run."""
     from jobspy import scrape_jobs  # imported lazily: heavy, and only used on full runs
 
     capture = _LogCapture()
     logger = logging.getLogger("jobspy.%s" % site)
     logger.addHandler(capture)
-    jobs, errors, ok, blocked = [], [], 0, 0
-    for q in queries:
+    jobs, errors, ok, blocked, in_a_row, skipped = [], [], 0, 0, 0, 0
+    for n, q in enumerate(queries):
+        if in_a_row >= STOP_AFTER_BLOCKS:
+            skipped = len(queries) - n
+            log("  jobspy %s: blocked %d times in a row, skipping its other %d queries" % (site, in_a_row, skipped))
+            break
         kw = {"site_name": [site], "search_term": q, "verbose": 0}
         if site == "indeed":
             kw.update(location="United Arab Emirates", country_indeed="united arab emirates",
@@ -654,8 +662,9 @@ def jobspy_site(site, queries, log):
         del capture.messages[:]
         try:
             rows = scrape_jobs(**kw).to_dict("records")
-            if any(BLOCKED_RE.search(m) for m in capture.messages):
-                blocked += 1  # possibly part way through: a later page was refused
+            was_blocked = any(BLOCKED_RE.search(m) for m in capture.messages)
+            blocked += was_blocked  # possibly part way through: a later page was refused
+            in_a_row = in_a_row + 1 if was_blocked else 0
             if capture.messages:
                 errors.append("%s: %s" % (q, capture.messages[0][:160]))
             if rows or not capture.messages:
@@ -674,9 +683,13 @@ def jobspy_site(site, queries, log):
                     "url_direct": clean(row.get("job_url_direct")),
                     "desc": clean(row.get("description"))[:6000],
                 })
-        except Exception as e:  # one failing query must not stop the rest
+        except Exception as e:  # one failing query must not stop the rest, unless the site is refusing
             errors.append("%s: %s" % (q, str(e)[:160]))
             log("  jobspy %s '%s' failed: %s" % (site, q, str(e)[:160]))
+            was_blocked = bool(BLOCKED_RE.search(str(e)))
+            blocked += was_blocked
+            in_a_row = in_a_row + 1 if was_blocked else 0
         time.sleep(random.uniform(4, 8))
     logger.removeHandler(capture)
-    return jobs, {"queries": len(queries), "queries_ok": ok, "blocked": blocked, "errors": errors[:5]}
+    return jobs, {"queries": len(queries), "queries_ok": ok, "blocked": blocked, "skipped": skipped,
+                  "errors": errors[:5]}

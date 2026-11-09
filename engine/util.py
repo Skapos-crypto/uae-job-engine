@@ -397,8 +397,38 @@ def norm_title(title):
     return WS_RE.sub(" ", t).strip()
 
 
-def job_key(company, title, location):
-    raw = "%s|%s|%s" % (norm_company(company), norm_title(title), city_of(location).lower())
+# Words that job sites add to or drop from an employer's name. They are ignored unless they are
+# the first word, so "Etihad Airways" matches "Etihad" but "Emirates NBD" does not match "Emirates".
+EMPLOYER_QUALIFIERS = {
+    "engineer", "engineers", "engineering", "airways", "airline", "airlines", "global", "talent", "private",
+    "india", "pakistan", "egypt", "middle", "east", "north", "africa", "and", "com", "international", "intl",
+    "worldwide", "solutions", "services", "technologies", "technology", "tech", "consulting", "consultancy",
+    "consultants", "recruitment", "recruiting", "careers", "uae", "dubai", "abu", "dhabi", "emirates", "mena",
+    "gcc", "pvt",
+}
+TITLE_FILLER = {"and", "of", "the", "for", "in", "with", "to", "a", "an", "at", "m", "f", "d", "w"}
+TITLE_NOISE_RE = re.compile(r"\b(immediate joiners?|urgent(ly)? hiring|urgent|now hiring|we are hiring|hiring)\b")
+
+
+def employer_sig(name):
+    """An employer's name without the qualifiers that differ between job sites
+    ("ADIB - Abu Dhabi Islamic Bank", "Amazon.com", "Buro Happold Engineer India Private Limited")."""
+    words = norm_company(re.split(r"\s[-–—]\s", clean(name))[0]).split()
+    return " ".join(words[:1] + [w for w in words[1:] if w not in EMPLOYER_QUALIFIERS])
+
+
+def title_sig(title):
+    """A title's words in any order, without reference codes ("(5AD7)"), years and filler, so
+    "Databricks Data Analyst" and "Data Analyst – Databricks" match."""
+    words = TITLE_NOISE_RE.sub(" ", norm_title(title)).split()
+    kept = sorted({w for w in words if w not in TITLE_FILLER and not any(c.isdigit() for c in w)})
+    return " ".join(kept) or norm_title(title)
+
+
+def job_key(company, title):
+    """One key for the same job wherever it is posted. The city is left out: job sites disagree
+    on it, and it changes between days."""
+    raw = "%s|%s" % (employer_sig(company), title_sig(title))
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 

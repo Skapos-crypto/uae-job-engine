@@ -12,6 +12,7 @@ import run
 from engine import http as http_mod
 
 FAILING = set()  # board tokens that answer 404, to exercise carry-over
+SCRAPES = {"linkedin": 0, "bayt": 0}  # JobSpy calls per site, to check that a blocked site is left alone
 
 
 class FakeFrame:
@@ -23,15 +24,20 @@ class FakeFrame:
 
 
 def fake_scrape_jobs(site_name, search_term, **kw):
-    """Stands in for jobspy.scrape_jobs: LinkedIn is 'blocked', Bayt returns one UAE job."""
+    """Stands in for jobspy.scrape_jobs: LinkedIn is 'blocked'. Bayt returns a UAE job, plus
+    Ziina's Ashby job again under another employer spelling and word order."""
     site = site_name[0]
+    SCRAPES[site] += 1
     if site == "linkedin":
         logging.getLogger("jobspy.linkedin").error("response status code 429 (blocked: use a proxy)")
         return FakeFrame([])
     assert kw.get("location") == "UAE", kw  # Bayt must be asked for the UAE, not every country
     return FakeFrame([{"job_url": "https://www.bayt.com/en/uae/jobs/data-analyst-1/", "company": "Acme",
                        "title": "Junior Data Analyst", "location": "Dubai, UAE", "date_posted": run.today_dubai(),
-                       "description": "1-2 years of experience with SQL"}])
+                       "description": "1-2 years of experience with SQL"},
+                      {"job_url": "https://www.bayt.com/en/uae/jobs/python-developer-2/", "company": "Ziina Technologies",
+                       "title": "Python Developer - Junior", "location": "Abu Dhabi, UAE",
+                       "date_posted": run.today_dubai(), "description": ""}])
 
 
 class FakeResp:
@@ -237,7 +243,7 @@ def main():
             "amazon": True,
             "probe": ["nosuchco"],
         }
-        search = {"jobspy": {"linkedin": ["data analyst"], "bayt": ["data analyst"]}}
+        search = {"jobspy": {"linkedin": ["data analyst", "data scientist", "data engineer"], "bayt": ["data analyst"]}}
         run.load_yaml = lambda name: cfg if name == "employers.yaml" else search
         http_mod.Http.request = fake_request
         sys.modules["jobspy"] = types.ModuleType("jobspy")
@@ -285,9 +291,20 @@ def main():
         # an Oracle entry without sites fails and names the active sites instead of guessing one
         assert not health["oracle:NoSites"]["ok"] and "CX_1 (Careers)" in health["oracle:NoSites"]["error"]
         assert "CX (Old)" not in health["oracle:NoSites"]["error"]
-        # a blocked JobSpy site is recorded as blocked, not as an ok run with no jobs
-        assert not health["jobspy:linkedin"]["ok"] and health["jobspy:linkedin"]["blocked"] == 1
-        assert health["jobspy:bayt"]["ok"] and health["jobspy:bayt"]["fetched"] == 1
+        # a blocked JobSpy site is recorded as blocked, not as an ok run with no jobs, and after two
+        # blocks in a row its third query is never sent
+        assert not health["jobspy:linkedin"]["ok"] and health["jobspy:linkedin"]["blocked"] == 2
+        assert health["jobspy:linkedin"]["meta"]["skipped"] == 1 and SCRAPES["linkedin"] == 2, SCRAPES
+        # the same job on Ashby and Bayt (another employer spelling, other word order, other city) is one
+        # row, with the employer's own link
+        ziina = titles["Junior Python Developer"]
+        assert ziina["seen_on"] == ["ashby:ziina", "jobspy:bayt"] and ziina["url"].startswith("https://jobs.ashbyhq.com")
+        md = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        assert "## Status" in md and "ashby + bayt" in md
+        status = latest["summary"]["status"]
+        assert "oracle:NoSites" in status["failing"] and "jobspy:linkedin" in status["blocked"], status
+        assert status["new_last_7_days"]["employer"] + status["new_last_7_days"]["jobspy"] == len(titles)
+        assert health["jobspy:bayt"]["ok"] and health["jobspy:bayt"]["fetched"] == 2
         assert health["attrax:AtCo"]["meta"]["pages"] == 2, health["attrax:AtCo"]  # page 2 had nothing new
         sample = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
         assert {"senior", "nationals-only", "4+ years"} <= {x["reason"] for x in sample}
@@ -321,6 +338,24 @@ def main():
         assert set(titles3) == expect_kept, set(titles3) ^ expect_kept
         assert latest3["summary"]["carried_over"] == 2
         assert titles3["Junior Data Analyst"]["is_new"] and titles3["Data Scientist"]["is_new"]
+        # failures in a row are counted across runs; LinkedIn did not run this time and keeps its count
+        stuck = latest3["summary"]["status"]["failing_in_a_row"]
+        assert stuck == {"oracle:NoSites": 4, "jobspy:linkedin": 3}, stuck
+
+        # history saved under an older key: known jobs must not come back as new
+        seen_path = os.path.join(run.DATA, "seen.json")
+        with open(seen_path) as fh:
+            seen = json.load(fh)
+        legacy = {"legacy-%d" % n: dict(v, first_seen="2026-10-01") for n, v in enumerate(seen.values())}
+        with open(seen_path, "w") as fh:
+            json.dump(legacy, fh)
+        FAILING.discard("careem")
+        os.environ["FULL_RUN"] = "1"
+        run.main()
+        latest4 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        assert {j["title"] for j in latest4["jobs"]} == expect_kept
+        assert not any(j["is_new"] for j in latest4["jobs"]), [j["title"] for j in latest4["jobs"] if j["is_new"]]
+        assert all(j["first_seen"] == "2026-10-01" for j in latest4["jobs"])
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)

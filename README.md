@@ -22,22 +22,27 @@ Everything lands in [`data/`](data), refreshed after every run:
 
 | File | What it is |
 |---|---|
-| [`latest.md`](data/latest.md) | 📋 A readable table of every matching role, newest first. Start here. |
+| [`latest.md`](data/latest.md) | 📋 A status panel, then a readable table of every matching role, newest first. Start here. |
 | [`latest.json`](data/latest.json) | 🤖 The same list, machine-readable (handy for a digest email or a chatbot) |
 | [`health.json`](data/health.json) | 🩺 Which sources worked this run, how many jobs each returned, and which were blocked |
+| `streaks.json` | 📈 Failed runs in a row per source, so a source that keeps failing stands out from a one-off |
 | [`rejected_sample.json`](data/rejected_sample.json) | 🗑️ Up to 60 dropped UAE roles per reason, for tuning the filters |
 | `history/<date>.json` | 📅 Roles first seen on that day |
-| `seen.json`, `detail_cache.json` | 🧠 Memory between runs: what's been seen, and what each job description said |
+| `seen.json`, `detail_cache.json` | 🧠 Memory between runs: what's been seen, and what each job page said |
 
-A row of `latest.md` looks like this:
+`latest.md` opens with a status panel:
 
-| # | New | Role | Employer | City | Lane | Posted | Source | Notes |
+> **Sources:** 82 of 83 answered · **Blocked:** jobspy:bayt, 2 of 9 queries blocked, 7 skipped · **New roles in the last 7 days:** 215 from LinkedIn, Indeed and Bayt; 9 from employer sites and boards
+
+and then the list. A few rows:
+
+| # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
 | 1 | 🆕 | Data Analyst - Intern | dubizzle Group | Dubai | Data analyst | 2026-10-21 | workable | |
 | 2 | 🆕 | Software Engineer II - Backend | talabat | Dubai | Software / backend | | attrax | |
-| 3 | | Backend Engineer, Payments Platform | Ziina | Dubai | Software / backend | | ashby | asks 3 yrs |
+| 3 | | Data Analyst – Databricks AI/BI & FinOps | Etihad | Abu Dhabi | Data analyst | | linkedin + indeed | |
 
-Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working.
+Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. `summary.status` holds the status panel's numbers.
 
 ## ⚙️ How it works
 
@@ -48,17 +53,19 @@ flowchart LR
     J[JobSpy, once a day<br/>LinkedIn, Indeed, Bayt] --> C
     C[Collect<br/>~7,500 postings] --> F{Filters}
     F -->|UAE? junior? right lane?| D[Read full descriptions<br/>nationals-only? 4+ years?<br/>no visa sponsorship?]
-    D --> R[Dedupe and rank]
+    D --> R[Merge duplicates and rank]
     R --> O[data/latest.md<br/>data/latest.json]
 ```
 
+**One job, one row.** The same opening often appears on several sites, with the employer spelled differently ("Etihad" / "Etihad Airways", "Amazon" / "Amazon.com"), the title reworded ("Databricks Data Analyst" / "Data Analyst – Databricks"), a different city, or an agency's fresh reference code. Jobs are matched on fingerprints of the employer and the title that ignore all of that, so each job shows once, with every site it was found on, and a repost isn't announced as new.
+
 | When (Dubai time) | What runs |
 |---|---|
-| 05:13 | 🌅 Full run: every career system, JobSpy, and every 6 days a probe that looks for new startup boards |
-| 12:43 | ☀️ Career systems only, so the list is fresh for the afternoon |
+| 00:13 | 🌅 Full run: every career system, JobSpy, and every 6 days a probe that looks for new startup boards |
+| 05:43 | ☀️ Career systems only |
 | On every code push | 🔧 Career systems only, so testing a change never doubles the LinkedIn/Indeed/Bayt queries |
 
-A full run takes a few minutes; a career-systems-only run about a minute.
+GitHub often starts scheduled runs late (6 to 8 hours late in November 2026), so these times are early enough for both runs to land before an afternoon digest either way. A full run takes a few minutes; a career-systems-only run about a minute.
 
 ## 🕵️ Where it looks
 
@@ -154,7 +161,7 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
 - 📉 **Low volume:** two runs a day, and 28 JobSpy searches a day in total
-- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it
+- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run.
 
 LinkedIn, Indeed and Bayt don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml`.
 
