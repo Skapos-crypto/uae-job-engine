@@ -329,17 +329,20 @@ YEARS_RE = re.compile(
 )
 
 
-def min_years(desc):
-    """Smallest 'N years of experience' requirement stated, or None if none found."""
-    desc = clean(desc)
-    found = []
+def _experience_years(desc):
+    """(years, match) for each 'N years ... experience' statement in a cleaned description."""
     for m in YEARS_RE.finditer(desc):
         n = int(m.group(1))
         if n >= 15:  # company boilerplate such as 'for over 20 years'
             continue
         ctx = desc[max(0, m.start() - 90): m.end() + 90].lower()
         if "experience" in ctx or "exp." in ctx:
-            found.append(n)
+            yield n, m
+
+
+def min_years(desc):
+    """Smallest 'N years of experience' requirement stated, or None if none found."""
+    found = [n for n, _ in _experience_years(clean(desc))]
     return min(found) if found else None
 
 
@@ -350,6 +353,24 @@ NO_SPONSOR_RE = re.compile(
 )
 # Softer: the employer would rather not sponsor. Kept, but ranked lower.
 OWN_VISA_RE = re.compile(r"own (residence |work )?visa|on (your )?own visa|valid uae (residence|residency) visa", re.I)
+
+
+def evidence(title, desc, reason):
+    """The words behind a nationals-only, 4+ years or no-sponsorship rejection, so that it can
+    be checked by eye. Empty when the description is not at hand (facts from the cache)."""
+    title, desc = clean(title), clean(desc)
+    m = None
+    if reason == "nationals-only":
+        if NAT_TITLE_RE.search(title):
+            return title[:200]
+        m = NAT_DESC_RE.search(desc[:5000])
+    elif reason == "4+ years":
+        found = list(_experience_years(desc))
+        m = min(found, key=lambda nm: nm[0])[1] if found else None
+    elif reason == "no-sponsorship":
+        m = NO_SPONSOR_RE.search(desc)
+    return desc[max(0, m.start() - 80): m.end() + 80].strip() if m else ""
+
 
 # Facts cached from full descriptions are tagged with this; when any of these patterns changes,
 # cached facts are stale and those descriptions are fetched again.

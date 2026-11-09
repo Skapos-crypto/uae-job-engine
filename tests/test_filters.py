@@ -1,8 +1,8 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
 from datetime import date
 
-from engine.util import (classify, elsewhere, is_uae, job_key, min_years, nationals, norm_company, parse_date,
-                         seniority)
+from engine.util import (classify, elsewhere, evidence, is_uae, job_key, min_years, nationals, norm_company,
+                         parse_date, seniority)
 
 KEEP = [
     ("Backend Engineer", "software"),
@@ -173,11 +173,19 @@ def main():
     assert norm_company("Masdar (Abu Dhabi Future Energy Company)") == norm_company("Masdar") == "masdar"
     assert norm_company("Halian | Managed Services, Recruitment") == "halian"
     assert norm_company("Bayut | dubizzle") == "dubizzle"
+    # the words behind a description-level rejection, kept so that it can be checked by eye
+    assert "open to UAE Nationals only" in evidence(
+        "Data Analyst", "A great team. This role is open to UAE Nationals only. Apply today.", "nationals-only")
+    assert evidence("Graduate Trainee (UAEN)", "", "nationals-only") == "Graduate Trainee (UAEN)"
+    assert "6 years of experience" in evidence("Data Analyst", "Minimum 6 years of experience in banking", "4+ years")
+    assert "cannot offer visa sponsorship" in evidence(
+        "Data Analyst", "Please note we cannot offer visa sponsorship for this role.", "no-sponsorship")
+    assert evidence("Data Analyst", "", "4+ years") == ""  # facts from the cache: no words at hand
 
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 41))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 46))
 
 
 if __name__ == "__main__":

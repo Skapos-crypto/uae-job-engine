@@ -17,8 +17,8 @@ import yaml
 
 from engine import sources
 from engine.http import Http
-from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, classify, city_of,
-                         elsewhere, is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
+from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
+                         elsewhere, evidence, is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -31,6 +31,7 @@ PROBE_EVERY_DAYS = 6
 WORKERS = 32             # threads only wait their turn: the Http client allows one request per host at a time
 REJECTED_PER_REASON = 60
 STUCK_AFTER = 3          # failed runs in a row before a source is called out in the status panel
+DESC_REASONS = {"nationals-only", "4+ years", "no-sponsorship"}  # rejections only a description can give
 
 
 def log(msg):
@@ -248,10 +249,22 @@ def cached_facts(cache, job):
     return facts if facts and facts.get("v") == FACTS_VERSION else None
 
 
+def employer_page(job):
+    """A job whose own page is read in parallel with the others. LinkedIn pages are not: they
+    are read one at a time, and for new roles only (read_linkedin_pages)."""
+    return bool(job.get("_detail")) and job["_detail"][0] != "linkedin"
+
+
+def has_description(job, cache):
+    """Whether the posting's own words were checked: a description came with it or was read
+    from its page, now or on an earlier run."""
+    return bool((job.get("desc") or "").strip()) or bool(cached_facts(cache, job))
+
+
 def fetch_details(http, jobs, cache, health):
     """Fill in full descriptions for employer jobs whose list entry has only a summary.
     Jobs already checked on an earlier run are answered from the cache instead."""
-    need = [j for j in jobs if j.get("_detail") and not cached_facts(cache, j)]
+    need = [j for j in jobs if employer_page(j) and not cached_facts(cache, j)]
     need = need[:MAX_DETAILS]
 
     def one(j):
@@ -284,8 +297,55 @@ def fetch_details(http, jobs, cache, health):
                 if text:
                     j["desc"] = (j.get("desc") or "") + " " + text
     health["_details"] = {"ok": failures == 0, "fetched": len(need) - failures, "failed": failures,
-                          "skipped_cached": sum(1 for j in jobs if j.get("_detail") and cached_facts(cache, j))}
+                          "skipped_cached": sum(1 for j in jobs if employer_page(j) and cached_facts(cache, j))}
     log("details: %d fetched, %d failed" % (len(need) - failures, failures))
+
+
+def read_linkedin_pages(candidates, seen, cache, health, limit, today_s):
+    """LinkedIn search results come without a description, so its roles would skip the
+    nationals-only, years and visa checks. Read the page of each one that is new today instead:
+    at most `limit` a run, best fit first, one page per job, never twice (the facts are cached),
+    and none for a job another site already describes. Stops for the run at the first refusal."""
+    searched = health.get("jobspy:linkedin")
+    if limit <= 0 or not searched:
+        return
+    described = {j["key"] for j in candidates if has_description(j, cache)}
+    picked, keys = [], set()
+    for j in sorted(candidates, key=lambda j: -score(j)):
+        first_seen = seen.get(j["key"], {}).get("first_seen", today_s)
+        if (j.get("_detail") or ("",))[0] != "linkedin" or j["key"] in described or j["key"] in keys \
+                or first_seen != today_s:
+            continue
+        picked.append(j)
+        keys.add(j["key"])
+    entry = {"ok": True, "wanted": len(picked), "tried": 0, "fetched": 0, "read": 0, "empty": 0, "failed": 0,
+             "blocked": 0, "skipped": 0, "over_limit": max(0, len(picked) - limit)}
+    if not picked:
+        health["_linkedin_pages"] = entry
+        return
+    if not searched.get("ok") or searched.get("meta", {}).get("skipped"):
+        entry.update(ok=False, error="LinkedIn refused the searches this run")
+        health["_linkedin_pages"] = entry
+        log("linkedin pages: none read, LinkedIn refused the searches this run")
+        return
+    picked = picked[:limit]
+    started = time.time()
+    try:
+        texts, meta = sources.linkedin_pages([j["_detail"][1] for j in picked], log)
+    except Exception as e:  # e.g. a JobSpy release without this page reader: the run goes on without it
+        entry.update(ok=False, error="%s: %s" % (type(e).__name__, str(e)[:200]))
+        health["_linkedin_pages"] = entry
+        log("FAIL  linkedin pages: %s" % entry["error"])
+        return
+    for j in picked:
+        text = texts.get(j["_detail"][1])
+        if text:
+            j.update(desc=text, _fresh_detail=True, _page_read=True)
+    entry.update({k: v for k, v in meta.items() if k != "wanted"}, ok=not meta["blocked"],
+                 tried=len(picked) - meta["skipped"], fetched=meta["read"], ms=int((time.time() - started) * 1000))
+    health["_linkedin_pages"] = entry
+    log("linkedin pages: %d of %d read, %d empty, %d failed, %d skipped, %d over the limit" % (
+        meta["read"], len(picked), meta["empty"], meta["failed"], meta["skipped"], entry["over_limit"]))
 
 
 def final_checks(job, today, cache):
@@ -367,10 +427,15 @@ def run_status(health, streaks, records, today):
     for r in records:
         if r["is_new"]:
             week["jobspy" if r["source"].startswith("jobspy") else "employer"] += 1
-    return {"sources": len(srcs), "ok": sum(1 for v in srcs.values() if v.get("ok")), "failing": failing,
-            "blocked": blocked,
-            "failing_in_a_row": {k: v["fails"] for k, v in streaks.items() if v.get("fails", 0) >= STUCK_AFTER},
-            "new_last_7_days": week}
+    status = {"sources": len(srcs), "ok": sum(1 for v in srcs.values() if v.get("ok")), "failing": failing,
+              "blocked": blocked,
+              "failing_in_a_row": {k: v["fails"] for k, v in streaks.items() if v.get("fails", 0) >= STUCK_AFTER},
+              "new_last_7_days": week}
+    pages = health.get("_linkedin_pages")
+    if pages:
+        status["linkedin_pages"] = {k: pages.get(k) for k in (
+            "wanted", "tried", "read", "empty", "failed", "blocked", "skipped", "over_limit", "dropped", "error")}
+    return status
 
 
 def sample_rejected(rejected, per_reason=REJECTED_PER_REASON):
@@ -437,9 +502,30 @@ def status_lines(status, full):
     if st["failing_in_a_row"]:
         lines.append("- **⚠️ Failing %d or more runs in a row:** %s" % (STUCK_AFTER, ", ".join(
             "%s (%d)" % kv for kv in sorted(st["failing_in_a_row"].items()))))
+    pages = st.get("linkedin_pages")
+    if pages:
+        lines.append("- **LinkedIn pages:** " + linkedin_pages_line(pages))
     lines += ["- **New roles in the last 7 days:** %d from LinkedIn, Indeed and Bayt; %d from employer "
               "sites and boards" % (week["jobspy"], week["employer"]), ""]
     return lines
+
+
+def linkedin_pages_line(p):
+    """'12 of 14 new roles read; 3 dropped after reading (2 nationals-only, 1 4+ years); ...'"""
+    if not p["tried"]:
+        return "none to read" if not p.get("error") else "none read (%s)" % md_escape(p["error"])
+    parts = ["%d of %d new roles read" % (p["read"], p["wanted"])]
+    dropped = p.get("dropped") or {}
+    if dropped:
+        parts.append("%d dropped after reading (%s)" % (sum(dropped.values()), ", ".join(
+            "%d %s" % (n, reason) for reason, n in sorted(dropped.items(), key=lambda kv: -kv[1]))))
+    if p["empty"] or p["failed"]:
+        parts.append("%d gave no description" % (p["empty"] + p["failed"]))
+    if p["blocked"]:
+        parts.append("stopped at a refusal (%s), %d not tried" % (md_escape(p.get("error")), p["skipped"]))
+    if p["over_limit"]:
+        parts.append("%d over the daily limit" % p["over_limit"])
+    return "; ".join(parts)
 
 
 def write_markdown(records, summary, health_rows, status, full):
@@ -471,10 +557,12 @@ def write_markdown(records, summary, health_rows, status, full):
     lines += ["", "## Sources this run", "", "| Source | Status | Jobs fetched |", "|---|---|---|"]
     for sid, h in health_rows:
         status = "ok" if h.get("ok") else ("not found" if h.get("not_found") else "failed")
-        if h.get("blocked"):
+        if h.get("blocked") and h.get("meta"):
             status += ", %d of %d queries blocked" % (h["blocked"], h["meta"]["queries"])
             if h["meta"].get("skipped"):
                 status += ", %d skipped" % h["meta"]["skipped"]
+        elif h.get("blocked"):  # LinkedIn pages: refused part way
+            status = "refused after %d" % h.get("fetched", 0)
         lines.append("| %s | %s | %s |" % (sid, status, h.get("fetched", 0)))
     with open(os.path.join(DATA, "latest.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
@@ -509,15 +597,39 @@ def main():
         candidates.append(j)
 
     fetch_details(http, candidates, cache, health)
+    read_linkedin_pages(candidates, seen, cache, health, int(search.get("linkedin_pages") or 0), str(today))
 
-    accepted = []
+    accepted, verdicts, page_drops = [], {}, {}
     for j in candidates:
         reason = final_checks(j, today, cache)
-        if reason:
-            rejected.append({"title": j["title"], "employer": j["employer"], "source": j["source"],
-                             "reason": reason, "url": j.get("url")})
+        if not reason:
+            accepted.append(j)
             continue
-        accepted.append(j)
+        entry = {"title": j["title"], "employer": j["employer"], "source": j["source"], "reason": reason,
+                 "url": j.get("url")}
+        if reason in DESC_REASONS:
+            facts = cached_facts(cache, j) or {}
+            entry["why"] = evidence(j["title"], j.get("desc"), reason) or facts.get("w", "")
+            if entry["why"] and facts and j.get("_fresh_detail"):
+                facts["w"] = entry["why"]  # kept with the page's facts, for the runs that use the cache
+            if has_description(j, cache):
+                verdicts.setdefault(j["key"], entry)
+        if j.get("_page_read"):
+            page_drops[reason] = page_drops.get(reason, 0) + 1
+        rejected.append(entry)
+    # the same job on a site that gave no description takes the verdict of a posting that had one
+    shared, kept = 0, []
+    for j in accepted:
+        v = verdicts.get(j["key"])
+        if v and not has_description(j, cache):
+            rejected.append({"title": j["title"], "employer": j["employer"], "source": j["source"],
+                             "reason": v["reason"], "url": j.get("url"), "from": v["source"], "why": v["why"]})
+            shared += 1
+        else:
+            kept.append(j)
+    accepted = kept
+    if health.get("_linkedin_pages"):
+        health["_linkedin_pages"]["dropped"] = page_drops
 
     # dedupe across sources: keep the employer's own link when we have it
     merged = {}
@@ -535,6 +647,9 @@ def main():
                     m[field] = j[field]
         if j.get("posted") and (not m.get("posted") or j["posted"] < m["posted"]):
             m["posted"] = j["posted"]
+        if not (m.get("desc") or "").strip() and (j.get("desc") or "").strip():
+            m.update(desc=j["desc"], min_years=j.get("min_years"))  # the snippet and facts of the one with words
+        m["flags"] = m.get("flags", []) + [f for f in j.get("flags", []) if f not in m.get("flags", [])]
 
     # stamp first/last seen, score
     today_s = str(today)
@@ -543,6 +658,7 @@ def main():
         j["first_seen"] = prev.get("first_seen", today_s)
         j["last_seen"] = today_s
         j["is_new"] = j["first_seen"] == today_s
+        j["age_days"] = (today - j["posted"]).days if j.get("posted") else None  # posted may come from a twin
         j["score"] = score(j)
         seen[k] = {"first_seen": j["first_seen"], "last_seen": today_s, "title": j["title"],
                    "employer": j["employer"]}
@@ -581,7 +697,7 @@ def main():
     summary = {
         "total": len(records), "new_today": sum(1 for r in records if r["is_new"]),
         "carried_over": carried, "raw_postings": len(raw), "by_family": by_family,
-        "by_source": by_source, "http_calls": http.calls,
+        "by_source": by_source, "http_calls": http.calls, "verdicts_shared": shared,
         "rejected": {},
     }
     for x in rejected:

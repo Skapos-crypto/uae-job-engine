@@ -10,9 +10,41 @@ import types
 
 import run
 from engine import http as http_mod
+from engine import sources
 
 FAILING = set()  # board tokens that answer 404, to exercise carry-over
 SCRAPES = {"linkedin": 0, "bayt": 0}  # JobSpy calls per site, to check that a blocked site is left alone
+LINKEDIN = {"open": False}  # False: LinkedIn refuses every search. True: it answers, without descriptions
+LI_ROWS = [(9001, "Gulf Bank", "Graduate Data Analyst Programme"), (9002, "Acme AI", "Junior Data Scientist"),
+           (9003, "ADIB - Abu Dhabi Islamic Bank", "MIS Analyst"),  # Oracle's job 105, nationals only
+           (9004, "Ziina", "Junior Python Developer"),  # on Ashby, with a description
+           (9005, "OldCo", "Data Engineer Trainee"),  # seen on an earlier day
+           (9006, "Acme Robotics", "Junior AI Engineer"), (9007, "Beta Labs", "Junior BI Developer")]
+LI_PAGES = {"9001": (200, "/jobs/view/9001", "Join our graduate programme. This programme is open to UAE Nationals only."),
+            "9002": (200, "/jobs/view/9002", "About the job. 0-1 years of experience with Python. Fresh graduates welcome."),
+            "9006": (429, "/jobs/view/9006", "")}
+LI_ASKED = []  # LinkedIn job pages requested, in order
+
+
+class FakeLinkedIn:
+    """Stands in for JobSpy's LinkedIn scraper: like its _fetch_details, it reads the page through
+    self.session.get and returns {} when the page is refused or redirected."""
+
+    def __init__(self):
+        self.session = types.SimpleNamespace(get=self.answer)
+
+    @staticmethod
+    def answer(url, **kw):
+        jid = url.rsplit("/", 1)[1]
+        LI_ASKED.append(jid)
+        status, path, text = LI_PAGES.get(jid, (200, "/jobs/view/" + jid, "A good role."))
+        return types.SimpleNamespace(status_code=status, url="https://www.linkedin.com" + path, text=text)
+
+    def _fetch_details(self, jid):
+        resp = self.session.get("https://www.linkedin.com/jobs/view/%s" % jid)
+        if resp.status_code != 200 or "/jobs/view/" not in resp.url:
+            return {}
+        return {"description": resp.text}
 
 
 class FakeFrame:
@@ -29,8 +61,12 @@ def fake_scrape_jobs(site_name, search_term, **kw):
     site = site_name[0]
     SCRAPES[site] += 1
     if site == "linkedin":
-        logging.getLogger("jobspy.linkedin").error("response status code 429 (blocked: use a proxy)")
-        return FakeFrame([])
+        if not LINKEDIN["open"]:
+            logging.getLogger("jobspy.linkedin").error("response status code 429 (blocked: use a proxy)")
+            return FakeFrame([])
+        return FakeFrame([{"job_url": "https://www.linkedin.com/jobs/view/%d" % n, "company": company, "title": title,
+                           "location": "Dubai, United Arab Emirates", "date_posted": run.today_dubai(),
+                           "description": None} for n, company, title in LI_ROWS] if search_term == "data analyst" else [])
     assert kw.get("location") == "UAE", kw  # Bayt must be asked for the UAE, not every country
     return FakeFrame([{"job_url": "https://www.bayt.com/en/uae/jobs/data-analyst-1/", "company": "Acme",
                        "title": "Junior Data Analyst", "location": "Dubai, UAE", "date_posted": run.today_dubai(),
@@ -248,6 +284,7 @@ def main():
         http_mod.Http.request = fake_request
         sys.modules["jobspy"] = types.ModuleType("jobspy")
         sys.modules["jobspy"].scrape_jobs = fake_scrape_jobs
+        sources._linkedin_scraper = FakeLinkedIn
         random.uniform = lambda a, b: 0  # no pauses between the fake JobSpy queries
         os.environ["FULL_RUN"] = "1"  # exercises the probe and JobSpy
         run.main()
@@ -356,6 +393,56 @@ def main():
         assert {j["title"] for j in latest4["jobs"]} == expect_kept
         assert not any(j["is_new"] for j in latest4["jobs"]), [j["title"] for j in latest4["jobs"] if j["is_new"]]
         assert all(j["first_seen"] == "2026-10-01" for j in latest4["jobs"])
+
+        # LinkedIn answers again, without descriptions. The page of each role new today is read, one at
+        # a time, until the first refusal; not for jobs seen on an earlier day or described elsewhere
+        with open(seen_path) as fh:
+            seen = json.load(fh)
+        seen["oldco"] = {"first_seen": "2026-10-01", "last_seen": str(run.today_dubai()),
+                         "title": "Data Engineer Trainee", "employer": "OldCo"}
+        with open(seen_path, "w") as fh:
+            json.dump(seen, fh)
+        LINKEDIN["open"] = True
+        search["linkedin_pages"] = 20
+        run.main()
+        latest5 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        titles5 = {j["title"]: j for j in latest5["jobs"]}
+        pages = latest5["summary"]["status"]["linkedin_pages"]
+        print("linkedin pages:", pages, LI_ASKED)
+        assert LI_ASKED[-1] == "9006" and not {"9003", "9004", "9005"} & set(LI_ASKED), LI_ASKED
+        assert pages["wanted"] == 4 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
+        assert pages["skipped"] == 4 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
+        acme = titles5["Junior Data Scientist"]
+        assert acme["is_new"] and "0-1 years" in acme["snippet"] and acme["min_years"] == 0, acme
+        assert "Graduate Data Analyst Programme" not in titles5 and "MIS Analyst" not in titles5
+        assert not titles5["Data Engineer Trainee"]["is_new"] and titles5["Junior AI Engineer"]["snippet"] == ""
+        assert "jobspy:linkedin" in titles5["Junior Python Developer"]["seen_on"]
+        sample5 = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
+        gulf = [x for x in sample5 if x["employer"] == "Gulf Bank"][0]
+        assert gulf["reason"] == "nationals-only" and "open to UAE Nationals only" in gulf["why"], gulf
+        # the LinkedIn copy of Oracle's nationals-only job has no words of its own: it takes Oracle's verdict
+        mis = [x for x in sample5 if x["source"] == "jobspy:linkedin" and x["title"] == "MIS Analyst"][0]
+        assert mis["reason"] == "nationals-only" and mis["from"] == "oracle:ADIB", mis
+        assert latest5["summary"]["verdicts_shared"] == 1
+        md = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        assert "**LinkedIn pages:**" in md and "1 dropped after reading (1 nationals-only)" in md, md[:1500]
+        assert "stopped at a refusal (429 /jobs/view/9006)" in md
+
+        # a second full run the same day: pages already read come from the cache, the daily limit holds
+        LI_PAGES["9006"] = (200, "/jobs/view/9006", "Entry level. 1 year of experience.")
+        del LI_ASKED[:]
+        search["linkedin_pages"] = 1
+        run.main()
+        latest6 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        titles6 = {j["title"]: j for j in latest6["jobs"]}
+        pages = latest6["summary"]["status"]["linkedin_pages"]
+        assert len(LI_ASKED) == 1 and LI_ASKED[0] in {"9006", "9007"}, LI_ASKED
+        assert pages["wanted"] == 2 and pages["read"] == 1 and pages["over_limit"] == 1, pages
+        assert "Graduate Data Analyst Programme" not in titles6 and "Junior Data Scientist" in titles6
+        assert titles6["Junior Data Scientist"]["is_new"]  # still new today
+        sample6 = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
+        gulf = [x for x in sample6 if x["employer"] == "Gulf Bank"][0]  # its words come from the cache now
+        assert gulf["reason"] == "nationals-only" and "open to UAE Nationals only" in gulf["why"], gulf
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)

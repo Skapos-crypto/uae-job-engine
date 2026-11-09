@@ -671,7 +671,7 @@ def jobspy_site(site, queries, log):
                 ok += 1
             for row in rows:
                 url = clean(row.get("job_url"))
-                jobs.append({
+                job = {
                     "source": "jobspy:%s" % site,
                     "source_type": site,
                     "employer": clean(row.get("company")),
@@ -682,7 +682,11 @@ def jobspy_site(site, queries, log):
                     "url": url,
                     "url_direct": clean(row.get("job_url_direct")),
                     "desc": clean(row.get("description"))[:6000],
-                })
+                }
+                page = re.search(r"linkedin\.com/jobs/view/(\d+)", url)
+                if site == "linkedin" and page and not job["desc"]:
+                    job["_detail"] = ("linkedin", page.group(1))  # read later, for new roles only (run.py)
+                jobs.append(job)
         except Exception as e:  # one failing query must not stop the rest, unless the site is refusing
             errors.append("%s: %s" % (q, str(e)[:160]))
             log("  jobspy %s '%s' failed: %s" % (site, q, str(e)[:160]))
@@ -693,3 +697,70 @@ def jobspy_site(site, queries, log):
     logger.removeHandler(capture)
     return jobs, {"queries": len(queries), "queries_ok": ok, "blocked": blocked, "skipped": skipped,
                   "errors": errors[:5]}
+
+
+# ---------------------------------------------------------------- LinkedIn job pages
+
+LINKEDIN_REFUSED = {403, 429, 999}  # 999 is LinkedIn's own "request denied"
+
+
+def _linkedin_scraper():
+    """JobSpy's LinkedIn scraper, set up the way its own searches set it up: the public guest
+    pages, its headers, and a session that drops cookies before every request."""
+    from jobspy.linkedin import LinkedIn
+    from jobspy.linkedin.constant import headers
+    from jobspy.model import Country, DescriptionFormat, ScraperInput, Site
+    from jobspy.util import RequestsRotating, create_session
+
+    scraper = LinkedIn()
+    scraper.scraper_input = ScraperInput(site_name=[Site.LINKEDIN], country_indeed=Country.UNITEDARABEMIRATES,
+                                         description_format=DescriptionFormat.PLAIN)
+    scraper.session = create_session(RequestsRotating([], clear_cookies=True), scraper.scraper_input, headers)
+    return scraper
+
+
+def linkedin_pages(job_ids, log, pause=(4, 8)):
+    """Reads LinkedIn job pages one at a time, with pauses, through JobSpy's page reader.
+    Returns ({job_id: description}, meta). The first refusal (403, 429, 999, or a redirect away
+    from the job page, such as to a sign-in wall) ends the reading for this run."""
+    scraper = _linkedin_scraper()
+    answers = []
+    get = scraper.session.get
+
+    def watched_get(url, **kw):  # JobSpy logs a refused page only as a warning; note the answer here
+        try:
+            resp = get(url, **kw)
+        except Exception as e:
+            answers.append(("error", str(e)[:120]))
+            raise
+        answers.append((resp.status_code, urlparse(resp.url).path))
+        return resp
+
+    scraper.session.get = watched_get
+    texts = {}
+    meta = {"wanted": len(job_ids), "read": 0, "empty": 0, "failed": 0, "blocked": 0, "skipped": 0}
+    for n, jid in enumerate(job_ids):
+        if n:
+            time.sleep(random.uniform(*pause))
+        del answers[:]
+        try:
+            found = scraper._fetch_details(jid) or {}
+        except Exception as e:  # it catches its own request errors, so this is a page it could not parse
+            found = {}
+            answers.append(("error", "%s: %s" % (type(e).__name__, str(e)[:100])))
+        text = clean(found.get("description"))
+        status, where = answers[-1] if answers else ("error", "no request made")
+        if text:
+            texts[jid] = text[:6000]
+            meta["read"] += 1
+        elif status in LINKEDIN_REFUSED or (status == 200 and not where.startswith("/jobs/view/")):
+            meta.update(blocked=1, skipped=len(job_ids) - n - 1, error="%s %s" % (status, where))
+            log("  linkedin pages: refused (%s %s), leaving the other %d for another run" % (
+                status, where, meta["skipped"]))
+            break
+        elif status == 200:
+            meta["empty"] += 1  # the page loaded, but held no description where JobSpy looks for one
+        else:
+            meta["failed"] += 1
+            meta["error"] = "%s %s" % (status, where)
+    return texts, meta

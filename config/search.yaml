@@ -1,4 +1,4 @@
-# JobSpy queries, run once a day (the 05:13 Dubai full run), one query at a time per site with
+# JobSpy queries, run once a day (the 00:13 Dubai full run), one query at a time per site with
 # pauses; the sites run side by side. 28 queries a day in total. These sites' terms forbid automated
 # access; volume is kept low and no account or login is ever used. Remove a site's list to switch it
 # off. A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
@@ -37,3 +37,10 @@ jobspy:
     - business intelligence
     - fresh graduate
     - ai engineer
+
+# LinkedIn search results carry no description, so the nationals-only, years and visa checks
+# cannot run on them. The full run opens the public page of each NEW LinkedIn role that passed
+# the title filters and that no other site describes: at most this many a day, best fit first,
+# one page at a time with 4-8 s pauses, never twice for one posting (the facts are cached), and
+# none after the first refusal. Trial from 2026-11-11. 0 switches it off.
+linkedin_pages: 20

@@ -26,13 +26,13 @@ Everything lands in [`data/`](data), refreshed after every run:
 | [`latest.json`](data/latest.json) | 🤖 The same list, machine-readable (handy for a digest email or a chatbot) |
 | [`health.json`](data/health.json) | 🩺 Which sources worked this run, how many jobs each returned, and which were blocked |
 | `streaks.json` | 📈 Failed runs in a row per source, so a source that keeps failing stands out from a one-off |
-| [`rejected_sample.json`](data/rejected_sample.json) | 🗑️ Up to 60 dropped UAE roles per reason, for tuning the filters |
+| [`rejected_sample.json`](data/rejected_sample.json) | 🗑️ Up to 60 dropped UAE roles per reason, for tuning the filters. A role dropped for its description carries the sentence that decided it (`why`) |
 | `history/<date>.json` | 📅 Roles first seen on that day |
 | `seen.json`, `detail_cache.json` | 🧠 Memory between runs: what's been seen, and what each job page said |
 
 `latest.md` opens with a status panel:
 
-> **Sources:** 82 of 83 answered · **Blocked:** jobspy:bayt, 2 of 9 queries blocked, 7 skipped · **New roles in the last 7 days:** 215 from LinkedIn, Indeed and Bayt; 9 from employer sites and boards
+> **Sources:** 82 of 83 answered · **Blocked:** jobspy:bayt, 2 of 9 queries blocked, 7 skipped · **LinkedIn pages:** 12 of 14 new roles read; 3 dropped after reading (2 nationals-only, 1 4+ years) · **New roles in the last 7 days:** 215 from LinkedIn, Indeed and Bayt; 9 from employer sites and boards
 
 and then the list. A few rows:
 
@@ -52,7 +52,7 @@ flowchart LR
     B[Startup boards<br/>Greenhouse, Lever, Ashby,<br/>Workable, Pinpoint, Teamtailor] --> C
     J[JobSpy, once a day<br/>LinkedIn, Indeed, Bayt] --> C
     C[Collect<br/>~7,500 postings] --> F{Filters}
-    F -->|UAE? junior? right lane?| D[Read full descriptions<br/>nationals-only? 4+ years?<br/>no visa sponsorship?]
+    F -->|UAE? junior? right lane?| D[Read full descriptions<br/>employer pages, new LinkedIn roles<br/>nationals-only? 4+ years?<br/>no visa sponsorship?]
     D --> R[Merge duplicates and rank]
     R --> O[data/latest.md<br/>data/latest.json]
 ```
@@ -80,7 +80,7 @@ GitHub often starts scheduled runs late (6 to 8 hours late in November 2026), so
 | **Attrax** | talabat |
 | **Own feeds** | Amazon (UAE only), Deriv |
 | **Startup boards** | Careem, Tamara, Tabby, Chalhoub, Property Finder, Ziina, Checkout.com, qlub, dubizzle, Aldar, Yassir, Bybit, OKX, Cohere, OpenAI, ElevenLabs and more |
-| **JobSpy** (no login) | LinkedIn, Indeed and Bayt: 28 searches a day in total |
+| **JobSpy** (no login) | LinkedIn, Indeed and Bayt: 28 searches a day in total, plus up to 20 LinkedIn job pages |
 
 Some big names aren't covered, and [`config/employers.yaml`](config/employers.yaml) says why for each one. Usually it's because their robots.txt says no, their jobs sit behind a login, or they only post on LinkedIn. Those still show up through the JobSpy searches.
 
@@ -96,6 +96,7 @@ Out of ~7,500 postings, a role survives only if:
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 4+ years of experience are dropped; 3 years is kept and flagged as a stretch.
   - Roles that say they won't sponsor a visa are dropped.
+- 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.
 
 Every rule is pinned by a real title in [`tests/test_filters.py`](tests/test_filters.py) (100+ cases), so tuning one rule can't quietly break another.
 
@@ -106,7 +107,7 @@ Want this for Riyadh, London, or for marketing roles instead of data? Here's the
 1. **Fork this repo.**
 2. **Make it yours, not mine.** In [`engine/http.py`](engine/http.py), change `USER_AGENT` to point at *your* fork, so site owners can see who's visiting. Delete the files in `data/` to start with a clean history.
 3. **Pick your employers** in [`config/employers.yaml`](config/employers.yaml). Remove the ones you don't care about and add your own (see the detective guide below).
-4. **Pick your searches** in [`config/search.yaml`](config/search.yaml). Keep the daily total low (about 30).
+4. **Pick your searches** in [`config/search.yaml`](config/search.yaml). Keep the daily total low (about 30). `linkedin_pages` caps the LinkedIn pages read a day; 0 switches the reading off.
 5. **Teach it your lanes** in [`engine/util.py`](engine/util.py):
    - `UAE_RE` and `CITY_RE`: where you want to work
    - `FAMILIES`: which job titles you want
@@ -160,10 +161,10 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🏷️ **An honest User-Agent** that says what it is and links back here
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
-- 📉 **Low volume:** two runs a day, and 28 JobSpy searches a day in total
-- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run.
+- 📉 **Low volume:** two runs a day, 28 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 4 to 8 seconds apart
+- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
-LinkedIn, Indeed and Bayt don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml`.
+LinkedIn, Indeed and Bayt don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.
 
 ## ❓ FAQ
 
