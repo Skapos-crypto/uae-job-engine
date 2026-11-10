@@ -1,31 +1,5 @@
 [
  {
-  "key": "0cbadd606274679f",
-  "title": "Intern, Resilience",
-  "employer": "DP World",
-  "sector": "ports and logistics",
-  "city": "UAE",
-  "location": "United Arab Emirates",
-  "family": "graduate",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27991",
-  "source": "oracle:DP World",
-  "source_type": "employer",
-  "seen_on": [
-   "oracle:DP World"
-  ],
-  "posted": "2026-11-10",
-  "age_days": 0,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-10",
-  "last_seen": "2026-11-10",
-  "is_new": true,
-  "score": 6.1,
-  "snippet": "DP World is seeking a motivated, analytical, and detail-oriented intern to support Project Gateway, an initiative to digitise and standardise Business Continuity Management (BCM) across DP World Group. Working closely with the Group Resilience team, the intern will support projec"
- },
- {
   "key": "517de2b1fc8d2783",
   "title": "Graduate Talent Scientist",
   "employer": "Canonical",
@@ -50,6 +24,58 @@
   "is_new": true,
   "score": 5.5,
   "snippet": ""
+ },
+ {
+  "key": "66f10319832316bc",
+  "title": "Intern - Digital Trust",
+  "employer": "KPMG Lower Gulf",
+  "sector": "consulting",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://elzw.fa.em8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3548",
+  "source": "oracle:KPMG Lower Gulf",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:KPMG Lower Gulf"
+  ],
+  "posted": "2026-11-10",
+  "age_days": 0,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-10",
+  "last_seen": "2026-11-10",
+  "is_new": true,
+  "score": 4.7,
+  "snippet": ""
+ },
+ {
+  "key": "0cbadd606274679f",
+  "title": "Intern, Resilience",
+  "employer": "DP World",
+  "sector": "ports and logistics",
+  "city": "UAE",
+  "location": "United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27991",
+  "source": "oracle:DP World",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:DP World"
+  ],
+  "posted": "2026-11-10",
+  "age_days": 0,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-10",
+  "last_seen": "2026-11-10",
+  "is_new": true,
+  "score": 4.7,
+  "snippet": "DP World is seeking a motivated, analytical, and detail-oriented intern to support Project Gateway, an initiative to digitise and standardise Business Continuity Management (BCM) across DP World Group. Working closely with the Group Resilience team, the intern will support projec"
  },
  {
   "key": "66a190c80ebd9635",
