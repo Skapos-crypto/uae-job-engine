@@ -405,7 +405,16 @@ def main():
         health = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
         assert health["_details"]["fetched"] == 11, health["_details"]  # every candidate with a detail page
 
-        # midday run: JobSpy is skipped and one board fails; their jobs are carried and stay new today
+        # midday run: JobSpy is skipped and one board fails; their jobs are carried and stay new today.
+        # A carried row must still pass today's rules: a Bayt row with a title the filters now exclude
+        # (planted in latest.json as if an older run had kept it) is not carried
+        latest_path = os.path.join(run.DATA, "latest.json")
+        with open(latest_path) as fh:
+            planted = json.load(fh)
+        planted["jobs"].append(dict(titles["Junior Data Analyst"], key="planted", title="Quality Control Analyst",
+                                    url="https://www.bayt.com/en/uae/jobs/qc-analyst-3/"))
+        with open(latest_path, "w") as fh:
+            json.dump(planted, fh)
         FAILING.add("careem")
         os.environ["FULL_RUN"] = "0"
         run.main()
@@ -414,6 +423,7 @@ def main():
         assert set(titles3) == expect_kept, set(titles3) ^ expect_kept
         assert latest3["summary"]["carried_over"] == 2
         assert titles3["Junior Data Analyst"]["is_new"] and titles3["Data Scientist"]["is_new"]
+        assert "agency" in titles3["Junior Data Analyst"]["flags"]  # flags refreshed on a carried row
         # failures in a row are counted across runs; LinkedIn did not run this time and keeps its count
         stuck = latest3["summary"]["status"]["failing_in_a_row"]
         assert stuck == {"oracle:NoSites": 4, "jobspy:linkedin": 3}, stuck

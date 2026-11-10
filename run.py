@@ -394,6 +394,25 @@ def final_checks(job, today, cache):
     return None
 
 
+def recheck(r, today):
+    """Today's title rules, applied to a record carried over from an earlier run, so that a rule
+    change reaches the digest at once instead of waiting for the row's source to run again.
+    False when the row no longer passes; otherwise its lane, level, age, flags and score are
+    refreshed. What only a description can say (years, visa, nationals in the text) is kept."""
+    family, cv, level = prefilter(r)
+    if family is None or nationals(r["title"], "") == "only":
+        return False
+    posted = datetime.strptime(r["posted"], "%Y-%m-%d").date() if r.get("posted") else None
+    age = (today - posted).days if posted else None
+    if age is not None and age > (STALE_DAYS if r["source_type"] in AGGREGATOR_TYPES else EMPLOYER_STALE_DAYS):
+        return False
+    flags = [f for f in r.get("flags", []) if f != "agency"] + (["agency"] if is_agency(r["employer"]) else [])
+    r.update(family=family, cv=cv, seniority=level, age_days=age, flags=flags,
+             is_new=r["first_seen"] == str(today))
+    r["score"] = score(r)
+    return True
+
+
 # ---------------------------------------------------------------- output
 
 def update_streaks(health, today):
@@ -681,9 +700,8 @@ def main():
             continue
         src_ok = any(h.get("ok") for sid, h in health.items() if sid == r["source"])
         recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= CARRY_DAYS
-        if not src_ok and recent:
+        if not src_ok and recent and recheck(r, today):
             # the midday run skips JobSpy, so its morning finds are carried; they stay new all day
-            r["is_new"] = r["first_seen"] == today_s
             records.append(r)
             have.add(r["key"])
             carried += 1
