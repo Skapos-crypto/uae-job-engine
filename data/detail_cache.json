@@ -330,5 +330,30 @@
   "loc": "United Arab Emirates",
   "d": "2026-11-10",
   "v": "81a3a02d"
+ },
+ "u:65ac88b933f47777": {
+  "nat": "only",
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "d": "2026-11-10",
+  "v": "81a3a02d",
+  "w": "Technology Engineer -Graduate Trainee ( UAE National)"
+ },
+ "u:1bdcacd3ed2f0a07": {
+  "nat": "preferred",
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "d": "2026-11-10",
+  "v": "81a3a02d"
+ },
+ "u:7cd594eafc78c66a": {
+  "nat": null,
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "d": "2026-11-10",
+  "v": "81a3a02d"
  }
 }
