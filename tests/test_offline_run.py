@@ -2,6 +2,7 @@
 import json
 import logging
 import os
+from datetime import date
 import random
 import shutil
 import sys
@@ -11,6 +12,9 @@ import types
 import run
 from engine import http as http_mod
 from engine import sources
+from engine import util
+
+TODAY = date(2026, 11, 10)  # the day the fixtures were written: frozen, so their dates never age out
 
 FAILING = set()  # board tokens that answer 404, to exercise carry-over
 SCRAPES = {"linkedin": 0, "bayt": 0}  # JobSpy calls per site, to check that a blocked site is left alone
@@ -68,7 +72,7 @@ def fake_scrape_jobs(site_name, search_term, **kw):
                            "location": "Dubai, United Arab Emirates", "date_posted": run.today_dubai(),
                            "description": None} for n, company, title in LI_ROWS] if search_term == "data analyst" else [])
     assert kw.get("location") == "UAE", kw  # Bayt must be asked for the UAE, not every country
-    return FakeFrame([{"job_url": "https://www.bayt.com/en/uae/jobs/data-analyst-1/", "company": "Acme",
+    return FakeFrame([{"job_url": "https://www.bayt.com/en/uae/jobs/data-analyst-1/", "company": "Acme Recruitment",
                        "title": "Junior Data Analyst", "location": "Dubai, UAE", "date_posted": run.today_dubai(),
                        "description": "1-2 years of experience with SQL"},
                       {"job_url": "https://www.bayt.com/en/uae/jobs/python-developer-2/", "company": "Ziina Technologies",
@@ -198,6 +202,21 @@ def fake_request(self, method, url, retries=2, **kw):
              "PrimaryLocation": "Dubai, United Arab Emirates"},
         ]
         return FakeResp({"items": [{"TotalJobsCount": 5, "requisitionList": reqs}]})
+    if "/wday/cxs/fallbackco/" in url and method == "POST":
+        # a tenant whose UAE facet finds nothing when applied (Baker Hughes): the text search is used
+        body = kw.get("json") or {}
+        if body.get("appliedFacets"):
+            return FakeResp({"total": 0, "jobPostings": []})
+        if body.get("searchText") == "United Arab Emirates":
+            return FakeResp({"total": 2, "jobPostings": [
+                {"title": "Junior Data Engineer, Text Search", "externalPath": "/job/AE-DUBAI/Junior-DE_R-9",
+                 "locationsText": "AE-DUBAI-TECHNO PARK", "postedOn": "Posted 3 Days Ago"},
+                {"title": "Data Analyst", "externalPath": "/job/x/Data-Analyst_R-10",
+                 "locationsText": "2 Locations", "postedOn": "Posted Today"}]})  # nothing says this one is UAE
+        return FakeResp({"total": 600, "jobPostings": [], "facets": [
+            {"facetParameter": "locationMainGroup", "values": [
+                {"facetParameter": "locationHierarchy1", "descriptor": "Country", "values": [
+                    {"descriptor": "Dubai", "id": "h1", "count": 2}]}]}]})
     if "/wday/cxs/" in url and method == "POST":
         body = kw.get("json") or {}
         if not body.get("appliedFacets"):
@@ -243,7 +262,10 @@ def fake_request(self, method, url, retries=2, **kw):
         return FakeResp({"name": "dubizzle Group", "jobs": [
             {"title": "Data Analyst", "city": "Dubai", "country": "United Arab Emirates",
              "url": "https://apply.workable.com/bayutdubizzle/j/ABC/", "published_on": "2026-10-28",
-             "description": "<p>2 years of experience</p>"}]})
+             "description": "<p>2 years of experience</p>"},
+            {"title": "Backend Developer", "city": "Dubai", "country": "United Arab Emirates",  # a 2023 ad
+             "url": "https://apply.workable.com/bayutdubizzle/j/OLD/", "published_on": "2023-09-05",
+             "description": "<p>1 year of experience</p>"}]})
     if "amazon.jobs" in url:
         assert "normalized_country_code" in url, url
         return FakeResp({"hits": 1, "jobs": [
@@ -262,7 +284,8 @@ def main():
             "oracle": [{"name": "ADIB", "sector": "banking", "host": "x.oraclecloud.com", "sites": ["CX_1"]},
                        {"name": "NoSites", "host": "y.oraclecloud.com", "sites": []}],
             "workday": [{"name": "Mastercard", "sector": "payments", "tenant": "mastercard", "wd": "wd1",
-                         "site": "CorporateCareers"}],
+                         "site": "CorporateCareers"},
+                        {"name": "FallbackCo", "tenant": "fallbackco", "wd": "wd5", "site": "Careers"}],
             "phenom": [{"name": "PhenomCo", "base": "https://careers.example-phenom.com/global/en"}],
             "successfactors": [{"name": "SFCo", "base": "https://careers.example-sf.com"}],
             "jibe": [{"name": "JibeCo", "base": "https://careers.example-jibe.com", "crawl_delay": 5}],
@@ -281,6 +304,7 @@ def main():
         }
         search = {"jobspy": {"linkedin": ["data analyst", "data scientist", "data engineer"], "bayt": ["data analyst"]}}
         run.load_yaml = lambda name: cfg if name == "employers.yaml" else search
+        run.today_dubai = util.today_dubai = lambda: TODAY
         http_mod.Http.request = fake_request
         sys.modules["jobspy"] = types.ModuleType("jobspy")
         sys.modules["jobspy"].scrape_jobs = fake_scrape_jobs
@@ -298,12 +322,27 @@ def main():
                        "Business Intelligence Engineer", "Junior Data Engineer", "Junior Data Analyst",
                        "Junior BI Analyst", "AI Engineer - Graduate", "IT Support Specialist", "Data Scientist II",
                        "Junior Analytics Engineer", "Graduate Data Analyst", "Junior Analyst, Logistics Performance",
-                       "Junior Python Engineer"}
+                       "Junior Python Engineer", "Junior Data Engineer, Text Search"}
         assert set(titles) == expect_kept, set(titles) ^ expect_kept
         # Avature: the job page gave the location; the candidate whose page says United Kingdom is out
         assert titles["Graduate Data Analyst"]["location"] == "United Arab Emirates"
         assert titles["Graduate Data Analyst"]["posted"] == "2026-10-09"
         assert latest["summary"]["rejected"].get("not-uae") == 1
+        # a 2023 employer ad is dropped as stale; the live one from the same board stays
+        assert latest["summary"]["rejected"].get("stale") == 1
+        # a tenant whose UAE facet finds nothing is asked by text; only postings that say UAE are kept
+        assert titles["Junior Data Engineer, Text Search"]["location"] == "AE-DUBAI-TECHNO PARK"
+        assert titles["Junior Data Engineer, Text Search"]["city"] == "Dubai"
+        health0 = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
+        assert health0["workday:FallbackCo"]["fetched"] == 1 and health0["workday:FallbackCo"]["meta"]["by_text"]
+        assert not health0["workday:Mastercard"]["meta"].get("by_text")
+        # a 32-day-old posting is kept, ranked a point lower than the same posting would be fresh:
+        # data analyst 3.0 + junior 1.2 + new 1.0 - older than 30 days 1.0 + employer 0.6
+        assert titles["Graduate Data Analyst"]["age_days"] == 32
+        assert titles["Graduate Data Analyst"]["score"] == 4.8, titles["Graduate Data Analyst"]["score"]
+        # agency flag: the Bayt poster is a recruitment agency
+        assert "agency" in titles["Junior Data Analyst"]["flags"], titles["Junior Data Analyst"]
+        assert "agency" not in titles["HR Data Analyst"]["flags"]
         assert titles["Junior Analyst, Logistics Performance"]["url"] == \
             "https://careers.example-attrax.com/job/junior-analyst-jid-501"
         assert titles["Junior Python Engineer"]["url"] == "https://join.deriv.careers/jobs/d1"
@@ -364,7 +403,7 @@ def main():
             json.dump(cache, fh)
         run.main()
         health = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]
-        assert health["_details"]["fetched"] == 10, health["_details"]  # every candidate with a detail page
+        assert health["_details"]["fetched"] == 11, health["_details"]  # every candidate with a detail page
 
         # midday run: JobSpy is skipped and one board fails; their jobs are carried and stay new today
         FAILING.add("careem")

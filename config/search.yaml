@@ -1,7 +1,10 @@
 # JobSpy queries, run once a day (the 00:13 Dubai full run), one query at a time per site with
-# pauses; the sites run side by side. 28 queries a day in total. These sites' terms forbid automated
+# pauses; the sites run side by side. 22 queries a day in total. These sites' terms forbid automated
 # access; volume is kept low and no account or login is ever used. Remove a site's list to switch it
 # off. A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
+#
+# Bayt is down to 3 queries (2026-11-10): it refused 5 to 9 of its 9 queries every day of the first
+# week and gave 12 new roles in 9 days.
 #
 # Google is off: on 2026-11-02 every Google query returned "no job data returned", both on GitHub
 # Actions and from a home connection. Its six queries moved to Indeed and Bayt.
@@ -29,14 +32,8 @@ jobspy:
     - product owner
   bayt:
     - data analyst
-    - data scientist
-    - business analyst
-    - software engineer
-    - python developer
-    - machine learning
-    - business intelligence
     - fresh graduate
-    - ai engineer
+    - software engineer
 
 # LinkedIn search results carry no description, so the nationals-only, years and visa checks
 # cannot run on them. The full run opens the public page of each NEW LinkedIn role that passed

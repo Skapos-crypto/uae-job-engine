@@ -80,7 +80,7 @@ GitHub often starts scheduled runs late (6 to 8 hours late in November 2026), so
 | **Attrax** | talabat |
 | **Own feeds** | Amazon (UAE only), Deriv |
 | **Startup boards** | Careem, Tamara, Tabby, Chalhoub, Property Finder, Ziina, Checkout.com, qlub, dubizzle, Aldar, Yassir, Bybit, OKX, Cohere, OpenAI, ElevenLabs and more |
-| **JobSpy** (no login) | LinkedIn, Indeed and Bayt: 28 searches a day in total, plus up to 20 LinkedIn job pages |
+| **JobSpy** (no login) | LinkedIn, Indeed and Bayt: 22 searches a day in total, plus up to 20 LinkedIn job pages |
 
 Some big names aren't covered, and [`config/employers.yaml`](config/employers.yaml) says why for each one. Usually it's because their robots.txt says no, their jobs sit behind a login, or they only post on LinkedIn. Those still show up through the JobSpy searches.
 
@@ -90,12 +90,14 @@ Out of ~7,500 postings, a role survives only if:
 
 - ✅ **It's in the UAE.** That includes titles like "Data Analyst – Riyadh, KSA" whose listing claims Dubai: those are caught and dropped.
 - ✅ **It's in a target lane:** data analysis, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, or a graduate/intern programme.
-- ✅ **It isn't senior.** Director, head, VP and principal titles are always out. Senior, lead and manager titles are out unless the title also says junior, associate, graduate or similar.
-- ✅ **It isn't a lookalike.** Sales, account executives, audit, tax, nursing, design, frontend/mobile and similar roles are dropped. Finance and compliance titles survive only if they're clearly technical ("AML Data Analyst" stays).
+- ✅ **It isn't senior.** Director, head, VP and principal titles are always out. Senior, lead and manager titles are out unless the title also says junior, graduate, trainee or similar ("Senior Associate" counts as senior).
+- ✅ **It isn't a lookalike.** Sales, account executives, audit, tax, nursing, design, frontend/mobile and similar roles are dropped, and so are talent pools, career fairs and open applications. Finance and compliance titles survive only if they're clearly technical ("AML Data Analyst" stays).
+- ✅ **It's still open.** LinkedIn, Indeed and Bayt postings older than 21 days are dropped; employer and board postings older than 120 days too (those are evergreen ads, not openings). Anything older than 30 days ranks lower.
 - ✅ **The full description passes:**
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 4+ years of experience are dropped; 3 years is kept and flagged as a stretch.
   - Roles that say they won't sponsor a visa are dropped.
+- 🏷️ **Agencies are marked, not dropped.** A posting by a recruitment agency or an unnamed ("Confidential") employer gets an `agency` flag, shows "agency or unnamed employer" in Notes, and ranks a little lower: expect a screening call first, and often a wish for candidates already in the country. The list of agency names is `AGENCY_RE` in [`engine/util.py`](engine/util.py).
 - 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.
 
 Every rule is pinned by a real title in [`tests/test_filters.py`](tests/test_filters.py) (100+ cases), so tuning one rule can't quietly break another.
@@ -161,7 +163,7 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🏷️ **An honest User-Agent** that says what it is and links back here
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
-- 📉 **Low volume:** two runs a day, 28 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 4 to 8 seconds apart
+- 📉 **Low volume:** two runs a day, 22 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 4 to 8 seconds apart
 - 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
 LinkedIn, Indeed and Bayt don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.

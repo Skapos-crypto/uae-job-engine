@@ -95,7 +95,7 @@ def relative_posted(text):
 # ---------------------------------------------------------------- location
 
 UAE_RE = re.compile(
-    r"united arab emirates|\bu\.?a\.?e\b|dubai|abu ?dhabi|sharjah|\bajman\b|ras al[ -]?khaimah|"
+    r"united arab emirates|\bu\.?a\.?e\b|\bae-[a-z]|dubai|abu ?dhabi|sharjah|\bajman\b|ras al[ -]?khaimah|"
     r"fujairah|umm al[ -]?quwain|\bal ain\b|jebel ali|musaffah|mussafah|ruwais|\bdifc\b|\badgm\b|"
     r"دبي|أبوظبي|ابوظبي|الإمارات|الامارات|الشارقة",
     re.I,
@@ -152,7 +152,8 @@ FAMILIES = [
      r"node\.?js|java developer|\.net developer|golang|api (developer|engineer)|integration (engineer|developer)|"
      r"platform engineer|cloud engineer|devops|site reliability|\bsre\b|full[- ]?stack|\bsde\b|programmer|"
      r"application developer|automation engineer|\brpa\b|solutions? engineer|"
-     r"implementation (engineer|consultant|specialist)|technical consultant|erp (developer|consultant)|odoo|"
+     r"implementation (engineer|consultant|specialist)|technical consultant|erp (developer|consultant)|"
+     r"odoo (developer|consultant|engineer|programmer|technical|functional)|"
      r"salesforce (developer|admin)|crm (developer|consultant)|systems? engineer|database (developer|admin)|"
      r"\bdba\b|sql developer|developer advocate|forward[- ]deployed|\bqa (engineer|analyst|automation)|"
      r"test (engineer|automation)|software tester|quality assurance (engineer|analyst)"),
@@ -176,7 +177,8 @@ EXCLUDE_RE = re.compile(
     r"graphic|designer|animat|illustrat|video (editor|maker|producer)|videograph|photograph|copywrit|"
     r"content (writer|creator)|teacher|lecturer|professor|faculty|tutor|"
     r"\bnurse|physician|doctor|surgeon|pharmacist|therapist|psycholog|behaviou?ral analyst|dietitian|dentist|"
-    r"oncology|immunology|cardiology|vaccine|respiratory|ophthalm|dermatolog|neuroscience|rare disease|"
+    r"oncology|immunology|cardiology|vaccine|respiratory|ophthalm|optometr|optician|dermatolog|neuroscience|"
+    r"rare disease|laborator|\blab (technical|support|technician|assistant)|"
     r"driver|cashier|\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|"
     r"inside sales|telesales|account (executive|manager|director|representative)|business development|"
     r"\b[bs]dr\b|(customer|merchant|client) acquisition|"
@@ -186,7 +188,10 @@ EXCLUDE_RE = re.compile(
     r"facilit(y|ies)|\bpermits?\b|embedded|firmware|fpga|"
     r"surveyor|inspector|\bhse\b|safety|mechanical|civil engineer|electrical engineer|chemical engineer|"
     r"petroleum|drilling|reservoir|geolog|quantity|estimator|merchandis|buyer\b|store manager|"
-    r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista",
+    r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista|"
+    r"data recovery|quality control|distillates|gasoil|"
+    # talent pools, career fairs and open applications are not vacancies
+    r"talent pool|talent community|career fair|open day|open application|hiring event|walk[- ]in",
     re.I,
 )
 
@@ -195,7 +200,8 @@ EXCLUDE_RE = re.compile(
 DOMAIN_EXCLUDE_RE = re.compile(
     r"\baml\b|\bkyc\b|compliance|credit|financial (analyst|reporting|planning|controller|control|crime)|"
     r"financial (&|and) |fp&a|accountant|accounting|audit|\btax\b|treasury|equity|investment analyst|actuar|"
-    r"\bcost (analyst|accountant|control)|business finance|shari'?a|shari’a",
+    r"\bcost (analyst|accountant|control)|business finance|shari'?a|shari’a|"
+    r"finance (analyst|associate|intern|graduate)|commercial finance|portfolio (management|analyst)",
     re.I,
 )
 TECH_CORE_RE = re.compile(
@@ -269,6 +275,7 @@ SENIOR_HARD_RE = re.compile(
     re.I,
 )
 SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert|iii|iv|level [3-9])\b", re.I)
+SENIOR_WORD_RE = re.compile(r"\b(senior|sr|snr)\b", re.I)
 JUNIOR_RE = re.compile(
     r"\b(junior|jr|associate|graduate|grad|trainee|intern|internship|entry|fresh|apprentice|campus)\b",
     re.I,
@@ -279,9 +286,14 @@ def seniority(title):
     t = clean(title)
     if SENIOR_HARD_RE.search(t):
         return "senior"
-    if SENIOR_SOFT_RE.search(t) and not JUNIOR_RE.search(t):
-        return "senior"
-    if JUNIOR_RE.search(t):
+    junior_words = {w.lower() for w in JUNIOR_RE.findall(t)}
+    if SENIOR_SOFT_RE.search(t):
+        # "Senior Associate" is a grade of its own (three to six years at the Big Four and the like):
+        # "associate" alone does not make a senior title junior, the other words do
+        rescued = bool(junior_words - {"associate"}) or ("associate" in junior_words and not SENIOR_WORD_RE.search(t))
+        if not rescued:
+            return "senior"
+    if junior_words:
         return "junior"
     return "unspecified"
 
@@ -293,6 +305,7 @@ NAT_PREF_RE = re.compile(
 )
 NAT_TITLE_RE = re.compile(
     r"uae nationals?|\buaen\b|\bemirati|emiratisation|emiratization|emiriti[sz]ation|nationals? only|tawteen|"
+    r"national talent|"
     r"\bnafis\b|kawader|\bwatani\b|maseeraty|إمارات|مواطن",
     re.I,
 )
@@ -457,20 +470,40 @@ def job_key(company, title):
 
 FAMILY_WEIGHT = {
     "data_analyst": 3.0, "bi": 3.0, "data_science": 3.0, "ai_ml": 3.0, "data_eng": 3.0,
-    "graduate": 2.8, "software": 2.6, "product": 2.5, "business": 2.3, "analyst": 2.0, "it": 1.8,
+    "graduate": 2.6, "software": 2.6, "product": 2.5, "business": 2.3, "analyst": 2.0, "it": 1.8,
 }
+OLD_AFTER_DAYS = 30  # an employer posting open longer than this is ranked lower; aggregator posts are dropped sooner
+
+# Recruitment agencies and unnamed posters: flagged, not dropped. Generic words first, then agencies
+# that post UAE roles often. The flag means "the employer is not who it says", so expect a screening
+# call before any employer, and often a wish for candidates already in the country.
+AGENCY_RE = re.compile(
+    r"recruit|staffing|manpower|headhunt|executive search|resourcing|outsourc|placement|"
+    r"\btalent\b|consultanc(y|ies)|hr (advisory|solutions|consult)|managed services|^confidential\b|"
+    r"\bhalian\b|\baiqu\b|\blnkd\b|joblet|madison pearl|referment|lobo management|\bquantin\b|dicetek|"
+    r"brad contech|michael page|robert half|robert walters|\bhays\b|randstad|adecco|charterhouse|"
+    r"cooper fitch|black pearl|mark williams|propel consult|\bantal\b|\breed\b|\btasc\b|nadia global|"
+    r"bac middle east|huxley|mackenzie jones|guildhall|parker connect|inspire selection",
+    re.I,
+)
+
+
+def is_agency(employer):
+    return bool(AGENCY_RE.search(clean(employer)))
 SOURCE_RANK = {"employer": 0, "ats": 1, "indeed": 2, "linkedin": 3, "google": 4, "bayt": 5}
 
 
 def score(job):
     s = FAMILY_WEIGHT.get(job["family"], 1.5)
-    if job["seniority"] == "junior":
+    if job["seniority"] == "junior" and job["family"] != "graduate":  # the graduate lane is junior by nature
         s += 1.2
     if job.get("is_new"):
         s += 1.0
     age = job.get("age_days")
     if age is not None and age <= 7:
         s += 0.5
+    if age is not None and age > OLD_AFTER_DAYS:
+        s -= 1.0
     if job.get("source_type") == "employer":
         s += 0.6
     flags = job.get("flags", [])
@@ -480,4 +513,6 @@ def score(job):
         s -= 1
     if "own_visa_preferred" in flags:
         s -= 1.5
+    if "agency" in flags:
+        s -= 0.5
     return round(s, 2)

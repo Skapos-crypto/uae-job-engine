@@ -18,12 +18,14 @@ import yaml
 from engine import sources
 from engine.http import Http
 from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
-                         elsewhere, evidence, is_uae, job_key, min_years, nationals, score, seniority, today_dubai)
+                         elsewhere, evidence, is_agency, is_uae, job_key, min_years, nationals, score, seniority,
+                         today_dubai)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
 AGGREGATOR_TYPES = {"indeed", "linkedin", "google", "bayt"}
 STALE_DAYS = 21          # aggregator postings older than this are dropped
+EMPLOYER_STALE_DAYS = 120  # employer and board postings older than this are dropped: evergreen ads, not openings
 CARRY_DAYS = 3           # keep jobs from sources that did not run this time for this long
 FORGET_DAYS = 60         # forget dedupe history after this long
 MAX_DETAILS = 160        # cap on full-description fetches per run
@@ -377,9 +379,11 @@ def final_checks(job, today, cache):
         return "no-sponsorship"
     posted = job.get("posted")
     age = (today - posted).days if posted else None
-    if job["source_type"] in AGGREGATOR_TYPES and age is not None and age > STALE_DAYS:
+    if age is not None and age > (STALE_DAYS if job["source_type"] in AGGREGATOR_TYPES else EMPLOYER_STALE_DAYS):
         return "stale"
     flags = []
+    if is_agency(job["employer"]):
+        flags.append("agency")
     if nat == "preferred":
         flags.append("nationals_preferred")
     if yrs == 3:
@@ -550,6 +554,8 @@ def write_markdown(records, summary, health_rows, status, full):
             notes.append("asks 3 yrs")
         if "own_visa_preferred" in r["flags"]:
             notes.append("prefers own visa")
+        if "agency" in r["flags"]:
+            notes.append("agency or unnamed employer")
         lines.append("| %d | %s | [%s](%s) | %s | %s | %s | %s | %s | %s |" % (
             i, "🆕" if r["is_new"] else "", md_escape(r["title"]), r["url"], md_escape(r["employer"]),
             r["city"], FAMILY_LABEL.get(r["family"], r["family"]), r["posted"] or "",

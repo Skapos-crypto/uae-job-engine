@@ -151,24 +151,28 @@ def workday(http, emp):
                             headers=headers), "workday %s" % tenant)
     applied, places = _uae_facets(first.get("facets"))
     meta = {"facets": applied, "all_jobs": first.get("total")}
-    if not applied:
-        return [], meta
     uae_label = places[0] if len(places) == 1 else "United Arab Emirates"
-    jobs = []
-    offset = 0
-    total = None
+    jobs, offset, total = [], 0, None
+    # No UAE facet (HP, Shell): ask by text instead, and keep only the postings whose own location
+    # says UAE ("AE-DUBAI-TECHNO PARK" counts). The same when a tenant ignores the facet it offers.
+    search = "" if applied else "United Arab Emirates"
     for _ in range(25):
-        body = {"appliedFacets": applied, "limit": 20, "offset": offset, "searchText": ""}
+        body = {"appliedFacets": applied, "limit": 20, "offset": offset, "searchText": search}
         data = _json(http.post(api, json=body, headers=headers), "workday %s page" % tenant)
         if total is None:
             total = data.get("total") or 0
-            meta["uae_total"] = total
+            if not total and not search:  # the facet is offered but applying it finds nothing (Baker Hughes)
+                applied, search, total = {}, "United Arab Emirates", None
+                continue
+            meta.update(uae_total=total, by_text=bool(search))
         posts = data.get("jobPostings") or []
         for p in posts:
             path = clean(p.get("externalPath"))
             loc = clean(p.get("locationsText"))
-            if not UAE_RE.search(loc):  # "2 Locations": the UAE facet already placed it in the UAE
-                loc = "%s; %s" % (loc, uae_label) if loc else uae_label
+            if not UAE_RE.search(loc):
+                if search:  # "2 Locations" with no facet behind it: nothing says this one is in the UAE
+                    continue
+                loc = "%s; %s" % (loc, uae_label) if loc else uae_label  # the UAE facet placed it there
             jobs.append({
                 "source": "workday:%s" % emp["name"],
                 "source_type": "employer",
@@ -184,6 +188,8 @@ def workday(http, emp):
         offset += len(posts)
         if not posts or offset >= total:
             break
+    if search:
+        meta["uae_total"] = len(jobs)  # the text search also matches descriptions; only these said UAE
     return jobs, meta
 
 

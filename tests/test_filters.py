@@ -1,8 +1,8 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
 from datetime import date
 
-from engine.util import (classify, elsewhere, evidence, is_uae, job_key, min_years, nationals, norm_company,
-                         parse_date, seniority)
+from engine.util import (classify, elsewhere, evidence, is_agency, is_uae, job_key, min_years, nationals,
+                         norm_company, parse_date, seniority)
 
 KEEP = [
     ("Backend Engineer", "software"),
@@ -41,6 +41,12 @@ KEEP = [
     ("QA Engineer", "software"),
     ("Junior Test Automation Engineer", "software"),
     ("Early Talent Programme 2027", "graduate"),
+    # second week, November 2026
+    ("Odoo Developer", "software"),
+    ("Data Quality Analyst", "data_analyst"),
+    ("Associate Analyst, Business Administration- Launch Program 2027", "analyst"),
+    ("Data Analyst - Intern", "data_analyst"),
+    ("Finance Data Analyst", "data_analyst"),
 ]
 
 DROP = [
@@ -89,6 +95,19 @@ DROP = [
     "Intern-People and Organization",
     "Watani Business Enablement Solutions Graduate Programme",  # PwC's UAE-nationals programme
     "Marketing Associate - Maseeraty Graduate Program, UAE",
+    # second week, November 2026: rows that got through
+    "Trainee Optometrist. Operations. Grand Optics Ajman City Centre",
+    "Data Recovery Hardware Engineer",
+    "Odoo & Email Marketing Specialist",
+    "Officer, Lab Technical Support",
+    "Middle Distillates Analyst (Gasoil, Jet and ULSD) (8E87445)",
+    "Dubai Holding Entertainment: Technology & Data Talent Pool",
+    "Engineering & Technical Services Open Day| Tuesday, 10 November | 10AM",
+    "Executive Risk Management - National Talent - Fresh Graduate role",  # Emirati programme
+    "Senior Operations Associate - Shops",
+    "Commercial Finance Analyst",
+    "Analyst – Portfolio Management",
+    "Quality Control Analyst",
 ]
 
 
@@ -181,11 +200,22 @@ def main():
     assert "cannot offer visa sponsorship" in evidence(
         "Data Analyst", "Please note we cannot offer visa sponsorship for this role.", "no-sponsorship")
     assert evidence("Data Analyst", "", "4+ years") == ""  # facts from the cache: no words at hand
+    # "associate" alone no longer rescues a senior title; other junior words still do
+    assert seniority("Senior Operations Associate - Shops") == "senior"
+    assert seniority("Associate Analyst") == "junior" and seniority("Senior Graduate Programme Associate") == "junior"
+    assert nationals("Engineering Positions (National Talent)", "") == "only"
+    # Workday location codes count as the UAE
+    assert is_uae("AE-DUBAI-TECHNO PARK") and is_uae("AE-ABU DHABI-AL GHAITH HOLDING TOWER, AIRPORT ROAD")
+    assert not is_uae("MACAE-BRAZIL")
+    # agencies and unnamed posters are flagged
+    assert is_agency("Halian | Managed Services, Recruitment Agency") and is_agency("Confidential Careers")
+    assert is_agency("Alliance Recruitment Agency") and is_agency("Madison Pearl") and is_agency("Aventus Global Talent")
+    assert not is_agency("Emirates NBD") and not is_agency("Dubai Holding") and not is_agency("Deloitte Consulting")
 
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 46))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 57))
 
 
 if __name__ == "__main__":
