@@ -38,6 +38,7 @@ jobspy:
 # LinkedIn search results carry no description, so the nationals-only, years and visa checks
 # cannot run on them. The full run opens the public page of each NEW LinkedIn role that passed
 # the title filters and that no other site describes: at most this many a day, best fit first,
-# one page at a time with 4-8 s pauses, never twice for one posting (the facts are cached), and
-# none after the first refusal. Trial from 2026-11-11. 0 switches it off.
+# one page at a time 20 to 40 s apart, never twice for one posting (the facts are cached), none
+# for a title that already says UAE nationals, and none after the first refusal. Trial from
+# 2026-11-11 (first night: 5 pages read, then a 429). 0 switches it off.
 linkedin_pages: 20

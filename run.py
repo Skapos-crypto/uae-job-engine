@@ -316,7 +316,7 @@ def read_linkedin_pages(candidates, seen, cache, health, limit, today_s):
     for j in sorted(candidates, key=lambda j: -score(j)):
         first_seen = seen.get(j["key"], {}).get("first_seen", today_s)
         if (j.get("_detail") or ("",))[0] != "linkedin" or j["key"] in described or j["key"] in keys \
-                or first_seen != today_s:
+                or first_seen != today_s or nationals(j["title"], "") == "only":  # the title already decides
             continue
         picked.append(j)
         keys.add(j["key"])

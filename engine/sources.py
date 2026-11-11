@@ -725,10 +725,11 @@ def _linkedin_scraper():
     return scraper
 
 
-def linkedin_pages(job_ids, log, pause=(4, 8)):
+def linkedin_pages(job_ids, log, pause=(20, 40)):
     """Reads LinkedIn job pages one at a time, with pauses, through JobSpy's page reader.
     Returns ({job_id: description}, meta). The first refusal (403, 429, 999, or a redirect away
-    from the job page, such as to a sign-in wall) ends the reading for this run."""
+    from the job page, such as to a sign-in wall) ends the reading for this run. The pause is
+    long on purpose: at 4 to 8 seconds the sixth page was refused (2026-11-11)."""
     scraper = _linkedin_scraper()
     answers = []
     get = scraper.session.get

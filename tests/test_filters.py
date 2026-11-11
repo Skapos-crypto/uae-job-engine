@@ -47,6 +47,7 @@ KEEP = [
     ("Associate Analyst, Business Administration- Launch Program 2027", "analyst"),
     ("Data Analyst - Intern", "data_analyst"),
     ("Finance Data Analyst", "data_analyst"),
+    ("Software Development Engineer 2", "software"),  # like "II": kept
 ]
 
 DROP = [
@@ -108,6 +109,8 @@ DROP = [
     "Commercial Finance Analyst",
     "Analyst – Portfolio Management",
     "Quality Control Analyst",
+    "Automation Engineer, Reliability Maintenance Engineering",  # warehouse machinery, not software
+    "Software Development Engineer 3",  # a level, like "III"
 ]
 
 
@@ -215,7 +218,8 @@ def main():
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 57))
+    assert seniority("Software Development Engineer 3") == "senior" and seniority("Data Analyst II") == "unspecified"
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 58))
 
 
 if __name__ == "__main__":

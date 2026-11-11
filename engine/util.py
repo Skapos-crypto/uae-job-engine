@@ -186,7 +186,7 @@ EXCLUDE_RE = re.compile(
     r"penetration|information security|infosec|\bgrc\b|\biam\b|identity (and|&) access|legal|paralegal|"
     r"people operations|talent acquisition|recruit(er|ment|ing)|payroll|workplace (operations|experience)|"
     r"facilit(y|ies)|\bpermits?\b|embedded|firmware|fpga|"
-    r"surveyor|inspector|\bhse\b|safety|mechanical|civil engineer|electrical engineer|chemical engineer|"
+    r"surveyor|inspector|\bhse\b|safety|mechanical|maintenance|civil engineer|electrical engineer|chemical engineer|"
     r"petroleum|drilling|reservoir|geolog|quantity|estimator|merchandis|buyer\b|store manager|"
     r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista|"
     r"data recovery|quality control|distillates|gasoil|"
@@ -274,7 +274,11 @@ SENIOR_HARD_RE = re.compile(
     r"associate (manager|director|principal|partner|vice president))\b",
     re.I,
 )
-SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert|iii|iv|level [3-9])\b", re.I)
+SENIOR_SOFT_RE = re.compile(
+    r"\b(senior|sr|snr|lead|manager|mgr|expert|iii|iv|level [3-9])\b|"
+    r"\b(engineer|developer|sde|analyst|scientist|consultant|specialist) ?[3-9]\b",  # "Engineer 3": I and II stay
+    re.I,
+)
 SENIOR_WORD_RE = re.compile(r"\b(senior|sr|snr)\b", re.I)
 JUNIOR_RE = re.compile(
     r"\b(junior|jr|associate|graduate|grad|trainee|intern|internship|entry|fresh|apprentice|campus)\b",

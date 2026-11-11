@@ -23,7 +23,8 @@ LI_ROWS = [(9001, "Gulf Bank", "Graduate Data Analyst Programme"), (9002, "Acme 
            (9003, "ADIB - Abu Dhabi Islamic Bank", "MIS Analyst"),  # Oracle's job 105, nationals only
            (9004, "Ziina", "Junior Python Developer"),  # on Ashby, with a description
            (9005, "OldCo", "Data Engineer Trainee"),  # seen on an earlier day
-           (9006, "Acme Robotics", "Junior AI Engineer"), (9007, "Beta Labs", "Junior BI Developer")]
+           (9006, "Acme Robotics", "Junior AI Engineer"), (9007, "Beta Labs", "Junior BI Developer"),
+           (9008, "Emirates", "Business Insights Analyst - Emiratization Graduate Programme")]  # the title decides
 LI_PAGES = {"9001": (200, "/jobs/view/9001", "Join our graduate programme. This programme is open to UAE Nationals only."),
             "9002": (200, "/jobs/view/9002", "About the job. 0-1 years of experience with Python. Fresh graduates welcome."),
             "9006": (429, "/jobs/view/9006", "")}
@@ -458,7 +459,8 @@ def main():
         titles5 = {j["title"]: j for j in latest5["jobs"]}
         pages = latest5["summary"]["status"]["linkedin_pages"]
         print("linkedin pages:", pages, LI_ASKED)
-        assert LI_ASKED[-1] == "9006" and not {"9003", "9004", "9005"} & set(LI_ASKED), LI_ASKED
+        assert LI_ASKED[-1] == "9006" and not {"9003", "9004", "9005", "9008"} & set(LI_ASKED), LI_ASKED
+        assert "Business Insights Analyst - Emiratization Graduate Programme" not in titles5  # dropped unread
         assert pages["wanted"] == 4 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
         assert pages["skipped"] == 4 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
         acme = titles5["Junior Data Scientist"]
