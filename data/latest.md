@@ -1,13 +1,11 @@
-# UAE junior roles: 99 open, 35 new today
+# UAE junior roles: 99 open, 36 new today
 
-Updated 11 Nov 2026 04:42 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
+Updated 11 Nov 2026 12:23 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and frontend/mobile roles are filtered out.
 
 ## Status
 
-- **Sources:** 83 of 84 answered
-- **Blocked:** jobspy:bayt, 2 of 3 queries blocked, 1 skipped; jobspy:linkedin, 2 of 8 queries blocked
-- **LinkedIn pages:** 5 of 24 new roles read; 3 dropped after reading (2 nationals-only, 1 4+ years); stopped at a refusal (429 /jobs/view/4487466121), 14 not tried; 4 over the daily limit
-- **New roles in the last 7 days:** 199 from LinkedIn, Indeed and Bayt; 10 from employer sites and boards
+- **Sources:** 81 of 81 answered (career systems only; LinkedIn, Indeed and Bayt run once a day)
+- **New roles in the last 7 days:** 199 from LinkedIn, Indeed and Bayt; 11 from employer sites and boards
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -34,27 +32,27 @@ Updated 11 Nov 2026 04:42 Dubai time. Sorted new first, then by fit. Lanes: data
 | 21 | 🆕 | [Arabic-Speaking & Writing ERP Project Consultant – Part-Time / Intern](https://ae.indeed.com/viewjob?jk=3f7d0dca2967bbfc) | Craft INteractive Technology LLC | Dubai | Graduate / intern | 2026-11-10 | indeed |  |
 | 22 | 🆕 | [Automation Engineer, Reliability Maintenance Engineering](https://ae.indeed.com/viewjob?jk=f986dae73bda1790) | Amazon.com | Abu Dhabi | Software / backend | 2026-11-10 | indeed |  |
 | 23 | 🆕 | [Engineering Graduate - E1](https://ae.indeed.com/viewjob?jk=198e98ec1aefa5e3) | Lockheed Martin | Abu Dhabi | Graduate / intern | 2026-11-10 | indeed |  |
-| 24 | 🆕 | [Software Development Engineer 3](https://www.linkedin.com/jobs/view/4486828792) | noon | Dubai | Software / backend | 2026-11-10 | linkedin |  |
-| 25 | 🆕 | [Software Engineer - Database - Bitnomial](https://www.linkedin.com/jobs/view/4488642332) | Kraken | UAE | Software / backend | 2026-11-10 | linkedin |  |
-| 26 | 🆕 | [ESG Data Validation Specialist](https://www.linkedin.com/jobs/view/4487466121) | EFS Staffing Solutions | Dubai | Data analyst | 2026-11-10 | linkedin | agency or unnamed employer |
-| 27 | 🆕 | [Product Analyst](https://www.linkedin.com/jobs/view/4480968610) | Easygenerator | Dubai | Product | 2026-11-10 | linkedin |  |
-| 28 | 🆕 | [Business Analyst (Arabic fluency required)](https://ae.indeed.com/viewjob?jk=61065dedca175359) | Virtua Advanced Solution | Abu Dhabi | Business analysis | 2026-11-10 | indeed |  |
-| 29 | 🆕 | [Analyst, Capital & Projects (Capital Projects Department (Gas Ops.))](https://www.linkedin.com/jobs/view/4489419444) | ADNOC Group | Abu Dhabi | Analyst (other) | 2026-11-10 | linkedin |  |
-| 30 | 🆕 | [Machine Learning Engineer / Data Scientist](https://ae.indeed.com/viewjob?jk=fcdaa0a609ad1014) | Datamatics Global Services Ltd | Sharjah | Data science | 2026-11-10 | indeed | asks 3 yrs |
-| 31 | 🆕 | [IT Executive – Infrastructure & Technical Support](https://ae.indeed.com/viewjob?jk=c78d1dd998d54cdf) | BIKANERVALA RESTAURANT | Dubai | IT | 2026-11-10 | indeed |  |
-| 32 | 🆕 | [IT Support Engineer](https://ae.indeed.com/viewjob?jk=4cbca93be48cd7bd) | AWS Investment Group LLC | Dubai | IT | 2026-11-10 | indeed |  |
-| 33 | 🆕 | [QA Engineer](https://ae.indeed.com/viewjob?jk=d97c70a2296b9dda) | Cinergie Digital | Dubai | Software / backend | 2026-11-09 | indeed | asks 3 yrs |
-| 34 | 🆕 | [Information Technology Technical Support](https://www.linkedin.com/jobs/view/4487465531) | Confidential | Dubai | IT | 2026-11-10 | linkedin | agency or unnamed employer |
-| 35 | 🆕 | [Analyst-Group Human Resources](https://ae.indeed.com/viewjob?jk=0069361e8efdb6f1) | Transguard Group | UAE | Analyst (other) | 2026-11-10 | indeed | asks 3 yrs |
-| 36 |  | [Commercial Graduate Scheme, Junior Data Scientist](https://www.linkedin.com/jobs/view/4488365762) | Cobblestone Energy | Dubai | Data science | 2026-11-10 | linkedin |  |
-| 37 |  | [Data Analyst - Intern](https://apply.workable.com/j/7FDAFEBBEE) | dubizzle Group | Dubai | Data analyst | 2026-11-10 | workable + linkedin |  |
-| 38 |  | [Machine Learning - Intern](https://apply.workable.com/j/222E77A4D9) | dubizzle Group | Dubai | AI / ML | 2026-11-10 | workable |  |
-| 39 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-11-10 | workday |  |
-| 40 |  | [Specialist, AI Agent](https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853) | First Abu Dhabi Bank | Abu Dhabi | AI / ML | 2026-11-09 | oracle |  |
-| 41 |  | [Commercial Graduate Scheme, Junior Market Analyst](https://www.linkedin.com/jobs/view/4488373590) | Cobblestone Energy | Dubai | Analyst (other) | 2026-11-10 | linkedin |  |
-| 42 |  | [Intern - Digital Trust](https://elzw.fa.em8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3548) | KPMG Lower Gulf | Abu Dhabi | Graduate / intern | 2026-11-10 | oracle |  |
+| 24 | 🆕 | [Fraud Monitoring Analyst (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906) | ADIB | UAE | Analyst (other) | 2026-11-11 | oracle |  |
+| 25 | 🆕 | [Software Development Engineer 3](https://www.linkedin.com/jobs/view/4486828792) | noon | Dubai | Software / backend | 2026-11-10 | linkedin |  |
+| 26 | 🆕 | [Software Engineer - Database - Bitnomial](https://www.linkedin.com/jobs/view/4488642332) | Kraken | UAE | Software / backend | 2026-11-10 | linkedin |  |
+| 27 | 🆕 | [ESG Data Validation Specialist](https://www.linkedin.com/jobs/view/4487466121) | EFS Staffing Solutions | Dubai | Data analyst | 2026-11-10 | linkedin | agency or unnamed employer |
+| 28 | 🆕 | [Product Analyst](https://www.linkedin.com/jobs/view/4480968610) | Easygenerator | Dubai | Product | 2026-11-10 | linkedin |  |
+| 29 | 🆕 | [Business Analyst (Arabic fluency required)](https://ae.indeed.com/viewjob?jk=61065dedca175359) | Virtua Advanced Solution | Abu Dhabi | Business analysis | 2026-11-10 | indeed |  |
+| 30 | 🆕 | [Analyst, Capital & Projects (Capital Projects Department (Gas Ops.))](https://www.linkedin.com/jobs/view/4489419444) | ADNOC Group | Abu Dhabi | Analyst (other) | 2026-11-10 | linkedin |  |
+| 31 | 🆕 | [Machine Learning Engineer / Data Scientist](https://ae.indeed.com/viewjob?jk=fcdaa0a609ad1014) | Datamatics Global Services Ltd | Sharjah | Data science | 2026-11-10 | indeed | asks 3 yrs |
+| 32 | 🆕 | [IT Executive – Infrastructure & Technical Support](https://ae.indeed.com/viewjob?jk=c78d1dd998d54cdf) | BIKANERVALA RESTAURANT | Dubai | IT | 2026-11-10 | indeed |  |
+| 33 | 🆕 | [IT Support Engineer](https://ae.indeed.com/viewjob?jk=4cbca93be48cd7bd) | AWS Investment Group LLC | Dubai | IT | 2026-11-10 | indeed |  |
+| 34 | 🆕 | [QA Engineer](https://ae.indeed.com/viewjob?jk=d97c70a2296b9dda) | Cinergie Digital | Dubai | Software / backend | 2026-11-09 | indeed | asks 3 yrs |
+| 35 | 🆕 | [Information Technology Technical Support](https://www.linkedin.com/jobs/view/4487465531) | Confidential | Dubai | IT | 2026-11-10 | linkedin | agency or unnamed employer |
+| 36 | 🆕 | [Analyst-Group Human Resources](https://ae.indeed.com/viewjob?jk=0069361e8efdb6f1) | Transguard Group | UAE | Analyst (other) | 2026-11-10 | indeed | asks 3 yrs |
+| 37 |  | [Commercial Graduate Scheme, Junior Data Scientist](https://www.linkedin.com/jobs/view/4488365762) | Cobblestone Energy | Dubai | Data science | 2026-11-10 | linkedin |  |
+| 38 |  | [Data Analyst - Intern](https://apply.workable.com/j/7FDAFEBBEE) | dubizzle Group | Dubai | Data analyst | 2026-11-10 | workable |  |
+| 39 |  | [Machine Learning - Intern](https://apply.workable.com/j/222E77A4D9) | dubizzle Group | Dubai | AI / ML | 2026-11-10 | workable |  |
+| 40 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-11-09 | workday |  |
+| 41 |  | [Specialist, AI Agent](https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853) | First Abu Dhabi Bank | Abu Dhabi | AI / ML | 2026-11-09 | oracle |  |
+| 42 |  | [Commercial Graduate Scheme, Junior Market Analyst](https://www.linkedin.com/jobs/view/4488373590) | Cobblestone Energy | Dubai | Analyst (other) | 2026-11-10 | linkedin |  |
 | 43 |  | [Intern, Resilience](https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/27991) | DP World | UAE | Graduate / intern | 2026-11-10 | oracle |  |
-| 44 |  | [Intern, Technical Program Management - Dubai, United Arab Emirates](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Intern--Technical-Program-Management_R-284922-2) | Mastercard | Dubai | Graduate / intern | 2026-11-10 | workday |  |
+| 44 |  | [Intern, Technical Program Management - Dubai, United Arab Emirates](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Intern--Technical-Program-Management_R-284922-2) | Mastercard | Dubai | Graduate / intern | 2026-11-09 | workday |  |
 | 45 |  | [Data Center Infra Engineer  - 2027 Internship](https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship) | Amazon Data Services Emirates LLC | Dubai | IT | 2026-10-13 | amazon |  |
 | 46 |  | [HR Data Analyst](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4783) | ADIB | UAE | Data analyst | 2026-10-22 | oracle |  |
 | 47 |  | [AI Engineer](https://www.linkedin.com/jobs/view/4312704411) | Technology Innovation Institute | UAE | AI / ML | 2026-11-10 | linkedin |  |
@@ -98,14 +96,14 @@ Updated 11 Nov 2026 04:42 Dubai time. Sorted new first, then by fit. Lanes: data
 | 85 |  | [Full Stack Developer](https://ae.indeed.com/viewjob?jk=e722eefb8b6948d6) | Helcoo LLC SOC | Dubai | Software / backend | 2026-11-09 | indeed | asks 3 yrs |
 | 86 |  | [AI Strategist](https://propertyfinder.teamtailor.com/jobs/8572362-ai-strategist) | Property Finder | Dubai | AI / ML | 2026-10-20 | teamtailor | asks 3 yrs |
 | 87 |  | [Product Owner - Remote - 3 Months - Octopus by RTG](https://ae.indeed.com/viewjob?jk=b84b620ecf4671e4) | Robusta | Dubai | Product | 2026-11-08 | indeed | asks 3 yrs |
-| 88 |  | [Associate Product Specialist, Launch Program 2027 – Dubai, UAE (UAE National Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Product-Specialist--Launch-Program-2027---Dubai--UAE--UAE-National-Preferred-_R-287600-2) | Mastercard | Dubai | Product | 2026-11-10 | workday | UAE nationals preferred |
-| 89 |  | [Global Markets Launch Graduate Rotational Program 2027 - Associate Product Specialist & Associate Analyst, Account Management- Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Launch-Graduate-Rotational-Program-2027---Associate-Product-Specialist---Associate-Analyst--Account-Management--Dubai--UAE--UAE-Nationals-Preferred-_R-292816-2) | Mastercard | Dubai | Product | 2026-11-10 | workday | UAE nationals preferred |
-| 90 |  | [Global Markets Summer Internship 2027 - Product Management intern & Sales Analyst Intern - Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Summer-Internship-2027---Product-Management-intern---Sales-Analyst-Intern---Dubai--UAE--UAE-Nationals-Preferred-_R-287598-2) | Mastercard | Dubai | Product | 2026-11-11 | workday | UAE nationals preferred |
-| 91 |  | [Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Product-Management-Intern--Summer-2027---Dubai--UAE--UAE-Nationals-Preferred-_R-287599-1) | Mastercard | Dubai | Product | 2026-11-07 | workday | UAE nationals preferred |
+| 88 |  | [Associate Product Specialist, Launch Program 2027 – Dubai, UAE (UAE National Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Product-Specialist--Launch-Program-2027---Dubai--UAE--UAE-National-Preferred-_R-287600-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
+| 89 |  | [Global Markets Launch Graduate Rotational Program 2027 - Associate Product Specialist & Associate Analyst, Account Management- Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Launch-Graduate-Rotational-Program-2027---Associate-Product-Specialist---Associate-Analyst--Account-Management--Dubai--UAE--UAE-Nationals-Preferred-_R-292816-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
+| 90 |  | [Global Markets Summer Internship 2027 - Product Management intern & Sales Analyst Intern - Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Summer-Internship-2027---Product-Management-intern---Sales-Analyst-Intern---Dubai--UAE--UAE-Nationals-Preferred-_R-287598-2) | Mastercard | Dubai | Product | 2026-11-10 | workday | UAE nationals preferred |
+| 91 |  | [Product Management Intern, Summer 2027 – Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Product-Management-Intern--Summer-2027---Dubai--UAE--UAE-Nationals-Preferred-_R-287599-1) | Mastercard | Dubai | Product | 2026-11-06 | workday | UAE nationals preferred |
 | 92 |  | [Data Engineer](https://careers.g42.ai/global/en/job/3302) | G42 | Abu Dhabi | Data engineering | 2026-09-04 | phenom | asks 3 yrs |
 | 93 |  | [Engineering Graduate Trainee](https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee) | Property Finder | Dubai | Graduate / intern | 2026-09-29 | teamtailor |  |
 | 94 |  | [Forward Deployed Engineer, Infrastructure Specialist (Middle East)](https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af) | cohere | Dubai | Software / backend | 2026-09-10 | ashby |  |
-| 95 |  | [Onboarding Intern, Beauty & Wellness](https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc) | qlub | Dubai | Graduate / intern | 2026-11-09 | ashby + indeed | prefers own visa |
+| 95 |  | [Onboarding Intern, Beauty & Wellness](https://jobs.ashbyhq.com/qlub/9f5d1bad-b9c2-4bc3-bfaa-3130ac1f51dc) | qlub | Dubai | Graduate / intern | 2026-11-09 | ashby | prefers own visa |
 | 96 |  | [Tamara Internship Program](https://job-boards.eu.greenhouse.io/tamara/jobs/4996993101) | Tamara | Dubai | Graduate / intern | 2026-10-04 | greenhouse |  |
 | 97 |  | [IT Support Engineer](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389) | NMC Healthcare | Abu Dhabi | IT | 2026-09-11 | oracle |  |
 | 98 |  | [Resident Engineer – Data Center](https://ae.indeed.com/viewjob?jk=a5c5a62691d31d21) | Cloud 9 Networks | Dubai | IT | 2026-11-09 | indeed | asks 3 yrs |
@@ -115,84 +113,80 @@ Updated 11 Nov 2026 04:42 Dubai time. Sorted new first, then by fit. Lanes: data
 
 | Source | Status | Jobs fetched |
 |---|---|---|
-| _linkedin_pages | refused after 5 | 5 |
-| jobspy:bayt | failed, 2 of 3 queries blocked, 1 skipped | 0 |
 | _details | ok | 1 |
-| amazon | ok | 63 |
-| ashby:checkout.com | ok | 170 |
+| amazon | ok | 65 |
+| ashby:checkout.com | ok | 169 |
 | ashby:cohere | ok | 127 |
-| ashby:elevenlabs | ok | 131 |
+| ashby:elevenlabs | ok | 130 |
 | ashby:leantech | ok | 9 |
 | ashby:mexdigital | ok | 14 |
-| ashby:openai | ok | 826 |
-| ashby:qlub | ok | 31 |
+| ashby:openai | ok | 828 |
+| ashby:qlub | ok | 29 |
 | ashby:ziina | ok | 13 |
-| attrax:talabat | ok | 154 |
+| attrax:talabat | ok | 153 |
 | avature:Dubai Holding | ok | 140 |
 | deriv | ok | 42 |
-| greenhouse:bybit | ok | 151 |
+| greenhouse:bybit | ok | 152 |
 | greenhouse:careem | ok | 15 |
 | greenhouse:cobblestoneenergy | ok | 2 |
 | greenhouse:cobblestoneenergy1 | ok | 3 |
 | greenhouse:cobblestoneenergy4 | ok | 2 |
-| greenhouse:databricks | ok | 920 |
-| greenhouse:datadog | ok | 394 |
+| greenhouse:databricks | ok | 918 |
+| greenhouse:datadog | ok | 392 |
 | greenhouse:dmgevents | ok | 23 |
 | greenhouse:infotrust | ok | 0 |
-| greenhouse:mongodb | ok | 377 |
-| greenhouse:okx | ok | 385 |
+| greenhouse:mongodb | ok | 376 |
+| greenhouse:okx | ok | 386 |
 | greenhouse:ripple | ok | 119 |
 | greenhouse:scaleai | ok | 169 |
-| greenhouse:tamara | ok | 37 |
-| jibe:M42 | ok | 94 |
-| jobspy:indeed | ok | 263 |
-| jobspy:linkedin | ok, 2 of 8 queries blocked | 170 |
+| greenhouse:tamara | ok | 38 |
+| jibe:M42 | ok | 96 |
 | lever:Yassir | ok | 119 |
-| lever:aldar | ok | 49 |
+| lever:aldar | ok | 50 |
 | lever:binance | ok | 4 |
 | lever:palantir | ok | 304 |
 | lever:weride | ok | 12 |
 | oracle:AD Ports Group | ok | 22 |
-| oracle:ADIB | ok | 151 |
-| oracle:Aster DM Healthcare | ok | 626 |
-| oracle:DP World | ok | 513 |
-| oracle:Dell | ok | 531 |
+| oracle:ADIB | ok | 152 |
+| oracle:Aster DM Healthcare | ok | 632 |
+| oracle:DP World | ok | 515 |
+| oracle:Dell | ok | 546 |
 | oracle:Dubai Airports | ok | 4 |
-| oracle:Emaar | ok | 7 |
+| oracle:Emaar | ok | 6 |
 | oracle:Emirates Islamic | ok | 23 |
-| oracle:Emirates NBD | ok | 37 |
-| oracle:First Abu Dhabi Bank | ok | 83 |
-| oracle:KPMG Lower Gulf | ok | 77 |
-| oracle:Mashreq | ok | 346 |
-| oracle:NMC Healthcare | ok | 140 |
+| oracle:Emirates NBD | ok | 34 |
+| oracle:First Abu Dhabi Bank | ok | 80 |
+| oracle:KPMG Lower Gulf | ok | 76 |
+| oracle:Mashreq | ok | 349 |
+| oracle:NMC Healthcare | ok | 142 |
 | oracle:Oracle | ok | 6 |
 | oracle:PureHealth | ok | 27 |
 | oracle:SEHA | ok | 128 |
-| oracle:SSMC | ok | 200 |
+| oracle:SSMC | ok | 201 |
 | oracle:du | ok | 14 |
-| oracle:e& | ok | 8 |
+| oracle:e& | ok | 9 |
 | phenom:ADCB | ok | 34 |
 | phenom:G42 | ok | 59 |
-| phenom:Majid Al Futtaim | ok | 263 |
+| phenom:Majid Al Futtaim | ok | 262 |
 | pinpoint:tabby | ok | 31 |
-| successfactors:Al-Futtaim | ok | 108 |
-| successfactors:EY | ok | 16 |
+| successfactors:Al-Futtaim | ok | 111 |
+| successfactors:EY | ok | 15 |
 | successfactors:PwC Middle East | ok | 16 |
 | teamtailor:careers.chalhoubgroup.com | ok | 100 |
 | teamtailor:dubizzle | ok | 6 |
 | teamtailor:mumzworld | ok | 12 |
-| teamtailor:propertyfinder | ok | 37 |
+| teamtailor:propertyfinder | ok | 38 |
 | teamtailor:tappayments | ok | 20 |
-| workable:bayutdubizzle | ok | 30 |
-| workable:foodics | ok | 32 |
+| workable:bayutdubizzle | ok | 31 |
+| workable:foodics | ok | 31 |
 | workable:smartcrowd | ok | 0 |
 | workday:AstraZeneca | ok | 4 |
-| workday:Baker Hughes | ok | 15 |
+| workday:Baker Hughes | ok | 16 |
 | workday:Cleveland Clinic Abu Dhabi | ok | 1 |
 | workday:Coca-Cola | ok | 1 |
 | workday:GSK | ok | 4 |
 | workday:HP | ok | 0 |
-| workday:KBR | ok | 144 |
+| workday:KBR | ok | 142 |
 | workday:Mastercard | ok | 11 |
 | workday:Novartis | ok | 1 |
 | workday:Pfizer | ok | 0 |

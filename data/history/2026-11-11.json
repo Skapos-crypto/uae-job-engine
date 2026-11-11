@@ -598,6 +598,32 @@
   "snippet": "**About the role**\n------------------\n\nThe Computer Systems Administrator helps maintain smooth operation of multi-user computer systems, including coordination with network administrators. Develops and monitors policies and standards for allocation related to the use of computin"
  },
  {
+  "key": "ed7c416efcd50c4d",
+  "title": "Fraud Monitoring Analyst (Outsource)",
+  "employer": "ADIB",
+  "sector": "banking",
+  "city": "UAE",
+  "location": "United Arab Emirates",
+  "family": "analyst",
+  "cv": "Data_Analyst",
+  "seniority": "unspecified",
+  "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906",
+  "source": "oracle:ADIB",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:ADIB"
+  ],
+  "posted": "2026-11-11",
+  "age_days": 0,
+  "min_years": 1,
+  "flags": [],
+  "first_seen": "2026-11-11",
+  "last_seen": "2026-11-11",
+  "is_new": true,
+  "score": 4.1,
+  "snippet": " Role : Fraud Monitoring Analyst (Outsource) Location : Abu Dhabi Role Purpose: Monitoring and reporting of transactions risk aspects from Issuer/E-Channels point of view. Job involves transaction activity review, fraud detection and liaison with concerned departments/cardholders"
+ },
+ {
   "key": "fc5c183792b081da",
   "title": "Software Development Engineer 3",
   "employer": "noon",

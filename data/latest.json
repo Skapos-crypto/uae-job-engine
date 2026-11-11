@@ -1,14 +1,14 @@
 {
  "generated": {
-  "utc": "2026-11-11T00:42:22+00:00",
-  "dubai": "2026-11-11 04:42",
-  "full_run": true
+  "utc": "2026-11-11T08:23:57+00:00",
+  "dubai": "2026-11-11 12:23",
+  "full_run": false
  },
  "summary": {
   "total": 99,
-  "new_today": 35,
-  "carried_over": 0,
-  "raw_postings": 9238,
+  "new_today": 36,
+  "carried_over": 65,
+  "raw_postings": 8829,
   "by_family": {
    "software": 14,
    "business": 5,
@@ -16,18 +16,18 @@
    "data_analyst": 11,
    "data_eng": 6,
    "data_science": 5,
-   "graduate": 13,
+   "graduate": 12,
+   "analyst": 5,
    "product": 7,
-   "analyst": 4,
    "it": 10,
    "bi": 1
   },
   "by_source": {
    "jobspy": 65,
    "amazon": 5,
+   "oracle": 5,
    "workable": 2,
    "workday": 6,
-   "oracle": 5,
    "teamtailor": 5,
    "avature": 2,
    "attrax": 3,
@@ -35,45 +35,27 @@
    "phenom": 1,
    "greenhouse": 1
   },
-  "http_calls": 205,
-  "verdicts_shared": 1,
+  "http_calls": 206,
+  "verdicts_shared": 0,
   "rejected": {
-   "no-family": 1528,
-   "excluded-title": 1005,
-   "graduate-other-discipline": 12,
-   "senior": 168,
+   "no-family": 1389,
+   "excluded-title": 919,
+   "senior": 101,
+   "graduate-other-discipline": 7,
    "title-elsewhere": 3,
-   "nationals-only": 37,
+   "nationals-only": 21,
    "stale": 14,
-   "4+ years": 20
+   "4+ years": 11
   },
   "status": {
-   "sources": 84,
-   "ok": 83,
+   "sources": 81,
+   "ok": 81,
    "failing": {},
-   "blocked": {
-    "jobspy:linkedin": "2 of 8 queries blocked",
-    "jobspy:bayt": "2 of 3 queries blocked, 1 skipped"
-   },
+   "blocked": {},
    "failing_in_a_row": {},
    "new_last_7_days": {
     "jobspy": 199,
-    "employer": 10
-   },
-   "linkedin_pages": {
-    "wanted": 24,
-    "tried": 6,
-    "read": 5,
-    "empty": 0,
-    "failed": 0,
-    "blocked": 1,
-    "skipped": 14,
-    "over_limit": 4,
-    "dropped": {
-     "4+ years": 1,
-     "nationals-only": 2
-    },
-    "error": "429 /jobs/view/4487466121"
+    "employer": 11
    }
   }
  },
@@ -677,6 +659,32 @@
    "snippet": "**About the role**\n------------------\n\nThe Computer Systems Administrator helps maintain smooth operation of multi-user computer systems, including coordination with network administrators. Develops and monitors policies and standards for allocation related to the use of computin"
   },
   {
+   "key": "ed7c416efcd50c4d",
+   "title": "Fraud Monitoring Analyst (Outsource)",
+   "employer": "ADIB",
+   "sector": "banking",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906",
+   "source": "oracle:ADIB",
+   "source_type": "employer",
+   "seen_on": [
+    "oracle:ADIB"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 0,
+   "min_years": 1,
+   "flags": [],
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-11",
+   "is_new": true,
+   "score": 4.1,
+   "snippet": " Role : Fraud Monitoring Analyst (Outsource) Location : Abu Dhabi Role Purpose: Monitoring and reporting of transactions risk aspects from Issuer/E-Channels point of view. Job involves transaction activity review, fraud detection and liaison with concerned departments/cardholders"
+  },
+  {
    "key": "fc5c183792b081da",
    "title": "Software Development Engineer 3",
    "employer": "noon",
@@ -1038,7 +1046,6 @@
    "source": "workable:bayutdubizzle",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:linkedin",
     "workable:bayutdubizzle"
    ],
    "posted": "2026-11-10",
@@ -1093,8 +1100,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 1,
+   "posted": "2026-11-09",
+   "age_days": 2,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1156,32 +1163,6 @@
    "snippet": ""
   },
   {
-   "key": "66f10319832316bc",
-   "title": "Intern - Digital Trust",
-   "employer": "KPMG Lower Gulf",
-   "sector": "consulting",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi, United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://elzw.fa.em8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3548",
-   "source": "oracle:KPMG Lower Gulf",
-   "source_type": "employer",
-   "seen_on": [
-    "oracle:KPMG Lower Gulf"
-   ],
-   "posted": "2026-11-10",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-10",
-   "last_seen": "2026-11-11",
-   "is_new": false,
-   "score": 3.7,
-   "snippet": ""
-  },
-  {
    "key": "0cbadd606274679f",
    "title": "Intern, Resilience",
    "employer": "DP World",
@@ -1223,8 +1204,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 1,
+   "posted": "2026-11-09",
+   "age_days": 2,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2386,8 +2367,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 1,
+   "posted": "2026-11-09",
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2414,8 +2395,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 1,
+   "posted": "2026-11-09",
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2442,8 +2423,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-11",
-   "age_days": 0,
+   "posted": "2026-11-10",
+   "age_days": 1,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2470,8 +2451,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-07",
-   "age_days": 4,
+   "posted": "2026-11-06",
+   "age_days": 5,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2576,8 +2557,7 @@
    "source": "ashby:qlub",
    "source_type": "ats",
    "seen_on": [
-    "ashby:qlub",
-    "jobspy:indeed"
+    "ashby:qlub"
    ],
    "posted": "2026-11-09",
    "age_days": 2,
