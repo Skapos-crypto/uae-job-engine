@@ -1,14 +1,14 @@
 {
  "generated": {
-  "utc": "2026-11-12T02:04:29+00:00",
-  "dubai": "2026-11-12 06:04",
-  "full_run": true
+  "utc": "2026-11-12T08:51:05+00:00",
+  "dubai": "2026-11-12 12:51",
+  "full_run": false
  },
  "summary": {
   "total": 115,
   "new_today": 32,
-  "carried_over": 0,
-  "raw_postings": 9328,
+  "carried_over": 82,
+  "raw_postings": 8891,
   "by_family": {
    "ai_ml": 29,
    "bi": 2,
@@ -36,45 +36,28 @@
    "greenhouse": 1
   },
   "http_calls": 204,
-  "verdicts_shared": 1,
+  "verdicts_shared": 0,
   "rejected": {
-   "no-family": 1547,
-   "excluded-title": 1011,
-   "senior": 192,
-   "graduate-other-discipline": 17,
+   "no-family": 1404,
+   "excluded-title": 927,
+   "senior": 98,
+   "graduate-other-discipline": 9,
    "title-elsewhere": 3,
-   "nationals-only": 42,
+   "nationals-only": 21,
    "stale": 14,
-   "4+ years": 28
+   "4+ years": 12
   },
   "status": {
-   "sources": 84,
-   "ok": 83,
+   "sources": 81,
+   "ok": 81,
    "failing": {},
-   "blocked": {
-    "jobspy:bayt": "2 of 3 queries blocked, 1 skipped"
-   },
+   "blocked": {},
    "failing_in_a_row": {
     "jobspy:bayt": 3
    },
    "new_last_7_days": {
     "jobspy": 191,
     "employer": 8
-   },
-   "linkedin_pages": {
-    "wanted": 17,
-    "tried": 17,
-    "read": 17,
-    "empty": 0,
-    "failed": 0,
-    "blocked": 0,
-    "skipped": 0,
-    "over_limit": 0,
-    "dropped": {
-     "nationals-only": 1,
-     "4+ years": 4
-    },
-    "error": null
    }
   }
  },
@@ -1018,8 +1001,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 2,
+   "posted": "2026-11-09",
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1174,8 +1157,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 2,
+   "posted": "2026-11-09",
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2780,8 +2763,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 2,
+   "posted": "2026-11-09",
+   "age_days": 3,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2808,8 +2791,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 2,
+   "posted": "2026-11-09",
+   "age_days": 3,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2836,8 +2819,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-11",
-   "age_days": 1,
+   "posted": "2026-11-10",
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2864,8 +2847,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-07",
-   "age_days": 5,
+   "posted": "2026-11-06",
+   "age_days": 6,
    "min_years": null,
    "flags": [
     "nationals_preferred"
