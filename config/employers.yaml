@@ -1,6 +1,6 @@
 # Employer job systems and job boards polled directly.
-# verified: true  = the employer's own careers page was checked to link to this tenant and site,
-#                   and the endpoint was seen answering with that employer's jobs.
+# verified: true  = the employer's own careers page or its indexed job pages were checked to point at
+#                   this tenant and site, and the endpoint was seen answering with that employer's jobs.
 # verified: false = a probe. After each run, data/health.json shows whether it answered;
 #                   prune entries that keep failing.
 
@@ -41,6 +41,8 @@ phenom:
   - {name: ADCB, sector: banking, base: "https://adcbcareers.com/gb/en", verified: true}
   - {name: G42, sector: AI, base: "https://careers.g42.ai/global/en", verified: true}
   - {name: Majid Al Futtaim, sector: retail, base: "https://careers.majidalfuttaim.com/global/en", verified: true}
+  # jobs.adnoc.ae: ADNOC Group and its companies (Logistics & Services, Distribution, Gas ...)
+  - {name: ADNOC, sector: energy, base: "https://jobs.adnoc.ae/us/en", verified: true}
 
 # SAP SuccessFactors career sites: the HTML search page (their /services/ RSS is robots-disallowed).
 successfactors:
@@ -50,8 +52,12 @@ successfactors:
   - {name: Al-Futtaim, sector: retail and automotive, base: "https://www.afuturewithus.com", verified: true}
 
 # Jibe (iCIMS) career sites: GET {base}/api/jobs. crawl_delay is the site's robots.txt value.
+# country asks a worldwide site for one country's jobs, as its own country pages do.
 jibe:
   - {name: M42, sector: healthcare, base: "https://careers.m42.ae", crawl_delay: 5, verified: true}
+  # se.jibeapply.com/uae; 4,000 jobs worldwide, about 30 in the UAE
+  - {name: Schneider Electric, sector: industry, base: "https://se.jibeapply.com", crawl_delay: 5,
+     country: "United Arab Emirates", verified: true}
 
 # Avature career portals: the HTML search (no locations in it). assume_location stands in until a
 # candidate's job page gives the real one; candidates outside the UAE are then dropped.
@@ -67,6 +73,10 @@ attrax:
 # Deriv's own career site: join.deriv.careers/api/job-openings (the JSON its job page loads).
 deriv: true
 
+# Emirates Group (Emirates, dnata, SkyCargo ...): emiratesgroupcareers.com/api/v1/jobs, the JSON its
+# own job search loads. One request returns every open job with its description.
+emirates_group: true
+
 # Checked in November 2026 and not collected:
 #   Masdar, Etihad      SmartRecruiters: api.smartrecruiters.com robots.txt disallows all crawlers
 #   flydubai            iCIMS: careers-flydubai.icims.com robots.txt is Disallow: /
@@ -78,7 +88,17 @@ deriv: true
 #   Wio, Mubadala, Landmark  careers pages list no jobs and link to no job system
 #   ADQ                 no careers page on adq.ae
 #   noon                noon.com careers page links only to LinkedIn
-#   (JobSpy still picks up their LinkedIn, Indeed and Bayt postings)
+#   Citi                Workday: citi.wd5 robots.txt disallows its job site (/2/)
+#   Marsh McLennan      Workday: mmc.wd1 robots.txt disallows its job site (/MMC/); Oliver Wyman is on it
+#   Mars                Workday: mars.wd3 robots.txt disallows /External/
+#   Mediclinic          SuccessFactors: careers.mediclinic.ae refuses the TLS handshake of non-browser clients
+#   SAP                 SuccessFactors: jobs.sap.com answers 403
+#   L'Oreal             careers.loreal.com robots.txt disallows its job search
+#   Not yet readable, worth another look:
+#   EDGE Group          SuccessFactors (careers.edgegroup.ae): the site showed a maintenance page on 2026-11-13
+#   Siemens Energy      Avature folder portal (jobs.siemens-energy.com/en_US/jobs/Jobs): needs its own list parser
+#   Alshaya             PageUp (jobsearch.alshaya.com): no collector for that system yet
+#   (JobSpy still picks up their LinkedIn and Indeed postings)
 
 # Workday: POST /wday/cxs/{tenant}/{site}/jobs, filtered to UAE locations via the site's own facets.
 # PwC was removed: PwC Middle East lists its UAE roles on SuccessFactors (careers.pwc.com), not this tenant.
@@ -98,6 +118,16 @@ workday:
   - {name: Philips, sector: healthcare tech, tenant: philips, wd: wd3, site: jobs-and-careers, verified: true}
   - {name: Coca-Cola, sector: consumer goods, tenant: coke, wd: wd1, site: coca-cola-careers, verified: true}
   - {name: Thomson Reuters, sector: media and data, tenant: thomsonreuters, wd: wd5, site: External_Career_Site, verified: true}
+  # Added 2026-11-13 by following the employers LinkedIn and Indeed kept surfacing. Each tenant's
+  # robots.txt lists the site as its public career site, and it answered with UAE jobs.
+  - {name: Medtronic, sector: medical devices, tenant: medtronic, wd: wd1, site: MedtronicCareers, verified: true}
+  - {name: Accenture, sector: consulting, tenant: accenture, wd: wd103, site: AccentureCareers, verified: true}
+  - {name: DXC Technology, sector: IT services, tenant: dxctechnology, wd: wd1, site: DXCJobs, verified: true}
+  - {name: Cigna, sector: insurance, tenant: cigna, wd: wd5, site: cignacareers, verified: true}
+  - {name: GE Vernova, sector: energy, tenant: gevernova, wd: wd5, site: Vernova_ExternalSite, verified: true}
+  - {name: GE HealthCare, sector: healthcare tech, tenant: gehc, wd: wd5, site: GEHC_ExternalSite, verified: true}
+  - {name: NVIDIA, sector: big tech, tenant: nvidia, wd: wd5, site: NVIDIAExternalCareerSite, verified: true}
+  - {name: Snap, sector: big tech, tenant: snapchat, wd: wd1, site: snap, verified: true}
 
 # Startup applicant tracking boards with public JSON or RSS (Greenhouse, Lever, Ashby, Workable,
 # Pinpoint, Teamtailor). A Teamtailor token is the career site's host or its teamtailor.com subdomain.
@@ -121,6 +151,16 @@ boards:
   - {ats: ashby, token: qlub, name: qlub, sector: fintech}
   - {ats: ashby, token: mexdigital, name: MultiBank Group, sector: fintech}
   - {ats: workable, token: bayutdubizzle, name: dubizzle Group, sector: proptech}
+  # Added 2026-11-13: employers whose UAE roles LinkedIn and Indeed kept surfacing
+  - {ats: ashby, token: kraken.com, name: Kraken, sector: crypto}
+  - {ats: ashby, token: brainco, name: Brain Co., sector: AI}
+  - {ats: ashby, token: easygenerator, name: Easygenerator, sector: edtech}
+  - {ats: workable, token: fuseenergy, name: Fuse Energy, sector: energy}
+  - {ats: greenhouse, token: esri, name: Esri, sector: GIS software}
+  - {ats: greenhouse, token: deliveroo, name: Deliveroo, sector: tech}
+  - {ats: greenhouse, token: elastic, name: Elastic, sector: big tech}
+  - {ats: teamtailor, token: qashio, name: Qashio, sector: fintech}
+  - {ats: lever, token: crypto, name: Crypto.com, sector: crypto}
 
 # Amazon's own job search, filtered to the UAE.
 amazon: true
@@ -198,6 +238,12 @@ probe:
   - airbnb
   - okx
   - bybit
+  # boards that answered on 2026-11-13 without a UAE job yet
+  - derq
+  - dataiku
+  - canonical
+  - synthesia
+  - snowflake
   - kraken
   - cryptocom
   - ripple

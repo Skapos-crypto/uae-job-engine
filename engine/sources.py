@@ -422,13 +422,15 @@ def attrax(http, emp):
 # ---------------------------------------------------------------- Jibe (iCIMS career sites)
 
 def jibe(http, emp):
-    """Jibe career sites serve their search as JSON at /api/jobs, 100 a page."""
+    """Jibe career sites serve their search as JSON at /api/jobs, 100 a page. A worldwide site
+    (Schneider Electric: 4,000 jobs) is asked for one country, as its own /uae page does."""
     base = emp["base"].rstrip("/")
     if emp.get("crawl_delay"):
         http.set_gap(urlparse(base).netloc, emp["crawl_delay"])
+    country = "&country=%s" % quote(emp["country"]) if emp.get("country") else ""
     jobs, total = [], 0
     for page in range(1, 11):
-        data = _json(http.get("%s/api/jobs?page=%d&limit=100" % (base, page)), "jibe %s" % emp["name"])
+        data = _json(http.get("%s/api/jobs?page=%d&limit=100%s" % (base, page, country)), "jibe %s" % emp["name"])
         total = data.get("totalCount") or 0
         rows = data.get("jobs") or []
         for row in rows:
@@ -620,6 +622,34 @@ def deriv(http):
     return jobs, {}
 
 
+# ---------------------------------------------------------------- Emirates Group
+
+def emirates_group(http):
+    """emiratesgroupcareers.com (Emirates, dnata and the group's other brands): the JSON its own
+    job search loads, every open job with its description in one answer. robots.txt allows it;
+    only three query forms of /search-and-apply/ are disallowed."""
+    data = _json(http.get("https://www.emiratesgroupcareers.com/api/v1/jobs?title=&brand=&category="
+                          "&location=&jobcategory=&showAll=true"), "emirates group")
+    jobs = []
+    for j in data.get("data") or []:
+        rid, title = clean(j.get("reqid")), clean(j.get("title"))
+        if not rid or not title:
+            continue
+        place = [clean(j.get(k)) for k in ("city", "state", "country")]
+        jobs.append({
+            "source": "emirates_group",
+            "source_type": "employer",
+            "employer": clean(j.get("brand")) or "Emirates Group",
+            "sector": "aviation",
+            "title": title,
+            "location": ", ".join(dict.fromkeys(p for p in place if p)),  # "Dubai, United Arab Emirates"
+            "posted": parse_date(j.get("postingdate")),
+            "url": "https://www.emiratesgroupcareers.com/search-and-apply/%s/" % rid,
+            "desc": strip_html(j.get("jobdescription")),
+        })
+    return jobs, {"total": len(jobs)}
+
+
 # ---------------------------------------------------------------- JobSpy (LinkedIn, Indeed, Google, Bayt)
 
 BLOCKED_RE = re.compile(r"\b(403|429)\b|blocked|captcha|too many requests", re.I)
@@ -686,7 +716,8 @@ def jobspy_site(site, queries, log):
                     "location": clean(row.get("location")),
                     "posted": parse_date(row.get("date_posted")),
                     "url": url,
-                    "url_direct": clean(row.get("job_url_direct")),
+                    "url_direct": clean(row.get("job_url_direct")),  # Indeed: the employer's own posting
+                    "query": q,
                     "desc": clean(row.get("description"))[:6000],
                 }
                 page = re.search(r"linkedin\.com/jobs/view/(\d+)", url)

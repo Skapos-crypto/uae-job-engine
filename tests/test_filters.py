@@ -48,6 +48,7 @@ KEEP = [
     ("Data Analyst - Intern", "data_analyst"),
     ("Finance Data Analyst", "data_analyst"),
     ("Software Development Engineer 2", "software"),  # like "II": kept
+    ("Claims Data Analyst", "data_analyst"),  # insurance, but a data role
 ]
 
 DROP = [
@@ -111,6 +112,7 @@ DROP = [
     "Quality Control Analyst",
     "Automation Engineer, Reliability Maintenance Engineering",  # warehouse machinery, not software
     "Software Development Engineer 3",  # a level, like "III"
+    "Claims Associate Analyst",  # insurance claims handling
 ]
 
 
@@ -179,6 +181,12 @@ def main():
         (("Referment", "Middle Distillates Analyst (Gasoil, Jet and ULSD) (5AD7)"),
          ("Referment", "Middle Distillates Analyst (Gasoil, Jet and ULSD) (8E87)")),
         (("Halian | Managed Services", "Data Scientist (m/f/d)"), ("Halian", "Data Scientist")),
+        # one employer under several names: its own site names the brand, the job sites the group
+        (("dnata Cargo", "Data Analyst, dnata Cargo"), ("The Emirates Group", "Data Analyst, dnata Cargo")),
+        (("dnata", "Data Analyst, dnata Cargo"), ("Emirates", "Data Analyst, dnata Cargo")),
+        (("ADNOC", "Specialist, Logistics (Performance & Reporting)"),
+         ("ADNOC Logistics & Services", "Specialist, Logistics (Performance & Reporting)")),
+        (("talabat", "Software Engineer l - Backend"), ("Delivery Hero", "Software Engineer l - Backend")),
     ]
     for a, b in same_job:
         assert job_key(*a) == job_key(*b), (a, b)
@@ -219,7 +227,18 @@ def main():
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
     assert seniority("Software Development Engineer 3") == "senior" and seniority("Data Analyst II") == "unspecified"
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 58))
+    # a programme "for UAE National students" is a nationals programme; "for UAE nationals and expats" is not
+    assert nationals("Discover Emirates Group Internship Programme", "Discover is our internship programme "
+                     "for UAE National students and fresh graduates.") == "only"
+    assert nationals("Graduate Programme", "A graduate programme for UAE nationals and expatriates alike.") is None
+    # a ceiling is not a requirement
+    assert min_years("Experience: Up to 7 Years. Mandatory skills: strong Java") is None
+    assert min_years("Less than 2 years of experience is fine. Minimum 1 year of experience with SQL.") == 1
+    assert min_years("Requirements: 5+ years of experience in analytics") == 5
+    # recruiters and job platforms seen in the second week
+    assert is_agency("Jobgether") and is_agency("Kingston Stanley") and is_agency("Salt")
+    assert not is_agency("Kraken") and not is_agency("Salt Bae Restaurants") and not is_agency("Emirates Group")
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 70))
 
 
 if __name__ == "__main__":

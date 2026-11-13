@@ -24,7 +24,8 @@ LI_ROWS = [(9001, "Gulf Bank", "Graduate Data Analyst Programme"), (9002, "Acme 
            (9004, "Ziina", "Junior Python Developer"),  # on Ashby, with a description
            (9005, "OldCo", "Data Engineer Trainee"),  # seen on an earlier day
            (9006, "Acme Robotics", "Junior AI Engineer"), (9007, "Beta Labs", "Junior BI Developer"),
-           (9008, "Emirates", "Business Insights Analyst - Emiratization Graduate Programme")]  # the title decides
+           (9008, "Emirates", "Business Insights Analyst - Emiratization Graduate Programme"),  # the title decides
+           (9009, "dnata", "Data Analyst, dnata Cargo")]  # on the group's own site under another brand name
 LI_PAGES = {"9001": (200, "/jobs/view/9001", "Join our graduate programme. This programme is open to UAE Nationals only."),
             "9002": (200, "/jobs/view/9002", "About the job. 0-1 years of experience with Python. Fresh graduates welcome."),
             "9006": (429, "/jobs/view/9006", "")}
@@ -75,7 +76,8 @@ def fake_scrape_jobs(site_name, search_term, **kw):
     assert kw.get("location") == "UAE", kw  # Bayt must be asked for the UAE, not every country
     return FakeFrame([{"job_url": "https://www.bayt.com/en/uae/jobs/data-analyst-1/", "company": "Acme Recruitment",
                        "title": "Junior Data Analyst", "location": "Dubai, UAE", "date_posted": run.today_dubai(),
-                       "description": "1-2 years of experience with SQL"},
+                       "description": "1-2 years of experience with SQL",
+                       "job_url_direct": "https://acme.wd3.myworkdayjobs.com/AcmeCareers/job/Dubai/Junior_R1?src=x"},
                       {"job_url": "https://www.bayt.com/en/uae/jobs/python-developer-2/", "company": "Ziina Technologies",
                        "title": "Python Developer - Junior", "location": "Abu Dhabi, UAE",
                        "date_posted": run.today_dubai(), "description": ""}])
@@ -162,6 +164,20 @@ def fake_request(self, method, url, retries=2, **kw):
         return FakeResp(None, text="<script>phApp.ddo = %s; phApp.sessionParams = {};</script>" % json.dumps(ddo))
     if "example-sf.com" in url:
         return FakeResp(None, text=SF_SEARCH if "/search/" in url else SF_DETAIL)
+    if "emiratesgroupcareers.com/api/v1/jobs" in url:
+        return FakeResp({"status": "success", "data": [
+            {"reqid": "e1", "title": "Data Analyst, dnata Cargo", "brand": "dnata Cargo", "city": "Dubai",
+             "state": "Dubai", "country": "United Arab Emirates", "postingdate": 1794355200000,
+             "jobdescription": "<h5>Job Purpose</h5><p>0-2 years of experience with SQL</p>"},
+            {"reqid": "e2", "title": "Data Analyst, dnata Singapore", "brand": "dnata", "city": "Singapore", "state": "",
+             "country": "Singapore", "postingdate": 1794355200000, "jobdescription": ""},
+            {"reqid": "e3", "title": "IT Graduate Programme - Emiratisation", "brand": "Emirates Group", "city": "Dubai",
+             "state": "Dubai", "country": "United Arab Emirates", "postingdate": None, "jobdescription": ""}]})
+    if "example-jibe2.com/api/jobs" in url:
+        assert "country=United%20Arab%20Emirates" in url, url  # a worldwide site is asked for one country
+        return FakeResp({"totalCount": 1, "jobs": [{"data": {
+            "slug": "77", "title": "Junior Automation Engineer", "posted_date": "November 08, 2026",
+            "full_location": "Dubai Silicon Oasis, United Arab Emirates", "description": "<p>Fresh graduates</p>"}}]})
     if "example-jibe.com/api/jobs" in url:
         return FakeResp({"totalCount": 1, "jobs": [{"data": {
             "slug": "9", "title": "IT Support Specialist", "full_location": "", "tags2": ["Abu Dhabi"],
@@ -289,7 +305,10 @@ def main():
                         {"name": "FallbackCo", "tenant": "fallbackco", "wd": "wd5", "site": "Careers"}],
             "phenom": [{"name": "PhenomCo", "base": "https://careers.example-phenom.com/global/en"}],
             "successfactors": [{"name": "SFCo", "base": "https://careers.example-sf.com"}],
-            "jibe": [{"name": "JibeCo", "base": "https://careers.example-jibe.com", "crawl_delay": 5}],
+            "jibe": [{"name": "JibeCo", "base": "https://careers.example-jibe.com", "crawl_delay": 5},
+                     {"name": "JibeWorld", "base": "https://careers.example-jibe2.com",
+                      "country": "United Arab Emirates"}],
+            "emirates_group": True,
             "avature": [{"name": "AvCo", "base": "https://example-avature.net/en_US/portal",
                          "assume_location": "United Arab Emirates"}],
             "attrax": [{"name": "AtCo", "base": "https://careers.example-attrax.com/co-jobs"}],
@@ -323,7 +342,8 @@ def main():
                        "Business Intelligence Engineer", "Junior Data Engineer", "Junior Data Analyst",
                        "Junior BI Analyst", "AI Engineer - Graduate", "IT Support Specialist", "Data Scientist II",
                        "Junior Analytics Engineer", "Graduate Data Analyst", "Junior Analyst, Logistics Performance",
-                       "Junior Python Engineer", "Junior Data Engineer, Text Search"}
+                       "Junior Python Engineer", "Junior Data Engineer, Text Search", "Data Analyst, dnata Cargo",
+                       "Junior Automation Engineer"}
         assert set(titles) == expect_kept, set(titles) ^ expect_kept
         # Avature: the job page gave the location; the candidate whose page says United Kingdom is out
         assert titles["Graduate Data Analyst"]["location"] == "United Arab Emirates"
@@ -359,7 +379,24 @@ def main():
         assert titles["HR Data Analyst"]["url"].endswith("/sites/CX_1/job/101")
         # a Workday posting listed as "2 Locations" is kept under the UAE facet it came from
         assert titles["Junior Data Engineer"]["location"] == "2 Locations; Dubai, United Arab Emirates"
-        assert latest["summary"]["rejected"].get("nationals-only") == 2  # ADIB 105 and Phenom 78
+        assert latest["summary"]["rejected"].get("nationals-only") == 3  # ADIB 105, Phenom 78, Emirates e3
+        # Emirates Group's own feed: brand as employer, the job's page as link, places from its fields
+        dnata = titles["Data Analyst, dnata Cargo"]
+        assert dnata["employer"] == "dnata Cargo" and dnata["location"] == "Dubai, United Arab Emirates", dnata
+        assert dnata["url"] == "https://www.emiratesgroupcareers.com/search-and-apply/e1/"
+        assert dnata["posted"] == "2026-11-11" and dnata["min_years"] == 0 and dnata["source"] == "emirates_group"
+        assert titles["Junior Automation Engineer"]["location"] == "Dubai Silicon Oasis, United Arab Emirates"
+        # when the job sites were last searched, for the wake-up logic
+        assert latest["generated"]["last_full"] == latest["generated"]["dubai"] and latest["generated"]["full_run"]
+        # what each search query brought, and where the job sites' apply links lead
+        by_query = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]["jobspy:bayt"]["meta"]["by_query"]
+        assert by_query == {"data analyst": {"results": 2, "fit": 2, "kept": 2, "new": 2}}, by_query
+        links = json.load(open(os.path.join(run.DATA, "direct_links.json")))
+        assert list(links) == ["acme.wd3.myworkdayjobs.com"], links
+        acme = links["acme.wd3.myworkdayjobs.com"]
+        assert acme["roles"] == 1 and acme["employers"] == ["Acme Recruitment"], acme
+        assert acme["sample"] == "https://acme.wd3.myworkdayjobs.com/AcmeCareers/job/Dubai/Junior_R1"
+        assert "from LinkedIn and Bayt;" in open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
         assert latest["summary"]["rejected"].get("4+ years") == 1
         assert os.path.exists(os.path.join(run.DATA, "latest.md"))
         cache = json.load(open(os.path.join(run.DATA, "detail_cache.json")))
@@ -416,10 +453,21 @@ def main():
                                     url="https://www.bayt.com/en/uae/jobs/qc-analyst-3/"))
         with open(latest_path, "w") as fh:
             json.dump(planted, fh)
+        streaks_path = os.path.join(run.DATA, "streaks.json")
+        with open(streaks_path) as fh:
+            old = json.load(fh)
+        old["jobspy:switched-off"] = {"fails": 9, "last_ok": None, "ran": "2026-11-01", "error": "blocked"}
+        with open(streaks_path, "w") as fh:
+            json.dump(old, fh)
+        full_stamp = planted["generated"]["last_full"]
         FAILING.add("careem")
         os.environ["FULL_RUN"] = "0"
         run.main()
         latest3 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        assert latest3["generated"]["last_full"] == full_stamp and not latest3["generated"]["full_run"]
+        md3 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        assert "career systems only; LinkedIn and Bayt are searched once a day" in md3
+        assert os.path.exists(os.path.join(run.DATA, "direct_links.json"))  # kept as the full run left it
         titles3 = {j["title"]: j for j in latest3["jobs"]}
         assert set(titles3) == expect_kept, set(titles3) ^ expect_kept
         assert latest3["summary"]["carried_over"] == 2
@@ -427,7 +475,7 @@ def main():
         assert "agency" in titles3["Junior Data Analyst"]["flags"]  # flags refreshed on a carried row
         # failures in a row are counted across runs; LinkedIn did not run this time and keeps its count
         stuck = latest3["summary"]["status"]["failing_in_a_row"]
-        assert stuck == {"oracle:NoSites": 4, "jobspy:linkedin": 3}, stuck
+        assert stuck == {"oracle:NoSites": 4, "jobspy:linkedin": 3}, stuck  # not the one switched off on 1 Nov
 
         # history saved under an older key: known jobs must not come back as new
         seen_path = os.path.join(run.DATA, "seen.json")
@@ -459,7 +507,11 @@ def main():
         titles5 = {j["title"]: j for j in latest5["jobs"]}
         pages = latest5["summary"]["status"]["linkedin_pages"]
         print("linkedin pages:", pages, LI_ASKED)
-        assert LI_ASKED[-1] == "9006" and not {"9003", "9004", "9005", "9008"} & set(LI_ASKED), LI_ASKED
+        assert LI_ASKED[-1] == "9006" and not {"9003", "9004", "9005", "9008", "9009"} & set(LI_ASKED), LI_ASKED
+        dnata5 = titles5["Data Analyst, dnata Cargo"]  # LinkedIn says "dnata", the group's site "dnata Cargo"
+        assert dnata5["seen_on"] == ["emirates_group", "jobspy:linkedin"] and dnata5["source"] == "emirates_group"
+        li_queries = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]["jobspy:linkedin"]["meta"]["by_query"]
+        assert li_queries["data analyst"]["results"] == len(LI_ROWS) and li_queries["data analyst"]["kept"] >= 4, li_queries
         assert "Business Insights Analyst - Emiratization Graduate Programme" not in titles5  # dropped unread
         assert pages["wanted"] == 4 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
         assert pages["skipped"] == 4 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages

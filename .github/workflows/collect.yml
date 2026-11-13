@@ -1,15 +1,17 @@
 name: collect-jobs
 
 on:
-  # GitHub starts scheduled runs late (6 to 8 hours late in November 2026). These times put both
-  # runs before a 14:39 Dubai digest whether they start on time or 8 hours late.
+  # GitHub starts scheduled runs late: 4.5 to 8 hours late for this repository in November 2026,
+  # once more than 10. No cron line can therefore say when a run happens. Instead the workflow
+  # wakes every half hour and engine/when.py decides what the wake-up does: the first one after
+  # FULL_AFTER does the full run, the first one after SYSTEMS_AFTER the career-systems run, and
+  # every other wake-up exits within seconds. Both times are Dubai time; change them here.
   schedule:
-    - cron: "13 20 * * *"  # 00:13 Dubai: full run (job systems, JobSpy sites, board probe)
-    - cron: "43 1 * * *"   # 05:43 Dubai: job systems only
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       full:
-        description: "1 = full run including LinkedIn, Indeed and Bayt; 0 = job systems only"
+        description: "1 = full run including the job sites (LinkedIn, Indeed); 0 = career systems only"
         default: "1"
   push:
     branches: [main]
@@ -19,6 +21,14 @@ on:
       - "run.py"
       - "requirements.txt"
       - ".github/workflows/collect.yml"
+
+env:
+  # The full run searches the job sites once a day. Most UAE postings appear between 09:00 and
+  # 18:00, so a run in the early afternoon lists the morning's postings the same day; it has to end
+  # before the 14:39 digest that reads data/latest.json. The morning run reads the employers' own
+  # career systems only.
+  FULL_AFTER: "12:45"
+  SYSTEMS_AFTER: "07:00"
 
 permissions:
   contents: write
@@ -34,22 +44,33 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Decide what this wake-up does
+        id: when
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_FULL: ${{ github.event.inputs.full }}
+        run: python3 engine/when.py >> "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@v6
+        if: steps.when.outputs.mode != 'skip'
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install
+        if: steps.when.outputs.mode != 'skip'
         run: pip install -r requirements.txt
 
       - name: Collect
+        if: steps.when.outputs.mode != 'skip'
         env:
-          # JobSpy runs once a day (the 00:13 run). Pushes and the 05:43 run collect the job systems
-          # only, so a code push never adds a second day's worth of LinkedIn, Indeed and Bayt queries.
-          FULL_RUN: ${{ (github.event_name == 'push' || github.event.schedule == '43 1 * * *') && '0' || (github.event.inputs.full || '1') }}
+          # The job sites are searched on the full run only, so a code push or the morning run
+          # never adds a second day's worth of LinkedIn and Indeed queries.
+          FULL_RUN: ${{ steps.when.outputs.mode == 'full' && '1' || '0' }}
         run: python run.py
 
       - name: Commit results
+        if: steps.when.outputs.mode != 'skip'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

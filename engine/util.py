@@ -201,7 +201,8 @@ DOMAIN_EXCLUDE_RE = re.compile(
     r"\baml\b|\bkyc\b|compliance|credit|financial (analyst|reporting|planning|controller|control|crime)|"
     r"financial (&|and) |fp&a|accountant|accounting|audit|\btax\b|treasury|equity|investment analyst|actuar|"
     r"\bcost (analyst|accountant|control)|business finance|shari'?a|shari’a|"
-    r"finance (analyst|associate|intern|graduate)|commercial finance|portfolio (management|analyst)",
+    r"finance (analyst|associate|intern|graduate)|commercial finance|portfolio (management|analyst)|"
+    r"\bclaims?\b|underwrit",
     re.I,
 )
 TECH_CORE_RE = re.compile(
@@ -323,7 +324,10 @@ NAT_DESC_RE = re.compile(
     r"(aimed at|designed for|dedicated to) (preparing |developing |empowering )?(young |talented )?"
     r"(uae nationals|emiratis)|family book|khulasat al[- ]qaid|"
     r"(develop|empower|nurtur)\w* (young |talented |ambitious )?(uae nationals?|emirati) "
-    r"(talent|graduates|youth|students)|خلاصة القيد",
+    r"(talent|graduates|youth|students)|خلاصة القيد|"
+    # "our internship programme for UAE National students" (not "... for UAE nationals and expatriates")
+    r"(program+e?|internship|scheme|initiative) for (uae nationals?|emiratis?)\b"
+    r"(?!\s*(and|&|or|as well as)\s*(expat|resident|international|non|other))",
     re.I,
 )
 
@@ -346,11 +350,18 @@ YEARS_RE = re.compile(
 )
 
 
+# "Up to 7 years", "less than 2 years": a ceiling, not a requirement.
+YEARS_CEILING_RE = re.compile(r"(up ?to|maximum( of)?|max\.?|no more than|less than|fewer than|under|at most)\s*$",
+                              re.I)
+
+
 def _experience_years(desc):
     """(years, match) for each 'N years ... experience' statement in a cleaned description."""
     for m in YEARS_RE.finditer(desc):
         n = int(m.group(1))
         if n >= 15:  # company boilerplate such as 'for over 20 years'
+            continue
+        if YEARS_CEILING_RE.search(desc[max(0, m.start() - 16): m.start()]):
             continue
         ctx = desc[max(0, m.start() - 90): m.end() + 90].lower()
         if "experience" in ctx or "exp." in ctx:
@@ -392,7 +403,8 @@ def evidence(title, desc, reason):
 # Facts cached from full descriptions are tagged with this; when any of these patterns changes,
 # cached facts are stale and those descriptions are fetched again.
 FACTS_VERSION = hashlib.sha1("\n".join(rx.pattern for rx in (
-    NAT_PREF_RE, NAT_TITLE_RE, NAT_DESC_RE, YEARS_RE, NO_SPONSOR_RE, OWN_VISA_RE)).encode("utf-8")).hexdigest()[:8]
+    NAT_PREF_RE, NAT_TITLE_RE, NAT_DESC_RE, YEARS_RE, YEARS_CEILING_RE, NO_SPONSOR_RE,
+    OWN_VISA_RE)).encode("utf-8")).hexdigest()[:8]
 
 
 # ---------------------------------------------------------------- dedupe keys
@@ -414,6 +426,16 @@ COMPANY_ALIASES = {
     "bayut": "dubizzle",
     "majid al futtaim": "maf",
     "dp world": "dp world",
+    # one employer, several names: the group's own site and the job sites name its brands differently
+    "dnata": "emirates", "dnata cargo": "emirates", "dnata travel": "emirates", "emirates skycargo": "emirates",
+    "emirates holidays": "emirates", "emirates security": "emirates",
+    "emirates flight training academy": "emirates",
+    "adnoc logistics & services": "adnoc", "adnoc distribution": "adnoc", "adnoc gas": "adnoc",
+    "adnoc drilling": "adnoc", "adnoc offshore": "adnoc", "adnoc onshore": "adnoc", "adnoc refining": "adnoc",
+    "adnoc global trading": "adnoc", "adnoc trading": "adnoc", "adnoc sour gas": "adnoc",
+    "delivery hero": "talabat",
+    "inception42": "g42", "inception": "g42", "core42": "g42", "cpx": "g42",
+    "cigna healthcare": "cigna",
 }
 
 
@@ -487,7 +509,10 @@ AGENCY_RE = re.compile(
     r"\bhalian\b|\baiqu\b|\blnkd\b|joblet|madison pearl|referment|lobo management|\bquantin\b|dicetek|"
     r"brad contech|michael page|robert half|robert walters|\bhays\b|randstad|adecco|charterhouse|"
     r"cooper fitch|black pearl|mark williams|propel consult|\bantal\b|\breed\b|\btasc\b|nadia global|"
-    r"bac middle east|huxley|mackenzie jones|guildhall|parker connect|inspire selection",
+    r"bac middle east|huxley|mackenzie jones|guildhall|parker connect|inspire selection|"
+    # seen often in the second week of November 2026
+    r"jobgether|tandem interim|durlston|kingston stanley|involved solutions|la fosse|hire ?right+|"
+    r"discovered mena|pyramid consulting|mcg asia|akkodis|^salt$",
     re.I,
 )
 

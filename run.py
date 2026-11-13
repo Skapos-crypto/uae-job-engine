@@ -3,7 +3,7 @@
 data / analytics / software / AI / IT roles, dedupe them, and write data/latest.*.
 
 FULL_RUN=1 (default): everything, including JobSpy sites and the weekly board probe.
-FULL_RUN=0: employer job systems and known boards only (the midday refresh).
+FULL_RUN=0: employer job systems and known boards only (the morning refresh and every code push).
 """
 import hashlib
 import json
@@ -12,6 +12,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urlparse
 
 import yaml
 
@@ -34,6 +35,8 @@ WORKERS = 32             # threads only wait their turn: the Http client allows 
 REJECTED_PER_REASON = 60
 STUCK_AFTER = 3          # failed runs in a row before a source is called out in the status panel
 DESC_REASONS = {"nationals-only", "4+ years", "no-sponsorship"}  # rejections only a description can give
+LINKS_KEEP_DAYS = 30     # how long an employer's job-system link seen on Indeed stays in direct_links.json
+SITE_NAMES = {"linkedin": "LinkedIn", "indeed": "Indeed", "bayt": "Bayt", "google": "Google"}
 
 
 def log(msg):
@@ -166,6 +169,8 @@ def collect(http, cfg, search, full, health):
         tasks.append(("amazon", lambda: sources.amazon(http)))
     if cfg.get("deriv"):
         tasks.append(("deriv", lambda: sources.deriv(http)))
+    if cfg.get("emirates_group"):
+        tasks.append(("emirates_group", lambda: sources.emirates_group(http)))
 
     # JobSpy's sites share no host with the employer systems, so it runs alongside them
     with ThreadPoolExecutor(max_workers=1) as background:
@@ -413,6 +418,44 @@ def recheck(r, today):
     return True
 
 
+def query_yield(raw, candidates, accepted, merged, health):
+    """Per search query on a job site: its results, how many were UAE roles in a target lane, how
+    many were kept, and how many of those are new today. A job two queries found counts for both.
+    Written into data/health.json (meta.by_query), to tell a query worth its place from one that is not."""
+    fit, kept = {id(j) for j in candidates}, {id(j) for j in accepted}
+    for j in raw:
+        meta = (health.get(j.get("source")) or {}).get("meta")
+        if not j.get("query") or meta is None:
+            continue
+        q = meta.setdefault("by_query", {}).setdefault(j["query"], {"results": 0, "fit": 0, "kept": 0, "new": 0})
+        q["results"] += 1
+        q["fit"] += id(j) in fit
+        if id(j) in kept:
+            q["kept"] += 1
+            q["new"] += bool(merged[j["key"]]["is_new"])
+
+
+def direct_links(candidates, today):
+    """Where Indeed's "apply on company site" links lead, for the roles in a target lane: the
+    employers' own job systems, counted over the last 30 days. A host that keeps turning up is an
+    employer worth collecting directly (config/employers.yaml). Returns data/direct_links.json."""
+    links, today_s = load_json("direct_links.json", {}), str(today)
+    for j in candidates:
+        host = urlparse(j.get("url_direct") or "").netloc.lower()
+        if host:
+            entry = links.setdefault(host, {"jobs": {}})
+            entry["jobs"][j["key"]] = [today_s, j["employer"][:60]]
+            entry["sample"] = j["url_direct"].split("?")[0][:200]
+    keep = str(today - timedelta(days=LINKS_KEEP_DAYS))
+    out = {}
+    for host, entry in links.items():
+        jobs = {k: v for k, v in entry.get("jobs", {}).items() if v[0] >= keep}
+        if jobs:
+            out[host] = {"roles": len(jobs), "employers": sorted({v[1] for v in jobs.values()})[:8],
+                         "last": max(v[0] for v in jobs.values()), "sample": entry.get("sample", ""), "jobs": jobs}
+    return dict(sorted(out.items(), key=lambda kv: (-kv[1]["roles"], kv[0])))
+
+
 # ---------------------------------------------------------------- output
 
 def update_streaks(health, today):
@@ -452,7 +495,9 @@ def run_status(health, streaks, records, today):
             week["jobspy" if r["source"].startswith("jobspy") else "employer"] += 1
     status = {"sources": len(srcs), "ok": sum(1 for v in srcs.values() if v.get("ok")), "failing": failing,
               "blocked": blocked,
-              "failing_in_a_row": {k: v["fails"] for k, v in streaks.items() if v.get("fails", 0) >= STUCK_AFTER},
+              # a source switched off in the config drops out of the panel after a few days
+              "failing_in_a_row": {k: v["fails"] for k, v in streaks.items() if v.get("fails", 0) >= STUCK_AFTER
+                                   and v.get("ran", "") >= str(today - timedelta(days=CARRY_DAYS))},
               "new_last_7_days": week}
     pages = health.get("_linkedin_pages")
     if pages:
@@ -513,10 +558,12 @@ def found_on(r):
 
 def status_lines(status, full):
     st, week = status, status["new_last_7_days"]
+    names = st.get("job_sites") or ["LinkedIn", "Indeed"]
+    sites = " and ".join([", ".join(names[:-1])] * (len(names) > 1) + names[-1:])  # "A, B and C"
     lines = ["## Status", "",
              "- **Sources:** %d of %d answered%s" % (st["ok"], st["sources"], "" if full else
-                                                       " (career systems only; LinkedIn, Indeed and Bayt "
-                                                       "run once a day)")]
+                                                       " (career systems only; %s are searched once a day)"
+                                                       % sites)]
     if st["failing"]:
         lines.append("- **Failing this run:** " + "; ".join("%s (%s)" % (k, md_escape(v) or "error")
                                                          for k, v in sorted(st["failing"].items())))
@@ -528,8 +575,8 @@ def status_lines(status, full):
     pages = st.get("linkedin_pages")
     if pages:
         lines.append("- **LinkedIn pages:** " + linkedin_pages_line(pages))
-    lines += ["- **New roles in the last 7 days:** %d from LinkedIn, Indeed and Bayt; %d from employer "
-              "sites and boards" % (week["jobspy"], week["employer"]), ""]
+    lines += ["- **New roles in the last 7 days:** %d from %s; %d from employer sites and boards"
+              % (week["jobspy"], sites, week["employer"]), ""]
     return lines
 
 
@@ -689,9 +736,11 @@ def main():
                    "employer": j["employer"]}
 
     records = [to_record(j) for j in merged.values()]
+    query_yield(raw, candidates, accepted, merged, health)
 
     # carry over jobs whose source did not run successfully this time
-    previous = load_json("latest.json", {}).get("jobs", [])
+    last = load_json("latest.json", {})
+    previous = last.get("jobs", [])
     have = {r["key"] for r in records}
     carried = 0
     for r in previous:
@@ -728,10 +777,17 @@ def main():
         summary["rejected"][x["reason"]] = summary["rejected"].get(x["reason"], 0) + 1
     streaks = update_streaks(health, today)
     summary["status"] = run_status(health, streaks, records, today)
+    summary["status"]["job_sites"] = [SITE_NAMES.get(s, s) for s in (search.get("jobspy") or {})]
 
     generated = {"utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                  "dubai": datetime.now(DUBAI).strftime("%Y-%m-%d %H:%M"), "full_run": full}
+    # when the job sites were last searched: engine/when.py reads it to pick the next full run. Data
+    # written before this field existed counts its last run of any kind, so no day is searched twice.
+    before = last.get("generated") or {}
+    generated["last_full"] = generated["dubai"] if full else (before.get("last_full") or before.get("dubai"))
     save_json("latest.json", {"generated": generated, "summary": summary, "jobs": records})
+    if full:
+        save_json("direct_links.json", direct_links(candidates, today))
     save_json("seen.json", seen)
     save_json("detail_cache.json", cache)
     save_json("health.json", {"generated": generated, "sources": health})

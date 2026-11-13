@@ -1,10 +1,16 @@
-# JobSpy queries, run once a day (the 00:13 Dubai full run), one query at a time per site with
-# pauses; the sites run side by side. 22 queries a day in total. These sites' terms forbid automated
-# access; volume is kept low and no account or login is ever used. Remove a site's list to switch it
-# off. A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
+# JobSpy queries, run once a day (the full run), one query at a time per site with pauses; the
+# sites run side by side. 22 queries a day in total. These sites' terms forbid automated access;
+# volume is kept low and no account or login is ever used. Remove a site's list to switch it off.
+# A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
+# data/health.json also says, per query, how many of its results were kept ("by_query"): use it
+# to swap a query that finds nothing for one that does.
 #
-# Bayt is down to 3 queries (2026-11-10): it refused 5 to 9 of its 9 queries every day of the first
-# week and gave 12 new roles in 9 days.
+# Bayt is off (2026-11-13): it refused every query for four runs in a row (403 from GitHub's
+# addresses) after refusing most of them since the first week. To try it again, add a list:
+#   bayt:
+#     - data analyst
+# Its three queries went to Indeed, which has answered every query so far (internship, junior,
+# product analyst).
 #
 # Google is off: on 2026-11-02 every Google query returned "no job data returned", both on GitHub
 # Actions and from a home connection. Its six queries moved to Indeed and Bayt.
@@ -21,6 +27,9 @@ jobspy:
     - ai engineer
     - graduate
     - it support
+    - internship
+    - junior
+    - product analyst
   linkedin:
     - data analyst
     - data scientist
@@ -30,10 +39,6 @@ jobspy:
     - machine learning engineer
     - graduate
     - product owner
-  bayt:
-    - data analyst
-    - fresh graduate
-    - software engineer
 
 # LinkedIn search results carry no description, so the nationals-only, years and visa checks
 # cannot run on them. The full run opens the public page of each NEW LinkedIn role that passed
