@@ -1,855 +1,335 @@
 {
  "generated": {
-  "utc": "2026-11-13T08:45:38+00:00",
-  "dubai": "2026-11-13 12:45",
-  "full_run": false
+  "utc": "2026-11-13T20:10:42+00:00",
+  "dubai": "2026-11-14 00:10",
+  "full_run": false,
+  "last_full": "2026-11-13 12:45"
  },
  "summary": {
-  "total": 110,
-  "new_today": 30,
-  "carried_over": 75,
-  "raw_postings": 8862,
+  "total": 124,
+  "new_today": 8,
+  "carried_over": 69,
+  "raw_postings": 10560,
   "by_family": {
-   "bi": 2,
-   "software": 19,
-   "ai_ml": 25,
-   "data_analyst": 13,
-   "data_eng": 5,
-   "analyst": 7,
-   "graduate": 12,
+   "data_eng": 7,
+   "analyst": 8,
+   "ai_ml": 29,
+   "data_analyst": 14,
+   "graduate": 15,
+   "software": 21,
+   "bi": 3,
+   "data_science": 2,
    "product": 7,
    "business": 4,
-   "it": 14,
-   "data_science": 2
+   "it": 14
   },
   "by_source": {
-   "jobspy": 75,
+   "workable": 6,
+   "workday": 14,
+   "jibe": 2,
+   "ashby": 6,
+   "jobspy": 69,
+   "emirates_group": 2,
    "oracle": 6,
+   "phenom": 2,
    "teamtailor": 7,
-   "workable": 2,
-   "workday": 6,
    "avature": 2,
    "attrax": 3,
    "amazon": 4,
-   "phenom": 1,
-   "ashby": 3,
    "greenhouse": 1
   },
-  "http_calls": 203,
+  "http_calls": 293,
   "verdicts_shared": 0,
   "rejected": {
-   "excluded-title": 920,
-   "no-family": 1395,
-   "graduate-other-discipline": 9,
-   "senior": 96,
+   "excluded-title": 1003,
+   "no-family": 1547,
+   "senior": 116,
+   "graduate-other-discipline": 11,
    "title-elsewhere": 3,
-   "no-title": 1,
-   "nationals-only": 22,
-   "stale": 14,
-   "4+ years": 11
+   "nationals-only": 33,
+   "stale": 20,
+   "4+ years": 14
   },
   "status": {
-   "sources": 81,
-   "ok": 81,
+   "sources": 101,
+   "ok": 101,
    "failing": {},
    "blocked": {},
    "failing_in_a_row": {
     "jobspy:bayt": 4
    },
    "new_last_7_days": {
-    "jobspy": 187,
-    "employer": 10
-   }
+    "jobspy": 149,
+    "employer": 18
+   },
+   "job_sites": [
+    "Indeed",
+    "LinkedIn"
+   ]
   }
  },
  "jobs": [
   {
-   "key": "dc5a33f7ab7f14ae",
-   "title": "Marketing & Business Insights Junior Analyst (Temporary)",
+   "key": "67b35811ed9f2393",
+   "title": "Associate Data Engineer",
+   "employer": "dubizzle Group",
+   "sector": "proptech",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
+   "family": "data_eng",
+   "cv": "Data_Engineer",
+   "seniority": "junior",
+   "url": "https://apply.workable.com/j/41834EC4F1",
+   "source": "workable:bayutdubizzle",
+   "source_type": "ats",
+   "seen_on": [
+    "workable:bayutdubizzle"
+   ],
+   "posted": "2026-11-13",
+   "age_days": 1,
+   "min_years": 1,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 5.7,
+   "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
+  },
+  {
+   "key": "3e1bee83ac676496",
+   "title": "Associate Sales Analyst (Temporary)",
    "employer": "Medtronic",
-   "sector": "",
+   "sector": "medical devices",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Associate-Sales-Analyst_R81285-1",
+   "source": "workday:Medtronic",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:Medtronic"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 5.3,
+   "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
+  },
+  {
+   "key": "c621569946d0c260",
+   "title": "AI Process Engineer (Temporary)",
+   "employer": "Medtronic",
+   "sector": "medical devices",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/AI-Process-Engineer--Temporary-_R81566-1",
+   "source": "workday:Medtronic",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:Medtronic"
+   ],
+   "posted": "2026-11-14",
+   "age_days": 0,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 5.1,
+   "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
+  },
+  {
+   "key": "dd04796432b6356f",
+   "title": "Commercial Performance Analyst, EurAsia (Temporary)",
+   "employer": "Medtronic",
+   "sector": "medical devices",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471",
+   "source": "workday:Medtronic",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:Medtronic"
+   ],
+   "posted": "2026-11-14",
+   "age_days": 0,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 5.1,
+   "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
+  },
+  {
+   "key": "5ef5af3e3a94cb04",
+   "title": "Early Career Trainee, Commercial Enablement",
+   "employer": "GE HealthCare",
+   "sector": "healthcare tech",
+   "city": "Dubai",
+   "location": "ARE02-01-Dubai-Al Sufouh 2",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/ARE02-01-Dubai-Al-Sufouh-2/Early-Career-Trainee--Commercial-Enablement_R4048612-1",
+   "source": "workday:GE HealthCare",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:GE HealthCare"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": 0,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 4.7,
+   "snippet": " Job Description Summary The Commercial Enablement Intern will be a vital member of the team, supporting initiatives that strengthen commercial execution, improve funnel management, and simplify key sales processes across Global Markets. The role will contribute to projects focus"
+  },
+  {
+   "key": "4aa4de4e4895af48",
+   "title": "Material Data Specialist",
+   "employer": "GE Vernova",
+   "sector": "energy",
+   "city": "UAE",
+   "location": "4 Locations; United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://gevernova.wd5.myworkdayjobs.com/en-US/Vernova_ExternalSite/job/Singapore/Material-Data-Specialist_R5049518-3",
+   "source": "workday:GE Vernova",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:GE Vernova"
+   ],
+   "posted": "2026-10-15",
+   "age_days": 30,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 4.6,
+   "snippet": " Job Description Summary The SAP Material Data Specialist is in charge to set and update the Material Master data across multiple RVS ERP systems (SAP/Oracle), MES, PLM and drive standardization. The position holder is active as a focal point among IT and other function teams to "
+  },
+  {
+   "key": "2e2d8de11cf40d0a",
+   "title": "Intern – Pricing Excellence & PMO (MEA)",
+   "employer": "Schneider Electric",
+   "sector": "industry",
+   "city": "Dubai",
+   "location": "Dubai Silicon Oasis, United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://se.jibeapply.com/jobs/138687",
+   "source": "jibe:Schneider Electric",
+   "source_type": "employer",
+   "seen_on": [
+    "jibe:Schneider Electric"
+   ],
+   "posted": "2026-10-20",
+   "age_days": 25,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 4.2,
+   "snippet": "Role Purpose Support the MEA Pricing Excellence team in driving competitive benchmarking, market intelligence, and pricing capability initiatives. The role combines research, analytics, knowledge management, and PMO support to strengthen commercial insights, pricing knowledge, an"
+  },
+  {
+   "key": "fe88d871f03f53c3",
+   "title": "Software Engineer - DevOps - Bitnomial",
+   "employer": "Kraken",
+   "sector": "crypto",
+   "city": "UAE",
+   "location": "United States; Brazil; United Arab Emirates; Ireland; Peru; Sweden; Colombia; Argentina; Romania; Cyprus; Switzerland; Portugal; Lithuania; South Africa; Czech ",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://jobs.ashbyhq.com/kraken.com/6d3b6e08-97ec-4eda-b3ad-bbf5fd955840",
+   "source": "ashby:kraken.com",
+   "source_type": "ats",
+   "seen_on": [
+    "ashby:kraken.com"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-14",
+   "last_seen": "2026-11-14",
+   "is_new": true,
+   "score": 3.1,
+   "snippet": "BUILDING THE FUTURE OF OPEN FINANCE\n\n\nPayward - the parent company behind Kraken, NinjaTrader, Breakout,  xStocks, Payward Services and CF Benchmarks - has spent the last 15 years building one of the most modern and globally accessible financial infrastructure platforms in the in"
+  },
+  {
+   "key": "5016c87913068ab2",
+   "title": "Marketing & Business Insights Junior Analyst (Cardiac Surgery) (Temporary)",
+   "employer": "Medtronic",
+   "sector": "medical devices",
    "city": "Dubai",
    "location": "Dubai, Dubai, United Arab Emirates",
    "family": "bi",
    "cv": "Data_Analyst",
    "seniority": "junior",
-   "url": "https://www.linkedin.com/jobs/view/4489924760",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 5.7,
-   "snippet": "Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technologi"
-  },
-  {
-   "key": "386faa9cf5f203d5",
-   "title": "Full Stack Junior Developer",
-   "employer": "Ampstek",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "junior",
-   "url": "https://www.linkedin.com/jobs/view/4489259096",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 5.3,
-   "snippet": "Job Description: • Write clean, maintainable, and efficient Java and UI code. • Troubleshoot, debug, and fix software defects or performance issues. • Write and maintain unit and integration tests. • Participate in peer code reviews and follow team coding standards. • Integrate A"
-  },
-  {
-   "key": "0fa5feef81c59d6c",
-   "title": "AI Engineer",
-   "employer": "Beijing Shenchen Machinery Equipment Co., Ltd",
-   "sector": "",
-   "city": "Sharjah",
-   "location": "Sharjah Emirate, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4489299453",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "AI EngineerJob Overview We are seeking a talented and innovative AI Engineer to design, develop, and implement intelligent solutions that enhance business operations and improve technological capabilities. The successful candidate will work on machine learning models, artificial "
-  },
-  {
-   "key": "30053da98b5c8514",
-   "title": "AI Engineer – Smart Homes, IoT & Intelligent Automation",
-   "employer": "Socium - Teams Done Differently",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488299316",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "Location: Abu Dhabi, United Arab Emirates (UAE) – Full Onsite Contract Duration: 12 Months Rolling Work Setup: Full Onsite at the Client's Office Target Start Date: ASAP Work Schedule: Day Shift Industry Focus: Artificial Intelligence, Smart Homes, Internet of Things (IoT), AIoT,"
-  },
-  {
-   "key": "79c7aa3573c23db2",
-   "title": "Artificial Intelligence Analyst",
-   "employer": "The Bahri & Mazroei Group",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4490318681",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "Key Responsibilities Process mapping and discovery — work hands-on with multi-functional departments and divisions across the group companies to document as-is processes, identify pain points, and pinpoint processes suitable for AI-enablement and automation. Opportunity assessmen"
-  },
-  {
-   "key": "9db16dc3f1b36e5a",
-   "title": "BI Developer.Data Analytics & AI-UAE",
-   "employer": "Alshaya Group",
-   "sector": "",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=28a743e1f18bb9d0",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "**Job No:** 4934156\n  \n**Location:** UAE  \n  \n\nBI Developer will work in the Data & Business Intelligence Team and will closely with BI Manager to support multiple streams in organization. Main responsibility will be to ensure that stream has all necessary data points and basic m"
-  },
-  {
-   "key": "4a9ba302cfac612d",
-   "title": "Data Analyst",
-   "employer": "Intellect management group",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=2157d999ea3b56cf",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 1,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "**Intellect Chartered Accountants** is a leading firm of Chartered Accountants & Auditors with over **21+ years of experience in the UAE**, providing end-to-end financial and professional services to a diverse portfolio of clients.\n\n**Job Summary**\n\nWe are looking for a detail-or"
-  },
-  {
-   "key": "9c5b7f3879a23ac1",
-   "title": "Data Analyst, dnata Cargo",
-   "employer": "The Emirates Group",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=d6cc7bd4f5d574ec",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "##### **Job Purpose**\n\ndnata is more than a global air and travel services provider. We connect people with possibilities and opportunities across 130+ airports in 34 countries through ground handling, cargo, travel, and catering & retail services. Our purpose is clear: to delive"
-  },
-  {
-   "key": "6172ae603f8735aa",
-   "title": "Data Engineer",
-   "employer": "VaporVM",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "data_eng",
-   "cv": "Data_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4489250853",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "We are seeking an experienced Data Engineer with strong AWS and banking sector experience to join its engineering team in the UAE. The candidate will be responsible for designing, developing, and optimising scalable Lakehouse data architectures and pipelines that support enterpri"
-  },
-  {
-   "key": "095b8f3eb3ea96d6",
-   "title": "NLP Engineer",
-   "employer": "W Budapest",
-   "sector": "",
-   "city": "Sharjah",
-   "location": "Sharjah Emirate, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488521111",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.5,
-   "snippet": "🤖 We’re Hiring: NLP Engineer (Natural Language Processing Engineer) 🕒 Employment Type: Full-Time 💼 Level: Mid-Level We are looking for a talented, analytical, and innovative NLP Engineer to join our technology team! The ideal candidate will have a strong background in natural lan"
-  },
-  {
-   "key": "dd7f693568098012",
-   "title": "Analyst - Report",
-   "employer": "AD Ports Group",
-   "sector": "ports and logistics",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466",
-   "source": "oracle:AD Ports Group",
+   "url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Cardiac-Surgery---Temporary-_R81397",
+   "source": "workday:Medtronic",
    "source_type": "employer",
    "seen_on": [
-    "oracle:AD Ports Group"
-   ],
-   "posted": "2026-11-13",
-   "age_days": 0,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "Analyst – Report for –Fujairah Terminals, delivering accurate operational, commercial and financial reporting to support KPI monitoring and data‑driven decisions. This position is offered under a one-year renewable contract through a third-party employment arrangement, with oppor"
-  },
-  {
-   "key": "b3a7a05aed9aa3f4",
-   "title": "Backend Full Stack Developer (Java/Angular/React)",
-   "employer": "Citi",
-   "sector": "",
-   "city": "UAE",
-   "location": "AJ, United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=0e85d209168f7092",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-10",
-   "age_days": 3,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "**Discover your future at Citi**\n--------------------------------\n\nWorking at Citi is far more than just a job. A career with us means joining a team of approximately 219,000 dedicated people from around the globe. At Citi, you’ll have the opportunity to grow your career, give ba"
-  },
-  {
-   "key": "c61413271c1f944f",
-   "title": "Digital Solutions Engineer",
-   "employer": "Cleveland Clinic Abu Dhabi",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi Emirate, United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488298396",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
+    "workday:Medtronic"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "JOB SUMMARY The Digital Solutions Engineer (DSE) serves as the technical delivery lead for AI-enabled products, partnering closely with clinical and operational teams to design, build, integrate, deploy AI solutions and automation. The role acts as the bridge between business req"
-  },
-  {
-   "key": "a6c606eb69a54c9c",
-   "title": "Full Stack Engineer",
-   "employer": "Akkodis",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4489084927",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
+   "age_days": 2,
    "min_years": null,
    "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "We are looking for a Senior Full Stack Engineer to join our engineering team in Dubai and contribute to the design, development and evolution of scalable, secure and high-performance software solutions. The role is primarily focused on C#/.NET backend development, combined with s"
+   "first_seen": "2026-11-12",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 5.3,
+   "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
   },
   {
-   "key": "a2cf331f13a5b515",
-   "title": "Full-Stack Product Engineer — CRM & Integrations",
-   "employer": "Popcorn",
-   "sector": "",
+   "key": "dc5a33f7ab7f14ae",
+   "title": "Marketing & Business Insights Junior Analyst (Temporary)",
+   "employer": "Medtronic",
+   "sector": "medical devices",
    "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488286816",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "About POPCORN Studio POPCORN Studio is a creative SaaS platform helping brands, agencies and creators produce advertising and video content. We are expanding our Dubai engineering team and looking for an engineer who can build product features, connect business systems and improv"
-  },
-  {
-   "key": "8756bcb6919e7e6c",
-   "title": "Trainee - Category Management",
-   "employer": "Chalhoub Group",
-   "sector": "retail",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "graduate",
+   "location": "Dubai, Dubai, United Arab Emirates",
+   "family": "bi",
    "cv": "Data_Analyst",
    "seniority": "junior",
-   "url": "https://careers.chalhoubgroup.com/jobs/8708569-trainee-category-management",
-   "source": "teamtailor:careers.chalhoubgroup.com",
-   "source_type": "ats",
+   "url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Temporary-_R81399-1",
+   "source": "workday:Medtronic",
+   "source_type": "employer",
    "seen_on": [
-    "teamtailor:careers.chalhoubgroup.com"
+    "workday:Medtronic"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.1,
-   "snippet": "IINSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been a partner and creator of luxury experiences in the Middle East. In its pursuit to excel as a hybrid luxury retailer, the Group has curated a portfolio of over 10 owned brands and strengthened its dist"
-  },
-  {
-   "key": "2618d0c1105fd9eb",
-   "title": "Product Specialist (Hematology)",
-   "employer": "Arabian Ethicals Company",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "product",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=7d0805f0e5b349c6",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 4.0,
-   "snippet": "**Company Description**\n\nEstablished in 1977, Arabian Ethicals takes pride in being a top healthcare player in the UAE. As the exclusive representative and distributor of many multinational pharmaceutical, consumer, and veterinary products in the UAE, the Company serves over 2,00"
-  },
-  {
-   "key": "995369b579f2092f",
-   "title": "Business Process Analyst",
-   "employer": "Miral Destinations",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi Emirate, United Arab Emirates",
-   "family": "business",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488520285",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.8,
-   "snippet": "The Business Process Analyst plays a critical role in turning attendance, ticketing, and revenue data into decision-ready insights across Miral's attractions portfolio. By combining business analytics, AI-enabled forecasting, and stakeholder partnership, the role helps leaders un"
-  },
-  {
-   "key": "1c5f19ff22f57704",
-   "title": "Order Management Trainee",
-   "employer": "Chalhoub Group",
-   "sector": "retail",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://careers.chalhoubgroup.com/jobs/8671090-order-management-trainee",
-   "source": "teamtailor:careers.chalhoubgroup.com",
-   "source_type": "ats",
-   "seen_on": [
-    "teamtailor:careers.chalhoubgroup.com"
-   ],
-   "posted": "2026-11-05",
-   "age_days": 8,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.6,
-   "snippet": "INSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been a partner and creator of luxury experiences in the Middle East. In its pursuit to excel as a hybrid luxury retailer, the Group has curated a portfolio of over 10 owned brands and strengthened its distr"
-  },
-  {
-   "key": "faef78204b2411ed",
-   "title": "Application Development Analyst",
-   "employer": "Stylo",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=792c991b647f12b7",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "**Job Description**\n-------------------\n\n* Design, develop, and introduce automation solutions and digital tools using AI, software applications, and emerging technologies to meet business requirements.\n* Evaluate existing workflows and operational procedures to identify opportun"
-  },
-  {
-   "key": "b8e6bfd91028a162",
-   "title": "Demand Planner",
-   "employer": "The Estée Lauder Companies",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=7803cb37923ac705",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 3,
-   "flags": [
-    "stretch_3y"
-   ],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "**Description**\n---------------\n\nDemand Planner\n\nThe Estée Lauder Companies | Dubai, UAE\n\nFunction: Supply Chain\n\nScope: Middle East Affiliate\n\nReports to: Supply Chain Director\n\nAbout the Role\n\nWe are looking for an analytical and collaborative Demand Planner to develop accurate"
-  },
-  {
-   "key": "8a40ee79754a28c2",
-   "title": "Full Stack Software Engineer - AI-First",
-   "employer": "Jobgether",
-   "sector": "",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4489092436",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 3,
-   "flags": [
-    "stretch_3y"
-   ],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Full Stack Software Engineer – AI-First based remotely in United Arab Emirates. In this role, you will help build and scale innovative software soluti"
-  },
-  {
-   "key": "f757d9b9ef182e67",
-   "title": "Integration Developer - Market Data connectivity - Abu Dhabi, United Arab Emirates  ( Relocation friendly)",
-   "employer": "Luxoft",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi Emirate, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4490367245",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 3,
-   "flags": [
-    "stretch_3y"
-   ],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "Project description The Integration Developer will be responsible for the design, build, testing, deployment and support of market data connectors feeding the Pricing Engine, with a primary focus on Bloomberg B-PIPE and LSEG Real-Time Market Data System (RTMDS). The scope covers "
-  },
-  {
-   "key": "8915d33ba33a8165",
-   "title": "Market Analyst – MENA",
-   "employer": "Blueberry",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=6edd883f9ed3e873",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "**Introduction:**  \nWhy Blueberry?\n  \n  \nFinancial markets never stand still, and neither do we. At Blueberry, we believe that understanding the markets is just as important as participating in them. Behind every informed trading decision is access to timely insights, clear analy"
-  },
-  {
-   "key": "e9fd806049677a07",
-   "title": "Hiring - IT Support Engineer - Arabic Speaker",
-   "employer": "AWS Investment Group LLC",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=90ba713bfdb3dacd",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.3,
-   "snippet": "**Roles & responsibilities**\n\nWe are seeking a motivated and skilled IT Support Engineer to join our team. The ideal candidate will be responsible for configuring devices, providing technical support, and assisting employees with hardware and software issues. In addition to gener"
-  },
-  {
-   "key": "25c755544fc89fa8",
-   "title": "IT Support Executive",
-   "employer": "SAVE IN GOLD",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=1045af12497b72aa",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 1,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.3,
-   "snippet": "We are looking for an **IT Support Executive** to assist the IT team with day-to-day technical support, computer setup, troubleshooting, and general IT-related tasks. The ideal candidate should have basic technical knowledge, at least one year of relevant work experience, a willi"
-  },
-  {
-   "key": "2e58b08df90f074c",
-   "title": "IT Technical Support Engineer",
-   "employer": "ONLINE IT SOLUTIONS",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi, AZ, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=992c3c68f5ca6c2f",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.3,
-   "snippet": "We are seeking a highly motivated and minimum 2-3 years experienced IT Support Engineer to join our IT team.\n\nCandidates should be proficient in Server configuration, diagnostics, and maintenance. Also have experience with computer and network security, including firewalls, antiv"
-  },
-  {
-   "key": "89785a8ebc0ac4a5",
-   "title": "IT support engineer",
-   "employer": "Kids zone salon",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=0c0d77f5e261ed65",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-11",
    "age_days": 2,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.3,
-   "snippet": "We are looking for a skilled and motivated IT Support Engineer to provide technical support and maintain IT infrastructure within a healthcare environment. The candidate will be responsible for supporting hospital IT systems, end-user devices, network infrastructure, medical-rela"
-  },
-  {
-   "key": "a50f7b6c9d591335",
-   "title": "Sales Engineer - Data Center",
-   "employer": "GEORG FISCHER",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=15a4361640685d77",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-12",
-   "age_days": 1,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 3.3,
-   "snippet": "**Key Responsibilities**\n\nMaintain an up-to-date overview of all relevant UAE data center projects and the status of each opportunity.\n\nTrack each project’s stage, cooling concept, key stakeholders, decision makers, competitors, next actions, value, and expected award timing.\n\nId"
-  },
-  {
-   "key": "9621a6e1484ef145",
-   "title": "IT Support Specialist",
-   "employer": "4 Direction Group of Companies",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "it",
-   "cv": "IT",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=8bb661153686a4df",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-11",
-   "age_days": 2,
-   "min_years": 3,
-   "flags": [
-    "stretch_3y"
-   ],
-   "first_seen": "2026-11-13",
-   "last_seen": "2026-11-13",
-   "is_new": true,
-   "score": 2.3,
-   "snippet": "We are looking for an experienced IT Support Specialist to manage the company's IT infrastructure, provide daily technical support to employees, and ensure the smooth operation of IT systems, networks, servers, and cloud services across the group of companies.\n\nKey Responsibiliti"
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 5.3,
+   "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
   },
   {
    "key": "a9ccaf775ac39928",
@@ -868,7 +348,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -894,7 +374,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -920,11 +400,37 @@
     "workable:bayutdubizzle"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 4.7,
+   "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
+  },
+  {
+   "key": "945367bce59f0d92",
+   "title": "Data Engineer - Intern",
+   "employer": "dubizzle Group",
+   "sector": "proptech",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
+   "family": "data_eng",
+   "cv": "Data_Engineer",
+   "seniority": "junior",
+   "url": "https://apply.workable.com/j/591EAD46DE",
+   "source": "workable:bayutdubizzle",
+   "source_type": "ats",
+   "seen_on": [
+    "workable:bayutdubizzle"
+   ],
+   "posted": "2026-11-13",
+   "age_days": 1,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 4.7,
    "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
@@ -946,41 +452,14 @@
     "workable:bayutdubizzle"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 4.7,
    "snippet": "Bayut & dubizzle - The Arab World's only Homegrown Unicorn Business is now inviting applications for internships of 6 months duration in our Business Intelligence department. World-class mentors, fast paced & high performing work environment, our open culture and the opportunity "
-  },
-  {
-   "key": "5016c87913068ab2",
-   "title": "Marketing & Business Insights Junior Analyst (Cardiac Surgery) (Temporary)",
-   "employer": "Medtronic",
-   "sector": "",
-   "city": "Dubai",
-   "location": "Dubai, DU, United Arab Emirates",
-   "family": "bi",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://ae.indeed.com/viewjob?jk=0a6cfd8f299457a7",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed",
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-11",
-   "age_days": 2,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-12",
-   "last_seen": "2026-11-13",
-   "is_new": false,
-   "score": 4.7,
-   "snippet": "Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technologi"
   },
   {
    "key": "c3574370abf07822",
@@ -998,15 +477,41 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-09",
+   "posted": "2026-11-10",
    "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 4.3,
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
+  },
+  {
+   "key": "386faa9cf5f203d5",
+   "title": "Full Stack Junior Developer",
+   "employer": "Ampstek",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "junior",
+   "url": "https://www.linkedin.com/jobs/view/4489259096",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 4.3,
-   "snippet": ""
+   "snippet": "Job Description: • Write clean, maintainable, and efficient Java and UI code. • Troubleshoot, debug, and fix software defects or performance issues. • Write and maintain unit and integration tests. • Participate in peer code reviews and follow team coding standards. • Integrate A"
   },
   {
    "key": "a0fe421a867be11e",
@@ -1025,7 +530,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": 1,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1033,6 +538,32 @@
    "is_new": false,
    "score": 4.3,
    "snippet": "* Abu Dhabi, Abu Dhabi, United Arab Emirates (Alef\\_Abu\\_Dhabi)\n* Posted 2 Days Ago\n* Office - Flexible\n* Fulltime\n\n**Who we are**\n\nFounded in 2016, Alef Education (ALEFEDT on the Abu Dhabi Securities Exchange) is an award-winning AI powered learning solutions provider redefining"
+  },
+  {
+   "key": "9c5b7f3879a23ac1",
+   "title": "Data Analyst, dnata Cargo",
+   "employer": "dnata Cargo",
+   "sector": "aviation",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://www.emiratesgroupcareers.com/search-and-apply/27020/",
+   "source": "emirates_group",
+   "source_type": "employer",
+   "seen_on": [
+    "emirates_group"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 3,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-12",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 4.1,
+   "snippet": "Job Purpose dnata is more than a global air and travel services provider. We connect people with possibilities and opportunities across 130+ airports in 34 countries through ground handling, cargo, travel, and catering & retail services. Our purpose is clear: to deliver on the pr"
   },
   {
    "key": "d33c6a7ee0cb585c",
@@ -1051,14 +582,40 @@
     "oracle:First Abu Dhabi Bank"
    ],
    "posted": "2026-11-09",
-   "age_days": 4,
+   "age_days": 5,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 4.1,
-   "snippet": ""
+   "snippet": " Department: AI Hub Innovation JOB SUMMARY / INTRODUCTION: The AI Agent Specialist serves as the dedicated enablement partner for senior executives, helping them maximize value from AI-powered personal assistants and agentic technologies. Acting as a trusted advisor and first poi"
+  },
+  {
+   "key": "850cbcbbb1a8f588",
+   "title": "Specialist, Logistics (Performance & Reporting)",
+   "employer": "ADNOC",
+   "sector": "energy",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi, United Arab Emirates; Abu Dhabi, United Arab Emirates",
+   "family": "bi",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://jobs.adnoc.ae/us/en/job/33578",
+   "source": "phenom:ADNOC",
+   "source_type": "employer",
+   "seen_on": [
+    "phenom:ADNOC"
+   ],
+   "posted": "2026-11-09",
+   "age_days": 5,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-10",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 4.1,
+   "snippet": "About the Company. We are a global energy maritime logistics leader with a world-class asset base. We are the dedicated and vital logistics arm for ADNOC Group, providing mission critical and highl... About the Company: We are a global energy maritime logistics leader with a worl"
   },
   {
    "key": "e0c20c655ae979d8",
@@ -1077,7 +634,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1103,11 +660,11 @@
     "oracle:DP World"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-10",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.7,
    "snippet": "DP World is seeking a motivated, analytical, and detail-oriented intern to support Project Gateway, an initiative to digitise and standardise Business Continuity Management (BCM) across DP World Group. Working closely with the Group Resilience team, the intern will support projec"
@@ -1128,15 +685,15 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-09",
+   "posted": "2026-11-10",
    "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.7,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "d812bb840187a3e8",
@@ -1155,14 +712,66 @@
     "oracle:ADIB"
    ],
    "posted": "2026-10-22",
-   "age_days": 22,
+   "age_days": 23,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.6,
-   "snippet": ""
+   "snippet": " Role: HR Data Analyst Location: Abu Dhabi Role purpose: Provide support in managing MIS reporting to improve HR process workflow, information management. Support overall workforce planning strategy. Key accountabilities of the role: MIS & Workforce Planning / HRMS / Finance: Man"
+  },
+  {
+   "key": "0675c5459f1dc883",
+   "title": "Technical Product Owner - AI Tooling",
+   "employer": "Emirates Group",
+   "sector": "aviation",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.emiratesgroupcareers.com/search-and-apply/27091/",
+   "source": "emirates_group",
+   "source_type": "employer",
+   "seen_on": [
+    "emirates_group"
+   ],
+   "posted": "2026-11-03",
+   "age_days": 11,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-04",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 3.6,
+   "snippet": "Job Purpose At Emirates, we believe in connecting the world, to and through, our global hub in Dubai; and in constantly innovating to ensure our customers ‘Fly Better’. Emirates Group IT thrives on the dynamic nature of technology. Being pioneers in aviation innovation, we're alw"
+  },
+  {
+   "key": "0fa5feef81c59d6c",
+   "title": "AI Engineer",
+   "employer": "Beijing Shenchen Machinery Equipment Co., Ltd",
+   "sector": "",
+   "city": "Sharjah",
+   "location": "Sharjah Emirate, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4489299453",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.5,
+   "snippet": "AI EngineerJob Overview We are seeking a talented and innovative AI Engineer to design, develop, and implement intelligent solutions that enhance business operations and improve technological capabilities. The successful candidate will work on machine learning models, artificial "
   },
   {
    "key": "9ec5c8ba54d8f11a",
@@ -1181,7 +790,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1207,7 +816,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -1233,7 +842,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1243,30 +852,30 @@
    "snippet": ""
   },
   {
-   "key": "234ec56b03ffdbf5",
-   "title": "AI Forward Deployed Engineer / AI Solutions Engineer",
-   "employer": "La Fosse",
+   "key": "30053da98b5c8514",
+   "title": "AI Engineer – Smart Homes, IoT & Intelligent Automation",
+   "employer": "Socium - Teams Done Differently",
    "sector": "",
    "city": "Abu Dhabi",
-   "location": "Abu Dhabi Emirate, United Arab Emirates",
+   "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
    "family": "ai_ml",
    "cv": "AI_Engineer",
    "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4477525313",
+   "url": "https://www.linkedin.com/jobs/view/4488299316",
    "source": "jobspy:linkedin",
    "source_type": "linkedin",
    "seen_on": [
     "jobspy:linkedin"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-12",
+   "age_days": 2,
    "min_years": null,
    "flags": [],
-   "first_seen": "2026-11-11",
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.5,
-   "snippet": ""
+   "snippet": "Location: Abu Dhabi, United Arab Emirates (UAE) – Full Onsite Contract Duration: 12 Months Rolling Work Setup: Full Onsite at the Client's Office Target Start Date: ASAP Work Schedule: Day Shift Industry Focus: Artificial Intelligence, Smart Homes, Internet of Things (IoT), AIoT,"
   },
   {
    "key": "0a8480f5fc619ee0",
@@ -1285,7 +894,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1311,7 +920,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-03",
@@ -1321,56 +930,82 @@
    "snippet": "**AI Solutions Engineer**\n\nLocation: Dubai  \nExperience: 2 to 5 years  \nWork Type: Full-time, Work From Office (WFO)\n\nJoin our Dubai AI team to turn client requirements into working solutions on our Agentic AI platform. This client-facing role combines platform configuration, cli"
   },
   {
-   "key": "37a5a267654ff713",
-   "title": "Analyst - Data & Analytics",
-   "employer": "Chalhoub Group",
-   "sector": "retail",
-   "city": "Dubai",
-   "location": "Dubai, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics",
-   "source": "teamtailor:careers.chalhoubgroup.com",
-   "source_type": "ats",
-   "seen_on": [
-    "teamtailor:careers.chalhoubgroup.com"
-   ],
-   "posted": "2026-11-06",
-   "age_days": 7,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-06",
-   "last_seen": "2026-11-13",
-   "is_new": false,
-   "score": 3.5,
-   "snippet": "INSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been shaping luxury experiences in the Middle East. As a leading hybrid luxury retailer, the Group brings together over 16,000 talented professionals and partners with more than 400 international brands acr"
-  },
-  {
-   "key": "e8f6fe724f830f34",
-   "title": "Azure Machine Learning Engineer",
-   "employer": "Kingston Stanley",
+   "key": "79c7aa3573c23db2",
+   "title": "Artificial Intelligence Analyst",
+   "employer": "The Bahri & Mazroei Group",
    "sector": "",
    "city": "Dubai",
    "location": "Dubai, United Arab Emirates",
    "family": "ai_ml",
    "cv": "AI_Engineer",
    "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488345965",
+   "url": "https://www.linkedin.com/jobs/view/4490318681",
    "source": "jobspy:linkedin",
    "source_type": "linkedin",
    "seen_on": [
     "jobspy:linkedin"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
-   "min_years": null,
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 2,
    "flags": [],
-   "first_seen": "2026-11-11",
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.5,
-   "snippet": ""
+   "snippet": "Key Responsibilities Process mapping and discovery — work hands-on with multi-functional departments and divisions across the group companies to document as-is processes, identify pain points, and pinpoint processes suitable for AI-enablement and automation. Opportunity assessmen"
+  },
+  {
+   "key": "9db16dc3f1b36e5a",
+   "title": "BI Developer.Data Analytics & AI-UAE",
+   "employer": "Alshaya Group",
+   "sector": "",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=28a743e1f18bb9d0",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.5,
+   "snippet": "**Job No:** 4934156\n  \n**Location:** UAE  \n  \n\nBI Developer will work in the Data & Business Intelligence Team and will closely with BI Manager to support multiple streams in organization. Main responsibility will be to ensure that stream has all necessary data points and basic m"
+  },
+  {
+   "key": "4a9ba302cfac612d",
+   "title": "Data Analyst",
+   "employer": "Intellect management group",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=2157d999ea3b56cf",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 1,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.5,
+   "snippet": "**Intellect Chartered Accountants** is a leading firm of Chartered Accountants & Auditors with over **21+ years of experience in the UAE**, providing end-to-end financial and professional services to a diverse portfolio of clients.\n\n**Job Summary**\n\nWe are looking for a detail-or"
   },
   {
    "key": "f9afd86037b3dd94",
@@ -1389,7 +1024,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1415,7 +1050,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1441,7 +1076,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1451,30 +1086,30 @@
    "snippet": "**Company Description**\n\nTrans Skills is an HRIS solutions business offering services from hiring to payroll processing and payments. Founded in 2008 and headquartered in Dubai, we offer a comprehensive suite of products and services to help businesses source, onboard, ensure com"
   },
   {
-   "key": "e1d66edb389f5737",
-   "title": "Data Analyst, dnata Cargo",
-   "employer": "dnata",
+   "key": "6172ae603f8735aa",
+   "title": "Data Engineer",
+   "employer": "VaporVM",
    "sector": "",
    "city": "Dubai",
-   "location": "Dubai, Dubai, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
+   "location": "Dubai, United Arab Emirates",
+   "family": "data_eng",
+   "cv": "Data_Engineer",
    "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488246374",
+   "url": "https://www.linkedin.com/jobs/view/4489250853",
    "source": "jobspy:linkedin",
    "source_type": "linkedin",
    "seen_on": [
     "jobspy:linkedin"
    ],
-   "posted": "2026-11-11",
+   "posted": "2026-11-12",
    "age_days": 2,
-   "min_years": 2,
+   "min_years": null,
    "flags": [],
-   "first_seen": "2026-11-12",
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.5,
-   "snippet": ""
+   "snippet": "We are seeking an experienced Data Engineer with strong AWS and banking sector experience to join its engineering team in the UAE. The candidate will be responsible for designing, developing, and optimising scalable Lakehouse data architectures and pipelines that support enterpri"
   },
   {
    "key": "1aed24ce5178485a",
@@ -1493,7 +1128,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1519,7 +1154,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1545,7 +1180,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1571,7 +1206,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1597,7 +1232,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1605,6 +1240,32 @@
    "is_new": false,
    "score": 3.5,
    "snippet": ""
+  },
+  {
+   "key": "095b8f3eb3ea96d6",
+   "title": "NLP Engineer",
+   "employer": "W Budapest",
+   "sector": "",
+   "city": "Sharjah",
+   "location": "Sharjah Emirate, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488521111",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.5,
+   "snippet": "🤖 We’re Hiring: NLP Engineer (Natural Language Processing Engineer) 🕒 Employment Type: Full-Time 💼 Level: Mid-Level We are looking for a talented, analytical, and innovative NLP Engineer to join our technology team! The ideal candidate will have a strong background in natural lan"
   },
   {
    "key": "8efc6fac6d2e110e",
@@ -1623,33 +1284,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-12",
-   "last_seen": "2026-11-13",
-   "is_new": false,
-   "score": 3.5,
-   "snippet": ""
-  },
-  {
-   "key": "e555f728220fce75",
-   "title": "Software Engineer, AI Integrations",
-   "employer": "Jobgether",
-   "sector": "",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488688184",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -1675,11 +1310,11 @@
     "teamtailor:propertyfinder"
    ],
    "posted": "2026-09-24",
-   "age_days": 50,
+   "age_days": 51,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
    "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
@@ -1701,14 +1336,14 @@
     "avature:Dubai Holding"
    ],
    "posted": "2026-11-02",
-   "age_days": 11,
+   "age_days": 12,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
-   "snippet": "Dubai Holding Corporate Intern Dubai Holding Corporate"
+   "snippet": "Dubai Holding Corporate Intern Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Experience Level Entry Level / Junior / Fresh Graduates Date Monday, November 2, 2026 Entity DH Corporate Description About Dubai Ho"
   },
   {
    "key": "40ac2edaf497885a",
@@ -1727,14 +1362,40 @@
     "avature:Dubai Holding"
    ],
    "posted": "2026-10-23",
-   "age_days": 21,
+   "age_days": 22,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
-   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate"
+   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Leaders of Tomorrow Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Corporat"
+  },
+  {
+   "key": "401f4d451736bee4",
+   "title": "Energy Tech Accelerator Graduate Program - Dubai",
+   "employer": "Schneider Electric",
+   "sector": "industry",
+   "city": "Dubai",
+   "location": "Dubai Silicon Oasis, United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://se.jibeapply.com/jobs/139383",
+   "source": "jibe:Schneider Electric",
+   "source_type": "employer",
+   "seen_on": [
+    "jibe:Schneider Electric"
+   ],
+   "posted": "2026-11-01",
+   "age_days": 13,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-04",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 3.2,
+   "snippet": "Ready to accelerate your career and help shape the future of Energy Tech? At Schneider Electric, we’re not just imagining the future of energy, we’re creating it. Recognized as the World’s Most Sustainable Company by TIME and Statista, we are your energy technology partner, elect"
   },
   {
    "key": "799d67deff3f1898",
@@ -1757,7 +1418,7 @@
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
    "snippet": ""
@@ -1783,7 +1444,7 @@
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-03",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
    "snippet": ""
@@ -1809,10 +1470,36 @@
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-03",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
    "snippet": ""
+  },
+  {
+   "key": "dd7f693568098012",
+   "title": "Analyst - Report",
+   "employer": "AD Ports Group",
+   "sector": "ports and logistics",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466",
+   "source": "oracle:AD Ports Group",
+   "source_type": "employer",
+   "seen_on": [
+    "oracle:AD Ports Group"
+   ],
+   "posted": "2026-11-13",
+   "age_days": 1,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 3.1,
+   "snippet": "Analyst – Report for –Fujairah Terminals, delivering accurate operational, commercial and financial reporting to support KPI monitoring and data‑driven decisions. This position is offered under a one-year renewable contract through a third-party employment arrangement, with oppor"
   },
   {
    "key": "0be815fe86d9401e",
@@ -1831,7 +1518,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -1839,6 +1526,58 @@
    "is_new": false,
    "score": 3.1,
    "snippet": "**Location:** Dubai, UAE  \n**Experience:** Relevant ERP / Software Project Experience  \n**Work Type:** Part-Time / Internship  \n**Work Mode:** In Person  \n**Preference:** Candidates currently based in Dubai\n\n**Job Summary**\n\nCraft Interactive Technologies is looking for a **nativ"
+  },
+  {
+   "key": "b3a7a05aed9aa3f4",
+   "title": "Backend Full Stack Developer (Java/Angular/React)",
+   "employer": "Citi",
+   "sector": "",
+   "city": "UAE",
+   "location": "AJ, United Arab Emirates",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=0e85d209168f7092",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.1,
+   "snippet": "**Discover your future at Citi**\n--------------------------------\n\nWorking at Citi is far more than just a job. A career with us means joining a team of approximately 219,000 dedicated people from around the globe. At Citi, you’ll have the opportunity to grow your career, give ba"
+  },
+  {
+   "key": "c61413271c1f944f",
+   "title": "Digital Solutions Engineer",
+   "employer": "Cleveland Clinic Abu Dhabi",
+   "sector": "",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi Emirate, United Arab Emirates",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488298396",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.1,
+   "snippet": "JOB SUMMARY The Digital Solutions Engineer (DSE) serves as the technical delivery lead for AI-enabled products, partnering closely with clinical and operational teams to design, build, integrate, deploy AI solutions and automation. The role acts as the bridge between business req"
   },
   {
    "key": "ed7c416efcd50c4d",
@@ -1857,40 +1596,40 @@
     "oracle:ADIB"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 1,
    "flags": [],
    "first_seen": "2026-11-11",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.1,
-   "snippet": ""
+   "snippet": " Role : Fraud Monitoring Analyst (Outsource) Location : Abu Dhabi Role Purpose: Monitoring and reporting of transactions risk aspects from Issuer/E-Channels point of view. Job involves transaction activity review, fraud detection and liaison with concerned departments/cardholders"
   },
   {
-   "key": "d2727a6cdc24a2f1",
-   "title": "Java Software Engineer",
-   "employer": "MCG Asia",
+   "key": "a2cf331f13a5b515",
+   "title": "Full-Stack Product Engineer — CRM & Integrations",
+   "employer": "Popcorn",
    "sector": "",
    "city": "Dubai",
    "location": "Dubai, United Arab Emirates",
    "family": "software",
    "cv": "Backend_Engineer",
    "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488679354",
+   "url": "https://www.linkedin.com/jobs/view/4488286816",
    "source": "jobspy:linkedin",
    "source_type": "linkedin",
    "seen_on": [
     "jobspy:linkedin"
    ],
-   "posted": "2026-11-11",
+   "posted": "2026-11-12",
    "age_days": 2,
    "min_years": null,
    "flags": [],
-   "first_seen": "2026-11-12",
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.1,
-   "snippet": ""
+   "snippet": "About POPCORN Studio POPCORN Studio is a creative SaaS platform helping brands, agencies and creators produce advertising and video content. We are expanding our Dubai engineering team and looking for an engineer who can build product features, connect business systems and improv"
   },
   {
    "key": "a8024113d5cd4539",
@@ -1909,7 +1648,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -1917,32 +1656,6 @@
    "is_new": false,
    "score": 3.1,
    "snippet": "**A Snapshot of Your Day**\n\nAs a service engineering intern you will support our Electrification, Automation, and Digitalization service teams, shadowing experienced engineers during planning and remote support sessions, learning our core technologies, and delivering a supervised"
-  },
-  {
-   "key": "d58b3ca14ca483c6",
-   "title": "Software Engineer - Database - Bitnomial",
-   "employer": "Kraken",
-   "sector": "",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "software",
-   "cv": "Backend_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4488642332",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-10",
-   "age_days": 3,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-11",
-   "last_seen": "2026-11-13",
-   "is_new": false,
-   "score": 3.1,
-   "snippet": ""
   },
   {
    "key": "a53b83758d6ed670",
@@ -1961,7 +1674,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -1969,6 +1682,32 @@
    "is_new": false,
    "score": 3.1,
    "snippet": "**NOTE: This is a FULLY remote role, but the candidate must be within Europe OR MENA to collaborate with their team, peers, and internal customers. You do not have to be in the specific country or city shown in this listing, but** **please only apply if you are physically based w"
+  },
+  {
+   "key": "8756bcb6919e7e6c",
+   "title": "Trainee - Category Management",
+   "employer": "Chalhoub Group",
+   "sector": "retail",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://careers.chalhoubgroup.com/jobs/8708569-trainee-category-management",
+   "source": "teamtailor:careers.chalhoubgroup.com",
+   "source_type": "ats",
+   "seen_on": [
+    "teamtailor:careers.chalhoubgroup.com"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 3.1,
+   "snippet": "IINSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been a partner and creator of luxury experiences in the Middle East. In its pursuit to excel as a hybrid luxury retailer, the Group has curated a portfolio of over 10 owned brands and strengthened its dist"
   },
   {
    "key": "9e9c99c996f0ca24",
@@ -1987,7 +1726,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "agency"
@@ -2015,12 +1754,94 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [
     "agency"
    ],
    "first_seen": "2026-11-10",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.0,
+   "snippet": ""
+  },
+  {
+   "key": "234ec56b03ffdbf5",
+   "title": "AI Forward Deployed Engineer / AI Solutions Engineer",
+   "employer": "La Fosse",
+   "sector": "",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi Emirate, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4477525313",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": null,
+   "flags": [
+    "agency"
+   ],
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.0,
+   "snippet": ""
+  },
+  {
+   "key": "37a5a267654ff713",
+   "title": "Analyst - Data & Analytics",
+   "employer": "Chalhoub Group",
+   "sector": "retail",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics",
+   "source": "teamtailor:careers.chalhoubgroup.com",
+   "source_type": "ats",
+   "seen_on": [
+    "teamtailor:careers.chalhoubgroup.com"
+   ],
+   "posted": "2026-11-06",
+   "age_days": 8,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-06",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 3.0,
+   "snippet": "INSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been shaping luxury experiences in the Middle East. As a leading hybrid luxury retailer, the Group brings together over 16,000 talented professionals and partners with more than 400 international brands acr"
+  },
+  {
+   "key": "e8f6fe724f830f34",
+   "title": "Azure Machine Learning Engineer",
+   "employer": "Kingston Stanley",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488345965",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": null,
+   "flags": [
+    "agency"
+   ],
+   "first_seen": "2026-11-11",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.0,
@@ -2043,7 +1864,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [
     "agency"
@@ -2071,7 +1892,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "agency"
@@ -2083,30 +1904,30 @@
    "snippet": ""
   },
   {
-   "key": "057e5e243998cbe4",
-   "title": "Product Analyst",
-   "employer": "Easygenerator",
+   "key": "2618d0c1105fd9eb",
+   "title": "Product Specialist (Hematology)",
+   "employer": "Arabian Ethicals Company",
    "sector": "",
    "city": "Dubai",
-   "location": "Dubai, Dubai, United Arab Emirates",
+   "location": "Dubai, DU, United Arab Emirates",
    "family": "product",
    "cv": "Data_Analyst",
    "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4480968610",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
+   "url": "https://ae.indeed.com/viewjob?jk=7d0805f0e5b349c6",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
    "seen_on": [
-    "jobspy:linkedin"
+    "jobspy:indeed"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-12",
+   "age_days": 2,
    "min_years": null,
    "flags": [],
-   "first_seen": "2026-11-11",
+   "first_seen": "2026-11-13",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.0,
-   "snippet": ""
+   "snippet": "**Company Description**\n\nEstablished in 1977, Arabian Ethicals takes pride in being a top healthcare player in the UAE. As the exclusive representative and distributor of many multinational pharmaceutical, consumer, and veterinary products in the UAE, the Company serves over 2,00"
   },
   {
    "key": "4e7b42155a896393",
@@ -2125,10 +1946,38 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 3.0,
+   "snippet": ""
+  },
+  {
+   "key": "e555f728220fce75",
+   "title": "Software Engineer, AI Integrations",
+   "employer": "Jobgether",
+   "sector": "",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488688184",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 3,
+   "min_years": null,
+   "flags": [
+    "agency"
+   ],
+   "first_seen": "2026-11-12",
    "last_seen": "2026-11-13",
    "is_new": false,
    "score": 3.0,
@@ -2151,7 +2000,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-11",
@@ -2159,6 +2008,32 @@
    "is_new": false,
    "score": 2.8,
    "snippet": "**Company Description**\n\nTrans Skills is an HRIS solutions business offering services from hiring to payroll processing and payments. Founded in 2008 and headquartered in Dubai, we offer a comprehensive suite of products and services to help businesses source, onboard, ensure com"
+  },
+  {
+   "key": "995369b579f2092f",
+   "title": "Business Process Analyst",
+   "employer": "Miral Destinations",
+   "sector": "",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi Emirate, United Arab Emirates",
+   "family": "business",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488520285",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.8,
+   "snippet": "The Business Process Analyst plays a critical role in turning attendance, ticketing, and revenue data into decision-ready insights across Miral's attractions portfolio. By combining business analytics, AI-enabled forecasting, and stakeholder partnership, the role helps leaders un"
   },
   {
    "key": "d84e813d771c2b7b",
@@ -2177,7 +2052,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -2203,11 +2078,11 @@
     "amazon"
    ],
    "posted": "2026-10-09",
-   "age_days": 35,
+   "age_days": 36,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.6,
    "snippet": "Want to be part of the team that keeps the world's largest cloud running? As an Engineering Operations Technician Intern at Amazon Web Services (AWS), you will get hands-on experience with the critical - In pursuit of a Bachelor's degree in a relevant field such as Mechanical Eng"
@@ -2229,11 +2104,11 @@
     "amazon"
    ],
    "posted": "2026-10-13",
-   "age_days": 31,
+   "age_days": 32,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.6,
    "snippet": "Ever wanted to help design and support the data centers that power the world's largest cloud? As a DC Infra Engineer Intern at Amazon Web Services (AWS), you will work alongside an experienced, cross-disciplinary - In the last year of a Bachelor's or Master's degree in Electrical"
@@ -2255,11 +2130,11 @@
     "amazon"
    ],
    "posted": "2026-10-09",
-   "age_days": 35,
+   "age_days": 36,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.6,
    "snippet": "At Amazon Web Services (AWS), we are working to be the most customer-centric company on earth. To get there, we need exceptionally talented, bright, and driven people. Are you ready to embrace the challenge? - In pursuit of a Bachelor's degree in a relevant technical field such a"
@@ -2281,7 +2156,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "agency"
@@ -2291,6 +2166,34 @@
    "is_new": false,
    "score": 2.6,
    "snippet": ""
+  },
+  {
+   "key": "a6c606eb69a54c9c",
+   "title": "Full Stack Engineer",
+   "employer": "Akkodis",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4489084927",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [
+    "agency"
+   ],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.6,
+   "snippet": "We are looking for a Senior Full Stack Engineer to join our engineering team in Dubai and contribute to the design, development and evolution of scalable, secure and high-performance software solutions. The role is primarily focused on C#/.NET backend development, combined with s"
   },
   {
    "key": "751bb0d4f375671a",
@@ -2309,7 +2212,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-12",
-   "age_days": 1,
+   "age_days": 2,
    "min_years": null,
    "flags": [
     "agency"
@@ -2319,6 +2222,60 @@
    "is_new": false,
    "score": 2.6,
    "snippet": ""
+  },
+  {
+   "key": "d2727a6cdc24a2f1",
+   "title": "Java Software Engineer",
+   "employer": "MCG Asia",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4488679354",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 3,
+   "min_years": null,
+   "flags": [
+    "agency"
+   ],
+   "first_seen": "2026-11-12",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.6,
+   "snippet": ""
+  },
+  {
+   "key": "1c5f19ff22f57704",
+   "title": "Order Management Trainee",
+   "employer": "Chalhoub Group",
+   "sector": "retail",
+   "city": "Dubai",
+   "location": "Dubai, United Arab Emirates",
+   "family": "graduate",
+   "cv": "Data_Analyst",
+   "seniority": "junior",
+   "url": "https://careers.chalhoubgroup.com/jobs/8671090-order-management-trainee",
+   "source": "teamtailor:careers.chalhoubgroup.com",
+   "source_type": "ats",
+   "seen_on": [
+    "teamtailor:careers.chalhoubgroup.com"
+   ],
+   "posted": "2026-11-05",
+   "age_days": 9,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.6,
+   "snippet": "INSPIRE | EXHILARATE | DELIGHT For over seven decades, Chalhoub Group has been a partner and creator of luxury experiences in the Middle East. In its pursuit to excel as a hybrid luxury retailer, the Group has curated a portfolio of over 10 owned brands and strengthened its distr"
   },
   {
    "key": "bf5ac7e104a8f41f",
@@ -2337,7 +2294,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 3,
    "flags": [
     "stretch_3y"
@@ -2347,6 +2304,140 @@
    "is_new": false,
    "score": 2.5,
    "snippet": ""
+  },
+  {
+   "key": "faef78204b2411ed",
+   "title": "Application Development Analyst",
+   "employer": "Stylo",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=792c991b647f12b7",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.5,
+   "snippet": "**Job Description**\n-------------------\n\n* Design, develop, and introduce automation solutions and digital tools using AI, software applications, and emerging technologies to meet business requirements.\n* Evaluate existing workflows and operational procedures to identify opportun"
+  },
+  {
+   "key": "b8e6bfd91028a162",
+   "title": "Demand Planner",
+   "employer": "The Estée Lauder Companies",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=7803cb37923ac705",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.5,
+   "snippet": "**Description**\n---------------\n\nDemand Planner\n\nThe Estée Lauder Companies | Dubai, UAE\n\nFunction: Supply Chain\n\nScope: Middle East Affiliate\n\nReports to: Supply Chain Director\n\nAbout the Role\n\nWe are looking for an analytical and collaborative Demand Planner to develop accurate"
+  },
+  {
+   "key": "f757d9b9ef182e67",
+   "title": "Integration Developer - Market Data connectivity - Abu Dhabi, United Arab Emirates  ( Relocation friendly)",
+   "employer": "Luxoft",
+   "sector": "",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi Emirate, United Arab Emirates",
+   "family": "data_analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4490367245",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.5,
+   "snippet": "Project description The Integration Developer will be responsible for the design, build, testing, deployment and support of market data connectors feeding the Pricing Engine, with a primary focus on Bloomberg B-PIPE and LSEG Real-Time Market Data System (RTMDS). The scope covers "
+  },
+  {
+   "key": "8915d33ba33a8165",
+   "title": "Market Analyst – MENA",
+   "employer": "Blueberry",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=6edd883f9ed3e873",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.5,
+   "snippet": "**Introduction:**  \nWhy Blueberry?\n  \n  \nFinancial markets never stand still, and neither do we. At Blueberry, we believe that understanding the markets is just as important as participating in them. Behind every informed trading decision is access to timely insights, clear analy"
+  },
+  {
+   "key": "057e5e243998cbe4",
+   "title": "Product Analyst",
+   "employer": "Easygenerator",
+   "sector": "edtech",
+   "city": "Dubai",
+   "location": "Dubai; Dubai Dubai United Arab Emirates",
+   "family": "product",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://jobs.ashbyhq.com/Easygenerator/c168b84d-67ec-4b6f-882c-d70a4ebfb754",
+   "source": "ashby:easygenerator",
+   "source_type": "ats",
+   "seen_on": [
+    "ashby:easygenerator"
+   ],
+   "posted": "2026-10-19",
+   "age_days": 26,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.5,
+   "snippet": "We’re looking for a Product Analyst to turn product usage data into clear insights that shape what we build next and how our customers get value from it.\n\n\n\n\nWHAT YOU WILL BE DOING\n\n - Run deep dive analyses and root cause investigations into product and business metrics.\n\n - Bui"
   },
   {
    "key": "635cf805bf01bb31",
@@ -2365,7 +2456,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 2,
    "flags": [
     "agency"
@@ -2393,7 +2484,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -2401,6 +2492,32 @@
    "is_new": false,
    "score": 2.3,
    "snippet": "#### **Job Description**\n\n**About Us**\n\nGrant Thornton UAE is a leading professional services firm, providing audit and assurance, tax and advisory services across multiple industries. We have served public and private sector clients in the United Arab Emirates (UAE) for almost 6"
+  },
+  {
+   "key": "e9fd806049677a07",
+   "title": "Hiring - IT Support Engineer - Arabic Speaker",
+   "employer": "AWS Investment Group LLC",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=90ba713bfdb3dacd",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.3,
+   "snippet": "**Roles & responsibilities**\n\nWe are seeking a motivated and skilled IT Support Engineer to join our team. The ideal candidate will be responsible for configuring devices, providing technical support, and assisting employees with hardware and software issues. In addition to gener"
   },
   {
    "key": "e3326d4dc4732e3d",
@@ -2419,7 +2536,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -2427,6 +2544,32 @@
    "is_new": false,
    "score": 2.3,
    "snippet": "We are looking for a IT Support for a Jewelry Company.\n\n- Able to Manage Website  \n- Knowledge in Excel and Word.  \n- Able to Handle ERP Software’s.  \n- Ability to solve problems.  \n- Added Skill to be able to handle Customers.  \n- Open to learn more skills and knowledge.  \n\\* Im"
+  },
+  {
+   "key": "25c755544fc89fa8",
+   "title": "IT Support Executive",
+   "employer": "SAVE IN GOLD",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=1045af12497b72aa",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 1,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.3,
+   "snippet": "We are looking for an **IT Support Executive** to assist the IT team with day-to-day technical support, computer setup, troubleshooting, and general IT-related tasks. The ideal candidate should have basic technical knowledge, at least one year of relevant work experience, a willi"
   },
   {
    "key": "06779729fdc2764f",
@@ -2445,7 +2588,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -2453,6 +2596,84 @@
    "is_new": false,
    "score": 2.3,
    "snippet": "**Job Responsibilities:**\n\n* Provide technical support to employees for computers, printers, networks, and other IT equipment.\n* Install, configure, and maintain computer hardware and software.\n* Troubleshoot technical issues and resolve system errors.\n* Maintain company networks"
+  },
+  {
+   "key": "2e58b08df90f074c",
+   "title": "IT Technical Support Engineer",
+   "employer": "ONLINE IT SOLUTIONS",
+   "sector": "",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi, AZ, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=992c3c68f5ca6c2f",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.3,
+   "snippet": "We are seeking a highly motivated and minimum 2-3 years experienced IT Support Engineer to join our IT team.\n\nCandidates should be proficient in Server configuration, diagnostics, and maintenance. Also have experience with computer and network security, including firewalls, antiv"
+  },
+  {
+   "key": "89785a8ebc0ac4a5",
+   "title": "IT support engineer",
+   "employer": "Kids zone salon",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=0c0d77f5e261ed65",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 3,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.3,
+   "snippet": "We are looking for a skilled and motivated IT Support Engineer to provide technical support and maintain IT infrastructure within a healthcare environment. The candidate will be responsible for supporting hospital IT systems, end-user devices, network infrastructure, medical-rela"
+  },
+  {
+   "key": "a50f7b6c9d591335",
+   "title": "Sales Engineer - Data Center",
+   "employer": "GEORG FISCHER",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=15a4361640685d77",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.3,
+   "snippet": "**Key Responsibilities**\n\nMaintain an up-to-date overview of all relevant UAE data center projects and the status of each opportunity.\n\nTrack each project’s stage, cooling concept, key stakeholders, decision makers, competitors, next actions, value, and expected award timing.\n\nId"
   },
   {
    "key": "3e62bca72e118f74",
@@ -2471,7 +2692,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-12",
@@ -2497,14 +2718,42 @@
     "amazon"
    ],
    "posted": "2026-09-23",
-   "age_days": 51,
+   "age_days": 52,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.2,
    "snippet": "At Amazon, we are working to be the most customer-centric company on earth. To get there, we need exceptionally talented, bright, and driven people. Amazon is continually evolving and is a place where - Currently enrolled in or will receive a Bachelor's or Master's Degree with a "
+  },
+  {
+   "key": "46698af98aa7e5e3",
+   "title": "Application Developer",
+   "employer": "Cigna",
+   "sector": "insurance",
+   "city": "Dubai",
+   "location": "UAE Dubai - Nas Neuron",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/UAE-Dubai---Nas-Neuron/Application-Developer_26013682",
+   "source": "workday:Cigna",
+   "source_type": "employer",
+   "seen_on": [
+    "workday:Cigna"
+   ],
+   "posted": "2026-11-05",
+   "age_days": 9,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-05",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.2,
+   "snippet": " 1. JOB PURPOSE The Job holder is responsible to develop and implement software application, software components and unit test. They collaborate with teams to set specifications, write high quality code, conduct testing, and troubleshoot applications. 2. RESPONSIBILITIES AND DUTI"
   },
   {
    "key": "f63f25c1200246e9",
@@ -2523,13 +2772,13 @@
     "teamtailor:propertyfinder"
    ],
    "posted": "2026-08-17",
-   "age_days": 88,
+   "age_days": 89,
    "min_years": 3,
    "flags": [
     "stretch_3y"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.2,
    "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
@@ -2551,7 +2800,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 3,
    "flags": [
     "stretch_3y"
@@ -2579,7 +2828,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 3,
    "flags": [
     "stretch_3y"
@@ -2607,7 +2856,7 @@
     "jobspy:linkedin"
    ],
    "posted": "2026-11-11",
-   "age_days": 2,
+   "age_days": 3,
    "min_years": 3,
    "flags": [
     "stretch_3y"
@@ -2617,6 +2866,60 @@
    "is_new": false,
    "score": 2.1,
    "snippet": ""
+  },
+  {
+   "key": "d58b3ca14ca483c6",
+   "title": "Software Engineer - Database - Bitnomial",
+   "employer": "Kraken",
+   "sector": "crypto",
+   "city": "UAE",
+   "location": "United States; Brazil; United Arab Emirates; Ireland; Peru; Sweden; Colombia; Argentina; Romania; Cyprus; Switzerland; Portugal; Lithuania; South Africa; Czech ",
+   "family": "software",
+   "cv": "Backend_Engineer",
+   "seniority": "unspecified",
+   "url": "https://jobs.ashbyhq.com/kraken.com/decc0dbd-51f7-4fee-9635-130211623f07",
+   "source": "ashby:kraken.com",
+   "source_type": "ats",
+   "seen_on": [
+    "ashby:kraken.com"
+   ],
+   "posted": "2026-11-10",
+   "age_days": 4,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.1,
+   "snippet": "BUILDING THE FUTURE OF OPEN FINANCE\n\n\nPayward - the parent company behind Kraken, NinjaTrader, Breakout,  xStocks, Payward Services and CF Benchmarks - has spent the last 15 years building one of the most modern and globally accessible financial infrastructure platforms in the in"
+  },
+  {
+   "key": "db92784b860f2d2a",
+   "title": "AI Product Owner",
+   "employer": "Fuse Energy",
+   "sector": "energy",
+   "city": "Dubai",
+   "location": "Dubai, Dubai, United Arab Emirates; Dubai, Dubai, United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://apply.workable.com/j/F398F48679",
+   "source": "workable:fuseenergy",
+   "source_type": "ats",
+   "seen_on": [
+    "workable:fuseenergy"
+   ],
+   "posted": "2026-09-03",
+   "age_days": 72,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.0,
+   "snippet": "Fuse Energy is an energy startup on a mission to make energy abundant and affordable, fast. We combine first-principles thinking with cutting-edge technology to build a radically better energy system. We've raised over $200M from top-tier investors including Balderton, Lakestar, "
   },
   {
    "key": "c19ad285a4446484",
@@ -2635,16 +2938,73 @@
     "teamtailor:propertyfinder"
    ],
    "posted": "2026-10-20",
-   "age_days": 24,
+   "age_days": 25,
    "min_years": 3,
    "flags": [
     "stretch_3y"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 2.0,
    "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
+  },
+  {
+   "key": "cd5d2270ba8dbfd1",
+   "title": "Applied AI Engineer",
+   "employer": "Fuse Energy",
+   "sector": "energy",
+   "city": "Dubai",
+   "location": "London, England, United Kingdom; London, England, United Kingdom; San Francisco, California, United States; Zürich, Zurich, Switzerland; Dubai, Dubai, United Ar",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://apply.workable.com/j/905963A1DE",
+   "source": "workable:fuseenergy",
+   "source_type": "ats",
+   "seen_on": [
+    "workable:fuseenergy"
+   ],
+   "posted": "2026-11-04",
+   "age_days": 10,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-05",
+   "last_seen": "2026-11-14",
+   "is_new": false,
+   "score": 2.0,
+   "snippet": "Fuse Energy is an energy startup on a mission to make energy abundant and affordable, fast. We combine first-principles thinking with cutting-edge technology to build a radically better energy system. We've raised over $200M from top-tier investors including Balderton, Lakestar, "
+  },
+  {
+   "key": "8a40ee79754a28c2",
+   "title": "Full Stack Software Engineer - AI-First",
+   "employer": "Jobgether",
+   "sector": "",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "ai_ml",
+   "cv": "AI_Engineer",
+   "seniority": "unspecified",
+   "url": "https://www.linkedin.com/jobs/view/4489092436",
+   "source": "jobspy:linkedin",
+   "source_type": "linkedin",
+   "seen_on": [
+    "jobspy:linkedin"
+   ],
+   "posted": "2026-11-12",
+   "age_days": 2,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y",
+    "agency"
+   ],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 2.0,
+   "snippet": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Full Stack Software Engineer – AI-First based remotely in United Arab Emirates. In this role, you will help build and scale innovative software soluti"
   },
   {
    "key": "b3ec84d9d80f7219",
@@ -2662,17 +3022,17 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-09",
+   "posted": "2026-11-10",
    "age_days": 4,
    "min_years": null,
    "flags": [
     "nationals_preferred"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.8,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "fbec0d7a58986b81",
@@ -2690,17 +3050,17 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-09",
+   "posted": "2026-11-10",
    "age_days": 4,
    "min_years": null,
    "flags": [
     "nationals_preferred"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.8,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "de08b03bd4fdbdd4",
@@ -2718,17 +3078,17 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
+   "posted": "2026-11-11",
    "age_days": 3,
    "min_years": null,
    "flags": [
     "nationals_preferred"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.8,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "159760d61700f5d0",
@@ -2746,17 +3106,17 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-06",
+   "posted": "2026-11-07",
    "age_days": 7,
    "min_years": null,
    "flags": [
     "nationals_preferred"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.8,
-   "snippet": ""
+   "snippet": " Our Purpose Mastercard powers economies and empowers people in 200+ countries and territories worldwide. Together with our customers, we’re helping build a sustainable economy where everyone can prosper. We support a wide range of digital payments choices, making transactions se"
   },
   {
    "key": "2a18de2e1306112e",
@@ -2775,13 +3135,13 @@
     "phenom:G42"
    ],
    "posted": "2026-09-04",
-   "age_days": 70,
+   "age_days": 71,
    "min_years": 3,
    "flags": [
     "stretch_3y"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.6,
    "snippet": "We are seeking a Data Engineer to develop scalable data pipelines and intelligent AI solutions using Azure Agent Foundry, OpenAI, and Databricks. You will design and maintain enterprise-grade AI systems, collaborating with cross-functional teams. Ideal candidates have strong data"
@@ -2803,11 +3163,11 @@
     "teamtailor:propertyfinder"
    ],
    "posted": "2026-09-29",
-   "age_days": 45,
+   "age_days": 46,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.6,
    "snippet": "Property Finder is the leading property portal in the Middle East and North Africa (MENA) region, dedicated to shaping an inclusive future for real estate while spearheading the region’s growing tech ecosystem. At its core is a clear and powerful purpose: To change living for goo"
@@ -2829,11 +3189,11 @@
     "ashby:cohere"
    ],
    "posted": "2026-09-10",
-   "age_days": 64,
+   "age_days": 65,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.6,
    "snippet": "WHO ARE WE?\n\nCohere is the leading security-first enterprise AI company.  We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.\n\nWe’re training and deploying frontier models for enterprises who are building AI "
@@ -2855,13 +3215,13 @@
     "ashby:qlub"
    ],
    "posted": "2026-11-09",
-   "age_days": 4,
+   "age_days": 5,
    "min_years": null,
    "flags": [
     "own_visa_preferred"
    ],
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.6,
    "snippet": "Why qlub\n\nThe end of a great meal shouldn't be the slow part. Waiting for the check, finding someone to take payment, splitting a bill by hand. qlub removes that friction. Guests scan a QR code and pay in seconds. No app, no download, no waiting.\n\nFrom Pay-at-Table and Digital Me"
@@ -2883,11 +3243,11 @@
     "greenhouse:tamara"
    ],
    "posted": "2026-10-04",
-   "age_days": 40,
+   "age_days": 41,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.6,
    "snippet": "Cohorts: January & June (Yearly) | Function: Multiple, apply once and tell us where you want to build About us: Tamara is Saudi Arabia's first FinTech unicorn, on a mission to help people own their dreams by building the most customer-centric financial super app in the world. The"
@@ -2909,7 +3269,7 @@
     "jobspy:indeed"
    ],
    "posted": "2026-11-10",
-   "age_days": 3,
+   "age_days": 4,
    "min_years": 3,
    "flags": [
     "stretch_3y"
@@ -2937,14 +3297,42 @@
     "oracle:NMC Healthcare"
    ],
    "posted": "2026-09-11",
-   "age_days": 63,
+   "age_days": 64,
    "min_years": 2,
    "flags": [],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 1.4,
    "snippet": "The purpose of the IT Support Engineer role is to provide effective technical support and maintenance for end-user computing devices, peripheral equipment, and business applications. The role ensures smooth day-to-day IT operations by troubleshooting hardware, software, and netwo"
+  },
+  {
+   "key": "9621a6e1484ef145",
+   "title": "IT Support Specialist",
+   "employer": "4 Direction Group of Companies",
+   "sector": "",
+   "city": "Dubai",
+   "location": "Dubai, DU, United Arab Emirates",
+   "family": "it",
+   "cv": "IT",
+   "seniority": "unspecified",
+   "url": "https://ae.indeed.com/viewjob?jk=8bb661153686a4df",
+   "source": "jobspy:indeed",
+   "source_type": "indeed",
+   "seen_on": [
+    "jobspy:indeed"
+   ],
+   "posted": "2026-11-11",
+   "age_days": 3,
+   "min_years": 3,
+   "flags": [
+    "stretch_3y"
+   ],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": false,
+   "score": 1.3,
+   "snippet": "We are looking for an experienced IT Support Specialist to manage the company's IT infrastructure, provide daily technical support to employees, and ensure the smooth operation of IT systems, networks, servers, and cloud services across the group of companies.\n\nKey Responsibiliti"
   },
   {
    "key": "5d8c58a0688638f3",
@@ -2963,13 +3351,13 @@
     "ashby:ziina"
    ],
    "posted": "2026-08-12",
-   "age_days": 93,
+   "age_days": 94,
    "min_years": 3,
    "flags": [
     "stretch_3y"
    ],
    "first_seen": "2026-11-02",
-   "last_seen": "2026-11-13",
+   "last_seen": "2026-11-14",
    "is_new": false,
    "score": 0.6,
    "snippet": "Ziina is looking for a Backend Engineer to join our team. We laid a strong foundation upon which we’ve shipped our product. We are looking for someone to help us build out innovative new features, prepare our technology to scale, and help shape our engineering organization to be "
