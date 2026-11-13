@@ -260,6 +260,32 @@
   "snippet": "🤖 We’re Hiring: NLP Engineer (Natural Language Processing Engineer) 🕒 Employment Type: Full-Time 💼 Level: Mid-Level We are looking for a talented, analytical, and innovative NLP Engineer to join our technology team! The ideal candidate will have a strong background in natural lan"
  },
  {
+  "key": "dd7f693568098012",
+  "title": "Analyst - Report",
+  "employer": "AD Ports Group",
+  "sector": "ports and logistics",
+  "city": "UAE",
+  "location": "United Arab Emirates",
+  "family": "analyst",
+  "cv": "Data_Analyst",
+  "seniority": "unspecified",
+  "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466",
+  "source": "oracle:AD Ports Group",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:AD Ports Group"
+  ],
+  "posted": "2026-11-13",
+  "age_days": 0,
+  "min_years": 2,
+  "flags": [],
+  "first_seen": "2026-11-13",
+  "last_seen": "2026-11-13",
+  "is_new": true,
+  "score": 4.1,
+  "snippet": "Analyst – Report for –Fujairah Terminals, delivering accurate operational, commercial and financial reporting to support KPI monitoring and data‑driven decisions. This position is offered under a one-year renewable contract through a third-party employment arrangement, with oppor"
+ },
+ {
   "key": "b3a7a05aed9aa3f4",
   "title": "Backend Full Stack Developer (Java/Angular/React)",
   "employer": "Citi",
@@ -455,7 +481,6 @@
   "source": "teamtailor:careers.chalhoubgroup.com",
   "source_type": "ats",
   "seen_on": [
-   "jobspy:indeed",
    "teamtailor:careers.chalhoubgroup.com"
   ],
   "posted": "2026-11-05",

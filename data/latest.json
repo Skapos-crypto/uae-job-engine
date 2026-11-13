@@ -1,79 +1,64 @@
 {
  "generated": {
-  "utc": "2026-11-13T01:13:07+00:00",
-  "dubai": "2026-11-13 05:13",
-  "full_run": true
+  "utc": "2026-11-13T08:45:38+00:00",
+  "dubai": "2026-11-13 12:45",
+  "full_run": false
  },
  "summary": {
   "total": 110,
-  "new_today": 29,
-  "carried_over": 0,
-  "raw_postings": 9386,
+  "new_today": 30,
+  "carried_over": 75,
+  "raw_postings": 8862,
   "by_family": {
    "bi": 2,
    "software": 19,
    "ai_ml": 25,
    "data_analyst": 13,
    "data_eng": 5,
-   "graduate": 13,
+   "analyst": 7,
+   "graduate": 12,
    "product": 7,
    "business": 4,
-   "analyst": 6,
    "it": 14,
    "data_science": 2
   },
   "by_source": {
    "jobspy": 75,
+   "oracle": 6,
    "teamtailor": 7,
    "workable": 2,
    "workday": 6,
-   "oracle": 5,
    "avature": 2,
    "attrax": 3,
    "amazon": 4,
-   "ashby": 4,
    "phenom": 1,
+   "ashby": 3,
    "greenhouse": 1
   },
-  "http_calls": 202,
+  "http_calls": 203,
   "verdicts_shared": 0,
   "rejected": {
-   "excluded-title": 1013,
-   "no-family": 1563,
-   "senior": 198,
-   "graduate-other-discipline": 13,
-   "title-elsewhere": 9,
-   "nationals-only": 44,
+   "excluded-title": 920,
+   "no-family": 1395,
+   "graduate-other-discipline": 9,
+   "senior": 96,
+   "title-elsewhere": 3,
+   "no-title": 1,
+   "nationals-only": 22,
    "stale": 14,
-   "4+ years": 32
+   "4+ years": 11
   },
   "status": {
-   "sources": 84,
-   "ok": 83,
+   "sources": 81,
+   "ok": 81,
    "failing": {},
-   "blocked": {
-    "jobspy:bayt": "2 of 3 queries blocked, 1 skipped"
-   },
+   "blocked": {},
    "failing_in_a_row": {
     "jobspy:bayt": 4
    },
    "new_last_7_days": {
     "jobspy": 187,
-    "employer": 9
-   },
-   "linkedin_pages": {
-    "wanted": 15,
-    "tried": 15,
-    "read": 15,
-    "empty": 0,
-    "failed": 0,
-    "blocked": 0,
-    "skipped": 0,
-    "over_limit": 0,
-    "dropped": {
-     "4+ years": 2
-    },
-    "error": null
+    "employer": 10
    }
   }
  },
@@ -339,6 +324,32 @@
    "snippet": "🤖 We’re Hiring: NLP Engineer (Natural Language Processing Engineer) 🕒 Employment Type: Full-Time 💼 Level: Mid-Level We are looking for a talented, analytical, and innovative NLP Engineer to join our technology team! The ideal candidate will have a strong background in natural lan"
   },
   {
+   "key": "dd7f693568098012",
+   "title": "Analyst - Report",
+   "employer": "AD Ports Group",
+   "sector": "ports and logistics",
+   "city": "UAE",
+   "location": "United Arab Emirates",
+   "family": "analyst",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466",
+   "source": "oracle:AD Ports Group",
+   "source_type": "employer",
+   "seen_on": [
+    "oracle:AD Ports Group"
+   ],
+   "posted": "2026-11-13",
+   "age_days": 0,
+   "min_years": 2,
+   "flags": [],
+   "first_seen": "2026-11-13",
+   "last_seen": "2026-11-13",
+   "is_new": true,
+   "score": 4.1,
+   "snippet": "Analyst – Report for –Fujairah Terminals, delivering accurate operational, commercial and financial reporting to support KPI monitoring and data‑driven decisions. This position is offered under a one-year renewable contract through a third-party employment arrangement, with oppor"
+  },
+  {
    "key": "b3a7a05aed9aa3f4",
    "title": "Backend Full Stack Developer (Java/Angular/React)",
    "employer": "Citi",
@@ -534,7 +545,6 @@
    "source": "teamtailor:careers.chalhoubgroup.com",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:indeed",
     "teamtailor:careers.chalhoubgroup.com"
    ],
    "posted": "2026-11-05",
@@ -988,8 +998,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-09",
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -1118,8 +1128,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-09",
+   "age_days": 4,
    "min_years": null,
    "flags": [],
    "first_seen": "2026-11-02",
@@ -2311,32 +2321,6 @@
    "snippet": ""
   },
   {
-   "key": "aba6f7684bb805ec",
-   "title": "Product Intern, SoftPOS",
-   "employer": "qlub",
-   "sector": "fintech",
-   "city": "Dubai",
-   "location": "Dubai, UAE; Dubai  United Arab Emirates",
-   "family": "graduate",
-   "cv": "Data_Analyst",
-   "seniority": "junior",
-   "url": "https://jobs.ashbyhq.com/qlub/98659f5c-811f-42ec-b878-2a8171213aef",
-   "source": "ashby:qlub",
-   "source_type": "ats",
-   "seen_on": [
-    "ashby:qlub"
-   ],
-   "posted": "2026-11-05",
-   "age_days": 8,
-   "min_years": null,
-   "flags": [],
-   "first_seen": "2026-11-05",
-   "last_seen": "2026-11-13",
-   "is_new": false,
-   "score": 2.6,
-   "snippet": "Why qlub\n\nThe end of a great meal shouldn't be the slow part. Waiting for the check, finding someone to take payment, splitting a bill by hand. qlub removes that friction. Guests scan a QR code and pay in seconds. No app, no download, no waiting.\n\nFrom Pay-at-Table and Digital Me"
-  },
-  {
    "key": "bf5ac7e104a8f41f",
    "title": "AI / ML Engineer I Dubai | Financial Services| Orient Insurance PJSC",
    "employer": "Al-Futtaim",
@@ -2678,8 +2662,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-09",
+   "age_days": 4,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2706,8 +2690,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-10",
-   "age_days": 3,
+   "posted": "2026-11-09",
+   "age_days": 4,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2734,8 +2718,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-11",
-   "age_days": 2,
+   "posted": "2026-11-10",
+   "age_days": 3,
    "min_years": null,
    "flags": [
     "nationals_preferred"
@@ -2762,8 +2746,8 @@
    "seen_on": [
     "workday:Mastercard"
    ],
-   "posted": "2026-11-07",
-   "age_days": 6,
+   "posted": "2026-11-06",
+   "age_days": 7,
    "min_years": null,
    "flags": [
     "nationals_preferred"
