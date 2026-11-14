@@ -23,7 +23,37 @@
   "last_seen": "2026-11-14",
   "is_new": true,
   "score": 5.7,
-  "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group"
+  "snippet": "Bayut & dubizzle have the unique distinction of being iconic, homegrown brands with a strong presence across the seven emirates in the UAE. Connecting millions of users across the country, we are committed to delivering the best online search experience. As part of Dubizzle Group",
+  "apply_url": ""
+ },
+ {
+  "key": "5ef5af3e3a94cb04",
+  "title": "Early Career Trainee, Commercial Enablement",
+  "employer": "GE HealthCare",
+  "sector": "healthcare tech",
+  "city": "Dubai",
+  "location": "ARE02-01-Dubai-Al Sufouh 2",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/ARE02-01-Dubai-Al-Sufouh-2/Early-Career-Trainee--Commercial-Enablement_R4048612-1",
+  "source": "workday:GE HealthCare",
+  "source_type": "employer",
+  "seen_on": [
+   "workday:GE HealthCare"
+  ],
+  "posted": "2026-11-10",
+  "age_days": 4,
+  "min_years": 0,
+  "flags": [
+   "entry_level"
+  ],
+  "first_seen": "2026-11-14",
+  "last_seen": "2026-11-14",
+  "is_new": true,
+  "score": 5.7,
+  "snippet": " Job Description Summary The Commercial Enablement Intern will be a vital member of the team, supporting initiatives that strengthen commercial execution, improve funnel management, and simplify key sales processes across Global Markets. The role will contribute to projects focus",
+  "apply_url": ""
  },
  {
   "key": "3e1bee83ac676496",
@@ -49,7 +79,8 @@
   "last_seen": "2026-11-14",
   "is_new": true,
   "score": 5.3,
-  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
+  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog",
+  "apply_url": ""
  },
  {
   "key": "c621569946d0c260",
@@ -75,7 +106,8 @@
   "last_seen": "2026-11-14",
   "is_new": true,
   "score": 5.1,
-  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
+  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog",
+  "apply_url": ""
  },
  {
   "key": "dd04796432b6356f",
@@ -101,33 +133,8 @@
   "last_seen": "2026-11-14",
   "is_new": true,
   "score": 5.1,
-  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog"
- },
- {
-  "key": "5ef5af3e3a94cb04",
-  "title": "Early Career Trainee, Commercial Enablement",
-  "employer": "GE HealthCare",
-  "sector": "healthcare tech",
-  "city": "Dubai",
-  "location": "ARE02-01-Dubai-Al Sufouh 2",
-  "family": "graduate",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/ARE02-01-Dubai-Al-Sufouh-2/Early-Career-Trainee--Commercial-Enablement_R4048612-1",
-  "source": "workday:GE HealthCare",
-  "source_type": "employer",
-  "seen_on": [
-   "workday:GE HealthCare"
-  ],
-  "posted": "2026-11-10",
-  "age_days": 4,
-  "min_years": 0,
-  "flags": [],
-  "first_seen": "2026-11-14",
-  "last_seen": "2026-11-14",
-  "is_new": true,
-  "score": 4.7,
-  "snippet": " Job Description Summary The Commercial Enablement Intern will be a vital member of the team, supporting initiatives that strengthen commercial execution, improve funnel management, and simplify key sales processes across Global Markets. The role will contribute to projects focus"
+  "snippet": " Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life. Our 95,000 employees work across more than 150 countries to put patients first — developing innovative medical technolog",
+  "apply_url": ""
  },
  {
   "key": "4aa4de4e4895af48",
@@ -153,6 +160,7 @@
   "last_seen": "2026-11-14",
   "is_new": true,
   "score": 4.6,
-  "snippet": " Job Description Summary The SAP Material Data Specialist is in charge to set and update the Material Master data across multiple RVS ERP systems (SAP/Oracle), MES, PLM and drive standardization. The position holder is active as a focal point among IT and other function teams to "
+  "snippet": " Job Description Summary The SAP Material Data Specialist is in charge to set and update the Material Master data across multiple RVS ERP systems (SAP/Oracle), MES, PLM and drive standardization. The position holder is active as a focal point among IT and other function teams to ",
+  "apply_url": ""
  }
 ]
