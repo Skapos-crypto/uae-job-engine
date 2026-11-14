@@ -39,11 +39,13 @@ and then the list. A few rows:
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 🆕 | Marketing & Business Insights Junior Analyst | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday + linkedin | |
-| 2 | 🆕 | Software Engineer l - Backend | talabat | Dubai | Software / backend | | attrax | |
+| 1 | 🆕 | Marketing & Business Insights Junior Analyst | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday + linkedin | entry level |
+| 2 | 🆕 | Junior Full Stack Developer [L1] | Alef Education | Abu Dhabi | Software / backend | 2026-11-12 | indeed | asks 1 yr; [employer site](https://example.com) |
 | 3 | | Data Analyst – Databricks AI/BI & FinOps | Etihad | Abu Dhabi | Data analyst | | linkedin + indeed | |
 
-Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. `summary.status` holds the status panel's numbers.
+Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. Newer fields are added beside them: `seen_on` (every site the job was found on) and `apply_url` (the employer's own posting, when a job site named it). `summary.status` holds the status panel's numbers.
+
+The **Notes** column says what the posting itself gave away: how many years it asks for, `entry level` when it welcomes newcomers, `LinkedIn says mid-senior`, `UAE nationals preferred`, `agency or unnamed employer`, and a link to the employer's own posting when Indeed named one.
 
 ## ⚙️ How it works
 
@@ -106,6 +108,7 @@ Out of ~10,000 postings, a role survives only if:
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 3 or more years of experience are dropped (`MAX_YEARS` in [`run.py`](run.py)); roles asking for up to 2, or naming no number, stay. The number is the first requirement the posting states: in "6-8 years of experience, including at least 2 years in ..." it is 6, not 2. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
   - Roles that say they won't sponsor a visa are dropped.
+- 🌱 **Junior signals.** Three roles in four name no years of experience, so the list marks the ones that say a newcomer is welcome: the posting asks for a year at most, its words say so ("fresh graduates are welcome", "no prior experience required", "entry-level"; not "freshers please excuse"), or LinkedIn's own level label on the job page says "Entry level". Those get an `entry_level` flag and rank higher. "Mid-Senior level" on LinkedIn ranks a role lower (`mid_senior`) unless its title says junior, and "Internship", "Director" or "Executive" there drops it.
 - 🏷️ **Agencies are marked, not dropped.** A posting by a recruitment agency or an unnamed ("Confidential") employer gets an `agency` flag, shows "agency or unnamed employer" in Notes, and ranks a little lower: expect a screening call first, and often a wish for candidates already in the country. The list of agency names is `AGENCY_RE` in [`engine/util.py`](engine/util.py).
 - 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time, 20 to 40 seconds apart. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, so are titles that already say UAE nationals, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.
 

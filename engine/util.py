@@ -410,6 +410,30 @@ NO_SPONSOR_RE = re.compile(
 OWN_VISA_RE = re.compile(r"own (residence |work )?visa|on (your )?own visa|valid uae (residence|residency) visa", re.I)
 
 
+# Words that welcome a newcomer: "fresh graduates are welcome", "freshers can apply", "no prior
+# experience required", "an entry-level role". Not when the same sentence says the opposite
+# ("freshers please excuse", "this is not an entry-level position").
+FRESH_RE = re.compile(
+    r"\bfresh(er)?[- ]?grad(uate)?s?\b|\bfreshers?\b|\b(recent|new) graduates?\b|\bentry[- ]level\b|"
+    r"\bno (prior |previous |work |professional )?experience (is )?(required|needed|necessary)\b",
+    re.I,
+)
+FRESH_NOT_RE = re.compile(r"\b(not|no|non|never|without|except|excluding|excuse|don'?t|won'?t|cannot|can'?t)\b", re.I)
+
+
+def fresh_ok(desc):
+    """True when a description welcomes fresh graduates or people without experience."""
+    desc = clean(desc)[:6000]
+    for m in FRESH_RE.finditer(desc):
+        if m.group(0).lower().startswith("no "):  # "no experience required" is itself the welcome
+            return True
+        start = max(desc.rfind(".", 0, m.start()), desc.rfind("\n", 0, m.start())) + 1
+        ends = [i for i in (desc.find(".", m.end()), desc.find("\n", m.end())) if i >= 0]
+        if not FRESH_NOT_RE.search(desc[start: min(ends) if ends else len(desc)]):
+            return True
+    return False
+
+
 def evidence(title, desc, reason):
     """The words behind a nationals-only, years or no-sponsorship rejection, so that it can
     be checked by eye. Empty when the description is not at hand (facts from the cache)."""
@@ -430,7 +454,7 @@ def evidence(title, desc, reason):
 # cached facts are stale and those descriptions are fetched again.
 FACTS_VERSION = hashlib.sha1("\n".join(rx.pattern for rx in (
     NAT_PREF_RE, NAT_TITLE_RE, NAT_DESC_RE, YEARS_RE, YEARS_CEILING_RE, NO_SPONSOR_RE,
-    OWN_VISA_RE)).encode("utf-8")).hexdigest()[:8]
+    OWN_VISA_RE, FRESH_RE, FRESH_NOT_RE)).encode("utf-8")).hexdigest()[:8]
 
 
 # ---------------------------------------------------------------- dedupe keys
@@ -568,4 +592,8 @@ def score(job):
         s -= 1.5
     if "agency" in flags:
         s -= 0.5
+    if "entry_level" in flags:  # the posting itself says a newcomer is welcome, or asks for a year at most
+        s += 1.0
+    if "mid_senior" in flags:   # LinkedIn's own label for the role
+        s -= 1.0
     return round(s, 2)

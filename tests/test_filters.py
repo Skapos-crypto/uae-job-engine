@@ -1,7 +1,7 @@
 """Filter checks against real titles seen in UAE job alerts and boards. Run: python -m tests.test_filters"""
 from datetime import date
 
-from engine.util import (classify, elsewhere, evidence, is_agency, is_uae, job_key, min_years, nationals,
+from engine.util import (classify, elsewhere, evidence, fresh_ok, is_agency, is_uae, job_key, min_years, nationals,
                          norm_company, parse_date, seniority)
 
 KEEP = [
@@ -257,6 +257,17 @@ def main():
     assert min_years("Up to 2 years of professional experience. Graduated within the last 2 years.") is None
     assert "6-8 years" in evidence("Data Analyst", "Degree. 6-8 years of experience including at least 2 years "
                                    "in management.", "3+ years")
+    # wording that welcomes a newcomer, and the same words in a sentence that says the opposite
+    for text in ("Fresh graduates are welcome to apply.", "0-2 years (Fresh Graduate). Project exposure in IT.",
+                 "This is an entry-level position in our analytics team.", "Freshers can apply.",
+                 "No prior experience required; training is provided.",
+                 "Recent graduates with a passion for data are encouraged."):
+        assert fresh_ok(text), text
+    for text in ("Experienced candidates only. Freshers please excuse.",
+                 "This is not an entry-level role and needs 5 years of experience.",
+                 "Fresh graduates will not be considered for this position.",
+                 "We need a data analyst with strong SQL.", "We serve fresh food daily and need an analyst."):
+        assert not fresh_ok(text), text
     # a programme "for UAE National students" is a nationals programme; "for UAE nationals and expats" is not
     assert nationals("Discover Emirates Group Internship Programme", "Discover is our internship programme "
                      "for UAE National students and fresh graduates.") == "only"
@@ -268,7 +279,7 @@ def main():
     # recruiters and job platforms seen in the second week
     assert is_agency("Jobgether") and is_agency("Kingston Stanley") and is_agency("Salt")
     assert not is_agency("Kraken") and not is_agency("Salt Bae Restaurants") and not is_agency("Emirates Group")
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 82))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 93))
 
 
 if __name__ == "__main__":

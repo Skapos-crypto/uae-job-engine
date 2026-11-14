@@ -767,9 +767,11 @@ def _linkedin_scraper():
 
 def linkedin_pages(job_ids, log, pause=(20, 40)):
     """Reads LinkedIn job pages one at a time, with pauses, through JobSpy's page reader.
-    Returns ({job_id: description}, meta). The first refusal (403, 429, 999, or a redirect away
-    from the job page, such as to a sign-in wall) ends the reading for this run. The pause is
-    long on purpose: at 4 to 8 seconds the sixth page was refused (2026-11-11)."""
+    Returns ({job_id: {"text": description, "level": LinkedIn's seniority label}}, meta); the
+    label is "entry level", "associate", "mid-senior level", "internship", "director" ... or "".
+    The first refusal (403, 429, 999, or a redirect away from the job page, such as to a sign-in
+    wall) ends the reading for this run. The pause is long on purpose: at 4 to 8 seconds the
+    sixth page was refused (2026-11-11)."""
     scraper = _linkedin_scraper()
     answers = []
     get = scraper.session.get
@@ -784,7 +786,7 @@ def linkedin_pages(job_ids, log, pause=(20, 40)):
         return resp
 
     scraper.session.get = watched_get
-    texts = {}
+    pages = {}
     meta = {"wanted": len(job_ids), "read": 0, "empty": 0, "failed": 0, "blocked": 0, "skipped": 0}
     for n, jid in enumerate(job_ids):
         if n:
@@ -798,7 +800,7 @@ def linkedin_pages(job_ids, log, pause=(20, 40)):
         text = clean(found.get("description"))
         status, where = answers[-1] if answers else ("error", "no request made")
         if text:
-            texts[jid] = text[:6000]
+            pages[jid] = {"text": text[:6000], "level": clean(found.get("job_level")).lower()}
             meta["read"] += 1
         elif status in LINKEDIN_REFUSED or (status == 200 and not where.startswith("/jobs/view/")):
             meta.update(blocked=1, skipped=len(job_ids) - n - 1, error="%s %s" % (status, where))
@@ -810,4 +812,4 @@ def linkedin_pages(job_ids, log, pause=(20, 40)):
         else:
             meta["failed"] += 1
             meta["error"] = "%s %s" % (status, where)
-    return texts, meta
+    return pages, meta

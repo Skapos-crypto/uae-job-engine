@@ -19,8 +19,8 @@ import yaml
 from engine import sources
 from engine.http import Http
 from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
-                         elsewhere, evidence, is_agency, is_uae, job_key, min_years, nationals, score, seniority,
-                         today_dubai)
+                         elsewhere, evidence, fresh_ok, is_agency, is_uae, job_key, min_years, nationals, score,
+                         seniority, today_dubai)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -349,16 +349,16 @@ def read_linkedin_pages(candidates, seen, cache, health, limit, today_s):
     picked = picked[:limit]
     started = time.time()
     try:
-        texts, meta = sources.linkedin_pages([j["_detail"][1] for j in picked], log)
+        pages, meta = sources.linkedin_pages([j["_detail"][1] for j in picked], log)
     except Exception as e:  # e.g. a JobSpy release without this page reader: the run goes on without it
         entry.update(ok=False, error="%s: %s" % (type(e).__name__, str(e)[:200]))
         health["_linkedin_pages"] = entry
         log("FAIL  linkedin pages: %s" % entry["error"])
         return
     for j in picked:
-        text = texts.get(j["_detail"][1])
-        if text:
-            j.update(desc=text, _fresh_detail=True, _page_read=True)
+        page = pages.get(j["_detail"][1])
+        if page:
+            j.update(desc=page["text"], _level=page["level"], _fresh_detail=True, _page_read=True)
     entry.update({k: v for k, v in meta.items() if k != "wanted"}, ok=not meta["blocked"],
                  tried=len(picked) - meta["skipped"], fetched=meta["read"], ms=int((time.time() - started) * 1000))
     health["_linkedin_pages"] = entry
@@ -373,7 +373,10 @@ def final_checks(job, today, cache):
     facts = None if complete else (cached_facts(cache, job) or older_facts(cache, job))
     if facts is None:
         facts = {"nat": nationals(job["title"], desc), "yrs": min_years(desc),
-                 "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc))}
+                 "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc)),
+                 "fr": fresh_ok(desc)}
+        if job.get("_level"):  # LinkedIn's own seniority label, read from the job page
+            facts["lvl"] = job["_level"]
         if job.get("_detail_location"):
             facts["loc"] = job["_detail_location"]
         if job.get("_fresh_detail"):  # only a job page's facts are worth keeping; lists are re-read
@@ -389,6 +392,10 @@ def final_checks(job, today, cache):
         nat = "only"
     if nat == "only":
         return "nationals-only"
+    level = facts.get("lvl") or ""
+    if level == "internship" or level in ("director", "executive"):
+        job["_why"] = "LinkedIn lists its seniority level as: %s" % level
+        return "internship" if level == "internship" else "senior"
     if yrs is not None and yrs > MAX_YEARS:
         return TOO_MANY_YEARS
     if facts.get("ns"):
@@ -404,6 +411,11 @@ def final_checks(job, today, cache):
         flags.append("nationals_preferred")
     if facts.get("ov"):
         flags.append("own_visa_preferred")
+    # what tells a junior-friendly role from one that only leaves the experience out
+    if (yrs is not None and yrs <= 1) or facts.get("fr") or level == "entry level":
+        flags.append("entry_level")
+    elif level == "mid-senior level" and job["seniority"] != "junior":
+        flags.append("mid_senior")
     job.update(flags=flags, age_days=age, min_years=yrs, nat=nat)
     return None
 
@@ -422,6 +434,8 @@ def recheck(r, today):
         return False
     flags = [f for f in r.get("flags", []) if f not in ("agency", "stretch_3y")]
     flags += ["agency"] if is_agency(r["employer"]) else []
+    if r.get("min_years") is not None and r["min_years"] <= 1 and "entry_level" not in flags:
+        flags.append("entry_level")  # a row kept before this mark existed: its years are on record
     r.update(family=family, cv=cv, seniority=level, age_days=age, flags=flags,
              is_new=r["first_seen"] == str(today))
     r["score"] = score(r)
@@ -541,8 +555,15 @@ def to_record(j):
         "posted": str(j["posted"]) if j.get("posted") else None, "age_days": j.get("age_days"),
         "min_years": j.get("min_years"), "flags": j.get("flags", []), "first_seen": j["first_seen"],
         "last_seen": j["last_seen"], "is_new": j["is_new"], "score": j["score"],
-        "snippet": (j.get("desc") or "")[:280],
+        "snippet": (j.get("desc") or "")[:280], "apply_url": apply_url(j),
     }
+
+
+def apply_url(j):
+    """The employer's own posting when a job site named it (Indeed's "apply on company site"),
+    for a role whose `url` is the job site's page. Empty otherwise."""
+    link = (j.get("url_direct") or "").strip()
+    return link[:600] if link.startswith("http") and link != j["url"] and j["source"].startswith("jobspy") else ""
 
 
 FAMILY_LABEL = {
@@ -554,6 +575,11 @@ FAMILY_LABEL = {
 
 def md_escape(text):
     return (text or "").replace("|", "/").replace("\n", " ").strip()
+
+
+def md_url(url):
+    """A link that cannot break a Markdown table cell."""
+    return url.replace(" ", "%20").replace("|", "%7C").replace("(", "%28").replace(")", "%29")
 
 
 def found_on(r):
@@ -647,6 +673,14 @@ def write_markdown(records, summary, health_rows, status, full):
             notes.append("prefers own visa")
         if "agency" in r["flags"]:
             notes.append("agency or unnamed employer")
+        if r.get("min_years") is not None:
+            notes.append("asks %d yr%s" % (r["min_years"], "" if r["min_years"] == 1 else "s"))
+        if "entry_level" in r["flags"] and (r.get("min_years") is None or r["min_years"] > 1):
+            notes.append("entry level")
+        if "mid_senior" in r["flags"]:
+            notes.append("LinkedIn says mid-senior")
+        if r.get("apply_url"):
+            notes.append("[employer site](%s)" % md_url(r["apply_url"]))
         lines.append("| %d | %s | [%s](%s) | %s | %s | %s | %s | %s | %s |" % (
             i, "🆕" if r["is_new"] else "", md_escape(r["title"]), r["url"], md_escape(r["employer"]),
             r["city"], FAMILY_LABEL.get(r["family"], r["family"]), r["posted"] or "",
@@ -711,6 +745,8 @@ def main():
                 facts["w"] = entry["why"]  # kept with the page's facts, for the runs that use the cache
             if has_description(j, cache):
                 verdicts.setdefault(j["key"], entry)
+        if j.get("_why"):
+            entry["why"] = j["_why"]
         if j.get("_page_read"):
             page_drops[reason] = page_drops.get(reason, 0) + 1
         rejected.append(entry)
@@ -747,6 +783,8 @@ def main():
         if not (m.get("desc") or "").strip() and (j.get("desc") or "").strip():
             m.update(desc=j["desc"], min_years=j.get("min_years"))  # the snippet and facts of the one with words
         m["flags"] = m.get("flags", []) + [f for f in j.get("flags", []) if f not in m.get("flags", [])]
+        if j.get("url_direct") and not m.get("url_direct"):
+            m["url_direct"] = j["url_direct"]
 
     # stamp first/last seen, score
     today_s = str(today)
@@ -775,7 +813,8 @@ def main():
         src_ok = any(h.get("ok") for sid, h in health.items() if sid == r["source"])
         recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= CARRY_DAYS
         if not src_ok and recent and recheck(r, today):
-            # the midday run skips JobSpy, so its morning finds are carried; they stay new all day
+            # the morning run skips JobSpy, so the last full run's finds are carried; they stay new all day
+            r.setdefault("apply_url", "")
             records.append(r)
             have.add(r["key"])
             carried += 1

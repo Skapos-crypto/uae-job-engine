@@ -25,10 +25,17 @@ LI_ROWS = [(9001, "Gulf Bank", "Graduate Data Analyst Programme"), (9002, "Acme 
            (9005, "OldCo", "Data Engineer Trainee"),  # seen on an earlier day
            (9006, "Acme Robotics", "Junior AI Engineer"), (9007, "Beta Labs", "Junior BI Developer"),
            (9008, "Emirates", "Business Insights Analyst - Emiratization Graduate Programme"),  # the title decides
-           (9009, "dnata", "Data Analyst, dnata Cargo")]  # on the group's own site under another brand name
+           (9009, "dnata", "Data Analyst, dnata Cargo"),  # on the group's own site under another brand name
+           # three roles whose pages carry LinkedIn's own seniority label and no number of years
+           (9010, "Gamma Co", "Reporting Analyst"), (9011, "Delta Co", "Business Analyst"),
+           (9012, "Epsilon Co", "Data Analyst (Dubai Office)")]
 LI_PAGES = {"9001": (200, "/jobs/view/9001", "Join our graduate programme. This programme is open to UAE Nationals only."),
             "9002": (200, "/jobs/view/9002", "About the job. 0-1 years of experience with Python. Fresh graduates welcome."),
             "9006": (429, "/jobs/view/9006", "")}
+LI_PAGES.update({"9010": (200, "/jobs/view/9010", "Build dashboards for the sales team."),
+                 "9011": (200, "/jobs/view/9011", "Own the requirements for banking projects."),
+                 "9012": (200, "/jobs/view/9012", "Support the analytics team for six months.")})
+LI_LEVELS = {"9002": "Entry level", "9010": "Entry level", "9011": "Mid-Senior level", "9012": "Internship"}
 LI_ASKED = []  # LinkedIn job pages requested, in order
 
 
@@ -50,7 +57,8 @@ class FakeLinkedIn:
         resp = self.session.get("https://www.linkedin.com/jobs/view/%s" % jid)
         if resp.status_code != 200 or "/jobs/view/" not in resp.url:
             return {}
-        return {"description": resp.text}
+        level = LI_LEVELS.get(jid)
+        return {"description": resp.text, "job_level": level.lower() if level else None}  # as JobSpy does
 
 
 class FakeFrame:
@@ -368,7 +376,19 @@ def main():
         # a 32-day-old posting is kept, ranked a point lower than the same posting would be fresh:
         # data analyst 3.0 + junior 1.2 + new 1.0 - older than 30 days 1.0 + employer 0.6
         assert titles["Graduate Data Analyst"]["age_days"] == 32
-        assert titles["Graduate Data Analyst"]["score"] == 4.8, titles["Graduate Data Analyst"]["score"]
+        # ... + 1.0 because its page says "Fresh graduates welcome"
+        assert titles["Graduate Data Analyst"]["score"] == 5.8, titles["Graduate Data Analyst"]["score"]
+        # junior signals: a posting that asks for a year at most or welcomes fresh graduates is marked
+        assert "entry_level" in titles["HR Data Analyst"]["flags"]  # "0-2 years of experience"
+        assert "entry_level" in titles["AI Engineer - Graduate"]["flags"]  # "Fresh graduates welcome."
+        assert "entry_level" in titles["Graduate Programme - Data & Technology"]["flags"]  # "For recent graduates."
+        assert "entry_level" not in titles["Data Analyst"]["flags"]  # "2 years of experience"
+        # the employer's own posting, where a job site named it; none for a row found on the employer's site
+        direct = "https://acme.wd3.myworkdayjobs.com/AcmeCareers/job/Dubai/Junior_R1?src=x"
+        assert titles["Junior Data Analyst"]["apply_url"] == direct and titles["HR Data Analyst"]["apply_url"] == ""
+        md1 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        assert "[employer site](%s)" % direct in md1, [l for l in md1.splitlines() if "Junior Data Analyst" in l]
+        assert "| asks 0 yrs |" in md1 and "| entry level |" in md1, [l[-60:] for l in md1.splitlines() if "🆕" in l]
         # agency flag: the Bayt poster is a recruitment agency
         assert "agency" in titles["Junior Data Analyst"]["flags"], titles["Junior Data Analyst"]
         assert "agency" not in titles["HR Data Analyst"]["flags"]
@@ -483,6 +503,7 @@ def main():
         assert set(titles3) == expect_kept, set(titles3) ^ expect_kept
         assert latest3["summary"]["carried_over"] == 2
         assert titles3["Junior Data Analyst"]["is_new"] and titles3["Data Scientist"]["is_new"]
+        assert titles3["Junior Data Analyst"]["apply_url"].startswith("https://acme.wd3.")  # kept on a carried row
         assert "agency" in titles3["Junior Data Analyst"]["flags"]  # flags refreshed on a carried row
         # failures in a row are counted across runs; LinkedIn did not run this time and keeps its count
         stuck = latest3["summary"]["status"]["failing_in_a_row"]
@@ -524,8 +545,9 @@ def main():
         li_queries = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]["jobspy:linkedin"]["meta"]["by_query"]
         assert li_queries["data analyst"]["results"] == len(LI_ROWS) and li_queries["data analyst"]["kept"] >= 4, li_queries
         assert "Business Insights Analyst - Emiratization Graduate Programme" not in titles5  # dropped unread
-        assert pages["wanted"] == 4 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
-        assert pages["skipped"] == 4 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
+        assert pages["wanted"] == 7 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
+        assert pages["skipped"] == 7 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
+        assert "entry_level" in titles5["Junior Data Scientist"]["flags"]
         acme = titles5["Junior Data Scientist"]
         assert acme["is_new"] and "0-1 years" in acme["snippet"] and acme["min_years"] == 0, acme
         assert "Graduate Data Analyst Programme" not in titles5 and "MIS Analyst" not in titles5
@@ -551,12 +573,32 @@ def main():
         titles6 = {j["title"]: j for j in latest6["jobs"]}
         pages = latest6["summary"]["status"]["linkedin_pages"]
         assert len(LI_ASKED) == 1 and LI_ASKED[0] in {"9006", "9007"}, LI_ASKED
-        assert pages["wanted"] == 2 and pages["read"] == 1 and pages["over_limit"] == 1, pages
+        assert pages["wanted"] == 5 and pages["read"] == 1 and pages["over_limit"] == 4, pages
         assert "Graduate Data Analyst Programme" not in titles6 and "Junior Data Scientist" in titles6
         assert titles6["Junior Data Scientist"]["is_new"]  # still new today
         sample6 = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
         gulf = [x for x in sample6 if x["employer"] == "Gulf Bank"][0]  # its words come from the cache now
         assert gulf["reason"] == "nationals-only" and "open to UAE Nationals only" in gulf["why"], gulf
+
+        # a third full run reads the pages left over. LinkedIn's own level label decides three of them:
+        # "Entry level" marks the role, "Mid-Senior level" ranks it lower, "Internship" drops it
+        del LI_ASKED[:]
+        search["linkedin_pages"] = 20
+        run.main()
+        latest7 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        titles7 = {j["title"]: j for j in latest7["jobs"]}
+        assert {"9010", "9011", "9012"} <= set(LI_ASKED) and len(LI_ASKED) == 4, LI_ASKED
+        assert "entry_level" in titles7["Reporting Analyst"]["flags"], titles7["Reporting Analyst"]
+        assert titles7["Business Analyst"]["flags"] == ["mid_senior"], titles7["Business Analyst"]
+        assert titles7["Reporting Analyst"]["score"] == 3.0 + 1.0 + 0.5 + 1.0  # lane, new, this week, entry level
+        assert titles7["Business Analyst"]["score"] == 2.3 + 1.0 + 0.5 - 1.0
+        assert "Data Analyst (Dubai Office)" not in titles7
+        sample7 = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
+        epsilon = [x for x in sample7 if x["employer"] == "Epsilon Co"][0]
+        assert epsilon["reason"] == "internship" and epsilon["why"].endswith("internship"), epsilon
+        assert latest7["summary"]["status"]["linkedin_pages"]["dropped"] == {"internship": 1}
+        md7 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        assert "LinkedIn says mid-senior" in md7 and "1 dropped after reading (1 internship)" in md7
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)
