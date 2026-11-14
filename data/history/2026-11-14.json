@@ -17,7 +17,7 @@
   ],
   "posted": "2026-11-13",
   "age_days": 1,
-  "min_years": 1,
+  "min_years": 2,
   "flags": [],
   "first_seen": "2026-11-14",
   "last_seen": "2026-11-14",
@@ -154,59 +154,5 @@
   "is_new": true,
   "score": 4.6,
   "snippet": " Job Description Summary The SAP Material Data Specialist is in charge to set and update the Material Master data across multiple RVS ERP systems (SAP/Oracle), MES, PLM and drive standardization. The position holder is active as a focal point among IT and other function teams to "
- },
- {
-  "key": "2e2d8de11cf40d0a",
-  "title": "Intern – Pricing Excellence & PMO (MEA)",
-  "employer": "Schneider Electric",
-  "sector": "industry",
-  "city": "Dubai",
-  "location": "Dubai Silicon Oasis, United Arab Emirates",
-  "family": "graduate",
-  "cv": "Data_Analyst",
-  "seniority": "junior",
-  "url": "https://se.jibeapply.com/jobs/138687",
-  "source": "jibe:Schneider Electric",
-  "source_type": "employer",
-  "seen_on": [
-   "jibe:Schneider Electric"
-  ],
-  "posted": "2026-10-20",
-  "age_days": 25,
-  "min_years": null,
-  "flags": [],
-  "first_seen": "2026-11-14",
-  "last_seen": "2026-11-14",
-  "is_new": true,
-  "score": 4.2,
-  "snippet": "Role Purpose Support the MEA Pricing Excellence team in driving competitive benchmarking, market intelligence, and pricing capability initiatives. The role combines research, analytics, knowledge management, and PMO support to strengthen commercial insights, pricing knowledge, an"
- },
- {
-  "key": "fe88d871f03f53c3",
-  "title": "Software Engineer - DevOps - Bitnomial",
-  "employer": "Kraken",
-  "sector": "crypto",
-  "city": "UAE",
-  "location": "United States; Brazil; United Arab Emirates; Ireland; Peru; Sweden; Colombia; Argentina; Romania; Cyprus; Switzerland; Portugal; Lithuania; South Africa; Czech ",
-  "family": "software",
-  "cv": "Backend_Engineer",
-  "seniority": "unspecified",
-  "url": "https://jobs.ashbyhq.com/kraken.com/6d3b6e08-97ec-4eda-b3ad-bbf5fd955840",
-  "source": "ashby:kraken.com",
-  "source_type": "ats",
-  "seen_on": [
-   "ashby:kraken.com"
-  ],
-  "posted": "2026-11-10",
-  "age_days": 4,
-  "min_years": 3,
-  "flags": [
-   "stretch_3y"
-  ],
-  "first_seen": "2026-11-14",
-  "last_seen": "2026-11-14",
-  "is_new": true,
-  "score": 3.1,
-  "snippet": "BUILDING THE FUTURE OF OPEN FINANCE\n\n\nPayward - the parent company behind Kraken, NinjaTrader, Breakout,  xStocks, Payward Services and CF Benchmarks - has spent the last 15 years building one of the most modern and globally accessible financial infrastructure platforms in the in"
  }
 ]

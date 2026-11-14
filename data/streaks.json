@@ -10,9 +10,10 @@
   "ran": "2026-11-14"
  },
  "workday:HP": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday hp: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-seri"
  },
  "oracle:Oracle": {
   "fails": 0,
@@ -20,14 +21,16 @@
   "ran": "2026-11-14"
  },
  "workday:Shell": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday shell: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Ty"
  },
  "workday:Pfizer": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday pfizer: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-"
  },
  "oracle:du": {
   "fails": 0,
@@ -45,9 +48,10 @@
   "ran": "2026-11-14"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday ccf: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
@@ -70,9 +74,10 @@
   "ran": "2026-11-14"
  },
  "workday:AstraZeneca": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday astrazeneca: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Cont"
  },
  "greenhouse:careem": {
   "fails": 0,
@@ -80,9 +85,10 @@
   "ran": "2026-11-14"
  },
  "workday:Baker Hughes": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday bakerhughes: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
@@ -90,9 +96,10 @@
   "ran": "2026-11-14"
  },
  "workday:Mastercard": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday mastercard: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,s"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
@@ -100,9 +107,10 @@
   "ran": "2026-11-14"
  },
  "workday:Rolls-Royce": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday rollsroyce: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Conte"
  },
  "jibe:M42": {
   "fails": 0,
@@ -110,14 +118,16 @@
   "ran": "2026-11-14"
  },
  "workday:GSK": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday gsk: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
  },
  "workday:Novartis": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday novartis: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content"
  },
  "pinpoint:tabby": {
   "fails": 0,
@@ -125,9 +135,10 @@
   "ran": "2026-11-14"
  },
  "workday:Coca-Cola": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday coke: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-se"
  },
  "greenhouse:tamara": {
   "fails": 0,
@@ -190,9 +201,10 @@
   "ran": "2026-11-14"
  },
  "workday:Philips": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday philips: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
@@ -300,9 +312,10 @@
   "ran": "2026-11-14"
  },
  "workday:Thomson Reuters": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday thomsonreuters: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Robo"
  },
  "lever:binance": {
   "fails": 0,
@@ -355,9 +368,10 @@
   "ran": "2026-11-14"
  },
  "workday:KBR": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday kbr: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
  },
  "greenhouse:mongodb": {
   "fails": 0,
@@ -421,14 +435,16 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday gehc: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-se"
  },
  "workday:DXC Technology": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday dxctechnology: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Robot"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
@@ -436,29 +452,34 @@
   "ran": "2026-11-14"
  },
  "workday:Snap": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday snapchat: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,san"
  },
  "workday:Cigna": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday cigna: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-s"
  },
  "workday:GE Vernova": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday gevernova: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sa"
  },
  "workday:NVIDIA": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday nvidia: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-"
  },
  "workday:Medtronic": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "ran": "2026-11-14",
+  "error": "SourceError: workday medtronic: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sa"
  },
  "workday:Accenture": {
   "fails": 0,
