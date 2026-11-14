@@ -33,14 +33,14 @@ Everything lands in [`data/`](data), refreshed after every run:
 
 `latest.md` opens with a status panel:
 
-> **Sources:** 102 of 103 answered · **Blocked:** jobspy:linkedin, 1 of 8 queries blocked · **LinkedIn pages:** 15 of 15 new roles read; 2 dropped after reading (2 4+ years) · **New roles in the last 7 days:** 187 from Indeed and LinkedIn; 20 from employer sites and boards
+> **Sources:** 102 of 103 answered · **Blocked:** jobspy:linkedin, 1 of 8 queries blocked · **LinkedIn pages:** 15 of 15 new roles read; 2 dropped after reading (2 3+ years) · **New roles in the last 7 days:** 187 from Indeed and LinkedIn; 20 from employer sites and boards
 
 and then the list. A few rows:
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 🆕 | Data Analyst - Intern | dubizzle Group | Dubai | Data analyst | 2026-10-21 | workable | |
-| 2 | 🆕 | Software Engineer II - Backend | talabat | Dubai | Software / backend | | attrax | |
+| 1 | 🆕 | Marketing & Business Insights Junior Analyst | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday + linkedin | |
+| 2 | 🆕 | Software Engineer l - Backend | talabat | Dubai | Software / backend | | attrax | |
 | 3 | | Data Analyst – Databricks AI/BI & FinOps | Etihad | Abu Dhabi | Data analyst | | linkedin + indeed | |
 
 Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. `summary.status` holds the status panel's numbers.
@@ -53,7 +53,7 @@ flowchart LR
     B[Startup boards<br/>Greenhouse, Lever, Ashby,<br/>Workable, Pinpoint, Teamtailor] --> C
     J[JobSpy, once a day<br/>LinkedIn, Indeed] --> C
     C[Collect<br/>~10,000 postings] --> F{Filters}
-    F -->|UAE? junior? right lane?| D[Read full descriptions<br/>employer pages, new LinkedIn roles<br/>nationals-only? 4+ years?<br/>no visa sponsorship?]
+    F -->|UAE? junior? right lane?| D[Read full descriptions<br/>employer pages, new LinkedIn roles<br/>nationals-only? 3+ years?<br/>no visa sponsorship?]
     D --> R[Merge duplicates and rank]
     R --> O[data/latest.md<br/>data/latest.json]
 ```
@@ -96,13 +96,13 @@ Some big names aren't covered, and [`config/employers.yaml`](config/employers.ya
 Out of ~10,000 postings, a role survives only if:
 
 - ✅ **It's in the UAE.** That includes titles like "Data Analyst – Riyadh, KSA" whose listing claims Dubai: those are caught and dropped.
-- ✅ **It's in a target lane:** data analysis, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, or a graduate/intern programme.
-- ✅ **It isn't senior.** Director, head, VP and principal titles are always out. Senior, lead and manager titles are out unless the title also says junior, graduate, trainee or similar ("Senior Associate" counts as senior).
+- ✅ **It's in a target lane:** data analysis, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, or a graduate programme. Internships are out: employers in the UAE don't sponsor a work visa for them, while some graduate and trainee programmes do.
+- ✅ **It isn't senior.** Director, head, VP and principal titles are always out. Senior, lead and manager titles are out unless the title also says junior, graduate, trainee or similar ("Senior Associate" counts as senior). A second level counts as senior too: "Data Analyst II", "Engineer 2", "[L2]", "Tier 2". The first level stays ("Engineer I", "L1").
 - ✅ **It isn't a lookalike.** Sales, account executives, audit, tax, nursing, design, frontend/mobile and similar roles are dropped, and so are talent pools, career fairs and open applications. Finance and compliance titles survive only if they're clearly technical ("AML Data Analyst" stays).
 - ✅ **It's still open.** Job-site postings (LinkedIn, Indeed) older than 21 days are dropped; employer and board postings older than 120 days too (those are evergreen ads, not openings). Anything older than 30 days ranks lower.
 - ✅ **The full description passes:**
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
-  - Roles asking for 4+ years of experience are dropped; 3 years is kept and flagged as a stretch. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
+  - Roles asking for 3 or more years of experience are dropped (`MAX_YEARS` in [`run.py`](run.py)); roles asking for up to 2, or naming no number, stay. The number is the first requirement the posting states: in "6-8 years of experience, including at least 2 years in ..." it is 6, not 2. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
   - Roles that say they won't sponsor a visa are dropped.
 - 🏷️ **Agencies are marked, not dropped.** A posting by a recruitment agency or an unnamed ("Confidential") employer gets an `agency` flag, shows "agency or unnamed employer" in Notes, and ranks a little lower: expect a screening call first, and often a wish for candidates already in the country. The list of agency names is `AGENCY_RE` in [`engine/util.py`](engine/util.py).
 - 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time, 20 to 40 seconds apart. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, so are titles that already say UAE nationals, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.

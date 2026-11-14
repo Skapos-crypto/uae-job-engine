@@ -9,8 +9,8 @@
 # addresses) after refusing most of them since the first week. To try it again, add a list:
 #   bayt:
 #     - data analyst
-# Its three queries went to Indeed, which has answered every query so far (internship, junior,
-# product analyst).
+# Its three queries went to Indeed, which has answered every query so far (trainee, junior,
+# product analyst). No query looks for internships: they are filtered out (no visa sponsorship).
 #
 # Google is off: on 2026-11-02 every Google query returned "no job data returned", both on GitHub
 # Actions and from a home connection. Its six queries moved to Indeed and Bayt.
@@ -27,7 +27,7 @@ jobspy:
     - ai engineer
     - graduate
     - it support
-    - internship
+    - trainee
     - junior
     - product analyst
   linkedin:

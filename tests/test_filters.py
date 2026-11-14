@@ -14,9 +14,7 @@ KEEP = [
     ("Data Scientist AI - 36 Months", "data_science"),
     ("Data Reporting Engineer", "bi"),
     ("Business Analyst - CRM", "business"),
-    ("Software Engineering Intern", "software"),
     ("Management Trainee", "graduate"),
-    ("Data Analyst II", "data_analyst"),
     ("Junior Data Analyst", "data_analyst"),
     ("Associate Product Manager", "product"),
     ("Product Owner - Digital Banking", "product"),
@@ -36,7 +34,6 @@ KEEP = [
     ("BIE Engineer", "bi"),  # Amazon's Business Intelligence Engineer
     ("Sales Analyst eCommerce - UAE & Oman", "analyst"),
     ("Biostatistician-Clinical Trials Unit Section", "data_science"),
-    ("Data Center Technician - 2027 Internship", "it"),
     ("Trans Topology Data Analyst, Supply Chain Transportation Planning", "data_analyst"),
     ("QA Engineer", "software"),
     ("Junior Test Automation Engineer", "software"),
@@ -45,9 +42,15 @@ KEEP = [
     ("Odoo Developer", "software"),
     ("Data Quality Analyst", "data_analyst"),
     ("Associate Analyst, Business Administration- Launch Program 2027", "analyst"),
-    ("Data Analyst - Intern", "data_analyst"),
     ("Finance Data Analyst", "data_analyst"),
-    ("Software Development Engineer 2", "software"),  # like "II": kept
+    # internships are out, graduate programmes and trainee roles stay; the first level stays
+    ("Graduate Programme - Data & Technology", "data_analyst"),
+    ("Early Career Trainee, Commercial Enablement", "graduate"),
+    ("Software Engineer I", "software"),
+    ("Software Engineer l - Backend", "software"),  # a lower-case L typed for the numeral I
+    ("Junior Full Stack Developer [L1]", "software"),
+    ("IT Support Engineer L1/L2", "it"),  # covers the first level
+    ("International Data Analyst", "data_analyst"),  # "intern" inside another word
     ("Claims Data Analyst", "data_analyst"),  # insurance, but a data role
 ]
 
@@ -113,6 +116,18 @@ DROP = [
     "Automation Engineer, Reliability Maintenance Engineering",  # warehouse machinery, not software
     "Software Development Engineer 3",  # a level, like "III"
     "Claims Associate Analyst",  # insurance claims handling
+    # 14 November 2026: internships do not sponsor a visa; a second level is not a junior role
+    "Software Engineering Intern",
+    "Data Analyst - Intern",
+    "Data Center Technician - 2027 Internship",
+    "Global Markets Summer Internship 2027 - Product Management",
+    "Summer Analyst, Dubai",
+    "Data Analyst II",
+    "Software Engineer ll - Backend",  # two lower-case L's typed for II
+    "Software Development Engineer 2",
+    "Full Stack Developer [L2]",
+    "L2 Support Engineer",
+    "Associate Data Scientist II",
 ]
 
 
@@ -207,10 +222,10 @@ def main():
     assert "open to UAE Nationals only" in evidence(
         "Data Analyst", "A great team. This role is open to UAE Nationals only. Apply today.", "nationals-only")
     assert evidence("Graduate Trainee (UAEN)", "", "nationals-only") == "Graduate Trainee (UAEN)"
-    assert "6 years of experience" in evidence("Data Analyst", "Minimum 6 years of experience in banking", "4+ years")
+    assert "6 years of experience" in evidence("Data Analyst", "Minimum 6 years of experience in banking", "3+ years")
     assert "cannot offer visa sponsorship" in evidence(
         "Data Analyst", "Please note we cannot offer visa sponsorship for this role.", "no-sponsorship")
-    assert evidence("Data Analyst", "", "4+ years") == ""  # facts from the cache: no words at hand
+    assert evidence("Data Analyst", "", "3+ years") == ""  # facts from the cache: no words at hand
     # "associate" alone no longer rescues a senior title; other junior words still do
     assert seniority("Senior Operations Associate - Shops") == "senior"
     assert seniority("Associate Analyst") == "junior" and seniority("Senior Graduate Programme Associate") == "junior"
@@ -226,7 +241,22 @@ def main():
     if bad:
         print("\n".join(bad))
         raise SystemExit("%d filter cases failed" % len(bad))
-    assert seniority("Software Development Engineer 3") == "senior" and seniority("Data Analyst II") == "unspecified"
+    assert seniority("Software Development Engineer 3") == "senior" and seniority("Data Analyst II") == "senior"
+    assert seniority("Graduate Engineer II") == "junior" and seniority("L1 Technical Support Engineer") == "unspecified"
+    assert classify("Data Analyst - Intern") == (None, "internship")
+    assert classify("Data Analyst 2027 Graduate Programme")[0] == "data_analyst"  # a year, not a level
+    # the years a posting asks for: its first stated requirement, not its smallest number
+    assert min_years("6-8 years of experience in a data supported organisation including at least 2 years "
+                     "in positions of increasing responsibility") == 6
+    assert min_years("5+ years of total experience in IT including 2+ years as a Product Owner") == 5
+    assert min_years("2+ years of experience with data at scale. 1+ years of experience with Python.") == 2
+    assert min_years("A minimum of 2 to 4 years of experience in data analysis") == 2
+    assert min_years("5 to 10 or more years of experience in DevOps") == 5
+    assert min_years("an innovator with over 100 years of healthcare industry experience") is None
+    assert min_years("1.5 years of experience would help") is None
+    assert min_years("Up to 2 years of professional experience. Graduated within the last 2 years.") is None
+    assert "6-8 years" in evidence("Data Analyst", "Degree. 6-8 years of experience including at least 2 years "
+                                   "in management.", "3+ years")
     # a programme "for UAE National students" is a nationals programme; "for UAE nationals and expats" is not
     assert nationals("Discover Emirates Group Internship Programme", "Discover is our internship programme "
                      "for UAE National students and fresh graduates.") == "only"
@@ -238,7 +268,7 @@ def main():
     # recruiters and job platforms seen in the second week
     assert is_agency("Jobgether") and is_agency("Kingston Stanley") and is_agency("Salt")
     assert not is_agency("Kraken") and not is_agency("Salt Bae Restaurants") and not is_agency("Emirates Group")
-    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 70))
+    print("all %d filter cases pass" % (len(KEEP) + len(DROP) + 82))
 
 
 if __name__ == "__main__":

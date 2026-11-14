@@ -34,7 +34,9 @@ PROBE_EVERY_DAYS = 6
 WORKERS = 32             # threads only wait their turn: the Http client allows one request per host at a time
 REJECTED_PER_REASON = 60
 STUCK_AFTER = 3          # failed runs in a row before a source is called out in the status panel
-DESC_REASONS = {"nationals-only", "4+ years", "no-sponsorship"}  # rejections only a description can give
+MAX_YEARS = 2            # roles asking for more years of experience than this are dropped; unspecified stays
+TOO_MANY_YEARS = "%d+ years" % (MAX_YEARS + 1)
+DESC_REASONS = {"nationals-only", TOO_MANY_YEARS, "no-sponsorship"}  # rejections only a description can give
 LINKS_KEEP_DAYS = 30     # how long an employer's job-system link seen on Indeed stays in direct_links.json
 SITE_NAMES = {"linkedin": "LinkedIn", "indeed": "Indeed", "bayt": "Bayt", "google": "Google"}
 
@@ -256,6 +258,14 @@ def cached_facts(cache, job):
     return facts if facts and facts.get("v") == FACTS_VERSION else None
 
 
+def older_facts(cache, job):
+    """Facts worked out with earlier patterns, for a LinkedIn page that will not be opened again (its
+    role is no longer new): better than treating the role as if nobody had read it. An employer
+    page is simply read again instead."""
+    facts = cache.get(detail_key(job))
+    return facts if facts and (job.get("_detail") or ("",))[0] == "linkedin" else None
+
+
 def employer_page(job):
     """A job whose own page is read in parallel with the others. LinkedIn pages are not: they
     are read one at a time, and for new roles only (read_linkedin_pages)."""
@@ -318,7 +328,8 @@ def read_linkedin_pages(candidates, seen, cache, health, limit, today_s):
         return
     described = {j["key"] for j in candidates if has_description(j, cache)}
     picked, keys = [], set()
-    for j in sorted(candidates, key=lambda j: -score(j)):
+    # pages never read come first; one read under earlier patterns is read again only if there is room
+    for j in sorted(candidates, key=lambda j: (older_facts(cache, j) is not None, -score(j))):
         first_seen = seen.get(j["key"], {}).get("first_seen", today_s)
         if (j.get("_detail") or ("",))[0] != "linkedin" or j["key"] in described or j["key"] in keys \
                 or first_seen != today_s or nationals(j["title"], "") == "only":  # the title already decides
@@ -359,7 +370,7 @@ def final_checks(job, today, cache):
     """Description-level checks. Returns a rejection reason, or None and fills in flags."""
     desc = job.get("desc") or ""
     complete = job.get("_fresh_detail") or not job.get("_detail")
-    facts = None if complete else cached_facts(cache, job)
+    facts = None if complete else (cached_facts(cache, job) or older_facts(cache, job))
     if facts is None:
         facts = {"nat": nationals(job["title"], desc), "yrs": min_years(desc),
                  "ns": bool(NO_SPONSOR_RE.search(desc)), "ov": bool(OWN_VISA_RE.search(desc))}
@@ -378,8 +389,8 @@ def final_checks(job, today, cache):
         nat = "only"
     if nat == "only":
         return "nationals-only"
-    if yrs is not None and yrs >= 4:
-        return "4+ years"
+    if yrs is not None and yrs > MAX_YEARS:
+        return TOO_MANY_YEARS
     if facts.get("ns"):
         return "no-sponsorship"
     posted = job.get("posted")
@@ -391,8 +402,6 @@ def final_checks(job, today, cache):
         flags.append("agency")
     if nat == "preferred":
         flags.append("nationals_preferred")
-    if yrs == 3:
-        flags.append("stretch_3y")
     if facts.get("ov"):
         flags.append("own_visa_preferred")
     job.update(flags=flags, age_days=age, min_years=yrs, nat=nat)
@@ -405,13 +414,14 @@ def recheck(r, today):
     False when the row no longer passes; otherwise its lane, level, age, flags and score are
     refreshed. What only a description can say (years, visa, nationals in the text) is kept."""
     family, cv, level = prefilter(r)
-    if family is None or nationals(r["title"], "") == "only":
+    if family is None or nationals(r["title"], "") == "only" or (r.get("min_years") or 0) > MAX_YEARS:
         return False
     posted = datetime.strptime(r["posted"], "%Y-%m-%d").date() if r.get("posted") else None
     age = (today - posted).days if posted else None
     if age is not None and age > (STALE_DAYS if r["source_type"] in AGGREGATOR_TYPES else EMPLOYER_STALE_DAYS):
         return False
-    flags = [f for f in r.get("flags", []) if f != "agency"] + (["agency"] if is_agency(r["employer"]) else [])
+    flags = [f for f in r.get("flags", []) if f not in ("agency", "stretch_3y")]
+    flags += ["agency"] if is_agency(r["employer"]) else []
     r.update(family=family, cv=cv, seniority=level, age_days=age, flags=flags,
              is_new=r["first_seen"] == str(today))
     r["score"] = score(r)
@@ -538,7 +548,7 @@ def to_record(j):
 FAMILY_LABEL = {
     "data_analyst": "Data analyst", "bi": "BI / reporting", "data_science": "Data science",
     "ai_ml": "AI / ML", "data_eng": "Data engineering", "product": "Product", "business": "Business analysis",
-    "software": "Software / backend", "it": "IT", "analyst": "Analyst (other)", "graduate": "Graduate / intern",
+    "software": "Software / backend", "it": "IT", "analyst": "Analyst (other)", "graduate": "Graduate programme",
 }
 
 
@@ -581,7 +591,7 @@ def status_lines(status, full):
 
 
 def linkedin_pages_line(p):
-    """'12 of 14 new roles read; 3 dropped after reading (2 nationals-only, 1 4+ years); ...'"""
+    """'12 of 14 new roles read; 3 dropped after reading (2 nationals-only, 1 3+ years); ...'"""
     if not p["tried"]:
         return "none to read" if not p.get("error") else "none read (%s)" % md_escape(p["error"])
     parts = ["%d of %d new roles read" % (p["read"], p["wanted"])]
@@ -605,8 +615,9 @@ def write_markdown(records, summary, health_rows, status, full):
         "",
         "Updated %s Dubai time. Sorted new first, then by fit. "
         "Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, "
-        "software/backend, IT, graduate programmes. Senior, nationals-only, 4+ years and "
-        "frontend/mobile roles are filtered out." % now,
+        "software/backend, IT, graduate programmes. Senior and second-level titles, internships, "
+        "nationals-only, %s and "
+        "frontend/mobile roles are filtered out." % (now, TOO_MANY_YEARS),
         "",
     ] + status_lines(status, full) + [
         "| # | New | Role | Employer | City | Lane | Posted | Found on | Notes |",
@@ -616,8 +627,6 @@ def write_markdown(records, summary, health_rows, status, full):
         notes = []
         if "nationals_preferred" in r["flags"]:
             notes.append("UAE nationals preferred")
-        if "stretch_3y" in r["flags"]:
-            notes.append("asks 3 yrs")
         if "own_visa_preferred" in r["flags"]:
             notes.append("prefers own visa")
         if "agency" in r["flags"]:

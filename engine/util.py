@@ -166,8 +166,7 @@ FAMILIES = [
      r"end user (support|computing)"),
     ("analyst", "Data_Analyst", r"\banalyst\b"),
     ("graduate", "Data_Analyst",
-     r"graduate|trainee|internship|\bintern\b|fresh(er)? grad|entry[- ]level|early (careers?|talent)|rotational|"
-     r"summer analyst|campus|apprentice"),
+     r"graduate|trainee|fresh(er)? grad|entry[- ]level|early (careers?|talent)|rotational|campus|apprentice"),
 ]
 FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
 
@@ -212,7 +211,15 @@ TECH_CORE_RE = re.compile(
     re.I,
 )
 
-# Graduate and intern roles in disciplines outside the target lanes.
+# Internships and other student placements: out, because employers in the UAE do not sponsor a
+# work visa for them. Graduate programmes and trainee roles stay: some of those do.
+INTERN_RE = re.compile(
+    r"\bintern(s|ship|ships)?\b|\bsummer (analyst|associate|placement)\b|"
+    r"\b(industrial|work|student) placement\b|\bplacement student\b|\bworking student\b",
+    re.I,
+)
+
+# Graduate and trainee roles in disciplines outside the target lanes.
 GRAD_EXCLUDE_RE = re.compile(
     r"mechanical|civil|electrical|chemical|petroleum|structural|architect|nurs|medical|pharm|clinical|"
     r"legal|\blaw\b|finance|accounting|audit|\btax\b|sales|hospitality|chef|culinary|cabin|pilot|aircraft|"
@@ -255,6 +262,8 @@ def classify(title):
         return None, "no-title"
     if EXCLUDE_RE.search(t) or (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)):
         return None, "excluded-title"
+    if INTERN_RE.search(t):
+        return None, "internship"
     for family, cv, rx in FAMILIES:
         if rx.search(t):
             if family == "graduate":
@@ -275,11 +284,16 @@ SENIOR_HARD_RE = re.compile(
     r"associate (manager|director|principal|partner|vice president))\b",
     re.I,
 )
-SENIOR_SOFT_RE = re.compile(
-    r"\b(senior|sr|snr|lead|manager|mgr|expert|iii|iv|level [3-9])\b|"
-    r"\b(engineer|developer|sde|analyst|scientist|consultant|specialist) ?[3-9]\b",  # "Engineer 3": I and II stay
+SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert)\b", re.I)
+# A second level or higher: "Data Analyst II", "Software Engineer ll" (typed with two L's), "SDE 2",
+# "Full Stack Developer [L2]", "Level 3", "Tier 2 Support". The first level stays ("Engineer I", "L1").
+LEVEL_RE = re.compile(
+    r"\b(ii|ll|iii|iv)\b|\bl[2-9]\b|\b(level|tier|grade) ?([2-9]|ii|iii|iv)\b|"
+    r"\b(engineer|developer|sde|analyst|scientist|consultant|specialist|associate|administrator|programmer|tester)"
+    r"[ -]?[2-9]\b",
     re.I,
 )
+FIRST_LEVEL_RE = re.compile(r"\bl1\b|\b(level|tier) ?(1|i)\b", re.I)  # "L1/L2 Support Engineer" covers the first level
 SENIOR_WORD_RE = re.compile(r"\b(senior|sr|snr)\b", re.I)
 JUNIOR_RE = re.compile(
     r"\b(junior|jr|associate|graduate|grad|trainee|intern|internship|entry|fresh|apprentice|campus)\b",
@@ -292,10 +306,13 @@ def seniority(title):
     if SENIOR_HARD_RE.search(t):
         return "senior"
     junior_words = {w.lower() for w in JUNIOR_RE.findall(t)}
-    if SENIOR_SOFT_RE.search(t):
-        # "Senior Associate" is a grade of its own (three to six years at the Big Four and the like):
-        # "associate" alone does not make a senior title junior, the other words do
-        rescued = bool(junior_words - {"associate"}) or ("associate" in junior_words and not SENIOR_WORD_RE.search(t))
+    level = LEVEL_RE.search(t) and not FIRST_LEVEL_RE.search(t)
+    if SENIOR_SOFT_RE.search(t) or level:
+        # "Senior Associate" is a grade of its own (three to six years at the Big Four and the like), and
+        # so is "Associate Engineer II": "associate" alone does not make such a title junior, the other
+        # words do ("Graduate Engineer II")
+        rescued = bool(junior_words - {"associate"}) or (
+            "associate" in junior_words and not SENIOR_WORD_RE.search(t) and not level)
         if not rescued:
             return "senior"
     if junior_words:
@@ -344,15 +361,21 @@ def nationals(title, desc):
     return None
 
 
+# "3+ years", "2-4 years", "5 to 10 or more years": the first number is the requirement. Not the tail of
+# a bigger number ("100 years" of company history) or of a decimal ("1.5 years").
 YEARS_RE = re.compile(
-    r"(\d{1,2})\s*(?:\+|plus|or more)?\s*(?:(?:-|–|to)\s*(\d{1,2}))?\s*\+?\s*(?:years?|yrs?)\b",
+    r"(?<![\d.,])(\d{1,2})\s*(?:\+|plus|or more)?\s*(?:(?:-|–|to)\s*(\d{1,2}))?\s*(?:\+|plus|or more)?\s*"
+    r"(?:years?|yrs?)\b",
     re.I,
 )
 
 
-# "Up to 7 years", "less than 2 years": a ceiling, not a requirement.
-YEARS_CEILING_RE = re.compile(r"(up ?to|maximum( of)?|max\.?|no more than|less than|fewer than|under|at most)\s*$",
-                              re.I)
+# "Up to 7 years", "less than 2 years": a ceiling. "Graduated within the last 2 years": not experience.
+YEARS_CEILING_RE = re.compile(
+    r"(up ?to|maximum( of)?|max\.?|no more than|less than|fewer than|under|at most|"
+    r"(with)?in the (last|past)|over the (last|past)|(last|past))\s*$",
+    re.I,
+)
 
 
 def _experience_years(desc):
@@ -369,9 +392,13 @@ def _experience_years(desc):
 
 
 def min_years(desc):
-    """Smallest 'N years of experience' requirement stated, or None if none found."""
-    found = [n for n, _ in _experience_years(clean(desc))]
-    return min(found) if found else None
+    """The years of experience a posting asks for, or None if it names none: the first requirement it
+    states. A later, smaller number is nearly always a part of it ("6-8 years of experience, including
+    at least 2 years in ..."); in 118 descriptions read in November 2026 the first number was the
+    requirement every time, and the smallest one was not in 5 of the 8 that had two."""
+    for n, _ in _experience_years(clean(desc)):
+        return n
+    return None
 
 
 NO_SPONSOR_RE = re.compile(
@@ -384,7 +411,7 @@ OWN_VISA_RE = re.compile(r"own (residence |work )?visa|on (your )?own visa|valid
 
 
 def evidence(title, desc, reason):
-    """The words behind a nationals-only, 4+ years or no-sponsorship rejection, so that it can
+    """The words behind a nationals-only, years or no-sponsorship rejection, so that it can
     be checked by eye. Empty when the description is not at hand (facts from the cache)."""
     title, desc = clean(title), clean(desc)
     m = None
@@ -392,9 +419,8 @@ def evidence(title, desc, reason):
         if NAT_TITLE_RE.search(title):
             return title[:200]
         m = NAT_DESC_RE.search(desc[:5000])
-    elif reason == "4+ years":
-        found = list(_experience_years(desc))
-        m = min(found, key=lambda nm: nm[0])[1] if found else None
+    elif reason.endswith("+ years"):
+        m = next((match for _, match in _experience_years(desc)), None)
     elif reason == "no-sponsorship":
         m = NO_SPONSOR_RE.search(desc)
     return desc[max(0, m.start() - 80): m.end() + 80].strip() if m else ""
@@ -538,8 +564,6 @@ def score(job):
     flags = job.get("flags", [])
     if "nationals_preferred" in flags:
         s -= 3
-    if "stretch_3y" in flags:
-        s -= 1
     if "own_visa_preferred" in flags:
         s -= 1.5
     if "agency" in flags:

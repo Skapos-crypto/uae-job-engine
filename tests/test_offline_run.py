@@ -172,6 +172,8 @@ def fake_request(self, method, url, retries=2, **kw):
             {"reqid": "e2", "title": "Data Analyst, dnata Singapore", "brand": "dnata", "city": "Singapore", "state": "",
              "country": "Singapore", "postingdate": 1794355200000, "jobdescription": ""},
             {"reqid": "e3", "title": "IT Graduate Programme - Emiratisation", "brand": "Emirates Group", "city": "Dubai",
+             "state": "Dubai", "country": "United Arab Emirates", "postingdate": None, "jobdescription": ""},
+            {"reqid": "e4", "title": "Data Analytics Internship Programme", "brand": "Emirates Group", "city": "Dubai",
              "state": "Dubai", "country": "United Arab Emirates", "postingdate": None, "jobdescription": ""}]})
     if "example-jibe2.com/api/jobs" in url:
         assert "country=United%20Arab%20Emirates" in url, url  # a worldwide site is asked for one country
@@ -339,8 +341,8 @@ def main():
         print("rejected:", latest["summary"]["rejected"])
         expect_kept = {"HR Data Analyst", "Associate Analyst, Data & Services", "Data Scientist",
                        "Graduate Programme - Data & Technology", "Junior Python Developer", "Data Analyst",
-                       "Business Intelligence Engineer", "Junior Data Engineer", "Junior Data Analyst",
-                       "Junior BI Analyst", "AI Engineer - Graduate", "IT Support Specialist", "Data Scientist II",
+                       "Junior Data Engineer", "Junior Data Analyst",
+                       "Junior BI Analyst", "AI Engineer - Graduate", "IT Support Specialist",
                        "Junior Analytics Engineer", "Graduate Data Analyst", "Junior Analyst, Logistics Performance",
                        "Junior Python Engineer", "Junior Data Engineer, Text Search", "Data Analyst, dnata Cargo",
                        "Junior Automation Engineer"}
@@ -374,7 +376,9 @@ def main():
         assert titles["AI Engineer - Graduate"]["min_years"] is None  # the page footer is not description
         assert titles["IT Support Specialist"]["location"] == "Abu Dhabi, United Arab Emirates"
         assert titles["Junior Analytics Engineer"]["posted"] == "2026-11-02"
-        assert "stretch_3y" in titles["Business Intelligence Engineer"]["flags"]
+        # a role asking for 3 years is out (Amazon's), and so are a second-level title and an internship
+        assert "Business Intelligence Engineer" not in titles and "Data Scientist II" not in titles
+        assert latest["summary"]["rejected"].get("internship") == 1 and latest["summary"]["rejected"].get("senior") == 2
         assert "own_visa_preferred" in titles["Junior Python Developer"]["flags"]
         assert titles["HR Data Analyst"]["url"].endswith("/sites/CX_1/job/101")
         # a Workday posting listed as "2 Locations" is kept under the UAE facet it came from
@@ -397,7 +401,8 @@ def main():
         assert acme["roles"] == 1 and acme["employers"] == ["Acme Recruitment"], acme
         assert acme["sample"] == "https://acme.wd3.myworkdayjobs.com/AcmeCareers/job/Dubai/Junior_R1"
         assert "from LinkedIn and Bayt;" in open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
-        assert latest["summary"]["rejected"].get("4+ years") == 1
+        assert latest["summary"]["rejected"].get("3+ years") == 2  # "Minimum 6 years" and "3+ years"
+        assert "4+ years" not in latest["summary"]["rejected"]
         assert os.path.exists(os.path.join(run.DATA, "latest.md"))
         cache = json.load(open(os.path.join(run.DATA, "detail_cache.json")))
         assert len(cache) >= 4
@@ -421,7 +426,7 @@ def main():
         assert health["jobspy:bayt"]["ok"] and health["jobspy:bayt"]["fetched"] == 2
         assert health["attrax:AtCo"]["meta"]["pages"] == 2, health["attrax:AtCo"]  # page 2 had nothing new
         sample = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
-        assert {"senior", "nationals-only", "4+ years"} <= {x["reason"] for x in sample}
+        assert {"senior", "nationals-only", "3+ years", "internship"} <= {x["reason"] for x in sample}
 
         # second run the same day: details come from the cache; first_seen is kept
         run.main()
