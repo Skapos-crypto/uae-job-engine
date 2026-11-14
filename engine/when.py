@@ -1,9 +1,10 @@
 """What should this wake-up of the workflow do: a full run, a career-systems run, or nothing?
 
-GitHub starts scheduled workflows late: 4.5 to 8 hours late for this repository in November 2026,
-once more than 10. A cron line therefore cannot say when a run happens. Instead the workflow wakes
-every half hour, and this script picks the first wake-up after each target time (Dubai time) to do
-the work. Every other wake-up exits within seconds.
+GitHub starts scheduled workflows late: 4.5 to 8 hours after the cron time for this repository in
+November 2026, once more than 10. A cron line therefore cannot say when a run happens, and which
+line started a run says little about the time of day. So the workflow has a few cron lines a day,
+and this script decides from the clock: the first wake-up after each target time (Dubai time) does
+that run, and any other wake-up exits within seconds.
 
 Prints "mode=full", "mode=systems" or "mode=skip" (the workflow appends it to $GITHUB_OUTPUT).
 Standard library only: it runs before anything is installed.
@@ -66,8 +67,8 @@ def main():
         # data written before last_full existed: take the last run of any kind, so that the first
         # wake-up after an upgrade does not search the job sites a second time that day
         last_full = parse(generated.get("last_full")) or last_run
-        full_after = os.environ.get("FULL_AFTER", "12:45")
-        systems_after = os.environ.get("SYSTEMS_AFTER", "07:00")
+        full_after = os.environ.get("FULL_AFTER", "12:00")
+        systems_after = os.environ.get("SYSTEMS_AFTER", "00:30")
         mode = decide(now, last_run, last_full, full_after, systems_after)
         why = "full run due after %s, career systems after %s; last full run %s, last run %s" % (
             full_after, systems_after, generated.get("last_full") or "not recorded",

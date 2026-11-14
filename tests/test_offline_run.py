@@ -295,6 +295,12 @@ def fake_request(self, method, url, retries=2, **kw):
 
 
 def main():
+    # a job system down for many employers at once is named once in the status panel
+    down = {"workday:%s" % n: "SourceError: workday %s: HTTP 521, a web page instead of data, site down or in "
+            "maintenance" % n.lower() for n in ("Acme", "Beta", "Gamma", "Delta", "Epsilon")}
+    line = run.failing_line(dict(down, **{"oracle:NoSites": "SourceError: no sites set", "amazon": "timeout"}))
+    assert line == ("amazon (timeout); oracle:NoSites (SourceError: no sites set); 5 workday sources, Acme, Beta, "
+                    "Delta and 2 more (HTTP 521, a web page instead of data, site down or in maintenance)"), line
     tmp = tempfile.mkdtemp()
     try:
         run.DATA = os.path.join(tmp, "data")

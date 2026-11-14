@@ -62,13 +62,15 @@ flowchart LR
 
 | When (Dubai time) | What runs |
 |---|---|
-| First wake-up after 07:00 | ☀️ Career systems only |
-| First wake-up after 12:45 | 🌤️ Full run: every career system, the job sites through JobSpy, and every 6 days a probe that looks for new startup boards |
+| Around 05:00 (first wake-up after 00:30) | ☀️ Career systems only |
+| Around 12:30 (first wake-up after 12:00) | 🌤️ Full run: every career system, the job sites through JobSpy, and every 6 days a probe that looks for new startup boards |
 | On every code push | 🔧 Career systems only, so testing a change never doubles the LinkedIn and Indeed queries |
 
-**Why "first wake-up after"?** GitHub starts scheduled runs late: 4.5 to 8 hours late for this repository in November 2026, once more than 10. A cron line can't say when a run happens. So the workflow wakes every half hour, and a tiny script ([`engine/when.py`](engine/when.py)) decides what the wake-up does: the first one after each target time does the work, and the other 46 a day exit within seconds without touching any site. The two times are plain `FULL_AFTER` and `SYSTEMS_AFTER` values at the top of [`.github/workflows/collect.yml`](.github/workflows/collect.yml), in Dubai time. The job sites are never searched twice within 12 hours, and a full run that was missed altogether is made up at the next wake-up.
+**Why "around" and "first wake-up after"?** GitHub starts scheduled runs late: 4.5 to 8 hours after the cron time for this repository in November 2026, once more than 10. A cron line can't say when a run happens. Waking every half hour doesn't help either: GitHub keeps only one waiting start per cron line, and a half-hourly line was started once in 11 hours. So the workflow has five cron lines a day, placed where their starts have landed so far, and a tiny script ([`engine/when.py`](engine/when.py)) decides from the clock what a wake-up does: the first one after `SYSTEMS_AFTER` reads the career systems, the first one after `FULL_AFTER` does the full run, and the spare ones exit within seconds without touching any site. Both values sit at the top of [`.github/workflows/collect.yml`](.github/workflows/collect.yml), in Dubai time. The job sites are never searched twice within 12 hours, and a full run that was missed altogether is made up at the next wake-up.
 
-**Why the early afternoon?** Postings appear during the working day: in a sample of 443 UAE postings on Indeed (November 2026), 6% were posted before 05:00, 37% before 13:00, 54% before 15:00 and 82% before 18:00. A search before dawn finds yesterday's jobs. 12:45 is the latest start that still finishes before a 14:39 digest; if you read your list in the evening, 17:00 catches four fifths of the day's postings the same day.
+**Why midday?** Postings appear during the working day: in a sample of 443 UAE postings on Indeed (November 2026), 6% were posted before 05:00, 28% before 12:00, 54% before 15:00 and 82% before 18:00. A search before dawn finds yesterday's jobs. A midday run still finishes before an early-afternoon digest; if you read your list in the evening, a run around 17:00 catches four fifths of the day's postings the same day (move the cron lines about seven hours ahead of the time you want, then watch where the starts land).
+
+**Saturdays:** Workday does its weekly maintenance on Saturday morning UTC, right when the full run starts, so its employers show as failing in that run. Their roles are carried over and read again by the next run.
 
 A full run takes up to a quarter of an hour (most of it the slow LinkedIn page reading); a career-systems-only run about a minute.
 
@@ -124,7 +126,7 @@ Want this for Riyadh, London, or for marketing roles instead of data? Here's the
    - The nationals-only rules are UAE-specific (Emiratisation); swap them for your country's equivalent, or remove them
 
    Then update [`tests/test_filters.py`](tests/test_filters.py) with titles you've actually seen, and run the tests.
-6. **Turn on Actions** in your fork (the Actions tab; forks start with scheduled workflows off). Set `FULL_AFTER` and `SYSTEMS_AFTER` in [`.github/workflows/collect.yml`](.github/workflows/collect.yml) to the times you want; they are Dubai time (UTC+4), so change `DUBAI` in [`engine/when.py`](engine/when.py) and [`engine/util.py`](engine/util.py) for another timezone.
+6. **Turn on Actions** in your fork (the Actions tab; forks start with scheduled workflows off). In [`.github/workflows/collect.yml`](.github/workflows/collect.yml), `FULL_AFTER` and `SYSTEMS_AFTER` say after what time each run may happen, and the cron lines say when GitHub is asked to wake the workflow: watch for a few days when your fork's runs really start, then move the lines. The times are Dubai time (UTC+4); change `DUBAI` in [`engine/when.py`](engine/when.py) and [`engine/util.py`](engine/util.py) for another timezone.
 7. **Wait for the first run**, then open `data/latest.md` and `data/health.json`. If the commit step fails with a permission error, check *Settings → Actions → General → Workflow permissions*.
 
 ## 🔎 Adding an employer: a little detective work
@@ -174,7 +176,7 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🏷️ **An honest User-Agent** that says what it is and links back here
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
-- 📉 **Low volume:** two runs a day, 22 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The half-hourly wake-ups in between contact no site at all.
+- 📉 **Low volume:** two runs a day, 22 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The spare wake-ups contact no site at all.
 - 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
 LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.
@@ -187,7 +189,7 @@ LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated acc
 
 **LinkedIn shows `blocked` in `health.json`. Is something broken?** No. LinkedIn sometimes refuses automated requests. The run records it and carries yesterday's LinkedIn roles over for up to three days, re-checked against the current filters, so a filter change reaches the list at once.
 
-**Why does the workflow run every 30 minutes?** It doesn't really: it wakes, checks the clock and exits in a few seconds, except twice a day. GitHub starts scheduled runs hours late, so this is the only way to run at a chosen time without an outside trigger. See "How it works".
+**Why are there runs that take 15 seconds?** Those are spare wake-ups: they check the clock, find the day's run already done and exit. GitHub starts scheduled runs hours late and not at a steady delay, so the workflow keeps a few spare starts a day. See "How it works".
 
 **Can I get the list by email or in a chat app?** Point anything at `data/latest.json`. A small scheduled script or a chatbot can read it and send you a daily digest of roles where `is_new` is true.
 

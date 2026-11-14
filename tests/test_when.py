@@ -42,13 +42,25 @@ def main():
         got = decide(at(now), last_run and at(last_run), last_full and at(last_full), full, systems)
         assert got == expected, (now, last_run, last_full, "expected %s, got %s" % (expected, got))
 
+    # the times in the workflow: career systems after 00:30, the full run after 12:00. GitHub starts the
+    # 20:13 UTC line around 05:00 Dubai and the 01:43 UTC line around 12:35; the spare lines then find it done
+    assert decide(at("2026-11-15 05:03"), at("2026-11-14 12:50"), at("2026-11-14 12:35"), "12:00", "00:30") == "systems"
+    assert decide(at("2026-11-15 11:50"), at("2026-11-15 05:04"), at("2026-11-14 12:35"), "12:00", "00:30") == "skip"
+    assert decide(at("2026-11-15 12:35"), at("2026-11-15 05:04"), at("2026-11-14 12:35"), "12:00", "00:30") == "full"
+    assert decide(at("2026-11-15 13:10"), at("2026-11-15 12:47"), at("2026-11-15 12:35"), "12:00", "00:30") == "skip"
+    assert decide(at("2026-11-15 19:40"), at("2026-11-15 12:47"), at("2026-11-15 12:35"), "12:00", "00:30") == "skip"
+    # ... and if GitHub ever starts runs on time: 00:13 skips, 05:43 does the systems, 12:43 the full run
+    assert decide(at("2026-11-15 00:13"), at("2026-11-14 12:55"), at("2026-11-14 12:43"), "12:00", "00:30") == "skip"
+    assert decide(at("2026-11-15 05:43"), at("2026-11-14 12:55"), at("2026-11-14 12:43"), "12:00", "00:30") == "systems"
+    assert decide(at("2026-11-15 06:13"), at("2026-11-15 05:44"), at("2026-11-14 12:43"), "12:00", "00:30") == "skip"
+    assert decide(at("2026-11-15 12:43"), at("2026-11-15 05:44"), at("2026-11-14 12:43"), "12:00", "00:30") == "full"
     # the evening variant: full run after 17:00, career systems in the morning
     assert decide(at("2026-11-14 17:07"), at("2026-11-14 07:10"), at("2026-11-13 17:20"), "17:00", "07:00") == "full"
     assert decide(at("2026-11-14 16:37"), at("2026-11-14 07:10"), at("2026-11-13 17:20"), "17:00", "07:00") == "skip"
     # the early-morning variant used until November 2026: full after 04:30, career systems after 12:30
     assert decide(at("2026-11-14 04:37"), at("2026-11-13 12:50"), at("2026-11-13 05:13"), "04:30", "12:30") == "full"
     assert decide(at("2026-11-14 12:37"), at("2026-11-14 05:13"), at("2026-11-14 05:13"), "04:30", "12:30") == "systems"
-    print("all %d wake-up cases pass" % (len(cases) + 7))
+    print("all %d wake-up cases pass" % (len(cases) + 16))
 
 
 if __name__ == "__main__":

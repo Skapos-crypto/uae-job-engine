@@ -1,13 +1,18 @@
 name: collect-jobs
 
 on:
-  # GitHub starts scheduled runs late: 4.5 to 8 hours late for this repository in November 2026,
-  # once more than 10. No cron line can therefore say when a run happens. Instead the workflow
-  # wakes every half hour and engine/when.py decides what the wake-up does: the first one after
-  # FULL_AFTER does the full run, the first one after SYSTEMS_AFTER the career-systems run, and
-  # every other wake-up exits within seconds. Both times are Dubai time; change them here.
+  # GitHub starts this repository's scheduled runs 4.5 to 8 hours after the cron time (November
+  # 2026), and it keeps only one waiting start per cron line: a line that fires every half hour
+  # was started once in 11 hours. So each line below is one wake-up a day, placed where its start
+  # has landed so far, and engine/when.py decides what a wake-up does from the Dubai time at which
+  # it really starts: the first one after SYSTEMS_AFTER does the career-systems run, the first
+  # one after FULL_AFTER the full run, and any other exits within seconds.
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "13 20 * * *"  # has started between 04:40 and 05:55 Dubai: the career-systems run
+    - cron: "43 1 * * *"   # has started between 12:20 and 12:50 Dubai: the full run
+    - cron: "13 2 * * *"   # two spare starts for the full run, should the first come before FULL_AFTER
+    - cron: "43 2 * * *"
+    - cron: "43 8 * * *"   # 12:43 Dubai on the dot: the full run, if GitHub ever starts runs on time
   workflow_dispatch:
     inputs:
       full:
@@ -23,12 +28,12 @@ on:
       - ".github/workflows/collect.yml"
 
 env:
-  # The full run searches the job sites once a day. Most UAE postings appear between 09:00 and
-  # 18:00, so a run in the early afternoon lists the morning's postings the same day; it has to end
-  # before the 14:39 digest that reads data/latest.json. The morning run reads the employers' own
+  # Dubai time. The full run searches the job sites once a day. Most UAE postings appear between
+  # 09:00 and 18:00, so a run around midday lists the morning's postings the same day, and it ends
+  # before a 14:39 digest that reads data/latest.json. The early run reads the employers' own
   # career systems only.
-  FULL_AFTER: "12:45"
-  SYSTEMS_AFTER: "07:00"
+  FULL_AFTER: "12:00"
+  SYSTEMS_AFTER: "00:30"
 
 permissions:
   contents: write

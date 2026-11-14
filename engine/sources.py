@@ -21,15 +21,24 @@ class NotFound(SourceError):
     pass
 
 
+def _said(resp):
+    """The start of an answer for an error message; a web page (a site that is down or in
+    maintenance answers with one) is named, not quoted."""
+    text = (resp.text or "").strip()
+    if text[:1] == "<":
+        return "a web page instead of data, site down or in maintenance"
+    return text[:160].replace("\n", " ")
+
+
 def _json(resp, what):
     if resp.status_code == 404:
         raise NotFound("%s: 404" % what)
     if resp.status_code >= 400:
-        raise SourceError("%s: HTTP %s %s" % (what, resp.status_code, resp.text[:160].replace("\n", " ")))
+        raise SourceError("%s: HTTP %s, %s" % (what, resp.status_code, _said(resp)))
     try:
         return resp.json()
     except ValueError:
-        raise SourceError("%s: not JSON (%s)" % (what, resp.text[:120].replace("\n", " ")))
+        raise SourceError("%s: not JSON, %s" % (what, _said(resp)))
 
 
 # ---------------------------------------------------------------- Oracle Recruiting Cloud

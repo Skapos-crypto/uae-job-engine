@@ -575,8 +575,7 @@ def status_lines(status, full):
                                                        " (career systems only; %s are searched once a day)"
                                                        % sites)]
     if st["failing"]:
-        lines.append("- **Failing this run:** " + "; ".join("%s (%s)" % (k, md_escape(v) or "error")
-                                                         for k, v in sorted(st["failing"].items())))
+        lines.append("- **Failing this run:** " + failing_line(st["failing"]))
     if st["blocked"]:
         lines.append("- **Blocked:** " + "; ".join("%s, %s" % kv for kv in sorted(st["blocked"].items())))
     if st["failing_in_a_row"]:
@@ -588,6 +587,23 @@ def status_lines(status, full):
     lines += ["- **New roles in the last 7 days:** %d from %s; %d from employer sites and boards"
               % (week["jobspy"], sites, week["employer"]), ""]
     return lines
+
+
+def failing_line(failing):
+    """The failing sources in one line. A job system that is down for many employers at once (Workday
+    during its weekly maintenance, Saturday morning UTC) is named once, not once per employer."""
+    by_kind = {}
+    for sid, error in sorted(failing.items()):
+        by_kind.setdefault(sid.split(":")[0], []).append((sid.split(":", 1)[-1], md_escape(error) or "error"))
+    parts = []
+    for kind, rows in by_kind.items():
+        if len(rows) > 3:
+            parts.append("%d %s sources, %s and %d more (%s)" % (
+                len(rows), kind, ", ".join(name for name, _ in rows[:3]), len(rows) - 3,
+                rows[0][1].rsplit(": ", 1)[-1]))
+        else:
+            parts += ["%s (%s)" % (name if name == kind else "%s:%s" % (kind, name), error) for name, error in rows]
+    return "; ".join(parts)
 
 
 def linkedin_pages_line(p):
