@@ -1,7 +1,7 @@
 {
  "generated": {
-  "utc": "2026-11-14T07:15:43+00:00",
-  "dubai": "2026-11-14 11:15",
+  "utc": "2026-11-14T07:22:27+00:00",
+  "dubai": "2026-11-14 11:22",
   "full_run": false,
   "last_full": "2026-11-13 12:45"
  },
@@ -35,14 +35,14 @@
    "attrax": 1,
    "ashby": 2
   },
-  "http_calls": 244,
+  "http_calls": 208,
   "verdicts_shared": 0,
   "rejected": {
    "excluded-title": 953,
    "no-family": 1398,
    "senior": 111,
-   "graduate-other-discipline": 8,
    "internship": 17,
+   "graduate-other-discipline": 8,
    "title-elsewhere": 2,
    "nationals-only": 29,
    "3+ years": 25,
@@ -52,27 +52,27 @@
    "sources": 101,
    "ok": 80,
    "failing": {
-    "workday:Baker Hughes": "SourceError: workday bakerhughes: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333",
-    "workday:HP": "SourceError: workday hp: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fam",
-    "workday:KBR": "SourceError: workday kbr: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa",
-    "workday:GSK": "SourceError: workday gsk: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa",
-    "workday:Mastercard": "SourceError: workday mastercard: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;",
-    "workday:Pfizer": "SourceError: workday pfizer: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font",
-    "workday:Cleveland Clinic Abu Dhabi": "SourceError: workday ccf: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa",
-    "workday:Coca-Cola": "SourceError: workday coke: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-f",
-    "workday:Thomson Reuters": "SourceError: workday thomsonreuters: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#",
-    "workday:Medtronic": "SourceError: workday medtronic: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;f",
-    "workday:GE HealthCare": "SourceError: workday gehc: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-f",
-    "workday:DXC Technology": "SourceError: workday dxctechnology: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#3",
-    "workday:Cigna": "SourceError: workday cigna: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-",
-    "workday:NVIDIA": "SourceError: workday nvidia: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font",
-    "workday:Snap": "SourceError: workday snapchat: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;fo",
-    "workday:GE Vernova": "SourceError: workday gevernova: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;f",
-    "workday:AstraZeneca": "SourceError: workday astrazeneca: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <m",
-    "workday:Shell": "SourceError: workday shell: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta ht",
-    "workday:Philips": "SourceError: workday philips: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta ",
-    "workday:Novartis": "SourceError: workday novartis: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta",
-    "workday:Rolls-Royce": "SourceError: workday rollsroyce: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <me"
+    "workday:HP": "SourceError: workday hp: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Baker Hughes": "SourceError: workday bakerhughes: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:KBR": "SourceError: workday kbr: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:GSK": "SourceError: workday gsk: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Thomson Reuters": "SourceError: workday thomsonreuters: HTTP 521, a web page instead of data, site down or in maintenan",
+    "workday:Pfizer": "SourceError: workday pfizer: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Mastercard": "SourceError: workday mastercard: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Cleveland Clinic Abu Dhabi": "SourceError: workday ccf: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Coca-Cola": "SourceError: workday coke: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:GE Vernova": "SourceError: workday gevernova: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:DXC Technology": "SourceError: workday dxctechnology: HTTP 521, a web page instead of data, site down or in maintenanc",
+    "workday:GE HealthCare": "SourceError: workday gehc: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Cigna": "SourceError: workday cigna: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:NVIDIA": "SourceError: workday nvidia: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Medtronic": "SourceError: workday medtronic: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Snap": "SourceError: workday snapchat: HTTP 521, a web page instead of data, site down or in maintenance",
+    "workday:Philips": "SourceError: workday philips: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Shell": "SourceError: workday shell: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:AstraZeneca": "SourceError: workday astrazeneca: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Rolls-Royce": "SourceError: workday rollsroyce: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Novartis": "SourceError: workday novartis: not JSON, a web page instead of data, site down or in maintenance"
    },
    "blocked": {},
    "failing_in_a_row": {
@@ -451,7 +451,7 @@
    "last_seen": "2026-11-14",
    "is_new": false,
    "score": 4.1,
-   "snippet": " Department: AI Hub Innovation JOB SUMMARY / INTRODUCTION: The AI Agent Specialist serves as the dedicated enablement partner for senior executives, helping them maximize value from AI-powered personal assistants and agentic technologies. Acting as a trusted advisor and first poi"
+   "snippet": ""
   },
   {
    "key": "850cbcbbb1a8f588",
@@ -477,7 +477,7 @@
    "last_seen": "2026-11-14",
    "is_new": false,
    "score": 4.1,
-   "snippet": "About the Company. We are a global energy maritime logistics leader with a world-class asset base. We are the dedicated and vital logistics arm for ADNOC Group, providing mission critical and highl... About the Company: We are a global energy maritime logistics leader with a worl"
+   "snippet": "About the Company. We are a global energy maritime logistics leader with a world-class asset base. We are the dedicated and vital logistics arm for ADNOC Group, providing mission critical and highl..."
   },
   {
    "key": "e0c20c655ae979d8",
@@ -529,7 +529,7 @@
    "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.6,
-   "snippet": " Role: HR Data Analyst Location: Abu Dhabi Role purpose: Provide support in managing MIS reporting to improve HR process workflow, information management. Support overall workforce planning strategy. Key accountabilities of the role: MIS & Workforce Planning / HRMS / Finance: Man"
+   "snippet": ""
   },
   {
    "key": "0fa5feef81c59d6c",
@@ -1127,7 +1127,7 @@
    "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.2,
-   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate article__content__view\"> Location United Arab Emirates Business Unit Dubai Holding Corporate Department Leaders of Tomorrow Experience Level Mid-Level Professional Date Friday, October 23, 2026 Entity DH Corporat"
+   "snippet": "Dubai Holding Corporate Leaders of Tomorrow Dubai Holding Corporate"
   },
   {
    "key": "401f4d451736bee4",
@@ -1283,7 +1283,7 @@
    "last_seen": "2026-11-14",
    "is_new": false,
    "score": 3.1,
-   "snippet": " Role : Fraud Monitoring Analyst (Outsource) Location : Abu Dhabi Role Purpose: Monitoring and reporting of transactions risk aspects from Issuer/E-Channels point of view. Job involves transaction activity review, fraud detection and liaison with concerned departments/cardholders"
+   "snippet": ""
   },
   {
    "key": "a2cf331f13a5b515",

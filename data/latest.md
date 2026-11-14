@@ -1,11 +1,11 @@
 # UAE junior roles: 86 open, 6 new today
 
-Updated 14 Nov 2026 11:15 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out.
+Updated 14 Nov 2026 11:22 Dubai time. Sorted new first, then by fit. Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes. Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out.
 
 ## Status
 
 - **Sources:** 80 of 101 answered (career systems only; Indeed and LinkedIn are searched once a day)
-- **Failing this run:** workday:AstraZeneca (SourceError: workday astrazeneca: not JSON (<!DOCTYPE html> <html lang="en" dir="ltr"> <head>     <m); workday:Baker Hughes (SourceError: workday bakerhughes: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333); workday:Cigna (SourceError: workday cigna: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-); workday:Cleveland Clinic Abu Dhabi (SourceError: workday ccf: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa); workday:Coca-Cola (SourceError: workday coke: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-f); workday:DXC Technology (SourceError: workday dxctechnology: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#3); workday:GE HealthCare (SourceError: workday gehc: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-f); workday:GE Vernova (SourceError: workday gevernova: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;f); workday:GSK (SourceError: workday gsk: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa); workday:HP (SourceError: workday hp: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fam); workday:KBR (SourceError: workday kbr: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-fa); workday:Mastercard (SourceError: workday mastercard: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;); workday:Medtronic (SourceError: workday medtronic: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;f); workday:NVIDIA (SourceError: workday nvidia: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font); workday:Novartis (SourceError: workday novartis: not JSON (<!DOCTYPE html> <html lang="en" dir="ltr"> <head>     <meta); workday:Pfizer (SourceError: workday pfizer: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font); workday:Philips (SourceError: workday philips: not JSON (<!DOCTYPE html> <html lang="en" dir="ltr"> <head>     <meta); workday:Rolls-Royce (SourceError: workday rollsroyce: not JSON (<!DOCTYPE html> <html lang="en" dir="ltr"> <head>     <me); workday:Shell (SourceError: workday shell: not JSON (<!DOCTYPE html> <html lang="en" dir="ltr"> <head>     <meta ht); workday:Snap (SourceError: workday snapchat: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;fo); workday:Thomson Reuters (SourceError: workday thomsonreuters: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#)
+- **Failing this run:** 21 workday sources, AstraZeneca, Baker Hughes, Cigna and 18 more (not JSON, a web page instead of data, site down or in maintenance)
 - **⚠️ Failing 3 or more runs in a row:** jobspy:bayt (4)
 - **New roles in the last 7 days:** 149 from Indeed and LinkedIn; 16 from employer sites and boards
 
@@ -123,7 +123,7 @@ Updated 14 Nov 2026 11:15 Dubai time. Sorted new first, then by fit. Lanes: data
 | workday:Shell | failed | 0 |
 | workday:Snap | failed | 0 |
 | workday:Thomson Reuters | failed | 0 |
-| _details | ok | 36 |
+| _details | ok | 0 |
 | amazon | ok | 70 |
 | ashby:brainco | ok | 48 |
 | ashby:checkout.com | ok | 172 |

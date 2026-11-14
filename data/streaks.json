@@ -10,10 +10,10 @@
   "ran": "2026-11-14"
  },
  "workday:HP": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday hp: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-seri"
+  "error": "SourceError: workday hp: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "oracle:Oracle": {
   "fails": 0,
@@ -21,16 +21,16 @@
   "ran": "2026-11-14"
  },
  "workday:Shell": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday shell: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Ty"
+  "error": "SourceError: workday shell: not JSON, a web page instead of data, site down or in maintenance"
  },
  "workday:Pfizer": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday pfizer: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-"
+  "error": "SourceError: workday pfizer: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "oracle:du": {
   "fails": 0,
@@ -48,10 +48,10 @@
   "ran": "2026-11-14"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday ccf: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
+  "error": "SourceError: workday ccf: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
@@ -74,10 +74,10 @@
   "ran": "2026-11-14"
  },
  "workday:AstraZeneca": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday astrazeneca: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Cont"
+  "error": "SourceError: workday astrazeneca: not JSON, a web page instead of data, site down or in maintenance"
  },
  "greenhouse:careem": {
   "fails": 0,
@@ -85,10 +85,10 @@
   "ran": "2026-11-14"
  },
  "workday:Baker Hughes": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday bakerhughes: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,"
+  "error": "SourceError: workday bakerhughes: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
@@ -96,10 +96,10 @@
   "ran": "2026-11-14"
  },
  "workday:Mastercard": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday mastercard: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,s"
+  "error": "SourceError: workday mastercard: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
@@ -107,10 +107,10 @@
   "ran": "2026-11-14"
  },
  "workday:Rolls-Royce": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday rollsroyce: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Conte"
+  "error": "SourceError: workday rollsroyce: not JSON, a web page instead of data, site down or in maintenance"
  },
  "jibe:M42": {
   "fails": 0,
@@ -118,16 +118,16 @@
   "ran": "2026-11-14"
  },
  "workday:GSK": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday gsk: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
+  "error": "SourceError: workday gsk: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:Novartis": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday novartis: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content"
+  "error": "SourceError: workday novartis: not JSON, a web page instead of data, site down or in maintenance"
  },
  "pinpoint:tabby": {
   "fails": 0,
@@ -135,10 +135,10 @@
   "ran": "2026-11-14"
  },
  "workday:Coca-Cola": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday coke: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-se"
+  "error": "SourceError: workday coke: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "greenhouse:tamara": {
   "fails": 0,
@@ -201,10 +201,10 @@
   "ran": "2026-11-14"
  },
  "workday:Philips": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday philips: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-"
+  "error": "SourceError: workday philips: not JSON, a web page instead of data, site down or in maintenance"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
@@ -312,10 +312,10 @@
   "ran": "2026-11-14"
  },
  "workday:Thomson Reuters": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday thomsonreuters: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Robo"
+  "error": "SourceError: workday thomsonreuters: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "lever:binance": {
   "fails": 0,
@@ -368,10 +368,10 @@
   "ran": "2026-11-14"
  },
  "workday:KBR": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday kbr: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-ser"
+  "error": "SourceError: workday kbr: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "greenhouse:mongodb": {
   "fails": 0,
@@ -435,16 +435,16 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday gehc: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-se"
+  "error": "SourceError: workday gehc: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:DXC Technology": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday dxctechnology: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Robot"
+  "error": "SourceError: workday dxctechnology: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
@@ -452,34 +452,34 @@
   "ran": "2026-11-14"
  },
  "workday:Snap": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday snapchat: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,san"
+  "error": "SourceError: workday snapchat: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:Cigna": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday cigna: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-s"
+  "error": "SourceError: workday cigna: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:GE Vernova": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday gevernova: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sa"
+  "error": "SourceError: workday gevernova: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:NVIDIA": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday nvidia: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-"
+  "error": "SourceError: workday nvidia: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:Medtronic": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-14",
   "ran": "2026-11-14",
-  "error": "SourceError: workday medtronic: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sa"
+  "error": "SourceError: workday medtronic: HTTP 521, a web page instead of data, site down or in maintenance"
  },
  "workday:Accenture": {
   "fails": 0,

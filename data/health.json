@@ -1,141 +1,141 @@
 {
  "generated": {
-  "utc": "2026-11-14T07:15:43+00:00",
-  "dubai": "2026-11-14 11:15",
+  "utc": "2026-11-14T07:22:27+00:00",
+  "dubai": "2026-11-14 11:22",
   "full_run": false,
   "last_full": "2026-11-13 12:45"
  },
  "sources": {
-  "workday:Baker Hughes": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday bakerhughes: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 66
-  },
   "workday:HP": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday hp: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 79
+   "error": "SourceError: workday hp: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 83
+  },
+  "workday:Baker Hughes": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday bakerhughes: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 92
   },
   "workday:KBR": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday kbr: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 82
+   "error": "SourceError: workday kbr: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 114
   },
   "workday:GSK": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday gsk: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 80
-  },
-  "workday:Mastercard": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday mastercard: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 138
-  },
-  "workday:Pfizer": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday pfizer: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 155
-  },
-  "workday:Cleveland Clinic Abu Dhabi": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday ccf: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 161
-  },
-  "workday:Coca-Cola": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday coke: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 151
+   "error": "SourceError: workday gsk: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 128
   },
   "workday:Thomson Reuters": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday thomsonreuters: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 142
+   "error": "SourceError: workday thomsonreuters: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 68
   },
-  "workday:Medtronic": {
+  "workday:Pfizer": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday medtronic: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 145
+   "error": "SourceError: workday pfizer: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 194
   },
-  "workday:GE HealthCare": {
+  "workday:Mastercard": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday gehc: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 63
+   "error": "SourceError: workday mastercard: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 205
   },
-  "workday:DXC Technology": {
+  "workday:Cleveland Clinic Abu Dhabi": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday dxctechnology: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 168
+   "error": "SourceError: workday ccf: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 220
   },
-  "workday:Cigna": {
+  "workday:Coca-Cola": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday cigna: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 152
-  },
-  "workday:NVIDIA": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday nvidia: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 97
-  },
-  "workday:Snap": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday snapchat: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 147
+   "error": "SourceError: workday coke: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 173
   },
   "workday:GE Vernova": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday gevernova: HTTP 521 <!DOCTYPE html> <html>  <head>     <style>body{color:#333;font-family:Roboto,sans-serif;height:100%;margin:0;text-align:center;width:100%}.graphicsContainer{bac",
-   "ms": 249
+   "error": "SourceError: workday gevernova: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 71
   },
-  "workday:AstraZeneca": {
+  "workday:DXC Technology": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday astrazeneca: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\")",
-   "ms": 730
+   "error": "SourceError: workday dxctechnology: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 128
   },
-  "workday:Shell": {
+  "workday:GE HealthCare": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday shell: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\")",
-   "ms": 734
+   "error": "SourceError: workday gehc: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 75
+  },
+  "workday:Cigna": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday cigna: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 96
+  },
+  "workday:NVIDIA": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday nvidia: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 80
+  },
+  "workday:Medtronic": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday medtronic: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 331
+  },
+  "workday:Snap": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday snapchat: HTTP 521, a web page instead of data, site down or in maintenance",
+   "ms": 180
   },
   "workday:Philips": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday philips: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\")",
-   "ms": 733
+   "error": "SourceError: workday philips: not JSON, a web page instead of data, site down or in maintenance",
+   "ms": 687
   },
-  "workday:Novartis": {
+  "workday:Shell": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday novartis: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\")",
-   "ms": 735
+   "error": "SourceError: workday shell: not JSON, a web page instead of data, site down or in maintenance",
+   "ms": 698
+  },
+  "workday:AstraZeneca": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday astrazeneca: not JSON, a web page instead of data, site down or in maintenance",
+   "ms": 698
   },
   "workday:Rolls-Royce": {
    "ok": false,
    "fetched": 0,
-   "error": "SourceError: workday rollsroyce: not JSON (<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\"> <head>     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\")",
-   "ms": 742
+   "error": "SourceError: workday rollsroyce: not JSON, a web page instead of data, site down or in maintenance",
+   "ms": 708
+  },
+  "workday:Novartis": {
+   "ok": false,
+   "fetched": 0,
+   "error": "SourceError: workday novartis: not JSON, a web page instead of data, site down or in maintenance",
+   "ms": 702
   },
   "oracle:Emaar": {
    "ok": true,
    "fetched": 2,
-   "ms": 909,
+   "ms": 778,
    "meta": {
     "sites": [
      "CX_1001"
@@ -148,7 +148,7 @@
   "oracle:Oracle": {
    "ok": true,
    "fetched": 6,
-   "ms": 921,
+   "ms": 940,
    "meta": {
     "sites": [
      "CX_45001"
@@ -158,44 +158,10 @@
     }
    }
   },
-  "oracle:Dubai Airports": {
-   "ok": true,
-   "fetched": 2,
-   "ms": 1003,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 2
-    }
-   }
-  },
-  "oracle:Emirates NBD": {
-   "ok": true,
-   "fetched": 40,
-   "ms": 1094,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 40
-    }
-   }
-  },
-  "teamtailor:careers.chalhoubgroup.com": {
-   "ok": true,
-   "fetched": 100,
-   "ms": 266,
-   "meta": {
-    "board_total": 100
-   }
-  },
   "oracle:du": {
    "ok": true,
    "fetched": 11,
-   "ms": 1200,
+   "ms": 1121,
    "meta": {
     "sites": [
      "CX_1001"
@@ -205,18 +171,10 @@
     }
    }
   },
-  "greenhouse:careem": {
-   "ok": true,
-   "fetched": 15,
-   "ms": 187,
-   "meta": {
-    "board_total": 15
-   }
-  },
   "oracle:AD Ports Group": {
    "ok": true,
    "fetched": 32,
-   "ms": 1526,
+   "ms": 1130,
    "meta": {
     "sites": [
      "CX_1"
@@ -226,10 +184,52 @@
     }
    }
   },
+  "oracle:Dubai Airports": {
+   "ok": true,
+   "fetched": 2,
+   "ms": 1153,
+   "meta": {
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 2
+    }
+   }
+  },
+  "greenhouse:careem": {
+   "ok": true,
+   "fetched": 15,
+   "ms": 92,
+   "meta": {
+    "board_total": 15
+   }
+  },
+  "oracle:Emirates NBD": {
+   "ok": true,
+   "fetched": 40,
+   "ms": 1279,
+   "meta": {
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 40
+    }
+   }
+  },
+  "jibe:Schneider Electric": {
+   "ok": true,
+   "fetched": 27,
+   "ms": 923,
+   "meta": {
+    "total": 27
+   }
+  },
   "oracle:First Abu Dhabi Bank": {
    "ok": true,
    "fetched": 84,
-   "ms": 1584,
+   "ms": 1644,
    "meta": {
     "sites": [
      "CX_2001"
@@ -239,31 +239,31 @@
     }
    }
   },
-  "oracle:KPMG Lower Gulf": {
+  "oracle:e&": {
    "ok": true,
-   "fetched": 76,
-   "ms": 1635,
+   "fetched": 8,
+   "ms": 1705,
    "meta": {
     "sites": [
-     "CX_1001"
+     "CX_1"
     ],
     "totals": {
-     "CX_1001": 76
+     "CX_1": 8
     }
    }
   },
-  "jibe:Schneider Electric": {
+  "teamtailor:careers.chalhoubgroup.com": {
    "ok": true,
-   "fetched": 27,
-   "ms": 913,
+   "fetched": 100,
+   "ms": 897,
    "meta": {
-    "total": 27
+    "board_total": 100
    }
   },
   "workday:Salesforce": {
    "ok": true,
    "fetched": 14,
-   "ms": 1773,
+   "ms": 1832,
    "meta": {
     "facets": {
      "locations": [
@@ -278,28 +278,28 @@
   "teamtailor:propertyfinder": {
    "ok": true,
    "fetched": 41,
-   "ms": 821,
+   "ms": 745,
    "meta": {
     "board_total": 41
    }
   },
-  "oracle:e&": {
+  "oracle:KPMG Lower Gulf": {
    "ok": true,
-   "fetched": 8,
-   "ms": 1955,
+   "fetched": 76,
+   "ms": 1874,
    "meta": {
     "sites": [
-     "CX_1"
+     "CX_1001"
     ],
     "totals": {
-     "CX_1": 8
+     "CX_1001": 76
     }
    }
   },
   "pinpoint:tabby": {
    "ok": true,
    "fetched": 29,
-   "ms": 1221,
+   "ms": 1337,
    "meta": {
     "board_total": 29
    }
@@ -307,23 +307,15 @@
   "ashby:ziina": {
    "ok": true,
    "fetched": 13,
-   "ms": 137,
+   "ms": 34,
    "meta": {
     "board_total": 13
-   }
-  },
-  "lever:aldar": {
-   "ok": true,
-   "fetched": 51,
-   "ms": 620,
-   "meta": {
-    "board_total": 51
    }
   },
   "greenhouse:tamara": {
    "ok": true,
    "fetched": 35,
-   "ms": 1194,
+   "ms": 1157,
    "meta": {
     "board_total": 35
    }
@@ -331,7 +323,7 @@
   "oracle:Emirates Islamic": {
    "ok": true,
    "fetched": 26,
-   "ms": 3046,
+   "ms": 3065,
    "meta": {
     "sites": [
      "CX_2"
@@ -341,26 +333,34 @@
     }
    }
   },
-  "workable:bayutdubizzle": {
-   "ok": true,
-   "fetched": 31,
-   "ms": 252,
-   "meta": {
-    "board_total": 31
-   }
-  },
   "ashby:checkout.com": {
    "ok": true,
    "fetched": 172,
-   "ms": 1109,
+   "ms": 1098,
    "meta": {
     "board_total": 172
+   }
+  },
+  "greenhouse:cobblestoneenergy": {
+   "ok": true,
+   "fetched": 2,
+   "ms": 2117,
+   "meta": {
+    "board_total": 2
+   }
+  },
+  "workable:bayutdubizzle": {
+   "ok": true,
+   "fetched": 31,
+   "ms": 215,
+   "meta": {
+    "board_total": 31
    }
   },
   "oracle:ADIB": {
    "ok": true,
    "fetched": 146,
-   "ms": 3415,
+   "ms": 3799,
    "meta": {
     "sites": [
      "CX_1"
@@ -370,74 +370,18 @@
     }
    }
   },
-  "greenhouse:cobblestoneenergy": {
+  "lever:aldar": {
    "ok": true,
-   "fetched": 2,
-   "ms": 2252,
+   "fetched": 51,
+   "ms": 2152,
    "meta": {
-    "board_total": 2
-   }
-  },
-  "lever:Yassir": {
-   "ok": true,
-   "fetched": 120,
-   "ms": 1685,
-   "meta": {
-    "board_total": 120
-   }
-  },
-  "successfactors:PwC Middle East": {
-   "ok": true,
-   "fetched": 16,
-   "ms": 3844,
-   "meta": {
-    "total": 34
-   }
-  },
-  "successfactors:EY": {
-   "ok": true,
-   "fetched": 16,
-   "ms": 3937,
-   "meta": {
-    "total": 1161
-   }
-  },
-  "ashby:qlub": {
-   "ok": true,
-   "fetched": 28,
-   "ms": 2196,
-   "meta": {
-    "board_total": 28
-   }
-  },
-  "greenhouse:cobblestoneenergy1": {
-   "ok": true,
-   "fetched": 3,
-   "ms": 3209,
-   "meta": {
-    "board_total": 3
-   }
-  },
-  "lever:weride": {
-   "ok": true,
-   "fetched": 12,
-   "ms": 2753,
-   "meta": {
-    "board_total": 12
-   }
-  },
-  "workable:fuseenergy": {
-   "ok": true,
-   "fetched": 112,
-   "ms": 1152,
-   "meta": {
-    "board_total": 112
+    "board_total": 51
    }
   },
   "oracle:NMC Healthcare": {
    "ok": true,
    "fetched": 147,
-   "ms": 4641,
+   "ms": 3999,
    "meta": {
     "sites": [
      "CX_1"
@@ -447,10 +391,58 @@
     }
    }
   },
+  "ashby:qlub": {
+   "ok": true,
+   "fetched": 28,
+   "ms": 1952,
+   "meta": {
+    "board_total": 28
+   }
+  },
+  "successfactors:EY": {
+   "ok": true,
+   "fetched": 16,
+   "ms": 3847,
+   "meta": {
+    "total": 1161
+   }
+  },
+  "successfactors:PwC Middle East": {
+   "ok": true,
+   "fetched": 16,
+   "ms": 3890,
+   "meta": {
+    "total": 34
+   }
+  },
+  "greenhouse:cobblestoneenergy1": {
+   "ok": true,
+   "fetched": 3,
+   "ms": 3125,
+   "meta": {
+    "board_total": 3
+   }
+  },
+  "workable:fuseenergy": {
+   "ok": true,
+   "fetched": 112,
+   "ms": 739,
+   "meta": {
+    "board_total": 112
+   }
+  },
+  "teamtailor:qashio": {
+   "ok": true,
+   "fetched": 13,
+   "ms": 627,
+   "meta": {
+    "board_total": 13
+   }
+  },
   "workday:Accenture": {
    "ok": true,
    "fetched": 10,
-   "ms": 4933,
+   "ms": 5046,
    "meta": {
     "facets": {
      "locationCountry": [
@@ -462,66 +454,50 @@
     "by_text": false
    }
   },
-  "teamtailor:qashio": {
+  "ashby:mexdigital": {
    "ok": true,
-   "fetched": 13,
-   "ms": 624,
+   "fetched": 14,
+   "ms": 2218,
    "meta": {
-    "board_total": 13
-   }
-  },
-  "teamtailor:dubizzle": {
-   "ok": true,
-   "fetched": 6,
-   "ms": 631,
-   "meta": {
-    "board_total": 6
+    "board_total": 14
    }
   },
   "greenhouse:cobblestoneenergy4": {
    "ok": true,
    "fetched": 2,
-   "ms": 4048,
+   "ms": 3824,
    "meta": {
     "board_total": 2
    }
   },
-  "ashby:mexdigital": {
+  "lever:Yassir": {
    "ok": true,
-   "fetched": 14,
-   "ms": 3198,
+   "fetched": 120,
+   "ms": 3786,
    "meta": {
-    "board_total": 14
+    "board_total": 120
+   }
+  },
+  "teamtailor:dubizzle": {
+   "ok": true,
+   "fetched": 6,
+   "ms": 451,
+   "meta": {
+    "board_total": 6
    }
   },
   "workable:smartcrowd": {
    "ok": true,
    "fetched": 0,
-   "ms": 1099,
+   "ms": 846,
    "meta": {
     "board_total": 0
-   }
-  },
-  "lever:binance": {
-   "ok": true,
-   "fetched": 4,
-   "ms": 3773,
-   "meta": {
-    "board_total": 4
-   }
-  },
-  "teamtailor:tappayments": {
-   "ok": true,
-   "fetched": 20,
-   "ms": 640,
-   "meta": {
-    "board_total": 20
    }
   },
   "teamtailor:mumzworld": {
    "ok": true,
    "fetched": 12,
-   "ms": 744,
+   "ms": 607,
    "meta": {
     "board_total": 12
    }
@@ -529,79 +505,120 @@
   "phenom:ADCB": {
    "ok": true,
    "fetched": 31,
-   "ms": 5920,
+   "ms": 5746,
    "meta": {
     "total": 31
    }
   },
-  "greenhouse:dmgevents": {
+  "teamtailor:tappayments": {
    "ok": true,
-   "fetched": 22,
-   "ms": 5111,
+   "fetched": 20,
+   "ms": 613,
    "meta": {
-    "board_total": 22
+    "board_total": 20
    }
   },
   "ashby:kraken.com": {
    "ok": true,
    "fetched": 96,
-   "ms": 3429,
+   "ms": 3012,
    "meta": {
     "board_total": 96
    }
   },
-  "lever:crypto": {
+  "greenhouse:dmgevents": {
    "ok": true,
-   "fetched": 85,
-   "ms": 2421,
+   "fetched": 22,
+   "ms": 4890,
    "meta": {
-    "board_total": 85
+    "board_total": 22
    }
   },
-  "workable:foodics": {
+  "lever:weride": {
    "ok": true,
-   "fetched": 31,
-   "ms": 1677,
+   "fetched": 12,
+   "ms": 4892,
    "meta": {
-    "board_total": 31
-   }
-  },
-  "jibe:M42": {
-   "ok": true,
-   "fetched": 102,
-   "ms": 6673,
-   "meta": {
-    "total": 102
+    "board_total": 12
    }
   },
   "phenom:G42": {
    "ok": true,
    "fetched": 50,
-   "ms": 7264,
+   "ms": 6626,
    "meta": {
     "total": 50
    }
   },
-  "greenhouse:infotrust": {
+  "workable:foodics": {
    "ok": true,
-   "fetched": 0,
-   "ms": 6112,
+   "fetched": 31,
+   "ms": 1407,
    "meta": {
-    "board_total": 0
+    "board_total": 31
    }
   },
   "ashby:brainco": {
    "ok": true,
    "fetched": 48,
-   "ms": 4453,
+   "ms": 3910,
    "meta": {
     "board_total": 48
    }
   },
+  "greenhouse:infotrust": {
+   "ok": true,
+   "fetched": 0,
+   "ms": 5898,
+   "meta": {
+    "board_total": 0
+   }
+  },
+  "jibe:M42": {
+   "ok": true,
+   "fetched": 102,
+   "ms": 6894,
+   "meta": {
+    "total": 102
+   }
+  },
+  "lever:binance": {
+   "ok": true,
+   "fetched": 4,
+   "ms": 6027,
+   "meta": {
+    "board_total": 4
+   }
+  },
+  "amazon": {
+   "ok": true,
+   "fetched": 70,
+   "ms": 439,
+   "meta": {}
+  },
+  "oracle:Mashreq": {
+   "ok": true,
+   "fetched": 359,
+   "ms": 8049,
+   "meta": {
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 359
+    }
+   }
+  },
+  "deriv": {
+   "ok": true,
+   "fetched": 44,
+   "ms": 670,
+   "meta": {}
+  },
   "oracle:PureHealth": {
    "ok": true,
    "fetched": 27,
-   "ms": 7829,
+   "ms": 8290,
    "meta": {
     "sites": [
      "CX_6007",
@@ -613,67 +630,58 @@
     }
    }
   },
-  "amazon": {
-   "ok": true,
-   "fetched": 70,
-   "ms": 481,
-   "meta": {}
-  },
   "emirates_group": {
    "ok": true,
    "fetched": 93,
-   "ms": 376,
+   "ms": 513,
    "meta": {
     "total": 93
    }
   },
-  "lever:palantir": {
-   "ok": true,
-   "fetched": 302,
-   "ms": 2630,
-   "meta": {
-    "board_total": 302
-   }
-  },
-  "deriv": {
-   "ok": true,
-   "fetched": 44,
-   "ms": 706,
-   "meta": {}
-  },
   "ashby:easygenerator": {
    "ok": true,
    "fetched": 16,
-   "ms": 5463,
+   "ms": 4680,
    "meta": {
     "board_total": 16
-   }
-  },
-  "oracle:Mashreq": {
-   "ok": true,
-   "fetched": 359,
-   "ms": 8963,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 359
-    }
    }
   },
   "greenhouse:esri": {
    "ok": true,
    "fetched": 486,
-   "ms": 5673,
+   "ms": 5034,
    "meta": {
     "board_total": 486
+   }
+  },
+  "ashby:leantech": {
+   "ok": true,
+   "fetched": 8,
+   "ms": 4772,
+   "meta": {
+    "board_total": 8
+   }
+  },
+  "greenhouse:deliveroo": {
+   "ok": true,
+   "fetched": 186,
+   "ms": 5765,
+   "meta": {
+    "board_total": 186
+   }
+  },
+  "lever:crypto": {
+   "ok": true,
+   "fetched": 85,
+   "ms": 5731,
+   "meta": {
+    "board_total": 85
    }
   },
   "phenom:ADNOC": {
    "ok": true,
    "fetched": 51,
-   "ms": 8815,
+   "ms": 9905,
    "meta": {
     "total": 51
    }
@@ -681,7 +689,7 @@
   "oracle:SEHA": {
    "ok": true,
    "fetched": 139,
-   "ms": 9807,
+   "ms": 10278,
    "meta": {
     "sites": [
      "CX_1"
@@ -691,100 +699,50 @@
     }
    }
   },
-  "ashby:leantech": {
+  "ashby:openai": {
    "ok": true,
-   "fetched": 8,
-   "ms": 5417,
+   "fetched": 838,
+   "ms": 5115,
    "meta": {
-    "board_total": 8
-   }
-  },
-  "greenhouse:deliveroo": {
-   "ok": true,
-   "fetched": 186,
-   "ms": 5984,
-   "meta": {
-    "board_total": 186
+    "board_total": 838
    }
   },
   "greenhouse:elastic": {
    "ok": true,
    "fetched": 400,
-   "ms": 7311,
+   "ms": 7234,
    "meta": {
     "board_total": 400
    }
   },
-  "ashby:openai": {
+  "lever:palantir": {
    "ok": true,
-   "fetched": 838,
-   "ms": 6111,
+   "fetched": 302,
+   "ms": 6013,
    "meta": {
-    "board_total": 838
-   }
-  },
-  "oracle:SSMC": {
-   "ok": true,
-   "fetched": 200,
-   "ms": 12316,
-   "meta": {
-    "sites": [
-     "CX_1001"
-    ],
-    "totals": {
-     "CX_1001": 200
-    }
-   }
-  },
-  "greenhouse:scaleai": {
-   "ok": true,
-   "fetched": 170,
-   "ms": 6858,
-   "meta": {
-    "board_total": 170
-   }
-  },
-  "successfactors:Al-Futtaim": {
-   "ok": true,
-   "fetched": 110,
-   "ms": 11950,
-   "meta": {
-    "total": 218
+    "board_total": 302
    }
   },
   "ashby:cohere": {
    "ok": true,
    "fetched": 121,
-   "ms": 5825,
+   "ms": 4930,
    "meta": {
     "board_total": 121
    }
   },
-  "attrax:talabat": {
+  "greenhouse:scaleai": {
    "ok": true,
-   "fetched": 152,
-   "ms": 12015,
+   "fetched": 170,
+   "ms": 6513,
    "meta": {
-    "pages": 9
-   }
-  },
-  "oracle:Aster DM Healthcare": {
-   "ok": true,
-   "fetched": 636,
-   "ms": 13187,
-   "meta": {
-    "sites": [
-     "CX"
-    ],
-    "totals": {
-     "CX": 636
-    }
+    "board_total": 170
    }
   },
   "oracle:Dell": {
    "ok": true,
    "fetched": 577,
-   "ms": 13402,
+   "ms": 12694,
    "meta": {
     "sites": [
      "CX_1001"
@@ -794,18 +752,60 @@
     }
    }
   },
+  "attrax:talabat": {
+   "ok": true,
+   "fetched": 152,
+   "ms": 12039,
+   "meta": {
+    "pages": 9
+   }
+  },
+  "successfactors:Al-Futtaim": {
+   "ok": true,
+   "fetched": 110,
+   "ms": 12132,
+   "meta": {
+    "total": 218
+   }
+  },
+  "oracle:SSMC": {
+   "ok": true,
+   "fetched": 200,
+   "ms": 12845,
+   "meta": {
+    "sites": [
+     "CX_1001"
+    ],
+    "totals": {
+     "CX_1001": 200
+    }
+   }
+  },
   "ashby:elevenlabs": {
    "ok": true,
    "fetched": 128,
-   "ms": 7173,
+   "ms": 5641,
    "meta": {
     "board_total": 128
+   }
+  },
+  "oracle:Aster DM Healthcare": {
+   "ok": true,
+   "fetched": 636,
+   "ms": 13170,
+   "meta": {
+    "sites": [
+     "CX"
+    ],
+    "totals": {
+     "CX": 636
+    }
    }
   },
   "greenhouse:databricks": {
    "ok": true,
    "fetched": 896,
-   "ms": 8409,
+   "ms": 8081,
    "meta": {
     "board_total": 896
    }
@@ -813,7 +813,7 @@
   "greenhouse:datadog": {
    "ok": true,
    "fetched": 384,
-   "ms": 9406,
+   "ms": 8981,
    "meta": {
     "board_total": 384
    }
@@ -821,7 +821,7 @@
   "greenhouse:mongodb": {
    "ok": true,
    "fetched": 391,
-   "ms": 10628,
+   "ms": 9853,
    "meta": {
     "board_total": 391
    }
@@ -829,31 +829,15 @@
   "greenhouse:okx": {
    "ok": true,
    "fetched": 391,
-   "ms": 11571,
+   "ms": 11041,
    "meta": {
     "board_total": 391
-   }
-  },
-  "greenhouse:bybit": {
-   "ok": true,
-   "fetched": 153,
-   "ms": 12029,
-   "meta": {
-    "board_total": 153
-   }
-  },
-  "greenhouse:ripple": {
-   "ok": true,
-   "fetched": 111,
-   "ms": 13142,
-   "meta": {
-    "board_total": 111
    }
   },
   "oracle:DP World": {
    "ok": true,
    "fetched": 506,
-   "ms": 19875,
+   "ms": 17677,
    "meta": {
     "sites": [
      "CX_1",
@@ -865,10 +849,26 @@
     }
    }
   },
+  "greenhouse:bybit": {
+   "ok": true,
+   "fetched": 153,
+   "ms": 11675,
+   "meta": {
+    "board_total": 153
+   }
+  },
+  "greenhouse:ripple": {
+   "ok": true,
+   "fetched": 111,
+   "ms": 12583,
+   "meta": {
+    "board_total": 111
+   }
+  },
   "phenom:Majid Al Futtaim": {
    "ok": true,
    "fetched": 258,
-   "ms": 37704,
+   "ms": 37009,
    "meta": {
     "total": 258
    }
@@ -876,16 +876,16 @@
   "avature:Dubai Holding": {
    "ok": true,
    "fetched": 139,
-   "ms": 47729,
+   "ms": 47620,
    "meta": {
     "total": 139
    }
   },
   "_details": {
    "ok": true,
-   "fetched": 36,
+   "fetched": 0,
    "failed": 0,
-   "skipped_cached": 0
+   "skipped_cached": 36
   }
  }
 }
