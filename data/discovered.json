@@ -1,16 +1,16 @@
 {
- "checked": "2026-11-08",
+ "checked": "2026-11-14",
  "boards": [
   {
    "ats": "ashby",
    "token": "leantech",
    "jobs": 8,
-   "uae_jobs": 3
+   "uae_jobs": 4
   },
   {
    "ats": "ashby",
    "token": "rain",
-   "jobs": 42,
+   "jobs": 45,
    "uae_jobs": 0
   },
   {
@@ -18,12 +18,6 @@
    "token": "pemo",
    "jobs": 1,
    "uae_jobs": 0
-  },
-  {
-   "ats": "workable",
-   "token": "smartcrowd",
-   "jobs": 1,
-   "uae_jobs": 1
   },
   {
    "ats": "teamtailor",
@@ -34,7 +28,7 @@
   {
    "ats": "teamtailor",
    "token": "mumzworld",
-   "jobs": 13,
+   "jobs": 12,
    "uae_jobs": 3
   },
   {
@@ -46,85 +40,115 @@
   {
    "ats": "workable",
    "token": "foodics",
-   "jobs": 30,
+   "jobs": 31,
    "uae_jobs": 3
   },
   {
    "ats": "workable",
    "token": "lucidya",
-   "jobs": 47,
+   "jobs": 49,
    "uae_jobs": 0
   },
   {
    "ats": "lever",
    "token": "palantir",
-   "jobs": 305,
+   "jobs": 302,
    "uae_jobs": 1
   },
   {
    "ats": "ashby",
    "token": "openai",
-   "jobs": 818,
-   "uae_jobs": 4
+   "jobs": 838,
+   "uae_jobs": 3
   },
   {
    "ats": "greenhouse",
    "token": "scaleai",
-   "jobs": 168,
+   "jobs": 170,
    "uae_jobs": 2
   },
   {
    "ats": "greenhouse",
    "token": "databricks",
-   "jobs": 922,
+   "jobs": 896,
    "uae_jobs": 1
   },
   {
    "ats": "greenhouse",
    "token": "datadog",
-   "jobs": 401,
+   "jobs": 384,
    "uae_jobs": 1
   },
   {
    "ats": "greenhouse",
    "token": "mongodb",
-   "jobs": 374,
-   "uae_jobs": 1
+   "jobs": 391,
+   "uae_jobs": 2
   },
   {
    "ats": "greenhouse",
    "token": "stripe",
-   "jobs": 766,
+   "jobs": 786,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "airbnb",
-   "jobs": 205,
+   "jobs": 214,
    "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "okx",
-   "jobs": 378,
+   "jobs": 391,
    "uae_jobs": 3
   },
   {
    "ats": "greenhouse",
    "token": "bybit",
-   "jobs": 151,
-   "uae_jobs": 55
+   "jobs": 153,
+   "uae_jobs": 56
+  },
+  {
+   "ats": "workable",
+   "token": "derq",
+   "jobs": 3,
+   "uae_jobs": 0
+  },
+  {
+   "ats": "greenhouse",
+   "token": "dataiku",
+   "jobs": 14,
+   "uae_jobs": 0
+  },
+  {
+   "ats": "greenhouse",
+   "token": "canonical",
+   "jobs": 316,
+   "uae_jobs": 0
+  },
+  {
+   "ats": "ashby",
+   "token": "synthesia",
+   "jobs": 31,
+   "uae_jobs": 0
+  },
+  {
+   "ats": "ashby",
+   "token": "snowflake",
+   "jobs": 376,
+   "uae_jobs": 0
   },
   {
    "ats": "greenhouse",
    "token": "ripple",
-   "jobs": 115,
-   "uae_jobs": 2
+   "jobs": 111,
+   "uae_jobs": 1
   },
   {
    "ats": "ashby",
    "token": "circle",
-   "jobs": 9,
+   "jobs": 5,
    "uae_jobs": 0
   },
   {
@@ -142,25 +166,25 @@
   {
    "ats": "greenhouse",
    "token": "wise",
-   "jobs": 18,
+   "jobs": 19,
    "uae_jobs": 0
   },
   {
    "ats": "ashby",
    "token": "cohere",
-   "jobs": 124,
+   "jobs": 121,
    "uae_jobs": 6
   },
   {
    "ats": "ashby",
    "token": "perplexity",
-   "jobs": 137,
+   "jobs": 141,
    "uae_jobs": 0
   },
   {
    "ats": "ashby",
    "token": "elevenlabs",
-   "jobs": 137,
+   "jobs": 128,
    "uae_jobs": 5
   }
  ]
