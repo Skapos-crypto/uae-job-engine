@@ -1,30 +1,30 @@
 {
  "generated": {
-  "utc": "2026-11-14T12:31:29+00:00",
-  "dubai": "2026-11-14 16:31",
-  "full_run": true,
+  "utc": "2026-11-14T12:36:03+00:00",
+  "dubai": "2026-11-14 16:36",
+  "full_run": false,
   "last_full": "2026-11-14 16:31"
  },
  "summary": {
-  "total": 73,
-  "new_today": 23,
-  "carried_over": 7,
-  "raw_postings": 12893,
+  "total": 71,
+  "new_today": 21,
+  "carried_over": 54,
+  "raw_postings": 10302,
   "by_family": {
    "data_science": 3,
    "data_analyst": 7,
    "software": 13,
    "data_eng": 1,
    "graduate": 6,
-   "ai_ml": 17,
-   "analyst": 8,
+   "ai_ml": 16,
+   "analyst": 7,
    "it": 9,
    "business": 3,
    "bi": 2,
    "product": 4
   },
   "by_source": {
-   "jobspy": 49,
+   "jobspy": 47,
    "workable": 2,
    "workday": 7,
    "oracle": 5,
@@ -34,81 +34,65 @@
    "attrax": 1,
    "ashby": 2
   },
-  "http_calls": 708,
-  "verdicts_shared": 6,
+  "http_calls": 210,
+  "verdicts_shared": 0,
   "rejected": {
-   "excluded-title": 1076,
-   "no-family": 1593,
-   "senior": 191,
-   "internship": 24,
-   "graduate-other-discipline": 14,
+   "excluded-title": 953,
+   "no-family": 1395,
+   "senior": 111,
+   "graduate-other-discipline": 8,
+   "internship": 17,
    "title-elsewhere": 2,
-   "nationals-only": 44,
-   "3+ years": 76,
+   "nationals-only": 30,
+   "3+ years": 25,
    "stale": 15
   },
   "status": {
-   "sources": 86,
-   "ok": 69,
+   "sources": 100,
+   "ok": 83,
    "failing": {
-    "workday:Novartis": "SourceError: workday novartis: HTTP 401, {\"errorCode\":\"HTTP_401\",\"errorCaseId\":\"71E3A3MWGDGOI1\",\"htt",
+    "workday:KBR": "SourceError: workday kbr: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:HP": "SourceError: workday hp: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:GSK": "SourceError: workday gsk: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Baker Hughes": "SourceError: workday bakerhughes: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Thomson Reuters": "SourceError: workday thomsonreuters: not JSON, a web page instead of data, site down or in maintenan",
     "workday:Pfizer": "SourceError: workday pfizer: not JSON, a web page instead of data, site down or in maintenance",
     "workday:Cleveland Clinic Abu Dhabi": "SourceError: workday ccf: not JSON, a web page instead of data, site down or in maintenance",
     "workday:Mastercard": "SourceError: workday mastercard: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:KBR": "SourceError: workday kbr: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:HP": "SourceError: workday hp: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:Baker Hughes": "SourceError: workday bakerhughes: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:GSK": "SourceError: workday gsk: not JSON, a web page instead of data, site down or in maintenance",
     "workday:Medtronic": "SourceError: workday medtronic: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:DXC Technology": "SourceError: workday dxctechnology: not JSON, a web page instead of data, site down or in maintenanc",
-    "workday:Thomson Reuters": "SourceError: workday thomsonreuters: not JSON, a web page instead of data, site down or in maintenan",
     "workday:GE Vernova": "SourceError: workday gevernova: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:GE HealthCare": "SourceError: workday gehc: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:Snap": "SourceError: workday snapchat: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:Cigna": "SourceError: workday cigna: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:DXC Technology": "SourceError: workday dxctechnology: not JSON, a web page instead of data, site down or in maintenanc",
     "workday:Coca-Cola": "SourceError: workday coke: not JSON, a web page instead of data, site down or in maintenance",
-    "workday:NVIDIA": "SourceError: workday nvidia: not JSON, a web page instead of data, site down or in maintenance"
+    "workday:Cigna": "SourceError: workday cigna: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:NVIDIA": "SourceError: workday nvidia: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:GE HealthCare": "SourceError: workday gehc: not JSON, a web page instead of data, site down or in maintenance",
+    "workday:Novartis": "SourceError: workday novartis: HTTP 401, {\"errorCode\":\"HTTP_401\",\"errorCaseId\":\"0BFBA1MWGE22DT\",\"htt",
+    "workday:Snap": "SourceError: workday snapchat: not JSON, a web page instead of data, site down or in maintenance"
    },
    "blocked": {},
    "failing_in_a_row": {
-    "workday:HP": 4,
-    "workday:Pfizer": 4,
-    "workday:Cleveland Clinic Abu Dhabi": 4,
-    "workday:Baker Hughes": 4,
-    "workday:Mastercard": 4,
-    "workday:GSK": 4,
-    "workday:Novartis": 4,
-    "workday:Coca-Cola": 4,
-    "workday:Thomson Reuters": 4,
-    "workday:KBR": 4,
+    "workday:HP": 5,
+    "workday:Pfizer": 5,
+    "workday:Cleveland Clinic Abu Dhabi": 5,
+    "workday:Baker Hughes": 5,
+    "workday:Mastercard": 5,
+    "workday:GSK": 5,
+    "workday:Novartis": 5,
+    "workday:Coca-Cola": 5,
+    "workday:Thomson Reuters": 5,
+    "workday:KBR": 5,
     "jobspy:bayt": 4,
-    "workday:GE HealthCare": 4,
-    "workday:DXC Technology": 4,
-    "workday:Snap": 4,
-    "workday:Cigna": 4,
-    "workday:GE Vernova": 4,
-    "workday:NVIDIA": 4,
-    "workday:Medtronic": 4
+    "workday:GE HealthCare": 5,
+    "workday:DXC Technology": 5,
+    "workday:Snap": 5,
+    "workday:Cigna": 5,
+    "workday:GE Vernova": 5,
+    "workday:NVIDIA": 5,
+    "workday:Medtronic": 5
    },
    "new_last_7_days": {
-    "jobspy": 168,
+    "jobspy": 166,
     "employer": 14
-   },
-   "linkedin_pages": {
-    "wanted": 24,
-    "tried": 20,
-    "read": 20,
-    "empty": 0,
-    "failed": 0,
-    "blocked": 0,
-    "skipped": 0,
-    "over_limit": 4,
-    "dropped": {
-     "3+ years": 9,
-     "internship": 1,
-     "senior": 1
-    },
-    "error": null
    },
    "job_sites": [
     "Indeed",
@@ -224,8 +208,8 @@
    "age_days": 0,
    "min_years": null,
    "flags": [
-    "agency",
-    "entry_level"
+    "entry_level",
+    "agency"
    ],
    "first_seen": "2026-11-14",
    "last_seen": "2026-11-14",
@@ -248,7 +232,6 @@
    "source": "workable:bayutdubizzle",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:linkedin",
     "workable:bayutdubizzle"
    ],
    "posted": "2026-11-13",
@@ -459,7 +442,7 @@
    "apply_url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471"
   },
   {
-   "key": "f452198f85d25487",
+   "key": "8f4e0b62b1fad362",
    "title": "Consultant – AI Analyst",
    "employer": "Turner & Townsend Pty Limited",
    "sector": "",
@@ -599,62 +582,6 @@
    "apply_url": ""
   },
   {
-   "key": "4ab1bcaf68c6b8e2",
-   "title": "Analyst - Report",
-   "employer": "Abu Dhabi ports",
-   "sector": "",
-   "city": "UAE",
-   "location": "United Arab Emirates",
-   "family": "analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=7acb8eb332b486e0",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-13",
-   "age_days": 1,
-   "min_years": 2,
-   "flags": [],
-   "first_seen": "2026-11-14",
-   "last_seen": "2026-11-14",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "The Analyst – Report will be responsible for gathering, consolidating and analysing operational, commercial and financial data for Fujairah Terminals. You will create accurate and timely reports, dashboards and performance insights that enable senior management to monitor key per",
-   "apply_url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12466"
-  },
-  {
-   "key": "8f4e0b62b1fad362",
-   "title": "Consultant – AI Analyst",
-   "employer": "Turner & Townsend",
-   "sector": "",
-   "city": "Abu Dhabi",
-   "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-   "family": "ai_ml",
-   "cv": "AI_Engineer",
-   "seniority": "unspecified",
-   "url": "https://www.linkedin.com/jobs/view/4489559481",
-   "source": "jobspy:linkedin",
-   "source_type": "linkedin",
-   "seen_on": [
-    "jobspy:linkedin"
-   ],
-   "posted": "2026-11-13",
-   "age_days": 1,
-   "min_years": null,
-   "flags": [
-    "mid_senior"
-   ],
-   "first_seen": "2026-11-14",
-   "last_seen": "2026-11-14",
-   "is_new": true,
-   "score": 3.5,
-   "snippet": "At Turner & Townsend we’re passionate about making the difference. That means delivering better outcomes for our clients, helping our people to realize their potential, and doing our part to create a prosperous society. Every day we help our major global clients deliver ambitious",
-   "apply_url": ""
-  },
-  {
    "key": "66f82456bfaac966",
    "title": "IT Network Engineer (2-3yr Experience)",
    "employer": "JACHOOS TECHNOLOGIES PRIVATE LIMITED",
@@ -757,8 +684,8 @@
    "age_days": 1,
    "min_years": null,
    "flags": [
-    "agency",
-    "mid_senior"
+    "mid_senior",
+    "agency"
    ],
    "first_seen": "2026-11-14",
    "last_seen": "2026-11-14",
@@ -1296,7 +1223,6 @@
    "source": "oracle:AD Ports Group",
    "source_type": "employer",
    "seen_on": [
-    "jobspy:linkedin",
     "oracle:AD Ports Group"
    ],
    "posted": "2026-11-13",
@@ -1774,7 +1700,6 @@
    "source": "teamtailor:careers.chalhoubgroup.com",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:indeed",
     "teamtailor:careers.chalhoubgroup.com"
    ],
    "posted": "2026-11-05",

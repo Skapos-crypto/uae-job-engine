@@ -106,8 +106,8 @@
   "age_days": 0,
   "min_years": null,
   "flags": [
-   "agency",
-   "entry_level"
+   "entry_level",
+   "agency"
   ],
   "first_seen": "2026-11-14",
   "last_seen": "2026-11-14",
@@ -130,7 +130,6 @@
   "source": "workable:bayutdubizzle",
   "source_type": "ats",
   "seen_on": [
-   "jobspy:linkedin",
    "workable:bayutdubizzle"
   ],
   "posted": "2026-11-13",
@@ -341,7 +340,7 @@
   "apply_url": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471"
  },
  {
-  "key": "f452198f85d25487",
+  "key": "8f4e0b62b1fad362",
   "title": "Consultant – AI Analyst",
   "employer": "Turner & Townsend Pty Limited",
   "sector": "",
@@ -481,62 +480,6 @@
   "apply_url": ""
  },
  {
-  "key": "4ab1bcaf68c6b8e2",
-  "title": "Analyst - Report",
-  "employer": "Abu Dhabi ports",
-  "sector": "",
-  "city": "UAE",
-  "location": "United Arab Emirates",
-  "family": "analyst",
-  "cv": "Data_Analyst",
-  "seniority": "unspecified",
-  "url": "https://ae.indeed.com/viewjob?jk=7acb8eb332b486e0",
-  "source": "jobspy:indeed",
-  "source_type": "indeed",
-  "seen_on": [
-   "jobspy:indeed"
-  ],
-  "posted": "2026-11-13",
-  "age_days": 1,
-  "min_years": 2,
-  "flags": [],
-  "first_seen": "2026-11-14",
-  "last_seen": "2026-11-14",
-  "is_new": true,
-  "score": 3.5,
-  "snippet": "The Analyst – Report will be responsible for gathering, consolidating and analysing operational, commercial and financial data for Fujairah Terminals. You will create accurate and timely reports, dashboards and performance insights that enable senior management to monitor key per",
-  "apply_url": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12466"
- },
- {
-  "key": "8f4e0b62b1fad362",
-  "title": "Consultant – AI Analyst",
-  "employer": "Turner & Townsend",
-  "sector": "",
-  "city": "Abu Dhabi",
-  "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-  "family": "ai_ml",
-  "cv": "AI_Engineer",
-  "seniority": "unspecified",
-  "url": "https://www.linkedin.com/jobs/view/4489559481",
-  "source": "jobspy:linkedin",
-  "source_type": "linkedin",
-  "seen_on": [
-   "jobspy:linkedin"
-  ],
-  "posted": "2026-11-13",
-  "age_days": 1,
-  "min_years": null,
-  "flags": [
-   "mid_senior"
-  ],
-  "first_seen": "2026-11-14",
-  "last_seen": "2026-11-14",
-  "is_new": true,
-  "score": 3.5,
-  "snippet": "At Turner & Townsend we’re passionate about making the difference. That means delivering better outcomes for our clients, helping our people to realize their potential, and doing our part to create a prosperous society. Every day we help our major global clients deliver ambitious",
-  "apply_url": ""
- },
- {
   "key": "66f82456bfaac966",
   "title": "IT Network Engineer (2-3yr Experience)",
   "employer": "JACHOOS TECHNOLOGIES PRIVATE LIMITED",
@@ -639,8 +582,8 @@
   "age_days": 1,
   "min_years": null,
   "flags": [
-   "agency",
-   "mid_senior"
+   "mid_senior",
+   "agency"
   ],
   "first_seen": "2026-11-14",
   "last_seen": "2026-11-14",
