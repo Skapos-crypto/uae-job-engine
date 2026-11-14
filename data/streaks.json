@@ -1,196 +1,188 @@
 {
  "oracle:Emaar": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Dubai Airports": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:HP": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday hp: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Oracle": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Shell": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Pfizer": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday pfizer: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:du": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:AD Ports Group": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:First Abu Dhabi Bank": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday ccf: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:KPMG Lower Gulf": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:e&": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Salesforce": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:AstraZeneca": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:careem": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Baker Hughes": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday bakerhughes: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Mastercard": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday mastercard: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Rolls-Royce": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "jibe:M42": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:GSK": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday gsk: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Novartis": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday novartis: HTTP 401, {\"errorCode\":\"HTTP_401\",\"errorCaseId\":\"0BFBA1MWGE22DT\",\"httpStatus\":401,\"messag"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "pinpoint:tabby": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Coca-Cola": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday coke: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:tamara": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:aldar": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Emirates Islamic": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:ziina": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workable:bayutdubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:NMC Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:ADIB": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:dubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:cobblestoneenergy": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:checkout.com": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "successfactors:EY": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workable:smartcrowd": {
   "fails": 0,
@@ -199,220 +191,218 @@
  },
  "workday:Philips": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:mumzworld": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:tappayments": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:cobblestoneenergy1": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:Yassir": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:qlub": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workable:foodics": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "phenom:ADCB": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:cobblestoneenergy4": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:mexdigital": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "amazon": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:PureHealth": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Mashreq": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:dmgevents": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:leantech": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "deriv": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:weride": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:infotrust": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "phenom:G42": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:SEHA": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:openai": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Thomson Reuters": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday thomsonreuters: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:binance": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:scaleai": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:cohere": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Dell": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:SSMC": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:databricks": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:elevenlabs": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:palantir": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:datadog": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:Aster DM Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:KBR": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday kbr: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:mongodb": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "successfactors:Al-Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "attrax:talabat": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:okx": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:bybit": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:ripple": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "oracle:DP World": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "phenom:Majid Al Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "avature:Dubai Holding": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "jobspy:indeed": {
   "fails": 0,
@@ -431,110 +421,103 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday gehc: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:DXC Technology": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday dxctechnology: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Snap": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday snapchat: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Cigna": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday cigna: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:GE Vernova": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday gevernova: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:NVIDIA": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday nvidia: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Medtronic": {
-  "fails": 5,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14",
-  "error": "SourceError: workday medtronic: not JSON, a web page instead of data, site down or in maintenance"
+  "fails": 0,
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workday:Accenture": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "workable:fuseenergy": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "teamtailor:qashio": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:kraken.com": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:brainco": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "emirates_group": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "ashby:easygenerator": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "phenom:ADNOC": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:esri": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:deliveroo": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "lever:crypto": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "greenhouse:elastic": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  }
 }
