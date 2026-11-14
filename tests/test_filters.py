@@ -202,6 +202,9 @@ def main():
         (("ADNOC", "Specialist, Logistics (Performance & Reporting)"),
          ("ADNOC Logistics & Services", "Specialist, Logistics (Performance & Reporting)")),
         (("talabat", "Software Engineer l - Backend"), ("Delivery Hero", "Software Engineer l - Backend")),
+        # 14 November 2026: shown twice in the list
+        (("Turner & Townsend Pty Limited", "Consultant – AI Analyst"), ("Turner & Townsend", "Consultant – AI Analyst")),
+        (("Abu Dhabi ports", "Analyst - Report"), ("AD Ports Group", "Analyst - Report")),
     ]
     for a, b in same_job:
         assert job_key(*a) == job_key(*b), (a, b)

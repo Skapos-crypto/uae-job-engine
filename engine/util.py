@@ -460,8 +460,8 @@ FACTS_VERSION = hashlib.sha1("\n".join(rx.pattern for rx in (
 # ---------------------------------------------------------------- dedupe keys
 
 COMPANY_SUFFIX_RE = re.compile(
-    r"\b(llc|l l c|pjsc|psc|p j s c|fze|fzco|fz llc|fz|dmcc|ltd|limited|inc|co|company|group|holding|"
-    r"holdings|the|plc|gmbh|sa|ag|bv)\b"
+    r"\b(llc|l l c|pjsc|psc|p j s c|fze|fzco|fzc|fz llc|fz|dmcc|ltd|limited|inc|incorporated|corp|corporation|"
+    r"co|company|group|holding|holdings|the|plc|gmbh|sa|ag|bv|pty|pte|pvt|llp|wll|sarl|srl|bhd|sdn)\b"
 )
 COMPANY_ALIASES = {
     "abu dhabi islamic bank": "adib",
@@ -486,6 +486,7 @@ COMPANY_ALIASES = {
     "delivery hero": "talabat",
     "inception42": "g42", "inception": "g42", "core42": "g42", "cpx": "g42",
     "cigna healthcare": "cigna",
+    "abu dhabi ports": "ad ports",
 }
 
 

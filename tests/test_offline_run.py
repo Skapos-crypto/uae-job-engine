@@ -309,6 +309,8 @@ def main():
     line = run.failing_line(dict(down, **{"oracle:NoSites": "SourceError: no sites set", "amazon": "timeout"}))
     assert line == ("amazon (timeout); oracle:NoSites (SourceError: no sites set); 5 workday sources, Acme, Beta, "
                     "Delta and 2 more (HTTP 521, a web page instead of data, site down or in maintenance)"), line
+    assert run.streak_line(dict({"workday:%s" % n: 4 for n in "ABCDE"}, **{"jobspy:bayt": 4, "oracle:NoSites": 7})) \
+        == "jobspy:bayt (4), oracle:NoSites (7), 5 workday sources (4)"
     tmp = tempfile.mkdtemp()
     try:
         run.DATA = os.path.join(tmp, "data")

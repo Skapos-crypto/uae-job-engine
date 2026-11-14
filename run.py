@@ -605,8 +605,8 @@ def status_lines(status, full):
     if st["blocked"]:
         lines.append("- **Blocked:** " + "; ".join("%s, %s" % kv for kv in sorted(st["blocked"].items())))
     if st["failing_in_a_row"]:
-        lines.append("- **⚠️ Failing %d or more runs in a row:** %s" % (STUCK_AFTER, ", ".join(
-            "%s (%d)" % kv for kv in sorted(st["failing_in_a_row"].items()))))
+        lines.append("- **⚠️ Failing %d or more runs in a row:** %s" % (STUCK_AFTER, streak_line(
+            st["failing_in_a_row"])))
     pages = st.get("linkedin_pages")
     if pages:
         lines.append("- **LinkedIn pages:** " + linkedin_pages_line(pages))
@@ -630,6 +630,20 @@ def failing_line(failing):
         else:
             parts += ["%s (%s)" % (name if name == kind else "%s:%s" % (kind, name), error) for name, error in rows]
     return "; ".join(parts)
+
+
+def streak_line(streaks):
+    """'jobspy:bayt (4), 17 workday sources (4)': a job system failing for many employers is named once."""
+    by_kind = {}
+    for sid, runs in sorted(streaks.items()):
+        by_kind.setdefault(sid.split(":")[0], []).append((sid, runs))
+    parts = []
+    for kind, rows in by_kind.items():
+        if len(rows) > 3:
+            parts.append("%d %s sources (%d)" % (len(rows), kind, max(runs for _, runs in rows)))
+        else:
+            parts += ["%s (%d)" % row for row in rows]
+    return ", ".join(parts)
 
 
 def linkedin_pages_line(p):
