@@ -406,13 +406,13 @@
  },
  "jobspy:indeed": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "jobspy:linkedin": {
   "fails": 0,
-  "last_ok": "2026-11-14",
-  "ran": "2026-11-14"
+  "last_ok": "2026-11-15",
+  "ran": "2026-11-15"
  },
  "jobspy:bayt": {
   "fails": 4,

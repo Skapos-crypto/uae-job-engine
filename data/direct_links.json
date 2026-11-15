@@ -1,12 +1,12 @@
 {
  "jobs.smartrecruiters.com": {
-  "roles": 3,
+  "roles": 4,
   "employers": [
    "Arabian Ethicals Company",
    "Etihad Airways",
    "Turner & Townsend Pty Limited"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://jobs.smartrecruiters.com/EtihadAirways5/744000161431240-bedayati-trainee-uae-nationals-only-",
   "jobs": {
    "f452198f85d25487": [
@@ -14,12 +14,48 @@
     "Turner & Townsend Pty Limited"
    ],
    "2618d0c1105fd9eb": [
-    "2026-11-14",
+    "2026-11-15",
     "Arabian Ethicals Company"
    ],
    "38904001507d0ed8": [
-    "2026-11-14",
+    "2026-11-15",
     "Etihad Airways"
+   ],
+   "8f4e0b62b1fad362": [
+    "2026-11-15",
+    "Turner & Townsend Pty Limited"
+   ]
+  }
+ },
+ "fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com": {
+  "roles": 2,
+  "employers": [
+   "Abu Dhabi ports"
+  ],
+  "last": "2026-11-15",
+  "sample": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12466",
+  "jobs": {
+   "4ab1bcaf68c6b8e2": [
+    "2026-11-14",
+    "Abu Dhabi ports"
+   ],
+   "dd7f693568098012": [
+    "2026-11-15",
+    "Abu Dhabi ports"
+   ]
+  }
+ },
+ "apply.careers.microsoft.com": {
+  "roles": 1,
+  "employers": [
+   "Microsoft"
+  ],
+  "last": "2026-11-15",
+  "sample": "https://apply.careers.microsoft.com/careers/job/1970393557071170",
+  "jobs": {
+   "60c0ec43ba855f5b": [
+    "2026-11-15",
+    "Microsoft"
    ]
   }
  },
@@ -28,11 +64,11 @@
   "employers": [
    "Blueberry"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://blueberrymarkets.elmotalent.com.au/careers/careers/job/view/226",
   "jobs": {
    "8915d33ba33a8165": [
-    "2026-11-14",
+    "2026-11-15",
     "Blueberry"
    ]
   }
@@ -42,11 +78,11 @@
   "employers": [
    "Aramex International L. L. C."
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://careers.aramex.com/job/Operations-Performance-Analyst/8788-en_US",
   "jobs": {
    "98f67490e4ae89a0": [
-    "2026-11-14",
+    "2026-11-15",
     "Aramex International L. L. C."
    ]
   }
@@ -56,11 +92,11 @@
   "employers": [
    "Chalhoub Group"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://careers.chalhoubgroup.com/jobs/8671090-order-management-trainee",
   "jobs": {
    "1c5f19ff22f57704": [
-    "2026-11-14",
+    "2026-11-15",
     "Chalhoub Group"
    ]
   }
@@ -70,11 +106,11 @@
   "employers": [
    "The Estée Lauder Companies"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://careers.elcompanies.com/careers/job/1168276590058",
   "jobs": {
    "b8e6bfd91028a162": [
-    "2026-11-14",
+    "2026-11-15",
     "The Estée Lauder Companies"
    ]
   }
@@ -126,11 +162,11 @@
   "employers": [
    "Marsh"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://careers.marsh.com/global/en/job/R_369676/politicalviolenceandterrorism–analyst",
   "jobs": {
    "2617a996f485eb65": [
-    "2026-11-14",
+    "2026-11-15",
     "Marsh"
    ]
   }
@@ -140,11 +176,11 @@
   "employers": [
    "Johnson Controls"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://click.appcast.io/t/gZSJeEfJZ5l6QcrHS2KzWALaJhUDBgZ6_Uo6Rqe2FIg=",
   "jobs": {
    "472209a3ce5ef20d": [
-    "2026-11-14",
+    "2026-11-15",
     "Johnson Controls"
    ]
   }
@@ -154,26 +190,12 @@
   "employers": [
    "COGNITA SCHOOLS"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://cognitapeople.csod.com/ux/ats/careersite/1/home/requisition/3298",
   "jobs": {
    "16b2e2150df86474": [
-    "2026-11-14",
+    "2026-11-15",
     "COGNITA SCHOOLS"
-   ]
-  }
- },
- "fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com": {
-  "roles": 1,
-  "employers": [
-   "Abu Dhabi ports"
-  ],
-  "last": "2026-11-14",
-  "sample": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12466",
-  "jobs": {
-   "4ab1bcaf68c6b8e2": [
-    "2026-11-14",
-    "Abu Dhabi ports"
    ]
   }
  },
@@ -182,11 +204,11 @@
   "employers": [
    "GEORG FISCHER"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://georgfischer.wd103.myworkdayjobs.com/GeorgFischer_Careers/job/Dubai-Investment-Park/Sales-Engineer---Data-Center_JR11754",
   "jobs": {
    "a50f7b6c9d591335": [
-    "2026-11-14",
+    "2026-11-15",
     "GEORG FISCHER"
    ]
   }
@@ -196,11 +218,11 @@
   "employers": [
    "HMH"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://hmhw.wd12.myworkdayjobs.com/en-US/HMH_Careers/job/Dubai-Jafza-UAE/Logistics-Analyst_JR102546-1",
   "jobs": {
    "0655d516ca4d504d": [
-    "2026-11-14",
+    "2026-11-15",
     "HMH"
    ]
   }
@@ -210,11 +232,11 @@
   "employers": [
    "Egis Group"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://jobs.egis-group.com/job/pre-graduate-project-engineer-uae-national-in-abu-dhabi-jid-10008",
   "jobs": {
    "e7596d0e1e0d19cb": [
-    "2026-11-14",
+    "2026-11-15",
     "Egis Group"
    ]
   }
@@ -238,11 +260,11 @@
   "employers": [
    "Medtronic"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471",
   "jobs": {
    "dd04796432b6356f": [
-    "2026-11-14",
+    "2026-11-15",
     "Medtronic"
    ]
   }
@@ -266,11 +288,11 @@
   "employers": [
    "Alshaya Group"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://www.alshaya.com/sa/ar/careers/vacancies",
   "jobs": {
    "9db16dc3f1b36e5a": [
-    "2026-11-14",
+    "2026-11-15",
     "Alshaya Group"
    ]
   }
@@ -280,11 +302,11 @@
   "employers": [
    "The Emirates Group"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-15",
   "sample": "https://www.emiratesgroupcareers.com/search-and-apply/27020",
   "jobs": {
    "9c5b7f3879a23ac1": [
-    "2026-11-14",
+    "2026-11-15",
     "The Emirates Group"
    ]
   }
