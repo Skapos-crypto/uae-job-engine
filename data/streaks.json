@@ -1,188 +1,189 @@
 {
  "oracle:Emaar": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Dubai Airports": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:HP": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Oracle": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Shell": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Pfizer": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:du": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:AD Ports Group": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:First Abu Dhabi Bank": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:KPMG Lower Gulf": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:e&": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Salesforce": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "ran": "2026-11-16",
+  "error": "SourceError: workday salesforce: HTTP 429, a web page instead of data, site down or in maintenance"
  },
  "workday:AstraZeneca": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:careem": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Baker Hughes": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Mastercard": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Rolls-Royce": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "jibe:M42": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:GSK": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Novartis": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "pinpoint:tabby": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Coca-Cola": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:tamara": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:aldar": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Emirates Islamic": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:ziina": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workable:bayutdubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:NMC Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:ADIB": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:dubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:cobblestoneenergy": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:checkout.com": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "successfactors:EY": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workable:smartcrowd": {
   "fails": 0,
@@ -191,218 +192,218 @@
  },
  "workday:Philips": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:mumzworld": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:tappayments": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:cobblestoneenergy1": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:Yassir": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:qlub": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workable:foodics": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "phenom:ADCB": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:cobblestoneenergy4": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:mexdigital": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "amazon": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:PureHealth": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Mashreq": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:dmgevents": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:leantech": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "deriv": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:weride": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:infotrust": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "phenom:G42": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:SEHA": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:openai": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Thomson Reuters": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:binance": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:scaleai": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:cohere": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Dell": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:SSMC": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:databricks": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:elevenlabs": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:palantir": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:datadog": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:Aster DM Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:KBR": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:mongodb": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "successfactors:Al-Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "attrax:talabat": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:okx": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:bybit": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:ripple": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "oracle:DP World": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "phenom:Majid Al Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "avature:Dubai Holding": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "jobspy:indeed": {
   "fails": 0,
@@ -422,102 +423,103 @@
  },
  "workday:GE HealthCare": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:DXC Technology": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Snap": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Cigna": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:GE Vernova": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:NVIDIA": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Medtronic": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "workday:Accenture": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "ran": "2026-11-16",
+  "error": "SourceError: workday accenture: HTTP 429, a web page instead of data, site down or in maintenance"
  },
  "workable:fuseenergy": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "teamtailor:qashio": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:kraken.com": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:brainco": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "emirates_group": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "ashby:easygenerator": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "phenom:ADNOC": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:esri": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:deliveroo": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "lever:crypto": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  },
  "greenhouse:elastic": {
   "fails": 0,
-  "last_ok": "2026-11-15",
-  "ran": "2026-11-15"
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16"
  }
 }
