@@ -28,14 +28,16 @@ LI_ROWS = [(9001, "Gulf Bank", "Graduate Data Analyst Programme"), (9002, "Acme 
            (9009, "dnata", "Data Analyst, dnata Cargo"),  # on the group's own site under another brand name
            # three roles whose pages carry LinkedIn's own seniority label and no number of years
            (9010, "Gamma Co", "Reporting Analyst"), (9011, "Delta Co", "Business Analyst"),
-           (9012, "Epsilon Co", "Data Analyst (Dubai Office)")]
+           (9012, "Epsilon Co", "Data Analyst (Dubai Office)"),
+           (9013, "Zeta Co", "AI Agent Engineer Graduate")]  # a graduate role LinkedIn files under "Internship"
 LI_PAGES = {"9001": (200, "/jobs/view/9001", "Join our graduate programme. This programme is open to UAE Nationals only."),
             "9002": (200, "/jobs/view/9002", "About the job. 0-1 years of experience with Python. Fresh graduates welcome."),
             "9006": (429, "/jobs/view/9006", "")}
 LI_PAGES.update({"9010": (200, "/jobs/view/9010", "Build dashboards for the sales team."),
                  "9011": (200, "/jobs/view/9011", "Own the requirements for banking projects."),
                  "9012": (200, "/jobs/view/9012", "Support the analytics team for six months.")})
-LI_LEVELS = {"9002": "Entry level", "9010": "Entry level", "9011": "Mid-Senior level", "9012": "Internship"}
+LI_LEVELS = {"9002": "Entry level", "9010": "Entry level", "9011": "Mid-Senior level", "9012": "Internship",
+             "9013": "Internship"}
 LI_ASKED = []  # LinkedIn job pages requested, in order
 
 
@@ -547,8 +549,8 @@ def main():
         li_queries = json.load(open(os.path.join(run.DATA, "health.json")))["sources"]["jobspy:linkedin"]["meta"]["by_query"]
         assert li_queries["data analyst"]["results"] == len(LI_ROWS) and li_queries["data analyst"]["kept"] >= 4, li_queries
         assert "Business Insights Analyst - Emiratization Graduate Programme" not in titles5  # dropped unread
-        assert pages["wanted"] == 7 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
-        assert pages["skipped"] == 7 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
+        assert pages["wanted"] == 8 and pages["blocked"] == 1 and pages["read"] == len(LI_ASKED) - 1, pages
+        assert pages["skipped"] == 8 - len(LI_ASKED) and pages["dropped"] == {"nationals-only": 1}, pages
         assert "entry_level" in titles5["Junior Data Scientist"]["flags"]
         acme = titles5["Junior Data Scientist"]
         assert acme["is_new"] and "0-1 years" in acme["snippet"] and acme["min_years"] == 0, acme
@@ -575,7 +577,7 @@ def main():
         titles6 = {j["title"]: j for j in latest6["jobs"]}
         pages = latest6["summary"]["status"]["linkedin_pages"]
         assert len(LI_ASKED) == 1 and LI_ASKED[0] in {"9006", "9007"}, LI_ASKED
-        assert pages["wanted"] == 5 and pages["read"] == 1 and pages["over_limit"] == 4, pages
+        assert pages["wanted"] == 6 and pages["read"] == 1 and pages["over_limit"] == 5, pages
         assert "Graduate Data Analyst Programme" not in titles6 and "Junior Data Scientist" in titles6
         assert titles6["Junior Data Scientist"]["is_new"]  # still new today
         sample6 = json.load(open(os.path.join(run.DATA, "rejected_sample.json")))
@@ -589,7 +591,9 @@ def main():
         run.main()
         latest7 = json.load(open(os.path.join(run.DATA, "latest.json")))
         titles7 = {j["title"]: j for j in latest7["jobs"]}
-        assert {"9010", "9011", "9012"} <= set(LI_ASKED) and len(LI_ASKED) == 4, LI_ASKED
+        assert {"9010", "9011", "9012", "9013"} <= set(LI_ASKED) and len(LI_ASKED) == 5, LI_ASKED
+        # "Internship" on LinkedIn does not drop a role whose title says graduate: graduate programmes stay
+        assert "AI Agent Engineer Graduate" in titles7, sorted(titles7)
         assert "entry_level" in titles7["Reporting Analyst"]["flags"], titles7["Reporting Analyst"]
         assert titles7["Business Analyst"]["flags"] == ["mid_senior"], titles7["Business Analyst"]
         assert titles7["Reporting Analyst"]["score"] == 3.0 + 1.0 + 0.5 + 1.0  # lane, new, this week, entry level

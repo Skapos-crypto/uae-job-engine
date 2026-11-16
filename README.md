@@ -74,7 +74,7 @@ flowchart LR
 
 **Saturdays:** Workday does its weekly maintenance on Saturday morning UTC, right when the full run starts, so its employers show as failing in that run. Their roles are carried over and read again by the next run.
 
-A full run takes up to a quarter of an hour (most of it the slow LinkedIn page reading); a career-systems-only run about a minute.
+A full run takes up to a quarter of an hour (most of it the slow LinkedIn page reading); a career-systems-only run about three minutes, most of it Workday, whose employers are asked one after another.
 
 ## 🕵️ Where it looks
 
@@ -108,7 +108,7 @@ Out of ~10,000 postings, a role survives only if:
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 3 or more years of experience are dropped (`MAX_YEARS` in [`run.py`](run.py)); roles asking for up to 2, or naming no number, stay. The number is the first requirement the posting states: in "6-8 years of experience, including at least 2 years in ..." it is 6, not 2. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
   - Roles that say they won't sponsor a visa are dropped.
-- 🌱 **Junior signals.** Three roles in four name no years of experience, so the list marks the ones that say a newcomer is welcome: the posting asks for a year at most, its words say so ("fresh graduates are welcome", "no prior experience required", "entry-level"; not "freshers please excuse"), or LinkedIn's own level label on the job page says "Entry level". Those get an `entry_level` flag and rank higher. "Mid-Senior level" on LinkedIn ranks a role lower (`mid_senior`) unless its title says junior, and "Internship", "Director" or "Executive" there drops it.
+- 🌱 **Junior signals.** Three roles in four name no years of experience, so the list marks the ones that say a newcomer is welcome: the posting asks for a year at most, its words say so ("fresh graduates are welcome", "no prior experience required", "entry-level"; not "freshers please excuse"), or LinkedIn's own level label on the job page says "Entry level". Those get an `entry_level` flag and rank higher. "Mid-Senior level" on LinkedIn ranks a role lower (`mid_senior`) unless its title says junior, and "Internship", "Director" or "Executive" there drops it. One exception: LinkedIn files many graduate programmes under "Internship", so a title that says graduate or trainee stays.
 - 🏷️ **Agencies are marked, not dropped.** A posting by a recruitment agency or an unnamed ("Confidential") employer gets an `agency` flag, shows "agency or unnamed employer" in Notes, and ranks a little lower: expect a screening call first, and often a wish for candidates already in the country. The list of agency names is `AGENCY_RE` in [`engine/util.py`](engine/util.py).
 - 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time, 20 to 40 seconds apart. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, so are titles that already say UAE nationals, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.
 
@@ -162,10 +162,11 @@ Before adding a new kind of system, check its `robots.txt`. If it says no, it's 
 
 ```bash
 pip install -r requirements.txt
-FULL_RUN=0 python run.py   # career systems only, about a minute
+FULL_RUN=0 python run.py   # career systems only, about three minutes
 python run.py              # everything, including JobSpy
 python -m tests.test_filters
 python -m tests.test_when          # which wake-up does the full run
+python -m tests.test_http          # the polite client's queues
 python -m tests.test_offline_run   # the whole pipeline against fake responses, no network
 ```
 
@@ -175,12 +176,12 @@ Local runs write to `data/`. Don't commit that: let the Actions run own `data/` 
 
 This project reads public listings that the sites' own job searches use, and it tries hard to be a polite guest:
 
-- 🐢 **One request at a time per site**, at least a second apart, longer where a site's robots.txt asks for it
+- 🐢 **One request at a time per site**, at least a second apart, longer where a site's robots.txt asks for it. Workday's employers all sit behind one system, so they share one queue, two seconds apart, instead of being asked all at once.
 - 🏷️ **An honest User-Agent** that says what it is and links back here
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
 - 📉 **Low volume:** two runs a day, 22 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The spare wake-ups contact no site at all.
-- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
+- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run, and so is any host that answers "too many requests" three times in a row. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
 LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.
 

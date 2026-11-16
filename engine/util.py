@@ -174,7 +174,7 @@ FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
 EXCLUDE_RE = re.compile(
     r"front[- ]?end|\bui\b|\bux\b|ui/ux|\bios\b|android|flutter|react native|mobile (app|developer|engineer)|"
     r"graphic|designer|animat|illustrat|video (editor|maker|producer)|videograph|photograph|copywrit|"
-    r"content (writer|creator)|teacher|lecturer|professor|faculty|tutor|"
+    r"content (writer|creator)|teacher|lecturer|professor|faculty|tutor|\btrainers?\b|instructor|"
     r"\bnurse|physician|doctor|surgeon|pharmacist|therapist|psycholog|behaviou?ral analyst|dietitian|dentist|"
     r"oncology|immunology|cardiology|vaccine|respiratory|ophthalm|optometr|optician|dermatolog|neuroscience|"
     r"rare disease|laborator|\blab (technical|support|technician|assistant)|"
@@ -219,6 +219,10 @@ INTERN_RE = re.compile(
     re.I,
 )
 
+# A title that names a graduate programme or a trainee role. It stays even when a job site files it
+# under "Internship", as LinkedIn does with many campus roles ("AI Agent Engineer Graduate").
+GRAD_TITLE_RE = re.compile(r"graduate|trainee|early (careers?|talent)|rotational|campus", re.I)
+
 # Graduate and trainee roles in disciplines outside the target lanes.
 GRAD_EXCLUDE_RE = re.compile(
     r"mechanical|civil|electrical|chemical|petroleum|structural|architect|nurs|medical|pharm|clinical|"
@@ -226,6 +230,7 @@ GRAD_EXCLUDE_RE = re.compile(
     r"technician|\bhse\b|safety|marketing(?!.*analy)|\bhr\b(?!.*(data|analy))|human resources|procurement|"
     r"retail|store|fashion|design|interior|quantity|survey|geolog|reservoir|drilling|welding|construction|"
     r"site engineer|planning engineer|medic|shari|fulfil+ment|warehouse|\bfc\b|area manager|"
+    r"instrument|\bi&c\b|control systems?|"
     r"people (and|&) (organi[sz]ation|culture)",
     re.I,
 )

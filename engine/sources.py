@@ -33,6 +33,8 @@ def _said(resp):
 def _json(resp, what):
     if resp.status_code == 404:
         raise NotFound("%s: 404" % what)
+    if resp.status_code == 429:
+        raise SourceError("%s: HTTP 429, too many requests" % what)
     if resp.status_code >= 400:
         raise SourceError("%s: HTTP %s, %s" % (what, resp.status_code, _said(resp)))
     try:

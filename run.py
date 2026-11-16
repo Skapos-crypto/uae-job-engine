@@ -18,7 +18,7 @@ import yaml
 
 from engine import sources
 from engine.http import Http
-from engine.util import (DUBAI, FACTS_VERSION, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
+from engine.util import (DUBAI, FACTS_VERSION, GRAD_TITLE_RE, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
                          elsewhere, evidence, fresh_ok, is_agency, is_uae, job_key, min_years, nationals, score,
                          seniority, today_dubai)
 
@@ -393,6 +393,8 @@ def final_checks(job, today, cache):
     if nat == "only":
         return "nationals-only"
     level = facts.get("lvl") or ""
+    if level == "internship" and GRAD_TITLE_RE.search(job["title"]):
+        level = ""  # LinkedIn files many graduate programmes under "Internship": the title decides
     if level == "internship" or level in ("director", "executive"):
         job["_why"] = "LinkedIn lists its seniority level as: %s" % level
         return "internship" if level == "internship" else "senior"

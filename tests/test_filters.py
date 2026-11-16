@@ -116,6 +116,8 @@ DROP = [
     "Automation Engineer, Reliability Maintenance Engineering",  # warehouse machinery, not software
     "Software Development Engineer 3",  # a level, like "III"
     "Claims Associate Analyst",  # insurance claims handling
+    "HR Analytics Trainer – UAE",  # teaches it
+    "Graduate I&C Engineer",  # instrumentation and control
     # 14 November 2026: internships do not sponsor a visa; a second level is not a junior role
     "Software Engineering Intern",
     "Data Analyst - Intern",
