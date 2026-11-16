@@ -1,12 +1,13 @@
 {
  "jobs.smartrecruiters.com": {
-  "roles": 4,
+  "roles": 5,
   "employers": [
    "Arabian Ethicals Company",
+   "Egis Group",
    "Etihad Airways",
    "Turner & Townsend Pty Limited"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://jobs.smartrecruiters.com/EtihadAirways5/744000161431240-bedayati-trainee-uae-nationals-only-",
   "jobs": {
    "f452198f85d25487": [
@@ -18,12 +19,16 @@
     "Arabian Ethicals Company"
    ],
    "38904001507d0ed8": [
-    "2026-11-15",
+    "2026-11-16",
     "Etihad Airways"
    ],
    "8f4e0b62b1fad362": [
-    "2026-11-15",
+    "2026-11-16",
     "Turner & Townsend Pty Limited"
+   ],
+   "7566fc6432b7e76e": [
+    "2026-11-16",
+    "Egis Group"
    ]
   }
  },
@@ -32,7 +37,7 @@
   "employers": [
    "Abu Dhabi ports"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12466",
   "jobs": {
    "4ab1bcaf68c6b8e2": [
@@ -40,7 +45,7 @@
     "Abu Dhabi ports"
    ],
    "dd7f693568098012": [
-    "2026-11-15",
+    "2026-11-16",
     "Abu Dhabi ports"
    ]
   }
@@ -56,6 +61,34 @@
    "60c0ec43ba855f5b": [
     "2026-11-15",
     "Microsoft"
+   ]
+  }
+ },
+ "apply.interfolio.com": {
+  "roles": 1,
+  "employers": [
+   "New York University"
+  ],
+  "last": "2026-11-16",
+  "sample": "https://apply.interfolio.com/197467",
+  "jobs": {
+   "e33c38ceb15aed18": [
+    "2026-11-16",
+    "New York University"
+   ]
+  }
+ },
+ "apply.workable.com": {
+  "roles": 1,
+  "employers": [
+   "BlackStone eIT"
+  ],
+  "last": "2026-11-16",
+  "sample": "https://apply.workable.com/j/961EE7727C",
+  "jobs": {
+   "9ea227a2c704414d": [
+    "2026-11-16",
+    "BlackStone eIT"
    ]
   }
  },
@@ -120,11 +153,11 @@
   "employers": [
    "Givaudan"
   ],
-  "last": "2026-11-14",
+  "last": "2026-11-16",
   "sample": "https://careers.givaudan.com/global/en/job/120608/Fragrance-Beauty-Associate-Perfume-Analyst",
   "jobs": {
    "e550f99f46f56e36": [
-    "2026-11-14",
+    "2026-11-16",
     "Givaudan"
    ]
   }
@@ -162,11 +195,11 @@
   "employers": [
    "Marsh"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://careers.marsh.com/global/en/job/R_369676/politicalviolenceandterrorism–analyst",
   "jobs": {
    "2617a996f485eb65": [
-    "2026-11-15",
+    "2026-11-16",
     "Marsh"
    ]
   }
@@ -176,11 +209,11 @@
   "employers": [
    "Johnson Controls"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://click.appcast.io/t/gZSJeEfJZ5l6QcrHS2KzWALaJhUDBgZ6_Uo6Rqe2FIg=",
   "jobs": {
    "472209a3ce5ef20d": [
-    "2026-11-15",
+    "2026-11-16",
     "Johnson Controls"
    ]
   }
@@ -190,11 +223,11 @@
   "employers": [
    "COGNITA SCHOOLS"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://cognitapeople.csod.com/ux/ats/careersite/1/home/requisition/3298",
   "jobs": {
    "16b2e2150df86474": [
-    "2026-11-15",
+    "2026-11-16",
     "COGNITA SCHOOLS"
    ]
   }
@@ -218,11 +251,11 @@
   "employers": [
    "HMH"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://hmhw.wd12.myworkdayjobs.com/en-US/HMH_Careers/job/Dubai-Jafza-UAE/Logistics-Analyst_JR102546-1",
   "jobs": {
    "0655d516ca4d504d": [
-    "2026-11-15",
+    "2026-11-16",
     "HMH"
    ]
   }
@@ -260,11 +293,11 @@
   "employers": [
    "Medtronic"
   ],
-  "last": "2026-11-15",
+  "last": "2026-11-16",
   "sample": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471",
   "jobs": {
    "dd04796432b6356f": [
-    "2026-11-15",
+    "2026-11-16",
     "Medtronic"
    ]
   }
