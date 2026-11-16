@@ -1,99 +1,90 @@
 {
  "generated": {
-  "utc": "2026-11-16T08:42:49+00:00",
-  "dubai": "2026-11-16 12:42",
-  "full_run": true,
+  "utc": "2026-11-16T11:37:53+00:00",
+  "dubai": "2026-11-16 15:37",
+  "full_run": false,
   "last_full": "2026-11-16 12:42"
  },
  "summary": {
   "total": 61,
-  "new_today": 9,
-  "carried_over": 4,
-  "raw_postings": 10718,
+  "new_today": 8,
+  "carried_over": 43,
+  "raw_postings": 10289,
   "by_family": {
    "product": 4,
    "ai_ml": 12,
-   "bi": 3,
-   "data_analyst": 6,
+   "bi": 4,
    "software": 12,
    "business": 4,
    "data_science": 4,
    "data_eng": 1,
    "graduate": 7,
    "analyst": 5,
+   "data_analyst": 5,
    "it": 3
   },
   "by_source": {
-   "jobspy": 36,
+   "jobspy": 35,
    "workday": 8,
    "workable": 2,
    "oracle": 5,
+   "phenom": 1,
    "teamtailor": 5,
    "avature": 1,
    "jibe": 1,
    "attrax": 1,
    "ashby": 2
   },
-  "http_calls": 251,
-  "verdicts_shared": 2,
+  "http_calls": 191,
+  "verdicts_shared": 0,
   "rejected": {
-   "excluded-title": 1056,
-   "no-family": 1537,
-   "senior": 166,
-   "internship": 33,
-   "graduate-other-discipline": 12,
+   "no-family": 1391,
+   "excluded-title": 950,
+   "senior": 108,
+   "internship": 17,
+   "graduate-other-discipline": 6,
    "title-elsewhere": 2,
-   "nationals-only": 38,
-   "3+ years": 51,
+   "nationals-only": 26,
+   "3+ years": 25,
    "stale": 15
   },
   "status": {
-   "sources": 102,
-   "ok": 83,
+   "sources": 100,
+   "ok": 77,
    "failing": {
-    "workday:KBR": "SourceError: workday kbr: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:GSK": "SourceError: workday gsk: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:HP": "SourceError: workday hp: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Baker Hughes": "SourceError: workday bakerhughes: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Salesforce": "SourceError: workday salesforce: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Thomson Reuters": "SourceError: workday thomsonreuters: HTTP 429, a web page instead of data, site down or in maintenan",
-    "workday:Philips": "SourceError: workday philips: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:AstraZeneca": "SourceError: workday astrazeneca: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Novartis": "SourceError: workday novartis: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Rolls-Royce": "SourceError: workday rollsroyce: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Shell": "SourceError: workday shell: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Cigna": "SourceError: workday cigna: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:GE HealthCare": "SourceError: workday gehc: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:NVIDIA": "SourceError: workday nvidia: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Snap": "SourceError: workday snapchat: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Pfizer": "SourceError: workday pfizer page: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Accenture": "SourceError: workday accenture: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Coca-Cola": "SourceError: workday coke page: HTTP 429, a web page instead of data, site down or in maintenance",
-    "workday:Medtronic": "SourceError: workday medtronic page: HTTP 429, a web page instead of data, site down or in maintenan"
+    "workday:Salesforce": "SourceError: workday salesforce: HTTP 429, too many requests",
+    "workday:Shell": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:GSK": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:AstraZeneca": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Novartis": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Pfizer": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Philips": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Rolls-Royce": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Coca-Cola": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Thomson Reuters": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Medtronic": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Accenture": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:DXC Technology": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Cigna": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:GE Vernova": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:GE HealthCare": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:NVIDIA": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Snap": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:KBR": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Mastercard": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Cleveland Clinic Abu Dhabi": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:HP": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+    "workday:Baker Hughes": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
    },
    "blocked": {},
    "failing_in_a_row": {
-    "jobspy:bayt": 4
+    "workday:Salesforce": 3,
+    "jobspy:bayt": 4,
+    "workday:Accenture": 3
    },
    "new_last_7_days": {
-    "jobspy": 150,
+    "jobspy": 149,
     "employer": 10
-   },
-   "linkedin_pages": {
-    "wanted": 15,
-    "tried": 15,
-    "read": 15,
-    "empty": 0,
-    "failed": 0,
-    "blocked": 0,
-    "skipped": 0,
-    "over_limit": 0,
-    "dropped": {
-     "3+ years": 3,
-     "internship": 3,
-     "nationals-only": 1
-    },
-    "error": null
    },
    "job_sites": [
     "Indeed",
@@ -216,35 +207,6 @@
    "is_new": true,
    "score": 5.5,
    "snippet": "Business Intelligence Analyst | Remote Opportunities We are currently welcoming applications for Business Intelligence Analyst opportunities across the United Arab Emirates. Position Overview We are looking for analytical, detail-oriented, and motivated individuals to support bus",
-   "apply_url": ""
-  },
-  {
-   "key": "a1ce8a61ca82c55c",
-   "title": "HR Analytics Trainer – UAE",
-   "employer": "BEAT EDU CENTER OF EXCELLENCE PRIVATE LIMITED",
-   "sector": "",
-   "city": "UAE",
-   "location": "Remote, United Arab Emirates",
-   "family": "data_analyst",
-   "cv": "Data_Analyst",
-   "seniority": "unspecified",
-   "url": "https://ae.indeed.com/viewjob?jk=3da60fbd303df875",
-   "source": "jobspy:indeed",
-   "source_type": "indeed",
-   "seen_on": [
-    "jobspy:indeed"
-   ],
-   "posted": "2026-11-16",
-   "age_days": 0,
-   "min_years": 1,
-   "flags": [
-    "entry_level"
-   ],
-   "first_seen": "2026-11-16",
-   "last_seen": "2026-11-16",
-   "is_new": true,
-   "score": 5.5,
-   "snippet": "We are looking for a skilled and experienced HR Analytics Trainer with a strong professional background in Human Resources and data analytics. The ideal candidate should have practical industry experience in HR analytics, workforce reporting, HR metrics and data-driven decision-m",
    "apply_url": ""
   },
   {
@@ -514,7 +476,6 @@
    "source": "workable:bayutdubizzle",
    "source_type": "ats",
    "seen_on": [
-    "jobspy:linkedin",
     "workable:bayutdubizzle"
    ],
    "posted": "2026-11-13",
@@ -726,6 +687,33 @@
    "apply_url": ""
   },
   {
+   "key": "850cbcbbb1a8f588",
+   "title": "Specialist, Logistics (Performance & Reporting)",
+   "employer": "ADNOC",
+   "sector": "energy",
+   "city": "Abu Dhabi",
+   "location": "Abu Dhabi, United Arab Emirates; Abu Dhabi, United Arab Emirates",
+   "family": "bi",
+   "cv": "Data_Analyst",
+   "seniority": "unspecified",
+   "url": "https://jobs.adnoc.ae/us/en/job/33578",
+   "source": "phenom:ADNOC",
+   "source_type": "employer",
+   "seen_on": [
+    "phenom:ADNOC"
+   ],
+   "posted": "2026-11-09",
+   "age_days": 7,
+   "min_years": null,
+   "flags": [],
+   "first_seen": "2026-11-10",
+   "last_seen": "2026-11-16",
+   "is_new": false,
+   "score": 4.1,
+   "snippet": "About the Company. We are a global energy maritime logistics leader with a world-class asset base. We are the dedicated and vital logistics arm for ADNOC Group, providing mission critical and highl...",
+   "apply_url": ""
+  },
+  {
    "key": "7dee8e1bd7eca6ba",
    "title": "Graduate Management Trainee",
    "employer": "Genetic Callnet Consultancy Pvt Ltd.",
@@ -745,8 +733,8 @@
    "age_days": 3,
    "min_years": 0,
    "flags": [
-    "agency",
-    "entry_level"
+    "entry_level",
+    "agency"
    ],
    "first_seen": "2026-11-15",
    "last_seen": "2026-11-16",
@@ -1125,8 +1113,6 @@
    "source": "oracle:AD Ports Group",
    "source_type": "employer",
    "seen_on": [
-    "jobspy:indeed",
-    "jobspy:linkedin",
     "oracle:AD Ports Group"
    ],
    "posted": "2026-11-13",
@@ -1778,8 +1764,8 @@
    "age_days": 3,
    "min_years": null,
    "flags": [
-    "agency",
-    "mid_senior"
+    "mid_senior",
+    "agency"
    ],
    "first_seen": "2026-11-14",
    "last_seen": "2026-11-16",

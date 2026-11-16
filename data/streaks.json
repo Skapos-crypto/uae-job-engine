@@ -10,10 +10,10 @@
   "ran": "2026-11-16"
  },
  "workday:HP": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday hp: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:Oracle": {
   "fails": 0,
@@ -21,16 +21,16 @@
   "ran": "2026-11-16"
  },
  "workday:Shell": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday shell: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Pfizer": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday pfizer page: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:du": {
   "fails": 0,
@@ -48,9 +48,10 @@
   "ran": "2026-11-16"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-16"
+  "ran": "2026-11-16",
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
@@ -68,16 +69,16 @@
   "ran": "2026-11-16"
  },
  "workday:Salesforce": {
-  "fails": 2,
+  "fails": 3,
   "last_ok": "2026-11-15",
   "ran": "2026-11-16",
-  "error": "SourceError: workday salesforce: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "SourceError: workday salesforce: HTTP 429, too many requests"
  },
  "workday:AstraZeneca": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday astrazeneca: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:careem": {
   "fails": 0,
@@ -85,10 +86,10 @@
   "ran": "2026-11-16"
  },
  "workday:Baker Hughes": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday bakerhughes: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
@@ -96,9 +97,10 @@
   "ran": "2026-11-16"
  },
  "workday:Mastercard": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-16"
+  "ran": "2026-11-16",
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
@@ -106,10 +108,10 @@
   "ran": "2026-11-16"
  },
  "workday:Rolls-Royce": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday rollsroyce: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "jibe:M42": {
   "fails": 0,
@@ -117,16 +119,16 @@
   "ran": "2026-11-16"
  },
  "workday:GSK": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday gsk: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Novartis": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday novartis: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "pinpoint:tabby": {
   "fails": 0,
@@ -134,10 +136,10 @@
   "ran": "2026-11-16"
  },
  "workday:Coca-Cola": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday coke page: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:tamara": {
   "fails": 0,
@@ -200,10 +202,10 @@
   "ran": "2026-11-14"
  },
  "workday:Philips": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday philips: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
@@ -311,10 +313,10 @@
   "ran": "2026-11-16"
  },
  "workday:Thomson Reuters": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday thomsonreuters: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "lever:binance": {
   "fails": 0,
@@ -367,10 +369,10 @@
   "ran": "2026-11-16"
  },
  "workday:KBR": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday kbr: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:mongodb": {
   "fails": 0,
@@ -434,15 +436,16 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
+  "fails": 2,
+  "last_ok": "2026-11-16",
+  "ran": "2026-11-16",
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
+ },
+ "workday:DXC Technology": {
   "fails": 1,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday gehc: HTTP 429, a web page instead of data, site down or in maintenance"
- },
- "workday:DXC Technology": {
-  "fails": 0,
-  "last_ok": "2026-11-16",
-  "ran": "2026-11-16"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
@@ -450,39 +453,40 @@
   "ran": "2026-11-16"
  },
  "workday:Snap": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday snapchat: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Cigna": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday cigna: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:GE Vernova": {
-  "fails": 0,
+  "fails": 1,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-16"
+  "ran": "2026-11-16",
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:NVIDIA": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday nvidia: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Medtronic": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-16",
   "ran": "2026-11-16",
-  "error": "SourceError: workday medtronic page: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Accenture": {
-  "fails": 2,
+  "fails": 3,
   "last_ok": "2026-11-15",
   "ran": "2026-11-16",
-  "error": "SourceError: workday accenture: HTTP 429, a web page instead of data, site down or in maintenance"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workable:fuseenergy": {
   "fails": 0,
