@@ -697,8 +697,10 @@ def jobspy_site(site, queries, log):
             break
         kw = {"site_name": [site], "search_term": q, "verbose": 0}
         if site == "indeed":
+            # Indeed answers a search with one page of up to 100 results, so asking for all of
+            # them is still one request per query
             kw.update(location="United Arab Emirates", country_indeed="united arab emirates",
-                      hours_old=72, results_wanted=40)
+                      hours_old=72, results_wanted=100)
         elif site == "linkedin":
             kw.update(location="United Arab Emirates", hours_old=72, results_wanted=25)
         elif site == "google":

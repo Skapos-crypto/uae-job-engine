@@ -1,6 +1,7 @@
 # JobSpy queries, run once a day (the full run), one query at a time per site with pauses; the
-# sites run side by side. 22 queries a day in total. These sites' terms forbid automated access;
-# volume is kept low and no account or login is ever used. Remove a site's list to switch it off.
+# sites run side by side. 30 queries a day in total, which is the limit: to add a query, take one
+# out. These sites' terms forbid automated access; volume is kept low and no account or login is
+# ever used. Remove a site's list to switch it off.
 # A blocked query is recorded in data/health.json ("blocked"); it is never retried another way.
 # data/health.json also says, per query, how many of its results were kept ("by_query"): use it
 # to swap a query that finds nothing for one that does.
@@ -30,6 +31,14 @@ jobspy:
     - trainee
     - junior
     - product analyst
+    # the wider net (2026-11-16): customer service and call centre, sales and account management,
+    # collections, admin. Indeed has most of these and sends the description with each result.
+    - customer service
+    - call center
+    - account manager
+    - collection
+    - sales executive
+    - admin assistant
   linkedin:
     - data analyst
     - data scientist
@@ -39,6 +48,8 @@ jobspy:
     - machine learning engineer
     - graduate
     - product owner
+    - customer service
+    - collection officer
 
 # LinkedIn search results carry no description, so the nationals-only, years and visa checks
 # cannot run on them. The full run opens the public page of each NEW LinkedIn role that passed

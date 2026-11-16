@@ -2,9 +2,9 @@
 
 **A tiny robot that job-hunts in the UAE while you sleep.**
 
-Twice a day, a free GitHub Actions run visits about 100 employer career sites and job boards, collects every opening it can find, throws away everything that isn't a junior role in data, BI, AI/ML, software or IT, and writes a tidy list of what's left. No servers, no accounts, no logins, no cost.
+Twice a day, a free GitHub Actions run visits about 100 employer career sites and job boards, collects every opening it can find, keeps the junior roles in data, BI, AI/ML, software and IT plus a wider net of customer-service, sales, collections and admin roles, and writes a tidy list of what's left. No servers, no accounts, no logins, no cost.
 
-On a typical day it reads **~10,000 postings** and keeps **~120 roles** worth looking at.
+On a typical day it reads **~10,000 postings** and keeps **a few hundred roles** worth looking at, in two lists.
 
 > Built for one person's job search, shared so you can fork it for yours: another city, another country, another career. 🍴
 
@@ -22,7 +22,7 @@ Everything lands in [`data/`](data), refreshed after every run:
 
 | File | What it is |
 |---|---|
-| [`latest.md`](data/latest.md) | 📋 A status panel, then a readable table of every matching role, newest first. Start here. |
+| [`latest.md`](data/latest.md) | 📋 A status panel, then two readable tables, new roles first: the data and tech roles, and the wider net. Start here. |
 | [`latest.json`](data/latest.json) | 🤖 The same list, machine-readable (handy for a digest email or a chatbot) |
 | [`health.json`](data/health.json) | 🩺 Which sources worked this run, how many jobs each returned, which were blocked, and what each job-site search query brought (`by_query`) |
 | `direct_links.json` | 🧭 The employers' own job systems behind the roles the job sites showed, counted over 30 days: the next employers worth collecting directly |
@@ -43,9 +43,9 @@ and then the list. A few rows:
 | 2 | 🆕 | Junior Full Stack Developer [L1] | Alef Education | Abu Dhabi | Software / backend | 2026-11-12 | indeed | asks 1 yr; [employer site](https://example.com) |
 | 3 | | Data Analyst – Databricks AI/BI & FinOps | Etihad | Abu Dhabi | Data analyst | | linkedin + indeed | |
 
-Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. Newer fields are added beside them: `seen_on` (every site the job was found on) and `apply_url` (the employer's own posting, when a job site named it). `summary.status` holds the status panel's numbers.
+Each record in `latest.json` carries: `key, title, employer, sector, city, location, family, cv, seniority, url, source, source_type, posted, age_days, min_years, flags, first_seen, last_seen, is_new, score, snippet`. These field names are kept stable on purpose, so anything reading the file keeps working. Newer fields are added beside them: `seen_on` (every site the job was found on), `apply_url` (the employer's own posting, when a job site named it) and `track` (`core` for the data and tech lanes, `wide` for the wider net). `summary.status` holds the status panel's numbers.
 
-The **Notes** column says what the posting itself gave away: how many years it asks for, `entry level` when it welcomes newcomers, `LinkedIn says mid-senior`, `UAE nationals preferred`, `agency or unnamed employer`, and a link to the employer's own posting when Indeed named one.
+The **Notes** column says what the posting itself gave away: how many years it asks for, `entry level` when it welcomes newcomers, `LinkedIn says mid-senior`, `UAE nationals preferred`, `agency or unnamed employer`, a link to the employer's own posting when Indeed named one, and `last seen N days ago` on a role that is kept although no run has seen it since (it may have closed).
 
 ## ⚙️ How it works
 
@@ -89,7 +89,7 @@ A full run takes up to a quarter of an hour (most of it the slow LinkedIn page r
 | **Attrax** | talabat |
 | **Own feeds** | Emirates Group (Emirates, dnata), Amazon (UAE only), Deriv |
 | **Startup boards** | Careem, Tamara, Tabby, Chalhoub, Property Finder, Ziina, Checkout.com, qlub, dubizzle, Aldar, Yassir, Kraken, Fuse Energy, Brain Co., Easygenerator, Esri, Deliveroo, Bybit, OKX, Cohere, OpenAI, ElevenLabs and more |
-| **JobSpy** (no login) | LinkedIn and Indeed: 22 searches a day in total, plus up to 20 LinkedIn job pages. Bayt is switched off: it refused every query |
+| **JobSpy** (no login) | LinkedIn and Indeed: 30 searches a day in total, plus up to 20 LinkedIn job pages. Bayt is switched off: it refused every query |
 
 Some big names aren't covered, and [`config/employers.yaml`](config/employers.yaml) says why for each one. Usually it's because their robots.txt says no, their jobs sit behind a login, or they only post on LinkedIn. Those still show up through the JobSpy searches.
 
@@ -100,19 +100,27 @@ Some big names aren't covered, and [`config/employers.yaml`](config/employers.ya
 Out of ~10,000 postings, a role survives only if:
 
 - ✅ **It's in the UAE.** That includes titles like "Data Analyst – Riyadh, KSA" whose listing claims Dubai: those are caught and dropped.
-- ✅ **It's in a target lane:** data analysis, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, or a graduate programme. Internships are out: employers in the UAE don't sponsor a work visa for them, while some graduate and trainee programmes do.
+- ✅ **It's in a target lane:** data analysis, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, or a graduate programme; or in the wider net (below). Internships are out: employers in the UAE don't sponsor a work visa for them, while some graduate and trainee programmes do.
 - ✅ **It isn't senior.** Director, head, VP and principal titles are always out. Senior, lead and manager titles are out unless the title also says junior, graduate, trainee or similar ("Senior Associate" counts as senior). A second level counts as senior too: "Data Analyst II", "Engineer 2", "[L2]", "Tier 2". The first level stays ("Engineer I", "L1").
-- ✅ **It isn't a lookalike.** Sales, account executives, audit, tax, nursing, design, frontend/mobile and similar roles are dropped, and so are talent pools, career fairs and open applications. Finance and compliance titles survive only if they're clearly technical ("AML Data Analyst" stays).
+- ✅ **It isn't a lookalike.** Audit, tax, nursing, design, frontend/mobile and similar roles are dropped, and so are talent pools, career fairs, "for future openings" ads and open applications. Finance and compliance titles survive only if they're clearly technical ("AML Data Analyst" stays).
 - ✅ **It's still open.** Job-site postings (LinkedIn, Indeed) older than 21 days are dropped; employer and board postings older than 120 days too (those are evergreen ads, not openings). Anything older than 30 days ranks lower.
 - ✅ **The full description passes:**
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 3 or more years of experience are dropped (`MAX_YEARS` in [`run.py`](run.py)); roles asking for up to 2, or naming no number, stay. The number is the first requirement the posting states: in "6-8 years of experience, including at least 2 years in ..." it is 6, not 2. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
   - Roles that say they won't sponsor a visa are dropped.
+- 🧺 **The wider net** is a second list for someone who needs a job soon: customer service and call centre, sales and account management (account manager, sales executive, business development, a bank's relationship officer), collections, and admin, coordination and back-office work. It has rules of its own (`wider_net` in [`engine/util.py`](engine/util.py)):
+  - Out: roles for experienced people. That is a role sold to large clients ("Enterprise Account Executive", "Key Account Manager"), a rank ("Relationship Manager", "Team Leader", "Supervisor"; "Account Manager" is a role's name and stays), and a title that itself asks for experience ("Collection Officer - Bank Experience Must").
+  - Out: the shop floor, field and commission-only sales, property, insurance and medical sales, part-time, temporary and remote roles (no work visa comes with those), errand jobs, receptionists, and coordinators of a specialist field ("Radiology Coordinator").
+  - Kept: walk-in interviews, which is how call centres and sales teams hire. For a data or tech role a walk-in day is a general hiring event and stays out.
+  - An analyst, an engineer or a support desk stays in the data and tech list, whatever else its title says.
+- 🗣️ **Another language.** A title that asks for a language other than English or Arabic ("Customer Service Agent - Russian Speaker") is dropped; "Russian or Arabic" stays. `OTHER_LANGUAGE_RE` lists the languages: edit it for the ones you speak.
+- 🚫 **Reposting sites are out.** Joblet-AI and Jobgether repost other companies' vacancies under their own name, most of them remote roles nobody in the UAE stands behind (`REPOSTER_RE`).
+- 🗓️ **A role stays for 7 days after it was last seen** (`KEEP_DAYS`). The job sites return only the newest postings of the last three days, so a role used to vanish from the list while it was still open. Now a job-site role stays a week after the searches last returned it, with `last seen N days ago` in Notes, and so does a role whose source failed. Not kept: a role its employer's own site stopped listing (it closed), one this run read and rejected, and one that no longer passes the rules.
 - 🌱 **Junior signals.** Three roles in four name no years of experience, so the list marks the ones that say a newcomer is welcome: the posting asks for a year at most, its words say so ("fresh graduates are welcome", "no prior experience required", "entry-level"; not "freshers please excuse"), or LinkedIn's own level label on the job page says "Entry level". Those get an `entry_level` flag and rank higher. "Mid-Senior level" on LinkedIn ranks a role lower (`mid_senior`) unless its title says junior, and "Internship", "Director" or "Executive" there drops it. One exception: LinkedIn files many graduate programmes under "Internship", so a title that says graduate or trainee stays.
 - 🏷️ **Agencies are marked, not dropped.** A posting by a recruitment agency or an unnamed ("Confidential") employer gets an `agency` flag, shows "agency or unnamed employer" in Notes, and ranks a little lower: expect a screening call first, and often a wish for candidates already in the country. The list of agency names is `AGENCY_RE` in [`engine/util.py`](engine/util.py).
 - 🔗 **LinkedIn roles get the same checks.** LinkedIn's search results come without a description, so the full run opens the public page of each LinkedIn role that's new that day: up to 20 a day, best fit first, one page at a time, 20 to 40 seconds apart. A page is read once; what it said is remembered. Jobs that another site already describes are skipped, so are titles that already say UAE nationals, and a copy of a job that came without any description takes the verdict of a copy that had one, so a nationals-only role can't sneak back in through the site that left the words out.
 
-Every rule is pinned by a real title in [`tests/test_filters.py`](tests/test_filters.py) (100+ cases), so tuning one rule can't quietly break another.
+Every rule is pinned by a real title in [`tests/test_filters.py`](tests/test_filters.py) (300+ cases), so tuning one rule can't quietly break another.
 
 ## 🍴 Make it yours
 
@@ -121,10 +129,10 @@ Want this for Riyadh, London, or for marketing roles instead of data? Here's the
 1. **Fork this repo.**
 2. **Make it yours, not mine.** In [`engine/http.py`](engine/http.py), change `USER_AGENT` to point at *your* fork, so site owners can see who's visiting. Delete the files in `data/` to start with a clean history.
 3. **Pick your employers** in [`config/employers.yaml`](config/employers.yaml). Remove the ones you don't care about and add your own (see the detective guide below).
-4. **Pick your searches** in [`config/search.yaml`](config/search.yaml). Keep the daily total low (about 30). `linkedin_pages` caps the LinkedIn pages read a day; 0 switches the reading off.
+4. **Pick your searches** in [`config/search.yaml`](config/search.yaml). Keep the daily total low (30 here: to add a search, take one out). An Indeed search is one request for up to 100 results, descriptions included; a LinkedIn search is three requests for 25 results without descriptions. `linkedin_pages` caps the LinkedIn pages read a day; 0 switches the reading off.
 5. **Teach it your lanes** in [`engine/util.py`](engine/util.py):
    - `UAE_RE` and `CITY_RE`: where you want to work
-   - `FAMILIES`: which job titles you want
+   - `FAMILIES`: which job titles you want. The last four lanes are the wider net (`WIDE_FAMILIES`): delete them if you only want your own field
    - `EXCLUDE_RE`, `SENIOR_HARD_RE` and friends: what to throw away
    - The nationals-only rules are UAE-specific (Emiratisation); swap them for your country's equivalent, or remove them
 
@@ -180,7 +188,7 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🏷️ **An honest User-Agent** that says what it is and links back here
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
-- 📉 **Low volume:** two runs a day, 22 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The spare wake-ups contact no site at all.
+- 📉 **Low volume:** two runs a day, 30 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The spare wake-ups contact no site at all.
 - 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run, and so is any host that answers "too many requests" three times in a row. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
 LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.
@@ -191,7 +199,7 @@ LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated acc
 
 **Why doesn't it cover company X?** Check the "Checked ... and not collected" list in `config/employers.yaml`. If X isn't there, it probably just hasn't been looked at yet. Open an issue or a pull request!
 
-**LinkedIn shows `blocked` in `health.json`. Is something broken?** No. LinkedIn sometimes refuses automated requests. The run records it and carries yesterday's LinkedIn roles over for up to three days, re-checked against the current filters, so a filter change reaches the list at once.
+**LinkedIn shows `blocked` in `health.json`. Is something broken?** No. LinkedIn sometimes refuses automated requests. The run records it and keeps the LinkedIn roles it already had for up to seven days, re-checked against the current filters, so a filter change reaches the list at once.
 
 **Why are there runs that take 15 seconds?** Those are spare wake-ups: they check the clock, find the day's run already done and exit. GitHub starts scheduled runs hours late and not at a steady delay, so the workflow keeps a few spare starts a day. See "How it works".
 

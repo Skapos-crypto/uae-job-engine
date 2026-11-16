@@ -159,16 +159,67 @@ FAMILIES = [
      r"test (engineer|automation)|software tester|quality assurance (engineer|analyst)"),
     ("it", "IT",
      r"\bit (support|analyst|specialist|engineer|officer|technician|administrator|coordinator|executive|"
-     r"associate|trainee|intern|operations)|information technology|service desk|help ?desk|desktop support|"
+     r"associate|trainee|intern|operations|customer support|user support)|information technology|service desk|"
+     r"help ?desk|desktop support|"
      r"support engineer|"
      r"technical support|application support|systems? analyst|systems? administrator|"
      r"network (engineer|administrator|support)|\bnoc\b|data cent(er|re)|infrastructure (engineer|analyst|support)|"
      r"end user (support|computing)"),
+    # The wider net: office and phone roles outside data and tech that take newcomers. No CV variant
+    # is written for them yet, hence "General".
+    ("collections", "General",
+     r"collections? (officer|agent|executive|specialist|associate|analyst|representative|coordinator|advisor|"
+     r"caller|controller|assistant|clerk|staff)|(debt|tele|phone|loan|card)[- ]?collect|\bcollectors?\b|"
+     r"recover(y|ies) (officer|agent|executive|specialist|associate)|"
+     r"(officer|agent|executive|specialist|associate)[\s,.–-]+(collections?|recover(y|ies))\b|"
+     r"credit control(ler)?|skip trac"),
+    ("customer", "General",
+     r"(customer|client|guest|patient|member|vip) (services?|support|care|relations?|success|servicing|happiness|"
+     r"engagement|onboarding|access|retention|advisor|adviser|representative|agent|associate|officer|executive|"
+     r"operations|coordinator)|"
+     # "Customer Experience Officer" answers customers; "Specialist, Customer Experience (Design)" designs
+     r"(customer|client|guest|patient) experience (agent|officer|executive|associate|representative|advisor|"
+     r"adviser|coordinator|assistant|ambassador)|"
+     r"(officer|executive|agent|associate|representative)[\s,.–-]+(customer|client|guest|patient) experience|"
+     r"contact cent(er|re)|call cent(er|re)|\bcsr\b|"
+     r"(service|support|chat|call|voice|phone|telephone|reservations?|booking|ticketing|retention) "
+     r"(agent|advisor|adviser|representative|operator|officer|executive)|"
+     r"tele ?(sales|marketing|caller|operator|banking)|telemarket|live chat|\bteller\b|"
+     r"service (officer|associate|executive|ambassador)"),
+    ("sales", "General",
+     r"account (manager|executive|coordinator|associate|officer|representative|specialist)|key account|"
+     r"relationship (officer|manager|executive|associate|banker)|"
+     r"\bsales (executive|coordinator|representative|officer|consultant|advisor|adviser|specialist|"
+     r"support|administrator|admin|agent|trainee)|"
+     r"business development (executive|representative|associate|officer|coordinator|specialist)|"
+     r"\b[bs]dr\b|inside sales|direct sales|pre[- ]?sales|(customer|merchant|client) acquisition|"
+     r"partnerships? (executive|associate|coordinator)|commercial (executive|officer|coordinator|associate)|"
+     # the banks' own names for a salesperson
+     r"personal bank(ing|er)\b|(retail|personal|business) banking (executive|officer|advisor|adviser|associate|"
+     r"representative)|(islamic|personal|home|auto|consumer) finance (executive|advisor|adviser|officer)|"
+     r"mortgage (advisor|adviser|officer|consultant)"),
+    ("admin", "General",
+     r"admin(istrative|istration)?[ -]+(assistant|officer|executive|coordinator|associate|support|specialist|clerk)|"
+     r"(?<!front )office (assistant|administrator|coordinator|executive|admin)|administrative|"
+     r"(operations?|project|contracts?|business) administrator|general administration|"
+     r"data entry|back[- ]?office|document control(ler)?|\bcoordinator\b|\bsecretary\b|"
+     r"(personal|executive|team|hr|human resources|logistics|procurement|purchasing|customs|shipping|"
+     r"documentation|operations|travel) (assistant|clerk)|"
+     r"operations (executive|officer|assistant|coordinator|support|specialist|associate)|"
+     r"\b(officer|executive|associate|assistant)[\s,.–-]+(\w+ )?operations\b|"
+     r"account opening|business support"),
     ("analyst", "Data_Analyst", r"\banalyst\b"),
     ("graduate", "Data_Analyst",
      r"graduate|trainee|fresh(er)? grad|entry[- ]level|early (careers?|talent)|rotational|campus|apprentice"),
 ]
 FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
+WIDE_FAMILIES = {"collections", "customer", "sales", "admin"}
+
+
+def track_of(family):
+    """'core' for the data and tech lanes and graduate programmes, 'wide' for the wider net."""
+    return "wide" if family in WIDE_FAMILIES else "core"
+
 
 # Titles never relevant, whatever family they would otherwise match.
 EXCLUDE_RE = re.compile(
@@ -178,10 +229,7 @@ EXCLUDE_RE = re.compile(
     r"\bnurse|physician|doctor|surgeon|pharmacist|therapist|psycholog|behaviou?ral analyst|dietitian|dentist|"
     r"oncology|immunology|cardiology|vaccine|respiratory|ophthalm|optometr|optician|dermatolog|neuroscience|"
     r"rare disease|laborator|\blab (technical|support|technician|assistant)|"
-    r"driver|cashier|\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|"
-    r"inside sales|telesales|account (executive|manager|director|representative)|business development|"
-    r"\b[bs]dr\b|(customer|merchant|client) acquisition|"
-    r"call cent|receptionist|data entry|security guard|cyber|soc analyst|security analyst|threat|"
+    r"driver|cashier|security guard|cyber|soc analyst|security analyst|threat|"
     r"penetration|information security|infosec|\bgrc\b|\biam\b|identity (and|&) access|legal|paralegal|"
     r"people operations|talent acquisition|recruit(er|ment|ing)|payroll|workplace (operations|experience)|"
     r"facilit(y|ies)|\bpermits?\b|embedded|firmware|fpga|"
@@ -190,9 +238,103 @@ EXCLUDE_RE = re.compile(
     r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista|"
     r"data recovery|quality control|distillates|gasoil|"
     # talent pools, career fairs and open applications are not vacancies
-    r"talent pool|talent community|career fair|open day|open application|hiring event|walk[- ]in",
+    r"talent pool|talent community|career fair|open day|open application|hiring event|"
+    r"future (openings?|opportunit|vacanc)",
     re.I,
 )
+# A walk-in day is how call centres and sales teams hire, so the wider net keeps one; for a data or
+# tech role it is a general hiring event, not a vacancy.
+WALK_IN_RE = re.compile(r"walk[- ]?in", re.I)
+
+# A job whose own name is a wider-net role. It goes to that lane even when the title also names a
+# data or tech product: "Tableau Account Executive" sells Tableau, "AI Sales Executive" sells.
+STRONG_WIDE_RE = re.compile(
+    r"account (manager|executive|representative|coordinator)|key account|"
+    r"\bsales (executive|representative|officer|consultant|coordinator|specialist|agent|advisor|adviser)|"
+    r"business development (executive|representative|associate|officer)|\b[bs]dr\b|inside sales|"
+    r"relationship (officer|manager|banker)|"
+    r"customer (service|support|care|success) (representative|agent|officer|executive|advisor|adviser|associate|"
+    r"specialist|manager|consultant)|(call|contact) cent(er|re)|tele ?(sales|marketing|caller)|"
+    r"collections? (officer|agent|executive|specialist)|debt collect|\bteller\b",
+    re.I,
+)
+
+# Sales titles outside the wider net's own ("Sales Executive", "Account Manager"): a sales role is
+# kept only when a lane names it, or when it is an analyst or operations role as before.
+OTHER_SALES_RE = re.compile(
+    r"\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|business development",
+    re.I,
+)
+
+# Wider net only. Out: the shop floor, field and commission-only work, short contracts and remote
+# roles (no work visa comes with those), errand jobs, and roles that need training in their field.
+WIDE_EXCLUDE_RE = re.compile(
+    r"boutique|showroom|\bstore\b|\bmall\b|\bshop\b|fashion|beauty|fragrance|perfume|cosmetic|make ?up|jewel|"
+    r"watch(es)?\b|luxury|retail (sales|associate|assistant)|sales floor|"
+    r"\bfield\b|outdoor|van sales|door[- ]to[- ]door|commission|freelanc|part[- ]?time|temporary|\btemp\b|"
+    r"maternity cover|\bremote\b|work from home|\bwfh\b|"
+    r"promoter|hostess|\bspa\b|salon|\bgym\b|fitness|office boy|tea boy|\bhelper\b|cleaner|messenger|"
+    r"care assistant|caregiver|site coordinator|construction|clinical|nursing|academic|school|admissions?|"
+    r"sales engineer|(?<!customer )service advis[eo]r|after[- ]?sales|\bdesign\b|project specialist|"
+    r"company secretary|corporate secretary",
+    re.I,
+)
+# Sales only: selling property, insurance, medicines or staffing needs a licence, a degree or a
+# client list of one's own, and most of it pays commission alone.
+SALES_EXCLUDE_RE = re.compile(
+    r"real estate|propert(y|ies)|leasing|\bbroker|off[- ]plan|medical (rep|sales)|pharma\w* (rep|sales)|"
+    r"insurance (agent|advisor|adviser|consultant|sales)|manpower",
+    re.I,
+)
+# A coordinator of a specialist field has that field's training ("Radiology Coordinator", "BIM
+# Coordinator"); an office, sales, logistics or operations coordinator is the wider net's.
+FIELD_COORDINATOR_RE = re.compile(
+    r"radiolog|trauma|medical|matern|childcare|clinic|nurs|surg|transplant|oncolog|therap|"
+    r"engineering|\bbim\b|building information|security|technical|education|outreach|research|quality|"
+    r"\bsite\b|\bmep\b|events?\b|wedding|social media|marketing|content|public relations|\bpr\b",
+    re.I,
+)
+# Wider net only: a role sold to large clients, or a title that itself asks for experience
+# ("Enterprise Account Executive", "Collection Officer - Bank Experience Must"), is not a newcomer's.
+WIDE_EXPERIENCED_RE = re.compile(
+    r"enterprise|strategic|key account|mid[- ]?market|institutional|"
+    r"(corporate|major|global|named|national) accounts?\b",
+    re.I,
+)
+EXPERIENCE_ASKED_RE = re.compile(
+    r"\bexperienced\b|\bexp\b|(?<!customer )(?<!client )(?<!guest )(?<!patient )(?<!member )(?<!user )"
+    r"(?<!employee )\bexperience\b",
+    re.I,
+)
+NO_EXPERIENCE_RE = re.compile(r"\b(no|without|zero)\b[^|()]{0,25}\bexperience|\bfresh", re.I)
+
+# A title that asks for a language other than English or Arabic ("Customer Service Agent - Russian
+# Speaker"). "Russian or Arabic Speaker" stays, "Russian and Arabic" does not. Edit the list for the
+# languages you speak.
+OTHER_LANGUAGE_RE = re.compile(
+    r"\b(russian|french|german|chinese|mandarin|cantonese|hindi|urdu|tagalog|spanish|italian|turkish|persian|"
+    r"farsi|malayalam|tamil|korean|japanese|portuguese|ukrainian|kazakh|uzbek|romanian|polish|hebrew|greek|"
+    r"dutch|swedish|bengali|sinhala|nepali|vietnamese|thai|indonesian|pashto|kurdish|armenian|serbian|czech)"
+    r"\b(\s*(and|or|&|/|,|\+)\s*\w+){0,3}[ -]*(speak|language|native|fluent)|"
+    r"\b(speak\w*|fluent in|native) (russian|french|german|chinese|mandarin|"
+    r"hindi|urdu|tagalog|spanish|italian|turkish|persian|farsi|korean|japanese|portuguese|ukrainian)\b",
+    re.I,
+)
+ARABIC_RE = re.compile(r"\barabic\b", re.I)
+ARABIC_AS_WELL_RE = re.compile(r"(\band\b|&|\+)\s*arabic\b|\barabic( speak\w*| language)?\s*(\band\b|&|\+)", re.I)
+
+
+def other_language(title):
+    """True when a title asks for a language the search does not cover. Arabic as the alternative
+    ("Arabic Speaker / Malayalam Speaker") is enough; Arabic on top of another language is not."""
+    return bool(OTHER_LANGUAGE_RE.search(title)) and (
+        not ARABIC_RE.search(title) or bool(ARABIC_AS_WELL_RE.search(title)))
+
+
+# Not employers: sites that repost other companies' vacancies under their own name, most of them
+# remote roles nobody in the UAE stands behind, and a poster whose generic ads (five in one sample
+# of 181 Indeed results) lead to a third-party site instead of an employer's.
+REPOSTER_RE = re.compile(r"\bjoblet\b|\bjobgether\b|^stylo$", re.I)
 
 # Finance, risk and control titles: dropped unless the title also names a technical role
 # ("Associate Support Engineer - Treasury & Risk", "AML Data Analyst" stay).
@@ -265,12 +407,25 @@ def classify(title):
     t = clean(title)
     if not t:
         return None, "no-title"
-    if EXCLUDE_RE.search(t) or (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)):
+    if EXCLUDE_RE.search(t):
         return None, "excluded-title"
     if INTERN_RE.search(t):
         return None, "internship"
+    if other_language(t):
+        return None, "other-language"
+    named_wide = STRONG_WIDE_RE.search(t)
     for family, cv, rx in FAMILIES:
+        if named_wide and family not in WIDE_FAMILIES:
+            continue
         if rx.search(t):
+            if family in WIDE_FAMILIES:
+                if not named_wide and ANALYST_RE.search(t):
+                    continue  # "Client Services Analyst": an analyst stays in the data and tech lanes
+                # "Collections Officer - Credit Cards" is a wider-net role, whatever finance word it carries
+                return wider_net(family, cv, t)
+            if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or OTHER_SALES_RE.search(t) \
+                    or WALK_IN_RE.search(t):
+                return None, "excluded-title"
             if family == "graduate":
                 if GRAD_EXCLUDE_RE.search(t):
                     return None, "graduate-other-discipline"
@@ -279,7 +434,25 @@ def classify(title):
                         cv = variant
                         break
             return family, cv
+    if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or OTHER_SALES_RE.search(t) \
+            or WALK_IN_RE.search(t):
+        return None, "excluded-title"
     return None, "no-family"
+
+
+ANALYST_RE = re.compile(r"\banalyst\b", re.I)
+
+
+def wider_net(family, cv, t):
+    """The wider net's own checks on a title one of its lanes matched: (family, cv) or (None, reason)."""
+    if WIDE_EXCLUDE_RE.search(t) or (family == "sales" and SALES_EXCLUDE_RE.search(t)):
+        return None, "excluded-title"
+    if family == "admin" and re.search(r"\bcoordinator\b", t, re.I) and FIELD_COORDINATOR_RE.search(t):
+        return None, "excluded-title"
+    asks = EXPERIENCE_ASKED_RE.search(t) and not NO_EXPERIENCE_RE.search(t) and min_years(t) is None
+    if WIDE_EXPERIENCED_RE.search(t) or asks:
+        return None, "experienced-role"  # a stated number of years is left to the years rule
+    return family, cv
 
 
 SENIOR_HARD_RE = re.compile(
@@ -289,7 +462,14 @@ SENIOR_HARD_RE = re.compile(
     r"associate (manager|director|principal|partner|vice president))\b",
     re.I,
 )
-SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert)\b", re.I)
+SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert|supervisor|team leader|shift leader)\b", re.I)
+# Words that name the work, not a rank: an account manager looks after client accounts, an assistant
+# relationship manager is a bank's junior salesperson, "lead generation" is about sales leads.
+ROLE_MANAGER_RE = re.compile(
+    r"\baccount manager\b|\b(assistant|associate|junior) relationship manager\b|"
+    r"\blead (generation|qualification|gen|management|nurturing|conversion|sourcing)\b",
+    re.I,
+)
 # A second level or higher: "Data Analyst II", "Software Engineer ll" (typed with two L's), "SDE 2",
 # "Full Stack Developer [L2]", "Level 3", "Tier 2 Support". The first level stays ("Engineer I", "L1").
 LEVEL_RE = re.compile(
@@ -312,7 +492,7 @@ def seniority(title):
         return "senior"
     junior_words = {w.lower() for w in JUNIOR_RE.findall(t)}
     level = LEVEL_RE.search(t) and not FIRST_LEVEL_RE.search(t)
-    if SENIOR_SOFT_RE.search(t) or level:
+    if SENIOR_SOFT_RE.search(ROLE_MANAGER_RE.sub(" ", t)) or level:
         # "Senior Associate" is a grade of its own (three to six years at the Big Four and the like), and
         # so is "Associate Engineer II": "associate" alone does not make such a title junior, the other
         # words do ("Graduate Engineer II")
@@ -553,6 +733,8 @@ def job_key(company, title):
 FAMILY_WEIGHT = {
     "data_analyst": 3.0, "bi": 3.0, "data_science": 3.0, "ai_ml": 3.0, "data_eng": 3.0,
     "graduate": 2.6, "software": 2.6, "product": 2.5, "business": 2.3, "analyst": 2.0, "it": 1.8,
+    # the wider net ranks below the data and tech lanes
+    "customer": 1.7, "collections": 1.7, "sales": 1.5, "admin": 1.5,
 }
 OLD_AFTER_DAYS = 30  # an employer posting open longer than this is ranked lower; aggregator posts are dropped sooner
 

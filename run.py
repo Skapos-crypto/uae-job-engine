@@ -18,18 +18,19 @@ import yaml
 
 from engine import sources
 from engine.http import Http
-from engine.util import (DUBAI, FACTS_VERSION, GRAD_TITLE_RE, NO_SPONSOR_RE, OWN_VISA_RE, SOURCE_RANK, city_of, classify,
-                         elsewhere, evidence, fresh_ok, is_agency, is_uae, job_key, min_years, nationals, score,
-                         seniority, today_dubai)
+from engine.util import (DUBAI, FACTS_VERSION, GRAD_TITLE_RE, NO_SPONSOR_RE, OWN_VISA_RE, REPOSTER_RE, SOURCE_RANK,
+                         city_of, classify, elsewhere, evidence, fresh_ok, is_agency, is_uae, job_key, min_years,
+                         nationals, score, seniority, today_dubai, track_of)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
 AGGREGATOR_TYPES = {"indeed", "linkedin", "google", "bayt"}
 STALE_DAYS = 21          # aggregator postings older than this are dropped
 EMPLOYER_STALE_DAYS = 120  # employer and board postings older than this are dropped: evergreen ads, not openings
-CARRY_DAYS = 3           # keep jobs from sources that did not run this time for this long
+KEEP_DAYS = 7            # a role stays in the list this long after it was last seen (the carry-over step in main)
+STREAK_SHOW_DAYS = 3     # a failing source that has not run for this long leaves the status panel
 FORGET_DAYS = 60         # forget dedupe history after this long
-MAX_DETAILS = 160        # cap on full-description fetches per run
+MAX_DETAILS = 300        # cap on full-description fetches per run (each page is read once, then cached)
 PROBE_EVERY_DAYS = 6
 WORKERS = 32             # threads only wait their turn: the Http client allows one request per host at a time
 REJECTED_PER_REASON = 60
@@ -237,12 +238,16 @@ def prefilter(job):
         return None, "not-uae", None
     if elsewhere(job["title"]):
         return None, "title-elsewhere", None
+    if REPOSTER_RE.search(job.get("employer") or ""):
+        return None, "reposting-site", None
     family, cv = classify(job["title"])
     if family is None:
         return None, cv, None
     level = seniority(job["title"])
     if level == "senior":
         return None, "senior", None
+    if (min_years(job["title"]) or 0) > MAX_YEARS:  # "Sales Executive (5 Years UAE Experience)"
+        return None, TOO_MANY_YEARS, None
     return family, cv, level
 
 
@@ -438,7 +443,7 @@ def recheck(r, today):
     flags += ["agency"] if is_agency(r["employer"]) else []
     if r.get("min_years") is not None and r["min_years"] <= 1 and "entry_level" not in flags:
         flags.append("entry_level")  # a row kept before this mark existed: its years are on record
-    r.update(family=family, cv=cv, seniority=level, age_days=age, flags=flags,
+    r.update(family=family, cv=cv, seniority=level, age_days=age, flags=flags, track=track_of(family),
              is_new=r["first_seen"] == str(today))
     r["score"] = score(r)
     return True
@@ -523,7 +528,7 @@ def run_status(health, streaks, records, today):
               "blocked": blocked,
               # a source switched off in the config drops out of the panel after a few days
               "failing_in_a_row": {k: v["fails"] for k, v in streaks.items() if v.get("fails", 0) >= STUCK_AFTER
-                                   and v.get("ran", "") >= str(today - timedelta(days=CARRY_DAYS))},
+                                   and v.get("ran", "") >= str(today - timedelta(days=STREAK_SHOW_DAYS))},
               "new_last_7_days": week}
     pages = health.get("_linkedin_pages")
     if pages:
@@ -557,7 +562,7 @@ def to_record(j):
         "posted": str(j["posted"]) if j.get("posted") else None, "age_days": j.get("age_days"),
         "min_years": j.get("min_years"), "flags": j.get("flags", []), "first_seen": j["first_seen"],
         "last_seen": j["last_seen"], "is_new": j["is_new"], "score": j["score"],
-        "snippet": (j.get("desc") or "")[:280], "apply_url": apply_url(j),
+        "snippet": (j.get("desc") or "")[:280], "apply_url": apply_url(j), "track": track_of(j["family"]),
     }
 
 
@@ -572,6 +577,8 @@ FAMILY_LABEL = {
     "data_analyst": "Data analyst", "bi": "BI / reporting", "data_science": "Data science",
     "ai_ml": "AI / ML", "data_eng": "Data engineering", "product": "Product", "business": "Business analysis",
     "software": "Software / backend", "it": "IT", "analyst": "Analyst (other)", "graduate": "Graduate programme",
+    "customer": "Customer service / call centre", "collections": "Collections", "sales": "Sales / accounts",
+    "admin": "Admin / coordination",
 }
 
 
@@ -671,37 +678,24 @@ def write_markdown(records, summary, health_rows, status, full):
     lines = [
         "# UAE junior roles: %d open, %d new today" % (summary["total"], summary["new_today"]),
         "",
-        "Updated %s Dubai time. Sorted new first, then by fit. "
-        "Lanes: data, BI, data science, AI/ML, data engineering, product, business analysis, "
-        "software/backend, IT, graduate programmes. Senior and second-level titles, internships, "
-        "nationals-only, %s and "
-        "frontend/mobile roles are filtered out." % (now, TOO_MANY_YEARS),
+        "Updated %s Dubai time. Two lists, each sorted new first, then by fit: data and tech roles "
+        "(data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, "
+        "IT, graduate programmes), then a wider net (customer service and call centre, sales and account "
+        "management, collections, admin and coordination). Senior and second-level titles, internships, "
+        "nationals-only, %s and frontend/mobile roles are filtered out. A role stays for %d days "
+        "after it was last seen." % (now, TOO_MANY_YEARS, KEEP_DAYS),
         "",
-    ] + status_lines(status, full) + [
-        "| # | New | Role | Employer | City | Lane | Posted | Found on | Notes |",
-        "|---|---|---|---|---|---|---|---|---|",
-    ]
-    for i, r in enumerate(records, 1):
-        notes = []
-        if "nationals_preferred" in r["flags"]:
-            notes.append("UAE nationals preferred")
-        if "own_visa_preferred" in r["flags"]:
-            notes.append("prefers own visa")
-        if "agency" in r["flags"]:
-            notes.append("agency or unnamed employer")
-        if r.get("min_years") is not None:
-            notes.append("asks %d yr%s" % (r["min_years"], "" if r["min_years"] == 1 else "s"))
-        if "entry_level" in r["flags"] and (r.get("min_years") is None or r["min_years"] > 1):
-            notes.append("entry level")
-        if "mid_senior" in r["flags"]:
-            notes.append("LinkedIn says mid-senior")
-        if r.get("apply_url"):
-            notes.append("[employer site](%s)" % md_url(r["apply_url"]))
-        lines.append("| %d | %s | [%s](%s) | %s | %s | %s | %s | %s | %s |" % (
-            i, "🆕" if r["is_new"] else "", md_escape(r["title"]), r["url"], md_escape(r["employer"]),
-            r["city"], FAMILY_LABEL.get(r["family"], r["family"]), r["posted"] or "",
-            found_on(r), "; ".join(notes)))
-    lines += ["", "## Sources this run", "", "| Source | Status | Jobs fetched |", "|---|---|---|"]
+    ] + status_lines(status, full)
+    today = today_dubai()
+    core = [r for r in records if r.get("track", "core") == "core"]
+    wide = [r for r in records if r.get("track") == "wide"]
+    for heading, rows in (("Data, AI, software, IT and graduate programmes", core),
+                          ("Wider net: customer service, sales, collections, admin", wide)):
+        lines += ["## %s (%d, %d new today)" % (heading, len(rows), sum(1 for r in rows if r["is_new"])), "",
+                  "| # | New | Role | Employer | City | Lane | Posted | Found on | Notes |",
+                  "|---|---|---|---|---|---|---|---|---|"]
+        lines += [table_row(i, r, today) for i, r in enumerate(rows, 1)] + [""]
+    lines += ["## Sources this run", "", "| Source | Status | Jobs fetched |", "|---|---|---|"]
     for sid, h in health_rows:
         status = "ok" if h.get("ok") else ("not found" if h.get("not_found") else "failed")
         if h.get("blocked") and h.get("meta"):
@@ -713,6 +707,32 @@ def write_markdown(records, summary, health_rows, status, full):
         lines.append("| %s | %s | %s |" % (sid, status, h.get("fetched", 0)))
     with open(os.path.join(DATA, "latest.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
+
+
+def table_row(i, r, today):
+    """One role as a row of latest.md; Notes says what the posting itself gave away."""
+    notes = []
+    if "nationals_preferred" in r["flags"]:
+        notes.append("UAE nationals preferred")
+    if "own_visa_preferred" in r["flags"]:
+        notes.append("prefers own visa")
+    if "agency" in r["flags"]:
+        notes.append("agency or unnamed employer")
+    if r.get("min_years") is not None:
+        notes.append("asks %d yr%s" % (r["min_years"], "" if r["min_years"] == 1 else "s"))
+    if "entry_level" in r["flags"] and (r.get("min_years") is None or r["min_years"] > 1):
+        notes.append("entry level")
+    if "mid_senior" in r["flags"]:
+        notes.append("LinkedIn says mid-senior")
+    if r.get("apply_url"):
+        notes.append("[employer site](%s)" % md_url(r["apply_url"]))
+    unseen = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days
+    if unseen >= 2:  # kept although no run has seen it since: it may have closed
+        notes.append("last seen %d days ago" % unseen)
+    return "| %d | %s | [%s](%s) | %s | %s | %s | %s | %s | %s |" % (
+        i, "🆕" if r["is_new"] else "", md_escape(r["title"]), r["url"], md_escape(r["employer"]),
+        r["city"], FAMILY_LABEL.get(r["family"], r["family"]), r["posted"] or "",
+        found_on(r), "; ".join(notes))
 
 
 # ---------------------------------------------------------------- main
@@ -746,12 +766,14 @@ def main():
     fetch_details(http, candidates, cache, health)
     read_linkedin_pages(candidates, seen, cache, health, int(search.get("linkedin_pages") or 0), str(today))
 
-    accepted, verdicts, page_drops = [], {}, {}
+    accepted, verdicts, page_drops, judged_out = [], {}, {}, set()
     for j in candidates:
         reason = final_checks(j, today, cache)
         if not reason:
             accepted.append(j)
             continue
+        if reason != "stale":  # an old ad says nothing about the role: a fresh copy elsewhere may stay
+            judged_out.add(j["key"])
         entry = {"title": j["title"], "employer": j["employer"], "source": j["source"], "reason": reason,
                  "url": j.get("url")}
         if reason in DESC_REASONS:
@@ -817,19 +839,22 @@ def main():
     records = [to_record(j) for j in merged.values()]
     query_yield(raw, candidates, accepted, merged, health)
 
-    # carry over jobs whose source did not run successfully this time
+    # A role stays for KEEP_DAYS after it was last seen. Kept: roles from a source that failed or did
+    # not run this time (the morning run skips the job sites), and roles from the job sites that
+    # today's searches no longer return, since those show only the newest postings of three days. Not
+    # kept: a role its employer's own site stopped listing (it closed), one this run looked at and
+    # rejected, and one that no longer passes today's rules.
     last = load_json("latest.json", {})
     previous = last.get("jobs", [])
     have = {r["key"] for r in records}
     carried = 0
     for r in previous:
         r["key"] = job_key(r["employer"], r["title"])  # records saved under an older key
-        if r["key"] in have:
+        if r["key"] in have or r["key"] in judged_out:
             continue
         src_ok = any(h.get("ok") for sid, h in health.items() if sid == r["source"])
-        recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= CARRY_DAYS
-        if not src_ok and recent and recheck(r, today):
-            # the morning run skips JobSpy, so the last full run's finds are carried; they stay new all day
+        recent = (today - datetime.strptime(r["last_seen"], "%Y-%m-%d").date()).days <= KEEP_DAYS
+        if recent and (not src_ok or r["source_type"] in AGGREGATOR_TYPES) and recheck(r, today):
             r.setdefault("apply_url", "")
             records.append(r)
             have.add(r["key"])
@@ -843,13 +868,14 @@ def main():
     cache = {k: v for k, v in cache.items()  # "u:" keys only: older entries were keyed by job key
              if k.startswith("u:") and datetime.strptime(v.get("d", today_s), "%Y-%m-%d").date() >= cutoff}
 
-    by_family, by_source = {}, {}
+    by_family, by_source, by_track = {}, {}, {"core": 0, "wide": 0}
     for r in records:
         by_family[r["family"]] = by_family.get(r["family"], 0) + 1
         by_source[r["source"].split(":")[0]] = by_source.get(r["source"].split(":")[0], 0) + 1
+        by_track[r.get("track", "core")] += 1
     summary = {
         "total": len(records), "new_today": sum(1 for r in records if r["is_new"]),
-        "carried_over": carried, "raw_postings": len(raw), "by_family": by_family,
+        "carried_over": carried, "raw_postings": len(raw), "by_family": by_family, "by_track": by_track,
         "by_source": by_source, "http_calls": http.calls, "verdicts_shared": shared,
         "rejected": {},
     }

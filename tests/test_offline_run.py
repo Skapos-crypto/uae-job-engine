@@ -39,6 +39,7 @@ LI_PAGES.update({"9010": (200, "/jobs/view/9010", "Build dashboards for the sale
 LI_LEVELS = {"9002": "Entry level", "9010": "Entry level", "9011": "Mid-Senior level", "9012": "Internship",
              "9013": "Internship"}
 LI_ASKED = []  # LinkedIn job pages requested, in order
+WIDE_ROWS = []  # (title, employer, description): more Bayt results, for the wider-net scenario
 
 
 class FakeLinkedIn:
@@ -90,7 +91,10 @@ def fake_scrape_jobs(site_name, search_term, **kw):
                        "job_url_direct": "https://acme.wd3.myworkdayjobs.com/AcmeCareers/job/Dubai/Junior_R1?src=x"},
                       {"job_url": "https://www.bayt.com/en/uae/jobs/python-developer-2/", "company": "Ziina Technologies",
                        "title": "Python Developer - Junior", "location": "Abu Dhabi, UAE",
-                       "date_posted": run.today_dubai(), "description": ""}])
+                       "date_posted": run.today_dubai(), "description": ""}] + [
+                      {"job_url": "https://www.bayt.com/en/uae/jobs/wide-%d/" % n, "company": company, "title": title,
+                       "location": "Dubai, UAE", "date_posted": run.today_dubai(), "description": text}
+                      for n, (title, company, text) in enumerate(WIDE_ROWS)])
 
 
 class FakeResp:
@@ -605,6 +609,92 @@ def main():
         assert latest7["summary"]["status"]["linkedin_pages"]["dropped"] == {"internship": 1}
         md7 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
         assert "LinkedIn says mid-senior" in md7 and "1 dropped after reading (1 internship)" in md7
+        assert all(j["track"] == "core" for j in latest7["jobs"])
+
+        # the wider net: customer service, sales, collections and admin roles are kept in a list of
+        # their own, below the data and tech roles. Reposting sites, roles for experienced people and
+        # roles that need another language are out; a title that states its years meets the years rule
+        WIDE_ROWS.extend([
+            ("Call Center Agent - Arabic Speaker", "Desert Telecom", "No prior experience required; training is provided."),
+            ("Collection Officer", "Gulf Recovery", "1 year of experience in collections."),
+            ("Customer Service Officer", "Harbour Bank", "Minimum 4 years of experience in a bank branch."),
+            ("Account Manager", "Joblet-AI", "A remote role."),
+            ("Enterprise Account Executive", "BigSoft", "Sell to the largest accounts."),
+            ("Sales Executive (5 Years UAE Experience)", "Old Hands Trading", ""),
+            ("Customer Service Agent - Russian Speaker", "Volga Travel", "Russian is a must."),
+            ("Relationship Manager", "Harbour Bank", "Manage a portfolio of clients."),
+        ])
+        before = dict(latest7["summary"]["rejected"])
+        run.main()
+        latest8 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        titles8 = {j["title"]: j for j in latest8["jobs"]}
+        assert set(titles8) == set(titles7) | {"Call Center Agent - Arabic Speaker", "Collection Officer"}, \
+            set(titles8) ^ set(titles7)
+        agent, officer = titles8["Call Center Agent - Arabic Speaker"], titles8["Collection Officer"]
+        assert agent["family"] == "customer" and agent["track"] == "wide" and "entry_level" in agent["flags"], agent
+        assert officer["family"] == "collections" and officer["track"] == "wide" and officer["min_years"] == 1, officer
+        assert all(j["track"] == "core" for j in latest8["jobs"] if j["title"] in titles7)
+        assert agent["score"] == 1.7 + 1.0 + 0.5 + 1.0, agent["score"]  # lane, new, this week, entry level
+        after = latest8["summary"]["rejected"]
+        for reason, more in (("reposting-site", 1), ("experienced-role", 1), ("other-language", 1), ("3+ years", 2),
+                             ("senior", 1)):
+            assert after.get(reason, 0) - before.get(reason, 0) == more, (reason, before, after)
+        md8 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        core_at = md8.index("## Data, AI, software, IT and graduate programmes (%d, " % len(titles7))
+        wide_at = md8.index("## Wider net: customer service, sales, collections, admin (2, 2 new today)")
+        assert core_at < md8.index("Junior Data Scientist") < wide_at < md8.index("Call Center Agent - Arabic Speaker")
+        assert md8.count("| 1 | ") == 2, md8  # each list is numbered from 1
+        assert "Customer service / call centre" in md8 and "| Collections |" in md8
+
+        # a role stays 7 days after it was last seen. Rows planted as if earlier runs had kept them:
+        latest_path = os.path.join(run.DATA, "latest.json")
+        with open(latest_path) as fh:
+            planted = json.load(fh)
+
+        def earlier(title, employer, last_seen, **kw):
+            return dict(officer, key="planted", title=title, employer=employer, first_seen="2026-11-01",
+                        last_seen=last_seen, is_new=False, posted="2026-11-01",
+                        url="https://www.bayt.com/en/uae/jobs/%s/" % title.lower().replace(" ", "-"), **kw)
+
+        planted["jobs"] += [
+            # on a job site, last returned five days ago: kept, and the list says so
+            earlier("Telesales Executive", "Sand Telecom", "2026-11-05"),
+            # on a job site, last returned nine days ago: gone
+            earlier("Recovery Officer", "Dune Finance", "2026-11-01"),
+            # kept yesterday, but today's run reads its description and finds four years asked: gone
+            earlier("Customer Service Officer", "Harbour Bank", "2026-11-09"),
+            # on an employer's own board, which answers today and no longer lists it: it closed
+            earlier("Junior Platform Engineer", "Ziina", "2026-11-09", source="ashby:ziina", source_type="ashby",
+                    family="software", cv="Backend_Engineer", track="core", seen_on=["ashby:ziina"]),
+            # on an employer's board that fails today, last seen six days ago: kept
+            earlier("Operations Coordinator", "Careem", "2026-11-04", source="greenhouse:careem",
+                    source_type="greenhouse", family="admin", cv="General", seen_on=["greenhouse:careem"]),
+            # found on a job site yesterday; the employer's own board carries a 2023 ad of the same name,
+            # which today's run drops as stale. An old ad says nothing about the role: kept
+            earlier("Backend Developer", "dubizzle Group", "2026-11-09", family="software", cv="Backend_Engineer",
+                    track="core"),
+        ]
+        with open(latest_path, "w") as fh:
+            json.dump(planted, fh)
+        FAILING.add("careem")
+        run.main()
+        FAILING.discard("careem")
+        latest9 = json.load(open(os.path.join(run.DATA, "latest.json")))
+        titles9 = {j["title"]: j for j in latest9["jobs"]}
+        assert set(titles9) == set(titles8) | {"Telesales Executive", "Operations Coordinator", "Backend Developer"}, \
+            set(titles9) ^ set(titles8)
+        tele, coord = titles9["Telesales Executive"], titles9["Operations Coordinator"]
+        assert tele["last_seen"] == "2026-11-05" and not tele["is_new"] and tele["track"] == "wide", tele
+        assert tele["family"] == "customer" and coord["last_seen"] == "2026-11-04" and coord["track"] == "wide", coord
+        assert titles9["Backend Developer"]["source"] == "jobspy:bayt" and titles9["Backend Developer"]["track"] == "core"
+        assert latest9["summary"]["carried_over"] == 4, latest9["summary"]  # those three and Careem's row of today
+        assert latest9["summary"]["by_track"] == {"core": len(titles7) + 1, "wide": 4}, latest9["summary"]["by_track"]
+        md9 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
+        row = [line for line in md9.splitlines() if "Telesales Executive" in line][0]
+        assert row.endswith("last seen 5 days ago |"), row
+        assert "last seen 6 days ago" in [line for line in md9.splitlines() if "Operations Coordinator" in line][0]
+        assert "A role stays for 7 days after it was last seen." in md9
+        assert md9.count("last seen") == 3, md9  # the two rows and the sentence above; nothing seen today says it
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)
