@@ -13,6 +13,7 @@ import run
 from engine import http as http_mod
 from engine import sources
 from engine import util
+from tools import workday_from_pc
 
 TODAY = date(2026, 11, 10)  # the day the fixtures were written: frozen, so their dates never age out
 
@@ -713,6 +714,32 @@ def main():
         core9 = md9[md9.index("## Data, AI, software"):md9.index("## Wider net")].splitlines()
         news = ["🆕" in line for line in core9 if line.startswith("| ") and "[" in line]
         assert news == sorted(news, reverse=True) and any(news) and not all(news), news  # new rows first
+
+        # Workday read from a PC (tools/workday_from_pc.py): a file of its own, never merged into the
+        # list. The status panel points to it only while Workday refuses this run and the file exists
+        assert run.workday_from_pc() is None
+        quiet = dict(latest9["summary"]["status"], failing={"oracle:NoSites": "no sites set"})
+        assert not any("latest_workday" in line for line in run.status_lines(quiet, True))
+        rows = [j for j in latest9["jobs"] if j["title"] in ("HR Data Analyst", "Call Center Agent - Arabic Speaker",
+                                                             "Collection Officer", "Data Scientist")]
+        text = workday_from_pc.render(rows, {titles9["Data Scientist"]["key"]}, 22, 23,
+                                      {"Shell": "HTTP 429, too many requests"}, "2026-11-10 12:15", TODAY)
+        assert "<!-- read: 2026-11-10 12:15 -->" in text and "22 of 23 employers answered, 4 roles pass" in text, text
+        assert "**Did not answer:** Shell (HTTP 429, too many requests)" in text
+        there = text.index("## Also in latest.md (1)")
+        assert text.index("## Not in latest.md (3)") < text.index("HR Data Analyst") < text.index(
+            "Call Center Agent - Arabic Speaker") < text.index("Collection Officer") < there < text.index("Data Scientist")
+        with open(os.path.join(run.DATA, "latest_workday.md"), "w", encoding="utf-8") as fh:
+            fh.write(text)
+        assert run.workday_from_pc() == "2026-11-10 12:15"
+        refused = {"workday:Mastercard": {"ok": False, "error": "HTTP 429, too many requests"}, "amazon": {"ok": True}}
+        status = run.run_status(refused, {}, latest9["jobs"], TODAY)
+        assert status["workday_from_pc"] == "2026-11-10 12:15", status
+        line = [x for x in run.status_lines(status, True) if "latest_workday.md" in x]
+        assert line and line[0].endswith("last on 2026-11-10 12:15"), run.status_lines(status, True)
+        assert "workday_from_pc" not in run.run_status({"amazon": {"ok": True}}, {}, latest9["jobs"], TODAY)
+        idle = workday_from_pc.render_idle(23, 23, "2026-11-10 12:15")
+        assert "reads Workday again (23 of 23" in idle and "<!-- read: 2026-11-10 12:15 -->" in idle
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)

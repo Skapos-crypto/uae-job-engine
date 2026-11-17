@@ -29,6 +29,7 @@ Everything lands in [`data/`](data), refreshed after every run:
 | `streaks.json` | 📈 Failed runs in a row per source, so a source that keeps failing stands out from a one-off |
 | [`rejected_sample.json`](data/rejected_sample.json) | 🗑️ Up to 60 dropped UAE roles per reason, for tuning the filters. A role dropped for its description carries the sentence that decided it (`why`) |
 | `history/<date>.json` | 📅 Roles first seen on that day |
+| `latest_workday.md` | 🏠 Workday's roles, read from the owner's PC while Workday refuses GitHub's servers (see "Where it looks"). A file of its own: the run above doesn't write it |
 | `seen.json`, `detail_cache.json` | 🧠 Memory between runs: what's been seen, and what each job page said |
 
 `latest.md` opens with a status panel:
@@ -90,6 +91,8 @@ A full run takes up to a quarter of an hour (most of it the slow LinkedIn page r
 | **Own feeds** | Emirates Group (Emirates, dnata), Amazon (UAE only), Deriv |
 | **Startup boards** | Careem, Tamara, Tabby, Chalhoub, Property Finder, Ziina, Checkout.com, qlub, dubizzle, Aldar, Yassir, Kraken, Fuse Energy, Brain Co., Easygenerator, Esri, Deliveroo, Bybit, OKX, Cohere, OpenAI, ElevenLabs and more |
 | **JobSpy** (no login) | LinkedIn and Indeed: 30 searches a day in total, plus up to 20 LinkedIn job pages. Bayt is switched off: it refused every query |
+
+**Workday from a PC.** Since 16 November 2026 Workday answers "too many requests" to the servers GitHub runs this collector on, at the first request of every run, while it answers a home connection. The collector records the refusal and doesn't route around it: no proxy, no other network, no changed headers. Instead, [`tools/workday_from_pc.py`](tools/workday_from_pc.py) lets the repository's owner read Workday from their own PC, with the same client, the same User-Agent, one request every 2 seconds and the same filters. With `--publish` it commits one file, `data/latest_workday.md`, and pushes it (that push doesn't start a run). The main run never merges that file; while Workday refuses it, the status panel links to it. On a day when the collector's own run did read Workday, the script asks Workday nothing. It runs only on days that PC is on, so the file can be a day or two old: its first lines say when it was read.
 
 Some big names aren't covered, and [`config/employers.yaml`](config/employers.yaml) says why for each one. Usually it's because their robots.txt says no, their jobs sit behind a login, or they only post on LinkedIn. Those still show up through the JobSpy searches.
 
@@ -190,7 +193,7 @@ This project reads public listings that the sites' own job searches use, and it 
 - 🤖 **robots.txt is respected.** Sites that say no (some do) are listed as not collected, never worked around.
 - 🔐 **No accounts, logins, cookies or proxies.** Ever.
 - 📉 **Low volume:** two runs a day, 30 JobSpy searches a day in total, and at most 20 LinkedIn job pages, 20 to 40 seconds apart. The spare wake-ups contact no site at all.
-- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it. After two blocked searches in a row, the site is left alone for the rest of the run, and so is any host that answers "too many requests" three times in a row. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
+- 🚫 **When a site blocks it,** that's recorded in `health.json`, and nothing tries to get around it: no proxies, no other networks, no disguised headers. (Workday, which refuses GitHub's servers, can be read from your own PC instead: see "Workday from a PC".) After two blocked searches in a row, the site is left alone for the rest of the run, and so is any host that answers "too many requests" three times in a row. The first refused LinkedIn page ends the page reading for the day, and no pages are read at all if LinkedIn refused the searches.
 
 LinkedIn and Indeed (and Bayt, when it is switched on) don't allow automated access in their terms. JobSpy usage here is deliberately tiny, and you can switch any site off by removing its list from `config/search.yaml` (and the LinkedIn page reading with `linkedin_pages: 0`). JobSpy sends its own browser-style headers, not the User-Agent above, for its searches and the LinkedIn pages alike.
 

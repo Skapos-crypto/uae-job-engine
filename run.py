@@ -534,7 +534,21 @@ def run_status(health, streaks, records, today):
     if pages:
         status["linkedin_pages"] = {k: pages.get(k) for k in (
             "wanted", "tried", "read", "empty", "failed", "blocked", "skipped", "over_limit", "dropped", "error")}
+    if any(k.startswith("workday:") for k in failing) and workday_from_pc():
+        status["workday_from_pc"] = workday_from_pc()
     return status
+
+
+def workday_from_pc():
+    """When data/latest_workday.md was last read ("2026-11-17 12:15"), or None when there is no such
+    file. tools/workday_from_pc.py writes it from a PC while Workday refuses the servers this run is on;
+    this run only points to it."""
+    try:
+        with open(os.path.join(DATA, "latest_workday.md"), encoding="utf-8") as fh:
+            head = fh.read(300)
+    except OSError:
+        return None
+    return head.split("<!-- read: ", 1)[1].split(" -->", 1)[0] if "<!-- read: " in head and " -->" in head else None
 
 
 def sample_rejected(rejected, per_reason=REJECTED_PER_REASON):
@@ -611,6 +625,9 @@ def status_lines(status, full):
                                                        % sites)]
     if st["failing"]:
         lines.append("- **Failing this run:** " + failing_line(st["failing"]))
+    if st.get("workday_from_pc"):
+        lines.append("- **Workday:** it refuses the servers this run is on, so its roles are read from a PC into "
+                     "[latest_workday.md](latest_workday.md), last on %s" % st["workday_from_pc"])
     if st["blocked"]:
         lines.append("- **Blocked:** " + "; ".join("%s, %s" % kv for kv in sorted(st["blocked"].items())))
     if st["failing_in_a_row"]:
