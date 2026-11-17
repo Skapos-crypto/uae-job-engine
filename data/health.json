@@ -1,15 +1,15 @@
 {
  "generated": {
-  "utc": "2026-11-17T07:36:16+00:00",
-  "dubai": "2026-11-17 11:36",
-  "full_run": false,
-  "last_full": "2026-11-16 12:42"
+  "utc": "2026-11-17T09:45:15+00:00",
+  "dubai": "2026-11-17 13:45",
+  "full_run": true,
+  "last_full": "2026-11-17 13:45"
  },
  "sources": {
   "oracle:Dubai Airports": {
    "ok": true,
    "fetched": 1,
-   "ms": 626,
+   "ms": 715,
    "meta": {
     "sites": [
      "CX_1"
@@ -22,7 +22,20 @@
   "oracle:du": {
    "ok": true,
    "fetched": 11,
-   "ms": 733,
+   "ms": 779,
+   "meta": {
+    "sites": [
+     "CX_1001"
+    ],
+    "totals": {
+     "CX_1001": 11
+    }
+   }
+  },
+  "oracle:Emaar": {
+   "ok": true,
+   "fetched": 11,
+   "ms": 792,
    "meta": {
     "sites": [
      "CX_1001"
@@ -35,7 +48,7 @@
   "oracle:Oracle": {
    "ok": true,
    "fetched": 5,
-   "ms": 752,
+   "ms": 963,
    "meta": {
     "sites": [
      "CX_45001"
@@ -48,7 +61,7 @@
   "oracle:AD Ports Group": {
    "ok": true,
    "fetched": 34,
-   "ms": 942,
+   "ms": 1251,
    "meta": {
     "sites": [
      "CX_1"
@@ -58,49 +71,10 @@
     }
    }
   },
-  "oracle:Emirates NBD": {
-   "ok": true,
-   "fetched": 38,
-   "ms": 1115,
-   "meta": {
-    "sites": [
-     "CX_1"
-    ],
-    "totals": {
-     "CX_1": 38
-    }
-   }
-  },
-  "oracle:Emaar": {
-   "ok": true,
-   "fetched": 9,
-   "ms": 1163,
-   "meta": {
-    "sites": [
-     "CX_1001"
-    ],
-    "totals": {
-     "CX_1001": 9
-    }
-   }
-  },
-  "oracle:First Abu Dhabi Bank": {
-   "ok": true,
-   "fetched": 84,
-   "ms": 1312,
-   "meta": {
-    "sites": [
-     "CX_2001"
-    ],
-    "totals": {
-     "CX_2001": 84
-    }
-   }
-  },
   "oracle:KPMG Lower Gulf": {
    "ok": true,
    "fetched": 76,
-   "ms": 1310,
+   "ms": 1386,
    "meta": {
     "sites": [
      "CX_1001"
@@ -110,10 +84,23 @@
     }
    }
   },
+  "oracle:Emirates NBD": {
+   "ok": true,
+   "fetched": 38,
+   "ms": 1426,
+   "meta": {
+    "sites": [
+     "CX_1"
+    ],
+    "totals": {
+     "CX_1": 38
+    }
+   }
+  },
   "oracle:e&": {
    "ok": true,
    "fetched": 24,
-   "ms": 1629,
+   "ms": 1771,
    "meta": {
     "sites": [
      "CX_1"
@@ -123,23 +110,36 @@
     }
    }
   },
+  "oracle:First Abu Dhabi Bank": {
+   "ok": true,
+   "fetched": 83,
+   "ms": 2033,
+   "meta": {
+    "sites": [
+     "CX_2001"
+    ],
+    "totals": {
+     "CX_2001": 83
+    }
+   }
+  },
   "oracle:ADIB": {
    "ok": true,
-   "fetched": 144,
-   "ms": 2916,
+   "fetched": 145,
+   "ms": 3001,
    "meta": {
     "sites": [
      "CX_1"
     ],
     "totals": {
-     "CX_1": 144
+     "CX_1": 145
     }
    }
   },
   "oracle:Emirates Islamic": {
    "ok": true,
    "fetched": 32,
-   "ms": 3458,
+   "ms": 3199,
    "meta": {
     "sites": [
      "CX_2"
@@ -152,7 +152,7 @@
   "oracle:NMC Healthcare": {
    "ok": true,
    "fetched": 149,
-   "ms": 4872,
+   "ms": 4158,
    "meta": {
     "sites": [
      "CX_1"
@@ -164,21 +164,21 @@
   },
   "oracle:Mashreq": {
    "ok": true,
-   "fetched": 367,
-   "ms": 7596,
+   "fetched": 368,
+   "ms": 7665,
    "meta": {
     "sites": [
      "CX_1"
     ],
     "totals": {
-     "CX_1": 367
+     "CX_1": 368
     }
    }
   },
   "oracle:PureHealth": {
    "ok": true,
    "fetched": 28,
-   "ms": 7604,
+   "ms": 8246,
    "meta": {
     "sites": [
      "CX_6007",
@@ -193,7 +193,7 @@
   "phenom:ADCB": {
    "ok": true,
    "fetched": 33,
-   "ms": 4955,
+   "ms": 6753,
    "meta": {
     "total": 33
    }
@@ -201,7 +201,7 @@
   "oracle:SEHA": {
    "ok": true,
    "fetched": 140,
-   "ms": 9571,
+   "ms": 10213,
    "meta": {
     "sites": [
      "CX_1"
@@ -214,52 +214,52 @@
   "phenom:G42": {
    "ok": true,
    "fetched": 49,
-   "ms": 6348,
+   "ms": 6756,
    "meta": {
     "total": 49
    }
   },
   "successfactors:EY": {
    "ok": true,
-   "fetched": 15,
-   "ms": 2874,
+   "fetched": 17,
+   "ms": 3216,
    "meta": {
-    "total": 1150
+    "total": 1156
+   }
+  },
+  "oracle:Aster DM Healthcare": {
+   "ok": true,
+   "fetched": 638,
+   "ms": 13290,
+   "meta": {
+    "sites": [
+     "CX"
+    ],
+    "totals": {
+     "CX": 638
+    }
    }
   },
   "successfactors:PwC Middle East": {
    "ok": true,
    "fetched": 17,
-   "ms": 3240,
+   "ms": 3570,
    "meta": {
     "total": 35
    }
   },
   "jibe:Schneider Electric": {
    "ok": true,
-   "fetched": 26,
-   "ms": 743,
+   "fetched": 29,
+   "ms": 801,
    "meta": {
-    "total": 26
-   }
-  },
-  "oracle:Aster DM Healthcare": {
-   "ok": true,
-   "fetched": 641,
-   "ms": 13557,
-   "meta": {
-    "sites": [
-     "CX"
-    ],
-    "totals": {
-     "CX": 641
-    }
+    "total": 29
    }
   },
   "oracle:SSMC": {
    "ok": true,
    "fetched": 204,
-   "ms": 13571,
+   "ms": 14131,
    "meta": {
     "sites": [
      "CX_1001"
@@ -272,107 +272,107 @@
   "pinpoint:tabby": {
    "ok": true,
    "fetched": 28,
-   "ms": 791,
+   "ms": 1054,
    "meta": {
     "board_total": 28
-   }
-  },
-  "oracle:Dell": {
-   "ok": true,
-   "fetched": 582,
-   "ms": 14815,
-   "meta": {
-    "sites": [
-     "CX_1001"
-    ],
-    "totals": {
-     "CX_1001": 582
-    }
    }
   },
   "teamtailor:careers.chalhoubgroup.com": {
    "ok": true,
    "fetched": 100,
-   "ms": 772,
+   "ms": 161,
    "meta": {
     "board_total": 100
+   }
+  },
+  "oracle:Dell": {
+   "ok": true,
+   "fetched": 586,
+   "ms": 15503,
+   "meta": {
+    "sites": [
+     "CX_1001"
+    ],
+    "totals": {
+     "CX_1001": 586
+    }
    }
   },
   "greenhouse:careem": {
    "ok": true,
    "fetched": 14,
-   "ms": 192,
+   "ms": 122,
    "meta": {
     "board_total": 14
    }
   },
   "teamtailor:propertyfinder": {
    "ok": true,
-   "fetched": 40,
-   "ms": 730,
+   "fetched": 41,
+   "ms": 703,
    "meta": {
-    "board_total": 40
+    "board_total": 41
    }
   },
   "phenom:ADNOC": {
    "ok": true,
-   "fetched": 54,
-   "ms": 8454,
+   "fetched": 56,
+   "ms": 8155,
    "meta": {
-    "total": 54
+    "total": 56
    }
   },
   "greenhouse:tamara": {
    "ok": true,
    "fetched": 37,
-   "ms": 1034,
+   "ms": 1071,
    "meta": {
     "board_total": 37
    }
   },
-  "greenhouse:cobblestoneenergy": {
-   "ok": true,
-   "fetched": 2,
-   "ms": 1846,
-   "meta": {
-    "board_total": 2
-   }
-  },
-  "jibe:M42": {
-   "ok": true,
-   "fetched": 105,
-   "ms": 6264,
-   "meta": {
-    "total": 105
-   }
-  },
   "oracle:DP World": {
    "ok": true,
-   "fetched": 513,
-   "ms": 18020,
+   "fetched": 512,
+   "ms": 17102,
    "meta": {
     "sites": [
      "CX_1",
      "CX_7001"
     ],
     "totals": {
-     "CX_1": 513,
+     "CX_1": 512,
      "CX_7001": 18
     }
+   }
+  },
+  "greenhouse:cobblestoneenergy": {
+   "ok": true,
+   "fetched": 2,
+   "ms": 1732,
+   "meta": {
+    "board_total": 2
    }
   },
   "greenhouse:cobblestoneenergy1": {
    "ok": true,
    "fetched": 3,
-   "ms": 2443,
+   "ms": 2496,
    "meta": {
     "board_total": 3
+   }
+  },
+  "jibe:M42": {
+   "ok": true,
+   "fetched": 105,
+   "ms": 6346,
+   "meta": {
+    "total": 105
    }
   },
   "lever:aldar": {
    "ok": true,
    "fetched": 51,
-   "ms": 964,
+   "ms": 985,
    "meta": {
     "board_total": 51
    }
@@ -380,7 +380,7 @@
   "greenhouse:cobblestoneenergy4": {
    "ok": true,
    "fetched": 2,
-   "ms": 3166,
+   "ms": 3251,
    "meta": {
     "board_total": 2
    }
@@ -388,7 +388,7 @@
   "greenhouse:dmgevents": {
    "ok": true,
    "fetched": 22,
-   "ms": 3174,
+   "ms": 3968,
    "meta": {
     "board_total": 22
    }
@@ -396,143 +396,167 @@
   "ashby:ziina": {
    "ok": true,
    "fetched": 13,
-   "ms": 76,
+   "ms": 112,
    "meta": {
     "board_total": 13
-   }
-  },
-  "lever:Yassir": {
-   "ok": true,
-   "fetched": 117,
-   "ms": 2969,
-   "meta": {
-    "board_total": 117
    }
   },
   "greenhouse:infotrust": {
    "ok": true,
    "fetched": 0,
-   "ms": 4088,
+   "ms": 4334,
    "meta": {
     "board_total": 0
    }
   },
+  "lever:Yassir": {
+   "ok": true,
+   "fetched": 117,
+   "ms": 2707,
+   "meta": {
+    "board_total": 117
+   }
+  },
   "ashby:checkout.com": {
    "ok": true,
-   "fetched": 172,
-   "ms": 1090,
+   "fetched": 171,
+   "ms": 1146,
    "meta": {
-    "board_total": 172
+    "board_total": 171
+   }
+  },
+  "successfactors:Al-Futtaim": {
+   "ok": true,
+   "fetched": 107,
+   "ms": 11516,
+   "meta": {
+    "total": 218
+   }
+  },
+  "attrax:talabat": {
+   "ok": true,
+   "fetched": 125,
+   "ms": 8386,
+   "meta": {
+    "pages": 7
    }
   },
   "workable:bayutdubizzle": {
    "ok": true,
    "fetched": 31,
-   "ms": 60,
+   "ms": 160,
    "meta": {
     "board_total": 31
    }
   },
-  "successfactors:Al-Futtaim": {
+  "lever:weride": {
    "ok": true,
-   "fetched": 101,
-   "ms": 11000,
+   "fetched": 12,
+   "ms": 3389,
    "meta": {
-    "total": 209
-   }
-  },
-  "attrax:talabat": {
-   "ok": true,
-   "fetched": 127,
-   "ms": 9109,
-   "meta": {
-    "pages": 8
+    "board_total": 12
    }
   },
   "ashby:qlub": {
    "ok": true,
    "fetched": 30,
-   "ms": 1295,
+   "ms": 1301,
    "meta": {
     "board_total": 30
-   }
-  },
-  "workable:fuseenergy": {
-   "ok": true,
-   "fetched": 113,
-   "ms": 139,
-   "meta": {
-    "board_total": 113
    }
   },
   "greenhouse:esri": {
    "ok": true,
    "fetched": 479,
-   "ms": 406,
+   "ms": 311,
    "meta": {
     "board_total": 479
+   }
+  },
+  "workable:fuseenergy": {
+   "ok": true,
+   "fetched": 113,
+   "ms": 467,
+   "meta": {
+    "board_total": 113
    }
   },
   "ashby:mexdigital": {
    "ok": true,
    "fetched": 14,
-   "ms": 2150,
+   "ms": 2266,
    "meta": {
     "board_total": 14
    }
   },
+  "lever:binance": {
+   "ok": true,
+   "fetched": 4,
+   "ms": 4672,
+   "meta": {
+    "board_total": 4
+   }
+  },
   "greenhouse:deliveroo": {
    "ok": true,
-   "fetched": 182,
-   "ms": 1031,
+   "fetched": 183,
+   "ms": 1040,
    "meta": {
-    "board_total": 182
+    "board_total": 183
    }
   },
   "teamtailor:qashio": {
    "ok": true,
    "fetched": 13,
-   "ms": 480,
+   "ms": 592,
    "meta": {
     "board_total": 13
-   }
-  },
-  "ashby:kraken.com": {
-   "ok": true,
-   "fetched": 95,
-   "ms": 3044,
-   "meta": {
-    "board_total": 95
-   }
-  },
-  "greenhouse:elastic": {
-   "ok": true,
-   "fetched": 388,
-   "ms": 1944,
-   "meta": {
-    "board_total": 388
-   }
-  },
-  "ashby:brainco": {
-   "ok": true,
-   "fetched": 48,
-   "ms": 3659,
-   "meta": {
-    "board_total": 48
    }
   },
   "teamtailor:dubizzle": {
    "ok": true,
    "fetched": 6,
-   "ms": 492,
+   "ms": 399,
    "meta": {
     "board_total": 6
+   }
+  },
+  "ashby:kraken.com": {
+   "ok": true,
+   "fetched": 91,
+   "ms": 3163,
+   "meta": {
+    "board_total": 91
+   }
+  },
+  "lever:crypto": {
+   "ok": true,
+   "fetched": 85,
+   "ms": 1238,
+   "meta": {
+    "board_total": 85
+   }
+  },
+  "greenhouse:elastic": {
+   "ok": true,
+   "fetched": 387,
+   "ms": 2346,
+   "meta": {
+    "board_total": 387
+   }
+  },
+  "teamtailor:tappayments": {
+   "ok": true,
+   "fetched": 21,
+   "ms": 499,
+   "meta": {
+    "board_total": 21
    }
   },
   "teamtailor:mumzworld": {
    "ok": true,
    "fetched": 12,
-   "ms": 396,
+   "ms": 612,
    "meta": {
     "board_total": 12
    }
@@ -540,326 +564,481 @@
   "workable:foodics": {
    "ok": true,
    "fetched": 30,
-   "ms": 71,
+   "ms": 240,
    "meta": {
     "board_total": 30
    }
   },
-  "teamtailor:tappayments": {
+  "ashby:brainco": {
    "ok": true,
-   "fetched": 21,
-   "ms": 451,
+   "fetched": 48,
+   "ms": 4178,
    "meta": {
-    "board_total": 21
-   }
-  },
-  "ashby:easygenerator": {
-   "ok": true,
-   "fetched": 16,
-   "ms": 4235,
-   "meta": {
-    "board_total": 16
+    "board_total": 48
    }
   },
   "greenhouse:scaleai": {
    "ok": true,
    "fetched": 169,
-   "ms": 212,
+   "ms": 1044,
    "meta": {
     "board_total": 169
-   }
-  },
-  "ashby:leantech": {
-   "ok": true,
-   "fetched": 8,
-   "ms": 3075,
-   "meta": {
-    "board_total": 8
-   }
-  },
-  "greenhouse:databricks": {
-   "ok": true,
-   "fetched": 892,
-   "ms": 1575,
-   "meta": {
-    "board_total": 892
-   }
-  },
-  "ashby:openai": {
-   "ok": true,
-   "fetched": 841,
-   "ms": 2632,
-   "meta": {
-    "board_total": 841
-   }
-  },
-  "greenhouse:datadog": {
-   "ok": true,
-   "fetched": 382,
-   "ms": 1758,
-   "meta": {
-    "board_total": 382
-   }
-  },
-  "greenhouse:mongodb": {
-   "ok": true,
-   "fetched": 400,
-   "ms": 2114,
-   "meta": {
-    "board_total": 400
-   }
-  },
-  "greenhouse:okx": {
-   "ok": true,
-   "fetched": 396,
-   "ms": 2850,
-   "meta": {
-    "board_total": 396
-   }
-  },
-  "ashby:cohere": {
-   "ok": true,
-   "fetched": 124,
-   "ms": 74,
-   "meta": {
-    "board_total": 124
-   }
-  },
-  "lever:weride": {
-   "ok": true,
-   "fetched": 12,
-   "ms": 13335,
-   "meta": {
-    "board_total": 12
-   }
-  },
-  "amazon": {
-   "ok": true,
-   "fetched": 68,
-   "ms": 537,
-   "meta": {}
-  },
-  "greenhouse:bybit": {
-   "ok": true,
-   "fetched": 161,
-   "ms": 3326,
-   "meta": {
-    "board_total": 161
-   }
-  },
-  "ashby:elevenlabs": {
-   "ok": true,
-   "fetched": 122,
-   "ms": 1042,
-   "meta": {
-    "board_total": 122
-   }
-  },
-  "deriv": {
-   "ok": true,
-   "fetched": 46,
-   "ms": 535,
-   "meta": {}
-  },
-  "emirates_group": {
-   "ok": true,
-   "fetched": 90,
-   "ms": 447,
-   "meta": {
-    "total": 90
-   }
-  },
-  "lever:binance": {
-   "ok": true,
-   "fetched": 4,
-   "ms": 14284,
-   "meta": {
-    "board_total": 4
-   }
-  },
-  "greenhouse:ripple": {
-   "ok": true,
-   "fetched": 111,
-   "ms": 3243,
-   "meta": {
-    "board_total": 111
-   }
-  },
-  "lever:crypto": {
-   "ok": true,
-   "fetched": 84,
-   "ms": 10135,
-   "meta": {
-    "board_total": 84
    }
   },
   "lever:palantir": {
    "ok": true,
    "fetched": 303,
-   "ms": 10797,
+   "ms": 1148,
    "meta": {
     "board_total": 303
    }
   },
+  "ashby:easygenerator": {
+   "ok": true,
+   "fetched": 16,
+   "ms": 5251,
+   "meta": {
+    "board_total": 16
+   }
+  },
+  "greenhouse:databricks": {
+   "ok": true,
+   "fetched": 892,
+   "ms": 2505,
+   "meta": {
+    "board_total": 892
+   }
+  },
+  "ashby:leantech": {
+   "ok": true,
+   "fetched": 8,
+   "ms": 4015,
+   "meta": {
+    "board_total": 8
+   }
+  },
+  "greenhouse:datadog": {
+   "ok": true,
+   "fetched": 382,
+   "ms": 3016,
+   "meta": {
+    "board_total": 382
+   }
+  },
+  "ashby:openai": {
+   "ok": true,
+   "fetched": 840,
+   "ms": 4033,
+   "meta": {
+    "board_total": 840
+   }
+  },
+  "greenhouse:mongodb": {
+   "ok": true,
+   "fetched": 399,
+   "ms": 3692,
+   "meta": {
+    "board_total": 399
+   }
+  },
+  "amazon": {
+   "ok": true,
+   "fetched": 68,
+   "ms": 972,
+   "meta": {}
+  },
+  "deriv": {
+   "ok": true,
+   "fetched": 46,
+   "ms": 267,
+   "meta": {}
+  },
+  "ashby:cohere": {
+   "ok": true,
+   "fetched": 124,
+   "ms": 2384,
+   "meta": {
+    "board_total": 124
+   }
+  },
+  "emirates_group": {
+   "ok": true,
+   "fetched": 91,
+   "ms": 343,
+   "meta": {
+    "total": 91
+   }
+  },
+  "greenhouse:okx": {
+   "ok": true,
+   "fetched": 394,
+   "ms": 4881,
+   "meta": {
+    "board_total": 394
+   }
+  },
+  "ashby:elevenlabs": {
+   "ok": true,
+   "fetched": 122,
+   "ms": 2567,
+   "meta": {
+    "board_total": 122
+   }
+  },
+  "greenhouse:bybit": {
+   "ok": true,
+   "fetched": 160,
+   "ms": 5387,
+   "meta": {
+    "board_total": 160
+   }
+  },
+  "greenhouse:ripple": {
+   "ok": true,
+   "fetched": 111,
+   "ms": 5597,
+   "meta": {
+    "board_total": 111
+   }
+  },
   "phenom:Majid Al Futtaim": {
    "ok": true,
-   "fetched": 258,
-   "ms": 37523,
+   "fetched": 257,
+   "ms": 37107,
    "meta": {
-    "total": 258
+    "total": 257
    }
-  },
-  "avature:Dubai Holding": {
-   "ok": true,
-   "fetched": 141,
-   "ms": 44861,
-   "meta": {
-    "total": 141
-   }
-  },
-  "workday:Cleveland Clinic Abu Dhabi": {
-   "ok": false,
-   "fetched": 0,
-   "error": "SourceError: workday ccf: HTTP 429, too many requests",
-   "ms": 93054
-  },
-  "workday:Baker Hughes": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93054
-  },
-  "workday:Shell": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93054
-  },
-  "workday:GSK": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93054
-  },
-  "workday:AstraZeneca": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93053
-  },
-  "workday:Novartis": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93053
-  },
-  "workday:Pfizer": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93053
-  },
-  "workday:Philips": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93053
-  },
-  "workday:Rolls-Royce": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93055
-  },
-  "workday:Coca-Cola": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 92437
-  },
-  "workday:Thomson Reuters": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 92333
-  },
-  "workday:Medtronic": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 92307
-  },
-  "workday:Accenture": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 92120
-  },
-  "workday:DXC Technology": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 91956
-  },
-  "workday:Cigna": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 91902
-  },
-  "workday:GE Vernova": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 91758
-  },
-  "workday:GE HealthCare": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 91747
-  },
-  "workday:NVIDIA": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 91438
-  },
-  "workday:Snap": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 90156
-  },
-  "workday:KBR": {
-   "ok": false,
-   "fetched": 0,
-   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93056
   },
   "workday:Mastercard": {
    "ok": false,
    "fetched": 0,
+   "error": "SourceError: workday mastercard: HTTP 429, too many requests",
+   "ms": 45233
+  },
+  "workday:Cleveland Clinic Abu Dhabi": {
+   "ok": false,
+   "fetched": 0,
    "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93057
+   "ms": 45232
   },
   "workday:Salesforce": {
    "ok": false,
    "fetched": 0,
    "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93056
+   "ms": 45231
   },
   "workday:HP": {
    "ok": false,
    "fetched": 0,
    "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
-   "ms": 93056
+   "ms": 45231
+  },
+  "workday:Baker Hughes": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45231
+  },
+  "workday:Shell": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45231
+  },
+  "workday:GSK": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45213
+  },
+  "workday:AstraZeneca": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45195
+  },
+  "workday:Novartis": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45194
+  },
+  "workday:Pfizer": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45183
+  },
+  "workday:Philips": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45183
+  },
+  "workday:Rolls-Royce": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45233
+  },
+  "workday:Coca-Cola": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 44522
+  },
+  "workday:Thomson Reuters": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 44461
+  },
+  "workday:Medtronic": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 44447
+  },
+  "workday:Accenture": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 44272
+  },
+  "workday:DXC Technology": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 43986
+  },
+  "workday:Cigna": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 43848
+  },
+  "workday:GE Vernova": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 43817
+  },
+  "workday:GE HealthCare": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 43469
+  },
+  "workday:NVIDIA": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 43208
+  },
+  "workday:Snap": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 42242
+  },
+  "workday:KBR": {
+   "ok": false,
+   "fetched": 0,
+   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run",
+   "ms": 45233
+  },
+  "avature:Dubai Holding": {
+   "ok": true,
+   "fetched": 139,
+   "ms": 48021,
+   "meta": {
+    "total": 139
+   }
+  },
+  "jobspy:indeed": {
+   "ok": true,
+   "fetched": 1013,
+   "meta": {
+    "queries": 20,
+    "queries_ok": 20,
+    "blocked": 0,
+    "skipped": 0,
+    "errors": [],
+    "by_query": {
+     "data analyst": {
+      "results": 15,
+      "fit": 9,
+      "kept": 7,
+      "new": 7
+     },
+     "data engineer": {
+      "results": 70,
+      "fit": 13,
+      "kept": 8,
+      "new": 8
+     },
+     "business intelligence": {
+      "results": 43,
+      "fit": 7,
+      "kept": 3,
+      "new": 3
+     },
+     "business analyst": {
+      "results": 20,
+      "fit": 9,
+      "kept": 7,
+      "new": 7
+     },
+     "software engineer": {
+      "results": 92,
+      "fit": 9,
+      "kept": 4,
+      "new": 4
+     },
+     "python developer": {
+      "results": 2,
+      "fit": 1,
+      "kept": 1,
+      "new": 1
+     },
+     "machine learning engineer": {
+      "results": 7,
+      "fit": 0,
+      "kept": 0,
+      "new": 0
+     },
+     "ai engineer": {
+      "results": 27,
+      "fit": 6,
+      "kept": 4,
+      "new": 4
+     },
+     "graduate": {
+      "results": 69,
+      "fit": 23,
+      "kept": 17,
+      "new": 17
+     },
+     "it support": {
+      "results": 100,
+      "fit": 39,
+      "kept": 28,
+      "new": 27
+     },
+     "trainee": {
+      "results": 7,
+      "fit": 0,
+      "kept": 0,
+      "new": 0
+     },
+     "junior": {
+      "results": 92,
+      "fit": 3,
+      "kept": 3,
+      "new": 3
+     },
+     "product analyst": {
+      "results": 10,
+      "fit": 5,
+      "kept": 4,
+      "new": 4
+     },
+     "customer service": {
+      "results": 100,
+      "fit": 39,
+      "kept": 32,
+      "new": 32
+     },
+     "call center": {
+      "results": 41,
+      "fit": 12,
+      "kept": 11,
+      "new": 11
+     },
+     "account manager": {
+      "results": 100,
+      "fit": 19,
+      "kept": 11,
+      "new": 11
+     },
+     "collection": {
+      "results": 100,
+      "fit": 18,
+      "kept": 16,
+      "new": 16
+     },
+     "sales executive": {
+      "results": 100,
+      "fit": 66,
+      "kept": 57,
+      "new": 57
+     },
+     "admin assistant": {
+      "results": 18,
+      "fit": 13,
+      "kept": 10,
+      "new": 10
+     }
+    }
+   },
+   "ms": 130949
+  },
+  "jobspy:linkedin": {
+   "ok": true,
+   "fetched": 55,
+   "meta": {
+    "queries": 10,
+    "queries_ok": 3,
+    "blocked": 3,
+    "skipped": 6,
+    "errors": [
+     "data analyst: response status code 429 (blocked: use a proxy)",
+     "data engineer: response status code 429 (blocked: use a proxy)",
+     "business analyst: response status code 429 (blocked: use a proxy)"
+    ],
+    "by_query": {
+     "data analyst": {
+      "results": 10,
+      "fit": 6,
+      "kept": 5,
+      "new": 4
+     },
+     "data scientist": {
+      "results": 25,
+      "fit": 6,
+      "kept": 6,
+      "new": 3
+     },
+     "business analyst": {
+      "results": 20,
+      "fit": 15,
+      "kept": 13,
+      "new": 11
+     }
+    }
+   },
+   "blocked": 3,
+   "ms": 54136
   },
   "_details": {
    "ok": true,
-   "fetched": 0,
+   "fetched": 1,
    "failed": 0,
    "skipped_cached": 198
+  },
+  "_linkedin_pages": {
+   "ok": false,
+   "wanted": 12,
+   "tried": 0,
+   "fetched": 0,
+   "read": 0,
+   "empty": 0,
+   "failed": 0,
+   "blocked": 0,
+   "skipped": 0,
+   "over_limit": 0,
+   "error": "LinkedIn refused the searches this run",
+   "dropped": {}
   }
  }
 }

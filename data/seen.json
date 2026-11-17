@@ -361,7 +361,7 @@
  },
  "f896f796373e8f39": {
   "first_seen": "2026-11-02",
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-17",
   "title": "Data Scientist (m/f/d)",
   "employer": "Halian | Managed Services, Recruitment Agency & Contract Staffing"
  },
@@ -2653,7 +2653,7 @@
  },
  "dd04796432b6356f": {
   "first_seen": "2026-11-14",
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-17",
   "title": "Commercial Performance Analyst, EurAsia (Temporary)",
   "employer": "Medtronic"
  },
@@ -2821,7 +2821,7 @@
  },
  "63b78bc17abb97e9": {
   "first_seen": "2026-11-15",
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-17",
   "title": "Junior Research Scientist in the Division of Engineering (Computer Engineering) - Dr. Jiahao Yu",
   "employer": "New York University Abu Dhabi"
  },
@@ -2833,7 +2833,7 @@
  },
  "54e939ae6aa76d82": {
   "first_seen": "2026-11-15",
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-17",
   "title": "Business Analyst – Airline Disruption Management (IRROPS)",
   "employer": "HTC Global Services"
  },
@@ -2881,7 +2881,7 @@
  },
  "a718b238af68e35e": {
   "first_seen": "2026-11-16",
-  "last_seen": "2026-11-16",
+  "last_seen": "2026-11-17",
   "title": "Artificial Intelligence Engineer",
   "employer": "Elephants Foot Global"
  },
@@ -3280,5 +3280,983 @@
   "last_seen": "2026-11-17",
   "title": "TRAINEE – ELECTRICIAN MARINE",
   "employer": "DP World"
+ },
+ "6e666f4f05a114c1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Product Specialist – Home Finance",
+  "employer": "ADIB"
+ },
+ "3dd601826a02d3c7": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Analyst",
+  "employer": "University of Wollongong in Dubai"
+ },
+ "fdbe3ae24a2687eb": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Analyst",
+  "employer": "Sanford Middle east DWC"
+ },
+ "873ceb4da3e12cd8": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Reconciliation Analyst",
+  "employer": "Skybound Wealth Management"
+ },
+ "f027055dd54d08cb": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Aviation Digital Support Analyst",
+  "employer": "WSP"
+ },
+ "bef93d0f0f06cb1d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Associate Professional - Geospatial Analyst",
+  "employer": "International Renewable Energy Agency (IRENA)"
+ },
+ "e7cf4f6cdb3e2f76": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Market Intelligence Analyst (Temporary)",
+  "employer": "Medtronic"
+ },
+ "22c817203bd7f78b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Corporate Banking, Placement Analyst, Dubai, UAE",
+  "employer": "Citi"
+ },
+ "ee47dbbb64967c48": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "IT Support Specialist",
+  "employer": "Genius HRTech Dubai"
+ },
+ "ad9f6c0d80288107": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Solution Sales Executive - Moveworks",
+  "employer": "ServiceNow"
+ },
+ "163434488d6bc306": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Backend Developer",
+  "employer": "9x Markets"
+ },
+ "c96695ab96617bb0": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Network & Security Engineer (Data Center)",
+  "employer": "NTT DATA"
+ },
+ "0bfb4bea1692e62f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Infrastructure Engineer (Backup & Storage)",
+  "employer": "NTT DATA"
+ },
+ "f11ed4d237887054": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "HVAC Department Secretary",
+  "employer": "Technip Energies"
+ },
+ "048308a3e52afa1f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Static Department Secretary",
+  "employer": "Technip Energies"
+ },
+ "7725505bcf6abc40": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Receptionist cum Secretary , work coordination DC controller",
+  "employer": "cool light .gen .cont. .com"
+ },
+ "36ab7af2c6453afd": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "B2B Business Development Executive",
+  "employer": "Affiniax Partners"
+ },
+ "b08c3948b8e3b1f4": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Solution Engineer-DJI Delivery Product Line",
+  "employer": "Aero Nex FZCO"
+ },
+ "ba2d8219ad5e7487": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Applications Development Intermediate Analyst",
+  "employer": "Citi"
+ },
+ "bc1160d8c6b858e4": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Corporate Banking, Full Time Analyst, Dubai",
+  "employer": "Citi"
+ },
+ "efa2ab8928ba15e1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "IT Support Engineer",
+  "employer": "Right Choice General Trading"
+ },
+ "8bc14b43ad8a75f5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Technical Solutions Engineer",
+  "employer": "ThreatLocker"
+ },
+ "47bbc7097f382852": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Freight & Forwarding Sales Executive",
+  "employer": "ADSO LLC"
+ },
+ "d081910adbb273b2": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "ServiceNow Technical Consultant (Fresh Graduate)",
+  "employer": "DXC Technology"
+ },
+ "f778e0f3e2e7b924": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Microsoft Power Platform – Technical Consultant (Fresh Graduate)",
+  "employer": "DXC Technology"
+ },
+ "a0add7a96fe3d0fa": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Operations Coordinator- Male",
+  "employer": "Biosytech Medical Laboratory"
+ },
+ "5342c51db264902a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Office Administrator (Female)",
+  "employer": "SPECTRUM NETWORKS LLC"
+ },
+ "2b902ec59656c503": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Junior Business Development Operations Executive- Arabic Speaker",
+  "employer": "Bexa Assurance Investments L.L.C"
+ },
+ "8a098dfaff3a8b6d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "IT Apprentice",
+  "employer": "Technip Energies"
+ },
+ "0739bd4a6e1eb93e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Relationship Officer - Credit Cards",
+  "employer": "Company Confidential - Banking Sales"
+ },
+ "084ab598310d07c9": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Reseach Coordinator - Dubai Campus",
+  "employer": "Heriot-Watt University"
+ },
+ "5b5a189283296b1d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Advertising Sales Executive",
+  "employer": "Digital Natives LLC"
+ },
+ "ca5545befbcb68c1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Female Sales Executive (Fresh Graduates Welcome)",
+  "employer": "Ibix Global Tech"
+ },
+ "c1a62d44c230920c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Patient Relationship Executive - ( Healthcare Exeprience )",
+  "employer": "Genex Clinical Laboratories LLC"
+ },
+ "e720492a3af5069f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Coordinator-English and Arabic speaking",
+  "employer": "Salwaty Home Health Care"
+ },
+ "094f56e3d969286e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Receptionist & Office Admin",
+  "employer": "PREMIUM CELLARS LLC"
+ },
+ "a034a97d530c60c1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Project Coordinator",
+  "employer": "QUICK PLUS FOR CORPORATE SERVICES PROVIDERS EST."
+ },
+ "9b3ee42cac3a6c3d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Document Controller",
+  "employer": "Turner & Townsend Pty Limited"
+ },
+ "8be7a38ba23dba28": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Coordinator",
+  "employer": "WONDER BRANDS - Dubai"
+ },
+ "89426d25d2e36c91": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Universal Satcom"
+ },
+ "d62c4d366f639ad3": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "IT Coordinator",
+  "employer": "Vintage Grand Hotel"
+ },
+ "6c5610888f42dbc1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "HR Assistant + customer service ( ARABIC speaker + female)",
+  "employer": "Century Gulf Overseas"
+ },
+ "04585393288218a5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Development Officer - E Commerce",
+  "employer": "Al Inayah Al Sahiya Drug Store LLC SP"
+ },
+ "74a34b482ae82cad": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Service Project Coordinator",
+  "employer": "TechnipFMC"
+ },
+ "8a498a09f2cc0817": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Automotive Account Specialist",
+  "employer": "Cars24 Arabia"
+ },
+ "b54961bce5675f6a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Telephone Operator - Doubletree by Hilton Fujairah City",
+  "employer": "Hilton"
+ },
+ "79df9820673605f6": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Collection Officer – Aged Debt Recovery Specialist (Dubai)",
+  "employer": "GymNation"
+ },
+ "e3ff3d0f748b3301": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "HR & Housing Coordinator | Aloft Abu Dhabi",
+  "employer": "Marriott International"
+ },
+ "7d95789576a23755": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "HUMAN CARE DOMESTIC WORKER SERVICES CENTER"
+ },
+ "f8d33e2692370544": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Admin",
+  "employer": "AKI Manufacturing FZCO"
+ },
+ "c11336105ce2adcf": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Back end Game Developer",
+  "employer": "AM Industries"
+ },
+ "848175a42e58aeff": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Representative",
+  "employer": "Travel Bot"
+ },
+ "8ef0139bc7b408e5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Supply Chain & Operations Associate",
+  "employer": "Affiniax Partners"
+ },
+ "616512b6881e5eb5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Executive Assistant",
+  "employer": "ZSI Trading LLC"
+ },
+ "6658ce1202b57fb7": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Receptionist cum Secretary",
+  "employer": "Arab East Consulting Co."
+ },
+ "2dd8ef753489c84e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "PPM Coordinator",
+  "employer": "Repair Plus"
+ },
+ "24266e0568b9b2f0": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Copthorne Hotel Sharjah"
+ },
+ "69d95eeb43dd9fed": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Travel Bot"
+ },
+ "5c552d2311ba523b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service (B2B)",
+  "employer": "Firefly Advertising"
+ },
+ "7a1168207101427c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Executive",
+  "employer": "Maai Workforce Solutions"
+ },
+ "8203446d883638bd": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Officer - UAE",
+  "employer": "FrieslandCampina"
+ },
+ "d4b7037c05582d1a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Executive - B2B Remittances & Payments",
+  "employer": "SMEdge"
+ },
+ "e12ad34aba77e889": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Officer (Arabic Speaker)",
+  "employer": "Belhasa Stones & Concrete Flooring"
+ },
+ "620aaf92dc4ba8a9": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales & Customer Service Executive",
+  "employer": "CREDITCARE CREDIT MANAGEMENT LLC"
+ },
+ "9b29419fcabd1edc": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Arada | Leasing Coordinator, Sharjah",
+  "employer": "Arada"
+ },
+ "07bef2198c98e553": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Care Officer",
+  "employer": "The Cigna Group"
+ },
+ "e51b9f95445e3f7d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Inspection Coordinator",
+  "employer": "TryIN Solution"
+ },
+ "a4bb420a6ff718d1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Logistics Coordinator",
+  "employer": "INFARTECH FZ LLC"
+ },
+ "053cb292b5cf34bf": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Telesales – Real Estate",
+  "employer": "Casabella PB"
+ },
+ "6db578f4edadde76": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "SWA DIAMONDS"
+ },
+ "b10c30f1a0cc2fdd": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service/Sales Representative",
+  "employer": "CREDITCARE CREDIT MANAGEMENT LLC"
+ },
+ "b52c0eedab207861": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Operations and Client Relations Coordinator (Native Arabic-Speaker)",
+  "employer": "Yoocha Matcha"
+ },
+ "0751babcfc7e0a10": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Service Executive",
+  "employer": "Dio Life Home Health Care"
+ },
+ "750b60f5991d58de": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Relation Executive",
+  "employer": "fimkin"
+ },
+ "287840afce0923b8": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Admin Executive",
+  "employer": "The Design House"
+ },
+ "bd16e9e33590e548": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Female Indoor Sales & Marketing Executive – Customer Service",
+  "employer": "Index Digital Printing And Stationary"
+ },
+ "96d72047656440a9": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Falcon vision"
+ },
+ "f93c3021eab1ca7c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales & Retail Account Coordinator",
+  "employer": "tashkeel"
+ },
+ "8e4e8ec30929e86c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Call Centre & Sales Executive",
+  "employer": "Three Dimension Physical Performance"
+ },
+ "890006d3dfc2d659": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Female Customer Happiness Specialist (Arabic Speaker - Call Centre & CSR)",
+  "employer": "EXCELLENCE DRIVING"
+ },
+ "65f2ebf90fa2cd29": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Call Centre Agent - Healthcare",
+  "employer": "Dna Health Clinic"
+ },
+ "3e7aded75aca6bfe": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Call Center Agent – Arabic Speaker",
+  "employer": "2XL HOME"
+ },
+ "9d410a990e216df3": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Arabic-Speaking Call Center Executive",
+  "employer": "Oshanya"
+ },
+ "9920402a9849336f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "VIP Relations Executive",
+  "employer": "Dna Health Clinic"
+ },
+ "253b72a943683252": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Agent – Visa Services (Telesales)",
+  "employer": "Alpha Link Documents"
+ },
+ "cfc3e3fffd4f813f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Tele sales agent- Arabic",
+  "employer": "Padra Medical center"
+ },
+ "7dacf6e5f141292f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Healthcare Telesales Executive – Lead Qualification",
+  "employer": "Tarabichi Healthcare"
+ },
+ "fb1577079bb0e3f9": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Agent (Patient Coordinator) – Aesthetics Medical Centre",
+  "employer": "ONEA Clinic LLC"
+ },
+ "de00f61d67948d4a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Credit Control Coordinator",
+  "employer": "Danube Group"
+ },
+ "2582d7df917bdf17": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Account Executive - AIME - Based In Dubai",
+  "employer": "Valsoft"
+ },
+ "281b9b3515c97b8a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Account Manager - Corporate Reputation",
+  "employer": "Edelman"
+ },
+ "b0fa41586c35cf7c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Collections Officer – Real Estate Developer",
+  "employer": "RIJAS DEVELOPMENTS"
+ },
+ "15b9fcb27d54111c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Client Representative",
+  "employer": "DG Capital"
+ },
+ "7049e92724571d1a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Operations Executive",
+  "employer": "TRINITY FREIGHT & LOGISTICS FZE"
+ },
+ "780f63cb0813f23b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "FEMALE ARABIC-SPEAKING DEBT COLLECTORS",
+  "employer": "Bolt Fix Technical Services LLC"
+ },
+ "f23fa1a62e83634f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Admin cum HR Assistant",
+  "employer": "Masa Landscaping LLC"
+ },
+ "177e9a813d488ac6": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Debt Collector",
+  "employer": "CASHBACK LOANS AND OVERDUES RESCHEDULING SERVICES LLC"
+ },
+ "70eb7f53bfbbb390": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Golf Reservation Agent",
+  "employer": "Meydan Golf Course"
+ },
+ "e90f3b970d7f25f4": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Office Assistant",
+  "employer": "Sitters Child Care Services"
+ },
+ "96b112bce8c8d165": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Customer Support Representative",
+  "employer": "CREDITCARE CREDIT MANAGEMENT LLC"
+ },
+ "680385d2c6d2480f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Team Yousfi Combat & Fitness"
+ },
+ "1e66ea3f3adccd72": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "IT Sales Executive",
+  "employer": "CyBiz Academy"
+ },
+ "5a2e7e9788f16e5e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Universal Certification and Services"
+ },
+ "582891c27e5bff89": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Inside Sales Executive – Warehousing",
+  "employer": "ANA Real"
+ },
+ "e0c46f8414630971": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "B2B Sales Executive - Etisalat",
+  "employer": "DTT INFORMATION TECHNOLOGY SERVICES LLC"
+ },
+ "3f16d0752bf48ace": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive( jotun )",
+  "employer": "Iqraa Building Materials LLC"
+ },
+ "3fbec429de611652": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "My Door Glass LLC"
+ },
+ "9c74daec62c79982": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive / Sales Assistant – Healthcare & Ayurvedic Products",
+  "employer": "Falcon Laboratory LLC"
+ },
+ "2047b8499c0dec87": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Gateway Computers"
+ },
+ "0ffde5cf9e89a6c1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales & Operations Executive",
+  "employer": "THE ELITE HEALTH CLUB FZCO"
+ },
+ "e8abba56d47e479d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Banker - Sales Executive",
+  "employer": "Ertiqaa Financial Broker"
+ },
+ "ec2849ab7dc372d5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "ABACA GROUP LLC-FZ"
+ },
+ "dd73f4c3bd88d39f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Al UQAAB PACKING AND PRINTIND"
+ },
+ "0ce7409fb67084ee": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales & Business Development Executive",
+  "employer": "Sayanat Services"
+ },
+ "cd8c5a0742bf1701": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Lumber World Building Material Trading LLC"
+ },
+ "c00a43839d25548b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Marketing & Sales Executive",
+  "employer": "Royal care medical equip. tr. llc"
+ },
+ "a09d3a9fb556fb8e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Receptionist cum Sales Executive",
+  "employer": "Gold Water Yachts"
+ },
+ "e180b9f87c137192": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Forex Sales Executive",
+  "employer": "MERCATO BROKERS FINANCIAL SERVICES L.L.C S.O.C"
+ },
+ "c5bd3fb7f23fb21c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Fleet Sales Executive",
+  "employer": "XAD Technologies"
+ },
+ "872111fb2cae6ac7": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "GLORY GENERAL TRADING"
+ },
+ "81272de0a1136a94": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "FIRE STONE FIRE & SAFETY"
+ },
+ "db5f1beb3ea6c0bc": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Online Sales Executive",
+  "employer": "Middle East Sun Workshop"
+ },
+ "bc2298b367f4b030": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "HashCreations Fze LLC"
+ },
+ "bed700750e04172d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Ghanem & Abdel Karem Alras Foodstuff TR LLC"
+ },
+ "f98ebbec2b533b95": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Delemon info"
+ },
+ "81c89494b2a79eb4": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive – Building Materials (Dubai, UAE)",
+  "employer": "Gulf Prime HR Consultancy"
+ },
+ "0e56dd5130e95043": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Al Lotus Cosmetics And Beauty Requisites LLC"
+ },
+ "33cca1289b281d76": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "POWERGLOW TRADE SOLUTIONS LLC"
+ },
+ "855fa69c83b6804d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive (Female Only)",
+  "employer": "Al Lotus Cosmetics And Beauty Requisites LLC"
+ },
+ "986328cf60627a00": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive -Commercial Cleaning",
+  "employer": "Icon Shine Cleaning Services LLC"
+ },
+ "b4b10c04b2a5385b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "chemical sales executive",
+  "employer": "top core"
+ },
+ "daace468ab7c9f3d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Fajrix General Trading LLC"
+ },
+ "b6823304e2d762d8": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Mind Boosters Educational Services"
+ },
+ "d1558c4dd90e8fe1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Banking Sales Executive - Personal Loans",
+  "employer": "Al Soor Global Business Services"
+ },
+ "cd5f3892896d81f1": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "UNI BUILD GENERAL TRANSPORT LLC"
+ },
+ "bc08dc5fe1c21ad5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Telecaller / Tele Sales Executive",
+  "employer": "Prime Bullions Properties"
+ },
+ "a42e9791159dce1f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "ALSAHEL ALSAREEA SHIPPING SERVICES L.L.C"
+ },
+ "ffb928f0419c02e8": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Banking Sales Executive - Walk In Interview",
+  "employer": "DSA Abu Dhabi"
+ },
+ "f50a5faf7200af6b": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive – Cleaning Services",
+  "employer": "Spectrum Cleaning Services"
+ },
+ "f7a429e8762a2647": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "LabPlus Laboratory Furniture Manufacturing"
+ },
+ "2a6b344cb1dbd3ed": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "SKY GULF SIGN"
+ },
+ "4b81cfd2157172d4": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive (UAE Driving Licence Required)",
+  "employer": "Waterclub"
+ },
+ "453920b777caba95": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Executive",
+  "employer": "Vertical Heights Global"
+ },
+ "7e3d6385a7a11495": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Admin Assistant",
+  "employer": "Experts Business Services"
+ },
+ "663bfa9014bf8b09": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Office Assistant",
+  "employer": "Lucky Falcon General Trading LLC"
+ },
+ "d1225f78223db3eb": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Receptionist / Office Secretary – Real Estate",
+  "employer": "Ofuqalkhaleej Real Estate"
+ },
+ "fd3c574512d32552": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Admin Assistant",
+  "employer": "Brush and Blush Beauty Parlour"
+ },
+ "c60527b7cdf8626d": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Administrative Assistant",
+  "employer": "Convergint"
+ },
+ "d93f0562b0921b24": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Logistics Coordinator & Executive Assistant",
+  "employer": "Flying Colour Compliance Services L.L.C"
+ },
+ "47e0dcec1f0ee1ce": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Sales Admin Assistant",
+  "employer": "Dostan Alfa Transport"
+ },
+ "8a02a81674f20e1e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Administrative Assistant",
+  "employer": "The Dessert Shop"
+ },
+ "7881643f50f5c7fa": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Performance Analyst",
+  "employer": "Tech Spectrum AI Solutions"
+ },
+ "4dee91e3c26c06b5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Data Analyst",
+  "employer": "Sokin"
+ },
+ "fc3daf824794e278": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "MEIAT - V.I.E. - Business Analyst",
+  "employer": "Cartier"
+ },
+ "413a322c5a2c6391": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Data Scientist",
+  "employer": "Arab Monetary Fund"
+ },
+ "c67a6f08a72e2883": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Forward Deployed AI Scientist, United Arab Emirates - BCG X",
+  "employer": "BCG X"
+ },
+ "1b352883160e2f1a": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Data Scientist",
+  "employer": "Zofeur"
+ },
+ "d6a2ed12b70d024c": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Implementation Engineer – Islamic Core Banking\nDubai, UAE \nOn-site / Hybrid",
+  "employer": "Fimple"
+ },
+ "2706f53f704d3998": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Commercial Operations Analyst",
+  "employer": "Tech Spectrum AI Solutions"
+ },
+ "ba341bcd5be3245e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Analyst",
+  "employer": "Innovo Group"
+ },
+ "8b5e387b2bdd066f": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Business Analyst",
+  "employer": "Synechron"
+ },
+ "005e231c236c66b5": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Change Analyst – (UAE Fresh Graduate)",
+  "employer": "DXC Technology"
+ },
+ "38974cf7f76a292e": {
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "title": "Product Owner",
+  "employer": "Virtusa"
  }
 }

@@ -1,14 +1,16 @@
 {
  "jobs.smartrecruiters.com": {
-  "roles": 5,
+  "roles": 9,
   "employers": [
    "Arabian Ethicals Company",
    "Egis Group",
    "Etihad Airways",
+   "SGS",
+   "ServiceNow",
    "Turner & Townsend Pty Limited"
   ],
-  "last": "2026-11-16",
-  "sample": "https://jobs.smartrecruiters.com/EtihadAirways5/744000161431240-bedayati-trainee-uae-nationals-only-",
+  "last": "2026-11-17",
+  "sample": "https://jobs.smartrecruiters.com/ServiceNow/744000162018078-solution-sales-executive-moveworks",
   "jobs": {
    "f452198f85d25487": [
     "2026-11-14",
@@ -27,8 +29,132 @@
     "Turner & Townsend Pty Limited"
    ],
    "7566fc6432b7e76e": [
-    "2026-11-16",
+    "2026-11-17",
     "Egis Group"
+   ],
+   "ad9f6c0d80288107": [
+    "2026-11-17",
+    "ServiceNow"
+   ],
+   "9b3ee42cac3a6c3d": [
+    "2026-11-17",
+    "Turner & Townsend Pty Limited"
+   ],
+   "7032ebf4404eef9c": [
+    "2026-11-17",
+    "SGS"
+   ],
+   "6779c240a95fa397": [
+    "2026-11-17",
+    "Etihad Airways"
+   ]
+  }
+ },
+ "apply.workable.com": {
+  "roles": 4,
+  "employers": [
+   "Beond",
+   "BlackStone eIT",
+   "Valsoft"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://apply.workable.com/j/F8DD8D1A39",
+  "jobs": {
+   "9ea227a2c704414d": [
+    "2026-11-17",
+    "BlackStone eIT"
+   ],
+   "bff9e4b564c78e6d": [
+    "2026-11-17",
+    "BlackStone eIT"
+   ],
+   "0df85881c369680e": [
+    "2026-11-17",
+    "Beond"
+   ],
+   "2582d7df917bdf17": [
+    "2026-11-17",
+    "Valsoft"
+   ]
+  }
+ },
+ "hcxg.fa.em2.oraclecloud.com": {
+  "roles": 3,
+  "employers": [
+   "Technip Energies"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/16460",
+  "jobs": {
+   "f11ed4d237887054": [
+    "2026-11-17",
+    "Technip Energies"
+   ],
+   "048308a3e52afa1f": [
+    "2026-11-17",
+    "Technip Energies"
+   ],
+   "8a098dfaff3a8b6d": [
+    "2026-11-17",
+    "Technip Energies"
+   ]
+  }
+ },
+ "jobs.citi.com": {
+  "roles": 3,
+  "employers": [
+   "Citi"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://jobs.citi.com/job/seef/applications-development-intermediate-analyst/287/103387955056",
+  "jobs": {
+   "22c817203bd7f78b": [
+    "2026-11-17",
+    "Citi"
+   ],
+   "ba2d8219ad5e7487": [
+    "2026-11-17",
+    "Citi"
+   ],
+   "bc1160d8c6b858e4": [
+    "2026-11-17",
+    "Citi"
+   ]
+  }
+ },
+ "careers.nttdata.com": {
+  "roles": 2,
+  "employers": [
+   "NTT DATA"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.nttdata.com/global/en/job/NTT1GLOBALR152661EXTERNALENGLOBAL/Network-Security-Engineer-Data-Center",
+  "jobs": {
+   "c96695ab96617bb0": [
+    "2026-11-17",
+    "NTT DATA"
+   ],
+   "0bfb4bea1692e62f": [
+    "2026-11-17",
+    "NTT DATA"
+   ]
+  }
+ },
+ "dxctechnology.wd1.myworkdayjobs.com": {
+  "roles": 2,
+  "employers": [
+   "DXC Technology"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://dxctechnology.wd1.myworkdayjobs.com/DXCJobs/job/ARE---DU---DUBAI/Microsoft-Power-Platform---Technical-Consultant--Fresh-Graduate-_51594674",
+  "jobs": {
+   "d081910adbb273b2": [
+    "2026-11-17",
+    "DXC Technology"
+   ],
+   "f778e0f3e2e7b924": [
+    "2026-11-17",
+    "DXC Technology"
    ]
   }
  },
@@ -47,6 +173,42 @@
    "dd7f693568098012": [
     "2026-11-16",
     "Abu Dhabi ports"
+   ]
+  }
+ },
+ "hchx.fa.em2.oraclecloud.com": {
+  "roles": 2,
+  "employers": [
+   "مجموعة الطاير"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://hchx.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/4695",
+  "jobs": {
+   "9266fcb2a095ee0e": [
+    "2026-11-17",
+    "مجموعة الطاير"
+   ],
+   "6851c5a0e6c536bc": [
+    "2026-11-17",
+    "مجموعة الطاير"
+   ]
+  }
+ },
+ "medtronic.wd1.myworkdayjobs.com": {
+  "roles": 2,
+  "employers": [
+   "Medtronic"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Market-Intelligence-Analyst--Temporary-_R81473-1",
+  "jobs": {
+   "dd04796432b6356f": [
+    "2026-11-16",
+    "Medtronic"
+   ],
+   "e7cf4f6cdb3e2f76": [
+    "2026-11-17",
+    "Medtronic"
    ]
   }
  },
@@ -78,20 +240,6 @@
    ]
   }
  },
- "apply.workable.com": {
-  "roles": 1,
-  "employers": [
-   "BlackStone eIT"
-  ],
-  "last": "2026-11-16",
-  "sample": "https://apply.workable.com/j/961EE7727C",
-  "jobs": {
-   "9ea227a2c704414d": [
-    "2026-11-16",
-    "BlackStone eIT"
-   ]
-  }
- },
  "blueberrymarkets.elmotalent.com.au": {
   "roles": 1,
   "employers": [
@@ -103,6 +251,20 @@
    "8915d33ba33a8165": [
     "2026-11-15",
     "Blueberry"
+   ]
+  }
+ },
+ "careers.arada.com": {
+  "roles": 1,
+  "employers": [
+   "Arada"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.arada.com/jobs/8746443-arada-leasing-coordinator-sharjah",
+  "jobs": {
+   "9b29419fcabd1edc": [
+    "2026-11-17",
+    "Arada"
    ]
   }
  },
@@ -190,6 +352,20 @@
    ]
   }
  },
+ "careers.marriott.com": {
+  "roles": 1,
+  "employers": [
+   "Marriott International"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.marriott.com/hr-housing-coordinator-aloft-abu-dhabi/job/PDX_MI_1CB26A93-3D99-4C11-BC88-4E3AB94505BD_22336790",
+  "jobs": {
+   "e3ff3d0f748b3301": [
+    "2026-11-17",
+    "Marriott International"
+   ]
+  }
+ },
  "careers.marsh.com": {
   "roles": 1,
   "employers": [
@@ -201,6 +377,76 @@
    "2617a996f485eb65": [
     "2026-11-16",
     "Marsh"
+   ]
+  }
+ },
+ "careers.moontech.co": {
+  "roles": 1,
+  "employers": [
+   "ITCAN"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.moontech.co/jobs/8751251-ai-engineer",
+  "jobs": {
+   "a49a24e53279b56e": [
+    "2026-11-17",
+    "ITCAN"
+   ]
+  }
+ },
+ "careers.promega.com": {
+  "roles": 1,
+  "employers": [
+   "Promega Corporation"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.promega.com/jobs/4410/job",
+  "jobs": {
+   "083a64050c8b36b6": [
+    "2026-11-17",
+    "Promega Corporation"
+   ]
+  }
+ },
+ "careers.technipfmc.com": {
+  "roles": 1,
+  "employers": [
+   "TechnipFMC"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.technipfmc.com/job/Abu-Dhabi-Service-Project-Coordinator-Abu/1450820200/",
+  "jobs": {
+   "74a34b482ae82cad": [
+    "2026-11-17",
+    "TechnipFMC"
+   ]
+  }
+ },
+ "careers.yosh.ae": {
+  "roles": 1,
+  "employers": [
+   "YoSH"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://careers.yosh.ae/jobs/8745150-it-support-officer",
+  "jobs": {
+   "a49fc585e5a7c825": [
+    "2026-11-17",
+    "YoSH"
+   ]
+  }
+ },
+ "cars24.keka.com": {
+  "roles": 1,
+  "employers": [
+   "Cars24 Arabia"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://cars24.keka.com/careers/jobdetails/6518",
+  "jobs": {
+   "8a498a09f2cc0817": [
+    "2026-11-17",
+    "Cars24 Arabia"
    ]
   }
  },
@@ -232,6 +478,132 @@
    ]
   }
  },
+ "convergint.wd501.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Convergint"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://convergint.wd501.myworkdayjobs.com/Gbl/job/AE-AZ-Abu-Dhabi/Administrative-Assistant_R-922",
+  "jobs": {
+   "c60527b7cdf8626d": [
+    "2026-11-17",
+    "Convergint"
+   ]
+  }
+ },
+ "djeholdings.wd5.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Edelman"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://djeholdings.wd5.myworkdayjobs.com/en-US/edelman-careers-E200/job/Dubai-UAE/Account-Manager---Corporate-Reputation_JR103791",
+  "jobs": {
+   "281b9b3515c97b8a": [
+    "2026-11-17",
+    "Edelman"
+   ]
+  }
+ },
+ "eexh.fa.em3.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "International Renewable Energy Agency (IRENA)"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://eexh.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/AP0084",
+  "jobs": {
+   "bef93d0f0f06cb1d": [
+    "2026-11-17",
+    "International Renewable Energy Agency (IRENA)"
+   ]
+  }
+ },
+ "efet.fa.us2.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "Hilton"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/231576",
+  "jobs": {
+   "b54961bce5675f6a": [
+    "2026-11-17",
+    "Hilton"
+   ]
+  }
+ },
+ "emit.fa.ca3.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "WSP"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/99506",
+  "jobs": {
+   "f027055dd54d08cb": [
+    "2026-11-17",
+    "WSP"
+   ]
+  }
+ },
+ "employment.uowdubai.ac.ae": {
+  "roles": 1,
+  "employers": [
+   "University of Wollongong in Dubai"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://employment.uowdubai.ac.ae/vacancy/176622",
+  "jobs": {
+   "3dd601826a02d3c7": [
+    "2026-11-17",
+    "University of Wollongong in Dubai"
+   ]
+  }
+ },
+ "enzj.fa.em3.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "Heriot-Watt University"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://enzj.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/requisitions/preview/5151",
+  "jobs": {
+   "084ab598310d07c9": [
+    "2026-11-17",
+    "Heriot-Watt University"
+   ]
+  }
+ },
+ "fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "DU"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_xx/requisitions/preview/12670",
+  "jobs": {
+   "d1f6607a2cbedf10": [
+    "2026-11-17",
+    "DU"
+   ]
+  }
+ },
+ "geniushrtechdubai.hiresome.ai": {
+  "roles": 1,
+  "employers": [
+   "Genius HRTech Dubai"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://geniushrtechdubai.hiresome.ai/apply_form/it-support-specialist--6afbe8dae5271bafab46158b",
+  "jobs": {
+   "ee47dbbb64967c48": [
+    "2026-11-17",
+    "Genius HRTech Dubai"
+   ]
+  }
+ },
  "georgfischer.wd103.myworkdayjobs.com": {
   "roles": 1,
   "employers": [
@@ -246,6 +618,20 @@
    ]
   }
  },
+ "grnh.se": {
+  "roles": 1,
+  "employers": [
+   "Capco"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://grnh.se/nz58dt691us",
+  "jobs": {
+   "555161ad281a4b7f": [
+    "2026-11-17",
+    "Capco"
+   ]
+  }
+ },
  "hmhw.wd12.myworkdayjobs.com": {
   "roles": 1,
   "employers": [
@@ -257,6 +643,20 @@
    "0655d516ca4d504d": [
     "2026-11-16",
     "HMH"
+   ]
+  }
+ },
+ "iacpey.fa.ocs.oraclecloud.com": {
+  "roles": 1,
+  "employers": [
+   "AW Rostamani"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://iacpey.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/1001481",
+  "jobs": {
+   "07f42aba4a3f775f": [
+    "2026-11-17",
+    "AW Rostamani"
    ]
   }
  },
@@ -288,17 +688,101 @@
    ]
   }
  },
- "medtronic.wd1.myworkdayjobs.com": {
+ "jobs.kerzner.com": {
   "roles": 1,
   "employers": [
-   "Medtronic"
+   "Meydan Golf Course"
   ],
-  "last": "2026-11-16",
-  "sample": "https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471",
+  "last": "2026-11-17",
+  "sample": "https://jobs.kerzner.com/job/Dubai-Golf-Reservation-Agent/733649122/",
   "jobs": {
-   "dd04796432b6356f": [
-    "2026-11-16",
-    "Medtronic"
+   "70eb7f53bfbbb390": [
+    "2026-11-17",
+    "Meydan Golf Course"
+   ]
+  }
+ },
+ "jobs.parsons.com": {
+  "roles": 1,
+  "employers": [
+   "Parsons"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://jobs.parsons.com/jobs/associate-pricing-analyst-r-188015-jobs--project-controls--",
+  "jobs": {
+   "072de1ed312c656d": [
+    "2026-11-17",
+    "Parsons"
+   ]
+  }
+ },
+ "jobs.thecignagroup.com": {
+  "roles": 1,
+  "employers": [
+   "The Cigna Group"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://jobs.thecignagroup.com/us/en/job/26013608",
+  "jobs": {
+   "07bef2198c98e553": [
+    "2026-11-17",
+    "The Cigna Group"
+   ]
+  }
+ },
+ "mycareers.frieslandcampina.com": {
+  "roles": 1,
+  "employers": [
+   "FrieslandCampina"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://mycareers.frieslandcampina.com/job/Customer-Service-Officer-UAE/63295-nl_NL",
+  "jobs": {
+   "8203446d883638bd": [
+    "2026-11-17",
+    "FrieslandCampina"
+   ]
+  }
+ },
+ "noventiq.darwinbox.com": {
+  "roles": 1,
+  "employers": [
+   "Darwinbox"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://noventiq.darwinbox.com/ms/candidatev2/main/careers/jobDetails/a6afaacfe320c3",
+  "jobs": {
+   "148b9e57c49c625f": [
+    "2026-11-17",
+    "Darwinbox"
+   ]
+  }
+ },
+ "salesforce.wd12.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Salesforce"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Account-Solution-Engineer_JR368442",
+  "jobs": {
+   "ae7729659417909a": [
+    "2026-11-17",
+    "Salesforce"
+   ]
+  }
+ },
+ "skyboundwealthmanagement.teamtailor.com": {
+  "roles": 1,
+  "employers": [
+   "Skybound Wealth Management"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://skyboundwealthmanagement.teamtailor.com/jobs/8746374-reconciliation-analyst",
+  "jobs": {
+   "873ceb4da3e12cd8": [
+    "2026-11-17",
+    "Skybound Wealth Management"
    ]
   }
  },
@@ -316,6 +800,48 @@
    ]
   }
  },
+ "threedimensionphysicalperformance.betterteam.com": {
+  "roles": 1,
+  "employers": [
+   "Three Dimension Physical Performance"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://threedimensionphysicalperformance.betterteam.com/call-centre-sales-executive",
+  "jobs": {
+   "8e4e8ec30929e86c": [
+    "2026-11-17",
+    "Three Dimension Physical Performance"
+   ]
+  }
+ },
+ "workforcenow.adp.com": {
+  "roles": 1,
+  "employers": [
+   "ThreatLocker"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html",
+  "jobs": {
+   "8bc14b43ad8a75f5": [
+    "2026-11-17",
+    "ThreatLocker"
+   ]
+  }
+ },
+ "www.afuturewithus.com": {
+  "roles": 1,
+  "employers": [
+   "Al-Futtaim"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://www.afuturewithus.com/job/Dubai-Customs-Clearance-Coordinator-Al-Futtaim-Automotive-Group-Supply-Chain/1457388433/",
+  "jobs": {
+   "fc411ea1837d80e3": [
+    "2026-11-17",
+    "Al-Futtaim"
+   ]
+  }
+ },
  "www.alshaya.com": {
   "roles": 1,
   "employers": [
@@ -327,6 +853,20 @@
    "9db16dc3f1b36e5a": [
     "2026-11-15",
     "Alshaya Group"
+   ]
+  }
+ },
+ "www.comeet.com": {
+  "roles": 1,
+  "employers": [
+   "Commercial Bank of Dubai"
+  ],
+  "last": "2026-11-17",
+  "sample": "https://www.comeet.com/jobs/cbd/14.007/assistant-relationship-manager-liabilities--uae-national-/44.578",
+  "jobs": {
+   "05ca22e8aec2d5bf": [
+    "2026-11-17",
+    "Commercial Bank of Dubai"
    ]
   }
  },
