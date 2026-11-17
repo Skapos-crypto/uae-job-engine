@@ -10,7 +10,7 @@
   "ran": "2026-11-17"
  },
  "workday:HP": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -21,13 +21,13 @@
   "ran": "2026-11-17"
  },
  "workday:Shell": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Pfizer": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -48,10 +48,10 @@
   "ran": "2026-11-17"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 4,
+  "fails": 5,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
-  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
+  "error": "SourceError: workday ccf: HTTP 429, too many requests"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
@@ -69,13 +69,13 @@
   "ran": "2026-11-17"
  },
  "workday:Salesforce": {
-  "fails": 6,
+  "fails": 7,
   "last_ok": "2026-11-15",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:AstraZeneca": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -86,7 +86,7 @@
   "ran": "2026-11-17"
  },
  "workday:Baker Hughes": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -97,7 +97,7 @@
   "ran": "2026-11-17"
  },
  "workday:Mastercard": {
-  "fails": 4,
+  "fails": 5,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -108,10 +108,10 @@
   "ran": "2026-11-17"
  },
  "workday:Rolls-Royce": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
-  "error": "SourceError: workday rollsroyce: HTTP 429, too many requests"
+  "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "jibe:M42": {
   "fails": 0,
@@ -119,13 +119,13 @@
   "ran": "2026-11-17"
  },
  "workday:GSK": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Novartis": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -136,7 +136,7 @@
   "ran": "2026-11-17"
  },
  "workday:Coca-Cola": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -202,7 +202,7 @@
   "ran": "2026-11-14"
  },
  "workday:Philips": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -313,7 +313,7 @@
   "ran": "2026-11-17"
  },
  "workday:Thomson Reuters": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -369,7 +369,7 @@
   "ran": "2026-11-17"
  },
  "workday:KBR": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -436,13 +436,13 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:DXC Technology": {
-  "fails": 4,
+  "fails": 5,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
@@ -453,37 +453,37 @@
   "ran": "2026-11-17"
  },
  "workday:Snap": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Cigna": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:GE Vernova": {
-  "fails": 4,
+  "fails": 5,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:NVIDIA": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Medtronic": {
-  "fails": 5,
+  "fails": 6,
   "last_ok": "2026-11-16",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Accenture": {
-  "fails": 6,
+  "fails": 7,
   "last_ok": "2026-11-15",
   "ran": "2026-11-17",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"

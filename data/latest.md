@@ -1,15 +1,15 @@
-# UAE junior roles: 115 open, 1 new today
+# UAE junior roles: 114 open, 1 new today
 
-Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes), sorted new first, then by fit; then a wider net (customer service and call centre, sales and account management, collections, admin and coordination), sorted by posting date, newest first. Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out. A role stays for 7 days after it was last seen.
+Updated 17 Nov 2026 11:36 Dubai time. Two lists: data and tech roles (data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes), sorted new first, then by fit; then a wider net (customer service and call centre, sales and account management, collections, admin and coordination), sorted by posting date, newest first. Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out. A role stays for 7 days after it was last seen.
 
 ## Status
 
 - **Sources:** 77 of 100 answered (career systems only; Indeed and LinkedIn are searched once a day)
 - **Failing this run:** 23 workday sources, Accenture, AstraZeneca, Baker Hughes and 20 more (left alone for the rest of this run)
-- **⚠️ Failing 3 or more runs in a row:** 23 workday sources (6)
+- **⚠️ Failing 3 or more runs in a row:** 23 workday sources (7)
 - **New roles in the last 7 days:** 132 from Indeed and LinkedIn; 70 from employer sites and boards
 
-## Data, AI, software, IT and graduate programmes (54, 1 new today)
+## Data, AI, software, IT and graduate programmes (53, 1 new today)
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -51,22 +51,21 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | 36 |  | [Fraud Monitoring Analyst (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906) | ADIB | UAE | Analyst (other) | 2026-11-11 | oracle | asks 2 yrs |
 | 37 |  | [Full Stack Developer – FinTech](https://www.linkedin.com/jobs/view/4489727100) | Al Salah Holding | Dubai | Software / backend | 2026-11-16 | linkedin |  |
 | 38 |  | [Integration Engineer](https://ae.indeed.com/viewjob?jk=0ac27c20df621c4f) | COGNITA SCHOOLS | Dubai | Software / backend | 2026-11-13 | indeed + linkedin | [employer site](https://cognitapeople.csod.com/ux/ats/careersite/1/home/requisition/3298?c=cognitapeople) |
-| 39 |  | [Analyst - Data & Analytics](https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics) | Chalhoub Group | Dubai | Data analyst | 2026-11-06 | teamtailor | asks 2 yrs |
-| 40 |  | [Data Scientist (m/f/d)](https://www.linkedin.com/jobs/view/4482939493) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Dubai | Data science | 2026-11-14 | linkedin | agency or unnamed employer |
-| 41 |  | [2026, Business Analyst, Strategy & Transformation](https://www.linkedin.com/jobs/view/4474106211) | FTI Consulting | Dubai | Business analysis | 2026-11-13 | linkedin |  |
-| 42 |  | [Engineering Graduate Trainee](https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee) | Property Finder | Dubai | Graduate programme | 2026-09-29 | teamtailor | entry level |
-| 43 |  | [Material Data Specialist](https://gevernova.wd5.myworkdayjobs.com/en-US/Vernova_ExternalSite/job/Singapore/Material-Data-Specialist_R5049518-3) | GE Vernova | UAE | Data analyst | 2026-10-17 | workday |  |
-| 44 |  | [Order Management Trainee](https://careers.chalhoubgroup.com/jobs/8671090-order-management-trainee) | Chalhoub Group | Dubai | Graduate programme | 2026-11-05 | teamtailor |  |
-| 45 |  | [Consultant – AI Analyst](https://ae.indeed.com/viewjob?jk=987e5b36460b8b92) | Turner & Townsend Pty Limited | Abu Dhabi | AI / ML | 2026-11-13 | indeed + linkedin | LinkedIn says mid-senior; [employer site](https://jobs.smartrecruiters.com/TurnerTownsend/744000161460723-consultant-ai-analyst-) |
-| 46 |  | [Product Analyst](https://jobs.ashbyhq.com/Easygenerator/c168b84d-67ec-4b6f-882c-d70a4ebfb754) | Easygenerator | Dubai | Product | 2026-10-19 | ashby |  |
-| 47 |  | [IT Support Technician](https://ae.indeed.com/viewjob?jk=d815f6ae3d15e557) | Techsys Technology LLC | Dubai | IT | 2026-11-14 | indeed | asks 2 yrs |
-| 48 |  | [AI Product Owner](https://apply.workable.com/j/F398F48679) | Fuse Energy | Dubai | AI / ML | 2026-09-03 | workable |  |
-| 49 |  | [Business Analyst – Airline Disruption Management (IRROPS)](https://www.linkedin.com/jobs/view/4481774124) | HTC Global Services | Dubai | Business analysis | 2026-11-14 | linkedin | LinkedIn says mid-senior |
-| 50 |  | [Forward Deployed Engineer, Infrastructure Specialist (Middle East)](https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af) | cohere | Dubai | Software / backend | 2026-09-10 | ashby |  |
-| 51 |  | [Software Engineer](https://www.linkedin.com/jobs/view/4490712000) | Jex Recruitment / Connecting top talent with leading companies | Abu Dhabi | Software / backend | 2026-11-13 | linkedin | agency or unnamed employer; LinkedIn says mid-senior |
-| 52 |  | [IT Support Engineer](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389) | NMC Healthcare | Abu Dhabi | IT | 2026-09-11 | oracle | asks 2 yrs |
-| 53 |  | [Associate Product Specialist, Launch Program 2027 – Dubai, UAE (UAE National Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Product-Specialist--Launch-Program-2027---Dubai--UAE--UAE-National-Preferred-_R-287600-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
-| 54 |  | [Global Markets Launch Graduate Rotational Program 2027 - Associate Product Specialist & Associate Analyst, Account Management- Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Launch-Graduate-Rotational-Program-2027---Associate-Product-Specialist---Associate-Analyst--Account-Management--Dubai--UAE--UAE-Nationals-Preferred-_R-292816-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
+| 39 |  | [Data Scientist (m/f/d)](https://www.linkedin.com/jobs/view/4482939493) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Dubai | Data science | 2026-11-14 | linkedin | agency or unnamed employer |
+| 40 |  | [2026, Business Analyst, Strategy & Transformation](https://www.linkedin.com/jobs/view/4474106211) | FTI Consulting | Dubai | Business analysis | 2026-11-13 | linkedin |  |
+| 41 |  | [Engineering Graduate Trainee](https://propertyfinder.teamtailor.com/jobs/8470632-engineering-graduate-trainee) | Property Finder | Dubai | Graduate programme | 2026-09-29 | teamtailor | entry level |
+| 42 |  | [Material Data Specialist](https://gevernova.wd5.myworkdayjobs.com/en-US/Vernova_ExternalSite/job/Singapore/Material-Data-Specialist_R5049518-3) | GE Vernova | UAE | Data analyst | 2026-10-17 | workday |  |
+| 43 |  | [Order Management Trainee](https://careers.chalhoubgroup.com/jobs/8671090-order-management-trainee) | Chalhoub Group | Dubai | Graduate programme | 2026-11-05 | teamtailor |  |
+| 44 |  | [Consultant – AI Analyst](https://ae.indeed.com/viewjob?jk=987e5b36460b8b92) | Turner & Townsend Pty Limited | Abu Dhabi | AI / ML | 2026-11-13 | indeed + linkedin | LinkedIn says mid-senior; [employer site](https://jobs.smartrecruiters.com/TurnerTownsend/744000161460723-consultant-ai-analyst-) |
+| 45 |  | [Product Analyst](https://jobs.ashbyhq.com/Easygenerator/c168b84d-67ec-4b6f-882c-d70a4ebfb754) | Easygenerator | Dubai | Product | 2026-10-19 | ashby |  |
+| 46 |  | [IT Support Technician](https://ae.indeed.com/viewjob?jk=d815f6ae3d15e557) | Techsys Technology LLC | Dubai | IT | 2026-11-14 | indeed | asks 2 yrs |
+| 47 |  | [AI Product Owner](https://apply.workable.com/j/F398F48679) | Fuse Energy | Dubai | AI / ML | 2026-09-03 | workable |  |
+| 48 |  | [Business Analyst – Airline Disruption Management (IRROPS)](https://www.linkedin.com/jobs/view/4481774124) | HTC Global Services | Dubai | Business analysis | 2026-11-14 | linkedin | LinkedIn says mid-senior |
+| 49 |  | [Forward Deployed Engineer, Infrastructure Specialist (Middle East)](https://jobs.ashbyhq.com/cohere/291e5dee-dcda-49e6-a1b6-dae0d48f80af) | cohere | Dubai | Software / backend | 2026-09-10 | ashby |  |
+| 50 |  | [Software Engineer](https://www.linkedin.com/jobs/view/4490712000) | Jex Recruitment / Connecting top talent with leading companies | Abu Dhabi | Software / backend | 2026-11-13 | linkedin | agency or unnamed employer; LinkedIn says mid-senior |
+| 51 |  | [IT Support Engineer](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12389) | NMC Healthcare | Abu Dhabi | IT | 2026-09-11 | oracle | asks 2 yrs |
+| 52 |  | [Associate Product Specialist, Launch Program 2027 – Dubai, UAE (UAE National Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Product-Specialist--Launch-Program-2027---Dubai--UAE--UAE-National-Preferred-_R-287600-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
+| 53 |  | [Global Markets Launch Graduate Rotational Program 2027 - Associate Product Specialist & Associate Analyst, Account Management- Dubai, UAE (UAE Nationals Preferred)](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Global-Markets-Launch-Graduate-Rotational-Program-2027---Associate-Product-Specialist---Associate-Analyst--Account-Management--Dubai--UAE--UAE-Nationals-Preferred-_R-292816-2) | Mastercard | Dubai | Product | 2026-11-09 | workday | UAE nationals preferred |
 
 ## Wider net: customer service, sales, collections, admin (61, 0 new today)
 
@@ -126,7 +125,7 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | 52 |  | [Administrative Assistant-Support Services](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_8001/job/5837) | PureHealth | Abu Dhabi | Admin / coordination | 2026-09-09 | oracle |  |
 | 53 |  | [Executive.Call Center.Aster Retail HO](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/32119) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-09-01 | oracle |  |
 | 54 |  | [Personal Banking Advisor](https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/65218) | Emirates Islamic | UAE | Sales / accounts | 2026-09-01 | oracle | asks 2 yrs |
-| 55 |  | [Customer Service Officer](https://careers.majidalfuttaim.com/global/en/job/22359) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-24 | phenom | asks 0 yrs |
+| 55 |  | [Customer Service Officer](https://careers.majidalfuttaim.com/global/en/job/22358) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-24 | phenom | asks 0 yrs |
 | 56 |  | [Customer Service Executive. Operations.Aster Pharmacy 145 - Br of Aster Pharmacies Group LLC](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36562) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-08-20 | oracle |  |
 | 57 |  | [Customer Care Representative](https://careers.majidalfuttaim.com/global/en/job/22268) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-18 | phenom | asks 1 yr |
 | 58 |  | [Customer Success Administrator](https://careers.qashio.com/jobs/8205032-customer-success-administrator) | Qashio | Dubai | Customer service / call centre | 2026-08-11 | teamtailor | asks 1 yr |
@@ -161,7 +160,7 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | workday:Shell | failed | 0 |
 | workday:Snap | failed | 0 |
 | workday:Thomson Reuters | failed | 0 |
-| _details | ok | 5 |
+| _details | ok | 0 |
 | amazon | ok | 68 |
 | ashby:brainco | ok | 48 |
 | ashby:checkout.com | ok | 172 |
@@ -174,12 +173,12 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | ashby:openai | ok | 841 |
 | ashby:qlub | ok | 30 |
 | ashby:ziina | ok | 13 |
-| attrax:talabat | ok | 155 |
+| attrax:talabat | ok | 127 |
 | avature:Dubai Holding | ok | 141 |
 | deriv | ok | 46 |
 | emirates_group | ok | 90 |
 | greenhouse:bybit | ok | 161 |
-| greenhouse:careem | ok | 15 |
+| greenhouse:careem | ok | 14 |
 | greenhouse:cobblestoneenergy | ok | 2 |
 | greenhouse:cobblestoneenergy1 | ok | 3 |
 | greenhouse:cobblestoneenergy4 | ok | 2 |
@@ -195,7 +194,7 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | greenhouse:ripple | ok | 111 |
 | greenhouse:scaleai | ok | 169 |
 | greenhouse:tamara | ok | 37 |
-| jibe:M42 | ok | 106 |
+| jibe:M42 | ok | 105 |
 | jibe:Schneider Electric | ok | 26 |
 | lever:Yassir | ok | 117 |
 | lever:aldar | ok | 51 |
@@ -206,7 +205,7 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | oracle:AD Ports Group | ok | 34 |
 | oracle:ADIB | ok | 144 |
 | oracle:Aster DM Healthcare | ok | 641 |
-| oracle:DP World | ok | 511 |
+| oracle:DP World | ok | 513 |
 | oracle:Dell | ok | 582 |
 | oracle:Dubai Airports | ok | 1 |
 | oracle:Emaar | ok | 9 |
@@ -235,7 +234,7 @@ Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, 
 | teamtailor:mumzworld | ok | 12 |
 | teamtailor:propertyfinder | ok | 40 |
 | teamtailor:qashio | ok | 13 |
-| teamtailor:tappayments | ok | 23 |
+| teamtailor:tappayments | ok | 21 |
 | workable:bayutdubizzle | ok | 31 |
 | workable:foodics | ok | 30 |
 | workable:fuseenergy | ok | 113 |
