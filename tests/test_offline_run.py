@@ -2,7 +2,7 @@
 import json
 import logging
 import os
-from datetime import date
+from datetime import date, timedelta
 import random
 import shutil
 import sys
@@ -39,7 +39,7 @@ LI_PAGES.update({"9010": (200, "/jobs/view/9010", "Build dashboards for the sale
 LI_LEVELS = {"9002": "Entry level", "9010": "Entry level", "9011": "Mid-Senior level", "9012": "Internship",
              "9013": "Internship"}
 LI_ASKED = []  # LinkedIn job pages requested, in order
-WIDE_ROWS = []  # (title, employer, description): more Bayt results, for the wider-net scenario
+WIDE_ROWS = []  # (title, employer, description[, posted days ago]): more Bayt results, for the wider net
 
 
 class FakeLinkedIn:
@@ -92,9 +92,10 @@ def fake_scrape_jobs(site_name, search_term, **kw):
                       {"job_url": "https://www.bayt.com/en/uae/jobs/python-developer-2/", "company": "Ziina Technologies",
                        "title": "Python Developer - Junior", "location": "Abu Dhabi, UAE",
                        "date_posted": run.today_dubai(), "description": ""}] + [
-                      {"job_url": "https://www.bayt.com/en/uae/jobs/wide-%d/" % n, "company": company, "title": title,
-                       "location": "Dubai, UAE", "date_posted": run.today_dubai(), "description": text}
-                      for n, (title, company, text) in enumerate(WIDE_ROWS)])
+                      {"job_url": "https://www.bayt.com/en/uae/jobs/wide-%d/" % n, "company": row[1], "title": row[0],
+                       "location": "Dubai, UAE", "description": row[2],
+                       "date_posted": run.today_dubai() - timedelta(days=row[3] if len(row) > 3 else 0)}
+                      for n, row in enumerate(WIDE_ROWS)])
 
 
 class FakeResp:
@@ -616,7 +617,7 @@ def main():
         # roles that need another language are out; a title that states its years meets the years rule
         WIDE_ROWS.extend([
             ("Call Center Agent - Arabic Speaker", "Desert Telecom", "No prior experience required; training is provided."),
-            ("Collection Officer", "Gulf Recovery", "1 year of experience in collections."),
+            ("Collection Officer", "Gulf Recovery", "1 year of experience in collections.", 16),  # posted 25 October
             ("Customer Service Officer", "Harbour Bank", "Minimum 4 years of experience in a bank branch."),
             ("Account Manager", "Joblet-AI", "A remote role."),
             ("Enterprise Account Executive", "BigSoft", "Sell to the largest accounts."),
@@ -644,6 +645,7 @@ def main():
         wide_at = md8.index("## Wider net: customer service, sales, collections, admin (2, 2 new today)")
         assert core_at < md8.index("Junior Data Scientist") < wide_at < md8.index("Call Center Agent - Arabic Speaker")
         assert md8.count("| 1 | ") == 2, md8  # each list is numbered from 1
+        assert officer["posted"] == "2026-10-25" and officer["is_new"], officer
         assert "Customer service / call centre" in md8 and "| Collections |" in md8
 
         # a role stays 7 days after it was last seen. Rows planted as if earlier runs had kept them:
@@ -652,13 +654,15 @@ def main():
             planted = json.load(fh)
 
         def earlier(title, employer, last_seen, **kw):
-            return dict(officer, key="planted", title=title, employer=employer, first_seen="2026-11-01",
-                        last_seen=last_seen, is_new=False, posted="2026-11-01",
-                        url="https://www.bayt.com/en/uae/jobs/%s/" % title.lower().replace(" ", "-"), **kw)
+            row = dict(officer, key="planted", title=title, employer=employer, first_seen="2026-11-01",
+                       last_seen=last_seen, is_new=False, posted="2026-11-01",
+                       url="https://www.bayt.com/en/uae/jobs/%s/" % title.lower().replace(" ", "-"))
+            row.update(kw)
+            return row
 
         planted["jobs"] += [
             # on a job site, last returned five days ago: kept, and the list says so
-            earlier("Telesales Executive", "Sand Telecom", "2026-11-05"),
+            earlier("Telesales Executive", "Sand Telecom", "2026-11-05", posted="2026-11-04"),
             # on a job site, last returned nine days ago: gone
             earlier("Recovery Officer", "Dune Finance", "2026-11-01"),
             # kept yesterday, but today's run reads its description and finds four years asked: gone
@@ -673,6 +677,8 @@ def main():
             # which today's run drops as stale. An old ad says nothing about the role: kept
             earlier("Backend Developer", "dubizzle Group", "2026-11-09", family="software", cv="Backend_Engineer",
                     track="core"),
+            # a job-site role that came without a posting date, first seen two days ago
+            earlier("Admin Assistant", "Palm Logistics", "2026-11-09", posted=None, first_seen="2026-11-08"),
         ]
         with open(latest_path, "w") as fh:
             json.dump(planted, fh)
@@ -681,20 +687,32 @@ def main():
         FAILING.discard("careem")
         latest9 = json.load(open(os.path.join(run.DATA, "latest.json")))
         titles9 = {j["title"]: j for j in latest9["jobs"]}
-        assert set(titles9) == set(titles8) | {"Telesales Executive", "Operations Coordinator", "Backend Developer"}, \
-            set(titles9) ^ set(titles8)
+        assert set(titles9) == set(titles8) | {"Telesales Executive", "Operations Coordinator", "Backend Developer",
+                                               "Admin Assistant"}, set(titles9) ^ set(titles8)
         tele, coord = titles9["Telesales Executive"], titles9["Operations Coordinator"]
         assert tele["last_seen"] == "2026-11-05" and not tele["is_new"] and tele["track"] == "wide", tele
         assert tele["family"] == "customer" and coord["last_seen"] == "2026-11-04" and coord["track"] == "wide", coord
         assert titles9["Backend Developer"]["source"] == "jobspy:bayt" and titles9["Backend Developer"]["track"] == "core"
-        assert latest9["summary"]["carried_over"] == 4, latest9["summary"]  # those three and Careem's row of today
-        assert latest9["summary"]["by_track"] == {"core": len(titles7) + 1, "wide": 4}, latest9["summary"]["by_track"]
+        assert latest9["summary"]["carried_over"] == 5, latest9["summary"]  # those four and Careem's row of today
+        assert latest9["summary"]["by_track"] == {"core": len(titles7) + 1, "wide": 5}, latest9["summary"]["by_track"]
         md9 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
         row = [line for line in md9.splitlines() if "Telesales Executive" in line][0]
         assert row.endswith("last seen 5 days ago |"), row
         assert "last seen 6 days ago" in [line for line in md9.splitlines() if "Operations Coordinator" in line][0]
         assert "A role stays for 7 days after it was last seen." in md9
         assert md9.count("last seen") == 3, md9  # the two rows and the sentence above; nothing seen today says it
+        # the wider net is sorted by posting date, newest first, whether or not a role is new today: the
+        # role posted on 25 October is new and still comes last. A role without a posting date takes the
+        # day it was first seen. The data and tech list keeps its order: new first, then by fit
+        assert "sorted by posting date, newest first" in md9
+        table = md9[md9.index("## Wider net: customer service, sales, collections, admin (5, 2 new today)"):
+                    md9.index("## Sources this run")]
+        wide9 = [line.split("[")[1].split("]")[0] for line in table.splitlines() if line.startswith("| ") and "[" in line]
+        assert wide9 == ["Call Center Agent - Arabic Speaker", "Admin Assistant", "Telesales Executive",
+                         "Operations Coordinator", "Collection Officer"], wide9
+        core9 = md9[md9.index("## Data, AI, software"):md9.index("## Wider net")].splitlines()
+        news = ["🆕" in line for line in core9 if line.startswith("| ") and "[" in line]
+        assert news == sorted(news, reverse=True) and any(news) and not all(news), news  # new rows first
         print("offline end-to-end run passes")
     finally:
         shutil.rmtree(tmp)

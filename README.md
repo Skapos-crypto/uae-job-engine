@@ -22,7 +22,7 @@ Everything lands in [`data/`](data), refreshed after every run:
 
 | File | What it is |
 |---|---|
-| [`latest.md`](data/latest.md) | 📋 A status panel, then two readable tables, new roles first: the data and tech roles, and the wider net. Start here. |
+| [`latest.md`](data/latest.md) | 📋 A status panel, then two readable tables: the data and tech roles (new first, then by fit) and the wider net (newest posting first). Start here. |
 | [`latest.json`](data/latest.json) | 🤖 The same list, machine-readable (handy for a digest email or a chatbot) |
 | [`health.json`](data/health.json) | 🩺 Which sources worked this run, how many jobs each returned, which were blocked, and what each job-site search query brought (`by_query`) |
 | `direct_links.json` | 🧭 The employers' own job systems behind the roles the job sites showed, counted over 30 days: the next employers worth collecting directly |
@@ -113,6 +113,7 @@ Out of ~10,000 postings, a role survives only if:
   - Out: the shop floor, field and commission-only sales, property, insurance and medical sales, part-time, temporary and remote roles (no work visa comes with those), errand jobs, receptionists, and coordinators of a specialist field ("Radiology Coordinator").
   - Kept: walk-in interviews, which is how call centres and sales teams hire. For a data or tech role a walk-in day is a general hiring event and stays out.
   - An analyst, an engineer or a support desk stays in the data and tech list, whatever else its title says.
+  - Its table is sorted by posting date, newest first, since these roles fill fast: a role an employer posted two months ago sits at the bottom even on the day it is first found. A posting without a date takes the day it was first seen.
 - 🗣️ **Another language.** A title that asks for a language other than English or Arabic ("Customer Service Agent - Russian Speaker") is dropped; "Russian or Arabic" stays. `OTHER_LANGUAGE_RE` lists the languages: edit it for the ones you speak.
 - 🚫 **Reposting sites are out.** Joblet-AI and Jobgether repost other companies' vacancies under their own name, most of them remote roles nobody in the UAE stands behind (`REPOSTER_RE`).
 - 🗓️ **A role stays for 7 days after it was last seen** (`KEEP_DAYS`). The job sites return only the newest postings of the last three days, so a role used to vanish from the list while it was still open. Now a job-site role stays a week after the searches last returned it, with `last seen N days ago` in Notes, and so does a role whose source failed. Not kept: a role its employer's own site stopped listing (it closed), one this run read and rejected, and one that no longer passes the rules.
