@@ -1,1 +1,30 @@
-[]
+[
+ {
+  "key": "107027c33f181aed",
+  "title": "TRAINEE – ELECTRICIAN MARINE",
+  "employer": "DP World",
+  "sector": "ports and logistics",
+  "city": "Dubai",
+  "location": "Dubai, United Arab Emirates",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/28000",
+  "source": "oracle:DP World",
+  "source_type": "employer",
+  "seen_on": [
+   "oracle:DP World"
+  ],
+  "posted": "2026-11-17",
+  "age_days": 0,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-17",
+  "last_seen": "2026-11-17",
+  "is_new": true,
+  "score": 4.7,
+  "snippet": "",
+  "apply_url": "",
+  "track": "core"
+ }
+]

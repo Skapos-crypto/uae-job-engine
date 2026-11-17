@@ -1,56 +1,56 @@
-# UAE junior roles: 115 open, 0 new today
+# UAE junior roles: 115 open, 1 new today
 
-Updated 17 Nov 2026 06:56 Dubai time. Two lists, each sorted new first, then by fit: data and tech roles (data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes), then a wider net (customer service and call centre, sales and account management, collections, admin and coordination). Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out. A role stays for 7 days after it was last seen.
+Updated 17 Nov 2026 11:10 Dubai time. Two lists: data and tech roles (data, BI, data science, AI/ML, data engineering, product, business analysis, software/backend, IT, graduate programmes), sorted new first, then by fit; then a wider net (customer service and call centre, sales and account management, collections, admin and coordination), sorted by posting date, newest first. Senior and second-level titles, internships, nationals-only, 3+ years and frontend/mobile roles are filtered out. A role stays for 7 days after it was last seen.
 
 ## Status
 
 - **Sources:** 77 of 100 answered (career systems only; Indeed and LinkedIn are searched once a day)
 - **Failing this run:** 23 workday sources, Accenture, AstraZeneca, Baker Hughes and 20 more (left alone for the rest of this run)
-- **⚠️ Failing 3 or more runs in a row:** 23 workday sources (5)
-- **New roles in the last 7 days:** 132 from Indeed and LinkedIn; 69 from employer sites and boards
+- **⚠️ Failing 3 or more runs in a row:** 23 workday sources (6)
+- **New roles in the last 7 days:** 132 from Indeed and LinkedIn; 70 from employer sites and boards
 
-## Data, AI, software, IT and graduate programmes (54, 0 new today)
+## Data, AI, software, IT and graduate programmes (54, 1 new today)
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 1 |  | [Junior Data Scientist](https://www.linkedin.com/jobs/view/4489308832) | Why Hiring | UAE | Data science | 2026-11-14 | linkedin | entry level |
-| 2 |  | [Junior Research Scientist in the Division of Engineering (Computer Engineering) - Dr. Jiahao Yu](https://www.linkedin.com/jobs/view/4473838962) | New York University Abu Dhabi | Abu Dhabi | Data science | 2026-11-14 | linkedin | entry level |
-| 3 |  | [Junior Backend Engineer](https://www.linkedin.com/jobs/view/4457093793) | Artefact | Dubai | Software / backend | 2026-11-14 | linkedin | entry level |
-| 4 |  | [Marketing & Business Insights Junior Analyst (Cardiac Surgery) (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Cardiac-Surgery---Temporary-_R81397) | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday |  |
-| 5 |  | [Marketing & Business Insights Junior Analyst (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Temporary-_R81399-1) | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday |  |
-| 6 |  | [Junior Product Analyst – B2C OTA](https://www.linkedin.com/jobs/view/4489718790) | Akbar Travels Middle East | Dubai | Product | 2026-11-16 | linkedin | asks 1 yr |
-| 7 |  | [Associate Data Engineer](https://apply.workable.com/j/41834EC4F1) | dubizzle Group | Dubai | Data engineering | 2026-11-13 | workable | asks 2 yrs |
-| 8 |  | [Early Career Trainee, Commercial Enablement](https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/ARE02-01-Dubai-Al-Sufouh-2/Early-Career-Trainee--Commercial-Enablement_R4048612-1) | GE HealthCare | Dubai | Graduate programme | 2026-11-10 | workday | entry level |
-| 9 |  | [AI Engineer (Microsoft Stack)](https://www.linkedin.com/jobs/view/4490273101) | LanceSoft Middle East | Abu Dhabi | AI / ML | 2026-11-16 | linkedin | asks 1 yr |
-| 10 |  | [AI Process Engineer (Temporary)](https://www.linkedin.com/jobs/view/4490742524) | Medtronic | Dubai | AI / ML | 2026-11-13 | linkedin | entry level |
-| 11 |  | [Artificial Intelligence Engineer](https://www.linkedin.com/jobs/view/4489296540) | Elephants Foot Global | Dubai | AI / ML | 2026-11-16 | linkedin | entry level |
-| 12 |  | [Business Intelligence Analyst](https://www.linkedin.com/jobs/view/4489723555) | Technotech Solutions Angola | Sharjah | BI / reporting | 2026-11-16 | linkedin | entry level |
-| 13 |  | [Associate Sales Analyst (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Associate-Sales-Analyst_R81285-1) | Medtronic | Dubai | Analyst (other) | 2026-11-12 | workday | asks 2 yrs |
-| 14 |  | [Golang Developer](https://www.linkedin.com/jobs/view/4489311633) | Unicorn Lab | Dubai | Software / backend | 2026-11-14 | linkedin | asks 2 yrs; entry level |
-| 15 |  | [Software Developer](https://www.linkedin.com/jobs/view/4475340211) | Geotab | Dubai | Software / backend | 2026-11-15 | linkedin | asks 1 yr |
-| 16 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-11-09 | workday |  |
-| 17 |  | [Sales Operations Analyst](https://www.linkedin.com/jobs/view/4490278042) | Tech Spectrum AI Solutions | UAE | Business analysis | 2026-11-16 | linkedin | entry level |
-| 18 |  | [Graduate Management Trainee](https://www.linkedin.com/jobs/view/4490700435) | Genetic Callnet Consultancy Pvt Ltd. | Dubai | Graduate programme | 2026-11-13 | linkedin | agency or unnamed employer; asks 0 yrs |
-| 19 |  | [HR Data Analyst](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4783) | ADIB | UAE | Data analyst | 2026-10-22 | oracle |  |
-| 20 |  | [Specialist, AI Agent](https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853) | First Abu Dhabi Bank | Abu Dhabi | AI / ML | 2026-11-09 | oracle | asks 2 yrs |
-| 21 |  | [AI Implementation Strategist](https://www.linkedin.com/jobs/view/4489340042) | KENSINGTON Finest Properties International · Dubai | Dubai | AI / ML | 2026-11-14 | linkedin |  |
-| 22 |  | [Commercial Performance Analyst, EurAsia (Temporary)](https://ae.indeed.com/viewjob?jk=be470251d86ec8e3) | Medtronic | Dubai | Data analyst | 2026-11-13 | indeed + linkedin | [employer site](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471) |
-| 23 |  | [Data Analyst](https://www.linkedin.com/jobs/view/4446990050) | EDGE | Abu Dhabi | Data analyst | 2026-11-13 | linkedin |  |
-| 24 |  | [Forward Deployed Engineer, Agentic Platform](https://www.linkedin.com/jobs/view/4418825092) | Cohere | Dubai | AI / ML | 2026-11-15 | linkedin |  |
-| 25 |  | [Generative AI Engineer](https://www.linkedin.com/jobs/view/4485001835) | Atain | Abu Dhabi | AI / ML | 2026-11-13 | linkedin |  |
-| 26 |  | [Political Violence and Terrorism – Analyst](https://ae.indeed.com/viewjob?jk=b8f954905a7e7eb5) | Marsh | Dubai | Analyst (other) | 2026-11-13 | indeed | entry level; [employer site](https://careers.marsh.com/global/en/job/R_369676/politicalviolenceandterrorism–analyst) |
-| 27 |  | [System Administrator](https://ae.indeed.com/viewjob?jk=a15aedf1091ae792) | Capital Steel Trading Fzco | Dubai | IT | 2026-11-14 | indeed | asks 1 yr |
-| 28 |  | [Associate AI Product Builder](https://propertyfinder.teamtailor.com/jobs/8448188-associate-ai-product-builder) | Property Finder | Dubai | AI / ML | 2026-09-24 | teamtailor |  |
-| 29 |  | [Dubai Holding Leaders of Tomorrow Graduate Programme 2027](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Leaders-of-Tomorrow-2027/3308) | Dubai Holding | UAE | Graduate programme | 2026-10-23 | avature |  |
-| 30 |  | [Energy Tech Accelerator Graduate Program - Dubai](https://se.jibeapply.com/jobs/139383) | Schneider Electric | Dubai | Graduate programme | 2026-11-01 | jibe |  |
-| 31 |  | [Software Engineer l - Backend](https://careers.deliveryhero.com/job/software-engineer-l-backend-in-dubai-uae-jid-11677) | talabat | Dubai | Software / backend |  | attrax |  |
-| 32 |  | [.Net/React Full Stack Developer](https://www.linkedin.com/jobs/view/4489720499) | Thrifty Car Rental UAE | Dubai | Software / backend | 2026-11-16 | linkedin |  |
-| 33 |  | [Analyst - Report](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466) | AD Ports Group | UAE | Analyst (other) | 2026-11-13 | oracle | asks 2 yrs |
-| 34 |  | [Backend Developer](https://www.linkedin.com/jobs/view/4387513752) | Maaloomatiia Academy | Dubai | Software / backend | 2026-11-15 | linkedin | asks 2 yrs |
-| 35 |  | [Fraud Monitoring Analyst (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906) | ADIB | UAE | Analyst (other) | 2026-11-11 | oracle | asks 2 yrs |
-| 36 |  | [Full Stack Developer – FinTech](https://www.linkedin.com/jobs/view/4489727100) | Al Salah Holding | Dubai | Software / backend | 2026-11-16 | linkedin |  |
-| 37 |  | [Integration Engineer](https://ae.indeed.com/viewjob?jk=0ac27c20df621c4f) | COGNITA SCHOOLS | Dubai | Software / backend | 2026-11-13 | indeed + linkedin | [employer site](https://cognitapeople.csod.com/ux/ats/careersite/1/home/requisition/3298?c=cognitapeople) |
-| 38 |  | [Trainee - Category Management](https://careers.chalhoubgroup.com/jobs/8708569-trainee-category-management) | Chalhoub Group | Dubai | Graduate programme | 2026-11-12 | teamtailor |  |
+| 1 | 🆕 | [TRAINEE – ELECTRICIAN MARINE](https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/28000) | DP World | Dubai | Graduate programme | 2026-11-17 | oracle |  |
+| 2 |  | [Junior Data Scientist](https://www.linkedin.com/jobs/view/4489308832) | Why Hiring | UAE | Data science | 2026-11-14 | linkedin | entry level |
+| 3 |  | [Junior Research Scientist in the Division of Engineering (Computer Engineering) - Dr. Jiahao Yu](https://www.linkedin.com/jobs/view/4473838962) | New York University Abu Dhabi | Abu Dhabi | Data science | 2026-11-14 | linkedin | entry level |
+| 4 |  | [Junior Backend Engineer](https://www.linkedin.com/jobs/view/4457093793) | Artefact | Dubai | Software / backend | 2026-11-14 | linkedin | entry level |
+| 5 |  | [Marketing & Business Insights Junior Analyst (Cardiac Surgery) (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Cardiac-Surgery---Temporary-_R81397) | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday |  |
+| 6 |  | [Marketing & Business Insights Junior Analyst (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Marketing---Business-Insights-Junior-Analyst--Temporary-_R81399-1) | Medtronic | Dubai | BI / reporting | 2026-11-12 | workday |  |
+| 7 |  | [Junior Product Analyst – B2C OTA](https://www.linkedin.com/jobs/view/4489718790) | Akbar Travels Middle East | Dubai | Product | 2026-11-16 | linkedin | asks 1 yr |
+| 8 |  | [Associate Data Engineer](https://apply.workable.com/j/41834EC4F1) | dubizzle Group | Dubai | Data engineering | 2026-11-13 | workable | asks 2 yrs |
+| 9 |  | [Early Career Trainee, Commercial Enablement](https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/ARE02-01-Dubai-Al-Sufouh-2/Early-Career-Trainee--Commercial-Enablement_R4048612-1) | GE HealthCare | Dubai | Graduate programme | 2026-11-10 | workday | entry level |
+| 10 |  | [AI Engineer (Microsoft Stack)](https://www.linkedin.com/jobs/view/4490273101) | LanceSoft Middle East | Abu Dhabi | AI / ML | 2026-11-16 | linkedin | asks 1 yr |
+| 11 |  | [AI Process Engineer (Temporary)](https://www.linkedin.com/jobs/view/4490742524) | Medtronic | Dubai | AI / ML | 2026-11-13 | linkedin | entry level |
+| 12 |  | [Artificial Intelligence Engineer](https://www.linkedin.com/jobs/view/4489296540) | Elephants Foot Global | Dubai | AI / ML | 2026-11-16 | linkedin | entry level |
+| 13 |  | [Business Intelligence Analyst](https://www.linkedin.com/jobs/view/4489723555) | Technotech Solutions Angola | Sharjah | BI / reporting | 2026-11-16 | linkedin | entry level |
+| 14 |  | [Associate Sales Analyst (Temporary)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Associate-Sales-Analyst_R81285-1) | Medtronic | Dubai | Analyst (other) | 2026-11-12 | workday | asks 2 yrs |
+| 15 |  | [Golang Developer](https://www.linkedin.com/jobs/view/4489311633) | Unicorn Lab | Dubai | Software / backend | 2026-11-14 | linkedin | asks 2 yrs; entry level |
+| 16 |  | [Software Developer](https://www.linkedin.com/jobs/view/4475340211) | Geotab | Dubai | Software / backend | 2026-11-15 | linkedin | asks 1 yr |
+| 17 |  | [Associate Analyst, Business Administration- Launch Program 2027 - Dubai, UAE](https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Dubai-United-Arab-Emirates/Associate-Analyst--Business-Administration--Launch-Program-2027---Dubai--UAE_R-285263-2) | Mastercard | Dubai | Analyst (other) | 2026-11-09 | workday |  |
+| 18 |  | [Sales Operations Analyst](https://www.linkedin.com/jobs/view/4490278042) | Tech Spectrum AI Solutions | UAE | Business analysis | 2026-11-16 | linkedin | entry level |
+| 19 |  | [Graduate Management Trainee](https://www.linkedin.com/jobs/view/4490700435) | Genetic Callnet Consultancy Pvt Ltd. | Dubai | Graduate programme | 2026-11-13 | linkedin | agency or unnamed employer; asks 0 yrs |
+| 20 |  | [HR Data Analyst](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4783) | ADIB | UAE | Data analyst | 2026-10-22 | oracle |  |
+| 21 |  | [Specialist, AI Agent](https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/2853) | First Abu Dhabi Bank | Abu Dhabi | AI / ML | 2026-11-09 | oracle | asks 2 yrs |
+| 22 |  | [AI Implementation Strategist](https://www.linkedin.com/jobs/view/4489340042) | KENSINGTON Finest Properties International · Dubai | Dubai | AI / ML | 2026-11-14 | linkedin |  |
+| 23 |  | [Commercial Performance Analyst, EurAsia (Temporary)](https://ae.indeed.com/viewjob?jk=be470251d86ec8e3) | Medtronic | Dubai | Data analyst | 2026-11-13 | indeed + linkedin | [employer site](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Dubai-Dubai-United-Arab-Emirates/Commercial-Performance-Analyst--EurAsia--Temporary-_R81471) |
+| 24 |  | [Data Analyst](https://www.linkedin.com/jobs/view/4446990050) | EDGE | Abu Dhabi | Data analyst | 2026-11-13 | linkedin |  |
+| 25 |  | [Forward Deployed Engineer, Agentic Platform](https://www.linkedin.com/jobs/view/4418825092) | Cohere | Dubai | AI / ML | 2026-11-15 | linkedin |  |
+| 26 |  | [Generative AI Engineer](https://www.linkedin.com/jobs/view/4485001835) | Atain | Abu Dhabi | AI / ML | 2026-11-13 | linkedin |  |
+| 27 |  | [Political Violence and Terrorism – Analyst](https://ae.indeed.com/viewjob?jk=b8f954905a7e7eb5) | Marsh | Dubai | Analyst (other) | 2026-11-13 | indeed | entry level; [employer site](https://careers.marsh.com/global/en/job/R_369676/politicalviolenceandterrorism–analyst) |
+| 28 |  | [System Administrator](https://ae.indeed.com/viewjob?jk=a15aedf1091ae792) | Capital Steel Trading Fzco | Dubai | IT | 2026-11-14 | indeed | asks 1 yr |
+| 29 |  | [Associate AI Product Builder](https://propertyfinder.teamtailor.com/jobs/8448188-associate-ai-product-builder) | Property Finder | Dubai | AI / ML | 2026-09-24 | teamtailor |  |
+| 30 |  | [Dubai Holding Leaders of Tomorrow Graduate Programme 2027](https://dhcareers.avature.net/en_US/newcareersmarketplace/JobDetail/Leaders-of-Tomorrow-2027/3308) | Dubai Holding | UAE | Graduate programme | 2026-10-23 | avature |  |
+| 31 |  | [Energy Tech Accelerator Graduate Program - Dubai](https://se.jibeapply.com/jobs/139383) | Schneider Electric | Dubai | Graduate programme | 2026-11-01 | jibe |  |
+| 32 |  | [Software Engineer l - Backend](https://careers.deliveryhero.com/job/software-engineer-l-backend-in-dubai-uae-jid-11677) | talabat | Dubai | Software / backend |  | attrax |  |
+| 33 |  | [.Net/React Full Stack Developer](https://www.linkedin.com/jobs/view/4489720499) | Thrifty Car Rental UAE | Dubai | Software / backend | 2026-11-16 | linkedin |  |
+| 34 |  | [Analyst - Report](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12466) | AD Ports Group | UAE | Analyst (other) | 2026-11-13 | oracle | asks 2 yrs |
+| 35 |  | [Backend Developer](https://www.linkedin.com/jobs/view/4387513752) | Maaloomatiia Academy | Dubai | Software / backend | 2026-11-15 | linkedin | asks 2 yrs |
+| 36 |  | [Fraud Monitoring Analyst (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4906) | ADIB | UAE | Analyst (other) | 2026-11-11 | oracle | asks 2 yrs |
+| 37 |  | [Full Stack Developer – FinTech](https://www.linkedin.com/jobs/view/4489727100) | Al Salah Holding | Dubai | Software / backend | 2026-11-16 | linkedin |  |
+| 38 |  | [Integration Engineer](https://ae.indeed.com/viewjob?jk=0ac27c20df621c4f) | COGNITA SCHOOLS | Dubai | Software / backend | 2026-11-13 | indeed + linkedin | [employer site](https://cognitapeople.csod.com/ux/ats/careersite/1/home/requisition/3298?c=cognitapeople) |
 | 39 |  | [Analyst - Data & Analytics](https://careers.chalhoubgroup.com/jobs/8679496-analyst-data-analytics) | Chalhoub Group | Dubai | Data analyst | 2026-11-06 | teamtailor | asks 2 yrs |
 | 40 |  | [Data Scientist (m/f/d)](https://www.linkedin.com/jobs/view/4482939493) | Halian / Managed Services, Recruitment Agency & Contract Staffing | Dubai | Data science | 2026-11-14 | linkedin | agency or unnamed employer |
 | 41 |  | [2026, Business Analyst, Strategy & Transformation](https://www.linkedin.com/jobs/view/4474106211) | FTI Consulting | Dubai | Business analysis | 2026-11-13 | linkedin |  |
@@ -72,67 +72,67 @@ Updated 17 Nov 2026 06:56 Dubai time. Two lists, each sorted new first, then by 
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 1 |  | [Service Ambassador - Al Ain](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12414) | AD Ports Group | Abu Dhabi | Customer service / call centre | 2026-11-12 | oracle | asks 1 yr |
-| 2 |  | [Assistant Operations](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12474) | AD Ports Group | Abu Dhabi | Admin / coordination | 2026-11-13 | oracle | asks 0 yrs |
-| 3 |  | [Associate Relationship Manager - Wealth Coverage](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4851) | ADIB | UAE | Sales / accounts | 2026-11-03 | oracle |  |
-| 4 |  | [Associate Relationship Manager- Private Banking Front Office](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7170) | Mashreq | UAE | Sales / accounts | 2026-11-04 | oracle |  |
-| 5 |  | [Call Center Executive](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12506) | NMC Healthcare | Abu Dhabi | Customer service / call centre | 2026-10-26 | oracle | asks 1 yr |
-| 6 |  | [Contact Center Agent](https://careers.m42.ae/jobs/7584) | M42 | Abu Dhabi | Customer service / call centre | 2026-11-16 | jibe | asks 2 yrs |
-| 7 |  | [Order Management and Support Agent](https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/12670) | du | Dubai | Customer service / call centre | 2026-11-16 | oracle | asks 2 yrs |
-| 8 |  | [Account Representative](https://www.amazon.jobs/en/jobs/10602081/account-representative) | Souq.com FZ LLC | Dubai | Sales / accounts | 2026-11-11 | amazon | asks 2 yrs |
-| 9 |  | [Assistant Relationship Manager](https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/66040) | Emirates Islamic | UAE | Sales / accounts | 2026-11-12 | oracle | asks 2 yrs |
-| 10 |  | [Business Development Officer-Sakina-Commercial (Sec.)](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6080) | SEHA | Abu Dhabi | Sales / accounts | 2026-11-16 | oracle |  |
-| 11 |  | [Operations Officer - Transfer Unit](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4915) | ADIB | UAE | Admin / coordination | 2026-11-16 | oracle |  |
+| 1 |  | [Contact Center Agent](https://careers.m42.ae/jobs/7584) | M42 | Abu Dhabi | Customer service / call centre | 2026-11-16 | jibe | asks 2 yrs |
+| 2 |  | [Order Management and Support Agent](https://fa-ewnx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/12670) | du | Dubai | Customer service / call centre | 2026-11-16 | oracle | asks 2 yrs |
+| 3 |  | [Business Development Officer-Sakina-Commercial (Sec.)](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6080) | SEHA | Abu Dhabi | Sales / accounts | 2026-11-16 | oracle |  |
+| 4 |  | [Operations Officer - Transfer Unit](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4915) | ADIB | UAE | Admin / coordination | 2026-11-16 | oracle |  |
+| 5 |  | [Customer Service Advisor - instashop](https://careers.deliveryhero.com/job/customer-service-advisor-instashop-in-dubai-uae-jid-11444) | talabat | Dubai | Customer service / call centre |  | attrax |  |
+| 6 |  | [Account Manager - Arabic Speaker / Malayalam Speaker](https://careers.deliveryhero.com/job/account-manager-arabic-speaker-malayalam-speaker-in-abu-dhabi-uae-jid-11066) | talabat | Abu Dhabi | Sales / accounts |  | attrax |  |
+| 7 |  | [Business Development Executive - Africa](https://join.deriv.careers/jobs/f40a9221-c7e8-44b9-89a6-40a96a8948f3) | Deriv | Dubai | Sales / accounts |  | deriv |  |
+| 8 |  | [Assistant Operations](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12474) | AD Ports Group | Abu Dhabi | Admin / coordination | 2026-11-13 | oracle | asks 0 yrs |
+| 9 |  | [Service Ambassador - Al Ain](https://fa-ewzx-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12414) | AD Ports Group | Abu Dhabi | Customer service / call centre | 2026-11-12 | oracle | asks 1 yr |
+| 10 |  | [Assistant Relationship Manager](https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/66040) | Emirates Islamic | UAE | Sales / accounts | 2026-11-12 | oracle | asks 2 yrs |
+| 11 |  | [Account Representative](https://www.amazon.jobs/en/jobs/10602081/account-representative) | Souq.com FZ LLC | Dubai | Sales / accounts | 2026-11-11 | amazon | asks 2 yrs |
 | 12 |  | [Sales Executive / Al-Futtaim Electric Mobility](https://www.afuturewithus.com/job/Dubai-Sales-Executive-Al-Futtaim-Electric-Mobility/1446324433/) | Al-Futtaim | Dubai | Sales / accounts | 2026-11-10 | successfactors | asks 2 yrs |
-| 13 |  | [Sales Executive](https://apply.workable.com/j/6444E2FE06) | Foodics | Abu Dhabi | Sales / accounts | 2026-10-22 | workable | asks 2 yrs; entry level |
-| 14 |  | [Account Opening Officer - WBG and IBG customer onboarding](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4795) | ADIB | UAE | Customer service / call centre | 2026-10-27 | oracle |  |
-| 15 |  | [Customer Care Representative](https://careers.majidalfuttaim.com/global/en/job/22268) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-18 | phenom | asks 1 yr |
-| 16 |  | [Customer Relationship Officer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4831) | ADIB | UAE | Customer service / call centre | 2026-10-28 | oracle |  |
-| 17 |  | [Customer Relationship Officer - Floater](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4833) | ADIB | UAE | Customer service / call centre | 2026-10-30 | oracle | asks 2 yrs |
-| 18 |  | [Customer Relationship Officer Buffer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4800) | ADIB | UAE | Customer service / call centre | 2026-10-28 | oracle |  |
-| 19 |  | [Customer Service Advisor - instashop](https://careers.deliveryhero.com/job/customer-service-advisor-instashop-in-dubai-uae-jid-11444) | talabat | Dubai | Customer service / call centre |  | attrax |  |
-| 20 |  | [Customer Service Executive.Operations.Aster Pharmacies Group LLC](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36476) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-10-27 | oracle |  |
-| 21 |  | [Customer Service Officer](https://careers.majidalfuttaim.com/global/en/job/22358) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-24 | phenom | asks 0 yrs |
-| 22 |  | [Teller](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4774) | ADIB | UAE | Customer service / call centre | 2026-10-21 | oracle |  |
-| 23 |  | [Teller - Floater](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4796) | ADIB | UAE | Customer service / call centre | 2026-11-03 | oracle |  |
-| 24 |  | [Client Services & Banking Executive](https://apply.workable.com/j/00CEEC289C) | dubizzle Group | Dubai | Customer service / call centre | 2026-11-10 | workable | asks 2 yrs |
-| 25 |  | [Account Manager - Arabic Speaker / Malayalam Speaker](https://careers.deliveryhero.com/job/account-manager-arabic-speaker-malayalam-speaker-in-abu-dhabi-uae-jid-11066) | talabat | Abu Dhabi | Sales / accounts |  | attrax |  |
-| 26 |  | [Account Opening Officer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4890) | ADIB | UAE | Admin / coordination | 2026-11-09 | oracle |  |
-| 27 |  | [Branch Sales Executive - East Coast Area (Outsource Role)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4808) | ADIB | UAE | Sales / accounts | 2026-10-28 | oracle |  |
-| 28 |  | [Business Development Executive - Africa](https://join.deriv.careers/jobs/f40a9221-c7e8-44b9-89a6-40a96a8948f3) | Deriv | Dubai | Sales / accounts |  | deriv |  |
-| 29 |  | [Business Development officer - PL Sales.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6271) | Mashreq | UAE | Sales / accounts | 2026-08-05 | oracle | asks 1 yr |
-| 30 |  | [Home Finance Advisor(Outsource) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4779) | ADIB | UAE | Sales / accounts | 2026-10-23 | oracle | asks 2 yrs |
-| 31 |  | [Islamic Finance Executive - Personal Finance (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4857) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
-| 32 |  | [Islamic Finance Executive-Auto Finance (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4854) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
-| 33 |  | [Islamic Finance Executive-Cards Sales (Outsource) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4859) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
-| 34 |  | [Patient Admin Executive](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12763) | NMC Healthcare | Abu Dhabi | Admin / coordination | 2026-10-20 | oracle |  |
-| 35 |  | [RB-AUH Central Region-Branch Sales Executive (Outsource Role) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4884) | ADIB | UAE | Sales / accounts | 2026-11-06 | oracle |  |
-| 36 |  | [Relationship Officer - ADIB@Work (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4806) | ADIB | UAE | Sales / accounts | 2026-10-28 | oracle |  |
-| 37 |  | [Sales Consultant - Linde Material Handling / Al-Futtaim Automotive / FAMCO / Dubai](https://www.afuturewithus.com/job/Dubai-Sales-Consultant-Linde-Material-Handling-Al-Futtaim-Automotive-FAMCO-Dubai/1443138233/) | Al-Futtaim | Dubai | Sales / accounts | 2026-10-30 | successfactors |  |
-| 38 |  | [Sales Executive / Al-Futtaim Motors / Toyota Al Ain](https://www.afuturewithus.com/job/Al-Ain-Sales-Executive-Al-Futtaim-Motors-Toyota-Al-Ain/1449334933/) | Al-Futtaim | Al Ain | Sales / accounts | 2026-10-20 | successfactors | asks 2 yrs |
-| 39 |  | [SMB Account Executive](https://job-boards.greenhouse.io/deliveroo/jobs/8371315) | Deliveroo | Dubai | Sales / accounts | 2026-11-10 | greenhouse |  |
-| 40 |  | [Customer Success Administrator](https://careers.qashio.com/jobs/8205032-customer-success-administrator) | Qashio | Dubai | Customer service / call centre | 2026-08-11 | teamtailor | asks 1 yr |
-| 41 |  | [Junior Sales Analyst - Inside Sales](https://apply.workable.com/j/20EBAAE453) | dubizzle Group | Dubai | Sales / accounts | 2026-10-14 | workable | asks 2 yrs |
-| 42 |  | [Dealer Relationship Executive - Auctions (Arabic Speaker)](https://apply.workable.com/j/46C3A2E820) | dubizzle Group | Dubai | Sales / accounts | 2026-10-08 | workable | asks 1 yr |
-| 43 |  | [Sales Account Manager - Dubizzle Cars (Northern Emirates)](https://apply.workable.com/j/EBB08B48CE) | dubizzle Group | Dubai | Sales / accounts | 2026-10-12 | workable | asks 1 yr |
-| 44 |  | [Sales Account Manager - Rentals](https://apply.workable.com/j/B751D52A8C) | dubizzle Group | Abu Dhabi | Sales / accounts | 2026-10-08 | workable | asks 1 yr |
-| 45 |  | [Sales Executive - Healthcare Event Portfolio](https://job-boards.greenhouse.io/dmgevents/jobs/8258195) | dmg events | Dubai | Sales / accounts | 2026-10-06 | greenhouse | asks 1 yr |
-| 46 |  | [Sales Executive- Inside Sales B2B](https://apply.workable.com/j/4670CEEAC1) | dubizzle Group | Dubai | Sales / accounts | 2026-10-29 | workable | asks 2 yrs |
-| 47 |  | [Customer Service Executive. Operations.Aster Pharmacy 145 - Br of Aster Pharmacies Group LLC](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36562) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-08-20 | oracle |  |
-| 48 |  | [Executive.Call Center.Aster Retail HO](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/32119) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-09-01 | oracle |  |
-| 49 |  | [Officer- Patient Experience](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_8001/job/4842) | PureHealth | UAE | Customer service / call centre | 2026-08-07 | oracle |  |
-| 50 |  | [Administrative Assistant-Support Services](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_8001/job/5837) | PureHealth | Abu Dhabi | Admin / coordination | 2026-09-09 | oracle |  |
-| 51 |  | [Business Development Officer - SME - Sales](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5918) | Mashreq | UAE | Sales / accounts | 2026-10-02 | oracle |  |
-| 52 |  | [Business Development Officer.Injaz - DBC - PL Retention.Retail Banking group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6871) | Mashreq | UAE | Sales / accounts | 2026-10-14 | oracle | asks 2 yrs |
-| 53 |  | [Islamic Finance Executive Personal Finance, Abu Dhabi (Outsource Role)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1784) | ADIB | UAE | Sales / accounts | 2026-09-25 | oracle |  |
-| 54 |  | [Officer, Credit Operations.Retail Ops - Lending Ops - UnSecured Loans.Operations Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6966) | Mashreq | UAE | Admin / coordination | 2026-10-12 | oracle |  |
-| 55 |  | [Officer, Payment Operations.Cent Ops - PDCS Centralized.](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4668) | Mashreq | UAE | Admin / coordination | 2026-10-02 | oracle |  |
-| 56 |  | [Officer, Payment Operations.OPS - Inward Remittances Centre.Operations Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7018) | Mashreq | UAE | Admin / coordination | 2026-10-13 | oracle |  |
-| 57 |  | [Personal Banking Advisor](https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/65218) | Emirates Islamic | UAE | Sales / accounts | 2026-09-01 | oracle | asks 2 yrs |
-| 58 |  | [Relationship Officer - ADIB@Work (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2170) | ADIB | UAE | Sales / accounts | 2026-09-18 | oracle |  |
-| 59 |  | [Account Manager I](https://boards.greenhouse.io/careem/jobs/8873949002?gh_jid=8873949002) | Careem | Dubai | Sales / accounts | 2026-10-09 | greenhouse | asks 2 yrs |
-| 60 |  | [Business Development Representative](https://jobs.ashbyhq.com/cohere/dbe76343-a8ae-445c-b2f9-c5a304d54f6a) | cohere | Dubai | Sales / accounts | 2026-07-31 | ashby | asks 2 yrs |
-| 61 |  | [Merchant Acquisition Specialist](https://job-boards.eu.greenhouse.io/tamara/jobs/4998601101) | Tamara | Sharjah | Sales / accounts | 2026-10-13 | greenhouse |  |
+| 13 |  | [Client Services & Banking Executive](https://apply.workable.com/j/00CEEC289C) | dubizzle Group | Dubai | Customer service / call centre | 2026-11-10 | workable | asks 2 yrs |
+| 14 |  | [SMB Account Executive](https://job-boards.greenhouse.io/deliveroo/jobs/8371315) | Deliveroo | Dubai | Sales / accounts | 2026-11-10 | greenhouse |  |
+| 15 |  | [Account Opening Officer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4890) | ADIB | UAE | Admin / coordination | 2026-11-09 | oracle |  |
+| 16 |  | [RB-AUH Central Region-Branch Sales Executive (Outsource Role) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4884) | ADIB | UAE | Sales / accounts | 2026-11-06 | oracle |  |
+| 17 |  | [Associate Relationship Manager- Private Banking Front Office](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7170) | Mashreq | UAE | Sales / accounts | 2026-11-04 | oracle |  |
+| 18 |  | [Islamic Finance Executive - Personal Finance (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4857) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
+| 19 |  | [Islamic Finance Executive-Auto Finance (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4854) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
+| 20 |  | [Islamic Finance Executive-Cards Sales (Outsource) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4859) | ADIB | UAE | Sales / accounts | 2026-11-04 | oracle |  |
+| 21 |  | [Associate Relationship Manager - Wealth Coverage](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4851) | ADIB | UAE | Sales / accounts | 2026-11-03 | oracle |  |
+| 22 |  | [Teller - Floater](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4796) | ADIB | UAE | Customer service / call centre | 2026-11-03 | oracle |  |
+| 23 |  | [Customer Relationship Officer - Floater](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4833) | ADIB | UAE | Customer service / call centre | 2026-10-30 | oracle | asks 2 yrs |
+| 24 |  | [Sales Consultant - Linde Material Handling / Al-Futtaim Automotive / FAMCO / Dubai](https://www.afuturewithus.com/job/Dubai-Sales-Consultant-Linde-Material-Handling-Al-Futtaim-Automotive-FAMCO-Dubai/1443138233/) | Al-Futtaim | Dubai | Sales / accounts | 2026-10-30 | successfactors |  |
+| 25 |  | [Sales Executive- Inside Sales B2B](https://apply.workable.com/j/4670CEEAC1) | dubizzle Group | Dubai | Sales / accounts | 2026-10-29 | workable | asks 2 yrs |
+| 26 |  | [Customer Relationship Officer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4831) | ADIB | UAE | Customer service / call centre | 2026-10-28 | oracle |  |
+| 27 |  | [Customer Relationship Officer Buffer](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4800) | ADIB | UAE | Customer service / call centre | 2026-10-28 | oracle |  |
+| 28 |  | [Branch Sales Executive - East Coast Area (Outsource Role)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4808) | ADIB | UAE | Sales / accounts | 2026-10-28 | oracle |  |
+| 29 |  | [Relationship Officer - ADIB@Work (Outsource)HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4806) | ADIB | UAE | Sales / accounts | 2026-10-28 | oracle |  |
+| 30 |  | [Account Opening Officer - WBG and IBG customer onboarding](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4795) | ADIB | UAE | Customer service / call centre | 2026-10-27 | oracle |  |
+| 31 |  | [Customer Service Executive.Operations.Aster Pharmacies Group LLC](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36476) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-10-27 | oracle |  |
+| 32 |  | [Call Center Executive](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12542) | NMC Healthcare | Abu Dhabi | Customer service / call centre | 2026-10-26 | oracle | asks 1 yr |
+| 33 |  | [Home Finance Advisor(Outsource) HV](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4779) | ADIB | UAE | Sales / accounts | 2026-10-23 | oracle | asks 2 yrs |
+| 34 |  | [Sales Executive](https://apply.workable.com/j/6444E2FE06) | Foodics | Abu Dhabi | Sales / accounts | 2026-10-22 | workable | asks 2 yrs; entry level |
+| 35 |  | [Teller](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4774) | ADIB | UAE | Customer service / call centre | 2026-10-21 | oracle |  |
+| 36 |  | [Patient Admin Executive](https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12763) | NMC Healthcare | Abu Dhabi | Admin / coordination | 2026-10-20 | oracle |  |
+| 37 |  | [Sales Executive / Al-Futtaim Motors / Toyota Al Ain](https://www.afuturewithus.com/job/Al-Ain-Sales-Executive-Al-Futtaim-Motors-Toyota-Al-Ain/1449334933/) | Al-Futtaim | Al Ain | Sales / accounts | 2026-10-20 | successfactors | asks 2 yrs |
+| 38 |  | [Junior Sales Analyst - Inside Sales](https://apply.workable.com/j/20EBAAE453) | dubizzle Group | Dubai | Sales / accounts | 2026-10-14 | workable | asks 2 yrs |
+| 39 |  | [Business Development Officer.Injaz - DBC - PL Retention.Retail Banking group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6871) | Mashreq | UAE | Sales / accounts | 2026-10-14 | oracle | asks 2 yrs |
+| 40 |  | [Officer, Payment Operations.OPS - Inward Remittances Centre.Operations Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7018) | Mashreq | UAE | Admin / coordination | 2026-10-13 | oracle |  |
+| 41 |  | [Merchant Acquisition Specialist](https://job-boards.eu.greenhouse.io/tamara/jobs/4998601101) | Tamara | Sharjah | Sales / accounts | 2026-10-13 | greenhouse |  |
+| 42 |  | [Sales Account Manager - Dubizzle Cars (Northern Emirates)](https://apply.workable.com/j/EBB08B48CE) | dubizzle Group | Dubai | Sales / accounts | 2026-10-12 | workable | asks 1 yr |
+| 43 |  | [Officer, Credit Operations.Retail Ops - Lending Ops - UnSecured Loans.Operations Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6966) | Mashreq | UAE | Admin / coordination | 2026-10-12 | oracle |  |
+| 44 |  | [Account Manager I](https://boards.greenhouse.io/careem/jobs/8873949002?gh_jid=8873949002) | Careem | Dubai | Sales / accounts | 2026-10-09 | greenhouse | asks 2 yrs |
+| 45 |  | [Dealer Relationship Executive - Auctions (Arabic Speaker)](https://apply.workable.com/j/46C3A2E820) | dubizzle Group | Dubai | Sales / accounts | 2026-10-08 | workable | asks 1 yr |
+| 46 |  | [Sales Account Manager - Rentals](https://apply.workable.com/j/B751D52A8C) | dubizzle Group | Abu Dhabi | Sales / accounts | 2026-10-08 | workable | asks 1 yr |
+| 47 |  | [Sales Executive - Healthcare Event Portfolio](https://job-boards.greenhouse.io/dmgevents/jobs/8258195) | dmg events | Dubai | Sales / accounts | 2026-10-06 | greenhouse | asks 1 yr |
+| 48 |  | [Business Development Officer - SME - Sales](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5918) | Mashreq | UAE | Sales / accounts | 2026-10-02 | oracle |  |
+| 49 |  | [Officer, Payment Operations.Cent Ops - PDCS Centralized.](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/4668) | Mashreq | UAE | Admin / coordination | 2026-10-02 | oracle |  |
+| 50 |  | [Islamic Finance Executive Personal Finance, Abu Dhabi (Outsource Role)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1784) | ADIB | UAE | Sales / accounts | 2026-09-25 | oracle |  |
+| 51 |  | [Relationship Officer - ADIB@Work (Outsource)](https://hciq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2170) | ADIB | UAE | Sales / accounts | 2026-09-18 | oracle |  |
+| 52 |  | [Administrative Assistant-Support Services](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_8001/job/5837) | PureHealth | Abu Dhabi | Admin / coordination | 2026-09-09 | oracle |  |
+| 53 |  | [Executive.Call Center.Aster Retail HO](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/32119) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-09-01 | oracle |  |
+| 54 |  | [Personal Banking Advisor](https://fa-evlo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/65218) | Emirates Islamic | UAE | Sales / accounts | 2026-09-01 | oracle | asks 2 yrs |
+| 55 |  | [Customer Service Officer](https://careers.majidalfuttaim.com/global/en/job/22359) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-24 | phenom | asks 0 yrs |
+| 56 |  | [Customer Service Executive. Operations.Aster Pharmacy 145 - Br of Aster Pharmacies Group LLC](https://hcdtgccprod-iayeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/36562) | Aster DM Healthcare | Dubai | Customer service / call centre | 2026-08-20 | oracle |  |
+| 57 |  | [Customer Care Representative](https://careers.majidalfuttaim.com/global/en/job/22268) | Majid Al Futtaim | Dubai | Customer service / call centre | 2026-08-18 | phenom | asks 1 yr |
+| 58 |  | [Customer Success Administrator](https://careers.qashio.com/jobs/8205032-customer-success-administrator) | Qashio | Dubai | Customer service / call centre | 2026-08-11 | teamtailor | asks 1 yr |
+| 59 |  | [Officer- Patient Experience](https://fa-eutv-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_8001/job/4842) | PureHealth | UAE | Customer service / call centre | 2026-08-07 | oracle |  |
+| 60 |  | [Business Development officer - PL Sales.Injaz-RBG-DBC PL Fulfillment.Retail Banking Group](https://hcld.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6271) | Mashreq | UAE | Sales / accounts | 2026-08-05 | oracle | asks 1 yr |
+| 61 |  | [Business Development Representative](https://jobs.ashbyhq.com/cohere/dbe76343-a8ae-445c-b2f9-c5a304d54f6a) | cohere | Dubai | Sales / accounts | 2026-07-31 | ashby | asks 2 yrs |
 
 ## Sources this run
 
@@ -161,24 +161,24 @@ Updated 17 Nov 2026 06:56 Dubai time. Two lists, each sorted new first, then by 
 | workday:Shell | failed | 0 |
 | workday:Snap | failed | 0 |
 | workday:Thomson Reuters | failed | 0 |
-| _details | ok | 0 |
-| amazon | ok | 69 |
+| _details | ok | 5 |
+| amazon | ok | 68 |
 | ashby:brainco | ok | 48 |
-| ashby:checkout.com | ok | 175 |
+| ashby:checkout.com | ok | 172 |
 | ashby:cohere | ok | 124 |
 | ashby:easygenerator | ok | 16 |
 | ashby:elevenlabs | ok | 122 |
 | ashby:kraken.com | ok | 95 |
 | ashby:leantech | ok | 8 |
 | ashby:mexdigital | ok | 14 |
-| ashby:openai | ok | 840 |
-| ashby:qlub | ok | 29 |
+| ashby:openai | ok | 841 |
+| ashby:qlub | ok | 30 |
 | ashby:ziina | ok | 13 |
 | attrax:talabat | ok | 155 |
-| avature:Dubai Holding | ok | 139 |
+| avature:Dubai Holding | ok | 141 |
 | deriv | ok | 46 |
-| emirates_group | ok | 88 |
-| greenhouse:bybit | ok | 160 |
+| emirates_group | ok | 90 |
+| greenhouse:bybit | ok | 161 |
 | greenhouse:careem | ok | 15 |
 | greenhouse:cobblestoneenergy | ok | 2 |
 | greenhouse:cobblestoneenergy1 | ok | 3 |
@@ -187,7 +187,7 @@ Updated 17 Nov 2026 06:56 Dubai time. Two lists, each sorted new first, then by 
 | greenhouse:datadog | ok | 382 |
 | greenhouse:deliveroo | ok | 182 |
 | greenhouse:dmgevents | ok | 22 |
-| greenhouse:elastic | ok | 391 |
+| greenhouse:elastic | ok | 388 |
 | greenhouse:esri | ok | 479 |
 | greenhouse:infotrust | ok | 0 |
 | greenhouse:mongodb | ok | 400 |
@@ -195,35 +195,35 @@ Updated 17 Nov 2026 06:56 Dubai time. Two lists, each sorted new first, then by 
 | greenhouse:ripple | ok | 111 |
 | greenhouse:scaleai | ok | 169 |
 | greenhouse:tamara | ok | 37 |
-| jibe:M42 | ok | 105 |
+| jibe:M42 | ok | 106 |
 | jibe:Schneider Electric | ok | 26 |
 | lever:Yassir | ok | 117 |
 | lever:aldar | ok | 51 |
 | lever:binance | ok | 4 |
-| lever:crypto | ok | 87 |
+| lever:crypto | ok | 84 |
 | lever:palantir | ok | 303 |
 | lever:weride | ok | 12 |
 | oracle:AD Ports Group | ok | 34 |
-| oracle:ADIB | ok | 141 |
+| oracle:ADIB | ok | 144 |
 | oracle:Aster DM Healthcare | ok | 641 |
-| oracle:DP World | ok | 508 |
-| oracle:Dell | ok | 570 |
+| oracle:DP World | ok | 511 |
+| oracle:Dell | ok | 582 |
 | oracle:Dubai Airports | ok | 1 |
-| oracle:Emaar | ok | 8 |
-| oracle:Emirates Islamic | ok | 31 |
-| oracle:Emirates NBD | ok | 37 |
-| oracle:First Abu Dhabi Bank | ok | 83 |
+| oracle:Emaar | ok | 9 |
+| oracle:Emirates Islamic | ok | 32 |
+| oracle:Emirates NBD | ok | 38 |
+| oracle:First Abu Dhabi Bank | ok | 84 |
 | oracle:KPMG Lower Gulf | ok | 76 |
-| oracle:Mashreq | ok | 365 |
-| oracle:NMC Healthcare | ok | 147 |
+| oracle:Mashreq | ok | 367 |
+| oracle:NMC Healthcare | ok | 149 |
 | oracle:Oracle | ok | 5 |
 | oracle:PureHealth | ok | 28 |
 | oracle:SEHA | ok | 140 |
-| oracle:SSMC | ok | 203 |
+| oracle:SSMC | ok | 204 |
 | oracle:du | ok | 11 |
-| oracle:e& | ok | 10 |
+| oracle:e& | ok | 24 |
 | phenom:ADCB | ok | 33 |
-| phenom:ADNOC | ok | 53 |
+| phenom:ADNOC | ok | 54 |
 | phenom:G42 | ok | 49 |
 | phenom:Majid Al Futtaim | ok | 258 |
 | pinpoint:tabby | ok | 28 |
