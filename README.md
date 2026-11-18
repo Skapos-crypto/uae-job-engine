@@ -2,7 +2,7 @@
 
 **A tiny robot that job-hunts in the UAE while you sleep.**
 
-Twice a day, a free GitHub Actions run visits about 100 employer career sites and job boards, collects every opening it can find, keeps the junior roles in data, BI, AI/ML, software and IT plus a wider net of customer-service, sales, collections and admin roles, and writes a tidy list of what's left. No servers, no accounts, no logins, no cost.
+Twice a day, a free GitHub Actions run visits about 100 employer career sites and job boards, collects every opening it can find, keeps the junior roles in data, BI, AI/ML, software and IT plus a wider net of customer-service, operations, HR, admin and collections roles, and writes a tidy list of what's left. No servers, no accounts, no logins, no cost.
 
 On a typical day it reads **~10,000 postings** and keeps **a few hundred roles** worth looking at, in two lists.
 
@@ -111,10 +111,11 @@ Out of ~10,000 postings, a role survives only if:
   - Roles open only to UAE nationals are dropped. "Nationals preferred" roles are kept, flagged and ranked lower.
   - Roles asking for 3 or more years of experience are dropped (`MAX_YEARS` in [`run.py`](run.py)); roles asking for up to 2, or naming no number, stay. The number is the first requirement the posting states: in "6-8 years of experience, including at least 2 years in ..." it is 6, not 2. "Up to 7 years" is a ceiling, not a requirement, and doesn't count.
   - Roles that say they won't sponsor a visa are dropped.
-- 🧺 **The wider net** is a second list for someone who needs a job soon: customer service and call centre, sales and account management (account manager, sales executive, business development, a bank's relationship officer), collections, and admin, coordination and back-office work. It has rules of its own (`wider_net` in [`engine/util.py`](engine/util.py)):
-  - Out: roles for experienced people. That is a role sold to large clients ("Enterprise Account Executive", "Key Account Manager"), a rank ("Relationship Manager", "Team Leader", "Supervisor"; "Account Manager" is a role's name and stays), and a title that itself asks for experience ("Collection Officer - Bank Experience Must").
-  - Out: the shop floor, field and commission-only sales, property, insurance and medical sales, part-time, temporary and remote roles (no work visa comes with those), errand jobs, receptionists, and coordinators of a specialist field ("Radiology Coordinator").
-  - Kept: walk-in interviews, which is how call centres and sales teams hire. For a data or tech role a walk-in day is a general hiring event and stays out.
+- 🧺 **The wider net** is a second list for someone who needs a job soon: customer service and call centre (airport passenger services included), operations and logistics (shipping, customs, procurement, inventory, planning, e-commerce operations, onboarding, trust and safety), HR and recruitment administration, admin and back-office work, and collections with accounts receivable, payable and billing. It has rules of its own (`wider_net` in [`engine/util.py`](engine/util.py)):
+  - Out: every selling role (`SALES_RE`): any title that says sales, and the jobs that sell under other names, such as account managers, business development, telesales and lead generation, a bank's relationship officers, personal-banking and finance-product advisers, property, insurance and travel consultants, and retention desks. A data role about sales stays in the data and tech list ("Sales Analyst").
+  - Out: roles for experienced people: a rank ("Team Leader", "Supervisor") and a title that itself asks for experience ("Collection Officer - Bank Experience Must").
+  - Out: the shop floor, field and commission-only work, part-time, temporary and remote roles (no work visa comes with those), errand jobs, receptionists, and coordinators of a specialist field ("Radiology Coordinator").
+  - Kept: walk-in interviews, which is how call centres hire. For a data or tech role a walk-in day is a general hiring event and stays out.
   - An analyst, an engineer or a support desk stays in the data and tech list, whatever else its title says.
   - Its table is sorted by posting date, newest first, since these roles fill fast: a role an employer posted two months ago sits at the bottom even on the day it is first found. A posting without a date takes the day it was first seen.
 - 🗣️ **Another language.** A title that asks for a language other than English or Arabic ("Customer Service Agent - Russian Speaker") is dropped; "Russian or Arabic" stays. `OTHER_LANGUAGE_RE` lists the languages: edit it for the ones you speak.
@@ -136,7 +137,7 @@ Want this for Riyadh, London, or for marketing roles instead of data? Here's the
 4. **Pick your searches** in [`config/search.yaml`](config/search.yaml). Keep the daily total low (30 here: to add a search, take one out). An Indeed search is one request for up to 100 results, descriptions included; a LinkedIn search is three requests for 25 results without descriptions. `linkedin_pages` caps the LinkedIn pages read a day; 0 switches the reading off.
 5. **Teach it your lanes** in [`engine/util.py`](engine/util.py):
    - `UAE_RE` and `CITY_RE`: where you want to work
-   - `FAMILIES`: which job titles you want. The last four lanes are the wider net (`WIDE_FAMILIES`): delete them if you only want your own field
+   - `FAMILIES`: which job titles you want. The five lanes listed in `WIDE_FAMILIES` are the wider net: delete them if you only want your own field
    - `EXCLUDE_RE`, `SENIOR_HARD_RE` and friends: what to throw away
    - The nationals-only rules are UAE-specific (Emiratisation); swap them for your country's equivalent, or remove them
 

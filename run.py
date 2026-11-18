@@ -591,8 +591,8 @@ FAMILY_LABEL = {
     "data_analyst": "Data analyst", "bi": "BI / reporting", "data_science": "Data science",
     "ai_ml": "AI / ML", "data_eng": "Data engineering", "product": "Product", "business": "Business analysis",
     "software": "Software / backend", "it": "IT", "analyst": "Analyst (other)", "graduate": "Graduate programme",
-    "customer": "Customer service / call centre", "collections": "Collections", "sales": "Sales / accounts",
-    "admin": "Admin / coordination",
+    "customer": "Customer service / call centre", "collections": "Collections / AR / AP",
+    "operations": "Operations / logistics", "hr": "HR / recruitment", "admin": "Admin / coordination",
 }
 
 
@@ -697,10 +697,10 @@ def write_markdown(records, summary, health_rows, status, full):
         "",
         "Updated %s Dubai time. Two lists: data and tech roles (data, BI, data science, AI/ML, data "
         "engineering, product, business analysis, software/backend, IT, graduate programmes), sorted new "
-        "first, then by fit; then a wider net (customer service and call centre, sales and account "
-        "management, collections, admin and coordination), sorted by posting date, newest first. Senior "
-        "and second-level titles, internships, nationals-only, %s and frontend/mobile roles are filtered "
-        "out. A role stays for %d days after it was last seen." % (now, TOO_MANY_YEARS, KEEP_DAYS),
+        "first, then by fit; then a wider net (customer service and call centre, operations and logistics, "
+        "HR and recruitment, admin, collections and accounts), sorted by posting date, newest first. Sales "
+        "roles, senior and second-level titles, internships, nationals-only, %s and frontend/mobile roles "
+        "are filtered out. A role stays for %d days after it was last seen." % (now, TOO_MANY_YEARS, KEEP_DAYS),
         "",
     ] + status_lines(status, full)
     today = today_dubai()
@@ -710,7 +710,7 @@ def write_markdown(records, summary, health_rows, status, full):
     wide = sorted((r for r in records if r.get("track") == "wide"),
                   key=lambda r: (r.get("posted") or r["first_seen"], r["score"]), reverse=True)
     for heading, rows in (("Data, AI, software, IT and graduate programmes", core),
-                          ("Wider net: customer service, sales, collections, admin", wide)):
+                          ("Wider net: customer service, operations, HR, admin, collections", wide)):
         lines += ["## %s (%d, %d new today)" % (heading, len(rows), sum(1 for r in rows if r["is_new"])), "",
                   "| # | New | Role | Employer | City | Lane | Posted | Found on | Notes |",
                   "|---|---|---|---|---|---|---|---|---|"]

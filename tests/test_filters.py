@@ -52,8 +52,9 @@ KEEP = [
     ("IT Support Engineer L1/L2", "it"),  # covers the first level
     ("International Data Analyst", "data_analyst"),  # "intern" inside another word
     ("Claims Data Analyst", "data_analyst"),  # insurance, but a data role
-    # 16 November 2026, the wider net: customer service and call centre, collections, sales and
-    # account management, admin. Real titles from the UAE's employer sites and from Indeed.
+    # 16 November 2026, the wider net: customer service and call centre, collections, admin; on
+    # 18 November without sales, and with HR, operations and logistics, and accounts receivable and
+    # payable. Real titles from the UAE's employer sites and from Indeed.
     ("Customer Service Agent", "customer"),
     ("Call Center Agent – Arabic Speaker", "customer"),
     ("Contact Centre Agent - Tamooha", "customer"),
@@ -63,42 +64,50 @@ KEEP = [
     ("Patient Access Representative - Arabic Speaker", "customer"),
     ("Officer- Patient Experience", "customer"),
     ("Customer Experience Officer", "customer"),  # "experience" names the work, it is not asked for
-    ("Tele sales agent- Arabic", "customer"),
-    ("Healthcare Telesales Executive – Lead Qualification", "customer"),  # sales leads, not a team lead
     ("Reservation Agent", "customer"),
+    ("Patient Relationship Executive", "customer"),  # a clinic's patient desk, not a bank's salesperson
+    ("Passenger Service Agent", "customer"),
     ("Teller", "customer"),
     ("Collection Officer", "collections"),
     ("Collections Officer - Credit Cards", "collections"),  # a finance word does not hide it
     ("Debt Collector", "collections"),
     ("Officer - Collections", "collections"),
     ("Billing and Revenue Recovery Officer-Billing and Recoveries", "collections"),
-    ("Account Manager", "sales"),  # a role's name, not a rank
-    ("Account Manager I", "sales"),
-    ("SMB Account Manager - Dubai", "sales"),
-    ("Account Manager - Arabic Speaker / Malayalam Speaker", "sales"),  # either language will do
-    ("Sales Executive", "sales"),
-    ("Sales Executive (No Experience Required)", "sales"),
-    ("Banking Sales Executive - Walk In Interview", "sales"),  # how sales teams hire
-    ("Sales Coordinator (Instrumentation)", "sales"),
-    ("Business Development Representative", "sales"),
-    ("Relationship Officer - Branches", "sales"),
-    ("Assistant Relationship Manager", "sales"),  # a bank's junior salesperson
-    ("Associate Relationship Manager - Wealth Coverage", "sales"),
-    ("Islamic Finance Executive-Auto Finance (Outsource Role)", "sales"),
-    ("Personal Banking Advisor", "sales"),
-    ("Tableau Account Executive - Middle East", "sales"),  # sells Tableau: sales, not BI
-    ("Junior Sales Analyst - Inside Sales", "sales"),
-    ("Junior Business Development Representative (Graduate/Early Careers)", "sales"),
+    ("Accounts Receivable Administrator", "collections"),
+    ("Accounts Payable Clerk", "collections"),
+    ("Billing Executive", "collections"),
+    ("Retail Finance/Reconciliation Officer", "collections"),
+    ("HR Assistant", "hr"),
+    ("Admin cum HR Assistant", "hr"),
+    ("Recruitment Coordinator", "hr"),  # recruitment, which EXCLUDE_RE drops elsewhere, is this lane's work
+    ("Talent Acquisition Coordinator", "hr"),
+    ("People Operations Associate", "hr"),
+    ("Logistics Coordinator", "operations"),
+    ("Logistics/ Procurement Coordinator", "operations"),
+    ("Procurement Assistant", "operations"),
+    ("Inventory Controller", "operations"),
+    ("Inbound Customs Officer – UAE & KSA", "operations"),
+    ("Demand & Supply Planner | Retail | ACE Hardware", "operations"),
+    ("Resource Planning Specialist, dnata Cargo", "operations"),
+    ("Ecommerce Fulfillment Officer | Retail | ACE Hardware", "operations"),
+    ("E-commerce Marketplace Operations Assistant", "operations"),
+    ("Onboarding Specialist, Hub Delivery", "operations"),
+    ("Vendor Registration Specialist", "operations"),
+    ("Content Moderator - Arabic", "operations"),
+    ("Trust & Safety Specialist", "operations"),  # not the "safety" of an HSE role
+    ("Account Opening Officer", "operations"),
+    ("Operation Administrator", "operations"),
     ("Admin Assistant", "admin"),
     ("Administrative Assistant-Support Services", "admin"),
     ("Office Administrator", "admin"),
     ("Data Entry Operator", "admin"),
     ("Document Controller", "admin"),
-    ("Logistics Coordinator & Executive Assistant", "admin"),
-    ("Customs Clearance Coordinator | Al-Futtaim Automotive | Group Supply Chain", "admin"),
-    ("Operations Officer - Transfer Unit", "admin"),
-    ("Officer, Payment Operations.Cent Ops - PDCS Centralized.", "admin"),
-    ("Receptionist / Office Secretary – Real Estate", "admin"),  # property is out for sales only
+    ("Medical Records Assistant", "admin"),
+    ("Logistics Coordinator & Executive Assistant", "operations"),
+    ("Customs Clearance Coordinator | Al-Futtaim Automotive | Group Supply Chain", "operations"),
+    ("Operations Officer - Transfer Unit", "operations"),
+    ("Officer, Payment Operations.Cent Ops - PDCS Centralized.", "operations"),
+    ("Receptionist / Office Secretary – Real Estate", "admin"),  # works for an agency, sells nothing
     ("Arada | Leasing Coordinator, Sharjah", "admin"),
     # an analyst, an engineer and a support desk stay in the data and tech lanes
     ("Client Services Analyst", "analyst"),
@@ -107,6 +116,11 @@ KEEP = [
     ("Associate IT Customer Support", "it"),
     ("Technical Support Agent", "it"),
     ("Project Coordinator", "business"),
+    ("Trust & Safety Analyst", "analyst"),
+    # a data or tech role about sales stays in the data and tech lanes
+    ("Sales Operations Analyst", "business"),
+    ("Account Solution Engineer", "software"),
+    ("Salesforce Developer", "software"),
 ]
 
 DROP = [
@@ -141,7 +155,6 @@ DROP = [
     "Cost Analyst - Business Finance",
     "Financial Reporting specialist",
     "Freelance F&B Financial & Performance ANALYST",
-    "People Operations Associate",
     "Workplace Operations Analyst",
     "2027 Facilities Coordinator Intern",
     "2027 Operations Intern, FC Operations",
@@ -197,6 +210,51 @@ DROP = [
     "Experienced Telesales Executive",
     "Patient Relationship Executive - ( Healthcare Experience )",
     "Collection Officer - Bank Experience Must",
+    # 18 November 2026: no selling roles in the wider net, whatever they are called
+    "Account Manager",
+    "Account Manager I",
+    "SMB Account Manager - Dubai",
+    "Account Manager - Arabic Speaker / Malayalam Speaker",
+    "Sales Executive",
+    "Sales Executive (No Experience Required)",
+    "Banking Sales Executive - Walk In Interview",
+    "Sales Coordinator (Instrumentation)",
+    "Business Development Representative",
+    "Junior Business Development Representative (Graduate/Early Careers)",
+    "Relationship Officer - Branches",
+    "Customer Relationship Officer",  # a bank branch's, with sales targets
+    "Assistant Relationship Manager",
+    "Associate Relationship Manager - Wealth Coverage",
+    "Islamic Finance Executive-Auto Finance (Outsource Role)",
+    "Retail Banking Executive - Personal Loans",
+    "Personal Banking Advisor",
+    "Mortgage Advisor",
+    "Merchant Acquisition Specialist",
+    "Tele sales agent- Arabic",
+    "Telecaller / Tele Sales Executive",
+    "Healthcare Telesales Executive – Lead Qualification",
+    "Lead Generation Executive",
+    "Customer Service/Sales Representative",
+    "Call Centre & Sales Executive",
+    "Receptionist cum Sales Executive",
+    "Sales & Operations Executive",
+    "Junior Business Development Operations Executive- Arabic Speaker",
+    "Partnerships Executive",
+    "Commercial Executive",
+    "Presales Consultant",
+    "After-Sales Service Advisor",
+    "Customer Retention Executive",
+    "Travel Consultant",
+    "Real Estate Agent",
+    "Insurance Advisor",
+    "Tableau Account Executive - Middle East",
+    "AI Sales Executive",
+    "Data Center Sales Executive",
+    "Junior Sales Analyst - Inside Sales",
+    "Recruitment Consultant",  # an agency's: it sells candidates
+    "Payroll Assistant",
+    "Consultant Content Collector",
+    "Security Operations Coordinator",
     # another language than English or Arabic
     "Customer Service Agent - Russian Speaker",
     "Business Development Representative (German-Speaking)",
@@ -389,24 +447,28 @@ def main():
     assert is_agency("Jobgether") and is_agency("Kingston Stanley") and is_agency("Salt")
     assert not is_agency("Kraken") and not is_agency("Salt Bae Restaurants") and not is_agency("Emirates Group")
     # the wider net: why a title is out
-    for title, why in (("Enterprise Account Executive", "experienced-role"),
+    for title, why in (("Enterprise Account Executive", "sales"),
+                       ("Account Manager", "sales"),
+                       ("Customer Service & Sales Executive", "sales"),
+                       ("AI Sales Executive", "sales"),
+                       ("Lead Generation Executive", "sales"),
                        ("Collection Officer - Bank Experience Must", "experienced-role"),
                        ("Customer Service Agent - Russian Speaker", "other-language"),
-                       ("Sales Executive - Real Estate", "excluded-title"),
+                       ("Sales Executive - Real Estate", "sales"),
                        ("Radiology Coordinator -General Radiology", "excluded-title"),
                        ("Customer Service Intern", "internship")):
         assert classify(title) == (None, why), (title, classify(title))
     # a title that states its years is left to the years rule, which reads titles too (run.prefilter)
-    assert classify("Sales Executive (5 Years UAE Experience)")[0] == "sales"
-    assert min_years("Sales Executive (5 Years UAE Experience)") == 5
+    assert classify("Customer Service Agent (5 Years UAE Experience)")[0] == "customer"
+    assert min_years("Customer Service Agent (5 Years UAE Experience)") == 5
     assert classify("Administration Assistant (1 Year Experience)")[0] == "admin"
     assert not other_language("Sales Executive - Russian or Arabic Speaker")
     assert other_language("Agent - Arabic and Russian speaker") and other_language("Fluent in Mandarin - Sales Executive")
     assert not other_language("Call Center Agent - Arabic Speaker") and not other_language("Polish Team Lead")
-    assert seniority("Account Manager") == "unspecified" and seniority("Relationship Manager") == "senior"
-    assert seniority("Assistant Relationship Manager") == "unspecified"
-    assert seniority("Lead Generation Executive") == "unspecified" and seniority("Lead Data Engineer") == "senior"
-    assert track_of("customer") == track_of("collections") == track_of("sales") == track_of("admin") == "wide"
+    assert seniority("Lead Data Engineer") == "senior" and seniority("Customer Success Manager") == "senior"
+    for lane in ("customer", "collections", "hr", "operations", "admin"):
+        assert track_of(lane) == "wide", lane
+    assert track_of("sales") == "core"  # no such lane any more
     assert track_of("data_analyst") == track_of("graduate") == track_of("it") == "core"
     for name in ("Joblet-AI", "Jobgether", "Stylo"):
         assert REPOSTER_RE.search(name), name

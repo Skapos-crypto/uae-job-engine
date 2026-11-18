@@ -31,14 +31,15 @@ jobspy:
     - trainee
     - junior
     - product analyst
-    # the wider net (2026-11-16): customer service and call centre, sales and account management,
-    # collections, admin. Indeed has most of these and sends the description with each result.
+    # the wider net: customer service and call centre, collections and accounts, admin (2026-11-16),
+    # HR and operations/logistics (2026-11-18, in place of "account manager" and "sales executive":
+    # sales roles are out). Indeed has most of these and sends the description with each result.
     - customer service
     - call center
-    - account manager
     - collection
-    - sales executive
     - admin assistant
+    - hr assistant
+    - logistics coordinator
   linkedin:
     - data analyst
     - data scientist

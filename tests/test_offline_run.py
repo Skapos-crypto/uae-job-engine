@@ -613,9 +613,10 @@ def main():
         assert "LinkedIn says mid-senior" in md7 and "1 dropped after reading (1 internship)" in md7
         assert all(j["track"] == "core" for j in latest7["jobs"])
 
-        # the wider net: customer service, sales, collections and admin roles are kept in a list of
-        # their own, below the data and tech roles. Reposting sites, roles for experienced people and
-        # roles that need another language are out; a title that states its years meets the years rule
+        # the wider net: customer service, operations, HR, admin and collections roles are kept in a list
+        # of their own, below the data and tech roles. Selling roles, reposting sites, roles for
+        # experienced people and roles that need another language are out; a title that states its years
+        # meets the years rule
         WIDE_ROWS.extend([
             ("Call Center Agent - Arabic Speaker", "Desert Telecom", "No prior experience required; training is provided."),
             ("Collection Officer", "Gulf Recovery", "1 year of experience in collections.", 16),  # posted 25 October
@@ -625,29 +626,39 @@ def main():
             ("Sales Executive (5 Years UAE Experience)", "Old Hands Trading", ""),
             ("Customer Service Agent - Russian Speaker", "Volga Travel", "Russian is a must."),
             ("Relationship Manager", "Harbour Bank", "Manage a portfolio of clients."),
+            ("Telesales Executive", "Sand Telecom", "Call new customers."),
+            ("HR Assistant", "Palm Group", "Fresh graduates welcome."),
+            ("Logistics Coordinator", "Jebel Ali Freight", "1-2 years of experience with shipping documents."),
+            ("Call Centre Team Leader", "Desert Telecom", "Lead a team of agents."),
+            ("Customer Service Agent (3 Years UAE Experience)", "Gulf Mall Services", ""),
+            ("Collection Officer - Bank Experience Must", "Gulf Recovery", ""),
         ])
         before = dict(latest7["summary"]["rejected"])
         run.main()
         latest8 = json.load(open(os.path.join(run.DATA, "latest.json")))
         titles8 = {j["title"]: j for j in latest8["jobs"]}
-        assert set(titles8) == set(titles7) | {"Call Center Agent - Arabic Speaker", "Collection Officer"}, \
-            set(titles8) ^ set(titles7)
+        assert set(titles8) == set(titles7) | {"Call Center Agent - Arabic Speaker", "Collection Officer",
+                                               "HR Assistant", "Logistics Coordinator"}, set(titles8) ^ set(titles7)
         agent, officer = titles8["Call Center Agent - Arabic Speaker"], titles8["Collection Officer"]
         assert agent["family"] == "customer" and agent["track"] == "wide" and "entry_level" in agent["flags"], agent
         assert officer["family"] == "collections" and officer["track"] == "wide" and officer["min_years"] == 1, officer
         assert all(j["track"] == "core" for j in latest8["jobs"] if j["title"] in titles7)
         assert agent["score"] == 1.7 + 1.0 + 0.5 + 1.0, agent["score"]  # lane, new, this week, entry level
+        hr, logistics = titles8["HR Assistant"], titles8["Logistics Coordinator"]
+        assert hr["family"] == "hr" and hr["track"] == "wide" and "entry_level" in hr["flags"], hr
+        assert logistics["family"] == "operations" and logistics["min_years"] == 1, logistics
         after = latest8["summary"]["rejected"]
-        for reason, more in (("reposting-site", 1), ("experienced-role", 1), ("other-language", 1), ("3+ years", 2),
-                             ("senior", 1)):
+        for reason, more in (("reposting-site", 1), ("sales", 4), ("experienced-role", 1), ("other-language", 1),
+                             ("3+ years", 2), ("senior", 1)):
             assert after.get(reason, 0) - before.get(reason, 0) == more, (reason, before, after)
         md8 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
         core_at = md8.index("## Data, AI, software, IT and graduate programmes (%d, " % len(titles7))
-        wide_at = md8.index("## Wider net: customer service, sales, collections, admin (2, 2 new today)")
+        wide_at = md8.index("## Wider net: customer service, operations, HR, admin, collections (4, 4 new today)")
         assert core_at < md8.index("Junior Data Scientist") < wide_at < md8.index("Call Center Agent - Arabic Speaker")
         assert md8.count("| 1 | ") == 2, md8  # each list is numbered from 1
         assert officer["posted"] == "2026-10-25" and officer["is_new"], officer
-        assert "Customer service / call centre" in md8 and "| Collections |" in md8
+        assert "Customer service / call centre" in md8 and "| Collections / AR / AP |" in md8
+        assert "| HR / recruitment |" in md8 and "| Operations / logistics |" in md8 and "Sales roles," in md8
 
         # a role stays 7 days after it was last seen. Rows planted as if earlier runs had kept them:
         latest_path = os.path.join(run.DATA, "latest.json")
@@ -663,7 +674,9 @@ def main():
 
         planted["jobs"] += [
             # on a job site, last returned five days ago: kept, and the list says so
-            earlier("Telesales Executive", "Sand Telecom", "2026-11-05", posted="2026-11-04"),
+            earlier("Customer Service Representative", "Sand Telecom", "2026-11-05", posted="2026-11-04"),
+            # kept by an earlier run, a selling role by today's rules: gone
+            earlier("Account Manager", "Harbour Bank", "2026-11-09"),
             # on a job site, last returned nine days ago: gone
             earlier("Recovery Officer", "Dune Finance", "2026-11-01"),
             # kept yesterday, but today's run reads its description and finds four years asked: gone
@@ -688,16 +701,17 @@ def main():
         FAILING.discard("careem")
         latest9 = json.load(open(os.path.join(run.DATA, "latest.json")))
         titles9 = {j["title"]: j for j in latest9["jobs"]}
-        assert set(titles9) == set(titles8) | {"Telesales Executive", "Operations Coordinator", "Backend Developer",
-                                               "Admin Assistant"}, set(titles9) ^ set(titles8)
-        tele, coord = titles9["Telesales Executive"], titles9["Operations Coordinator"]
+        assert set(titles9) == set(titles8) | {"Customer Service Representative", "Operations Coordinator",
+                                               "Backend Developer", "Admin Assistant"}, set(titles9) ^ set(titles8)
+        tele, coord = titles9["Customer Service Representative"], titles9["Operations Coordinator"]
+        assert coord["family"] == "operations", coord  # planted as admin: today's lanes decide
         assert tele["last_seen"] == "2026-11-05" and not tele["is_new"] and tele["track"] == "wide", tele
         assert tele["family"] == "customer" and coord["last_seen"] == "2026-11-04" and coord["track"] == "wide", coord
         assert titles9["Backend Developer"]["source"] == "jobspy:bayt" and titles9["Backend Developer"]["track"] == "core"
         assert latest9["summary"]["carried_over"] == 5, latest9["summary"]  # those four and Careem's row of today
-        assert latest9["summary"]["by_track"] == {"core": len(titles7) + 1, "wide": 5}, latest9["summary"]["by_track"]
+        assert latest9["summary"]["by_track"] == {"core": len(titles7) + 1, "wide": 7}, latest9["summary"]["by_track"]
         md9 = open(os.path.join(run.DATA, "latest.md"), encoding="utf-8").read()
-        row = [line for line in md9.splitlines() if "Telesales Executive" in line][0]
+        row = [line for line in md9.splitlines() if "Customer Service Representative" in line][0]
         assert row.endswith("last seen 5 days ago |"), row
         assert "last seen 6 days ago" in [line for line in md9.splitlines() if "Operations Coordinator" in line][0]
         assert "A role stays for 7 days after it was last seen." in md9
@@ -706,11 +720,11 @@ def main():
         # role posted on 25 October is new and still comes last. A role without a posting date takes the
         # day it was first seen. The data and tech list keeps its order: new first, then by fit
         assert "sorted by posting date, newest first" in md9
-        table = md9[md9.index("## Wider net: customer service, sales, collections, admin (5, 2 new today)"):
+        table = md9[md9.index("## Wider net: customer service, operations, HR, admin, collections (7, 4 new today)"):
                     md9.index("## Sources this run")]
         wide9 = [line.split("[")[1].split("]")[0] for line in table.splitlines() if line.startswith("| ") and "[" in line]
-        assert wide9 == ["Call Center Agent - Arabic Speaker", "Admin Assistant", "Telesales Executive",
-                         "Operations Coordinator", "Collection Officer"], wide9
+        assert wide9 == ["Call Center Agent - Arabic Speaker", "Logistics Coordinator", "HR Assistant", "Admin Assistant",
+                         "Customer Service Representative", "Operations Coordinator", "Collection Officer"], wide9
         core9 = md9[md9.index("## Data, AI, software"):md9.index("## Wider net")].splitlines()
         news = ["🆕" in line for line in core9 if line.startswith("| ") and "[" in line]
         assert news == sorted(news, reverse=True) and any(news) and not all(news), news  # new rows first

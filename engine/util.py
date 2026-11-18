@@ -121,6 +121,18 @@ def city_of(location):
 
 # ---------------------------------------------------------------- classification
 
+# Entry-level HR and recruitment administration (a wider-net lane). Its titles pass EXCLUDE_RE, which
+# keeps recruitment, talent acquisition and people operations out of every other lane; an agency's
+# "Recruitment Consultant" is a sales job and stays out.
+HR_ROLE = (
+    r"\b(hr|human resources?|people) (assistant|coordinator|administrator|executive|officer|associate|generalist|"
+    r"admin|clerk|specialist|support|operations (assistant|coordinator|associate))\b|"
+    r"recruitment (coordinator|assistant|administrator|officer|associate|specialist)|"
+    r"talent acquisition (coordinator|assistant|administrator|associate|specialist)|"
+    r"onboarding (coordinator|administrator)|personnel (assistant|officer|clerk)|"
+    r"learning (and|&) development (coordinator|assistant|administrator)|training coordinator"
+)
+
 # Order matters: the first family whose pattern matches the title wins.
 FAMILIES = [
     ("data_science", "Data_Scientist",
@@ -165,14 +177,20 @@ FAMILIES = [
      r"technical support|application support|systems? analyst|systems? administrator|"
      r"network (engineer|administrator|support)|\bnoc\b|data cent(er|re)|infrastructure (engineer|analyst|support)|"
      r"end user (support|computing)"),
-    # The wider net: office and phone roles outside data and tech that take newcomers. No CV variant
-    # is written for them yet, hence "General".
+    # The wider net: office and phone roles outside data and tech that take newcomers. No selling roles
+    # (SALES_RE). No CV variant is written for them yet, hence "General".
     ("collections", "General",
      r"collections? (officer|agent|executive|specialist|associate|analyst|representative|coordinator|advisor|"
-     r"caller|controller|assistant|clerk|staff)|(debt|tele|phone|loan|card)[- ]?collect|\bcollectors?\b|"
+     r"caller|controller|assistant|clerk|staff)|(debt|tele|phone|loan|card)[- ]?collect|"
+     r"(?<!content )(?<!data )\bcollectors?\b|"
      r"recover(y|ies) (officer|agent|executive|specialist|associate)|"
      r"(officer|agent|executive|specialist|associate)[\s,.–-]+(collections?|recover(y|ies))\b|"
-     r"credit control(ler)?|skip trac"),
+     r"credit control(ler)?|skip trac|"
+     # accounts receivable and payable, billing: the back office of the same money
+     r"accounts? (receivable|payable) (clerk|assistant|administrator|executive|officer|specialist|associate|"
+     r"coordinator)|\b(ar|ap) (clerk|assistant|executive|officer|specialist)\b|"
+     r"billing (executive|officer|assistant|coordinator|specialist|clerk|associate|administrator)|"
+     r"accounts (assistant|clerk)|reconciliation (officer|executive|assistant|specialist)"),
     ("customer", "General",
      r"(customer|client|guest|patient|member|vip) (services?|support|care|relations?|success|servicing|happiness|"
      r"engagement|onboarding|access|retention|advisor|adviser|representative|agent|associate|officer|executive|"
@@ -182,38 +200,49 @@ FAMILIES = [
      r"adviser|coordinator|assistant|ambassador)|"
      r"(officer|executive|agent|associate|representative)[\s,.–-]+(customer|client|guest|patient) experience|"
      r"contact cent(er|re)|call cent(er|re)|\bcsr\b|"
-     r"(service|support|chat|call|voice|phone|telephone|reservations?|booking|ticketing|retention) "
+     r"(service|support|chat|call|voice|phone|telephone|reservations?|booking|ticketing) "
      r"(agent|advisor|adviser|representative|operator|officer|executive)|"
-     r"tele ?(sales|marketing|caller|operator|banking)|telemarket|live chat|\bteller\b|"
-     r"service (officer|associate|executive|ambassador)"),
-    ("sales", "General",
-     r"account (manager|executive|coordinator|associate|officer|representative|specialist)|key account|"
-     r"relationship (officer|manager|executive|associate|banker)|"
-     r"\bsales (executive|coordinator|representative|officer|consultant|advisor|adviser|specialist|"
-     r"support|administrator|admin|agent|trainee)|"
-     r"business development (executive|representative|associate|officer|coordinator|specialist)|"
-     r"\b[bs]dr\b|inside sales|direct sales|pre[- ]?sales|(customer|merchant|client) acquisition|"
-     r"partnerships? (executive|associate|coordinator)|commercial (executive|officer|coordinator|associate)|"
-     # the banks' own names for a salesperson
-     r"personal bank(ing|er)\b|(retail|personal|business) banking (executive|officer|advisor|adviser|associate|"
-     r"representative)|(islamic|personal|home|auto|consumer) finance (executive|advisor|adviser|officer)|"
-     r"mortgage (advisor|adviser|officer|consultant)"),
+     r"tele ?(banking|operator)|live chat|\bteller\b|service (officer|associate|executive|ambassador)|"
+     r"passenger (service|services) (agent|officer|assistant)|check[- ]?in (agent|officer)|"
+     r"airport services? (agent|officer)"),
+    ("hr", "General", HR_ROLE),
+    ("operations", "General",
+     r"operations? (executive|officer|assistant|coordinator|support|specialist|associate|administrator|clerk)|"
+     r"\b(officer|executive|associate|assistant|specialist)[\s,.–-]+(\w+ )?operations\b|"
+     r"account opening|settlement (services )?(specialist|officer|executive)|"
+     r"logistics (coordinator|executive|officer|assistant|associate|specialist|administrator|clerk)|"
+     r"supply chain (coordinator|executive|officer|assistant|associate|specialist|administrator)|"
+     r"(shipping|import|export|freight|customs|clearance|documentation) "
+     r"(coordinator|executive|officer|assistant|clerk|associate)|"
+     r"(procurement|purchasing|purchase) (assistant|executive|officer|coordinator|associate|specialist|"
+     r"administrator|clerk)|"
+     r"(inventory|stock) (controller|coordinator|executive|officer|assistant|associate|specialist|clerk|"
+     r"administrator)|warehouse (coordinator|administrator|clerk|executive|officer)|"
+     r"(demand|supply|production|inventory|logistics|transport|material|resource) "
+     r"plann(er|ing (specialist|executive|coordinator|officer|assistant))|"
+     r"fleet (coordinator|executive|officer|administrator)|dispatch (coordinator|executive|officer)|"
+     r"order (management|processing|fulfil+ment) (agent|executive|officer|coordinator|specialist|associate)|"
+     r"fulfil+ment (officer|coordinator|executive|associate|specialist)|"
+     r"vendor (registration|management|onboarding) (specialist|officer|executive|coordinator|associate)|"
+     r"onboarding (specialist|associate|executive|officer)|"
+     r"e-?commerce (executive|coordinator|specialist|assistant|associate|officer|administrator|operations)|"
+     r"marketplace (executive|coordinator|specialist|associate|operations)|"
+     r"catalog(ue)? (executive|coordinator|specialist|associate|assistant|officer)|"
+     r"listing (executive|specialist|associate|coordinator)|content moderat|trust (and|&) safety|content review"),
     ("admin", "General",
      r"admin(istrative|istration)?[ -]+(assistant|officer|executive|coordinator|associate|support|specialist|clerk)|"
      r"(?<!front )office (assistant|administrator|coordinator|executive|admin)|administrative|"
-     r"(operations?|project|contracts?|business) administrator|general administration|"
+     r"(project|contracts?|business) administrator|general administration|"
      r"data entry|back[- ]?office|document control(ler)?|\bcoordinator\b|\bsecretary\b|"
-     r"(personal|executive|team|hr|human resources|logistics|procurement|purchasing|customs|shipping|"
-     r"documentation|operations|travel) (assistant|clerk)|"
-     r"operations (executive|officer|assistant|coordinator|support|specialist|associate)|"
-     r"\b(officer|executive|associate|assistant)[\s,.–-]+(\w+ )?operations\b|"
-     r"account opening|business support"),
+     r"(personal|executive|team|documentation|travel) (assistant|clerk)|business support|"
+     r"medical records (assistant|clerk|officer)|patient registration"),
     ("analyst", "Data_Analyst", r"\banalyst\b"),
     ("graduate", "Data_Analyst",
      r"graduate|trainee|fresh(er)? grad|entry[- ]level|early (careers?|talent)|rotational|campus|apprentice"),
 ]
 FAMILIES = [(f, cv, re.compile(rx, re.I)) for f, cv, rx in FAMILIES]
-WIDE_FAMILIES = {"collections", "customer", "sales", "admin"}
+WIDE_FAMILIES = {"collections", "customer", "hr", "operations", "admin"}
+HR_ROLE_RE = re.compile(HR_ROLE, re.I)
 
 
 def track_of(family):
@@ -233,7 +262,7 @@ EXCLUDE_RE = re.compile(
     r"penetration|information security|infosec|\bgrc\b|\biam\b|identity (and|&) access|legal|paralegal|"
     r"people operations|talent acquisition|recruit(er|ment|ing)|payroll|workplace (operations|experience)|"
     r"facilit(y|ies)|\bpermits?\b|embedded|firmware|fpga|"
-    r"surveyor|inspector|\bhse\b|safety|mechanical|maintenance|civil engineer|electrical engineer|chemical engineer|"
+    r"surveyor|inspector|\bhse\b|(?<!trust and )(?<!trust & )safety|mechanical|maintenance|civil engineer|electrical engineer|chemical engineer|"
     r"petroleum|drilling|reservoir|geolog|quantity|estimator|merchandis|buyer\b|store manager|"
     r"cabin crew|pilot\b|aircraft|chef|culinary|housekeep|waiter|barista|"
     r"data recovery|quality control|distillates|gasoil|"
@@ -242,27 +271,46 @@ EXCLUDE_RE = re.compile(
     r"future (openings?|opportunit|vacanc)",
     re.I,
 )
-# A walk-in day is how call centres and sales teams hire, so the wider net keeps one; for a data or
-# tech role it is a general hiring event, not a vacancy.
+# A walk-in day is how call centres hire, so the wider net keeps one; for a data or tech role it is a
+# general hiring event, not a vacancy.
 WALK_IN_RE = re.compile(r"walk[- ]?in", re.I)
 
 # A job whose own name is a wider-net role. It goes to that lane even when the title also names a
-# data or tech product: "Tableau Account Executive" sells Tableau, "AI Sales Executive" sells.
+# data or tech word ("Customer Service Agent - IT Products", "Contact Centre Agent - Digital Banking").
 STRONG_WIDE_RE = re.compile(
-    r"account (manager|executive|representative|coordinator)|key account|"
-    r"\bsales (executive|representative|officer|consultant|coordinator|specialist|agent|advisor|adviser)|"
-    r"business development (executive|representative|associate|officer)|\b[bs]dr\b|inside sales|"
-    r"relationship (officer|manager|banker)|"
     r"customer (service|support|care|success) (representative|agent|officer|executive|advisor|adviser|associate|"
-    r"specialist|manager|consultant)|(call|contact) cent(er|re)|tele ?(sales|marketing|caller)|"
+    r"specialist|manager|consultant)|(call|contact) cent(er|re)|"
     r"collections? (officer|agent|executive|specialist)|debt collect|\bteller\b",
     re.I,
 )
 
-# Sales titles outside the wider net's own ("Sales Executive", "Account Manager"): a sales role is
-# kept only when a lane names it, or when it is an analyst or operations role as before.
-OTHER_SALES_RE = re.compile(
-    r"\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|business development",
+# Selling roles, as the data and tech lanes have always dropped them ("AI Sales Executive", "Tableau
+# Account Executive"). A data role about sales stays ("Sales Analyst", "Sales Operations Analyst").
+CORE_SALES_RE = re.compile(
+    r"\bsales\b(?!.*\b(analy|operations|ops|insights?|data|intelligence|reporting|planning))|inside sales|"
+    r"telesales|account (executive|manager|director|representative)|key account|business development|"
+    r"\b[bs]dr\b|(customer|merchant|client) acquisition",
+    re.I,
+)
+# No selling roles in the wider net either (decided 18 November 2026): any title that says sales, and
+# the jobs that sell under other names: account management, business development, telesales and lead
+# generation, a bank's relationship and finance-product roles, property, insurance, financial and
+# travel advice, retention desks.
+SALES_RE = re.compile(
+    r"\bsales(man|men|woman|women|person|people)?\b|\bselling\b|tele ?(sales|marketing|caller)|telemarket|"
+    r"account (manager|executive|representative|director|specialist|associate|officer|coordinator)s?\b|"
+    r"account management|key accounts?\b|business development|\b[bs]dr\b|lead (generation|gen|qualification)|"
+    r"(customer|merchant|client|partner|dealer|seller) acquisition|"
+    r"(?<!patient )(?<!guest )relationship (manager|officer|banker|executive|associate)|"
+    r"partnerships? (executive|associate|coordinator|specialist|manager|officer)|"
+    r"commercial (executive|officer|coordinator|associate)|pre[- ]?sales|personal bank(ing|er)\b|"
+    r"(retail|personal|business|priority) banking (executive|officer|advisor|adviser|associate|representative)|"
+    r"(islamic|personal|home|auto|car|consumer) finance (executive|advisor|adviser|officer|consultant)|"
+    r"(mortgage|financial|investment|wealth) (advisor|adviser|consultant|planner)|bancassurance|bancatakaful|"
+    r"insurance (agent|advisor|adviser|consultant)|(real estate|property) (agent|consultant|broker|advisor|"
+    r"adviser|specialist|executive)|off[- ]plan|(?<!customs )\bbrokers?\b|leasing (consultant|executive|agent)|"
+    r"medical (rep|representative)\b|pharma\w* (rep|representative)\b|travel (consultant|agent)|"
+    r"retention (agent|officer|executive|specialist)|cold call",
     re.I,
 )
 
@@ -270,24 +318,16 @@ OTHER_SALES_RE = re.compile(
 # roles (no work visa comes with those), errand jobs, and roles that need training in their field.
 WIDE_EXCLUDE_RE = re.compile(
     r"boutique|showroom|\bstore\b|\bmall\b|\bshop\b|fashion|beauty|fragrance|perfume|cosmetic|make ?up|jewel|"
-    r"watch(es)?\b|luxury|retail (sales|associate|assistant)|sales floor|"
-    r"\bfield\b|outdoor|van sales|door[- ]to[- ]door|commission|freelanc|part[- ]?time|temporary|\btemp\b|"
+    r"watch(es)?\b|luxury|retail (associate|assistant)|"
+    r"\bfield\b|outdoor|door[- ]to[- ]door|commission|freelanc|part[- ]?time|temporary|\btemp\b|"
     r"maternity cover|\bremote\b|work from home|\bwfh\b|"
     r"promoter|hostess|\bspa\b|salon|\bgym\b|fitness|office boy|tea boy|\bhelper\b|cleaner|messenger|"
     r"care assistant|caregiver|site coordinator|construction|clinical|nursing|academic|school|admissions?|"
-    r"sales engineer|(?<!customer )service advis[eo]r|after[- ]?sales|\bdesign\b|project specialist|"
-    r"company secretary|corporate secretary",
-    re.I,
-)
-# Sales only: selling property, insurance, medicines or staffing needs a licence, a degree or a
-# client list of one's own, and most of it pays commission alone.
-SALES_EXCLUDE_RE = re.compile(
-    r"real estate|propert(y|ies)|leasing|\bbroker|off[- ]plan|medical (rep|sales)|pharma\w* (rep|sales)|"
-    r"insurance (agent|advisor|adviser|consultant|sales)|manpower",
+    r"(?<!customer )service advis[eo]r|\bdesign\b|project specialist|company secretary|corporate secretary",
     re.I,
 )
 # A coordinator of a specialist field has that field's training ("Radiology Coordinator", "BIM
-# Coordinator"); an office, sales, logistics or operations coordinator is the wider net's.
+# Coordinator"); an office, logistics or operations coordinator is the wider net's.
 FIELD_COORDINATOR_RE = re.compile(
     r"radiolog|trauma|medical|matern|childcare|clinic|nurs|surg|transplant|oncolog|therap|"
     r"engineering|\bbim\b|building information|security|technical|education|outreach|research|quality|"
@@ -407,13 +447,14 @@ def classify(title):
     t = clean(title)
     if not t:
         return None, "no-title"
-    if EXCLUDE_RE.search(t):
+    # an HR role's own words ("Recruitment Coordinator") are not what EXCLUDE_RE is there to catch
+    if EXCLUDE_RE.search(HR_ROLE_RE.sub(" ", t)):
         return None, "excluded-title"
     if INTERN_RE.search(t):
         return None, "internship"
     if other_language(t):
         return None, "other-language"
-    named_wide = STRONG_WIDE_RE.search(t)
+    named_wide = STRONG_WIDE_RE.search(t) or HR_ROLE_RE.search(t)
     for family, cv, rx in FAMILIES:
         if named_wide and family not in WIDE_FAMILIES:
             continue
@@ -423,8 +464,9 @@ def classify(title):
                     continue  # "Client Services Analyst": an analyst stays in the data and tech lanes
                 # "Collections Officer - Credit Cards" is a wider-net role, whatever finance word it carries
                 return wider_net(family, cv, t)
-            if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or OTHER_SALES_RE.search(t) \
-                    or WALK_IN_RE.search(t):
+            if CORE_SALES_RE.search(t):
+                return None, "sales"
+            if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or WALK_IN_RE.search(t):
                 return None, "excluded-title"
             if family == "graduate":
                 if GRAD_EXCLUDE_RE.search(t):
@@ -434,8 +476,9 @@ def classify(title):
                         cv = variant
                         break
             return family, cv
-    if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or OTHER_SALES_RE.search(t) \
-            or WALK_IN_RE.search(t):
+    if SALES_RE.search(t) or CORE_SALES_RE.search(t):
+        return None, "sales"
+    if (DOMAIN_EXCLUDE_RE.search(t) and not TECH_CORE_RE.search(t)) or WALK_IN_RE.search(t):
         return None, "excluded-title"
     return None, "no-family"
 
@@ -445,9 +488,11 @@ ANALYST_RE = re.compile(r"\banalyst\b", re.I)
 
 def wider_net(family, cv, t):
     """The wider net's own checks on a title one of its lanes matched: (family, cv) or (None, reason)."""
-    if WIDE_EXCLUDE_RE.search(t) or (family == "sales" and SALES_EXCLUDE_RE.search(t)):
+    if SALES_RE.search(t):
+        return None, "sales"
+    if WIDE_EXCLUDE_RE.search(t):
         return None, "excluded-title"
-    if family == "admin" and re.search(r"\bcoordinator\b", t, re.I) and FIELD_COORDINATOR_RE.search(t):
+    if family in ("admin", "operations") and re.search(r"\bcoordinator\b", t, re.I) and FIELD_COORDINATOR_RE.search(t):
         return None, "excluded-title"
     asks = EXPERIENCE_ASKED_RE.search(t) and not NO_EXPERIENCE_RE.search(t) and min_years(t) is None
     if WIDE_EXPERIENCED_RE.search(t) or asks:
@@ -463,13 +508,6 @@ SENIOR_HARD_RE = re.compile(
     re.I,
 )
 SENIOR_SOFT_RE = re.compile(r"\b(senior|sr|snr|lead|manager|mgr|expert|supervisor|team leader|shift leader)\b", re.I)
-# Words that name the work, not a rank: an account manager looks after client accounts, an assistant
-# relationship manager is a bank's junior salesperson, "lead generation" is about sales leads.
-ROLE_MANAGER_RE = re.compile(
-    r"\baccount manager\b|\b(assistant|associate|junior) relationship manager\b|"
-    r"\blead (generation|qualification|gen|management|nurturing|conversion|sourcing)\b",
-    re.I,
-)
 # A second level or higher: "Data Analyst II", "Software Engineer ll" (typed with two L's), "SDE 2",
 # "Full Stack Developer [L2]", "Level 3", "Tier 2 Support". The first level stays ("Engineer I", "L1").
 LEVEL_RE = re.compile(
@@ -492,7 +530,7 @@ def seniority(title):
         return "senior"
     junior_words = {w.lower() for w in JUNIOR_RE.findall(t)}
     level = LEVEL_RE.search(t) and not FIRST_LEVEL_RE.search(t)
-    if SENIOR_SOFT_RE.search(ROLE_MANAGER_RE.sub(" ", t)) or level:
+    if SENIOR_SOFT_RE.search(t) or level:
         # "Senior Associate" is a grade of its own (three to six years at the Big Four and the like), and
         # so is "Associate Engineer II": "associate" alone does not make such a title junior, the other
         # words do ("Graduate Engineer II")
@@ -734,7 +772,7 @@ FAMILY_WEIGHT = {
     "data_analyst": 3.0, "bi": 3.0, "data_science": 3.0, "ai_ml": 3.0, "data_eng": 3.0,
     "graduate": 2.6, "software": 2.6, "product": 2.5, "business": 2.3, "analyst": 2.0, "it": 1.8,
     # the wider net ranks below the data and tech lanes
-    "customer": 1.7, "collections": 1.7, "sales": 1.5, "admin": 1.5,
+    "customer": 1.7, "collections": 1.7, "operations": 1.7, "hr": 1.5, "admin": 1.5,
 }
 OLD_AFTER_DAYS = 30  # an employer posting open longer than this is ranked lower; aggregator posts are dropped sooner
 
