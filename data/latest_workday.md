@@ -1,19 +1,15 @@
 # Workday roles, read from a PC
 
-<!-- read: 2026-11-18 22:13 -->
-Workday answers "too many requests" to the servers this collector runs on, so its employers are read from the repository owner's PC instead: the same client, pace and filters as [latest.md](latest.md), on days that PC is on. Read 2026-11-18 22:13 Dubai time: 23 of 23 employers answered, 19 roles pass the filters. 🆕 marks a role read for the first time that day.
+<!-- read: 2026-11-18 22:19 -->
+Workday answers "too many requests" to the servers this collector runs on, so its employers are read from the repository owner's PC instead: the same client, pace and filters as [latest.md](latest.md), on days that PC is on. Read 2026-11-18 22:19 Dubai time: 23 of 23 employers answered, 15 roles pass the filters. 🆕 marks a role read for the first time that day.
 
-## Not in latest.md (7)
+## Not in latest.md (3)
 
 | # | New | Role | Employer | City | Lane | Posted | Found on | Notes |
 |---|---|---|---|---|---|---|---|---|
 | 1 |  | [Microsoft Dynamics 365 CRM – Functional Specialist (Fresh Graduate)](https://dxctechnology.wd1.myworkdayjobs.com/en-US/DXCJobs/job/ARE---DU---DUBAI/Microsoft-Dynamics-365-CRM---Functional-Specialist--Fresh-Graduate-_51594675) | DXC Technology | Dubai | Graduate programme | 2026-11-16 | workday | entry level |
-| 2 | 🆕 | [Service Cloud Account Executive - UAE](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Service-Cloud-Account-Executive---UAE_JR365004) | Salesforce | Dubai | Sales / accounts | 2026-11-18 | workday |  |
-| 3 |  | [Account Manager - Cigna Healthcare](https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/Dubai-United-Arab-Emirates/Account-Manager---Cigna-Healthcare_26012563-1) | Cigna | Dubai | Sales / accounts | 2026-11-17 | workday |  |
-| 4 |  | [Administrative Services Representative](https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/UAE-Dubai---Nas-Neuron/Administrative-Services-Representative_26013537) | Cigna | Dubai | Admin / coordination | 2026-11-04 | workday | asks 1 yr |
-| 5 |  | [Tableau Account Executive - Middle East](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates---Dubai/Tableau-Account-Executive---Middle-East_JR362555) | Salesforce | Dubai | Sales / accounts | 2026-11-02 | workday |  |
-| 6 |  | [Business Development Representative](https://thomsonreuters.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/United-Arab-Emirates-Dubai-Dubai/Business-Development-Representative_JREQ204225) | Thomson Reuters | UAE | Sales / accounts | 2026-10-28 | workday |  |
-| 7 |  | [Project Administrator](https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/Project-Administrator_R2127644) | KBR | Abu Dhabi | Admin / coordination | 2026-10-19 | workday | asks 2 yrs |
+| 2 |  | [Administrative Services Representative](https://cigna.wd5.myworkdayjobs.com/en-US/cignacareers/job/UAE-Dubai---Nas-Neuron/Administrative-Services-Representative_26013537) | Cigna | Dubai | Admin / coordination | 2026-11-04 | workday | asks 1 yr |
+| 3 |  | [Project Administrator](https://kbr.wd5.myworkdayjobs.com/en-US/KBR_Careers/job/Abu-Dhabi-United-Arab-Emirates/Project-Administrator_R2127644) | KBR | Abu Dhabi | Admin / coordination | 2026-10-19 | workday | asks 2 yrs |
 
 ## Also in latest.md (12)
 
