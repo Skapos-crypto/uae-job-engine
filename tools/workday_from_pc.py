@@ -175,6 +175,8 @@ def main(argv=None):
     ap.add_argument("--state", default=os.path.join(REPO, ".workday-state"))
     ap.add_argument("--log")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--updated", action="store_true", help=argparse.SUPPRESS)  # the checkout is already current
+    argv = sys.argv[1:] if argv is None else argv
     args = ap.parse_args(argv)
     if args.log:
         sys.stdout = sys.stderr = open(args.log, "a", encoding="utf-8", buffering=1)
@@ -182,8 +184,14 @@ def main(argv=None):
     try:
         if args.publish and not (args.author_name and args.author_email):
             raise SystemExit("--publish needs --author-name and --author-email")
-        if args.publish:
+        if args.publish and not args.updated:
+            before = git("rev-parse", "HEAD").stdout.strip()
             update_checkout()
+            if git("rev-parse", "HEAD").stdout.strip() != before:
+                # this process loaded the filters before the update: the new ones run in a fresh process
+                print("checkout updated to %s: running again with its code" % git("rev-parse", "--short", "HEAD").stdout.strip())
+                sys.stdout.flush()
+                return subprocess.call([sys.executable, os.path.abspath(__file__)] + list(argv) + ["--updated"])
         os.makedirs(args.state, exist_ok=True)
         t0, today = time.time(), today_dubai()
         employers = run.load_yaml("employers.yaml").get("workday") or []
