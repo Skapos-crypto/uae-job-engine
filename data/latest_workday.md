@@ -1,7 +1,7 @@
 # Workday roles, read from a PC
 
-<!-- read: 2026-11-18 21:59 -->
-Workday answers "too many requests" to the servers this collector runs on, so its employers are read from the repository owner's PC instead: the same client, pace and filters as [latest.md](latest.md), on days that PC is on. Read 2026-11-18 21:59 Dubai time: 23 of 23 employers answered, 19 roles pass the filters. 🆕 marks a role read for the first time that day.
+<!-- read: 2026-11-18 22:13 -->
+Workday answers "too many requests" to the servers this collector runs on, so its employers are read from the repository owner's PC instead: the same client, pace and filters as [latest.md](latest.md), on days that PC is on. Read 2026-11-18 22:13 Dubai time: 23 of 23 employers answered, 19 roles pass the filters. 🆕 marks a role read for the first time that day.
 
 ## Not in latest.md (7)
 
