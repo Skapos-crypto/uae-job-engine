@@ -1205,7 +1205,7 @@
   "ov": false,
   "fr": true,
   "lvl": "entry level",
-  "d": "2026-11-16",
+  "d": "2026-11-22",
   "v": "c74f39f8"
  },
  "u:bf1da8bf027e0ffe": {
@@ -3354,5 +3354,16 @@
   "fr": false,
   "d": "2026-11-22",
   "v": "c74f39f8"
+ },
+ "u:1ed2b589ae1667b5": {
+  "nat": null,
+  "yrs": 3,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "lvl": "entry level",
+  "d": "2026-11-22",
+  "v": "c74f39f8",
+  "w": "fice) Joining: Immediate joiners preferred; maximum 30 days’ notice Experience- 3 to 6 years About the role We are hiring an Associate AI Engineer to work onsite in Abu Dha"
  }
 }
