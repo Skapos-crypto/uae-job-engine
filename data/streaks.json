@@ -1,221 +1,221 @@
 {
  "oracle:Emaar": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:Dubai Airports": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:HP": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:Oracle": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Shell": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Pfizer": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:du": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:AD Ports Group": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:First Abu Dhabi Bank": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Cleveland Clinic Abu Dhabi": {
-  "fails": 17,
+  "fails": 18,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "oracle:Emirates NBD": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:KPMG Lower Gulf": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:e&": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Salesforce": {
-  "fails": 19,
+  "fails": 20,
   "last_ok": "2026-11-15",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:AstraZeneca": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:careem": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Baker Hughes": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "teamtailor:propertyfinder": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Mastercard": {
-  "fails": 17,
+  "fails": 18,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "SourceError: workday mastercard: HTTP 429, too many requests"
  },
  "teamtailor:careers.chalhoubgroup.com": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Rolls-Royce": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "jibe:M42": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:GSK": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Novartis": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "pinpoint:tabby": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Coca-Cola": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:tamara": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "lever:aldar": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:Emirates Islamic": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:ziina": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workable:bayutdubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:NMC Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:ADIB": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "teamtailor:dubizzle": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:cobblestoneenergy": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:checkout.com": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "successfactors:EY": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workable:smartcrowd": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Philips": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "successfactors:PwC Middle East": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "teamtailor:mumzworld": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "teamtailor:tappayments": {
   "fails": 0,
@@ -224,201 +224,201 @@
  },
  "greenhouse:cobblestoneenergy1": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "lever:Yassir": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:qlub": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workable:foodics": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "phenom:ADCB": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:cobblestoneenergy4": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:mexdigital": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "amazon": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:PureHealth": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:Mashreq": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:dmgevents": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:leantech": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "deriv": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "lever:weride": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:infotrust": {
-  "fails": 1,
+  "fails": 2,
   "last_ok": "2026-11-22",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "greenhouse infotrust: 404"
  },
  "phenom:G42": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:SEHA": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:openai": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Thomson Reuters": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "lever:binance": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:scaleai": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:cohere": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:Dell": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:SSMC": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:databricks": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:elevenlabs": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "lever:palantir": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:datadog": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:Aster DM Healthcare": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:KBR": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "greenhouse:mongodb": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "successfactors:Al-Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "attrax:talabat": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:okx": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:bybit": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:ripple": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "oracle:DP World": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "phenom:Majid Al Futtaim": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "avature:Dubai Holding": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "jobspy:indeed": {
   "fails": 0,
@@ -437,111 +437,111 @@
   "error": "blocked"
  },
  "workday:GE HealthCare": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:DXC Technology": {
-  "fails": 17,
+  "fails": 18,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "jibe:Schneider Electric": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "workday:Snap": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Cigna": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:GE Vernova": {
-  "fails": 17,
+  "fails": 18,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:NVIDIA": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Medtronic": {
-  "fails": 18,
+  "fails": 19,
   "last_ok": "2026-11-16",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workday:Accenture": {
-  "fails": 19,
+  "fails": 20,
   "last_ok": "2026-11-15",
-  "ran": "2026-11-22",
+  "ran": "2026-11-23",
   "error": "LeftAlone: myworkdayjobs.com answered 429 3 times in a row: left alone for the rest of this run"
  },
  "workable:fuseenergy": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "teamtailor:qashio": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:kraken.com": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:brainco": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "emirates_group": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "ashby:easygenerator": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "phenom:ADNOC": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:esri": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:deliveroo": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "lever:crypto": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  },
  "greenhouse:elastic": {
   "fails": 0,
-  "last_ok": "2026-11-22",
-  "ran": "2026-11-22"
+  "last_ok": "2026-11-23",
+  "ran": "2026-11-23"
  }
 }
