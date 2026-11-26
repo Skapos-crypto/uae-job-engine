@@ -11,7 +11,7 @@
    "Mövenpick",
    "Rixos"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://jobs.smartrecruiters.com/VirtuaAdvancedSolution/744000163192128-recruitment-specialist-",
   "jobs": {
    "f452198f85d25487": [
@@ -51,7 +51,7 @@
     "Etihad Airways"
    ],
    "d88e422e861a4348": [
-    "2026-11-25",
+    "2026-11-26",
     "AECOM"
    ],
    "7549073e7d9063ed": [
@@ -99,15 +99,15 @@
     "Rixos"
    ],
    "205927e4631e2123": [
-    "2026-11-25",
+    "2026-11-26",
     "Mövenpick"
    ],
    "fff310ec962e3993": [
-    "2026-11-25",
+    "2026-11-26",
     "Accor"
    ],
    "1112440633a35a78": [
-    "2026-11-25",
+    "2026-11-26",
     "Virtua Advanced Solution"
    ],
    "d7991ec197ec58f5": [
@@ -115,13 +115,13 @@
     "SGS"
    ],
    "fbd0c0a79aaa5d28": [
-    "2026-11-25",
+    "2026-11-26",
     "Rixos"
    ]
   }
  },
  "apply.workable.com": {
-  "roles": 9,
+  "roles": 10,
   "employers": [
    "Beond",
    "BlackStone eIT",
@@ -129,11 +129,11 @@
    "GSSTech Group",
    "Logifuture",
    "Pavago",
-   "Valsoft",
-   "emaratech"
+   "THA by ARMONIA",
+   "Valsoft"
   ],
-  "last": "2026-11-25",
-  "sample": "https://apply.workable.com/j/E78A1DC1A1",
+  "last": "2026-11-26",
+  "sample": "https://apply.workable.com/j/848306BD68",
   "jobs": {
    "9ea227a2c704414d": [
     "2026-11-18",
@@ -168,8 +168,12 @@
     "emaratech"
    ],
    "04ec2bc53f15c265": [
-    "2026-11-25",
+    "2026-11-26",
     "DataOne"
+   ],
+   "fdc129838a7fb35a": [
+    "2026-11-26",
+    "THA by ARMONIA"
    ]
   }
  },
@@ -178,8 +182,8 @@
   "employers": [
    "DICETEK LLC"
   ],
-  "last": "2026-11-25",
-  "sample": "https://dicetek.talentrecruit.com/career-page/apply/U2FsdGVkX1%252F4Sli7UFooTbh6w%252BHT8C%252B%252BP2tnkrhzDFc%253D",
+  "last": "2026-11-26",
+  "sample": "https://dicetek.talentrecruit.com/career-page/apply/U2FsdGVkX1%252B6HeolyjAGf%252FY7r2R3HO8c0oL4IR%252BhkxI%253D",
   "jobs": {
    "46a5529c4a04e906": [
     "2026-11-18",
@@ -210,7 +214,7 @@
     "DICETEK LLC"
    ],
    "c2faf20b1b84aed2": [
-    "2026-11-25",
+    "2026-11-26",
     "DICETEK LLC"
    ],
    "33a3d5552ac5c36a": [
@@ -262,7 +266,7 @@
   "employers": [
    "Wood"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/33697",
   "jobs": {
    "a14a09daf4d3a21a": [
@@ -282,11 +286,11 @@
     "Wood"
    ],
    "803c79b0a2b5b8ce": [
-    "2026-11-25",
+    "2026-11-26",
     "Wood"
    ],
    "2fcb2af59dd73c65": [
-    "2026-11-25",
+    "2026-11-26",
     "Wood"
    ]
   }
@@ -296,7 +300,7 @@
   "employers": [
    "Al-Futtaim"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://www.afuturewithus.com/job/MIS-&-Reporting-Analyst-Al-Futtaim-Automotive-Dubai/1460076333/",
   "jobs": {
    "fc411ea1837d80e3": [
@@ -320,8 +324,72 @@
     "Al-Futtaim"
    ],
    "16c66efd11f4cff8": [
-    "2026-11-25",
+    "2026-11-26",
     "Al-Futtaim"
+   ]
+  }
+ },
+ "www.emiratesgroupcareers.com": {
+  "roles": 6,
+  "employers": [
+   "The Emirates Group"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://www.emiratesgroupcareers.com/search-and-apply/27005",
+  "jobs": {
+   "9c5b7f3879a23ac1": [
+    "2026-11-15",
+    "The Emirates Group"
+   ],
+   "fc672b74bf5e43e5": [
+    "2026-11-19",
+    "The Emirates Group"
+   ],
+   "26a816402e195612": [
+    "2026-11-20",
+    "The Emirates Group"
+   ],
+   "9480bca479c546f2": [
+    "2026-11-23",
+    "The Emirates Group"
+   ],
+   "6ae94a95073da16e": [
+    "2026-11-26",
+    "The Emirates Group"
+   ],
+   "09bcdbdc3d9ea46b": [
+    "2026-11-26",
+    "The Emirates Group"
+   ]
+  }
+ },
+ "efet.fa.us2.oraclecloud.com": {
+  "roles": 5,
+  "employers": [
+   "Hilton"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/232752",
+  "jobs": {
+   "b54961bce5675f6a": [
+    "2026-11-18",
+    "Hilton"
+   ],
+   "af1fb4e033d6f2f4": [
+    "2026-11-21",
+    "Hilton"
+   ],
+   "85ed356c7d4496b9": [
+    "2026-11-24",
+    "Hilton"
+   ],
+   "7d676b0577c76777": [
+    "2026-11-26",
+    "Hilton"
+   ],
+   "56920ccadafa4f6c": [
+    "2026-11-26",
+    "Hilton"
    ]
   }
  },
@@ -352,6 +420,36 @@
    "35c397f157036b66": [
     "2026-11-25",
     "Citi"
+   ]
+  }
+ },
+ "stellartechnologies.ae": {
+  "roles": 5,
+  "employers": [
+   "Cirtec Medical"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://stellartechnologies.ae/jobs/mlops-llmops-reliability-engineer-contract-kigali-or-remote/",
+  "jobs": {
+   "8cba58aaff61d5c0": [
+    "2026-11-26",
+    "Cirtec Medical"
+   ],
+   "f3610ff3bd5979f0": [
+    "2026-11-26",
+    "Cirtec Medical"
+   ],
+   "e26577f0c1b6ab77": [
+    "2026-11-26",
+    "Cirtec Medical"
+   ],
+   "6ecaa7f80171b1f6": [
+    "2026-11-26",
+    "Cirtec Medical"
+   ],
+   "1d4e0fe6268da9d7": [
+    "2026-11-26",
+    "Cirtec Medical"
    ]
   }
  },
@@ -386,7 +484,7 @@
   "employers": [
    "Marriott International"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://careers.marriott.com/call-center-agent/job/PDX_MI_DB17D50B-1A1D-40F6-BF0B-0BFDF28A131B_22328552",
   "jobs": {
    "e3ff3d0f748b3301": [
@@ -398,38 +496,67 @@
     "Marriott International"
    ],
    "5ded99b39b1584ee": [
-    "2026-11-25",
+    "2026-11-26",
     "Marriott International"
    ],
    "4fc0c206210ab69d": [
-    "2026-11-25",
+    "2026-11-26",
     "Marriott International"
    ]
   }
  },
- "efet.fa.us2.oraclecloud.com": {
+ "jobs.ashbyhq.com": {
   "roles": 4,
   "employers": [
-   "Hilton"
+   "Aleroy",
+   "CLERA",
+   "Cognition AI",
+   "Qlub"
   ],
-  "last": "2026-11-25",
-  "sample": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/232752",
+  "last": "2026-11-26",
+  "sample": "https://jobs.ashbyhq.com/cognition/3e6e7519-b71a-45e9-a913-4a17d8741688",
   "jobs": {
-   "b54961bce5675f6a": [
+   "2d456e388f3562c1": [
     "2026-11-18",
-    "Hilton"
+    "Qlub"
    ],
-   "af1fb4e033d6f2f4": [
+   "d377dc256e8bd974": [
+    "2026-11-23",
+    "Aleroy"
+   ],
+   "d8ce5840aecfefb7": [
+    "2026-11-23",
+    "CLERA"
+   ],
+   "68066861afb66213": [
+    "2026-11-26",
+    "Cognition AI"
+   ]
+  }
+ },
+ "jobs.egis-group.com": {
+  "roles": 4,
+  "employers": [
+   "Egis Group"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://jobs.egis-group.com/job/pre-graduate-data-and-bi-uae-national-in-dubai-jid-10144",
+  "jobs": {
+   "e7596d0e1e0d19cb": [
+    "2026-11-15",
+    "Egis Group"
+   ],
+   "039f777f9615e2a7": [
+    "2026-11-20",
+    "Egis Group"
+   ],
+   "7566fc6432b7e76e": [
     "2026-11-21",
-    "Hilton"
+    "Egis Group"
    ],
-   "85ed356c7d4496b9": [
-    "2026-11-24",
-    "Hilton"
-   ],
-   "7d676b0577c76777": [
-    "2026-11-25",
-    "Hilton"
+   "1e8178a43d81e4af": [
+    "2026-11-26",
+    "Egis Group"
    ]
   }
  },
@@ -438,7 +565,7 @@
   "employers": [
    "PulseMediaNL"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://pulsemedia.hrapp.co/v3/careers",
   "jobs": {
    "47ac160a5a7e9906": [
@@ -450,38 +577,12 @@
     "PulseMediaNL"
    ],
    "90848d970980ea87": [
-    "2026-11-25",
+    "2026-11-26",
     "PulseMediaNL"
    ],
    "62e40416833e75e3": [
-    "2026-11-25",
+    "2026-11-26",
     "PulseMediaNL"
-   ]
-  }
- },
- "www.emiratesgroupcareers.com": {
-  "roles": 4,
-  "employers": [
-   "The Emirates Group"
-  ],
-  "last": "2026-11-23",
-  "sample": "https://www.emiratesgroupcareers.com/search-and-apply/27094",
-  "jobs": {
-   "9c5b7f3879a23ac1": [
-    "2026-11-15",
-    "The Emirates Group"
-   ],
-   "fc672b74bf5e43e5": [
-    "2026-11-19",
-    "The Emirates Group"
-   ],
-   "26a816402e195612": [
-    "2026-11-20",
-    "The Emirates Group"
-   ],
-   "9480bca479c546f2": [
-    "2026-11-23",
-    "The Emirates Group"
    ]
   }
  },
@@ -552,52 +653,6 @@
    ]
   }
  },
- "jobs.ashbyhq.com": {
-  "roles": 3,
-  "employers": [
-   "Aleroy",
-   "CLERA",
-   "Qlub"
-  ],
-  "last": "2026-11-23",
-  "sample": "https://jobs.ashbyhq.com/aleroy/499440a7-01ab-4c05-8593-0e063310e41d",
-  "jobs": {
-   "2d456e388f3562c1": [
-    "2026-11-18",
-    "Qlub"
-   ],
-   "d377dc256e8bd974": [
-    "2026-11-23",
-    "Aleroy"
-   ],
-   "d8ce5840aecfefb7": [
-    "2026-11-23",
-    "CLERA"
-   ]
-  }
- },
- "jobs.egis-group.com": {
-  "roles": 3,
-  "employers": [
-   "Egis Group"
-  ],
-  "last": "2026-11-21",
-  "sample": "https://jobs.egis-group.com/job/pre-graduate-waste-management-engineer-uae-national-in-dubai-jid-10075",
-  "jobs": {
-   "e7596d0e1e0d19cb": [
-    "2026-11-15",
-    "Egis Group"
-   ],
-   "039f777f9615e2a7": [
-    "2026-11-20",
-    "Egis Group"
-   ],
-   "7566fc6432b7e76e": [
-    "2026-11-21",
-    "Egis Group"
-   ]
-  }
- },
  "jobs.parsons.com": {
   "roles": 3,
   "employers": [
@@ -643,15 +698,15 @@
   "employers": [
    "QualityKiosk"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://careers-qualitykiosk.peoplestrong.com/job/detail/REP-01165-01",
   "jobs": {
    "7ef0dc29702eb100": [
-    "2026-11-25",
+    "2026-11-26",
     "QualityKiosk"
    ],
    "c9bcc32f78702a60": [
-    "2026-11-25",
+    "2026-11-26",
     "QualityKiosk"
    ]
   }
@@ -769,11 +824,11 @@
   "employers": [
    "Trustbend Logistics"
   ],
-  "last": "2026-11-25",
-  "sample": "https://careers.trustbend.com/job/hr-assistant-8/",
+  "last": "2026-11-26",
+  "sample": "https://careers.trustbend.com/job/it-support-engineer-16/",
   "jobs": {
    "aa4b9f1d240d248e": [
-    "2026-11-25",
+    "2026-11-26",
     "Trustbend Logistics"
    ],
    "d75e8fdfee8c92b4": [
@@ -837,20 +892,38 @@
    ]
   }
  },
+ "ehjd.fa.em2.oraclecloud.com": {
+  "roles": 2,
+  "employers": [
+   "bankfab"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/3268",
+  "jobs": {
+   "18db08513a0f9579": [
+    "2026-11-20",
+    "bankfab"
+   ],
+   "3ba4d1cb02199b5a": [
+    "2026-11-26",
+    "bankfab"
+   ]
+  }
+ },
  "eiby.fa.em2.oraclecloud.com": {
   "roles": 2,
   "employers": [
    "NMC Health plc"
   ],
-  "last": "2026-11-22",
-  "sample": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12021",
+  "last": "2026-11-26",
+  "sample": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12878",
   "jobs": {
    "78ca99cb6f710450": [
-    "2026-11-21",
+    "2026-11-26",
     "NMC Health plc"
    ],
    "b22b218d889cec4f": [
-    "2026-11-22",
+    "2026-11-26",
     "NMC Health plc"
    ]
   }
@@ -860,7 +933,7 @@
   "employers": [
    "WSP"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/99953",
   "jobs": {
    "f027055dd54d08cb": [
@@ -868,7 +941,7 @@
     "WSP"
    ],
    "d19fecc3d3c62458": [
-    "2026-11-25",
+    "2026-11-26",
     "WSP"
    ]
   }
@@ -968,7 +1041,7 @@
   "employers": [
    "Amazon.com"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://www.amazon.jobs/jobs/10611488/intelligence-analyst-europe--mena-global-security-intelligence",
   "jobs": {
    "b04acc9c9b1ec019": [
@@ -976,7 +1049,7 @@
     "Amazon.com"
    ],
    "4ce9cf60faf071f2": [
-    "2026-11-25",
+    "2026-11-26",
     "Amazon.com"
    ]
   }
@@ -1004,11 +1077,11 @@
   "employers": [
    "Al Haktur IT Solutions"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://www.careers.alhaktur.com/job/admin-assistant-6/",
   "jobs": {
    "530d958cb57cfc0f": [
-    "2026-11-25",
+    "2026-11-26",
     "Al Haktur IT Solutions"
    ],
    "975007823f35b6ca": [
@@ -1040,7 +1113,7 @@
   "employers": [
    "HireWand Technologies"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://www.hirewand.com/apply/job/detail",
   "jobs": {
    "60f39227b0a31755": [
@@ -1048,7 +1121,7 @@
     "HireWand Technologies"
    ],
    "7a513c2b596b0dcf": [
-    "2026-11-25",
+    "2026-11-26",
     "HireWand Technologies"
    ]
   }
@@ -1078,6 +1151,20 @@
    "a2ebef90cc77b112": [
     "2026-11-25",
     "Alfa Laval"
+   ]
+  }
+ },
+ "americanuniversity.recruiterbox.com": {
+  "roles": 1,
+  "employers": [
+   "American University in the Emirates"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://AmericanUniversity.recruiterbox.com/jobs/fk0zaia",
+  "jobs": {
+   "eda3c89e3f260a82": [
+    "2026-11-26",
+    "American University in the Emirates"
    ]
   }
  },
@@ -1142,12 +1229,40 @@
   "employers": [
    "Broadcom"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://broadcom.wd1.myworkdayjobs.com/es/External_Career/job/ARE-Dubai-Business-Central-Tower/Solutions-Engineer--UAE--Remote-_R027986",
   "jobs": {
    "d0805755db5dbd2d": [
-    "2026-11-25",
+    "2026-11-26",
     "Broadcom"
+   ]
+  }
+ },
+ "career.gac.com": {
+  "roles": 1,
+  "employers": [
+   "GAC"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://career.gac.com/l/en/o/documentation-executive-7",
+  "jobs": {
+   "06f931cfd62b53bf": [
+    "2026-11-26",
+    "GAC"
+   ]
+  }
+ },
+ "career.globant.com": {
+  "roles": 1,
+  "employers": [
+   "Globant"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://career.globant.com/",
+  "jobs": {
+   "ccfa43da0000b606": [
+    "2026-11-26",
+    "Globant"
    ]
   }
  },
@@ -1212,12 +1327,26 @@
   "employers": [
    "Cpl Aromas"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://careers.cplaromas.com/job/Dubai-Trainee/732807322/",
   "jobs": {
    "0d371c2153870f02": [
-    "2026-11-25",
+    "2026-11-26",
     "Cpl Aromas"
+   ]
+  }
+ },
+ "careers.dubaiairports.ae": {
+  "roles": 1,
+  "employers": [
+   "Dubai Airports"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://careers.dubaiairports.ae/en/search-and-apply/job-details/26000475/",
+  "jobs": {
+   "68b8c1d7f5c8a713": [
+    "2026-11-26",
+    "Dubai Airports"
    ]
   }
  },
@@ -1240,11 +1369,11 @@
   "employers": [
    "Flint Culture"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://careers.flint-culture.com/postings/3ec9dae9-8f95-45e8-a3d1-8f55ca298af8",
   "jobs": {
    "5e97f4fae429eac6": [
-    "2026-11-25",
+    "2026-11-26",
     "Flint Culture"
    ]
   }
@@ -1260,6 +1389,20 @@
    "5d6e8db97b1ed621": [
     "2026-11-21",
     "Four Seasons"
+   ]
+  }
+ },
+ "careers.fuh.care": {
+  "roles": 1,
+  "employers": [
+   "Fakeeh University Hospital"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://careers.fuh.care/job/Dubai-IT-Support-Duba/1368551823/",
+  "jobs": {
+   "719aec2974cd0bc5": [
+    "2026-11-26",
+    "Fakeeh University Hospital"
    ]
   }
  },
@@ -1408,11 +1551,11 @@
   "employers": [
    "Cartier"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://careers.richemont.com/en/jobs/jr135917/meiat-vie-business-analyst/",
   "jobs": {
    "fc3daf824794e278": [
-    "2026-11-25",
+    "2026-11-26",
     "Cartier"
    ]
   }
@@ -1568,20 +1711,6 @@
    "bef93d0f0f06cb1d": [
     "2026-11-19",
     "International Renewable Energy Agency (IRENA)"
-   ]
-  }
- },
- "ehjd.fa.em2.oraclecloud.com": {
-  "roles": 1,
-  "employers": [
-   "bankfab"
-  ],
-  "last": "2026-11-20",
-  "sample": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/2166",
-  "jobs": {
-   "18db08513a0f9579": [
-    "2026-11-20",
-    "bankfab"
    ]
   }
  },
@@ -1767,6 +1896,20 @@
    ]
   }
  },
+ "hitachi.wd1.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Hitachi Energy"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://hitachi.wd1.myworkdayjobs.com/en-US/hitachi/job/Dubai-Dubai-Emirate-United-Arab-Emirates/Market-Analyst_R0151488",
+  "jobs": {
+   "f17c34304e757eb0": [
+    "2026-11-26",
+    "Hitachi Energy"
+   ]
+  }
+ },
  "hmhw.wd12.myworkdayjobs.com": {
   "roles": 1,
   "employers": [
@@ -1814,11 +1957,11 @@
   "employers": [
    "DANS"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://jobs.dubaicareers.ae/careersection/9eo2k65q8tn45uusk7de0/jobdetail.ftl",
   "jobs": {
    "b1caaddc531560b2": [
-    "2026-11-25",
+    "2026-11-26",
     "DANS"
    ]
   }
@@ -1828,11 +1971,11 @@
   "employers": [
    "Ericsson"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://jobs.ericsson.com/careers/job/563121777641126",
   "jobs": {
    "7d43051f64c8b98b": [
-    "2026-11-25",
+    "2026-11-26",
     "Ericsson"
    ]
   }
@@ -1870,12 +2013,26 @@
   "employers": [
    "Kpler"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://jobs.lever.co/kpler/b798471d-3b3e-47cb-b8db-77bc819e9551",
   "jobs": {
    "ea7768489c9f6009": [
-    "2026-11-25",
+    "2026-11-26",
     "Kpler"
+   ]
+  }
+ },
+ "jobs.siemens-energy.com": {
+  "roles": 1,
+  "employers": [
+   "Omterra"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://jobs.siemens-energy.com/en_US/CareersMarketplace/FolderDetail/Order-Management-Specialist/307744",
+  "jobs": {
+   "4ffed44e7a49e8b4": [
+    "2026-11-26",
+    "Omterra"
    ]
   }
  },
@@ -1898,11 +2055,11 @@
   "employers": [
    "SAIC"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://jsv3.recruitics.com/redirect",
   "jobs": {
    "c0c7ebab46636353": [
-    "2026-11-25",
+    "2026-11-26",
     "SAIC"
    ]
   }
@@ -1968,11 +2125,11 @@
   "employers": [
    "Andersen Lab"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://people-andersenlab.com/vacancy/2510796",
   "jobs": {
    "0a9068d7f14f2909": [
-    "2026-11-25",
+    "2026-11-26",
     "Andersen Lab"
    ]
   }
@@ -1982,11 +2139,11 @@
   "employers": [
    "PepsiCo"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://pepsicojobs.com/jobs/468868/job",
   "jobs": {
    "ea69213b89541f42": [
-    "2026-11-25",
+    "2026-11-26",
     "PepsiCo"
    ]
   }
@@ -2010,11 +2167,11 @@
   "employers": [
    "Zapegg Tax Consultant"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://recruitment.zapegg.com/job/office-assistant-13/",
   "jobs": {
    "2745df5184c626c2": [
-    "2026-11-25",
+    "2026-11-26",
     "Zapegg Tax Consultant"
    ]
   }
@@ -2080,12 +2237,26 @@
   "employers": [
    "Concentrix"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://talkpu.sh/t/Lqs8Q0kCs",
   "jobs": {
    "2b11493fca963367": [
-    "2026-11-25",
+    "2026-11-26",
     "Concentrix"
+   ]
+  }
+ },
+ "tentwenty.com": {
+  "roles": 1,
+  "employers": [
+   "Tentwenty"
+  ],
+  "last": "2026-11-26",
+  "sample": "https://tentwenty.com/careers/product-owner-mobile-super-app",
+  "jobs": {
+   "393ce59328446ab2": [
+    "2026-11-26",
+    "Tentwenty"
    ]
   }
  },
@@ -2248,11 +2419,11 @@
   "employers": [
    "Atlas Copco Group"
   ],
-  "last": "2026-11-25",
+  "last": "2026-11-26",
   "sample": "https://www.jobs.atlascopcogroup.com/job/Logistics-Specialist/176893-en_US",
   "jobs": {
    "e077b8be09c6e299": [
-    "2026-11-25",
+    "2026-11-26",
     "Atlas Copco Group"
    ]
   }
