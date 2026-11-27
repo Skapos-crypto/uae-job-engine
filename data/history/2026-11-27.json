@@ -1,0 +1,58 @@
+[
+ {
+  "key": "ddac0b61bff2dcab",
+  "title": "Staff Planning Analyst | Retail | IKEA Dubai Festival City",
+  "employer": "Al-Futtaim",
+  "sector": "retail and automotive",
+  "city": "Sharjah",
+  "location": "Sharjah, AE",
+  "family": "data_analyst",
+  "cv": "Data_Analyst",
+  "seniority": "unspecified",
+  "url": "https://www.afuturewithus.com/job/Sharjah-Staff-Planning-Analyst-Retail-IKEA-Dubai-Festival-City/1461018533/",
+  "source": "successfactors:Al-Futtaim",
+  "source_type": "employer",
+  "seen_on": [
+   "successfactors:Al-Futtaim"
+  ],
+  "posted": "2026-11-26",
+  "age_days": 1,
+  "min_years": 2,
+  "flags": [],
+  "first_seen": "2026-11-27",
+  "last_seen": "2026-11-27",
+  "is_new": true,
+  "score": 5.1,
+  "snippet": " class=\"jobdescription\"> Job Requisition ID: 183797 About Al-Futtaim Established in the 1930s, Al-Futtaim is one of the most diversified and progressive privately held regional businesses, headquartered in Dubai. Operating across more than 20 countries, the Group spans automotive",
+  "apply_url": "",
+  "track": "core"
+ },
+ {
+  "key": "f47ad743e214ce4e",
+  "title": "Commercial Operations Specialist",
+  "employer": "Tabby",
+  "sector": "fintech",
+  "city": "UAE",
+  "location": "UAE",
+  "family": "operations",
+  "cv": "General",
+  "seniority": "unspecified",
+  "url": "https://tabby.pinpointhq.com/en/jobs/624322",
+  "source": "pinpoint:tabby",
+  "source_type": "ats",
+  "seen_on": [
+   "pinpoint:tabby"
+  ],
+  "posted": null,
+  "age_days": null,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-27",
+  "last_seen": "2026-11-27",
+  "is_new": true,
+  "score": 2.7,
+  "snippet": "About us: Tabby is on a mission to give people power over their money. For too long, financial systems have worked for the institutions that built them, not the people using them. Runaway interest, fine print and limited access have left many behind, feeling shut out of a system ",
+  "apply_url": "",
+  "track": "wide"
+ }
+]
