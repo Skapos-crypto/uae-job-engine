@@ -3324,7 +3324,7 @@
   "ns": false,
   "ov": false,
   "fr": false,
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8"
  },
  "u:303cf567807f637d": {
@@ -3517,7 +3517,7 @@
   "ov": false,
   "fr": false,
   "lvl": "mid-senior level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8",
   "w": "Computer Science, Data Engineering, Information Systems, or a related field. • 8+ years of experience as a Data Engineer, with a strong focus on PySpark and the Cloude"
  },
@@ -3539,7 +3539,7 @@
   "ov": false,
   "fr": false,
   "lvl": "mid-senior level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8"
  },
  "u:48542daa37bf1ecd": {
@@ -3559,7 +3559,7 @@
   "ov": false,
   "fr": false,
   "lvl": "mid-senior level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8",
   "w": "certifications: PL-900, PL-100, PL-200, Copilot Studio (Applied Skills), CBAP • 5–10 years BA / functional consulting experience, preferably in Luxury retail"
  },
@@ -3570,7 +3570,7 @@
   "ov": false,
   "fr": false,
   "lvl": "mid-senior level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8"
  },
  "u:146c215882b01e38": {
@@ -3591,7 +3591,7 @@
   "ov": false,
   "fr": false,
   "lvl": "entry level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8"
  },
  "u:160a716d931bedee": {
@@ -3601,7 +3601,7 @@
   "ov": false,
   "fr": false,
   "lvl": "mid-senior level",
-  "d": "2026-11-26",
+  "d": "2026-11-27",
   "v": "c74f39f8",
   "w": "iness problems into practical technical solutions What they are looking for 🧠 • 4+ years of software engineering, machine learning or AI engineering experience • Strong"
  },
@@ -3691,6 +3691,64 @@
   "ns": false,
   "ov": false,
   "fr": false,
+  "d": "2026-11-27",
+  "v": "c74f39f8"
+ },
+ "u:edeb66c61f26661d": {
+  "nat": "only",
+  "yrs": 0,
+  "ns": false,
+  "ov": false,
+  "fr": true,
+  "d": "2026-11-27",
+  "v": "c74f39f8",
+  "w": "Associate Business Automation Platforms (UAE Nationals-  Fresh IT Graduates)"
+ },
+ "u:5b357ff75d416c93": {
+  "nat": "only",
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "d": "2026-11-27",
+  "v": "c74f39f8",
+  "w": "cal discipline Professional certifications such as PMP (PMI), PRINCE2,etc. This role is open to UAE Nationals only."
+ },
+ "u:c61303ccdb008fd8": {
+  "nat": null,
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "d": "2026-11-27",
+  "v": "c74f39f8"
+ },
+ "u:9882e5aff851e69f": {
+  "nat": null,
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "d": "2026-11-27",
+  "v": "c74f39f8"
+ },
+ "u:edfb956b8bf7e8f3": {
+  "nat": null,
+  "yrs": 6,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "d": "2026-11-27",
+  "v": "c74f39f8",
+  "w": "administration or in any relevant discipline (Engineering Degree Preferable). •6 years of experience in business planning within a large industrial organization, pref"
+ },
+ "u:538fb8cb98b087ad": {
+  "nat": null,
+  "yrs": null,
+  "ns": false,
+  "ov": false,
+  "fr": false,
+  "loc": "United Arab Emirates",
   "d": "2026-11-27",
   "v": "c74f39f8"
  }

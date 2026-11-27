@@ -1,6 +1,6 @@
 {
  "jobs.smartrecruiters.com": {
-  "roles": 26,
+  "roles": 27,
   "employers": [
    "AECOM",
    "Accor",
@@ -11,8 +11,8 @@
    "Mövenpick",
    "Rixos"
   ],
-  "last": "2026-11-26",
-  "sample": "https://jobs.smartrecruiters.com/VirtuaAdvancedSolution/744000163192128-recruitment-specialist-",
+  "last": "2026-11-27",
+  "sample": "https://jobs.smartrecruiters.com/AccorHotel/744000163429619-guest-relations-agent",
   "jobs": {
    "f452198f85d25487": [
     "2026-11-14",
@@ -51,7 +51,7 @@
     "Etihad Airways"
    ],
    "d88e422e861a4348": [
-    "2026-11-26",
+    "2026-11-27",
     "AECOM"
    ],
    "7549073e7d9063ed": [
@@ -103,7 +103,7 @@
     "Mövenpick"
    ],
    "fff310ec962e3993": [
-    "2026-11-26",
+    "2026-11-27",
     "Accor"
    ],
    "1112440633a35a78": [
@@ -117,11 +117,15 @@
    "fbd0c0a79aaa5d28": [
     "2026-11-26",
     "Rixos"
+   ],
+   "aa2cafb9d61586c5": [
+    "2026-11-27",
+    "Etihad Airways"
    ]
   }
  },
  "apply.workable.com": {
-  "roles": 10,
+  "roles": 12,
   "employers": [
    "Beond",
    "BlackStone eIT",
@@ -132,7 +136,7 @@
    "THA by ARMONIA",
    "Valsoft"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://apply.workable.com/j/848306BD68",
   "jobs": {
    "9ea227a2c704414d": [
@@ -168,22 +172,30 @@
     "emaratech"
    ],
    "04ec2bc53f15c265": [
-    "2026-11-26",
+    "2026-11-27",
     "DataOne"
    ],
    "fdc129838a7fb35a": [
-    "2026-11-26",
+    "2026-11-27",
     "THA by ARMONIA"
+   ],
+   "d38294dd9f5e7662": [
+    "2026-11-27",
+    "BlackStone eIT"
+   ],
+   "5d924f2ae5625c50": [
+    "2026-11-27",
+    "BlackStone eIT"
    ]
   }
  },
  "dicetek.talentrecruit.com": {
-  "roles": 9,
+  "roles": 11,
   "employers": [
    "DICETEK LLC"
   ],
-  "last": "2026-11-26",
-  "sample": "https://dicetek.talentrecruit.com/career-page/apply/U2FsdGVkX1%252B6HeolyjAGf%252FY7r2R3HO8c0oL4IR%252BhkxI%253D",
+  "last": "2026-11-27",
+  "sample": "https://dicetek.talentrecruit.com/career-page/apply/U2FsdGVkX18q1EFG%252FxxLcfybOFPxRtRRbu%252BKyb6ep4Y%253D",
   "jobs": {
    "46a5529c4a04e906": [
     "2026-11-18",
@@ -220,6 +232,90 @@
    "33a3d5552ac5c36a": [
     "2026-11-25",
     "DICETEK LLC"
+   ],
+   "5707716470311428": [
+    "2026-11-27",
+    "DICETEK LLC"
+   ],
+   "4e3d453358f73863": [
+    "2026-11-27",
+    "DICETEK LLC"
+   ]
+  }
+ },
+ "ehif.fa.em2.oraclecloud.com": {
+  "roles": 7,
+  "employers": [
+   "Wood"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/33701",
+  "jobs": {
+   "a14a09daf4d3a21a": [
+    "2026-11-22",
+    "Wood"
+   ],
+   "c2d9dc6a6d14643c": [
+    "2026-11-22",
+    "Wood"
+   ],
+   "bbb16336ad85ac71": [
+    "2026-11-23",
+    "Wood"
+   ],
+   "c85e552296bd8ec7": [
+    "2026-11-23",
+    "Wood"
+   ],
+   "803c79b0a2b5b8ce": [
+    "2026-11-26",
+    "Wood"
+   ],
+   "2fcb2af59dd73c65": [
+    "2026-11-26",
+    "Wood"
+   ],
+   "aec52c9b59032b5c": [
+    "2026-11-27",
+    "Wood"
+   ]
+  }
+ },
+ "www.afuturewithus.com": {
+  "roles": 7,
+  "employers": [
+   "Al-Futtaim"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://www.afuturewithus.com/job/Sharjah-Staff-Planning-Analyst-Retail-IKEA-Dubai-Festival-City/1461018533/",
+  "jobs": {
+   "fc411ea1837d80e3": [
+    "2026-11-19",
+    "Al-Futtaim"
+   ],
+   "d477bbb7b097a8b9": [
+    "2026-11-20",
+    "Al-Futtaim"
+   ],
+   "c3827e91dd283694": [
+    "2026-11-22",
+    "Al-Futtaim"
+   ],
+   "cfdec6c2a3e3b6a8": [
+    "2026-11-22",
+    "Al-Futtaim"
+   ],
+   "7f39572d81f20bba": [
+    "2026-11-22",
+    "Al-Futtaim"
+   ],
+   "16c66efd11f4cff8": [
+    "2026-11-26",
+    "Al-Futtaim"
+   ],
+   "9ac37804f055b130": [
+    "2026-11-27",
+    "Al-Futtaim"
    ]
   }
  },
@@ -261,71 +357,37 @@
    ]
   }
  },
- "ehif.fa.em2.oraclecloud.com": {
+ "efet.fa.us2.oraclecloud.com": {
   "roles": 6,
   "employers": [
-   "Wood"
+   "Hilton"
   ],
-  "last": "2026-11-26",
-  "sample": "https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/33697",
+  "last": "2026-11-27",
+  "sample": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/232752",
   "jobs": {
-   "a14a09daf4d3a21a": [
-    "2026-11-22",
-    "Wood"
+   "b54961bce5675f6a": [
+    "2026-11-18",
+    "Hilton"
    ],
-   "c2d9dc6a6d14643c": [
-    "2026-11-22",
-    "Wood"
+   "af1fb4e033d6f2f4": [
+    "2026-11-21",
+    "Hilton"
    ],
-   "bbb16336ad85ac71": [
-    "2026-11-23",
-    "Wood"
+   "85ed356c7d4496b9": [
+    "2026-11-24",
+    "Hilton"
    ],
-   "c85e552296bd8ec7": [
-    "2026-11-23",
-    "Wood"
+   "7d676b0577c76777": [
+    "2026-11-27",
+    "Hilton"
    ],
-   "803c79b0a2b5b8ce": [
-    "2026-11-26",
-    "Wood"
+   "56920ccadafa4f6c": [
+    "2026-11-27",
+    "Hilton"
    ],
-   "2fcb2af59dd73c65": [
-    "2026-11-26",
-    "Wood"
-   ]
-  }
- },
- "www.afuturewithus.com": {
-  "roles": 6,
-  "employers": [
-   "Al-Futtaim"
-  ],
-  "last": "2026-11-26",
-  "sample": "https://www.afuturewithus.com/job/MIS-&-Reporting-Analyst-Al-Futtaim-Automotive-Dubai/1460076333/",
-  "jobs": {
-   "fc411ea1837d80e3": [
-    "2026-11-19",
-    "Al-Futtaim"
-   ],
-   "d477bbb7b097a8b9": [
-    "2026-11-20",
-    "Al-Futtaim"
-   ],
-   "c3827e91dd283694": [
-    "2026-11-22",
-    "Al-Futtaim"
-   ],
-   "cfdec6c2a3e3b6a8": [
-    "2026-11-22",
-    "Al-Futtaim"
-   ],
-   "7f39572d81f20bba": [
-    "2026-11-22",
-    "Al-Futtaim"
-   ],
-   "16c66efd11f4cff8": [
-    "2026-11-26",
-    "Al-Futtaim"
+   "71e5cc05cd5040a2": [
+    "2026-11-27",
+    "Hilton"
    ]
   }
  },
@@ -334,7 +396,7 @@
   "employers": [
    "The Emirates Group"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://www.emiratesgroupcareers.com/search-and-apply/27005",
   "jobs": {
    "9c5b7f3879a23ac1": [
@@ -354,42 +416,12 @@
     "The Emirates Group"
    ],
    "6ae94a95073da16e": [
-    "2026-11-26",
+    "2026-11-27",
     "The Emirates Group"
    ],
    "09bcdbdc3d9ea46b": [
-    "2026-11-26",
+    "2026-11-27",
     "The Emirates Group"
-   ]
-  }
- },
- "efet.fa.us2.oraclecloud.com": {
-  "roles": 5,
-  "employers": [
-   "Hilton"
-  ],
-  "last": "2026-11-26",
-  "sample": "https://efet.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/232752",
-  "jobs": {
-   "b54961bce5675f6a": [
-    "2026-11-18",
-    "Hilton"
-   ],
-   "af1fb4e033d6f2f4": [
-    "2026-11-21",
-    "Hilton"
-   ],
-   "85ed356c7d4496b9": [
-    "2026-11-24",
-    "Hilton"
-   ],
-   "7d676b0577c76777": [
-    "2026-11-26",
-    "Hilton"
-   ],
-   "56920ccadafa4f6c": [
-    "2026-11-26",
-    "Hilton"
    ]
   }
  },
@@ -423,32 +455,62 @@
    ]
   }
  },
+ "pulsemedia.hrapp.co": {
+  "roles": 5,
+  "employers": [
+   "PulseMediaNL"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://pulsemedia.hrapp.co/v3/careers",
+  "jobs": {
+   "47ac160a5a7e9906": [
+    "2026-11-21",
+    "PulseMediaNL"
+   ],
+   "928f24fd5579f8bf": [
+    "2026-11-23",
+    "PulseMediaNL"
+   ],
+   "90848d970980ea87": [
+    "2026-11-26",
+    "PulseMediaNL"
+   ],
+   "62e40416833e75e3": [
+    "2026-11-27",
+    "PulseMediaNL"
+   ],
+   "ae8bc4d79d741951": [
+    "2026-11-27",
+    "PulseMediaNL"
+   ]
+  }
+ },
  "stellartechnologies.ae": {
   "roles": 5,
   "employers": [
    "Cirtec Medical"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://stellartechnologies.ae/jobs/mlops-llmops-reliability-engineer-contract-kigali-or-remote/",
   "jobs": {
    "8cba58aaff61d5c0": [
-    "2026-11-26",
+    "2026-11-27",
     "Cirtec Medical"
    ],
    "f3610ff3bd5979f0": [
-    "2026-11-26",
+    "2026-11-27",
     "Cirtec Medical"
    ],
    "e26577f0c1b6ab77": [
-    "2026-11-26",
+    "2026-11-27",
     "Cirtec Medical"
    ],
    "6ecaa7f80171b1f6": [
-    "2026-11-26",
+    "2026-11-27",
     "Cirtec Medical"
    ],
    "1d4e0fe6268da9d7": [
-    "2026-11-26",
+    "2026-11-27",
     "Cirtec Medical"
    ]
   }
@@ -484,8 +546,8 @@
   "employers": [
    "Marriott International"
   ],
-  "last": "2026-11-26",
-  "sample": "https://careers.marriott.com/call-center-agent/job/PDX_MI_DB17D50B-1A1D-40F6-BF0B-0BFDF28A131B_22328552",
+  "last": "2026-11-27",
+  "sample": "https://careers.marriott.com/complex-it-specialist/job/PDX_MI_E22CA293-7CFE-46C3-A897-39CB0BDD3E0E_22336624",
   "jobs": {
    "e3ff3d0f748b3301": [
     "2026-11-18",
@@ -500,8 +562,34 @@
     "Marriott International"
    ],
    "4fc0c206210ab69d": [
-    "2026-11-26",
+    "2026-11-27",
     "Marriott International"
+   ]
+  }
+ },
+ "hchx.fa.em2.oraclecloud.com": {
+  "roles": 4,
+  "employers": [
+   "مجموعة الطاير"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://hchx.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/4938",
+  "jobs": {
+   "9266fcb2a095ee0e": [
+    "2026-11-19",
+    "مجموعة الطاير"
+   ],
+   "6851c5a0e6c536bc": [
+    "2026-11-17",
+    "مجموعة الطاير"
+   ],
+   "4e421f9f3c4dd001": [
+    "2026-11-20",
+    "مجموعة الطاير"
+   ],
+   "783f6c56d0a67683": [
+    "2026-11-27",
+    "مجموعة الطاير"
    ]
   }
  },
@@ -513,7 +601,7 @@
    "Cognition AI",
    "Qlub"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://jobs.ashbyhq.com/cognition/3e6e7519-b71a-45e9-a913-4a17d8741688",
   "jobs": {
    "2d456e388f3562c1": [
@@ -529,7 +617,7 @@
     "CLERA"
    ],
    "68066861afb66213": [
-    "2026-11-26",
+    "2026-11-27",
     "Cognition AI"
    ]
   }
@@ -560,29 +648,69 @@
    ]
   }
  },
- "pulsemedia.hrapp.co": {
-  "roles": 4,
+ "apply.interfolio.com": {
+  "roles": 3,
   "employers": [
-   "PulseMediaNL"
+   "New York University"
   ],
-  "last": "2026-11-26",
-  "sample": "https://pulsemedia.hrapp.co/v3/careers",
+  "last": "2026-11-27",
+  "sample": "https://apply.interfolio.com/198121",
   "jobs": {
-   "47ac160a5a7e9906": [
-    "2026-11-21",
-    "PulseMediaNL"
+   "e33c38ceb15aed18": [
+    "2026-11-16",
+    "New York University"
    ],
-   "928f24fd5579f8bf": [
+   "82ee508843380b17": [
+    "2026-11-22",
+    "New York University"
+   ],
+   "8160a169e02ece35": [
+    "2026-11-27",
+    "New York University"
+   ]
+  }
+ },
+ "careers.alrostamanigroup.ae": {
+  "roles": 3,
+  "employers": [
+   "Al Rostamani International Exchange"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://careers.alrostamanigroup.ae/job/Dubai-Project-Coordinator-System/1454016000/",
+  "jobs": {
+   "54356dd9b1e09c58": [
+    "2026-11-20",
+    "Al Rostamani International Exchange"
+   ],
+   "5d2be16dfd1f4817": [
     "2026-11-23",
-    "PulseMediaNL"
+    "Al Rostamani International Exchange"
    ],
-   "90848d970980ea87": [
-    "2026-11-26",
-    "PulseMediaNL"
+   "acfcde9fca3e6407": [
+    "2026-11-27",
+    "Al Rostamani International Exchange"
+   ]
+  }
+ },
+ "eiby.fa.em2.oraclecloud.com": {
+  "roles": 3,
+  "employers": [
+   "NMC Health plc"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12878",
+  "jobs": {
+   "78ca99cb6f710450": [
+    "2026-11-27",
+    "NMC Health plc"
    ],
-   "62e40416833e75e3": [
-    "2026-11-26",
-    "PulseMediaNL"
+   "b22b218d889cec4f": [
+    "2026-11-27",
+    "NMC Health plc"
+   ],
+   "9bb7cf8a08713472": [
+    "2026-11-27",
+    "NMC Health plc"
    ]
   }
  },
@@ -606,28 +734,6 @@
    "74dbdc1e2a6fdcdc": [
     "2026-11-22",
     "Emirates Islamic"
-   ]
-  }
- },
- "hchx.fa.em2.oraclecloud.com": {
-  "roles": 3,
-  "employers": [
-   "مجموعة الطاير"
-  ],
-  "last": "2026-11-20",
-  "sample": "https://hchx.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/4745",
-  "jobs": {
-   "9266fcb2a095ee0e": [
-    "2026-11-19",
-    "مجموعة الطاير"
-   ],
-   "6851c5a0e6c536bc": [
-    "2026-11-17",
-    "مجموعة الطاير"
-   ],
-   "4e421f9f3c4dd001": [
-    "2026-11-20",
-    "مجموعة الطاير"
    ]
   }
  },
@@ -675,57 +781,21 @@
    ]
   }
  },
- "apply.interfolio.com": {
-  "roles": 2,
-  "employers": [
-   "New York University"
-  ],
-  "last": "2026-11-22",
-  "sample": "https://apply.interfolio.com/197620",
-  "jobs": {
-   "e33c38ceb15aed18": [
-    "2026-11-16",
-    "New York University"
-   ],
-   "82ee508843380b17": [
-    "2026-11-22",
-    "New York University"
-   ]
-  }
- },
  "careers-qualitykiosk.peoplestrong.com": {
   "roles": 2,
   "employers": [
    "QualityKiosk"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://careers-qualitykiosk.peoplestrong.com/job/detail/REP-01165-01",
   "jobs": {
    "7ef0dc29702eb100": [
-    "2026-11-26",
+    "2026-11-27",
     "QualityKiosk"
    ],
    "c9bcc32f78702a60": [
-    "2026-11-26",
+    "2026-11-27",
     "QualityKiosk"
-   ]
-  }
- },
- "careers.alrostamanigroup.ae": {
-  "roles": 2,
-  "employers": [
-   "Al Rostamani International Exchange"
-  ],
-  "last": "2026-11-23",
-  "sample": "https://careers.alrostamanigroup.ae/job/Dubai-Credit-Controller/1452482300/",
-  "jobs": {
-   "54356dd9b1e09c58": [
-    "2026-11-20",
-    "Al Rostamani International Exchange"
-   ],
-   "5d2be16dfd1f4817": [
-    "2026-11-23",
-    "Al Rostamani International Exchange"
    ]
   }
  },
@@ -837,6 +907,24 @@
    ]
   }
  },
+ "careers.wynnalmarjanisland.com": {
+  "roles": 2,
+  "employers": [
+   "Wynn Al Marjan Island"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://careers.wynnalmarjanisland.com/en/sites/CX_2/job/2402",
+  "jobs": {
+   "464f5dfd143e3cda": [
+    "2026-11-25",
+    "Wynn Al Marjan Island"
+   ],
+   "3c57e23b75dd8184": [
+    "2026-11-27",
+    "Wynn Al Marjan Island"
+   ]
+  }
+ },
  "careerspage.io": {
   "roles": 2,
   "employers": [
@@ -897,7 +985,7 @@
   "employers": [
    "bankfab"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://ehjd.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/3268",
   "jobs": {
    "18db08513a0f9579": [
@@ -905,26 +993,8 @@
     "bankfab"
    ],
    "3ba4d1cb02199b5a": [
-    "2026-11-26",
+    "2026-11-27",
     "bankfab"
-   ]
-  }
- },
- "eiby.fa.em2.oraclecloud.com": {
-  "roles": 2,
-  "employers": [
-   "NMC Health plc"
-  ],
-  "last": "2026-11-26",
-  "sample": "https://eiby.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/12878",
-  "jobs": {
-   "78ca99cb6f710450": [
-    "2026-11-26",
-    "NMC Health plc"
-   ],
-   "b22b218d889cec4f": [
-    "2026-11-26",
-    "NMC Health plc"
    ]
   }
  },
@@ -1077,11 +1147,11 @@
   "employers": [
    "Al Haktur IT Solutions"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://www.careers.alhaktur.com/job/admin-assistant-6/",
   "jobs": {
    "530d958cb57cfc0f": [
-    "2026-11-26",
+    "2026-11-27",
     "Al Haktur IT Solutions"
    ],
    "975007823f35b6ca": [
@@ -1108,12 +1178,30 @@
    ]
   }
  },
+ "www.comeet.com": {
+  "roles": 2,
+  "employers": [
+   "Commercial Bank of Dubai"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://www.comeet.com/jobs/cbd/14.007/contact-centre-associate-uae-national/57.375",
+  "jobs": {
+   "05ca22e8aec2d5bf": [
+    "2026-11-18",
+    "Commercial Bank of Dubai"
+   ],
+   "af01abbacbdb79f3": [
+    "2026-11-27",
+    "Commercial Bank of Dubai"
+   ]
+  }
+ },
  "www.hirewand.com": {
   "roles": 2,
   "employers": [
    "HireWand Technologies"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://www.hirewand.com/apply/job/detail",
   "jobs": {
    "60f39227b0a31755": [
@@ -1121,7 +1209,7 @@
     "HireWand Technologies"
    ],
    "7a513c2b596b0dcf": [
-    "2026-11-26",
+    "2026-11-27",
     "HireWand Technologies"
    ]
   }
@@ -1137,6 +1225,20 @@
    "42ad560fff75c3ca": [
     "2026-11-20",
     "ABB"
+   ]
+  }
+ },
+ "advancedmarkets.bamboohr.com": {
+  "roles": 1,
+  "employers": [
+   "Daman Markets"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://advancedmarkets.bamboohr.com/careers/46",
+  "jobs": {
+   "68e5138ada00bd88": [
+    "2026-11-27",
+    "Daman Markets"
    ]
   }
  },
@@ -1159,11 +1261,11 @@
   "employers": [
    "American University in the Emirates"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://AmericanUniversity.recruiterbox.com/jobs/fk0zaia",
   "jobs": {
    "eda3c89e3f260a82": [
-    "2026-11-26",
+    "2026-11-27",
     "American University in the Emirates"
    ]
   }
@@ -1193,6 +1295,20 @@
    "d5721054e458404b": [
     "2026-11-22",
     "NEP Singapore, India & MENA"
+   ]
+  }
+ },
+ "arrowpointfund.com": {
+  "roles": 1,
+  "employers": [
+   "Arrowpoint Investment Partners (Singapore) Pte. Ltd."
+  ],
+  "last": "2026-11-27",
+  "sample": "https://arrowpointfund.com/careers/office-assistant-uae",
+  "jobs": {
+   "2c88a1ef7ed84a0b": [
+    "2026-11-27",
+    "Arrowpoint Investment Partners (Singapore) Pte. Ltd."
    ]
   }
  },
@@ -1238,16 +1354,30 @@
    ]
   }
  },
+ "cae.wd3.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "CAE"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://cae.wd3.myworkdayjobs.com/en-US/career/job/Abu-Dhabi/FSTD-Support-Engineer-I_124481",
+  "jobs": {
+   "ebc3d91feae30557": [
+    "2026-11-27",
+    "CAE"
+   ]
+  }
+ },
  "career.gac.com": {
   "roles": 1,
   "employers": [
    "GAC"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://career.gac.com/l/en/o/documentation-executive-7",
   "jobs": {
    "06f931cfd62b53bf": [
-    "2026-11-26",
+    "2026-11-27",
     "GAC"
    ]
   }
@@ -1257,11 +1387,11 @@
   "employers": [
    "Globant"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://career.globant.com/",
   "jobs": {
    "ccfa43da0000b606": [
-    "2026-11-26",
+    "2026-11-27",
     "Globant"
    ]
   }
@@ -1277,6 +1407,20 @@
    "62a2970c64d2dea4": [
     "2026-11-21",
     "Eaton"
+   ]
+  }
+ },
+ "careers-keo.icims.com": {
+  "roles": 1,
+  "employers": [
+   "KEO International Consultants"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://careers-keo.icims.com/jobs/14783/job",
+  "jobs": {
+   "367b683cb7b62a50": [
+    "2026-11-27",
+    "KEO International Consultants"
    ]
   }
  },
@@ -1341,11 +1485,11 @@
   "employers": [
    "Dubai Airports"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://careers.dubaiairports.ae/en/search-and-apply/job-details/26000475/",
   "jobs": {
    "68b8c1d7f5c8a713": [
-    "2026-11-26",
+    "2026-11-27",
     "Dubai Airports"
    ]
   }
@@ -1397,11 +1541,11 @@
   "employers": [
    "Fakeeh University Hospital"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://careers.fuh.care/job/Dubai-IT-Support-Duba/1368551823/",
   "jobs": {
    "719aec2974cd0bc5": [
-    "2026-11-26",
+    "2026-11-27",
     "Fakeeh University Hospital"
    ]
   }
@@ -1490,6 +1634,20 @@
    ]
   }
  },
+ "careers.liebherr.com": {
+  "roles": 1,
+  "employers": [
+   "Liebherr Group"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://careers.liebherr.com/job/Dubai-IT-Administrator/1162349001/",
+  "jobs": {
+   "c20d779be0e8224c": [
+    "2026-11-27",
+    "Liebherr Group"
+   ]
+  }
+ },
  "careers.marsh.com": {
   "roles": 1,
   "employers": [
@@ -1551,11 +1709,11 @@
   "employers": [
    "Cartier"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://careers.richemont.com/en/jobs/jr135917/meiat-vie-business-analyst/",
   "jobs": {
    "fc3daf824794e278": [
-    "2026-11-26",
+    "2026-11-27",
     "Cartier"
    ]
   }
@@ -1585,20 +1743,6 @@
    "74a34b482ae82cad": [
     "2026-11-18",
     "TechnipFMC"
-   ]
-  }
- },
- "careers.wynnalmarjanisland.com": {
-  "roles": 1,
-  "employers": [
-   "Wynn Al Marjan Island"
-  ],
-  "last": "2026-11-25",
-  "sample": "https://careers.wynnalmarjanisland.com/en/sites/CX_2/job/1073",
-  "jobs": {
-   "464f5dfd143e3cda": [
-    "2026-11-25",
-    "Wynn Al Marjan Island"
    ]
   }
  },
@@ -1711,6 +1855,20 @@
    "bef93d0f0f06cb1d": [
     "2026-11-19",
     "International Renewable Energy Agency (IRENA)"
+   ]
+  }
+ },
+ "ehpv.fa.em2.oraclecloud.com:443": {
+  "roles": 1,
+  "employers": [
+   "DP World"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://ehpv.fa.em2.oraclecloud.com:443/hcmUI/CandidateExperience/en/job/28388",
+  "jobs": {
+   "1d208c3e6f7796b6": [
+    "2026-11-27",
+    "DP World"
    ]
   }
  },
@@ -1901,11 +2059,11 @@
   "employers": [
    "Hitachi Energy"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://hitachi.wd1.myworkdayjobs.com/en-US/hitachi/job/Dubai-Dubai-Emirate-United-Arab-Emirates/Market-Analyst_R0151488",
   "jobs": {
    "f17c34304e757eb0": [
-    "2026-11-26",
+    "2026-11-27",
     "Hitachi Energy"
    ]
   }
@@ -2013,11 +2171,11 @@
   "employers": [
    "Kpler"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://jobs.lever.co/kpler/b798471d-3b3e-47cb-b8db-77bc819e9551",
   "jobs": {
    "ea7768489c9f6009": [
-    "2026-11-26",
+    "2026-11-27",
     "Kpler"
    ]
   }
@@ -2050,17 +2208,45 @@
    ]
   }
  },
+ "joinbytedance.com": {
+  "roles": 1,
+  "employers": [
+   "ByteDance"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://joinbytedance.com/search/7712474643501140229",
+  "jobs": {
+   "fda071ea3bb6a35d": [
+    "2026-11-27",
+    "ByteDance"
+   ]
+  }
+ },
  "jsv3.recruitics.com": {
   "roles": 1,
   "employers": [
    "SAIC"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://jsv3.recruitics.com/redirect",
   "jobs": {
    "c0c7ebab46636353": [
-    "2026-11-26",
+    "2026-11-27",
     "SAIC"
+   ]
+  }
+ },
+ "kellyservices.wd503.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Kelly Services Internal"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://kellyservices.wd503.myworkdayjobs.com/en-US/corporatecareers-kellyservices-com/job/United-Arab-Emirates-Remote/Sourcing-Coordinator_JR100362",
+  "jobs": {
+   "cfb1a4620ff286bf": [
+    "2026-11-27",
+    "Kelly Services Internal"
    ]
   }
  },
@@ -2125,11 +2311,11 @@
   "employers": [
    "Andersen Lab"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://people-andersenlab.com/vacancy/2510796",
   "jobs": {
    "0a9068d7f14f2909": [
-    "2026-11-26",
+    "2026-11-27",
     "Andersen Lab"
    ]
   }
@@ -2251,12 +2437,26 @@
   "employers": [
    "Tentwenty"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://tentwenty.com/careers/product-owner-mobile-super-app",
   "jobs": {
    "393ce59328446ab2": [
-    "2026-11-26",
+    "2026-11-27",
     "Tentwenty"
+   ]
+  }
+ },
+ "tether.recruitee.com": {
+  "roles": 1,
+  "employers": [
+   "Tether Operations Limited"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://tether.recruitee.com/o/ai-research-engineer-multi-modal-agents-4",
+  "jobs": {
+   "063022636917c3f7": [
+    "2026-11-27",
+    "Tether Operations Limited"
    ]
   }
  },
@@ -2285,6 +2485,20 @@
    "32f0d87f7ecd224b": [
     "2026-11-21",
     "TMF Group"
+   ]
+  }
+ },
+ "vaporvm.com": {
+  "roles": 1,
+  "employers": [
+   "VaporVM"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://vaporvm.com/career/data-protection-resident-engineer/",
+  "jobs": {
+   "ba9de5917160eb9d": [
+    "2026-11-27",
+    "VaporVM"
    ]
   }
  },
@@ -2386,20 +2600,6 @@
    ]
   }
  },
- "www.comeet.com": {
-  "roles": 1,
-  "employers": [
-   "Commercial Bank of Dubai"
-  ],
-  "last": "2026-11-18",
-  "sample": "https://www.comeet.com/jobs/cbd/14.007/assistant-relationship-manager-liabilities--uae-national-/44.578",
-  "jobs": {
-   "05ca22e8aec2d5bf": [
-    "2026-11-18",
-    "Commercial Bank of Dubai"
-   ]
-  }
- },
  "www.cssgroupsite.com": {
   "roles": 1,
   "employers": [
@@ -2419,11 +2619,11 @@
   "employers": [
    "Atlas Copco Group"
   ],
-  "last": "2026-11-26",
+  "last": "2026-11-27",
   "sample": "https://www.jobs.atlascopcogroup.com/job/Logistics-Specialist/176893-en_US",
   "jobs": {
    "e077b8be09c6e299": [
-    "2026-11-26",
+    "2026-11-27",
     "Atlas Copco Group"
    ]
   }
@@ -2453,6 +2653,20 @@
    "9f130ed8c2bb5e75": [
     "2026-11-20",
     "mPhatek"
+   ]
+  }
+ },
+ "xylem.wd5.myworkdayjobs.com": {
+  "roles": 1,
+  "employers": [
+   "Xylem"
+  ],
+  "last": "2026-11-27",
+  "sample": "https://xylem.wd5.myworkdayjobs.com/en-US/xylem-careers/job/Vadodara-73-East-Ave/Cash-Application-Analyst_R51368",
+  "jobs": {
+   "f50a96d56a91c360": [
+    "2026-11-27",
+    "Xylem"
    ]
   }
  }
