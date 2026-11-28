@@ -1,0 +1,58 @@
+[
+ {
+  "key": "6e23a01b34187b32",
+  "title": "2027 Graduate Area/Shift Manager",
+  "employer": "Amazon Middle East and North Africa FZ-LLC",
+  "sector": "big tech",
+  "city": "Dubai",
+  "location": "Dubai, ARE",
+  "family": "graduate",
+  "cv": "Data_Analyst",
+  "seniority": "junior",
+  "url": "https://www.amazon.jobs/en/jobs/10615825/2027-graduate-area-shift-manager",
+  "source": "amazon",
+  "source_type": "employer",
+  "seen_on": [
+   "amazon"
+  ],
+  "posted": "2026-11-27",
+  "age_days": 1,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-28",
+  "last_seen": "2026-11-28",
+  "is_new": true,
+  "score": 4.7,
+  "snippet": "When you join Amazon as an Area/Shift Manager, you’ll gain experience leading a large and diverse team to make sure your area of the business keeps pace with demand. In this hands-on role, you’ll learn - University degree (Bachelor's or Master's degree), completed before start da",
+  "apply_url": "",
+  "track": "core"
+ },
+ {
+  "key": "08febe7929156d5f",
+  "title": "Engineer - Full Stack",
+  "employer": "G42",
+  "sector": "AI",
+  "city": "Abu Dhabi",
+  "location": "Abu Dhabi, Abu Dhabi, United Arab Emirates; Abu Dhabi, Abu Dhabi, United Arab Emirates",
+  "family": "software",
+  "cv": "Backend_Engineer",
+  "seniority": "unspecified",
+  "url": "https://careers.g42.ai/global/en/job/3521",
+  "source": "phenom:G42",
+  "source_type": "employer",
+  "seen_on": [
+   "phenom:G42"
+  ],
+  "posted": "2026-11-27",
+  "age_days": 1,
+  "min_years": null,
+  "flags": [],
+  "first_seen": "2026-11-28",
+  "last_seen": "2026-11-28",
+  "is_new": true,
+  "score": 4.7,
+  "snippet": "We are expanding our team: As a Full Stack Engineer, you will develop and enhance web applications and services for AI products, collaborating with cross-functional teams to deliver robust software. Ideal candidates have experience in both frontend and backend development, with s",
+  "apply_url": "",
+  "track": "core"
+ }
+]
